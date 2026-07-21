@@ -1,0 +1,96 @@
+{
+  "configuration": {
+    "random_seed": 1,
+    "timeout_seconds": 15.0,
+    "workers": 64
+  },
+  "finished_utc": "2026-07-18T19:29:46.718+00:00",
+  "hint_coordinate_count": 13,
+  "hint_is_nonbinding": true,
+  "hint_json": "problems_external\\queen_domination_q26\\verify\\fixtures\\q25_ostergard_weakley_13.json",
+  "instance": {
+    "board_variables": 625,
+    "cardinality": "exact",
+    "domination_constraints": 625,
+    "k": 13,
+    "n": 25,
+    "structural_restrictions": []
+  },
+  "schema": "queen-domination-cpsat-result-v1",
+  "solution": {
+    "cardinality": 13,
+    "coordinates": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        20
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        8,
+        22
+      ],
+      [
+        10,
+        14
+      ],
+      [
+        12,
+        8
+      ],
+      [
+        14,
+        24
+      ],
+      [
+        16,
+        16
+      ],
+      [
+        18,
+        0
+      ],
+      [
+        20,
+        6
+      ],
+      [
+        22,
+        12
+      ],
+      [
+        24,
+        18
+      ]
+    ],
+    "local_verification": {
+      "cardinality_ok": true,
+      "checked": true,
+      "dominating": true,
+      "uncovered": []
+    }
+  },
+  "solver": {
+    "branches": 0,
+    "conflicts": 0,
+    "name": "OR-Tools CP-SAT",
+    "ortools_version": "9.14.6206",
+    "python_version": "3.12.4",
+    "response_stats": "CpSolverResponse summary:\nstatus: OPTIMAL\nobjective: 0\nbest_bound: 0\nintegers: 0\nbooleans: 0\nconflicts: 0\nbranches: 0\npropagations: 0\ninteger_propagations: 0\nrestarts: 0\nlp_iterations: 0\nwalltime: 0.118124\nusertime: 0.118124\ndeterministic_time: 0.0971584\ngap_integral: 0\nsolution_fingerprint: 0x600e10e7a4f07d5a\n",
+    "status": "OPTIMAL",
+    "status_code": 4,
+    "user_time_seconds": 0.1181238,
+    "wall_time_seconds": 0.11812360000000001
+  },
+  "started_utc": "2026-07-18T19:29:46.478+00:00"
+}

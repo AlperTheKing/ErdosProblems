@@ -1,0 +1,4132 @@
+{
+  "max_n": 12,
+  "totals": {
+    "graphs": 7527,
+    "biconnected": 973,
+    "eta_tight_biconnected": 129,
+    "ears": 521,
+    "all_bad_ears": 142,
+    "all_bad_ears_with_radius_increase": 106,
+    "all_bad_ears_all_radius_nonincrease": 36,
+    "all_bad_ears_all_radius_increase": 106,
+    "all_bad_ears_mixed_radius_behavior": 0,
+    "ears_noncontiguous_radius_increase": 3,
+    "maximum_all_bad_ear_interior_length": 3,
+    "bad_radius_nonincrease_deletions": 408,
+    "bad_radius_nonincrease_with_good_new_center": 307,
+    "bad_radius_nonincrease_without_good_new_center": 101,
+    "bad_radius_nonincrease_nonrealizer": 139
+  },
+  "exchange_failures": [
+    {
+      "graph6": "H?B@dPW",
+      "n": 9,
+      "beta": 2,
+      "girth": 6,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        4,
+        7,
+        8
+      ],
+      "realizers": [
+        5,
+        6
+      ],
+      "bad_deletion": {
+        "v": 5,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 3,
+        "center": [
+          4,
+          6,
+          7,
+          8
+        ],
+        "new_centers": [
+          6
+        ],
+        "uep_new_centers": [
+          6
+        ]
+      },
+      "new_center_deletions": {
+        "6": {
+          "v": 6,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 3,
+          "center": [
+            4,
+            5,
+            7,
+            8
+          ],
+          "new_centers": [
+            5
+          ],
+          "uep_new_centers": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "graph6": "H?B@dPW",
+      "n": 9,
+      "beta": 2,
+      "girth": 6,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        4,
+        7,
+        8
+      ],
+      "realizers": [
+        5,
+        6
+      ],
+      "bad_deletion": {
+        "v": 6,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 3,
+        "center": [
+          4,
+          5,
+          7,
+          8
+        ],
+        "new_centers": [
+          5
+        ],
+        "uep_new_centers": [
+          5
+        ]
+      },
+      "new_center_deletions": {
+        "5": {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 3,
+          "center": [
+            4,
+            6,
+            7,
+            8
+          ],
+          "new_centers": [
+            6
+          ],
+          "uep_new_centers": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "graph6": "H?bB@`W",
+      "n": 9,
+      "beta": 2,
+      "girth": 5,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "realizers": [
+        0
+      ],
+      "bad_deletion": {
+        "v": 0,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 3,
+        "center": [
+          1,
+          3,
+          6,
+          8
+        ],
+        "new_centers": [],
+        "uep_new_centers": []
+      },
+      "new_center_deletions": {}
+    },
+    {
+      "graph6": "I?ABAaYJO",
+      "n": 10,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        8,
+        9
+      ],
+      "realizers": [
+        1
+      ],
+      "bad_deletion": {
+        "v": 1,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 2,
+        "center": [
+          4,
+          8,
+          9
+        ],
+        "new_centers": [
+          4
+        ],
+        "uep_new_centers": [
+          4
+        ]
+      },
+      "new_center_deletions": {
+        "4": {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ],
+          "uep_new_centers": []
+        }
+      }
+    },
+    {
+      "graph6": "J??CB?Wt@[?",
+      "n": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        0,
+        5,
+        6,
+        9,
+        10
+      ],
+      "realizers": [
+        7,
+        8
+      ],
+      "bad_deletion": {
+        "v": 7,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 3,
+        "center": [
+          0,
+          5,
+          6,
+          8,
+          9,
+          10
+        ],
+        "new_centers": [
+          8
+        ],
+        "uep_new_centers": [
+          8
+        ]
+      },
+      "new_center_deletions": {
+        "8": {
+          "v": 8,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 3,
+          "center": [
+            0,
+            5,
+            6,
+            7,
+            9,
+            10
+          ],
+          "new_centers": [
+            7
+          ],
+          "uep_new_centers": [
+            7
+          ]
+        }
+      }
+    },
+    {
+      "graph6": "J??CB?Wt@[?",
+      "n": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        0,
+        5,
+        6,
+        9,
+        10
+      ],
+      "realizers": [
+        7,
+        8
+      ],
+      "bad_deletion": {
+        "v": 8,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 3,
+        "center": [
+          0,
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        "new_centers": [
+          7
+        ],
+        "uep_new_centers": [
+          7
+        ]
+      },
+      "new_center_deletions": {
+        "7": {
+          "v": 7,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 3,
+          "center": [
+            0,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            8
+          ],
+          "uep_new_centers": [
+            8
+          ]
+        }
+      }
+    },
+    {
+      "graph6": "J?AAD?oU@[?",
+      "n": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "realizers": [
+        0
+      ],
+      "bad_deletion": {
+        "v": 0,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 3,
+        "center": [
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "new_centers": [],
+        "uep_new_centers": []
+      },
+      "new_center_deletions": {}
+    },
+    {
+      "graph6": "J?AA@_gs?]?",
+      "n": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        3,
+        5,
+        6,
+        7,
+        10
+      ],
+      "realizers": [
+        8
+      ],
+      "bad_deletion": {
+        "v": 8,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 3,
+        "center": [
+          3,
+          5,
+          6,
+          7,
+          10
+        ],
+        "new_centers": [],
+        "uep_new_centers": []
+      },
+      "new_center_deletions": {}
+    },
+    {
+      "graph6": "J?AA@agU?M?",
+      "n": 11,
+      "beta": 3,
+      "girth": 6,
+      "radius": 3,
+      "eta": 3,
+      "center": [
+        7
+      ],
+      "realizers": [
+        0,
+        1,
+        4
+      ],
+      "bad_deletion": {
+        "v": 0,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 2,
+        "radius": 3,
+        "center": [
+          3,
+          7
+        ],
+        "new_centers": [
+          3
+        ],
+        "uep_new_centers": [
+          3
+        ]
+      },
+      "new_center_deletions": {
+        "3": {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": -3,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 4,
+          "center": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "uep_new_centers": []
+        }
+      }
+    },
+    {
+      "graph6": "J?AA@agU?M?",
+      "n": 11,
+      "beta": 3,
+      "girth": 6,
+      "radius": 3,
+      "eta": 3,
+      "center": [
+        7
+      ],
+      "realizers": [
+        0,
+        1,
+        4
+      ],
+      "bad_deletion": {
+        "v": 1,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 2,
+        "radius": 3,
+        "center": [
+          2,
+          7
+        ],
+        "new_centers": [
+          2
+        ],
+        "uep_new_centers": [
+          2
+        ]
+      },
+      "new_center_deletions": {
+        "2": {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": -3,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 4,
+          "center": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "uep_new_centers": []
+        }
+      }
+    },
+    {
+      "graph6": "J?AA@agT?U?",
+      "n": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 3,
+      "eta": 3,
+      "center": [
+        3,
+        7
+      ],
+      "realizers": [
+        0
+      ],
+      "bad_deletion": {
+        "v": 0,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 2,
+        "radius": 3,
+        "center": [
+          3,
+          6,
+          7
+        ],
+        "new_centers": [
+          6
+        ],
+        "uep_new_centers": [
+          6
+        ]
+      },
+      "new_center_deletions": {
+        "6": {
+          "v": 6,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            3,
+            7
+          ],
+          "new_centers": [
+            0
+          ],
+          "uep_new_centers": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "graph6": "J?AA@agT?U?",
+      "n": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 3,
+      "eta": 3,
+      "center": [
+        3,
+        7
+      ],
+      "realizers": [
+        0
+      ],
+      "bad_deletion": {
+        "v": 6,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 2,
+        "radius": 3,
+        "center": [
+          0,
+          3,
+          7
+        ],
+        "new_centers": [
+          0
+        ],
+        "uep_new_centers": [
+          0
+        ]
+      },
+      "new_center_deletions": {
+        "0": {
+          "v": 0,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            3,
+            6,
+            7
+          ],
+          "new_centers": [
+            6
+          ],
+          "uep_new_centers": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "graph6": "J?AEB?oEAW?",
+      "n": 11,
+      "beta": 2,
+      "girth": 5,
+      "radius": 4,
+      "eta": 2,
+      "center": [
+        1,
+        2,
+        4,
+        7,
+        9,
+        10
+      ],
+      "realizers": [
+        0
+      ],
+      "bad_deletion": {
+        "v": 0,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 4,
+        "center": [
+          1,
+          2,
+          4,
+          7,
+          9,
+          10
+        ],
+        "new_centers": [],
+        "uep_new_centers": []
+      },
+      "new_center_deletions": {}
+    },
+    {
+      "graph6": "J?AEB?oE@W?",
+      "n": 11,
+      "beta": 2,
+      "girth": 6,
+      "radius": 3,
+      "eta": 3,
+      "center": [
+        2,
+        10
+      ],
+      "realizers": [
+        6
+      ],
+      "bad_deletion": {
+        "v": 6,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 2,
+        "radius": 3,
+        "center": [
+          2,
+          10
+        ],
+        "new_centers": [],
+        "uep_new_centers": []
+      },
+      "new_center_deletions": {}
+    },
+    {
+      "graph6": "J?AE@`gTCQ?",
+      "n": 11,
+      "beta": 4,
+      "girth": 5,
+      "radius": 3,
+      "eta": 1,
+      "center": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "realizers": [
+        2,
+        5
+      ],
+      "bad_deletion": {
+        "v": 2,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 0,
+        "radius": 3,
+        "center": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "new_centers": [
+          5
+        ],
+        "uep_new_centers": [
+          5
+        ]
+      },
+      "new_center_deletions": {
+        "5": {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            2
+          ],
+          "uep_new_centers": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "graph6": "J?AE@`gTCQ?",
+      "n": 11,
+      "beta": 4,
+      "girth": 5,
+      "radius": 3,
+      "eta": 1,
+      "center": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "realizers": [
+        2,
+        5
+      ],
+      "bad_deletion": {
+        "v": 5,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 0,
+        "radius": 3,
+        "center": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "new_centers": [
+          2
+        ],
+        "uep_new_centers": [
+          2
+        ]
+      },
+      "new_center_deletions": {
+        "2": {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            5
+          ],
+          "uep_new_centers": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "graph6": "J?ABAaGMAW?",
+      "n": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        1,
+        4,
+        9,
+        10
+      ],
+      "realizers": [
+        0
+      ],
+      "bad_deletion": {
+        "v": 0,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 3,
+        "center": [
+          1,
+          4,
+          9,
+          10
+        ],
+        "new_centers": [],
+        "uep_new_centers": []
+      },
+      "new_center_deletions": {}
+    },
+    {
+      "graph6": "J?BDA_gFAS?",
+      "n": 11,
+      "beta": 4,
+      "girth": 5,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        0,
+        1,
+        4,
+        5,
+        9,
+        10
+      ],
+      "realizers": [
+        2
+      ],
+      "bad_deletion": {
+        "v": 2,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 3,
+        "center": [
+          1,
+          4,
+          5,
+          9,
+          10
+        ],
+        "new_centers": [],
+        "uep_new_centers": []
+      },
+      "new_center_deletions": {}
+    },
+    {
+      "graph6": "J?`@?b_NAU?",
+      "n": 11,
+      "beta": 5,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        4,
+        9,
+        10
+      ],
+      "realizers": [
+        8
+      ],
+      "bad_deletion": {
+        "v": 8,
+        "degree": 3,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 1,
+        "radius": 2,
+        "center": [
+          4,
+          9,
+          10
+        ],
+        "new_centers": [],
+        "uep_new_centers": []
+      },
+      "new_center_deletions": {}
+    },
+    {
+      "graph6": "J?`D@bOBRO?",
+      "n": 11,
+      "beta": 5,
+      "girth": 5,
+      "radius": 3,
+      "eta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10
+      ],
+      "realizers": [
+        5,
+        6
+      ],
+      "bad_deletion": {
+        "v": 5,
+        "degree": 2,
+        "delta_eta": -1,
+        "delta_radius": 0,
+        "eta": 0,
+        "radius": 3,
+        "center": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "new_centers": [
+          6
+        ],
+        "uep_new_centers": [
+          6
+        ]
+      },
+      "new_center_deletions": {
+        "6": {
+          "v": 6,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            5
+          ],
+          "uep_new_centers": [
+            5
+          ]
+        }
+      }
+    }
+  ],
+  "examples": [
+    {
+      "graph6": "FCR`o",
+      "n": 7,
+      "edges": 8,
+      "beta": 2,
+      "girth": 5,
+      "radius": 2,
+      "eta": 1,
+      "center": [
+        2,
+        5,
+        6
+      ],
+      "realizers": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "ear": [
+        5,
+        2,
+        6
+      ],
+      "ear_rows": [
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "new_centers": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 2,
+          "center": [
+            2,
+            4,
+            6
+          ],
+          "new_centers": [
+            4
+          ],
+          "uep_new_centers": [
+            4
+          ]
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 2,
+          "center": [
+            2,
+            3,
+            6
+          ],
+          "new_centers": [
+            3
+          ],
+          "uep_new_centers": [
+            3
+          ]
+        },
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 2,
+          "center": [
+            1,
+            2,
+            5
+          ],
+          "new_centers": [
+            1
+          ],
+          "uep_new_centers": [
+            1
+          ]
+        },
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 2,
+          "center": [
+            0,
+            2,
+            5
+          ],
+          "new_centers": [
+            0
+          ],
+          "uep_new_centers": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "graph6": "H?B@dPW",
+      "n": 9,
+      "edges": 10,
+      "beta": 2,
+      "girth": 6,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        4,
+        7,
+        8
+      ],
+      "realizers": [
+        5,
+        6
+      ],
+      "ear": [
+        7,
+        4,
+        8
+      ],
+      "ear_rows": [
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 4,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            3,
+            4,
+            8
+          ],
+          "new_centers": [
+            3
+          ],
+          "uep_new_centers": [
+            3
+          ]
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            2,
+            4,
+            7
+          ],
+          "new_centers": [
+            2
+          ],
+          "uep_new_centers": [
+            2
+          ]
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            1,
+            4,
+            8
+          ],
+          "new_centers": [
+            1
+          ],
+          "uep_new_centers": [
+            1
+          ]
+        },
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            4,
+            7
+          ],
+          "new_centers": [
+            0
+          ],
+          "uep_new_centers": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "graph6": "H?`DE_{",
+      "n": 9,
+      "edges": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        8
+      ],
+      "realizers": [
+        0,
+        1,
+        6,
+        7
+      ],
+      "ear": [
+        0,
+        4,
+        8
+      ],
+      "ear_rows": [
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            4,
+            8
+          ],
+          "new_centers": [
+            4
+          ],
+          "uep_new_centers": [
+            4
+          ]
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            7
+          ],
+          "new_centers": [
+            7
+          ],
+          "uep_new_centers": [
+            7
+          ]
+        },
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            0
+          ],
+          "new_centers": [
+            0
+          ],
+          "uep_new_centers": [
+            0
+          ]
+        },
+        {
+          "v": 6,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            3,
+            8
+          ],
+          "new_centers": [
+            3
+          ],
+          "uep_new_centers": [
+            3
+          ]
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "H?`DE_{",
+      "n": 9,
+      "edges": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        8
+      ],
+      "realizers": [
+        0,
+        1,
+        6,
+        7
+      ],
+      "ear": [
+        7,
+        3,
+        8
+      ],
+      "ear_rows": [
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            4,
+            8
+          ],
+          "new_centers": [
+            4
+          ],
+          "uep_new_centers": [
+            4
+          ]
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            7
+          ],
+          "new_centers": [
+            7
+          ],
+          "uep_new_centers": [
+            7
+          ]
+        },
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            0
+          ],
+          "new_centers": [
+            0
+          ],
+          "uep_new_centers": [
+            0
+          ]
+        },
+        {
+          "v": 6,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            3,
+            8
+          ],
+          "new_centers": [
+            3
+          ],
+          "uep_new_centers": [
+            3
+          ]
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "H?bB@qQ",
+      "n": 9,
+      "edges": 11,
+      "beta": 3,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        8
+      ],
+      "realizers": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "ear": [
+        7,
+        3,
+        8
+      ],
+      "ear_rows": [
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 1,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            2,
+            6,
+            8
+          ],
+          "new_centers": [
+            2,
+            6
+          ],
+          "uep_new_centers": []
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            0,
+            8
+          ],
+          "new_centers": [
+            0
+          ],
+          "uep_new_centers": [
+            0
+          ]
+        },
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            6,
+            8
+          ],
+          "new_centers": [
+            6
+          ],
+          "uep_new_centers": [
+            6
+          ]
+        },
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 6,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 1,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            4,
+            8
+          ],
+          "new_centers": [
+            0,
+            4
+          ],
+          "uep_new_centers": []
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "I?ABAaYJO",
+      "n": 10,
+      "edges": 13,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        8,
+        9
+      ],
+      "realizers": [
+        1
+      ],
+      "ear": [
+        6,
+        1,
+        7
+      ],
+      "ear_rows": [
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 2,
+          "center": [
+            4,
+            8,
+            9
+          ],
+          "new_centers": [
+            4
+          ],
+          "uep_new_centers": [
+            4
+          ]
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            7,
+            9
+          ],
+          "new_centers": [
+            7
+          ],
+          "uep_new_centers": [
+            7
+          ]
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            6,
+            8
+          ],
+          "new_centers": [
+            6
+          ],
+          "uep_new_centers": [
+            6
+          ]
+        },
+        {
+          "v": 6,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "I?ABAaYJO",
+      "n": 10,
+      "edges": 13,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        8,
+        9
+      ],
+      "realizers": [
+        1
+      ],
+      "ear": [
+        8,
+        4,
+        9
+      ],
+      "ear_rows": [
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            7,
+            9
+          ],
+          "new_centers": [
+            7
+          ],
+          "uep_new_centers": [
+            7
+          ]
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            6,
+            8
+          ],
+          "new_centers": [
+            6
+          ],
+          "uep_new_centers": [
+            6
+          ]
+        },
+        {
+          "v": 6,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            8
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "I?ABEagF_",
+      "n": 10,
+      "edges": 13,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        9
+      ],
+      "realizers": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ],
+      "ear": [
+        0,
+        5,
+        9
+      ],
+      "ear_rows": [
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            6,
+            9
+          ],
+          "new_centers": [
+            6
+          ],
+          "uep_new_centers": [
+            6
+          ]
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 6,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            0
+          ],
+          "new_centers": [
+            0
+          ],
+          "uep_new_centers": [
+            0
+          ]
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 1,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            7,
+            8
+          ],
+          "new_centers": [
+            0,
+            7,
+            8
+          ],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "I?ABEagF_",
+      "n": 10,
+      "edges": 13,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        9
+      ],
+      "realizers": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ],
+      "ear": [
+        7,
+        3,
+        9
+      ],
+      "ear_rows": [
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            6,
+            9
+          ],
+          "new_centers": [
+            6
+          ],
+          "uep_new_centers": [
+            6
+          ]
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 6,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            0
+          ],
+          "new_centers": [
+            0
+          ],
+          "uep_new_centers": [
+            0
+          ]
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 1,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            7,
+            8
+          ],
+          "new_centers": [
+            0,
+            7,
+            8
+          ],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "I?ABEagF_",
+      "n": 10,
+      "edges": 13,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        9
+      ],
+      "realizers": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ],
+      "ear": [
+        8,
+        4,
+        9
+      ],
+      "ear_rows": [
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            6,
+            9
+          ],
+          "new_centers": [
+            6
+          ],
+          "uep_new_centers": [
+            6
+          ]
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 6,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            0
+          ],
+          "new_centers": [
+            0
+          ],
+          "uep_new_centers": [
+            0
+          ]
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 1,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            7,
+            8
+          ],
+          "new_centers": [
+            0,
+            7,
+            8
+          ],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "I?AB?rOJ?",
+      "n": 10,
+      "edges": 11,
+      "beta": 2,
+      "girth": 7,
+      "radius": 3,
+      "eta": 2,
+      "center": [
+        0,
+        5,
+        8,
+        9
+      ],
+      "realizers": [
+        6,
+        7
+      ],
+      "ear": [
+        8,
+        0,
+        5,
+        9
+      ],
+      "ear_rows": [
+        {
+          "v": 0,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 1,
+          "eta": 1,
+          "radius": 4,
+          "center": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            9
+          ],
+          "new_centers": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "uep_new_centers": []
+        },
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 1,
+          "eta": 1,
+          "radius": 4,
+          "center": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "new_centers": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            4,
+            5,
+            9
+          ],
+          "new_centers": [
+            4
+          ],
+          "uep_new_centers": [
+            4
+          ]
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            3,
+            8
+          ],
+          "new_centers": [
+            3
+          ],
+          "uep_new_centers": [
+            3
+          ]
+        },
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            2,
+            5,
+            9
+          ],
+          "new_centers": [
+            2
+          ],
+          "uep_new_centers": [
+            2
+          ]
+        },
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            8
+          ],
+          "new_centers": [
+            1
+          ],
+          "uep_new_centers": [
+            1
+          ]
+        },
+        {
+          "v": 6,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            5,
+            7
+          ],
+          "new_centers": [
+            7
+          ],
+          "uep_new_centers": [
+            7
+          ]
+        },
+        {
+          "v": 7,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            0,
+            5,
+            6
+          ],
+          "new_centers": [
+            6
+          ],
+          "uep_new_centers": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "graph6": "I?`acgwg_",
+      "n": 10,
+      "edges": 14,
+      "beta": 5,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        2,
+        3,
+        7,
+        9
+      ],
+      "realizers": [
+        1,
+        4
+      ],
+      "ear": [
+        0,
+        4,
+        8
+      ],
+      "ear_rows": [
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 2,
+          "center": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            9
+          ],
+          "new_centers": [
+            5,
+            6
+          ],
+          "uep_new_centers": [
+            5,
+            6
+          ]
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            2,
+            3
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            3,
+            7
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 3,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            2,
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 5,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            3,
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 6,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            2,
+            7
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            2,
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            7,
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            3,
+            7
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "I?`acgwg_",
+      "n": 10,
+      "edges": 14,
+      "beta": 5,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        2,
+        3,
+        7,
+        9
+      ],
+      "realizers": [
+        1,
+        4
+      ],
+      "ear": [
+        5,
+        1,
+        6
+      ],
+      "ear_rows": [
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 0,
+          "eta": 1,
+          "radius": 2,
+          "center": [
+            0,
+            2,
+            3,
+            7,
+            8,
+            9
+          ],
+          "new_centers": [
+            0,
+            8
+          ],
+          "uep_new_centers": [
+            0,
+            8
+          ]
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            2,
+            3
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            3,
+            7
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 3,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            2,
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 5,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            3,
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 6,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            2,
+            7
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            2,
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            7,
+            9
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            3,
+            7
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "J?AA@AOy?}?",
+      "n": 11,
+      "edges": 14,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        10
+      ],
+      "realizers": [
+        0,
+        1,
+        2,
+        8,
+        9
+      ],
+      "ear": [
+        0,
+        5,
+        10
+      ],
+      "ear_rows": [
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [
+            9
+          ],
+          "uep_new_centers": [
+            9
+          ]
+        },
+        {
+          "v": 8,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            4,
+            10
+          ],
+          "new_centers": [
+            4
+          ],
+          "uep_new_centers": [
+            4
+          ]
+        },
+        {
+          "v": 9,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "J?AA@AOy?}?",
+      "n": 11,
+      "edges": 14,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        10
+      ],
+      "realizers": [
+        0,
+        1,
+        2,
+        8,
+        9
+      ],
+      "ear": [
+        9,
+        4,
+        10
+      ],
+      "ear_rows": [
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            9
+          ],
+          "new_centers": [
+            9
+          ],
+          "uep_new_centers": [
+            9
+          ]
+        },
+        {
+          "v": 8,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            4,
+            10
+          ],
+          "new_centers": [
+            4
+          ],
+          "uep_new_centers": [
+            4
+          ]
+        },
+        {
+          "v": 9,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "J?AA@BOi?}?",
+      "n": 11,
+      "edges": 14,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        10
+      ],
+      "realizers": [
+        0,
+        1,
+        2,
+        8,
+        9
+      ],
+      "ear": [
+        0,
+        5,
+        10
+      ],
+      "ear_rows": [
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 1,
+          "eta": 1,
+          "radius": 3,
+          "center": [
+            0,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            0,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "J?AA@BOi?}?",
+      "n": 11,
+      "edges": 14,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        10
+      ],
+      "realizers": [
+        0,
+        1,
+        2,
+        8,
+        9
+      ],
+      "ear": [
+        8,
+        3,
+        10
+      ],
+      "ear_rows": [
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 1,
+          "eta": 1,
+          "radius": 3,
+          "center": [
+            0,
+            4,
+            5,
+            6,
+            9,
+            10
+          ],
+          "new_centers": [
+            0,
+            4,
+            5,
+            6,
+            9
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "J?AA@BOi?}?",
+      "n": 11,
+      "edges": 14,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        10
+      ],
+      "realizers": [
+        0,
+        1,
+        2,
+        8,
+        9
+      ],
+      "ear": [
+        9,
+        4,
+        10
+      ],
+      "ear_rows": [
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": -1,
+          "delta_radius": 1,
+          "eta": 1,
+          "radius": 3,
+          "center": [
+            0,
+            3,
+            5,
+            7,
+            8,
+            10
+          ],
+          "new_centers": [
+            0,
+            3,
+            5,
+            7,
+            8
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "J?AA@AW\\?]?",
+      "n": 11,
+      "edges": 14,
+      "beta": 4,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        5
+      ],
+      "realizers": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "ear": [
+        5,
+        0,
+        8
+      ],
+      "ear_rows": [
+        {
+          "v": 0,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 1,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            5
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 2,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            5
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 3,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            5,
+            10
+          ],
+          "new_centers": [
+            10
+          ],
+          "uep_new_centers": [
+            10
+          ]
+        },
+        {
+          "v": 4,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            5,
+            9
+          ],
+          "new_centers": [
+            9
+          ],
+          "uep_new_centers": [
+            9
+          ]
+        },
+        {
+          "v": 6,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            5
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 7,
+          "degree": 2,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            5
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            5
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 1,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            4,
+            5,
+            10
+          ],
+          "new_centers": [
+            4,
+            10
+          ],
+          "uep_new_centers": []
+        },
+        {
+          "v": 10,
+          "degree": 4,
+          "delta_eta": 0,
+          "delta_radius": 1,
+          "eta": 2,
+          "radius": 3,
+          "center": [
+            3,
+            5,
+            9
+          ],
+          "new_centers": [
+            3,
+            9
+          ],
+          "uep_new_centers": []
+        }
+      ]
+    },
+    {
+      "graph6": "J?AADBOQP{?",
+      "n": 11,
+      "edges": 15,
+      "beta": 5,
+      "girth": 5,
+      "radius": 2,
+      "eta": 2,
+      "center": [
+        10
+      ],
+      "realizers": [
+        0,
+        1,
+        7,
+        8,
+        9
+      ],
+      "ear": [
+        0,
+        5,
+        10
+      ],
+      "ear_rows": [
+        {
+          "v": 5,
+          "degree": 2,
+          "delta_eta": -2,
+          "delta_radius": 1,
+          "eta": 0,
+          "radius": 3,
+          "center": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "new_centers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          "uep_new_centers": []
+        }
+      ],
+      "good_deletions": [
+        {
+          "v": 0,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 1,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 7,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 8,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        },
+        {
+          "v": 9,
+          "degree": 3,
+          "delta_eta": 0,
+          "delta_radius": 0,
+          "eta": 2,
+          "radius": 2,
+          "center": [
+            10
+          ],
+          "new_centers": [],
+          "uep_new_centers": []
+        }
+      ]
+    }
+  ]
+}

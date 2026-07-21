@@ -1,0 +1,110 @@
+{
+  "buckets": {
+    "3": {
+      "count": 2841,
+      "exists_viol": 0,
+      "exists_viol_records": [],
+      "forall_viol": 70,
+      "min_exists_slack": 0,
+      "min_exists_witness": "atlas [CN] n=4 g=3 r=1 e=1 N1max=1",
+      "relaxed_viol": 0
+    },
+    "4": {
+      "count": 541,
+      "exists_viol": 2,
+      "exists_viol_records": [
+        {
+          "M_max": 2,
+          "N1_max": 1,
+          "N1_relaxed_max": 1,
+          "e": 2,
+          "family": "atlas",
+          "g": 4,
+          "graph6": "FhELO",
+          "n": 7,
+          "r": 2
+        },
+        {
+          "M_max": 2,
+          "N1_max": 1,
+          "N1_relaxed_max": 1,
+          "e": 2,
+          "family": "crown4_3",
+          "g": 4,
+          "graph6": "Fl`HG",
+          "n": 7,
+          "r": 2
+        }
+      ],
+      "forall_viol": 2,
+      "min_exists_slack": -1,
+      "min_exists_witness": "atlas [FhELO] n=7 g=4 r=2 e=2 N1max=1",
+      "relaxed_viol": 2
+    },
+    "5": {
+      "count": 961,
+      "exists_viol": 1,
+      "exists_viol_records": [
+        {
+          "M_max": 10,
+          "N1_max": 3,
+          "N1_relaxed_max": 3,
+          "e": 4,
+          "family": "forcedGirth(n=16,p=0.22,g=5)",
+          "g": 5,
+          "graph6": "O@?A?GGO@G_G?H?gA_K?_",
+          "n": 16,
+          "r": 4
+        }
+      ],
+      "forall_viol": 4,
+      "min_exists_slack": -1,
+      "min_exists_witness": "forcedGirth(n=16,p=0.22,g=5) [O@?A?GGO@G_G?H?gA_K?_] n=16 g=5 r=4 e=4 N1max=3",
+      "relaxed_viol": 1
+    },
+    "6": {
+      "count": 573,
+      "exists_viol": 0,
+      "exists_viol_records": [],
+      "forall_viol": 0,
+      "min_exists_slack": 0,
+      "min_exists_witness": "atlas [FK_h_] n=7 g=6 r=3 e=1 N1max=1",
+      "relaxed_viol": 0
+    },
+    "7+": {
+      "count": 2559,
+      "exists_viol": 2,
+      "exists_viol_records": [
+        {
+          "M_max": 14,
+          "N1_max": 6,
+          "N1_relaxed_max": 6,
+          "e": 7,
+          "family": "ear(g=17,a=10,b=16,len=9)",
+          "g": 15,
+          "graph6": "\\hCGGC@?G?_@?@??_?G?@_?C?G???G??C??@???G???_??@??A@O???????G???@????C",
+          "n": 29,
+          "r": 8
+        },
+        {
+          "M_max": null,
+          "N1_max": 8,
+          "N1_relaxed_max": 8,
+          "e": 9,
+          "family": "ear(g=20,a=1,b=14,len=4)",
+          "g": 11,
+          "graph6": "_hCGGC@?G?_@?@??_?G?@??C??G??K??D??????G?@?c??????@????_???G???@?A???????G????G????C",
+          "n": 32,
+          "r": 9
+        }
+      ],
+      "forall_viol": 3,
+      "min_exists_slack": -1,
+      "min_exists_witness": "ear(g=17,a=10,b=16,len=9) [\\hCGGC@?G?_@?@??_?G?@_?C?G???G??C??@???G???_??@??A@O???????G???@????C] n=29 g=15 r=8 e=7 N1max=6",
+      "relaxed_viol": 2
+    }
+  },
+  "graphs": 8446,
+  "seed": 20260718,
+  "test": "proverC_N1"
+}

@@ -1,0 +1,77 @@
+{
+  "failure": {
+    "E_full": [],
+    "H": [
+      22,
+      23
+    ],
+    "K": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "attachments": [
+      8
+    ],
+    "g": 10,
+    "graph6": "]hCGGC@_H??@?A??_GG?C_????G??G??C??@???G@?????@O???????_???G???@????C????G",
+    "lambda_": 5,
+    "maximizing_pair": [
+      4,
+      23,
+      23
+    ],
+    "n": 30,
+    "r": 7,
+    "rooted_triameter": 4,
+    "slack": -1,
+    "z": 0
+  },
+  "generated": 15,
+  "legal_graphs": 15,
+  "min_record": {
+    "E_full": [],
+    "H": [
+      22,
+      23
+    ],
+    "K": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "attachments": [
+      8
+    ],
+    "g": 10,
+    "graph6": "]hCGGC@_H??@?A??_GG?C_????G??G??C??@???G@?????@O???????_???G???@????C????G",
+    "lambda_": 5,
+    "maximizing_pair": [
+      4,
+      23,
+      23
+    ],
+    "n": 30,
+    "r": 7,
+    "rooted_triameter": 4,
+    "slack": -1,
+    "z": 0
+  },
+  "min_slack": -1,
+  "records": 15,
+  "seed": 14420260718
+}

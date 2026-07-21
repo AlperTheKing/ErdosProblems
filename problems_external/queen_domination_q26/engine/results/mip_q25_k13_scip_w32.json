@@ -1,0 +1,49 @@
+{
+  "configuration": {
+    "backend_accepted_thread_setting": null,
+    "backend_requested": "scip",
+    "backend_resolved": "scip",
+    "solver_output": false,
+    "timeout_enforcement": "solver subprocess terminated at hard wall deadline",
+    "timeout_seconds": 120.0,
+    "workers_requested": 32
+  },
+  "finished_utc": "2026-07-18T19:48:32.857+00:00",
+  "instance": {
+    "board_variables": 625,
+    "cardinality": "at-most",
+    "domination_constraints": 625,
+    "k": 13,
+    "n": 25,
+    "structural_restrictions": []
+  },
+  "model_sha256": "fe3c2b38e2cac4e1d0e72110be3837f2a486c00a10533d7142a162c8253e9db6",
+  "schema": "queen-domination-mip-result-v1",
+  "solution": {
+    "cardinality": null,
+    "coordinates": [],
+    "independent_direct_check": {
+      "checked": false,
+      "dominated_count": null,
+      "errors": null,
+      "method": null,
+      "queen_count": null,
+      "uncovered": null,
+      "valid": null
+    }
+  },
+  "solver": {
+    "backend": "SCIP",
+    "backend_id": "SCIP",
+    "backend_wall_time_milliseconds": null,
+    "branch_and_bound_nodes": null,
+    "iterations": null,
+    "ortools_version": "9.14.6206",
+    "python_version": "3.12.4",
+    "status": "UNKNOWN",
+    "status_code": null,
+    "version": null,
+    "wall_seconds": 120.5286299000145
+  },
+  "started_utc": "2026-07-18T19:46:32.333+00:00"
+}

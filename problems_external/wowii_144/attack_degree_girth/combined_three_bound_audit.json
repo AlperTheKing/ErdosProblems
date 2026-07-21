@@ -1,0 +1,119 @@
+{
+  "statement": "eta <= max(Delta-1, diameter-floor(girth/2), n-girth-beta+1)",
+  "generator": "geng -Ctfq",
+  "max_n": 14,
+  "per_order": {
+    "5": {
+      "generated": 1,
+      "retained": 0,
+      "residuals": 0
+    },
+    "6": {
+      "generated": 1,
+      "retained": 0,
+      "residuals": 0
+    },
+    "7": {
+      "generated": 2,
+      "retained": 1,
+      "residuals": 0
+    },
+    "8": {
+      "generated": 5,
+      "retained": 4,
+      "residuals": 0
+    },
+    "9": {
+      "generated": 12,
+      "retained": 11,
+      "residuals": 0
+    },
+    "10": {
+      "generated": 40,
+      "retained": 39,
+      "residuals": 0
+    },
+    "11": {
+      "generated": 154,
+      "retained": 153,
+      "residuals": 3
+    },
+    "12": {
+      "generated": 766,
+      "retained": 765,
+      "residuals": 13
+    },
+    "13": {
+      "generated": 4672,
+      "retained": 4671,
+      "residuals": 88
+    },
+    "14": {
+      "generated": 34547,
+      "retained": 34546,
+      "residuals": 383
+    }
+  },
+  "graphs": 40190,
+  "residuals": 487,
+  "failures": 0,
+  "minimum_slack": 0,
+  "first_minimum": {
+    "graph6": "G?qa`o",
+    "n": 8,
+    "m": 9,
+    "beta": 2,
+    "girth": 5,
+    "diameter": 4,
+    "maximum_degree": 3,
+    "eta": 2,
+    "center": [
+      4,
+      7
+    ],
+    "degree_term": 2,
+    "diameter_term": 2,
+    "rank_term": 2,
+    "slack": 0,
+    "residual_rank_slack": 0,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ]
+    ]
+  },
+  "first_failure": null
+}

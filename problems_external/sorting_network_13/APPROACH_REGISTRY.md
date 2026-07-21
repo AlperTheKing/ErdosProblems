@@ -2,7 +2,7 @@
 
 Selected: 2026-07-18
 Deadline: 2026-07-18T21:57:27+03:00
-Status: CALIBRATION PASS — target harness blocked pending V2 referee audit
+Status: DEAD — no independently verified SN13-44 by the fixed deadline
 
 ## Novelty and priority gate
 
@@ -65,10 +65,13 @@ Before a target run:
 4. pass calibration only if at least one worker in each cohort reaches the
    stated exact target and both verifiers accept it.
 
-If calibration passes, use at most 64 workers and the remaining deadline to
-search only for SN13-44, seeded by multiple published 13/45 networks and
-independent prefixes. A GPU implementation may batch exact comparator
-evaluation, but no matrix multiplication is involved.
+Calibration passed: the registered 32-worker run recovered verified 12/39 and
+13/45 networks. Under the user's updated compute authorization, use exactly
+100 single-threaded workers on the 64-core/128-thread host until the fixed
+deadline. Search only for SN13-44 from six independently verified 13/45 seed
+families and four mutation profiles. All workers use `PrefixType=0`; no prefix
+diversity is claimed. The exact GPU scorer remains available for verification,
+but its calibrated beam heuristic is NO-GO and will not run a target search.
 
 ### 5. Exit condition
 
@@ -80,6 +83,17 @@ evaluation, but no matrix multiplication is involved.
   and stop.
 - Never extend the run because a 45 network, lower error count, throughput
   record, or bounded no-hit result was obtained. Those do not close S(13).
+
+## Closing record
+
+- Run `20260718T144802274` started at `2026-07-18T14:48:02+03:00` and stopped
+  at `2026-07-18T21:57:27.507+03:00`.
+- All 100 workers ended in state `hard-deadline`; total worker wall time was
+  715.61 hours.
+- `summary.json` records `target_found: false` and `hit_evidence: null`.
+- An independent scan found zero exact N13/L44 headers in 100 stdout logs,
+  zero nonempty stderr logs, and zero remaining SorterHunter processes.
+- Exit condition applied: preserve all artifacts and stop this route.
 
 ## Minimal lemma tree
 

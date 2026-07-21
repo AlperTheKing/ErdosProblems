@@ -1,0 +1,3078 @@
+{
+  "catalogue_blocks": 189,
+  "equalities": 15,
+  "equality_source_counts": {
+    "random": 15
+  },
+  "failures": 0,
+  "first_100_tight": [
+    {
+      "articulations": [
+        7,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "MhCGGC@?G?o@???O_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C12+P+2",
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        3,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "MhCGGC@?G?o@??C?_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C12+P+2",
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        11,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "MhCGGC@?G?o@?@??_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C12+P+2",
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        7,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "MhCGGC@?G?o@?O??_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C12+star+2",
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        3,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "MhCGGC@?G?o@C???_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C12+P+2",
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        2,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "MhCGGC@?G?o@G???_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C12+star+2",
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        2,
+        11,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "diameter": 8,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?c??@??_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C11+P+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        4,
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        3,
+        4,
+        5
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 10,
+      "graph6": "MhCGGC@_G??@?@A?_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C10+P+4",
+      "radius": 5,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        1,
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 10,
+      "graph6": "MhCGGC@_G??@?@O?_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C10+P+4",
+      "radius": 5,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        9,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 9,
+      "eta": 3,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@?C??_?G",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:C12+P+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        8,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 9,
+      "eta": 3,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@?G??_?G",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:C12+P+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        10,
+        12,
+        13,
+        14
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        9,
+        10
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 11,
+      "graph6": "NhCGGC@?K?_??@??_@G",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:C11+P+4",
+      "radius": 5,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        8,
+        11,
+        12,
+        13,
+        14
+      ],
+      "beta": 1,
+      "center": [
+        8
+      ],
+      "diameter": 10,
+      "eta": 5,
+      "girth": 10,
+      "graph6": "NhCGGC@_G??@?@??_CG",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:C10+P+5",
+      "radius": 5,
+      "rhs": 5,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 5,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        11,
+        13,
+        14,
+        15
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        9,
+        10,
+        11
+      ],
+      "diameter": 10,
+      "eta": 4,
+      "girth": 12,
+      "graph6": "OhCGGC@?G?o@????_?G?H",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 16,
+      "name": "random:C12+P+4",
+      "radius": 6,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        2,
+        12,
+        13,
+        14,
+        15
+      ],
+      "beta": 1,
+      "center": [
+        1,
+        2,
+        3
+      ],
+      "diameter": 11,
+      "eta": 5,
+      "girth": 12,
+      "graph6": "PhCGGC@?G?o@G???_?G?@??C",
+      "m": 17,
+      "maximum_degree": 3,
+      "n": 17,
+      "name": "random:C12+P+5",
+      "radius": 6,
+      "rhs": 5,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 5,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1,
+        2
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 9,
+      "graph6": "MPU?GD@_??_@O@?A?",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(4,5,5)+P+1",
+      "radius": 4,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        2,
+        3
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 9,
+      "graph6": "MPU?GD@_??_@O@?C?",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(4,5,5)+P+1",
+      "radius": 4,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        8
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        3,
+        4
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 9,
+      "graph6": "MPU?GD@_??_@O@?G?",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(4,5,5)+P+1",
+      "radius": 4,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        7
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1,
+        4
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 9,
+      "graph6": "MPU?GD@_??_@O@?O?",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(4,5,5)+P+1",
+      "radius": 4,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        6
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1,
+        2
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 9,
+      "graph6": "MPU?GD@_??_@O@?_?",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(4,5,5)+P+1",
+      "radius": 4,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        1
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "diameter": 5,
+      "eta": 3,
+      "girth": 9,
+      "graph6": "MPU?GD@_??_@O@O??",
+      "m": 15,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:theta(4,5,5)+P+1",
+      "radius": 4,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        3
+      ],
+      "diameter": 6,
+      "eta": 4,
+      "girth": 8,
+      "graph6": "MR_GIE??G?_@O@?@?",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1
+      ],
+      "diameter": 6,
+      "eta": 4,
+      "girth": 8,
+      "graph6": "MR_GIE??G?_@O@?A?",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        9,
+        13
+      ],
+      "beta": 2,
+      "center": [
+        0
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 8,
+      "graph6": "MR_GIE??G?g@???C_",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,5)+P+2",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        9,
+        12
+      ],
+      "beta": 2,
+      "center": [
+        0
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 8,
+      "graph6": "MR_GIE??G?g@?C??_",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,5)+P+2",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        5,
+        12
+      ],
+      "beta": 2,
+      "center": [
+        0
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 8,
+      "graph6": "MR_GIE??G?g@@???_",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,5)+star+2",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 7,
+      "eta": 1,
+      "girth": 12,
+      "graph6": "MhCGGC@?G?o@?A?A?",
+      "m": 14,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:C12+star+2",
+      "radius": 6,
+      "rhs": 2,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        4
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11
+      ],
+      "diameter": 7,
+      "eta": 1,
+      "girth": 12,
+      "graph6": "MhCGGC@?G?o@A?A??",
+      "m": 14,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:C12+star+2",
+      "radius": 6,
+      "rhs": 2,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        10,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        9,
+        10
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?_??B?A?",
+      "m": 14,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:C11+P+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        3,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?_?C@C??",
+      "m": 14,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:C11+P+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        0,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        10
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?_?_@_??",
+      "m": 14,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:C11+P+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        10,
+        11
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        9,
+        10
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?_@?@?@?",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C11+star+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        9,
+        11
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?_A?@?@?",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C11+star+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        8,
+        11
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?_C?@?@?",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C11+star+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        8,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?_C?G??_",
+      "m": 14,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:C11+P+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        7,
+        11
+      ],
+      "beta": 1,
+      "center": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?_G?@?@?",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C11+star+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        6,
+        11
+      ],
+      "beta": 1,
+      "center": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?_O?@?@?",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C11+star+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        4,
+        11
+      ],
+      "beta": 1,
+      "center": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?`??@?@?",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C11+star+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        0,
+        11
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        10
+      ],
+      "diameter": 7,
+      "eta": 2,
+      "girth": 11,
+      "graph6": "MhCGGC@?K?o??@?@?",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C11+star+3",
+      "radius": 5,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        2,
+        11,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "diameter": 8,
+      "eta": 3,
+      "girth": 10,
+      "graph6": "MhCGGC@_H?C??@??_",
+      "m": 14,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:C10+P+4",
+      "radius": 5,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 3,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        3,
+        10,
+        11,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        3
+      ],
+      "diameter": 8,
+      "eta": 4,
+      "girth": 9,
+      "graph6": "MhCGGE@???_@C@C??",
+      "m": 14,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:C9+P+5",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 4,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        8,
+        9
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 9,
+      "graph6": "MhCGGE@?G?_@?@??_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C9+P+5",
+      "radius": 5,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 5,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        2,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        8
+      ],
+      "diameter": 10,
+      "eta": 5,
+      "girth": 8,
+      "graph6": "MhCGKC_?G?_@?@??_",
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:C8+P+6",
+      "radius": 5,
+      "rhs": 6,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 6,
+        "order_rank": 6
+      }
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 7,
+      "center": [
+        9
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "MheA@GUAo?_A?A?@_",
+      "m": 20,
+      "maximum_degree": 5,
+      "n": 14,
+      "name": "random:subdiv-petersen-1+C5",
+      "radius": 2,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 3,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        8
+      ],
+      "beta": 7,
+      "center": [
+        8
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "MheA@GUAo@?@?@?G_",
+      "m": 20,
+      "maximum_degree": 5,
+      "n": 14,
+      "name": "random:subdiv-petersen-1+C5",
+      "radius": 2,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 3,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        4,
+        10,
+        11,
+        12
+      ],
+      "beta": 6,
+      "center": [
+        10
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 5,
+      "graph6": "MheA@GUAoO?@?@??_",
+      "m": 19,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:subdiv-petersen-1+P+4",
+      "radius": 3,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 4,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        0
+      ],
+      "beta": 7,
+      "center": [
+        0
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "MheA@GUAs?O??A?@_",
+      "m": 20,
+      "maximum_degree": 5,
+      "n": 14,
+      "name": "core-cycle:subdiv-petersen-1+C5",
+      "radius": 2,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 3,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        11,
+        14
+      ],
+      "beta": 2,
+      "center": [
+        1
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 9,
+      "graph6": "NPU?GD@_??_@O@????g",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:theta(4,5,5)+P+2",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        12,
+        13
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        4
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 9,
+      "graph6": "NPU?GD@_??_@O@??_?G",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:theta(4,5,5)+star+2",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        7,
+        13
+      ],
+      "beta": 2,
+      "center": [
+        1
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 9,
+      "graph6": "NPU?GD@_??_@O@?O??G",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:theta(4,5,5)+P+2",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        3
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 9,
+      "graph6": "NR_GGD@_??_@?@O?_?O",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:theta(3,6,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        2
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 9,
+      "graph6": "NR_GGD@_??_@?@O?_@?",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:theta(3,6,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        6
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 9,
+      "graph6": "NR_GGD@_??_@?@O?_O?",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:theta(3,6,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        10,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@???A_@?",
+      "m": 15,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:C12+P+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        6,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@???__O?",
+      "m": 15,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:C12+P+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        3,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@??C?a??",
+      "m": 15,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:C12+P+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        0,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@??_?o??",
+      "m": 15,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:C12+P+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        10,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@?A??_?O",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:C12+star+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        2,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@G???_?O",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:C12+star+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        1,
+        12
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@O???_?O",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 15,
+      "name": "random:C12+star+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        1,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "NhCGGC@?G?o@O?O???G",
+      "m": 15,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:C12+P+3",
+      "radius": 6,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13
+      ],
+      "diameter": 4,
+      "eta": 1,
+      "girth": 6,
+      "graph6": "NhEGHC@AI?_PC@_G_?G",
+      "m": 22,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:subdiv-heawood-1+P+1",
+      "radius": 3,
+      "rhs": 2,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        0,
+        2,
+        3,
+        4,
+        6,
+        8,
+        10,
+        11,
+        12,
+        13
+      ],
+      "diameter": 4,
+      "eta": 1,
+      "girth": 6,
+      "graph6": "NhEGHC@AI?_PC@_G_?O",
+      "m": 22,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:subdiv-heawood-1+P+1",
+      "radius": 3,
+      "rhs": 2,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 8,
+      "center": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "diameter": 4,
+      "eta": 1,
+      "girth": 6,
+      "graph6": "NhEGHC@AI?_PC@_G_?_",
+      "m": 22,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:subdiv-heawood-1+P+1",
+      "radius": 3,
+      "rhs": 2,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13
+      ],
+      "diameter": 4,
+      "eta": 1,
+      "girth": 6,
+      "graph6": "NhEGHC@AI?_PC@_G_A?",
+      "m": 22,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:subdiv-heawood-1+P+1",
+      "radius": 3,
+      "rhs": 2,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        4
+      ],
+      "beta": 8,
+      "center": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12
+      ],
+      "diameter": 4,
+      "eta": 1,
+      "girth": 6,
+      "graph6": "NhEGHC@AI?_PC@_G`??",
+      "m": 22,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:subdiv-heawood-1+P+1",
+      "radius": 3,
+      "rhs": 2,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        3
+      ],
+      "beta": 8,
+      "center": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        11,
+        12,
+        13
+      ],
+      "diameter": 4,
+      "eta": 1,
+      "girth": 6,
+      "graph6": "NhEGHC@AI?_PC@_Ga??",
+      "m": 22,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:subdiv-heawood-1+P+1",
+      "radius": 3,
+      "rhs": 2,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        0
+      ],
+      "beta": 8,
+      "center": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        13
+      ],
+      "diameter": 4,
+      "eta": 1,
+      "girth": 6,
+      "graph6": "NhEGHC@AI?_PC@_Go??",
+      "m": 22,
+      "maximum_degree": 4,
+      "n": 15,
+      "name": "random:subdiv-heawood-1+P+1",
+      "radius": 3,
+      "rhs": 2,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      }
+    },
+    {
+      "articulations": [
+        7
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 10,
+      "graph6": "OPU?GC@OK??@?@??g?GA?",
+      "m": 17,
+      "maximum_degree": 3,
+      "n": 16,
+      "name": "random:theta(4,6,6)+P+1",
+      "radius": 5,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        11,
+        13,
+        14
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 9,
+      "eta": 3,
+      "girth": 12,
+      "graph6": "OhCGGC@?G?o@????_?g?G",
+      "m": 16,
+      "maximum_degree": 4,
+      "n": 16,
+      "name": "random:C12+P+4",
+      "radius": 6,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 3,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        2,
+        13,
+        14
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        11
+      ],
+      "diameter": 9,
+      "eta": 3,
+      "girth": 12,
+      "graph6": "OhCGGC@?G?o@????c?H??",
+      "m": 16,
+      "maximum_degree": 4,
+      "n": 16,
+      "name": "random:C12+P+4",
+      "radius": 6,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 3,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        7,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "beta": 1,
+      "center": [
+        7,
+        15
+      ],
+      "diameter": 11,
+      "eta": 5,
+      "girth": 10,
+      "graph6": "OhCGGC@_G??@?@??_?GA@",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 16,
+      "name": "random:C10+P+6",
+      "radius": 6,
+      "rhs": 6,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 6,
+        "order_rank": 6
+      }
+    },
+    {
+      "articulations": [
+        12,
+        14
+      ],
+      "beta": 8,
+      "center": [
+        3,
+        11,
+        12,
+        13
+      ],
+      "diameter": 5,
+      "eta": 2,
+      "girth": 6,
+      "graph6": "OhEGHC@AI?_PC@_G_?O?@",
+      "m": 23,
+      "maximum_degree": 4,
+      "n": 16,
+      "name": "random:subdiv-heawood-1+P+2",
+      "radius": 3,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        9,
+        14
+      ],
+      "beta": 8,
+      "center": [
+        4,
+        8,
+        9,
+        10
+      ],
+      "diameter": 5,
+      "eta": 2,
+      "girth": 6,
+      "graph6": "OhEGHC@AI?_PC@_G_A??@",
+      "m": 23,
+      "maximum_degree": 4,
+      "n": 16,
+      "name": "random:subdiv-heawood-1+star+2",
+      "radius": 3,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        7,
+        14
+      ],
+      "beta": 8,
+      "center": [
+        2,
+        6,
+        7,
+        8
+      ],
+      "diameter": 5,
+      "eta": 2,
+      "girth": 6,
+      "graph6": "OhEGHC@AI?_PC@_G_G??@",
+      "m": 23,
+      "maximum_degree": 4,
+      "n": 16,
+      "name": "random:subdiv-heawood-1+star+2",
+      "radius": 3,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        1,
+        14
+      ],
+      "beta": 8,
+      "center": [
+        0,
+        1,
+        2,
+        10
+      ],
+      "diameter": 5,
+      "eta": 2,
+      "girth": 6,
+      "graph6": "OhEGHC@AI?_PC@_Gg???@",
+      "m": 23,
+      "maximum_degree": 4,
+      "n": 16,
+      "name": "random:subdiv-heawood-1+P+2",
+      "radius": 3,
+      "rhs": 3,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      }
+    },
+    {
+      "articulations": [
+        15
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 11,
+      "graph6": "PPDK?C@?I?o??@??_?I?@??C",
+      "m": 18,
+      "maximum_degree": 3,
+      "n": 17,
+      "name": "random:theta(5,6,6)+P+1",
+      "radius": 5,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 11,
+      "graph6": "PPDK?C@?I?o??@??_?I?@?@?",
+      "m": 18,
+      "maximum_degree": 3,
+      "n": 17,
+      "name": "random:theta(5,6,6)+P+1",
+      "radius": 5,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        6
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "diameter": 7,
+      "eta": 4,
+      "girth": 11,
+      "graph6": "PPDK?C@?I?o??@??_?I?@?_?",
+      "m": 18,
+      "maximum_degree": 3,
+      "n": 17,
+      "name": "random:theta(5,6,6)+P+1",
+      "radius": 5,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        7,
+        15
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1
+      ],
+      "diameter": 8,
+      "eta": 5,
+      "girth": 10,
+      "graph6": "PPU?GC@OK??@?@??g?GA???C",
+      "m": 18,
+      "maximum_degree": 3,
+      "n": 17,
+      "name": "random:theta(4,6,6)+star+2",
+      "radius": 5,
+      "rhs": 6,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 6
+      }
+    },
+    {
+      "articulations": [
+        0,
+        13,
+        14,
+        15
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        10,
+        11
+      ],
+      "diameter": 10,
+      "eta": 4,
+      "girth": 12,
+      "graph6": "PhCGGC@?G?o@????_?K?@_??",
+      "m": 17,
+      "maximum_degree": 4,
+      "n": 17,
+      "name": "random:C12+P+5",
+      "radius": 6,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 4,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        6,
+        13,
+        14,
+        15
+      ],
+      "beta": 1,
+      "center": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "diameter": 10,
+      "eta": 4,
+      "girth": 12,
+      "graph6": "PhCGGC@?G?o@?_?_??G?@??C",
+      "m": 17,
+      "maximum_degree": 4,
+      "n": 17,
+      "name": "random:C12+P+5",
+      "radius": 6,
+      "rhs": 5,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 4,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        3,
+        12,
+        13,
+        14,
+        15
+      ],
+      "beta": 1,
+      "center": [
+        3
+      ],
+      "diameter": 10,
+      "eta": 5,
+      "girth": 11,
+      "graph6": "PhCGGC@?K?_??@??_?G_@C??",
+      "m": 17,
+      "maximum_degree": 4,
+      "n": 17,
+      "name": "random:C11+P+6",
+      "radius": 5,
+      "rhs": 6,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 5,
+        "order_rank": 6
+      }
+    },
+    {
+      "articulations": [
+        3,
+        15,
+        16
+      ],
+      "beta": 8,
+      "center": [
+        3
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 6,
+      "graph6": "PhEGHC@AI?_PC@_G_???@C?C",
+      "m": 24,
+      "maximum_degree": 4,
+      "n": 17,
+      "name": "random:subdiv-heawood-1+P+3",
+      "radius": 3,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 3,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        3,
+        14,
+        15
+      ],
+      "beta": 8,
+      "center": [
+        3
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 6,
+      "graph6": "PhEGHC@AI?_PC@_Ga???@??C",
+      "m": 24,
+      "maximum_degree": 4,
+      "n": 17,
+      "name": "random:subdiv-heawood-1+P+3",
+      "radius": 3,
+      "rhs": 4,
+      "slack": 1,
+      "terms": {
+        "degree": 2,
+        "diameter": 3,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        13,
+        16
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1
+      ],
+      "diameter": 8,
+      "eta": 5,
+      "girth": 11,
+      "graph6": "QPDK?C@?I?o??@??_?I?@??O??G",
+      "m": 19,
+      "maximum_degree": 3,
+      "n": 18,
+      "name": "random:theta(5,6,6)+star+2",
+      "radius": 5,
+      "rhs": 6,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 6
+      }
+    },
+    {
+      "articulations": [
+        7,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "beta": 1,
+      "center": [
+        11
+      ],
+      "diameter": 12,
+      "eta": 6,
+      "girth": 11,
+      "graph6": "QhCGGC@?K?_G?@??_?G?@??C??G",
+      "m": 18,
+      "maximum_degree": 3,
+      "n": 18,
+      "name": "random:C11+P+7",
+      "radius": 6,
+      "rhs": 7,
+      "slack": 1,
+      "terms": {
+        "degree": 1,
+        "diameter": 7,
+        "order_rank": 7
+      }
+    },
+    {
+      "articulations": [
+        7,
+        11,
+        12,
+        13
+      ],
+      "beta": 3,
+      "center": [
+        7
+      ],
+      "diameter": 8,
+      "eta": 4,
+      "girth": 6,
+      "graph6": "M?qcb@OK???@?@?O_",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:subdiv-K4-0+P+4",
+      "radius": 4,
+      "rhs": 6,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 5,
+        "order_rank": 6
+      }
+    },
+    {
+      "articulations": [
+        7,
+        10,
+        11,
+        12
+      ],
+      "beta": 3,
+      "center": [
+        7
+      ],
+      "diameter": 8,
+      "eta": 4,
+      "girth": 6,
+      "graph6": "M?qcb@OK?A?@?@??_",
+      "m": 16,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:subdiv-K4-0+P+4",
+      "radius": 4,
+      "rhs": 6,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 5,
+        "order_rank": 6
+      }
+    },
+    {
+      "articulations": [
+        4
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "diameter": 5,
+      "eta": 2,
+      "girth": 9,
+      "graph6": "MPU?GD@_??_@O@A??",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(4,5,5)+P+1",
+      "radius": 4,
+      "rhs": 4,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        2
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "diameter": 5,
+      "eta": 2,
+      "girth": 9,
+      "graph6": "MPU?GD@_??_@O@G??",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(4,5,5)+P+1",
+      "radius": 4,
+      "rhs": 4,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 4
+      }
+    },
+    {
+      "articulations": [
+        6,
+        12,
+        13
+      ],
+      "beta": 2,
+      "center": [
+        5,
+        6,
+        7
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 8,
+      "graph6": "MPU?IE??I?_??@?__",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(4,4,4)+P+3",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        1,
+        12,
+        13
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 8,
+      "graph6": "MPU?IE??I?_??@O?_",
+      "m": 15,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:theta(4,4,4)+P+3",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 2,
+      "terms": {
+        "degree": 2,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        6,
+        11,
+        12
+      ],
+      "beta": 2,
+      "center": [
+        5,
+        6,
+        7
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 8,
+      "graph6": "MPU?IE??I?_O?@??_",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(4,4,4)+P+3",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        2,
+        3
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 8,
+      "graph6": "MR_GIE??G?_@O@??_",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        7
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        2,
+        3
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 8,
+      "graph6": "MR_GIE??G?_@O@?O?",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        4
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        2,
+        3
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 8,
+      "graph6": "MR_GIE??G?_@O@A??",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        2
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "diameter": 5,
+      "eta": 3,
+      "girth": 8,
+      "graph6": "MR_GIE??G?_@O@G??",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        1
+      ],
+      "beta": 2,
+      "center": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "diameter": 5,
+      "eta": 3,
+      "girth": 8,
+      "graph6": "MR_GIE??G?_@O@O??",
+      "m": 15,
+      "maximum_degree": 4,
+      "n": 14,
+      "name": "random:theta(3,5,6)+P+1",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 2,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 5
+      }
+    },
+    {
+      "articulations": [
+        11,
+        13
+      ],
+      "beta": 2,
+      "center": [
+        1,
+        3
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 8,
+      "graph6": "MR_GIE??G?g@???@_",
+      "m": 15,
+      "maximum_degree": 3,
+      "n": 14,
+      "name": "random:theta(3,5,5)+P+2",
+      "radius": 4,
+      "rhs": 5,
+      "slack": 2,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 5
+      }
+    }
+  ],
+  "first_failure": null,
+  "generated": 30598,
+  "max_n": 50,
+  "min_n": 14,
+  "minimum_slack": 0,
+  "order_counts": {
+    "14": 689,
+    "15": 683,
+    "16": 777,
+    "17": 795,
+    "18": 813,
+    "19": 819,
+    "20": 870,
+    "21": 810,
+    "22": 839,
+    "23": 836,
+    "24": 869,
+    "25": 874,
+    "26": 837,
+    "27": 845,
+    "28": 831,
+    "29": 862,
+    "30": 781,
+    "31": 854,
+    "32": 760,
+    "33": 821,
+    "34": 806,
+    "35": 827,
+    "36": 826,
+    "37": 842,
+    "38": 791,
+    "39": 838,
+    "40": 855,
+    "41": 774,
+    "42": 858,
+    "43": 766,
+    "44": 850,
+    "45": 822,
+    "46": 771,
+    "47": 816,
+    "48": 799,
+    "49": 840,
+    "50": 829
+  },
+  "retained_separable_girth_at_least_five": 30175,
+  "seed": 20260718,
+  "source_counts": {
+    "core-cycle": 294,
+    "core-tail": 99,
+    "cycle-pair": 49,
+    "cycle-pair-tail": 64,
+    "random": 29577,
+    "theta-cycle": 44,
+    "theta-cycle-star": 48
+  },
+  "trials": 30000,
+  "unique_labelled": 30175,
+  "workers": 8
+}

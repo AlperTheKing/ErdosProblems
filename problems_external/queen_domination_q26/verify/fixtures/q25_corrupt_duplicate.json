@@ -1,0 +1,22 @@
+{
+  "n": 25,
+  "coordinate_order": "row,column",
+  "expected_count": 13,
+  "require_independent": false,
+  "corruption": "last published queen replaced by a duplicate of [8,22]",
+  "coordinates": [
+    [18, 0],
+    [0, 2],
+    [6, 4],
+    [20, 6],
+    [12, 8],
+    [4, 10],
+    [22, 12],
+    [10, 14],
+    [16, 16],
+    [24, 18],
+    [2, 20],
+    [8, 22],
+    [8, 22]
+  ]
+}

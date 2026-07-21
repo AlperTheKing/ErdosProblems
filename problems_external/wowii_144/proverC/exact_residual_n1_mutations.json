@@ -1,0 +1,58 @@
+{
+  "test": "exact_residual_N1_cycle_pendant_path_mutations",
+  "seed": 20260718,
+  "planned_trials": 200000,
+  "checked": 200000,
+  "residual": 65219,
+  "nontrivial_e_gt_k": 10364,
+  "minimum_slack": 0,
+  "minimum_record": {
+    "legs": [
+      0,
+      0,
+      4,
+      2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "n": 30,
+    "g": 19,
+    "k": 9,
+    "radius": 9,
+    "diameter": 13,
+    "e": 9,
+    "hmax": 0,
+    "slack": 0,
+    "residual": true,
+    "centers": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "realizers": [
+      [
+        11,
+        0
+      ]
+    ]
+  },
+  "violation": null
+}

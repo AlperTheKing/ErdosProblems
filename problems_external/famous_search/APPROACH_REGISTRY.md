@@ -1,8 +1,8 @@
 # Famous Open Problem Search — Approach Registry
 
 Selected: 2026-07-18
-Deadline: 2026-07-18T21:57:27+03:00
-Status: SELECTED — sorting-network-13 passed the round-4 direct-certificate gate
+Deadline: 2026-07-19T22:20:00+03:00
+Status: SELECTED — queen-domination-Q26 passed the round-5 direct-certificate gate
 
 ## DIRECT ROUTE
 
@@ -39,10 +39,12 @@ statement is the final deliverable.
 
 ### 4. Next falsifiable action
 
-Round 4 selected the Bose--Nelson optimal-size sorting-network problem on 13
-channels. The current bounds are 44 <= S(13) <= 45; an explicit 44-comparator
-network closes the whole problem. Continue only under
-problems_external/sorting_network_13/APPROACH_REGISTRY.md.
+Round 5 selected the queen domination problem on the 26 by 26 board. The
+published bounds are 13 <= gamma(Q_26) <= 14. An explicit 13-queen dominating
+set, or a checkable global UNSAT certificate for all sets of size at most 13
+together with the published 14-queen witness, closes the whole problem.
+Continue only under
+problems_external/queen_domination_q26/APPROACH_REGISTRY.md.
 
 ### 5. Exit condition
 

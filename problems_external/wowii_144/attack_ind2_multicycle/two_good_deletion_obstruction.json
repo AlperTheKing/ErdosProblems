@@ -1,0 +1,236 @@
+{
+  "center": [
+    0,
+    8,
+    9
+  ],
+  "cycle_rank": 3,
+  "deletions": [
+    {
+      "admissible": true,
+      "beta_after": 1,
+      "center_after": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "eta_after": 1,
+      "good": false,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {
+        "1": [
+          4,
+          5
+        ],
+        "2": [
+          3,
+          5
+        ],
+        "3": [
+          2
+        ],
+        "4": [
+          1
+        ],
+        "10": [
+          7
+        ]
+      },
+      "new_centers": [
+        1,
+        2,
+        3,
+        4,
+        10
+      ],
+      "radius_after": 4,
+      "v": 0
+    },
+    {
+      "admissible": true,
+      "beta_after": 2,
+      "center_after": [
+        0,
+        4,
+        9
+      ],
+      "eta_after": 2,
+      "good": false,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {
+        "4": [
+          1
+        ]
+      },
+      "new_centers": [
+        4
+      ],
+      "radius_after": 3,
+      "v": 1
+    },
+    {
+      "admissible": true,
+      "beta_after": 2,
+      "center_after": [
+        0,
+        3,
+        8
+      ],
+      "eta_after": 2,
+      "good": false,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {
+        "3": [
+          2
+        ]
+      },
+      "new_centers": [
+        3
+      ],
+      "radius_after": 3,
+      "v": 2
+    },
+    {
+      "admissible": true,
+      "beta_after": 2,
+      "center_after": [
+        0,
+        9
+      ],
+      "eta_after": 3,
+      "good": true,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {},
+      "new_centers": [],
+      "radius_after": 3,
+      "v": 3
+    },
+    {
+      "admissible": true,
+      "beta_after": 2,
+      "center_after": [
+        0,
+        8
+      ],
+      "eta_after": 3,
+      "good": true,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {},
+      "new_centers": [],
+      "radius_after": 3,
+      "v": 4
+    },
+    {
+      "admissible": true,
+      "beta_after": 3,
+      "center_after": [
+        0,
+        8,
+        9
+      ],
+      "eta_after": 2,
+      "good": false,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {},
+      "new_centers": [],
+      "radius_after": 3,
+      "v": 5
+    },
+    {
+      "admissible": true,
+      "beta_after": 2,
+      "center_after": [
+        8,
+        9
+      ],
+      "eta_after": 3,
+      "good": true,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {},
+      "new_centers": [],
+      "radius_after": 3,
+      "v": 6
+    },
+    {
+      "admissible": true,
+      "beta_after": 2,
+      "center_after": [
+        0,
+        6,
+        8,
+        9,
+        10
+      ],
+      "eta_after": 1,
+      "good": false,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {
+        "6": [
+          7
+        ],
+        "10": [
+          7
+        ]
+      },
+      "new_centers": [
+        6,
+        10
+      ],
+      "radius_after": 3,
+      "v": 7
+    },
+    {
+      "admissible": true,
+      "beta_after": 1,
+      "center_after": [
+        9
+      ],
+      "eta_after": 3,
+      "good": true,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {},
+      "new_centers": [],
+      "radius_after": 3,
+      "v": 8
+    },
+    {
+      "admissible": true,
+      "beta_after": 1,
+      "center_after": [
+        8
+      ],
+      "eta_after": 3,
+      "good": true,
+      "local_certificate": false,
+      "new_center_eccentric_vertices": {},
+      "new_centers": [],
+      "radius_after": 3,
+      "v": 9
+    },
+    {
+      "admissible": false,
+      "v": 10
+    }
+  ],
+  "eta": 3,
+  "eta_realizers": [
+    5
+  ],
+  "girth": 5,
+  "good_deletions": [
+    3,
+    4,
+    6,
+    8,
+    9
+  ],
+  "graph6": "J??CBBOi?{?",
+  "local_metric_certificates": [],
+  "order": 11,
+  "radius": 3,
+  "size": 13
+}

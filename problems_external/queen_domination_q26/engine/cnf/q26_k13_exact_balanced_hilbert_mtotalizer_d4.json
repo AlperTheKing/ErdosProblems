@@ -1,0 +1,31 @@
+{
+  "auxiliary_variables": 16287,
+  "balanced_parity": true,
+  "balanced_parity_basis": "Weakley 2022 Proposition 11 + Theorem 18; Q26 APPROACH_REGISTRY.md",
+  "cardinality_auxiliary_variables": 7908,
+  "cardinality_clauses": 57167,
+  "cardinality_encoding": "mtotalizer",
+  "cardinality_relation": "equals",
+  "d4_lex_auxiliary_variables": 4739,
+  "d4_lex_basis": "D4 orbit lex minimum; TahaRostami/Gamma/AddSymBreak.py",
+  "d4_lex_clauses": 14210,
+  "d4_lex_leader": true,
+  "domination_clauses": 676,
+  "encoding": "pysat.card.CardEnc.equals/EncType.mtotalizer",
+  "exact_cardinality": true,
+  "hilbert_bits": 5,
+  "k": 13,
+  "literal_ordering": "hilbert",
+  "n": 26,
+  "parity_auxiliary_variables": 3640,
+  "parity_cap_per_class": 7,
+  "parity_class_sizes": [
+    338,
+    338
+  ],
+  "parity_clauses": 20456,
+  "primary_square_variables": 676,
+  "status": "ENCODED",
+  "total_clauses": 92509,
+  "total_variables": 16963
+}

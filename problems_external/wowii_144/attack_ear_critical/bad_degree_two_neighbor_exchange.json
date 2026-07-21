@@ -1,0 +1,80 @@
+{
+  "statement": "every bad degree-two deletion has an eta-good admissible neighbor",
+  "max_n": 13,
+  "graphs_checked_before_failure": 1,
+  "bad_degree_two_checked_before_failure": 1,
+  "first_failure": {
+    "graph6": "FCR`o",
+    "n": 7,
+    "m": 8,
+    "beta": 2,
+    "girth": 5,
+    "radius": 2,
+    "eta": 1,
+    "center": [
+      2,
+      5,
+      6
+    ],
+    "bad_vertex": 2,
+    "bad_row": {
+      "v": 2,
+      "degree": 2,
+      "eta": 0,
+      "delta_eta": -1,
+      "radius": 3,
+      "center": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "girth": 6,
+      "beta": 1
+    },
+    "neighbors": [
+      5,
+      6
+    ],
+    "neighbor_rows": {
+      "5": null,
+      "6": null
+    },
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ]
+    ]
+  }
+}

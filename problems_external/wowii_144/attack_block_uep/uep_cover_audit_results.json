@@ -1,0 +1,39 @@
+{
+  "statement": "exists admissible v with rad(G-v)<=rad(G) and a surviving eta-realizer x not covered within eta-1 by Q_v",
+  "generator": "geng -ctfq",
+  "min_n": 5,
+  "max_n": 13,
+  "per_order": {
+    "5": {
+      "checked": 0
+    },
+    "6": {
+      "checked": 0
+    },
+    "7": {
+      "checked": 1
+    },
+    "8": {
+      "checked": 7
+    },
+    "9": {
+      "checked": 38
+    },
+    "10": {
+      "checked": 202
+    },
+    "11": {
+      "checked": 1087
+    },
+    "12": {
+      "checked": 6192
+    },
+    "13": {
+      "checked": 38066
+    }
+  },
+  "total_checked": 45593,
+  "corpus_sha256": "be3f60c8462e440da7a159a21b2047a0db4471347ce13aa57c8836117e664fc8",
+  "canonical_witness_sha256": "1a7b0fb1e9dc4b29217ab5c3116276fcabc6e447f75700c0913ab36f22348e8f",
+  "failure": null
+}

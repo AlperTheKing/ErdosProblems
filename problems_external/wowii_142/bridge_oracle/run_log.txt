@@ -1,0 +1,25 @@
+building corpus ...
+corpus: 10663 distinct connected graphs
+validation pass (decomposed M vs brute) ...
+validation OK: 287 graphs, 1513 geodesic M_P checks, 800 cycle M(K) checks, 0 mismatches
+  1000/10663 graphs (12s)
+  2000/10663 graphs (12s)
+  3000/10663 graphs (13s)
+  4000/10663 graphs (21s)
+  5000/10663 graphs (41s)
+  6000/10663 graphs (44s)
+  7000/10663 graphs (46s)
+  8000/10663 graphs (47s)
+  9000/10663 graphs (53s)
+  10000/10663 graphs (53s)
+main pass done in 63s; skipped: {'acyclic': 182}
+results sha256: FB0AA15C8733451FA48B0F30F13A5C10AA8BE78D2C867CDAB81A7A7C38E6C9BA
+equality sha256: 4881AC54ADA06CE3E4BA26923609376E0A90F199A625488ABFCA4C3C1A982810
+R1: count=10481 viol=0 suspect=0 min3=0 min3_uncapped=0 tight=83
+   wit: atlas [Bw] n=3 g=3 D=1 f=0
+R2: count=10481 viol=0 suspect=0 min3=0 min3_uncapped=0 tight=78
+   wit: atlas [Bw] n=3 g=3 D=1 f=0
+R4: count=10481 viol=0 suspect=0 min3=0 min3_uncapped=0 tight=78
+   wit: atlas [Bw] n=3 g=3 D=1 f=0
+R3: members=3927 girth_hist={'4': 133, '5': 570, '6': 203, '7': 224, '8': 289, '9': 194, '10': 254, '11': 205, '12': 210, '13': 166, '14': 205, '15': 143, '16': 177, '17': 154, '18': 192, '19': 135, '20': 184, '21': 72, '22': 79, '23': 66, '24': 72} R1viol=0 R2viol=0
+total 475s

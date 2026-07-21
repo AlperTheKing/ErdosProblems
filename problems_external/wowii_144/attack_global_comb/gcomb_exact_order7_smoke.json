@@ -1,0 +1,310 @@
+{
+  "command": [
+    "E:\\Projects\\ErdosProblems\\tools\\nauty2_8_9\\geng.exe",
+    "-ctfq",
+    "7"
+  ],
+  "cut_equalities": 4,
+  "cut_equality_records": [
+    {
+      "articulations": [
+        5,
+        6
+      ],
+      "beta": 1,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "F?bao",
+      "kappa": 0,
+      "m": 7,
+      "maximum_degree": 3,
+      "n": 7,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        6
+      ],
+      "beta": 1,
+      "center": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "diameter": 4,
+      "eta": 1,
+      "girth": 6,
+      "graph6": "F?qb_",
+      "kappa": 0,
+      "m": 7,
+      "maximum_degree": 3,
+      "n": 7,
+      "radius": 3,
+      "rhs": 1,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 1
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        4,
+        6
+      ],
+      "beta": 1,
+      "center": [
+        4,
+        6
+      ],
+      "diameter": 3,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "F?q`o",
+      "kappa": 0,
+      "m": 7,
+      "maximum_degree": 3,
+      "n": 7,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1,
+        6
+      ],
+      "beta": 1,
+      "center": [
+        6
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "FCQb_",
+      "kappa": 0,
+      "m": 7,
+      "maximum_degree": 3,
+      "n": 7,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    }
+  ],
+  "equalities": 5,
+  "equality_records": [
+    {
+      "articulations": [
+        5,
+        6
+      ],
+      "beta": 1,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "F?bao",
+      "kappa": 0,
+      "m": 7,
+      "maximum_degree": 3,
+      "n": 7,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        6
+      ],
+      "beta": 1,
+      "center": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "diameter": 4,
+      "eta": 1,
+      "girth": 6,
+      "graph6": "F?qb_",
+      "kappa": 0,
+      "m": 7,
+      "maximum_degree": 3,
+      "n": 7,
+      "radius": 3,
+      "rhs": 1,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 1
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        4,
+        6
+      ],
+      "beta": 1,
+      "center": [
+        4,
+        6
+      ],
+      "diameter": 3,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "F?q`o",
+      "kappa": 0,
+      "m": 7,
+      "maximum_degree": 3,
+      "n": 7,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1,
+        6
+      ],
+      "beta": 1,
+      "center": [
+        6
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "FCQb_",
+      "kappa": 0,
+      "m": 7,
+      "maximum_degree": 3,
+      "n": 7,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "diameter": 3,
+      "eta": 0,
+      "girth": 7,
+      "graph6": "FCp`_",
+      "kappa": 0,
+      "m": 7,
+      "maximum_degree": 2,
+      "n": 7,
+      "radius": 3,
+      "rhs": 0,
+      "slack": 0,
+      "terms": {
+        "degree": 0,
+        "diameter": 0,
+        "order_rank": 0
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    }
+  ],
+  "equality_tight_terms": {
+    "degree+diameter+order_rank": 2,
+    "diameter+order_rank": 2,
+    "order_rank": 1
+  },
+  "equality_types": {
+    "2connected-unicyclic": 1,
+    "cut-unicyclic": 4
+  },
+  "failure_records": [],
+  "failures": 0,
+  "generated_connected_triangle_C4_free": 18,
+  "minimum_slack": 0,
+  "order": 7,
+  "retained_connected_cyclic_girth_at_least_five": 7
+}

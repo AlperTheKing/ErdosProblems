@@ -1,0 +1,255 @@
+{
+  "statement": "exists x,c,Q, maximum induced T containing Q, boundary z,a,b with |Tpath(a,b) intersect Q|<=1",
+  "max_n": 10,
+  "min_beta": 2,
+  "checked": 163,
+  "per_order": {
+    "5": 0,
+    "6": 0,
+    "7": 1,
+    "8": 5,
+    "9": 35,
+    "10": 122
+  },
+  "first_failure": {
+    "graph6": "I?ABAaIBO",
+    "n": 10,
+    "m": 11,
+    "girth": 5,
+    "eta": 2,
+    "center": [
+      1,
+      4,
+      6,
+      7
+    ],
+    "realizers": [
+      0,
+      5
+    ],
+    "best_overlap": 2,
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "choices": [
+      {
+        "x": 0,
+        "c": 4,
+        "q": [
+          0,
+          8,
+          4
+        ],
+        "maximum_order": 9,
+        "maximum_tree_count": 1,
+        "trees": [
+          {
+            "vertices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "witness": null,
+            "minimum_overlap": 2,
+            "minimum_overlap_row": {
+              "z": 9,
+              "a": 4,
+              "b": 7,
+              "tree_path": [
+                4,
+                8,
+                6,
+                1,
+                7
+              ],
+              "q_overlap": [
+                4,
+                8
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "c": 6,
+        "q": [
+          0,
+          8,
+          6
+        ],
+        "maximum_order": 9,
+        "maximum_tree_count": 1,
+        "trees": [
+          {
+            "vertices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "witness": null,
+            "minimum_overlap": 2,
+            "minimum_overlap_row": {
+              "z": 9,
+              "a": 4,
+              "b": 5,
+              "tree_path": [
+                4,
+                8,
+                0,
+                5
+              ],
+              "q_overlap": [
+                0,
+                8
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "x": 5,
+        "c": 4,
+        "q": [
+          5,
+          9,
+          4
+        ],
+        "maximum_order": 9,
+        "maximum_tree_count": 1,
+        "trees": [
+          {
+            "vertices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "witness": null,
+            "minimum_overlap": 2,
+            "minimum_overlap_row": {
+              "z": 8,
+              "a": 0,
+              "b": 6,
+              "tree_path": [
+                0,
+                5,
+                9,
+                7,
+                1,
+                6
+              ],
+              "q_overlap": [
+                5,
+                9
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "x": 5,
+        "c": 7,
+        "q": [
+          5,
+          9,
+          7
+        ],
+        "maximum_order": 9,
+        "maximum_tree_count": 1,
+        "trees": [
+          {
+            "vertices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "witness": null,
+            "minimum_overlap": 2,
+            "minimum_overlap_row": {
+              "z": 8,
+              "a": 0,
+              "b": 4,
+              "tree_path": [
+                0,
+                5,
+                9,
+                4
+              ],
+              "q_overlap": [
+                5,
+                9
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,4327 @@
+{
+  "elapsed_sec": 25.085,
+  "per_n": {
+    "10": {
+      "generated": 464,
+      "girth_lt_5": 106,
+      "nonresidual": 327,
+      "residual": 31
+    },
+    "11": {
+      "generated": 1793,
+      "girth_lt_5": 235,
+      "nonresidual": 1452,
+      "residual": 106
+    },
+    "12": {
+      "generated": 8167,
+      "girth_lt_5": 551,
+      "nonresidual": 7240,
+      "residual": 376
+    },
+    "5": {
+      "generated": 4,
+      "girth_lt_5": 3,
+      "nonresidual": 1,
+      "residual": 0
+    },
+    "6": {
+      "generated": 8,
+      "girth_lt_5": 6,
+      "nonresidual": 2,
+      "residual": 0
+    },
+    "7": {
+      "generated": 18,
+      "girth_lt_5": 11,
+      "nonresidual": 6,
+      "residual": 1
+    },
+    "8": {
+      "generated": 47,
+      "girth_lt_5": 23,
+      "nonresidual": 22,
+      "residual": 2
+    },
+    "9": {
+      "generated": 137,
+      "girth_lt_5": 47,
+      "nonresidual": 79,
+      "residual": 11
+    }
+  },
+  "residual_cover_max": 3,
+  "residual_depth_failures": [
+    {
+      "D": 5,
+      "E": [
+        0,
+        1,
+        6,
+        10,
+        11
+      ],
+      "H": [
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "K": [
+        0,
+        1,
+        6,
+        7,
+        10,
+        11
+      ],
+      "R": 2,
+      "W": [
+        0,
+        1,
+        6,
+        10,
+        11
+      ],
+      "attachments": [
+        10,
+        11
+      ],
+      "best_pair": [
+        3,
+        4
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "delta": 3,
+      "depth_slack": -2,
+      "e": 3,
+      "forest": [
+        3,
+        4,
+        8,
+        9
+      ],
+      "g": 6,
+      "graph6": "K??CA?oIE@?y",
+      "h": 0,
+      "lambda_": 1,
+      "m": 0,
+      "mu": 4,
+      "mu_slack": 2,
+      "n": 12,
+      "pair_slack": 2,
+      "r": 3,
+      "witness_covers": {
+        "2": [],
+        "3": [
+          6,
+          11
+        ],
+        "4": [
+          0,
+          1,
+          10
+        ],
+        "8": [],
+        "9": []
+      },
+      "x": 0,
+      "z": 6
+    },
+    {
+      "D": 5,
+      "E": [
+        0,
+        1,
+        7,
+        10,
+        11
+      ],
+      "H": [
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "K": [
+        0,
+        1,
+        6,
+        7,
+        10,
+        11
+      ],
+      "R": 2,
+      "W": [
+        0,
+        1,
+        7,
+        10,
+        11
+      ],
+      "attachments": [
+        10,
+        11
+      ],
+      "best_pair": [
+        3,
+        4
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "delta": 3,
+      "depth_slack": -2,
+      "e": 3,
+      "forest": [
+        3,
+        4,
+        8,
+        9
+      ],
+      "g": 6,
+      "graph6": "K??CA?oIE@?y",
+      "h": 0,
+      "lambda_": 1,
+      "m": 1,
+      "mu": 4,
+      "mu_slack": 2,
+      "n": 12,
+      "pair_slack": 2,
+      "r": 3,
+      "witness_covers": {
+        "2": [],
+        "3": [
+          7,
+          11
+        ],
+        "4": [
+          0,
+          1,
+          10
+        ],
+        "8": [],
+        "9": []
+      },
+      "x": 1,
+      "z": 7
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        1,
+        6,
+        7,
+        9
+      ],
+      "H": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11
+      ],
+      "K": [
+        0,
+        1,
+        6,
+        7,
+        9
+      ],
+      "R": 3,
+      "W": [
+        0,
+        1,
+        6,
+        7,
+        9
+      ],
+      "attachments": [
+        0,
+        1,
+        9
+      ],
+      "best_pair": [
+        3,
+        5
+      ],
+      "best_two_tau": 5,
+      "cover_number": 2,
+      "delta": 3,
+      "depth_slack": -1,
+      "e": 3,
+      "forest": [
+        3,
+        4,
+        5,
+        8,
+        10,
+        11
+      ],
+      "g": 5,
+      "graph6": "K??CE?oQbGPC",
+      "h": 0,
+      "lambda_": 2,
+      "m": 6,
+      "mu": 6,
+      "mu_slack": 5,
+      "n": 12,
+      "pair_slack": 3,
+      "r": 3,
+      "witness_covers": {
+        "10": [],
+        "11": [],
+        "2": [
+          6
+        ],
+        "3": [
+          1,
+          6,
+          7,
+          9
+        ],
+        "4": [],
+        "5": [
+          0,
+          6
+        ],
+        "8": []
+      },
+      "x": 6,
+      "z": 9
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        4,
+        6,
+        9,
+        11
+      ],
+      "H": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10
+      ],
+      "K": [
+        0,
+        4,
+        6,
+        9,
+        11
+      ],
+      "R": 3,
+      "W": [
+        0,
+        4,
+        6,
+        9,
+        11
+      ],
+      "attachments": [
+        0,
+        9,
+        11
+      ],
+      "best_pair": [
+        3,
+        5
+      ],
+      "best_two_tau": 5,
+      "cover_number": 2,
+      "delta": 3,
+      "depth_slack": -1,
+      "e": 3,
+      "forest": [
+        1,
+        3,
+        5,
+        7,
+        8,
+        10
+      ],
+      "g": 5,
+      "graph6": "K??CE?oQbGPC",
+      "h": 0,
+      "lambda_": 2,
+      "m": 6,
+      "mu": 6,
+      "mu_slack": 5,
+      "n": 12,
+      "pair_slack": 3,
+      "r": 3,
+      "witness_covers": {
+        "1": [],
+        "10": [],
+        "2": [
+          6
+        ],
+        "3": [
+          6,
+          9
+        ],
+        "5": [
+          0,
+          4,
+          6,
+          11
+        ],
+        "7": [],
+        "8": []
+      },
+      "x": 6,
+      "z": 0
+    },
+    {
+      "D": 4,
+      "E": [
+        2,
+        3,
+        7,
+        8,
+        11
+      ],
+      "H": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "K": [
+        2,
+        3,
+        7,
+        8,
+        11
+      ],
+      "R": 3,
+      "W": [
+        2,
+        3,
+        7,
+        8,
+        11
+      ],
+      "attachments": [
+        7,
+        8,
+        11
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 3,
+      "depth_slack": -1,
+      "e": 3,
+      "forest": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        10
+      ],
+      "g": 5,
+      "graph6": "K?AA@_goO[Ac",
+      "h": 0,
+      "lambda_": 2,
+      "m": 2,
+      "mu": 6,
+      "mu_slack": 5,
+      "n": 12,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [],
+        "1": [
+          8,
+          11
+        ],
+        "10": [
+          7
+        ],
+        "4": [],
+        "5": [],
+        "6": [
+          2,
+          3
+        ],
+        "9": []
+      },
+      "x": 2,
+      "z": 8
+    }
+  ],
+  "residual_depth_min": -2,
+  "residual_mu_failures": [],
+  "residual_mu_min": 0,
+  "residual_pair_failures": [
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        7
+      ],
+      "H": [
+        0,
+        1,
+        6
+      ],
+      "K": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        9
+      ],
+      "R": 2,
+      "W": [
+        2,
+        3,
+        7
+      ],
+      "attachments": [
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "I??E@qcT?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 7,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 10,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "1": [
+          2
+        ],
+        "6": [
+          7
+        ]
+      },
+      "x": 4,
+      "z": 2
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        7
+      ],
+      "H": [
+        0,
+        1,
+        6
+      ],
+      "K": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        9
+      ],
+      "R": 2,
+      "W": [
+        2,
+        3,
+        7
+      ],
+      "attachments": [
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "I??E@qcT?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 7,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 10,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "1": [
+          2
+        ],
+        "6": [
+          7
+        ]
+      },
+      "x": 4,
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        4,
+        10
+      ],
+      "H": [
+        0,
+        1,
+        7
+      ],
+      "K": [
+        2,
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        3,
+        4,
+        10
+      ],
+      "attachments": [
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "J???EAoY?{?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 10,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          4
+        ],
+        "1": [
+          3
+        ],
+        "7": [
+          10
+        ]
+      },
+      "x": 5,
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        4,
+        10
+      ],
+      "H": [
+        0,
+        1,
+        7
+      ],
+      "K": [
+        2,
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        3,
+        4,
+        10
+      ],
+      "attachments": [
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "J???EAoY?{?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 10,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          4
+        ],
+        "1": [
+          3
+        ],
+        "7": [
+          10
+        ]
+      },
+      "x": 5,
+      "z": 4
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        4,
+        10
+      ],
+      "H": [
+        0,
+        1,
+        7
+      ],
+      "K": [
+        2,
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        3,
+        4,
+        10
+      ],
+      "attachments": [
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "J???EAoY?{?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 10,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          4
+        ],
+        "1": [
+          3
+        ],
+        "7": [
+          10
+        ]
+      },
+      "x": 6,
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        4,
+        10
+      ],
+      "H": [
+        0,
+        1,
+        7
+      ],
+      "K": [
+        2,
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        3,
+        4,
+        10
+      ],
+      "attachments": [
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "J???EAoY?{?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 10,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          4
+        ],
+        "1": [
+          3
+        ],
+        "7": [
+          10
+        ]
+      },
+      "x": 6,
+      "z": 4
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        8
+      ],
+      "H": [
+        0,
+        1,
+        7
+      ],
+      "K": [
+        2,
+        3,
+        5,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        2,
+        3,
+        8
+      ],
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "J???E?whAk?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 8,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "1": [
+          2
+        ],
+        "7": [
+          8
+        ]
+      },
+      "x": 4,
+      "z": 2
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        8
+      ],
+      "H": [
+        0,
+        1,
+        7
+      ],
+      "K": [
+        2,
+        3,
+        5,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        2,
+        3,
+        8
+      ],
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "J???E?whAk?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 8,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "1": [
+          2
+        ],
+        "7": [
+          8
+        ]
+      },
+      "x": 4,
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        4,
+        8
+      ],
+      "H": [
+        1,
+        2,
+        7
+      ],
+      "K": [
+        0,
+        3,
+        4,
+        6,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        3,
+        4,
+        8
+      ],
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 1,
+      "e": 3,
+      "forest": [
+        1,
+        2
+      ],
+      "g": 7,
+      "graph6": "J??CB?[s@S?",
+      "h": 1,
+      "lambda_": 0,
+      "m": 8,
+      "mu": 2,
+      "mu_slack": 1,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "1": [
+          4
+        ],
+        "2": [
+          3
+        ],
+        "7": [
+          8
+        ]
+      },
+      "x": 5,
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        4,
+        8
+      ],
+      "H": [
+        1,
+        2,
+        7
+      ],
+      "K": [
+        0,
+        3,
+        4,
+        6,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        3,
+        4,
+        8
+      ],
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 1,
+      "e": 3,
+      "forest": [
+        1,
+        2
+      ],
+      "g": 7,
+      "graph6": "J??CB?[s@S?",
+      "h": 1,
+      "lambda_": 0,
+      "m": 8,
+      "mu": 2,
+      "mu_slack": 1,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "1": [
+          4
+        ],
+        "2": [
+          3
+        ],
+        "7": [
+          8
+        ]
+      },
+      "x": 5,
+      "z": 4
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        9
+      ],
+      "H": [
+        0,
+        1,
+        6
+      ],
+      "K": [
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        2,
+        3,
+        9
+      ],
+      "attachments": [
+        7,
+        8
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "J??ED@OM?J?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 9,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "1": [
+          2
+        ],
+        "6": [
+          9
+        ]
+      },
+      "x": 4,
+      "z": 2
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        9
+      ],
+      "H": [
+        0,
+        1,
+        6
+      ],
+      "K": [
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        2,
+        3,
+        9
+      ],
+      "attachments": [
+        7,
+        8
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "J??ED@OM?J?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 9,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "1": [
+          2
+        ],
+        "6": [
+          9
+        ]
+      },
+      "x": 4,
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        8,
+        10
+      ],
+      "H": [
+        0,
+        2,
+        7
+      ],
+      "K": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        3,
+        8,
+        10
+      ],
+      "attachments": [
+        6,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        2
+      ],
+      "g": 6,
+      "graph6": "J??ED?W[?L?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 8,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "2": [
+          10
+        ],
+        "7": [
+          8
+        ]
+      },
+      "x": 4,
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        8,
+        10
+      ],
+      "H": [
+        0,
+        2,
+        7
+      ],
+      "K": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "W": [
+        3,
+        8,
+        10
+      ],
+      "attachments": [
+        6,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        2
+      ],
+      "g": 6,
+      "graph6": "J??ED?W[?L?",
+      "h": 1,
+      "lambda_": 1,
+      "m": 8,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "2": [
+          10
+        ],
+        "7": [
+          8
+        ]
+      },
+      "x": 4,
+      "z": 10
+    },
+    {
+      "D": 5,
+      "E": [
+        0,
+        1,
+        4,
+        8,
+        9
+      ],
+      "H": [
+        2,
+        3,
+        5,
+        7,
+        10
+      ],
+      "K": [
+        0,
+        1,
+        4,
+        6,
+        8,
+        9
+      ],
+      "R": 3,
+      "W": [
+        0,
+        1,
+        4,
+        8,
+        9
+      ],
+      "attachments": [
+        6,
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 3,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        2,
+        5,
+        7,
+        10
+      ],
+      "g": 6,
+      "graph6": "J??E@agU?M?",
+      "h": 0,
+      "lambda_": 1,
+      "m": 4,
+      "mu": 4,
+      "mu_slack": 2,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "10": [
+          4
+        ],
+        "2": [
+          1
+        ],
+        "3": [
+          0
+        ],
+        "5": [
+          4,
+          8,
+          9
+        ],
+        "7": []
+      },
+      "x": 4,
+      "z": 8
+    },
+    {
+      "D": 5,
+      "E": [
+        0,
+        1,
+        4,
+        8,
+        9
+      ],
+      "H": [
+        2,
+        3,
+        5,
+        7,
+        10
+      ],
+      "K": [
+        0,
+        1,
+        4,
+        6,
+        8,
+        9
+      ],
+      "R": 3,
+      "W": [
+        0,
+        1,
+        4,
+        8,
+        9
+      ],
+      "attachments": [
+        6,
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 3,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        3,
+        5,
+        7,
+        10
+      ],
+      "g": 6,
+      "graph6": "J??E@agU?M?",
+      "h": 0,
+      "lambda_": 1,
+      "m": 4,
+      "mu": 4,
+      "mu_slack": 2,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "10": [
+          4
+        ],
+        "2": [
+          1
+        ],
+        "3": [
+          0
+        ],
+        "5": [
+          4,
+          8,
+          9
+        ],
+        "7": []
+      },
+      "x": 4,
+      "z": 9
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "H": [
+        0,
+        1,
+        5,
+        6,
+        10
+      ],
+      "K": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9
+      ],
+      "R": 3,
+      "W": [
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "attachments": [
+        7,
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 3,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        5,
+        6,
+        10
+      ],
+      "g": 6,
+      "graph6": "J??E@agU?M?",
+      "h": 0,
+      "lambda_": 1,
+      "m": 4,
+      "mu": 4,
+      "mu_slack": 2,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "1": [
+          2
+        ],
+        "10": [
+          4
+        ],
+        "5": [
+          4,
+          8,
+          9
+        ],
+        "6": []
+      },
+      "x": 4,
+      "z": 8
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "H": [
+        0,
+        1,
+        5,
+        6,
+        10
+      ],
+      "K": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9
+      ],
+      "R": 3,
+      "W": [
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "attachments": [
+        7,
+        8,
+        9
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 3,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        1,
+        5,
+        6,
+        10
+      ],
+      "g": 6,
+      "graph6": "J??E@agU?M?",
+      "h": 0,
+      "lambda_": 1,
+      "m": 4,
+      "mu": 4,
+      "mu_slack": 2,
+      "n": 11,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          3
+        ],
+        "1": [
+          2
+        ],
+        "10": [
+          4
+        ],
+        "5": [
+          4,
+          8,
+          9
+        ],
+        "6": []
+      },
+      "x": 4,
+      "z": 9
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        4,
+        11
+      ],
+      "H": [
+        0,
+        1,
+        8
+      ],
+      "K": [
+        2,
+        3,
+        4,
+        9,
+        10,
+        11
+      ],
+      "R": 2,
+      "W": [
+        3,
+        4,
+        11
+      ],
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "K????B?kBOBw",
+      "h": 1,
+      "lambda_": 1,
+      "m": 11,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 12,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          4
+        ],
+        "1": [
+          3
+        ],
+        "8": [
+          11
+        ]
+      },
+      "x": 5,
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        3,
+        4,
+        11
+      ],
+      "H": [
+        0,
+        1,
+        8
+      ],
+      "K": [
+        2,
+        3,
+        4,
+        9,
+        10,
+        11
+      ],
+      "R": 2,
+      "W": [
+        3,
+        4,
+        11
+      ],
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": null,
+      "best_two_tau": -1,
+      "cover_number": 3,
+      "delta": 2,
+      "depth_slack": 0,
+      "e": 3,
+      "forest": [
+        0,
+        1
+      ],
+      "g": 6,
+      "graph6": "K????B?kBOBw",
+      "h": 1,
+      "lambda_": 1,
+      "m": 11,
+      "mu": 2,
+      "mu_slack": 0,
+      "n": 12,
+      "pair_slack": -999,
+      "r": 3,
+      "witness_covers": {
+        "0": [
+          4
+        ],
+        "1": [
+          3
+        ],
+        "8": [
+          11
+        ]
+      },
+      "x": 5,
+      "z": 4
+    }
+  ],
+  "residual_pair_min": -999,
+  "residual_tests": 3728,
+  "test": "W144 ordinary witness/depth exact n=5..12",
+  "unrestricted_depth_failures": [
+    {
+      "D": 4,
+      "E": [
+        0,
+        4,
+        5
+      ],
+      "H": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "K": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        2,
+        7
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        2,
+        3,
+        6
+      ],
+      "g": 5,
+      "graph6": "H?bB@`W",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 9,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "2": [
+          0,
+          4
+        ],
+        "3": [],
+        "6": [],
+        "7": [
+          0,
+          5
+        ]
+      },
+      "z": 0
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        4,
+        5
+      ],
+      "H": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "K": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        2,
+        7
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        2,
+        3,
+        6
+      ],
+      "g": 5,
+      "graph6": "H?bB@`W",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 9,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "2": [
+          0,
+          4
+        ],
+        "3": [],
+        "6": [],
+        "7": [
+          0,
+          5
+        ]
+      },
+      "z": 4
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        4,
+        5
+      ],
+      "H": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "K": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        2,
+        7
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        2,
+        3,
+        6
+      ],
+      "g": 5,
+      "graph6": "H?bB@`W",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 9,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "2": [
+          0,
+          4
+        ],
+        "3": [],
+        "6": [],
+        "7": [
+          0,
+          5
+        ]
+      },
+      "z": 5
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        5,
+        6
+      ],
+      "H": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "K": [
+        0,
+        1,
+        5,
+        6,
+        9
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        9
+      ],
+      "best_pair": [
+        2,
+        8
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        2,
+        3,
+        7
+      ],
+      "g": 5,
+      "graph6": "I?AEB?oV?",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "2": [
+          0,
+          5
+        ],
+        "3": [],
+        "7": [],
+        "8": [
+          0,
+          6
+        ]
+      },
+      "z": 0
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        5,
+        6
+      ],
+      "H": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "K": [
+        0,
+        1,
+        5,
+        6,
+        9
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        9
+      ],
+      "best_pair": [
+        2,
+        8
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        2,
+        3,
+        7
+      ],
+      "g": 5,
+      "graph6": "I?AEB?oV?",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "2": [
+          0,
+          5
+        ],
+        "3": [],
+        "7": [],
+        "8": [
+          0,
+          6
+        ]
+      },
+      "z": 5
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        5,
+        6
+      ],
+      "H": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "K": [
+        0,
+        1,
+        5,
+        6,
+        9
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        9
+      ],
+      "best_pair": [
+        2,
+        8
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        2,
+        3,
+        7
+      ],
+      "g": 5,
+      "graph6": "I?AEB?oV?",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "2": [
+          0,
+          5
+        ],
+        "3": [],
+        "7": [],
+        "8": [
+          0,
+          6
+        ]
+      },
+      "z": 6
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        8
+      ],
+      "H": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "K": [
+        2,
+        3,
+        7,
+        8,
+        9
+      ],
+      "R": 2,
+      "attachments": [
+        7,
+        9
+      ],
+      "best_pair": [
+        0,
+        6
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 3,
+      "forest": [
+        0,
+        1,
+        5
+      ],
+      "g": 5,
+      "graph6": "I?AEB?wDO",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [
+          2,
+          8
+        ],
+        "1": [],
+        "5": [],
+        "6": [
+          3,
+          8
+        ]
+      },
+      "z": 2
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        8
+      ],
+      "H": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "K": [
+        2,
+        3,
+        7,
+        8,
+        9
+      ],
+      "R": 2,
+      "attachments": [
+        7,
+        9
+      ],
+      "best_pair": [
+        0,
+        6
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 3,
+      "forest": [
+        0,
+        1,
+        5
+      ],
+      "g": 5,
+      "graph6": "I?AEB?wDO",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [
+          2,
+          8
+        ],
+        "1": [],
+        "5": [],
+        "6": [
+          3,
+          8
+        ]
+      },
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        8
+      ],
+      "H": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "K": [
+        2,
+        3,
+        7,
+        8,
+        9
+      ],
+      "R": 2,
+      "attachments": [
+        7,
+        9
+      ],
+      "best_pair": [
+        0,
+        6
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 3,
+      "forest": [
+        0,
+        1,
+        5
+      ],
+      "g": 5,
+      "graph6": "I?AEB?wDO",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [
+          2,
+          8
+        ],
+        "1": [],
+        "5": [],
+        "6": [
+          3,
+          8
+        ]
+      },
+      "z": 8
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        5,
+        6
+      ],
+      "H": [
+        2,
+        3,
+        4,
+        7,
+        8
+      ],
+      "K": [
+        0,
+        1,
+        5,
+        6,
+        9
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        9
+      ],
+      "best_pair": [
+        3,
+        4
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        3,
+        4,
+        7,
+        8
+      ],
+      "g": 5,
+      "graph6": "I?AE@`gPO",
+      "lambda_": 2,
+      "mu": 4,
+      "mu_slack": 3,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "2": [
+          0
+        ],
+        "3": [
+          0,
+          6
+        ],
+        "4": [
+          0,
+          5
+        ],
+        "7": [],
+        "8": []
+      },
+      "z": 0
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        5,
+        6
+      ],
+      "H": [
+        2,
+        3,
+        4,
+        7,
+        8
+      ],
+      "K": [
+        0,
+        1,
+        5,
+        6,
+        9
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        9
+      ],
+      "best_pair": [
+        3,
+        4
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        3,
+        4,
+        7,
+        8
+      ],
+      "g": 5,
+      "graph6": "I?AE@`gPO",
+      "lambda_": 2,
+      "mu": 4,
+      "mu_slack": 3,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "2": [
+          0
+        ],
+        "3": [
+          0,
+          6
+        ],
+        "4": [
+          0,
+          5
+        ],
+        "7": [],
+        "8": []
+      },
+      "z": 5
+    },
+    {
+      "D": 4,
+      "E": [
+        0,
+        5,
+        6
+      ],
+      "H": [
+        2,
+        3,
+        4,
+        7,
+        8
+      ],
+      "K": [
+        0,
+        1,
+        5,
+        6,
+        9
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        9
+      ],
+      "best_pair": [
+        3,
+        4
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        3,
+        4,
+        7,
+        8
+      ],
+      "g": 5,
+      "graph6": "I?AE@`gPO",
+      "lambda_": 2,
+      "mu": 4,
+      "mu_slack": 3,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "2": [
+          0
+        ],
+        "3": [
+          0,
+          6
+        ],
+        "4": [
+          0,
+          5
+        ],
+        "7": [],
+        "8": []
+      },
+      "z": 6
+    },
+    {
+      "D": 4,
+      "E": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        4,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 1,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoq?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "9": []
+      },
+      "z": 2
+    },
+    {
+      "D": 4,
+      "E": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        4,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 1,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoq?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "9": []
+      },
+      "z": 3
+    },
+    {
+      "D": 4,
+      "E": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        4,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 1,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoq?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "9": []
+      },
+      "z": 6
+    },
+    {
+      "D": 4,
+      "E": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        4,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 1,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoq?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "9": []
+      },
+      "z": 7
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        7,
+        8
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        6,
+        8
+      ],
+      "best_pair": [
+        0,
+        4
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        4,
+        9
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoB_",
+      "lambda_": 1,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [
+          1
+        ],
+        "4": [
+          3,
+          7,
+          8
+        ],
+        "5": [
+          7
+        ],
+        "9": [
+          3
+        ]
+      },
+      "z": 1
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        7,
+        8
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        6,
+        8
+      ],
+      "best_pair": [
+        0,
+        4
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        4,
+        9
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoB_",
+      "lambda_": 1,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [
+          1
+        ],
+        "4": [
+          3,
+          7,
+          8
+        ],
+        "5": [
+          7
+        ],
+        "9": [
+          3
+        ]
+      },
+      "z": 2
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        7,
+        8
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        6,
+        8
+      ],
+      "best_pair": [
+        0,
+        4
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        4,
+        9
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoB_",
+      "lambda_": 1,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [
+          1
+        ],
+        "4": [
+          3,
+          7,
+          8
+        ],
+        "5": [
+          7
+        ],
+        "9": [
+          3
+        ]
+      },
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        7,
+        8
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        6,
+        8
+      ],
+      "best_pair": [
+        0,
+        4
+      ],
+      "best_two_tau": 3,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        4,
+        9
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoB_",
+      "lambda_": 1,
+      "mu": 3,
+      "mu_slack": 1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [
+          1
+        ],
+        "4": [
+          3,
+          7,
+          8
+        ],
+        "5": [
+          7
+        ],
+        "9": [
+          3
+        ]
+      },
+      "z": 7
+    }
+  ],
+  "unrestricted_depth_min": -3,
+  "unrestricted_mu_failures": [
+    {
+      "D": 4,
+      "E": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        4,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 1,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoq?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "9": []
+      },
+      "z": 2
+    },
+    {
+      "D": 4,
+      "E": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        4,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 1,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoq?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "9": []
+      },
+      "z": 3
+    },
+    {
+      "D": 4,
+      "E": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        4,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 1,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoq?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "9": []
+      },
+      "z": 6
+    },
+    {
+      "D": 4,
+      "E": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        8
+      ],
+      "best_pair": [
+        4,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 1,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "I?ABAaoq?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 10,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "9": []
+      },
+      "z": 7
+    },
+    {
+      "D": 4,
+      "E": [
+        1,
+        2,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        3,
+        5,
+        8
+      ],
+      "K": [
+        1,
+        2,
+        6,
+        7,
+        9,
+        10
+      ],
+      "R": 2,
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": [
+        3,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "J?AA@AOw?V?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": true,
+      "witness_covers": {
+        "0": [],
+        "3": [
+          1,
+          2
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "8": []
+      },
+      "z": 1
+    },
+    {
+      "D": 4,
+      "E": [
+        1,
+        2,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        3,
+        5,
+        8
+      ],
+      "K": [
+        1,
+        2,
+        6,
+        7,
+        9,
+        10
+      ],
+      "R": 2,
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": [
+        3,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "J?AA@AOw?V?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": true,
+      "witness_covers": {
+        "0": [],
+        "3": [
+          1,
+          2
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "8": []
+      },
+      "z": 2
+    },
+    {
+      "D": 4,
+      "E": [
+        1,
+        2,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        3,
+        5,
+        8
+      ],
+      "K": [
+        1,
+        2,
+        6,
+        7,
+        9,
+        10
+      ],
+      "R": 2,
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": [
+        3,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "J?AA@AOw?V?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": true,
+      "witness_covers": {
+        "0": [],
+        "3": [
+          1,
+          2
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "8": []
+      },
+      "z": 6
+    },
+    {
+      "D": 4,
+      "E": [
+        1,
+        2,
+        6,
+        7
+      ],
+      "H": [
+        0,
+        3,
+        5,
+        8
+      ],
+      "K": [
+        1,
+        2,
+        6,
+        7,
+        9,
+        10
+      ],
+      "R": 2,
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": [
+        3,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "J?AA@AOw?V?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": true,
+      "witness_covers": {
+        "0": [],
+        "3": [
+          1,
+          2
+        ],
+        "5": [
+          6,
+          7
+        ],
+        "8": []
+      },
+      "z": 7
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "H": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "K": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": [
+        2,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "J?AAD?Ws?F?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "2": [
+          1,
+          3
+        ],
+        "5": [
+          6,
+          8
+        ],
+        "7": []
+      },
+      "z": 1
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "H": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "K": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": [
+        2,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "J?AAD?Ws?F?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "2": [
+          1,
+          3
+        ],
+        "5": [
+          6,
+          8
+        ],
+        "7": []
+      },
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "H": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "K": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": [
+        2,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "J?AAD?Ws?F?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "2": [
+          1,
+          3
+        ],
+        "5": [
+          6,
+          8
+        ],
+        "7": []
+      },
+      "z": 6
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "H": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "K": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        10
+      ],
+      "R": 2,
+      "attachments": [
+        9,
+        10
+      ],
+      "best_pair": [
+        2,
+        5
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        5
+      ],
+      "g": 6,
+      "graph6": "J?AAD?Ws?F?",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "2": [
+          1,
+          3
+        ],
+        "5": [
+          6,
+          8
+        ],
+        "7": []
+      },
+      "z": 8
+    },
+    {
+      "D": 5,
+      "E": [
+        0,
+        2,
+        5,
+        7,
+        9
+      ],
+      "H": [
+        1,
+        3,
+        4,
+        6,
+        8,
+        10
+      ],
+      "K": [
+        0,
+        2,
+        5,
+        7,
+        9
+      ],
+      "R": 3,
+      "attachments": [
+        0,
+        9
+      ],
+      "best_pair": [
+        4,
+        6
+      ],
+      "best_two_tau": 6,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        3,
+        4,
+        8
+      ],
+      "g": 5,
+      "graph6": "J?AAD?WLE_?",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "1": [
+          2
+        ],
+        "10": [],
+        "3": [],
+        "4": [
+          0,
+          2,
+          5,
+          7
+        ],
+        "6": [
+          2,
+          5,
+          7,
+          9
+        ],
+        "8": [
+          7
+        ]
+      },
+      "z": 2
+    },
+    {
+      "D": 5,
+      "E": [
+        0,
+        2,
+        5,
+        7,
+        9
+      ],
+      "H": [
+        1,
+        3,
+        4,
+        6,
+        8,
+        10
+      ],
+      "K": [
+        0,
+        2,
+        5,
+        7,
+        9
+      ],
+      "R": 3,
+      "attachments": [
+        0,
+        9
+      ],
+      "best_pair": [
+        4,
+        6
+      ],
+      "best_two_tau": 6,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        3,
+        4,
+        8
+      ],
+      "g": 5,
+      "graph6": "J?AAD?WLE_?",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "1": [
+          2
+        ],
+        "10": [],
+        "3": [],
+        "4": [
+          0,
+          2,
+          5,
+          7
+        ],
+        "6": [
+          2,
+          5,
+          7,
+          9
+        ],
+        "8": [
+          7
+        ]
+      },
+      "z": 5
+    },
+    {
+      "D": 5,
+      "E": [
+        0,
+        2,
+        5,
+        7,
+        9
+      ],
+      "H": [
+        1,
+        3,
+        4,
+        6,
+        8,
+        10
+      ],
+      "K": [
+        0,
+        2,
+        5,
+        7,
+        9
+      ],
+      "R": 3,
+      "attachments": [
+        0,
+        9
+      ],
+      "best_pair": [
+        4,
+        6
+      ],
+      "best_two_tau": 6,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        3,
+        4,
+        8
+      ],
+      "g": 5,
+      "graph6": "J?AAD?WLE_?",
+      "lambda_": 2,
+      "mu": 3,
+      "mu_slack": -1,
+      "n": 11,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "1": [
+          2
+        ],
+        "10": [],
+        "3": [],
+        "4": [
+          0,
+          2,
+          5,
+          7
+        ],
+        "6": [
+          2,
+          5,
+          7,
+          9
+        ],
+        "8": [
+          7
+        ]
+      },
+      "z": 7
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        8,
+        11
+      ],
+      "H": [
+        0,
+        4,
+        7,
+        10
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        11
+      ],
+      "R": 2,
+      "attachments": [
+        2,
+        9
+      ],
+      "best_pair": [
+        4,
+        7
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        7
+      ],
+      "g": 6,
+      "graph6": "K???C@_sDOEo",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 12,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "10": [],
+        "4": [
+          1,
+          3
+        ],
+        "7": [
+          8,
+          11
+        ]
+      },
+      "z": 1
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        8,
+        11
+      ],
+      "H": [
+        0,
+        4,
+        7,
+        10
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        11
+      ],
+      "R": 2,
+      "attachments": [
+        2,
+        9
+      ],
+      "best_pair": [
+        4,
+        7
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        7
+      ],
+      "g": 6,
+      "graph6": "K???C@_sDOEo",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 12,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "10": [],
+        "4": [
+          1,
+          3
+        ],
+        "7": [
+          8,
+          11
+        ]
+      },
+      "z": 3
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        8,
+        11
+      ],
+      "H": [
+        0,
+        4,
+        7,
+        10
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        11
+      ],
+      "R": 2,
+      "attachments": [
+        2,
+        9
+      ],
+      "best_pair": [
+        4,
+        7
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        7
+      ],
+      "g": 6,
+      "graph6": "K???C@_sDOEo",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 12,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "10": [],
+        "4": [
+          1,
+          3
+        ],
+        "7": [
+          8,
+          11
+        ]
+      },
+      "z": 8
+    },
+    {
+      "D": 5,
+      "E": [
+        1,
+        3,
+        8,
+        11
+      ],
+      "H": [
+        0,
+        4,
+        7,
+        10
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        11
+      ],
+      "R": 2,
+      "attachments": [
+        2,
+        9
+      ],
+      "best_pair": [
+        4,
+        7
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 2,
+      "forest": [
+        0,
+        7
+      ],
+      "g": 6,
+      "graph6": "K???C@_sDOEo",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 12,
+      "r": 3,
+      "residual": false,
+      "witness_covers": {
+        "0": [],
+        "10": [],
+        "4": [
+          1,
+          3
+        ],
+        "7": [
+          8,
+          11
+        ]
+      },
+      "z": 11
+    },
+    {
+      "D": 5,
+      "E": [
+        2,
+        3,
+        8,
+        9
+      ],
+      "H": [
+        0,
+        5,
+        7,
+        10
+      ],
+      "K": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        11
+      ],
+      "R": 2,
+      "attachments": [
+        1,
+        11
+      ],
+      "best_pair": [
+        5,
+        7
+      ],
+      "best_two_tau": 4,
+      "cover_number": 2,
+      "depth_slack": -1,
+      "e": 3,
+      "forest": [
+        0,
+        7
+      ],
+      "g": 6,
+      "graph6": "K???C@_UEGUO",
+      "lambda_": 1,
+      "mu": 2,
+      "mu_slack": -1,
+      "n": 12,
+      "r": 3,
+      "residual": true,
+      "witness_covers": {
+        "0": [],
+        "10": [],
+        "5": [
+          2,
+          3
+        ],
+        "7": [
+          8,
+          9
+        ]
+      },
+      "z": 2
+    }
+  ],
+  "unrestricted_mu_min": -1,
+  "unrestricted_tests": 140448
+}

@@ -1,0 +1,1891 @@
+[
+  {
+    "index": 1,
+    "graph6": "ECpo",
+    "order": 6,
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "cut_vertex": 5,
+    "side1": [
+      0,
+      1,
+      3,
+      4,
+      5
+    ],
+    "side2": [
+      2,
+      5
+    ],
+    "g": 5,
+    "eta": 1,
+    "global_center": [
+      1,
+      3,
+      5
+    ],
+    "center_side": "side1",
+    "R1": 2,
+    "R2": 1,
+    "rho1": 4,
+    "rho2": 2,
+    "rooted_sum": 5,
+    "target": 5,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 5,
+    "g2": null,
+    "eta1": 0,
+    "eta2": 0,
+    "center1": [
+      0,
+      1,
+      3,
+      4,
+      5
+    ],
+    "center2": [
+      2,
+      5
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      3,
+      4,
+      5
+    ],
+    "basic_geodesic_cycle_bound": 5,
+    "basic_deficit": 0
+  },
+  {
+    "index": 2,
+    "graph6": "F?bao",
+    "order": 7,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "cut_vertex": 5,
+    "side1": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6
+    ],
+    "side2": [
+      2,
+      5
+    ],
+    "g": 5,
+    "eta": 2,
+    "global_center": [
+      1
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 1,
+    "rho1": 5,
+    "rho2": 2,
+    "rooted_sum": 6,
+    "target": 6,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 5,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      1,
+      4,
+      6
+    ],
+    "center2": [
+      2,
+      5
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      4,
+      5,
+      6
+    ],
+    "basic_geodesic_cycle_bound": 5,
+    "basic_deficit": 1
+  },
+  {
+    "index": 3,
+    "graph6": "F?bao",
+    "order": 7,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "cut_vertex": 6,
+    "side1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "side2": [
+      3,
+      6
+    ],
+    "g": 5,
+    "eta": 2,
+    "global_center": [
+      1
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 1,
+    "rho1": 5,
+    "rho2": 2,
+    "rooted_sum": 6,
+    "target": 6,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 5,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      0,
+      1,
+      5
+    ],
+    "center2": [
+      3,
+      6
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      4,
+      5,
+      6
+    ],
+    "basic_geodesic_cycle_bound": 5,
+    "basic_deficit": 1
+  },
+  {
+    "index": 4,
+    "graph6": "F?qb_",
+    "order": 7,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ]
+    ],
+    "cut_vertex": 6,
+    "side1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "side2": [
+      3,
+      6
+    ],
+    "g": 6,
+    "eta": 1,
+    "global_center": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 1,
+    "rho1": 5,
+    "rho2": 2,
+    "rooted_sum": 6,
+    "target": 6,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 6,
+    "g2": null,
+    "eta1": 0,
+    "eta2": 0,
+    "center1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "center2": [
+      3,
+      6
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "basic_geodesic_cycle_bound": 6,
+    "basic_deficit": 0
+  },
+  {
+    "index": 5,
+    "graph6": "F?q`o",
+    "order": 7,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "cut_vertex": 4,
+    "side1": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "side2": [
+      1,
+      4
+    ],
+    "g": 5,
+    "eta": 2,
+    "global_center": [
+      4,
+      6
+    ],
+    "center_side": "side1",
+    "R1": 2,
+    "R2": 1,
+    "rho1": 5,
+    "rho2": 2,
+    "rooted_sum": 6,
+    "target": 6,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 5,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      2,
+      4,
+      6
+    ],
+    "center2": [
+      1,
+      4
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      2,
+      4,
+      5,
+      6
+    ],
+    "basic_geodesic_cycle_bound": 5,
+    "basic_deficit": 1
+  },
+  {
+    "index": 6,
+    "graph6": "F?q`o",
+    "order": 7,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "cut_vertex": 6,
+    "side1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "side2": [
+      3,
+      6
+    ],
+    "g": 5,
+    "eta": 2,
+    "global_center": [
+      4,
+      6
+    ],
+    "center_side": "side1",
+    "R1": 2,
+    "R2": 1,
+    "rho1": 5,
+    "rho2": 2,
+    "rooted_sum": 6,
+    "target": 6,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 5,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      0,
+      4,
+      6
+    ],
+    "center2": [
+      3,
+      6
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      2,
+      4,
+      5,
+      6
+    ],
+    "basic_geodesic_cycle_bound": 5,
+    "basic_deficit": 1
+  },
+  {
+    "index": 7,
+    "graph6": "FCQb_",
+    "order": 7,
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ]
+    ],
+    "cut_vertex": 1,
+    "side1": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "side2": [
+      1,
+      4
+    ],
+    "g": 5,
+    "eta": 2,
+    "global_center": [
+      6
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 1,
+    "rho1": 5,
+    "rho2": 2,
+    "rooted_sum": 6,
+    "target": 6,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 5,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      2,
+      3,
+      6
+    ],
+    "center2": [
+      1,
+      4
+    ],
+    "d_root_shortest_cycle": 1,
+    "shortest_cycle": [
+      0,
+      2,
+      3,
+      5,
+      6
+    ],
+    "basic_geodesic_cycle_bound": 6,
+    "basic_deficit": 0
+  },
+  {
+    "index": 8,
+    "graph6": "FCQb_",
+    "order": 7,
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ]
+    ],
+    "cut_vertex": 6,
+    "side1": [
+      0,
+      2,
+      3,
+      5,
+      6
+    ],
+    "side2": [
+      1,
+      4,
+      6
+    ],
+    "g": 5,
+    "eta": 2,
+    "global_center": [
+      6
+    ],
+    "center_side": "cut_vertex",
+    "R1": 2,
+    "R2": 2,
+    "rho1": 4,
+    "rho2": 3,
+    "rooted_sum": 6,
+    "target": 6,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 5,
+    "g2": null,
+    "eta1": 0,
+    "eta2": 1,
+    "center1": [
+      0,
+      2,
+      3,
+      5,
+      6
+    ],
+    "center2": [
+      1
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      2,
+      3,
+      5,
+      6
+    ],
+    "basic_geodesic_cycle_bound": 6,
+    "basic_deficit": 0
+  },
+  {
+    "index": 9,
+    "graph6": "G?`F?w",
+    "order": 8,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "cut_vertex": 6,
+    "side1": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "side2": [
+      2,
+      6
+    ],
+    "g": 6,
+    "eta": 2,
+    "global_center": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "center_side": "side1",
+    "R1": 4,
+    "R2": 1,
+    "rho1": 6,
+    "rho2": 2,
+    "rooted_sum": 7,
+    "target": 7,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 6,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      0,
+      1,
+      4,
+      5,
+      7
+    ],
+    "center2": [
+      2,
+      6
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7
+    ],
+    "basic_geodesic_cycle_bound": 6,
+    "basic_deficit": 1
+  },
+  {
+    "index": 10,
+    "graph6": "G?`F?w",
+    "order": 8,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "cut_vertex": 7,
+    "side1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7
+    ],
+    "side2": [
+      3,
+      7
+    ],
+    "g": 6,
+    "eta": 2,
+    "global_center": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "center_side": "side1",
+    "R1": 4,
+    "R2": 1,
+    "rho1": 6,
+    "rho2": 2,
+    "rooted_sum": 7,
+    "target": 7,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 6,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      0,
+      1,
+      4,
+      5,
+      6
+    ],
+    "center2": [
+      3,
+      7
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7
+    ],
+    "basic_geodesic_cycle_bound": 6,
+    "basic_deficit": 1
+  },
+  {
+    "index": 11,
+    "graph6": "G?bB@o",
+    "order": 8,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "cut_vertex": 7,
+    "side1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7
+    ],
+    "side2": [
+      3,
+      7
+    ],
+    "g": 7,
+    "eta": 1,
+    "global_center": [
+      0,
+      2,
+      4,
+      6,
+      7
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 1,
+    "rho1": 6,
+    "rho2": 2,
+    "rooted_sum": 7,
+    "target": 7,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 7,
+    "g2": null,
+    "eta1": 0,
+    "eta2": 0,
+    "center1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7
+    ],
+    "center2": [
+      3,
+      7
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7
+    ],
+    "basic_geodesic_cycle_bound": 7,
+    "basic_deficit": 0
+  },
+  {
+    "index": 12,
+    "graph6": "G?`ad_",
+    "order": 8,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "cut_vertex": 0,
+    "side1": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "side2": [
+      0,
+      4
+    ],
+    "g": 6,
+    "eta": 2,
+    "global_center": [
+      2,
+      3,
+      7
+    ],
+    "center_side": "side1",
+    "R1": 4,
+    "R2": 1,
+    "rho1": 6,
+    "rho2": 2,
+    "rooted_sum": 7,
+    "target": 7,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 6,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "center2": [
+      0,
+      4
+    ],
+    "d_root_shortest_cycle": 1,
+    "shortest_cycle": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "basic_geodesic_cycle_bound": 7,
+    "basic_deficit": 0
+  },
+  {
+    "index": 13,
+    "graph6": "G?`ad_",
+    "order": 8,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "cut_vertex": 7,
+    "side1": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "side2": [
+      0,
+      4,
+      7
+    ],
+    "g": 6,
+    "eta": 2,
+    "global_center": [
+      2,
+      3,
+      7
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 2,
+    "rho1": 5,
+    "rho2": 3,
+    "rooted_sum": 7,
+    "target": 7,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 6,
+    "g2": null,
+    "eta1": 0,
+    "eta2": 1,
+    "center1": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "center2": [
+      0
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "basic_geodesic_cycle_bound": 7,
+    "basic_deficit": 0
+  },
+  {
+    "index": 14,
+    "graph6": "H?AEB_k",
+    "order": 9,
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    "cut_vertex": 7,
+    "side1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "side2": [
+      3,
+      7
+    ],
+    "g": 7,
+    "eta": 2,
+    "global_center": [
+      2,
+      7,
+      8
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 1,
+    "rho1": 7,
+    "rho2": 2,
+    "rooted_sum": 8,
+    "target": 8,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 7,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "center2": [
+      3,
+      7
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      7,
+      8
+    ],
+    "basic_geodesic_cycle_bound": 7,
+    "basic_deficit": 1
+  },
+  {
+    "index": 15,
+    "graph6": "H?AEB_k",
+    "order": 9,
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    "cut_vertex": 8,
+    "side1": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "side2": [
+      4,
+      8
+    ],
+    "g": 7,
+    "eta": 2,
+    "global_center": [
+      2,
+      7,
+      8
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 1,
+    "rho1": 7,
+    "rho2": 2,
+    "rooted_sum": 8,
+    "target": 8,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 7,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      1,
+      2,
+      6,
+      7,
+      8
+    ],
+    "center2": [
+      4,
+      8
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      7,
+      8
+    ],
+    "basic_geodesic_cycle_bound": 7,
+    "basic_deficit": 1
+  },
+  {
+    "index": 16,
+    "graph6": "H?ABE_k",
+    "order": 9,
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    "cut_vertex": 7,
+    "side1": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "side2": [
+      3,
+      7
+    ],
+    "g": 7,
+    "eta": 2,
+    "global_center": [
+      0,
+      5,
+      6
+    ],
+    "center_side": "side1",
+    "R1": 4,
+    "R2": 1,
+    "rho1": 7,
+    "rho2": 2,
+    "rooted_sum": 8,
+    "target": 8,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 7,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "center2": [
+      3,
+      7
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      7,
+      8
+    ],
+    "basic_geodesic_cycle_bound": 7,
+    "basic_deficit": 1
+  },
+  {
+    "index": 17,
+    "graph6": "H?ABE_k",
+    "order": 9,
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    "cut_vertex": 8,
+    "side1": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "side2": [
+      4,
+      8
+    ],
+    "g": 7,
+    "eta": 2,
+    "global_center": [
+      0,
+      5,
+      6
+    ],
+    "center_side": "side1",
+    "R1": 4,
+    "R2": 1,
+    "rho1": 7,
+    "rho2": 2,
+    "rooted_sum": 8,
+    "target": 8,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 7,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      0,
+      1,
+      5,
+      6,
+      7
+    ],
+    "center2": [
+      4,
+      8
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      7,
+      8
+    ],
+    "basic_geodesic_cycle_bound": 7,
+    "basic_deficit": 1
+  },
+  {
+    "index": 18,
+    "graph6": "H?BDA_w",
+    "order": 9,
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    "cut_vertex": 8,
+    "side1": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "side2": [
+      4,
+      8
+    ],
+    "g": 8,
+    "eta": 1,
+    "global_center": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7,
+      8
+    ],
+    "center_side": "side1",
+    "R1": 4,
+    "R2": 1,
+    "rho1": 7,
+    "rho2": 2,
+    "rooted_sum": 8,
+    "target": 8,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 8,
+    "g2": null,
+    "eta1": 0,
+    "eta2": 0,
+    "center1": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "center2": [
+      4,
+      8
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "basic_geodesic_cycle_bound": 8,
+    "basic_deficit": 0
+  },
+  {
+    "index": 19,
+    "graph6": "H?BDA_Y",
+    "order": 9,
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    "cut_vertex": 6,
+    "side1": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "side2": [
+      2,
+      6
+    ],
+    "g": 7,
+    "eta": 2,
+    "global_center": [
+      0,
+      3,
+      6,
+      8
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 1,
+    "rho1": 7,
+    "rho2": 2,
+    "rooted_sum": 8,
+    "target": 8,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 7,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      0,
+      3,
+      6,
+      7,
+      8
+    ],
+    "center2": [
+      2,
+      6
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "basic_geodesic_cycle_bound": 7,
+    "basic_deficit": 1
+  },
+  {
+    "index": 20,
+    "graph6": "H?BDA_Y",
+    "order": 9,
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    "cut_vertex": 8,
+    "side1": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "side2": [
+      4,
+      8
+    ],
+    "g": 7,
+    "eta": 2,
+    "global_center": [
+      0,
+      3,
+      6,
+      8
+    ],
+    "center_side": "side1",
+    "R1": 3,
+    "R2": 1,
+    "rho1": 7,
+    "rho2": 2,
+    "rooted_sum": 8,
+    "target": 8,
+    "side1_kind": "cyclic",
+    "side2_kind": "tree",
+    "g1": 7,
+    "g2": null,
+    "eta1": 1,
+    "eta2": 0,
+    "center1": [
+      0,
+      3,
+      5,
+      6,
+      8
+    ],
+    "center2": [
+      4,
+      8
+    ],
+    "d_root_shortest_cycle": 0,
+    "shortest_cycle": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "basic_geodesic_cycle_bound": 7,
+    "basic_deficit": 1
+  }
+]

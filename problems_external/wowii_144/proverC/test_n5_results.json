@@ -1,0 +1,30 @@
+{
+  "EXT": {
+    "capped": 0,
+    "count": 2029,
+    "min_slack": 0,
+    "min_wit": "atlas [Ehd?] n=6 g=5 r=2 e=1 N5=1",
+    "viol": []
+  },
+  "SLACK": {
+    "capped": 0,
+    "count": 3012,
+    "min_slack": 1,
+    "min_wit": "crownWide [GhcOGC] n=8 g=5 r=3 e=2 N5=3",
+    "viol": []
+  },
+  "g3": {
+    "capped": 0,
+    "count": 5074,
+    "min_slack": 0,
+    "min_wit": "atlas [CN] n=4 g=3 r=1 e=1 N5=1",
+    "viol": []
+  },
+  "g4": {
+    "capped": 0,
+    "count": 1667,
+    "min_slack": 0,
+    "min_wit": "named[FhELO] [FhELO] n=7 g=4 r=2 e=2 N5=2",
+    "viol": []
+  }
+}

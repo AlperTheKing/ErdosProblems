@@ -3332,3 +3332,523 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-18T00:20:00] ✔ W144-WAVE2 | DID: test_AB.py on 13455 cyclic graphs | RESULT: Lemma A (t>=g-1+diam-floor(g/2)) 0 violations min-slack 0; Lemma B FALSE 1299 violations (Fh_gG g5 diam3 e2) | Δ: B-route dead, A-route alive
 [2026-07-18T01:10:00] ✔ WOWII144 | DID: lemma_e_tests.py + geq4-forall check + stress_lemma_e.py (13k+ graphs) | RESULT: e<=max_K M(K) 0 viol (8219); forall-K g>=4 0 viol (4660+5417); tight cases exist | Δ: 144 reduced to Lemma E; class-P proof found
 [2026-07-18T11:33:53Z] ► RESUME-RECON | NEXT: reconstruct WOWII 141-144 state (142/144 proof drafts, wave2 results, FC statements, PR#4454 status) after session-limit cutoff
+[2026-07-18T11:43:26Z] ✔ RESUME-RECON | DID: reconstructed 141-144 state | RESULT: PR#4454 open+CI clean; 144=LemmaM(proved)+LemmaE(0/8219); 142=skeleton+equality intel only; INTEL_144.md+INTEL_142.md written | Δ: none
+[2026-07-18T11:43:26Z] ► W144-PROVE | NEXT: workflow w144-close (3 provers xhigh on Lemma E + 2 adversarial referees each + exhaustive n<=9 oracle + competitor probe)
+[2026-07-18T11:43:26Z] ► W142-PROVE | NEXT: workflow w142-close (bridge-oracle R1/R2/R3 then 3 provers + 2 referees each on cyclic f>=1 branch)
+[2026-07-18T11:45:37Z] ► W144W142-LAUNCHED | DID: workflows w44i3kruf (144: 3 provers+refs+oracle+probe) and w59uo8zkr (142: bridge-oracle+3 provers+refs) launched | RESULT: run IDs wf_79745781-f67, wf_d428eecf-fbb | Δ: none
+[2026-07-18T11:45:37Z] ► LEAN-PRESTAGE | NEXT: agent to compile Lemma M (tree-attach primitive) in fc_pr_build env + inventory ForMathlib API + NEEDS list for Lemma E formalization
+[2026-07-18T11:46:12Z] ► W144-LEAN-PRESTAGE | NEXT: read INTEL_144/INTEL_142 + wave skeletons + fc_pr_build ForMathlib SimpleGraph API to build inventory
+[2026-07-18T11:51:08Z] ► GPT-PRO-142 | DID: sent W142 hard-branch consult to GPT Pro (tab-1, thread "Graph Theory Conjecture Proof"; full intel: tools T1-T3+LemmaM/M-P, falsified Q3/Q4/Q5, equality g in {3,6}, P2 candidate) | RESULT: Pro run streaming | Δ: none
+[2026-07-18T11:51:08Z] ► GPT-PRO-144 | DID: sent Lemma E exists-form consult to GPT Pro (tab-2; M(K) def, class-P skeleton S1-S7, falsified L3/CT/g4-forms, P2 note) | RESULT: Pro thinking | Δ: none
+[2026-07-18T11:51:08Z] ► ARXIV-READY | DID: verified arXiv session (AlperTheKing logged in, START NEW SUBMISSION available; 7816436+7837759 still on hold) | RESULT: submission path clear for combined 141-144 paper | Δ: none
+[2026-07-18T11:58:59Z] ✔ W144-LEAN-PRESTAGE | DID: read INTEL 142/144, repo ForMathlib SimpleGraph API (LargestInducedTree/InducedTreeNeighborhood/VertexDistance/Eccentricity), wave scratch 141/143/142; verified Mathlib names (connected_induce_union, exists_boundary_dart, rotate, inj_on_of_nodup_map) | RESULT: all needed lemmas exist | Δ: none
+[2026-07-18T11:58:59Z] ► W144-LEMMA-M | NEXT: write+compile lemmaM.lean (attach primitive IsTree.induce_union_of_unique_bridge + list fold + consumer) vs fc_pr_build oleans
+[2026-07-18T12:02:24Z] ✔ W144-LEMMA-M | DID: lake env lean lemmaM.lean (fc_pr_build, v4.27.0) | RESULT: EXIT=0, log=5 axiom lines only, all 5 thms axioms=[propext,Classical.choice,Quot.sound], no sorry/admit/native_decide | Δ: Lemma M attach+fold+consumer+supplier+composition compiled
+[2026-07-18T12:05:57Z] ✔ W144-LEAN-PRESTAGE | DID: wrote API_INVENTORY.md + NEEDS_E_SIDE.md in problems_external/wowii_144/lean/ | RESULT: 3 deliverables complete (lemmaM.lean green exit 0, inventory 11 sections, needs list G1-G9) | Δ: Lemma M consumer side formalized; E-side gaps mapped
+[2026-07-18T12:06:54Z] ✔ LEAN-PRESTAGE | DID: lemmaM.lean compiled (induce_union_of_unique_bridge + foldr fold + consumer + girth-1 supplier + composition) | RESULT: exit 0, axioms=[propext,Classical.choice,Quot.sound] x5, no sorry; API_INVENTORY.md + NEEDS_E_SIDE.md (G1-G9, hardest=T3 isometry) | Δ: Lemma M consumer DONE in Lean
+[2026-07-18T12:08:10Z] ✔ LEAN-GATE | DID: independent replay compile of lemmaM.lean (lake env lean, fc_pr_build) | RESULT: EXIT=0, log = 5 axiom lines only, all [propext,Classical.choice,Quot.sound] | Δ: Lemma M Lean claim GATED-ACCEPTED
+[2026-07-18T12:08:10Z] ✔ PAPER-FIX | DID: removed false West claims from w141_induced_tree.tex (lines 59,67: WestReg cite dropped, carried-by-West clause deleted) | RESULT: referee major finding resolved | Δ: paper v1.1
+[2026-07-18T12:23:53Z] ✔ CLASSP-REVERIFY | DID: verify_classP_proof.py rerun (seed 20260720) | RESULT: 3342 class-P graphs e>=1, 0 failures | Δ: none
+[2026-07-18T12:23:53Z] ✔ SIGMASTAR-CE | DID: test_sigmastar.py + manual M(K) check | RESULT: Estar FALSE (J?LcCHOC`C? g6 e3 sigma*=2) but M(K)=4 all 3 cycles => Lemma E HOLDS slack 1; multi-tail-per-component essential; INTEL_144.md updated | Δ: sigma* route dead, E_exists unharmed
+[2026-07-21T00:00:00+03:00] ► NEWS-CHECK | NEXT: web-search for claimed Jacobian conjecture counterexample announced today; objective = locate primary source (arXiv id, authors) and verification status
+[2026-07-21T00:05:00+03:00] ✔ NEWS-CHECK | DID: web-search+fetch jacobianfun.org | RESULT: Alpoge 2026-07-19 X-post, dim-3 Keller map deg(7,6,4), detJ=-2, triple collision at (-1/4,0,0); repo grep: JC never in our registries | Δ: none
+[2026-07-21T00:05:30+03:00] ► VERIFY | NEXT: run sympy exact check (scratchpad jc_verify.py) of detJ=-2 and F(0,0,-1/4)=F(1,-3/2,13/2)=F(-1,3/2,13/2); objective = independent confirmation
+[2026-07-21T00:07:00+03:00] ✔ VERIFY | DID: sympy exact check jc_verify.py | RESULT: detJ expands to -2 identically; F(0,0,-1/4)=F(1,-3/2,13/2)=F(-1,3/2,13/2)=(-1/4,0,0); JC FALSE n>=3 | Δ: external landscape: JC(n>=3) resolved (Alpoge+Fable)
+[2026-07-21T00:20:00+03:00] ► TARGET-SWEEP | NEXT: web-search (a) origin/method of '64 agents 8 hours' trend (b) which famous open problems fell this month, to pick next campaign target
+[2026-07-21T00:32:00+03:00] ✔ TARGET-SWEEP | DID: web sweep + local registry audit | RESULT: '64 agents'=GPT-5.6 Sol Ultra swarm (CDC proof claimed 7/15); still open: Hadamard668, septuple, KTT-LR, M23, Steiner t>=6; Q26 user-CANCELLED 7/19 | Δ: none
+[2026-07-21T00:45:00+03:00] ► KTT-SELECT | NEXT: user picked KTT stretched-LR negativity hunt; registry written at problems_external/ktt_lr_negativity/APPROACH_REGISTRY.md; launching 64-agent/8h workflow
+[2026-07-21T00:46:00+03:00] ► KTT-LAUNCH | NEXT: workflow ktt-lr-negativity-hunt = 2 engines + calibration gate + recon + 4 waves x 14 hunters + adversarial verify; exact-Q interpolation, D=(r-1)(r-2)/2, checks at D+1,D+2
+[2026-07-21T00:52:00+03:00] ✔ KTT-LAUNCH | DID: workflow ktt-lr-negativity-hunt launched runId wf_48e7b8b1-cc6 | RESULT: background task wtbhc0xaw; toolchain(2 engines+cal gate)->recon->4x14 hunters->adversarial verify | Δ: KTT campaign ACTIVE
+[2026-07-21T01:05:00+03:00] ► ENGINE-A | NEXT: build lr_hive.exe (KT hive DFS counter, native clang++ -O3) + SSYT ground-truth sweep |nu|<=8 all r<=8 + c=1/c=2 stretch spot-checks
+[2026-07-21T01:31:35] ► ENGINE-B | NEXT: build engineB_lrrule.py (classical LR-rule DP counter, independent of hive engine) + Schur-product ground-truth selftest
+[2026-07-21T01:20:00+03:00] ✔ ENGINE-A | DID: built lr_hive.exe (KT hive DFS, clang++ -O3 native) + gt_lr.py SSYT ground truth | RESULT: 4993/4993 exhaustive |nu|<=8 r<=8 match; 300/300 c=1/c=2 stretch n<=5; cap+zero edges PASS; log engine/BUILD_A.md | Δ: ENGINE A ready
+[2026-07-21T01:36:20] ✔ ENGINE-B | DID: built engineB_lrrule.py + --selftest | RESULT: 4929+88 triples vs Schur ground truth 0 mismatch; 30/30 c=1 P==1, 30/30 c=2 P=n+1 (n<=5); BUILD_B.md ALL PASS | Δ: independent LR counter online
+[2026-07-21T01:39:29+03:00] ► CALIBRATION | NEXT: cross-compare engines A/B on 300 random triples (r<=5,|nu|<=16, seeded) via batch mode, exact line match required
+[2026-07-21T01:40:47+03:00] ✔ CALIBRATION | DID: calibrate.py phases 1-3 (300 cross-compare + 20 c=1 + 20 c=2 stretched n=1..6) | RESULT: PASS/PASS/PASS exit 0, calib/summary.json | Δ: A-B agreement certified
+[2026-07-21T01:41:38+03:00] ► CALIBRATION | NEXT: write engine/interp.py (exact Fraction Newton interpolation, last-2-lines held-out, NEGATIVE_COEFF/EXTRA_POINT_MATCH output) + unit tests
+[2026-07-21T01:44:11+03:00] ✔ CALIBRATION | DID: interp.py written+selftested (25/25 incl NEGATIVE_COEFF case) + e2e r=5 D=6 rehearsal | RESULT: engine/interp.py exit 0; e2e COEFFS 1 1 match=yes | Δ: interp armed
+[2026-07-21T01:44:11+03:00] ✔ CALIBRATION | DID: CALIBRATION.md written | RESULT: engine/CALIBRATION.md verdict PASS, >=1349 cross-checks 0 disagreements, A/B outs byte-identical | Δ: calibration gate CLOSED (PASS)
+[2026-07-21T01:47:37] ► KTT-RECON | NEXT: web-search sweep (8 queries) for KTT-positivity counterexample claims + FrontierMath stretched-LR problem status, July-2026 window
+[2026-07-21T01:51:09] ✔ KTT-RECON | DID: 6 web searches + epoch.ai/frontiermath/open-problems fetch | RESULT: status=Unsolved on Epoch page, 0 counterexample claims found, positive-zone map built (c<=2, Stembridge m-free, facet factorization) | Δ: none
+[2026-07-20T23:01:27Z] ✔ KTT-SWARM-W1-DESIGN | DID: designed wave-1 hunter family specs | RESULT: 14 families (11 r=5 D=6, 3 r=6 D=10; c 3-12; |nu|<=48; TrackA prime cells + TrackB collapse detector) | Δ: wave-1 ready
+[2026-07-20T23:05:28Z] ► KTT-HUNT corner-peel-offwall-r5 | NEXT: verify engines A/B/interp exist and cross-check on example triple, then launch near-corner peel hunt (r=5, seed 4204)
+[2026-07-21T02:06:44] ► HUNT-W1-lowc-r5 | NEXT: engine smoke test (A example, B example, interp selftest) then launch TrackB r=5 collapse scan seed 4207
+[2026-07-21T02:07:52+03:00] ► KTT-W1-CONJSYM | NEXT: hunter conjugation-symmetric-r5 (r=5,D=6, mu=lambda` box-5x5 |lam| 13-21 + self-conj census): enumerate+screen via lr_hive.exe
+[2026-07-21T02:07:00+03:00] ► KTT-W1 stair6-interleave-r6 | NEXT: generate S6-pool r=6 family (pairs lex, nu band ±2), screen c=P(1) via lr_hive cap 20000, budget 6000 screens
+[2026-07-21T02:08:42+03:00] ► KTT-W1-anchor | NEXT: screen 7 anchor pairs (P1 (9,7,4,2)/(8,6,3,1) W40 + 6 shifts), all 5-part nu, Horn-interior s_ij>=1 + >=2 walls hugged, c-screen cap 20000 via lr_hive
+[2026-07-21T02:08:58+03:00] ► KTT-W1-r5 SETUP | NEXT: build+selfcheck hunter orchestrator (templates aabb/aabbc/aaabb, seed 4208, r=5 D=6) then launch 60-min screen/profile loop
+[2026-07-21T02:09:03] ► KTT-W1 c3-total-sweep-r5 | NEXT: engine sanity gate (A/B c=2 stretch + interp selftest), then r=5 census screen W=18..30 seed 4205 cap 150k/W.
+[2026-07-21T02:09:05] ► KTT-W1 fulldeg-c11-12-r6 | NEXT: build hunt.py orchestrator (seed 4214, r=6 D=10, c-screen via lr_hive.exe batch), smoke-test, then 60-75min screen+profile run
+[2026-07-20T23:09:50Z] ► KTT-W1-PRIME | NEXT: build+smoke hunter driver (seed 4202, r=5 D=6, c=7 prime cell), then screen up to 60k triples via lr_hive batch cap 20000
+[2026-07-20T23:09:58Z] ► KTT-HUNT-stair5-interleave-core | NEXT: sanity-check engines A/B + build orchestrator (pool delta5±box ops, r=5, D=6, W 28-32, band ±3)
+[2026-07-20T23:10:01Z] ► KTT-W1-RTCM | NEXT: hunter random-thin-control-mixed seed 4209: build driver.py, smoke-test, then 50-min r5/r6 randomized thin-control screen+profile run
+[2026-07-21T02:10:11+03:00] ✔ KTT-W1-CONJSYM | DID: enum trackA(mu=lam',5x5,|lam|13-21,band10)+trackB(selfconj census) | RESULT: 3963+183 triples, 114 lambdas, 11 nus | Δ: none
+[2026-07-21T02:10:27] ✔ KTT-W1 c3sweep ENGINE-GATE | DID: A/B on (8,4)^2->(12,8,4) n=4 + interp --selftest | RESULT: both=5=n+1, SELFTEST ALL PASS exit0 | Δ: none
+[2026-07-21T02:10:27] ► KTT-W1 c3sweep SCREEN | NEXT: hunt_screen.py W=18..30 r=5 exact-5-part nu, splits a in [6,W/2], seed 4205, cap 150k/W, budget 780k, engineA cap 20000.
+[2026-07-21T02:10+03:00] ► KTT-W1/horn-sliver-r6 | NEXT: pilot hunt (enum+wall+screen 4 anchor pairs, 12-profile pilot) via hunt_horn_sliver_r6.py; objective: validate pipeline before full run
+[2026-07-21T02:10:50+03:00] ✔ KTT-W1-CONJSYM | DID: screened 3963(A)+183(B) at n=1 cap20000 | RESULT: survivors c3-12: A=349 B=5; cdist logged; 0 CAP_EXCEEDED | Δ: none
+[2026-07-21T02:10:50+03:00] ► KTT-W1-CONJSYM | NEXT: profile all 354 survivors n=0..8 cap200000 + interp.py (D=6, heldout P(7),P(8))
+[2026-07-21T02:10:55] ✔ HUNT-W1-lowc-r5 | DID: smoke+bench (A/B agree 3/3 profiles, interp selftest exit 0, 300-screen bench keeps 31/300) | RESULT: A profile 0.05s, B n=8 0.15s | Δ: none
+[2026-07-21T02:10:59+03:00] ✔ KTT-W1-anchor | DID: screen 7 pairs | RESULT: 1556 nu screened, 726 survivors c in [3,12], cdist logged in runs/wave1_anchor-cell-nu40-sliver/survivors.json | Δ: none
+[2026-07-21T02:10:59+03:00] ► KTT-W1-anchor | NEXT: profile 726 survivors n=0..8 cap 200000 via lr_hive batch (6 workers), exact interp n=0..6 + heldout 7,8, TrackB c<=deg orbit expansion
+[2026-07-20T23:11:04Z] ► KTT-W1 beam-evolver-seeded-r5 | NEXT: build beam orchestrator (width24, seeds S2 c=12 + S7 c=8 survive; S1,S3-S6,S8 dropped by c-gate) + 16 rng4211 seeds, then evolve ~50min
+[2026-07-21T02:11:20+03:00] ► KTT-W1 stair6-interleave-r6 | NEXT: launch hunt.py — family 254276 triples (741 pairs), screen first 6000 (lex), profile c9-12 all + 20% c3-8 seed 4212, D=10 n=0..12
+[2026-07-20T23:11:53Z] OK KTT-W1-PRIME | DID: sanity gate | RESULT: A==B on doc example (c=0), c=1 stretch==1 x6, c=2 stretch==n+1 x6 | delta: none
+[2026-07-20T23:11:53Z] OK KTT-W1-PRIME SCREEN | DID: 600 unique screens | RESULT: c7=20 trackB=146 bank=140 CAP=0 | delta: none
+[2026-07-20T23:11:54Z] OK KTT-W1-PRIME PROFILE | DID: 68 profiles (prime=20 trackB=8 bank=40) | RESULT: hits=0 anomalies=0 fatskips=0 | delta: none
+[2026-07-20T23:11:54Z] OK KTT-W1-PRIME ORBIT | DID: 0 orbits (0 screens, 0 profiles) | RESULT: hits=0 anomalies=0 | delta: none
+[2026-07-21T02:11:56] ✔ KTT-W1 c3sweep SCREEN | DID: 780000 screens W=18..30 (60k/W, seed 4205) | RESULT: c3=21382 c4=10985 c5=5302 cap_exc=0 err=0 wall=6.9s screen_stats.json | Δ: 21382 c=3 profile targets
+[2026-07-21T02:12:02+0300] ► KTT-W1-HOOKFAT | NEXT: build driver.py (gen lam=(a,b,1^k) x near-rect mu, seed 4206; screen c in [3,12] cap20k; profile n=0..8 interp; trackB orbits) + smoke test
+[2026-07-21T02:12:30+03:00] ✔ KTT-W1-anchor | DID: profile 726 main + 8 orbit-mined (interp n=0..6, heldout 7,8) | RESULT: 734 polys, 0 negative coeffs, 0 anomalies, 0 fat-skips, min coeff 1/360 (deg-6 tier) | Δ: none
+[2026-07-21T02:12:30+03:00] ► KTT-W1-anchor | NEXT: escalate to hugging>=1 sliver (interior s_ij>=1, exactly one wall at 1-2), screen+profile same protocol
+[2026-07-21T02:12:42+03:00] ► KTT-W1-r5 HUNT | NEXT: launch hunt.py (990 pairs, ~29.4k-triple full band, screen c in [3,12], profile n=0..8 D=6, TrackB+top20 escalation, budgets 80k/5k)
+[2026-07-21T02:14+03:00] ✔ KTT-W1/horn-sliver-r6 | DID: pilot (enum 7125, wall 2883, screen 2883, 12 profiles) | RESULT: runs/wave1_horn-sliver-r6/profiles.jsonl 4 OK deg7-8 + 8 FAT_SKIP, 0 neg | Δ: none
+[2026-07-21T02:15+03:00] ► KTT-W1/horn-sliver-r6 | NEXT: full hunt (298 selected profiles n=0..12 cap 2e5, orbits top-3, escalation perturbed-A1 pairs, deadlines 20/36/42min) background
+[2026-07-21T02:12:50] ► KTT-W1-RTCM | NEXT: r5 unbiased screen+profile blocks (block=30, caps: screens 60, profiles 40)
+[2026-07-21T02:12:51] ✔ KTT-W1-RTCM | DID: r5 phase | RESULT: screens=60 profiles=9+0orb fat=0 hits=0 anom=0 | Δ: none
+[2026-07-21T02:12:51] ► KTT-W1-RTCM | NEXT: r6 unbiased screen+profile blocks (block=6, caps: screens 12, profiles 10)
+[2026-07-21T02:12:51] ✔ KTT-W1-RTCM | DID: r6 phase | RESULT: screens=12 profiles=2+0orb fat=0 hits=0 anom=0 | Δ: none
+[2026-07-21T02:13:13] ► KTT-W1 c3sweep PROFILE | NEXT: hunt_profile.py on 21382 c=3 triples, samples n=0..8 engineA cap 200000, interp.py exact, anomaly/hit protocol vs engineB.
+[2026-07-21T02:13:18] ► KTT-W1-RTCM | NEXT: r5 unbiased screen+profile blocks (block=400, caps: screens 20000, profiles 5000)
+[2026-07-21T02:13:32] ✔ KTT-W1-RTCM | DID: r5 phase | RESULT: screens=20000 profiles=3594+0orb fat=0 hits=0 anom=0 | Δ: none
+[2026-07-21T02:13:32] ► KTT-W1-RTCM | NEXT: r6 unbiased screen+profile blocks (block=120, caps: screens 5000, profiles 800)
+[2026-07-20T23:13:33Z] ✔ KTT-W1-RTCM | DID: driver smoke (11 profiles, B-xchk 11/11) + full run launched bg b3bp4b0zs | RESULT: runs/wave1_random-thin-control-mixed/driver.log | Δ: none
+[2026-07-20T23:14:04Z] OK KTT-W1-PRIME | DID: sanity gate | RESULT: A==B on doc example (c=0), c=1 stretch==1 x6, c=2 stretch==n+1 x6 | delta: none
+[2026-07-20T23:14:04Z] OK KTT-W1-PRIME SCREEN | DID: 600 unique screens | RESULT: c7=20 trackB=146 bank=140 CAP=0 | delta: none
+[2026-07-20T23:14:05Z] OK KTT-W1-PRIME PROFILE | DID: 68 profiles (prime=20 trackB=8 bank=40 orbit=0) | RESULT: hits=0 anomalies=0 fatskips=0 | delta: none
+[2026-07-20T23:14:05Z] OK KTT-W1-PRIME ORBIT | DID: 0 orbits (0 screens, 0 profiles) | RESULT: hits=0 anomalies=0 | delta: none
+[2026-07-21T02:14:06+03:00] ✔ KTT-W1-CONJSYM | DID: profiled 354/354 survivors n=0..8 + interp + validators(swap/conj/c1c2/AB-crosscheck) | RESULT: 0 NEGATIVE_COEFF, 0 anomalies, 0 fat-skips, manifest.json written | Δ: family exhausted, no hit
+[2026-07-21T02:14:31] ✔ KTT-W1 c3sweep PROFILE | DID: 21382/21382 c=3 profiled (n=0..8, interp exact) | RESULT: deg2(n+1)(n+2)/2 x20572, deg1 2n+1 x810; 0 anomalies 0 negcoeff 0 fatskip profiles.jsonl | Δ: no deg>=3 orbit seed
+[2026-07-20T23:14:36Z] OK KTT-W1-PRIME | DID: sanity gate | RESULT: A==B on doc example (c=0), c=1 stretch==1 x6, c=2 stretch==n+1 x6 | delta: none
+[2026-07-20T23:14:36Z] OK KTT-W1-PRIME SCREEN | DID: 600 unique screens | RESULT: c7=20 trackB=146 bank=140 CAP=0 | delta: none
+[2026-07-20T23:14:37Z] OK KTT-W1-PRIME PROFILE | DID: 80 profiles (prime=20 trackB=8 bank=40 orbit=12) | RESULT: hits=0 anomalies=0 fatskips=0 | delta: none
+[2026-07-20T23:14:37Z] OK KTT-W1-PRIME ORBIT | DID: 10 orbits (1458 screens, 12 profiles) | RESULT: hits=0 anomalies=0 | delta: none
+[2026-07-21T02:14:43+03:00] ✔ KTT-W1-anchor | DID: escalate hug==1 sliver | RESULT: 1213 screened, 195 profiled, 0 negative coeffs, 0 anomalies (totalprof 929) | Δ: none
+[2026-07-21T02:14:43+03:00] ► KTT-W1-anchor | NEXT: escalation-2 = all single-box add/remove/move perturbations of P1 lam=(9,7,4,2) mu=(8,6,3,1) as new pairs, hug>=2 pipeline
+[2026-07-20T23:14:50Z] ✔ KTT-HUNT corner-peel-offwall-r5 | DID: engine check + 3-pair pilot + A/B spot-check | RESULT: pools L=87 M=38 pairs=3306; 60 profiles exact, A==B on 3x8 samples | Δ: none
+[2026-07-20T23:14:50Z] ► KTT-HUNT corner-peel-offwall-r5 | NEXT: launch full hunt (seed 4204, depth<=4 peel + trackB + top20 escalation depth 5-6, caps: 50k screens / 20k profiles / 62min)
+[2026-07-21T02:14:53] ► HUNT-W1-lowc-r5 | NEXT: base scan launch seed 4207, budget 40000 screens / 8000 profiles, caps 20000/200000, D=6, keep c in [3,6]
+[2026-07-20T23:14:56Z] ✔ KTT-W1 beam-r5 | DID: orchestrator built + init | RESULT: 288 screened, beam0=18, best S2 min-coeff 1/36, 0 neg | Δ: none
+[2026-07-21T02:21+03:00] ► KTT-W1/horn-sliver-r6 | NEXT: full hunt detached PID 71552 (298 main profiles + top-3 orbits + perturbed-A1 escalation; deadlines 18/32/38min; live JSONL persistence)
+[2026-07-20T23:15:28Z] OK KTT-W1-PRIME | DID: sanity gate | RESULT: A==B on doc example (c=0), c=1 stretch==1 x6, c=2 stretch==n+1 x6 | delta: none
+[2026-07-21T02:15:57+03:00] ✔ KTT-W1 stair6-interleave-r6 | DID: seg1 6000 screens+215 profiles (A) | RESULT: 0 neg-coeff, 0 anomalies, deg<=6, c>=deg+1 all; A==B 12/12 on 528-box audit | Δ: none
+[2026-07-21T02:15:57+03:00] ► KTT-W1 stair6-interleave-r6 | NEXT: hunt2.py full-family sweep 254276 triples (segments of 6000, same rules) + band-3 escalation if time; deadline 55min
+[2026-07-20T23:16:00Z] OK KTT-W1-PRIME SCREEN | DID: 60000 unique screens | RESULT: c7=1722 trackB=15203 bank=13739 CAP=0 | delta: none
+[2026-07-21T02:16:03] ✔ HUNT-W1-lowc-r5 | DID: round 4 | RESULT: screens=10000 keeps=1059 prof=1059 fat=0 flags=0 anom=0 hits=0 | Δ: none
+[2026-07-20T23:16:03Z] OK KTT-W1-PRIME PROFILE | DID: 2602 profiles (prime=1722 trackB=880 bank=0 orbit=0) | RESULT: hits=0 anomalies=0 fatskips=0 | delta: none
+[2026-07-20T23:16:03Z] OK KTT-W1-PRIME ORBIT | DID: 0 orbits (0 screens, 0 profiles) | RESULT: hits=0 anomalies=0 | delta: none
+[2026-07-21T02:16:07] ✔ KTT-W1 c3sweep VERIFY+CLOSE | DID: engineB spot 32 triples x8 samples + manifest.json | RESULT: 256/256 exact match; 0 hits 0 anomalies; all c=3 = 2n+1 or (n+1)(n+2)/2 | Δ: family closed in-window, c4/c5 banked wave2
+[2026-07-20T23:16:23Z] ✔ KTT-HUNT-stair5-interleave-core | DID: engines sanity (A=B on 6 fixed incl c=1/c=2 stretch) + bench (screen 0.03ms, profile 0.05s) | RESULT: orchestrator.py smoke 1916 profiles 0 anomalies | Δ: none
+[2026-07-20T23:16:23Z] ► KTT-HUNT-stair5-interleave-core | NEXT: full run --run 3000 (58609 band3 triples + band4 escalation, screen cap 20000, prof cap 200000, 6 workers, c-band 3..12, prio c=7)
+[2026-07-21T02:16:25] ► HUNT-W1-lowc-r5 | NEXT: await 40k-screen base scan completion (10k done, keep-rate 10.6%), then orbit phase for any deg>=c flags
+[2026-07-21T02:16:41] ✔ HUNT-W1-lowc-r5 | DID: round 8 | RESULT: screens=20000 keeps=2373 prof=2373 fat=0 flags=0 anom=0 hits=0 | Δ: none
+[2026-07-21T02:18+03:00] ✔ KTT-W1/horn-sliver-r6 | DID: full run live (PID 71552, T0 02:14:24; prior 2 PROGRESS stamps drifted +5min) | RESULT: screen 2883 (c9-12:237, c3-8:343), 172/298 profiled by 02:16 | Δ: none yet
+[2026-07-21T02:18:30] ✔ HUNT-W1-lowc-r5 | DID: round 12 | RESULT: screens=30000 keeps=4069 prof=4069 fat=0 flags=0 anom=0 hits=0 | Δ: none
+[2026-07-21T02:18:38+03:00] ✘ KTT-W1-anchor | DID: perturb hug>=2 run (44 pairs, 9616 screened, 4915 survivors) | RESULT: crashed wave 5 on transient interp spawn rc=1; 2129 profiles safe on disk, 0 negatives | Δ: none
+[2026-07-21T02:18:38+03:00] ► KTT-W1-anchor | NEXT: resume perturb hug>=2 with interp retry + resume-safe accounting, drain 3715-triple queue
+[2026-07-21T02:19:06+0300] ► KTT-W1-HOOKFAT | NEXT: driver start (seed 4206, screens<=60000, profiles<=3000, total=3000s, workers=6)
+[2026-07-21T02:19:08+0300] ✔ KTT-W1-HOOKFAT | DID: screen phase | RESULT: 44000 triples screened (127 pairs), 1136 candidates c in [3,12] | Δ: none
+[2026-07-21T02:19:08+0300] ► KTT-W1-HOOKFAT | NEXT: profile up to 1136 candidates by |c-7| asc (n=0..8, cap 200000, interp+heldout)
+[2026-07-20T23:19:18Z] OK KTT-W1-PRIME R1 | DID: bank slice 160 profiles | RESULT: deg6=61 hits=0 anomalies=0 | delta: none
+[2026-07-20T23:19:19Z] OK KTT-W1-PRIME R2 | DID: 10 orbits screened (1221 fresh) | RESULT: candidates c7=73 c3_6=401 c8_12=271 | delta: none
+[2026-07-20T23:19:20Z] OK KTT-W1-PRIME R3 | DID: orbit profiling to 3000 total | RESULT: prime_cell=0 hits=0 anomalies=0 | delta: none
+[2026-07-21T02:19:34+03:00] ✔ KTT-W1 stair6-interleave-r6 | DID: hunt2 killed at ~30s by TaskStop (wrapper-tree kill) | RESULT: seg[6000:12000) screened, 154/221 profiled, state on disk | Δ: none
+[2026-07-21T02:19:34+03:00] ► KTT-W1 stair6-interleave-r6 | NEXT: hunt3.py resume — replay ext rows + 4212 stream, drain pending, sweep to 254276, then band-3 escalation; hard stop 47min
+[2026-07-21T02:20:22] ► KTT-W1 fulldeg-c11-12-r6 | NEXT: full hunt seed 4214: 24000 screens, staged profiles (n=12 fat-gate cap 200000), max 420+180 orbit profiles, budget 64min
+[2026-07-21T02:20:35+03:00] ✔ KTT-W1-anchor | DID: manifest snapshot mid perturb-drain | RESULT: runs/wave1_anchor-cell-nu40-sliver/manifest.json, 0 hits 0 anomalies 0 fat-skips, all coeff vectors positive | Δ: none
+[2026-07-21T02:20:35+03:00] ► KTT-W1-anchor | NEXT: auto re-manifest on perturb completion (bg chain), report StructuredOutput to orchestrator
+[2026-07-20T23:21:15Z] ✔ KTT-W1 beam-r5 | DID: gens1-7 (5700 screened, 3108 profiled) | RESULT: 0 neg coeff, 0 anomalies, global min-coeff 1/360, trackb=0 | Δ: none
+[2026-07-20T23:21:24Z] ✔ KTT-HUNT corner-peel-offwall-r5 | DID: full hunt 333 pairs (seed 4204) | RESULT: 44653 screens, 19038 exact profiles, 0 NEGATIVE_COEFF, 0 DEGREE_ANOMALY, 0 fat-skips; min-coeff floor 1/360 flat at depths 1-5 | Δ: none
+[2026-07-20T23:21:24Z] ► KTT-HUNT corner-peel-offwall-r5 | NEXT: close B-crosscheck residual (1 resource-capped triple, high-state-cap rerun) + 42 theorem validators logged, then final manifest+report
+[2026-07-20T23:21:25Z] ✔ KTT-W1-PRIME | DID: family run complete (60000 gen + 1221 orbit screens, 3000 profiles, A/B spot-check 126/126) | RESULT: 0 neg coeffs, 0 anomalies, prime cell c7&deg6 uninhabited | Δ: family dead under filters
+[2026-07-21T02:21:39+03:00] ✔ KTT-W1 stair6-interleave-r6 | DID: hunt3 resumed sweep (replay exact, pending 67 drained) | RESULT: 30000 screens/903 profiles @93.6s, 0 hits, 0 anomalies, 1 transient A-crash retried-OK | Δ: none
+[2026-07-21T02:21:54] ✔ KTT-W1 fulldeg-c11-12-r6 | DID: 24000 screens seed 4214 | RESULT: c-hist runs/wave1_fulldeg-c11-12-r6/manifest.json: c12=201 c11=0 c9=0 sec=118 trackB=1070 | Δ: primary shelf is c=12-only
+[2026-07-21T02:22:05] ✔ HUNT-W1-lowc-r5 | DID: round 16 | RESULT: screens=40000 keeps=6371 prof=6371 fat=0 flags=0 anom=0 hits=0 | Δ: none
+[2026-07-21T02:22:05] ► HUNT-W1-lowc-r5 | NEXT: orbit phase for 0 verified deg>=c flags (complete single-box orbits, then best-5 children orbits)
+[2026-07-21T02:22:05] ✔ HUNT-W1-lowc-r5 | DID: family scan complete | RESULT: screens=40000+0orb prof=6371+0orb fat=0 flags=0 anom=0 hits=0 | Δ: manifest.json written
+[2026-07-21T02:22+03:00] ✔ KTT-W1/horn-sliver-r6 | DID: hunt stopped at orchestrator request during escalation E1 (kill 71552 + workers) | RESULT: profiles_live.jsonl 376 records intact | Δ: none
+[2026-07-21T02:23+03:00] ✔ KTT-W1/horn-sliver-r6 | DID: final manifest.json written | RESULT: 3644 screened, 376 profiled (258 OK/118 fat), 0 neg-coeff, 0 anomalies, 0 A-B disagreements, hits=[] | Δ: family swept clean
+[2026-07-20T23:23:21Z] ✔ KTT-W1-RTCM | DID: seg1 run (r5 20000scr/3594prof, r6 2640scr/526prof, B-xchk 20/20, 0 hits 0 anom) then transient engineA zero-output crash | RESULT: manifest_seg1.json; retry patch added | Δ: none
+[2026-07-20T23:23:21Z] ► KTT-W1-RTCM | NEXT: resume r6 top-up seg2 (2360 screens / 274 profiles, seed r6_seg2 from master 4209) to complete family budget
+[2026-07-21T02:23:21] ► KTT-W1-RTCM | NEXT: r6 unbiased screen+profile blocks (block=120, caps: screens 2360, profiles 274)
+[2026-07-21T02:23:46] ✔ HUNT-W1-lowc-r5 | DID: family scan+audit closed | RESULT: 40000 screens 6371 profiles deg<=3 mincoeff>=1/6, 0 flags/anom/hits, manifest.json+profiles.jsonl saved | Δ: family window exhausted, no negativity
+[2026-07-21T02:24:01+03:00] ✔ KTT-W1-r5 HUNT | DID: exhausted family (990 pairs, 29356/29356 band triples screened, 2335/2335 survivors profiled n=0..8, D=6) | RESULT: 0 negative coeffs, 0 anomalies, 0 fat-skips; manifest.json | Δ: family closed
+[2026-07-21T02:24:01+03:00] ✔ KTT-W1-r5 VERIFY | DID: engineB cross-check 63 stratified triples (504 values, 1 via lr_count max_states=1.5e8) + band-10/14 diagnostic | RESULT: 0 mismatches; deg<=2 persists; c<=7 always | Δ: none
+[2026-07-20T23:24:01Z] ✔ KTT-HUNT corner-peel-offwall-r5 | DID: closed assurance (B 200/200 exact incl. high-cap residual; 42/42 validators; depth5-6 deep pass +32 profiles) | RESULT: 19070 exact profiles, 0 negative coeffs, 0 anomalies; floor 1/360 flat d1-5, rises d6 | Δ: family reported null-gradient
+[2026-07-20T23:24:10Z] ✔ KTT-W1 beam-r5 | DID: gens8-19 | RESULT: 10415 screened/6187 profiled, 0 neg, empirical c>=deg+1 (deg6 only c=8,10,12), beam plateau min=1/360 since gen2 | Δ: none
+[2026-07-21T02:24:57] ✔ KTT-W1-RTCM | DID: r6 phase | RESULT: screens=1320 profiles=290+0orb fat=6 hits=0 anom=0 | Δ: none
+[2026-07-20T23:26:06Z] ✔ KTT-W1-RTCM | DID: family complete (r5 20000scr/3594prof; r6 4080scr/816prof+37fat; B-xchk 40/40) | RESULT: 0 negative coeffs, 0 anomalies; min coeff 1/5040>0; manifest.json | Δ: none
+[2026-07-20T23:26:35Z] ✔ KTT-HUNT-stair5-interleave-core | DID: full run+band4 escalation+postrun B-spot-verify | RESULT: 71592 screens, 4891/4891 c∈[3,12] profiled, 0 neg-coeff, 0 anomalies, min coeff +1/360, deg<=c-1 all; runs/wave1_stair5-interleave-core/manifest.json | Δ: family exhausted, no hit
+[2026-07-20T23:33:55Z] ✔ KTT-W1 beam-r5 | DID: gens20-129 | RESULT: 39049 screened/26044 profiled, 0 neg coeff, 0 anomalies, plateau min=1/360 unchanged | Δ: none
+[2026-07-20T23:33:55Z] ► KTT-W1 beam-r5 | NEXT: exhaustive orbit-mine of 3 best-ever individuals (ring1+ring2), then finalize manifest
+[2026-07-20T23:41:45Z] ✔ KTT-W1 beam-r5 | DID: 219 gens + 2 orbit-mines + finalize | RESULT: 58528 screened/39550 profiled, 0 neg coeff, 0 anomalies, 0 fat-skips; manifest.json+nearmiss_registry.json written | Δ: family saturated, no hit
+[2026-07-21T02:44:19] ✔ KTT-W1 fulldeg-c11-12-r6 | DID: wave-1 hunt 24000 screens, 1389 staged profile attempts | RESULT: 138 profiles all deg{2,3,6}, 1251 fat-skips, 0 neg-coeff, 0 anomalies, deg10 shelf EMPTY | Δ: none
+[2026-07-21T02:44:19] ► KTT-W1 fulldeg-c11-12-r6 | NEXT: extension wave screens 24001-30000 (same stream, skip-first 24000) + engine-B audit of 6 completed profiles
+[2026-07-21T02:53:58+03:00] ✔ KTT-W1 stair6-interleave-r6 | DID: hunt3 leg finished at seg-deadline | RESULT: 156000 screens, 5277 profiles (4251 clean), 0 hits, 0 anomalies | Δ: none
+[2026-07-21T02:53:58+03:00] ► KTT-W1 stair6-interleave-r6 | NEXT: hunt4 finisher — exhaust remaining 98276 base triples (no escalation), then retry-pass errors + final manifest
+[2026-07-21T02:56:08] ✔ KTT-W1 fulldeg-c11-12-r6 | DID: ext wave 6000 screens + B-audit 6 triples + manifest merge | RESULT: combined 30000 screens/181 profiles -> 6 distinct all-positive polys deg<=6; c11=0; 0 hits 0 anomalies; B-audit 54/54 | Δ: family shelf verdict EMPTY in window
+[2026-07-21T03:13:48+03:00] ✔ KTT-W1 stair6-interleave-r6 | DID: hunt4 leg + retry pass + audits | RESULT: 192000/254276 screens, 5191 clean exact interpolants ALL-POSITIVE (min coeff 1/40320), 0 anomalies, 0 hits, A==B everywhere checked | Δ: none
+[2026-07-21T03:13:49+03:00] ✔ KTT-W1 stair6-interleave-r6 | DID: campaign closed, manifest finalized | RESULT: runs/wave1_stair6-interleave-r6/manifest.json (1626 fat-skips incl 1224 trackA behind 200k cap = follow-up intel) | Δ: family 75.5% swept, no KTT counterexample in cell
+[2026-07-21T03:28:32+03:00] ► WAVE2-DESIGN | NEXT: emit 14 KTT wave-2 hunter family specs (r6-heavy escalation, seeds 4301-4314) via StructuredOutput
+[2026-07-21T03:28:32+03:00] ✔ WAVE2-DESIGN | DID: designed 14 wave-2 families vs dead-registry | RESULT: specs returned via StructuredOutput; seeds 4301-4314; r5x4 r6x8 r7x1 mixed x1 | Δ: none
+[2026-07-21T03:33:14] ► KTT-W2 lift-r5deg6-to-r6 | NEXT: sanity-check engines A/B/interp, validate hardcoded bases B1,B2 (expect deg6, c=8, lead 1/360)
+[2026-07-21T03:34:31] ► KTT-HUNT wave2 allodd-parity-r6 | NEXT: build+launch generator/screen/profile hunter (seed 4307, r=6 D=10, all-odd strict pairs |16-30|, W 36-58, band5 nu, c 3-12, staged P12-first)
+[2026-07-21T00:34:44Z] ► KTT-W2 r6-interior-capfilter-trackb | NEXT: calibrate engine A timing on r=6 W=50 n=12 stretch, then build seed-4302 generator+screen driver
+[2026-07-21T00:00:00] ► KTT-W2-PD | NEXT: hunter perturbed-doubles-r56 start: inspect engines, sanity-check A/B/interp, then build base pools (seed 4313)
+[2026-07-21T03:36:13+03:00] ► KTT-W2-NEARWALL-R5H | NEXT: build driver.py for 8 near-Horn-wall r=5 anchors (W 52-56, hug>=2, s_ij>=1), screen c in [3,12], profile n=0..8 D=6, esc a/b/c
+[2026-07-21T03:36:32+03:00] ► KTT-W2-R7LIFT | NEXT: engines precheck done (A batch OK, CALIBRATION.md PASS); build hunt.py (delta6 seed mine -> r7 lift -> staged profiles), seed 4314
+[2026-07-21T03:05:00+03:00] ► KTT-W2-SHELF | NEXT: hunter raisedcap-fulldeg-shelf-r6 pre-flight — engine A cap-raise test (fat staircase triples, cap 1000000 vs 200000) + B1/B2 base screen.
+[2026-07-21T00:37:20Z] ► KTT-W2-CENSUS-R6 | NEXT: build census driver (r=6, W 22..30, prefilterered exhaustive enum -> engineA screen c-in-[3,12] -> n=0..12 profile+interp) in runs/wave2_smallw-census-r6
+[2026-07-21T00:43Z] ► KTT-W2-BEAMR6LOWK | NEXT: write+launch r=6 low-k beam evolver driver (D=10, n=0..12, fitness min a_k k<=deg-2), runs/wave2_beam-evolver-r6-lowk
+[2026-07-21T00:43Z] ✔ KTT-W2-BEAMR6LOWK | DID: engine recon+smoke (lr_hive batch, 0;0;0->1; calibration PASS doc) | RESULT: CALIBRATION.md verdict PASS, batch aligned | Δ: none
+[2026-07-21T03:35:00+03:00] ✔ KTT-WAVE1 | DID: workflow wf_48e7b8b1-cc6 ran 2.62h | RESULT: toolchain+cal PASSED; wave1 14 hunters 1306415 triples, 0 negative coeffs, min coeff 1/360, 11 dead families; wave2 killed by session limit (resets 06:20) | Δ: NO_HIT is wave1-only
+[2026-07-21T06:26:00+03:00] ► KTT-RESUME | NEXT: resume wf_48e7b8b1-cc6 after 06:20 limit reset; wave1 cached, wave2 14 hunters cache-busted (RUN-TOKEN R2) run live; waves 3-4 + critic to follow
+[2026-07-21T07:59:00] > KTT-W1-CONJSYM | NEXT: verify engines A/B/interp exist, learn CLI+output formats on known triples (hunter conjugation-symmetric-r5 start)
+[2026-07-21T05:00:23Z] ► KTT-W1 random-thin-control-mixed | NEXT: verify engines A/B+interp exist and pass c=1/c=2 sanity, then launch seeded (4209) thin control hunt
+[2026-07-21T06:35:00+03:00] ► KTT-W1-BEAM-R5 | NEXT: re-spawned hunter reconstitutes completed 02:09-02:41 run from runs/wave1_beam-evolver-seeded-r5/ artifacts; fresh A+B+interp spot-checks before vouching
+[2026-07-21T03:55+03:00] ► KTT-W1-STAIR6 | NEXT: resume hunter stair6-interleave-r6 (prior state 192000/254276 screens, 6818 profiles, 0 hits); audit prior state then finish remaining 62276 triples
+[2026-07-21T05:02:04Z] ► KTT-W1/fulldeg-c11-12-r6 | NEXT: smoke-test engine A/B + interp on documented example, time stretched r=6 sample
+[2026-07-21T08:02:59.2497389+03:00] ► KTT-W1 hook-vs-fat-r5 | NEXT: verify lr_hive.exe/engineB_lrrule.py/interp.py exist and pass c=1/c=2 validators before family generation
+[2026-07-21T06:40:00+03:00] ► KTT-W1-BEAM-R5 | NEXT: run revalidate_spotcheck.py — 10 triples (bestEver, plateau origin, floors, seeds, 3 deterministic picks, KTW c=1, IkSh c=2) fresh A+B n=1..8 + interp vs cache
+[2026-07-21T08:04:00+03:00] ► KTT-W1 dmb-r5 | NEXT: rerun hunt.py (seed 4208, 990 pairs, band6, screens cap 20000/profiles cap 200000) to reproduce archived 02:12 run bit-exact
+[2026-07-21T06:44:00+03:00] ✔ KTT-W1-BEAM-R5 | DID: revalidate_spotcheck.py 10 triples fresh A+B+interp vs cache | RESULT: ALL_PASS (revalidation_20260721.json); manifest stamped; 58528 triples, 0 hits, 0 anomalies re-vouched | Δ: wave1 beam-r5 report reconstituted
+[2026-07-21T08:04:15] ► HUNT-W1-lowc-r5-RELAUNCH | NEXT: engine sanity gate (doc example, KTW c=1/IS c=2 checks, interp selftest, calibrate.py rerun) before replay-audit of seg1 40k + seeded extension
+[2026-07-21T08:06+03:00] ► KTT-W1-STAIR6 | NEXT: launch hunt5.py finisher (resume pos 192000->254276, segment 6000, workers 6, screen cap 20000, prof cap 200000, seeds unchanged, deadline 47/53 min)
+[2026-07-21T05:05:19Z] ✔ KTT-W1-RTCM | DID: audited prior seg1+2 artifacts | RESULT: AUDIT PASS 4410 rows reinterp exact, A 140/140, B 110/110, 0 neg, 0 c<=deg | Δ: none
+[2026-07-21T05:05:19Z] ► KTT-W1-RTCM | NEXT: launch seg3 extension (seeds r5_seg3/r6_seg3 from master 4209; caps r5 +8000scr/+1406prof, r6 +920scr/+184prof, 30min)
+[2026-07-21T08:05:22] ► KTT-W1-RTCM | NEXT: r5 unbiased screen+profile blocks (block=400, caps: screens 8000, profiles 1406)
+[2026-07-21T08:05:23+03:00] ► RESUME horn-sliver-r6 | NEXT: verify prior truncated run (258 OK re-interp + 40 A re-screens + B spot) then resume escalation E2..E31
+[2026-07-21T08:05:25] ✔ HUNT-W1-lowc-r5-RELAUNCH | DID: sanity gate | RESULT: A==B on 4 known triples; interp selftest exit 0; calibrate.py OVERALL PASS exit 0 | Δ: engines trusted
+[2026-07-21T08:05:28] ✔ KTT-W1-RTCM | DID: r5 phase | RESULT: screens=8000 profiles=1428+0orb fat=0 hits=0 anom=0 | Δ: none
+[2026-07-21T08:05:28] ► KTT-W1-RTCM | NEXT: r6 unbiased screen+profile blocks (block=120, caps: screens 920, profiles 184)
+[2026-07-21T08:12:00+03:00] ► KTT-W1 dmb-r5 | NEXT: bverify2.py — engine-B recompute of 250 stratified profiled triples x n=1..8 (2000 values) + pure-B interp coeff check, 6 workers
+[2026-07-21T08:06:48.4398013+03:00] ✔ KTT-W1 hook-vs-fat-r5 | DID: audit attempt-1 (died 02:20, interp spawn flake rc=1 empty io, 599/1136 profiles) | RESULT: archived to runs/wave1_hook-vs-fat-r5/tmp/attempt1 | Δ: none
+[2026-07-21T08:07:08] > KTT-W1-CONJSYM | NEXT: v2 phase enum -- independent re-enumeration trackA(mu=lam', |lam|13-21, band10) + trackB self-conj census; diff vs prior triple sets
+[2026-07-21T08:07:22] OK KTT-W1-CONJSYM | DID: v2 enum | RESULT: trackA 3963 (114 lam) trackB 357ord/183unord, 0 set-diff vs prior run | D: prior enumeration independently replicated
+[2026-07-21T08:07:22] > KTT-W1-CONJSYM | NEXT: v2 screen -- engine A c(n=1,cap20000) on 4320 lines + FULL engine-B recompute of every line (hard-stop on any A/B mismatch)
+[2026-07-21T08:07:31] ✔ KTT-W1-RTCM | DID: r6 phase | RESULT: screens=960 profiles=213+0orb fat=12 hits=0 anom=0 | Δ: none
+[2026-07-21T08:15:00+03:00] ► KTT-W1 dmb-r5 | NEXT: diag_band12.py — OUT-OF-SPEC band-12 widening on ~90 pairs; screen new deficit>6 nu, profile all c8-12 + 700 c3-7
+[2026-07-21T08:07:43] OK KTT-W1-CONJSYM | DID: v2 screen 4320 lines | RESULT: c-dist == prior (0/4146 mismatch); A=B on 4320/4320 lines; swap-sym 0 viol | D: none
+[2026-07-21T08:07:44] > KTT-W1-CONJSYM | NEXT: v2 profile -- 354 candidates c in[3,12], engine A samples n=1..8 cap 200000, interp.py exact Q interpolation + heldout P(7),P(8)
+[2026-07-21T08:08:20.5925058+03:00] ✔ KTT-W1 hook-vs-fat-r5 | DID: pilot run (3.5k screens, 35 profiles, esc+orbit phases) | RESULT: exit 0, tmp/pilot/manifest.json, 0 errors | Δ: driver validated, spawn-flake retries added
+[2026-07-21T08:08:28+0300] ► KTT-W1-HOOKFAT | NEXT: driver start (seed 4206, screens<=60000, profiles<=3000, total=3300s, workers=6)
+[2026-07-21T08:08:30+0300] ✔ KTT-W1-HOOKFAT | DID: screen phase | RESULT: 44000 triples screened (127 pairs), 1136 candidates c in [3,12] | Δ: none
+[2026-07-21T08:08:30+0300] ► KTT-W1-HOOKFAT | NEXT: profile up to 1136 candidates by |c-7| asc (n=0..8, cap 200000, interp+heldout)
+[2026-07-21T08:08:36] OK KTT-W1-CONJSYM | DID: v2 profile 354 cands (A samples n=0..8 + interp) | RESULT: 0 neg-coeff, 0 anomalies, 0 fat-skips; all 354 == prior run (349A+5B) | D: none
+[2026-07-21T08:08:36] > KTT-W1-CONJSYM | NEXT: v2 validate -- conj-covariance on all 3963 trackA, c1/c2 stretched theorem checks both engines, engine-B recompute of ALL 354 profile tables n=0..8
+[2026-07-21T08:08:37+03:00] ✔ VERIFY-PRIOR | DID: re-interp 262 OK profiles + 40 A-rescreens + 9 B spot-values | RESULT: PASS 0 mismatch, 0 neg, 0 anomaly, collapse-set empty | Δ: prior truncated run adopted
+[2026-07-21T08:08:40] ► HUNT-W1-lowc-r5-RELAUNCH | NEXT: PHASE R replay-audit — regen first 40000 uniques seed 4207, re-screen on A, compare dup-count/c-hist/keep-seq vs seg1; then 200 A-reprofiles + 25 B-full-rechecks
+[2026-07-21T08:15+03:00] ► KTT-W1-STAIR6 | NEXT: launch b_audit_prior.py (engine-B recompute of 26-28 prior OK profiles n=1..12 + interp recheck, seed 20260721101) concurrent with hunt5
+[2026-07-21T05:09:12Z] ✔ KTT-W1-RTCM | DID: seg3 extension (r5 8000scr/1428prof, r6 960scr/213prof) | RESULT: totals 33040scr/6051prof, hits=0, anom=0, xchk 60/60 | Δ: none
+[2026-07-21T05:09:12Z] ✔ KTT-W1-RTCM | DID: family closed, full-file audit rerun | RESULT: AUDIT PASS 6051 rows exact reinterp, 0 neg coeffs, 0 c<=deg, min coeff 1/5040; manifest.json final | Δ: control null-table delivered
+[2026-07-21T08:09:24+0300] ✔ KTT-W1-HOOKFAT | DID: main profile | RESULT: 1136 polys, 0 fat-skips, 0 anomalies, 0 hits | Δ: none
+[2026-07-21T08:09:24+0300] ► KTT-W1-HOOKFAT | NEXT: escalation — lams ['10,6,1,1', '10,6,1', '8,3,1,1'] (best mean min-coeff), sweep b<=8, |mu|<=26: 1077 new pairs
+[2026-07-21T08:09:31] ► KTT-W1/fulldeg-c11-12-r6 | NEXT: hunt seed=4214 wall=44.0m screens<=30000 profiles<=640 caps 20000/200000 engines A=95d1fea3716756ff B=c7677d041ed18491
+[2026-07-21T08:09:33] ✔ HUNT-W1-lowc-r5-RELAUNCH | DID: PHASE R replay-audit | RESULT: PASS — dups 71762 (exp 71762), hist_eq=True, seq_eq=True, A-reprofile mism=0/200, B mism=0/25 | Δ: seg1 verified
+[2026-07-21T08:09:33] ► HUNT-W1-lowc-r5-RELAUNCH | NEXT: PHASE E extension scan — continue seed-4207 stream past first 40000 uniques; budget 40000 screens / 8000 profiles, caps 20000/200000, keep c in [3,6], D=6
+[2026-07-21T08:09:39.0591686+03:00] ✔ KTT-W1 hook-vs-fat-r5 | DID: fresh-run screen phase (bb3uc0sbb) | RESULT: 44000 screens, 1136 cands, cdist identical to attempt-1 (deterministic) | Δ: none
+[2026-07-21T08:09:53.8377728+03:00] ✔ KTT-W1 hook-vs-fat-r5 | DID: main profile 1136/1136 + esc screen (41 pairs, 14.5k screens) | RESULT: 0 neg-coeff, 0 anomalies, 0 fat-skips; 502 esc cands profiling | Δ: none
+[2026-07-21T08:09:55+0300] ✔ KTT-W1-HOOKFAT | DID: escalation | RESULT: 41 pairs screened, 502 profiles, hits=0 | Δ: none
+[2026-07-21T08:09:55+0300] ► KTT-W1-HOOKFAT | NEXT: final orbit-mine of top-5 ranked (min-coeff/a1/rho asc)
+[2026-07-21T08:20:00+03:00] ✔ KTT-W1 dmb-r5 | DID: bverify2 (250 triples x8 vals, engine B) | RESULT: AB_AGREE_ALL 2000/2000, 0 coeff mismatches, bverify2.json | Δ: family run dual-engine attested
+[2026-07-21T08:21:00+03:00] ► KTT-W1 dmb-r5 | NEXT: diag_fullcone.py — exhaust FULL dominance cone all 990 pairs (unbounded band), screen new nu, profile all c3-12 cap 45k, hit protocol armed
+[2026-07-21T08:10:09] ✔ HUNT-W1-lowc-r5-RELAUNCH | DID: PHASE R replay-audit | RESULT: PASS dups=71762 exact, c-hist eq, 6371-keep seq eq, A-reprofile 0/200 mism, B 0/25 mism | Δ: seg1 verified
+[2026-07-21T08:10:09+0300] ✔ KTT-W1-HOOKFAT | DID: run complete | RESULT: E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/runs/wave1_hook-vs-fat-r5/manifest.json screens=58583 profiles=1689 hits=0 anomalies=0 | Δ: none
+[2026-07-21T08:10:14] OK KTT-W1-CONJSYM | DID: v2 validate | RESULT: conj-cov 3963/3963, thm-validators 6/6 both engines, profile tables A=B 354/354 (n=0..8) | D: family fully dual-engine verified, 0 hits 0 anomalies
+[2026-07-21T08:10:21+03:00] ► ESC-HUNT | NEXT: escalation E2..E31 (single-box A1 perturbations, 30 pairs, deadline 38min, screen cap 20000, profile cap 200000, n=0..12, seed 4213xxx)
+[2026-07-21T08:10:41] ► KTT-W1/fulldeg-c11-12-r6 | NEXT: hunt seed=4214 wall=42.0m screens<=30000 profiles<=640 caps 20000/200000 engines A=95d1fea3716756ff B=c7677d041ed18491
+[2026-07-21T08:10:51] OK KTT-W1-CONJSYM | DID: v2 manifest written (v1 preserved) | RESULT: runs/wave1_conjugation-symmetric-r5/manifest.json -- 4146 tested, 0 hits, 0 anomalies, 0 fat-skips | D: family EXHAUSTED, hunter reporting out
+[2026-07-21T08:10:54] ✔ KTT-W1/fulldeg-c11-12-r6 R1 | DID: screen 3000 (Σ3000) + profile 19 prim | RESULT: prim Σ19 hist 16:122,26:76,4:70,24:65 fat18 hit0 | Δ: profiles=1
+[2026-07-21T08:11:11] ✔ KTT-W1/fulldeg-c11-12-r6 R2 | DID: screen 3000 (Σ6000) + profile 26 prim | RESULT: prim Σ45 hist 16:266,26:150,8:133,4:131 fat44 hit0 | Δ: profiles=1
+[2026-07-21T08:11:27] ✔ KTT-W1/fulldeg-c11-12-r6 R3 | DID: screen 3000 (Σ9000) + profile 22 prim | RESULT: prim Σ67 hist 16:398,26:218,4:200,8:197 fat65 hit0 | Δ: profiles=2
+[2026-07-21T08:11:33] ✔ HUNT-W1-lowc-r5-RELAUNCH | DID: ext round 4 | RESULT: screens=10000 keeps=3051 prof=3051 fat=0 dups=90933 flags=0 anom=0 hits=0 | Δ: none
+[2026-07-21T08:11:37+03:00] ✔ ESC E2 | DID: lam=10,7,4,3,1 mu=8,6,4,2,1 screened 797 profiled 74 | RESULT: ok=42 fat=32 neg=0 anom=0 collapse=0 75.5s | Δ: none
+[2026-07-21T08:11:41] ✔ KTT-W1/fulldeg-c11-12-r6 R4 | DID: screen 3000 (Σ12000) + profile 20 prim | RESULT: prim Σ87 hist 16:539,26:297,4:276,8:265 fat83 hit0 | Δ: profiles=4
+[2026-07-21T08:11:53] ✔ KTT-W1/fulldeg-c11-12-r6 R5 | DID: screen 3000 (Σ15000) + profile 18 prim | RESULT: prim Σ105 hist 16:678,26:365,8:342,4:337 fat100 hit0 | Δ: profiles=5
+[2026-07-21T08:12:09] ✔ KTT-W1/fulldeg-c11-12-r6 R6 | DID: screen 3000 (Σ18000) + profile 23 prim | RESULT: prim Σ128 hist 16:819,26:441,4:416,8:400 fat120 hit0 | Δ: profiles=8
+[2026-07-21T08:12:27] ✔ KTT-W1/fulldeg-c11-12-r6 R7 | DID: screen 3000 (Σ21000) + profile 28 prim | RESULT: prim Σ156 hist 16:953,26:514,4:493,8:464 fat147 hit0 | Δ: profiles=9
+[2026-07-21T08:12:38] ✔ KTT-W1/fulldeg-c11-12-r6 R8 | DID: screen 3000 (Σ24000) + profile 16 prim | RESULT: prim Σ172 hist 16:1090,26:581,4:572,8:532 fat161 hit0 | Δ: profiles=11
+[2026-07-21T08:13:00] ✔ KTT-W1/fulldeg-c11-12-r6 R9 | DID: screen 3000 (Σ27000) + profile 33 prim | RESULT: prim Σ205 hist 16:1218,26:648,4:638,8:606 fat194 hit0 | Δ: profiles=11
+[2026-07-21T08:13:15] ✔ KTT-W1/fulldeg-c11-12-r6 R10 | DID: screen 3000 (Σ30000) + profile 20 prim | RESULT: prim Σ225 hist 16:1344,26:723,4:703,8:682 fat214 hit0 | Δ: profiles=11
+[2026-07-21T08:13:15] ► KTT-W1/fulldeg-c11-12-r6 | NEXT: TrackB 10% profile 160/1563 (c 3-8), then flags-orbit, bank, top5-orbit
+[2026-07-21T08:13:19.5772822+03:00] ✔ KTT-W1 hook-vs-fat-r5 | DID: postrun engine-B spot-check (24 triples x n=1..8, top10+stratified) | RESULT: spotB_result.json PASS_ALL_EQUAL 192/192 | Δ: none
+[2026-07-21T08:13:19.5772822+03:00] ✔ KTT-W1 hook-vs-fat-r5 | DID: family complete, manifest patched | RESULT: 58583 screens, 1689 profiles, 0 hits, 0 anomalies, min-coeff 1/120, c<=deg 0/1689 | Δ: family reported no-hit
+[2026-07-21T08:13:36+03:00] ✔ ESC E3 | DID: lam=10,6,5,3,1 mu=8,6,4,2,1 screened 717 profiled 64 | RESULT: ok=40 fat=24 neg=0 anom=0 collapse=0 55.3s | Δ: none
+[2026-07-21T08:14:12] ✔ HUNT-W1-lowc-r5-RELAUNCH | DID: ext round 8 | RESULT: screens=20000 keeps=6837 prof=6837 fat=0 dups=303671 flags=0 anom=0 hits=0 | Δ: none
+[2026-07-21T08:14:31+03:00] ✔ ESC E4 | DID: lam=9,8,5,2,1 mu=8,6,4,2,1 screened 725 profiled 63 | RESULT: ok=40 fat=23 neg=0 anom=0 collapse=0 54.2s | Δ: none
+[2026-07-21T08:32:00+03:00] ✔ KTT-W1 dmb-r5 | DID: fullcone ext (11883 new screened, 692 profiled) + bverify3 (672 vals AB_AGREE) | RESULT: family universe 42343 triples 100% censused, 0 neg coeffs, maxdeg 2, c<=7; manifest.json final | Δ: family DEAD-exhausted
+[2026-07-21T08:14:57] ✔ KTT-W1/fulldeg-c11-12-r6 | DID: bank profile 60/181 (c 9-10) | RESULT: fat400 flags0 | Δ: profiles=15
+[2026-07-21T08:14:57] ✔ KTT-W1/fulldeg-c11-12-r6 END | DID: 30000 screens, 15 profiles, 400 fat-skips, 0 orbits | RESULT: hits=0 anomalies=0 flags=0 manifest.json | Δ: family swept
+[2026-07-21T08:15:02] ► HUNT-W1-lowc-r5-RELAUNCH | NEXT: orbit phase for 0 verified deg>=c flags (complete single-box orbits, then best-5 children orbits)
+[2026-07-21T08:15:02] ✔ HUNT-W1-lowc-r5-RELAUNCH | DID: relaunch complete | RESULT: audit PASS + ext screens=22500+0orb prof=7838+0orb fat=0 flags=0 anom=0 hits=0 dups=399389 exhausted=False | Δ: manifest.json written
+[2026-07-21T08:15:07+03:00] ✔ ESC E5 | DID: lam=9,8,4,3,1 mu=8,6,4,2,1 screened 776 profiled 56 | RESULT: ok=36 fat=20 neg=0 anom=0 collapse=0 36.0s | Δ: none
+[2026-07-21T08:17:01] ✔ HUNT-W1-lowc-r5-RELAUNCH | DID: family closed (seg1 audited + seg2 ext) | RESULT: 62500 uniques, 14209 profiles, 6 poly shapes all integral-Ehrhart deg<=c-1, 0 flags/anom/hits; manifest.json | Δ: family window empty
+[2026-07-21T08:18:44] ✔ KTT-W1/fulldeg-c11-12-r6 ADDENDUM | DID: leftover 151 profiles (trackB backlog 30 + bank 121) + B spot-audit 6 classes | RESULT: comp 7 fat 144 neg 0 anom 0 Bdisagree 0 | Δ: manifest merged
+[2026-07-21T05:19:26Z] ✔ KTT-W1/fulldeg-c11-12-r6 CLOSE | DID: family swept 30000 screens + 566 profile attempts + addendum + B-audit | RESULT: hits=0 anom=0 deg10=0 c11=0; manifest.json final | Δ: family DEAD under filters
+[2026-07-21T08:35:04+03:00] ► KTT-WAVE2-DESIGN | NEXT: emit 14 wave-2 family specs after recon of wave-1 run dirs, jsonl schemas, and 8 stale zero-data wave2_* scaffolds from aborted 03:38 launch
+[2026-07-21T08:35:04+03:00] ✔ KTT-WAVE2-DESIGN | DID: designed wave 2 (h*-audit added campaign-wide, raised-cap r6 requote, c11 shell mapper, r7 probe) | RESULT: 14 specs emitted via StructuredOutput | Δ: wave-2 ready
+[2026-07-21T08:38:28] ► KTT-W2-FATSKIP-REQUOTE | NEXT: sanity gate (A==B doc example, c=1/c=2 stretched validators, interp --selftest) then parse wave-1 fat-skip inputs
+[2026-07-21T00:00:00] ► KTT-W2-USP-R6 | NEXT: recon engines+wave1 profiles for unimodular-spike-probe-r6 run-token R2
+[2026-07-21T05:41:30Z] ► KTT-W2/hstar-forensics-remine-w1 | NEXT: Phase1 parse all wave1 *.jsonl, exact re-interpolation + h*-vector atlas (zero engine calls)
+[2026-07-21T08:42:16+03:00] ► KTT-W2-STAIR5HEAVY | NEXT: sanity-gate engines (interp --selftest, A/B c=1/c=2 validators) then build driver for weight-19-23 stair pool, W 40-46, band-4 nu
+[2026-07-21T05:42:37Z] ► KTT-W2-R7-DEGEN | NEXT: build+launch hunter r7-degenerate-collapse-probe (seed 4311, nu=7 parts tie-patterns aabcdef/aabbcde, Stage1 n0..8+degprobe, Stage2 n<=17, 70min box)
+[2026-07-21T08:42:57+03:00] ► KTT-W2-HORNMULTI | NEXT: hunter horn-multisliver-r6-heavy R2 start: engines verified, enum P1-P6 W=58 H>=3 next
+[2026-07-21T05:43:02Z] ► KTT-W2-c456midshell | NEXT: sanity gate (interp --selftest; A/B c=1,c=2 stretched validators; empty-form 0;0;0) before mid-shell census W22..34 seed4307
+[2026-07-21T05:43Z] ► KTT-W2/odd-c-deg6-parity-break-r5 | NEXT: build hunt.py driver (seed 4305, odd-W strict-part window) and launch 50-80k screen + odd-c/deg6 profile family, 70min wall
+[2026-07-21T08:43:32] ✔ KTT-W2-FATSKIP-REQUOTE | DID: sanity gate | RESULT: gate.py PASS (A==B doc line, c=1 6/6, c=2 n+1 6/6, interp selftest exit 0) | Δ: none
+[2026-07-21T08:43:47] ► KTT-W2 CONTROL(R2) | NEXT: sanity gates (interp --selftest; A/B smoke cross-check) for hunter random-thin-control-w2
+[2026-07-21T05:44:40Z] ✔ KTT-W2-c456midshell | DID: sanity gate | RESULT: interp selftest exit0; A/B identical on c=1(all 1),c=2(n+1),0;0;0->1 (10/10 lines) | Δ: none
+[2026-07-21T05:50Z] ► KTT-W2/odd-c-deg6-parity-break-r5 | NEXT: full run launched (hunt.py bg, seed 4305, 80k screens target, ~2%% odd-c keep rate from pilot); monitoring hunt_stdout.log
+[2026-07-21T08:45:47] ► KTT-W2 nu-near-rectangle-offcorner-r6 (R2) | NEXT: launch family driver — universe 6xk k=7..10 edit<=3, pairs seed 4314 (30a+30b/nu), screen c3-12, profile n0..12, interp+h*, orbit top-10
+[2026-07-21T08:45:54] ► KTT-W2/selfconj-nu-involution-r6 R2 | NEXT: smoke engines, then exhaustive TrackA(mu=lam')+TrackB2(selfconj pairs) census on 16 self-conj nu (r=6,|nu|24-36), profile n=0..12
+[2026-07-21T08:46:19+03:00] ► KTT-W2-HORNMULTI | NEXT: screen 4012 H>=3 nu (6 anchors, cap 20000, keep c in [7,12]) + c=9 P(2)=45 unimodular probe
+[2026-07-21T00:07:00] ✔ KTT-W2-USP-R6 | DID: recon | RESULT: engines OK (lr_hive.exe batch, interp.py exit3-anomaly), 39+2 seed matches in wave1 profiles_live+profiles | Δ: none
+[2026-07-21T00:07:30] ► KTT-W2-USP-R6 | NEXT: write driver.py (orbit gen, screen c9-12, spike triage, 13-sample profiles, h*-audit, gen2) then launch full pass
+[2026-07-21T05:46:47Z] ► KTT-W2/hstar-forensics-remine-w1 | NEXT: Phase2 orbit-mine top-60 composite seeds, 1-box orbits seed=4306, engineA screens+profiles staged caps
+[2026-07-21T08:47:32+03:00] ► KTT-W2-STAIR5HEAVY | NEXT: launch driver --run 2900 (pool 39, pairs 735/735 no-subsample, ~300k band4 triples, screen cap 20000 keep c 3-12, profile n0..8 cap 200000 + h*-audit)
+[2026-07-21T05:47:33Z] ► KTT-W2-c456midshell | NEXT: launch full census W22..34 seed4307 budget650k (screen cap20000, c3 n=2 probe cap5000, profile n=0..8 cap200000 + h*-audit)
+[2026-07-21T05:44:00Z] ► KTT-W2-RHO | NEXT: build+launch island-GA evolver (rho-max, multibox kernel seed 4310, r=5 D=6) in runs/wave2_rho-max-evolver-multibox-r5; engines A/B+interp verified present+calibrated
+[2026-07-21T08:47:48+03:00] ► KTT-W2-HORNMULTI | NEXT: profile 347 keeps (n=0..12 staged caps 2e5/1e6/5e6, nodecap 8e8, 6 workers, deadline 45min) + h*-audit
+[2026-07-21T08:47:52] ► KTT-W2-FATSKIP-REQUOTE | queue built: 1842 deduped (stored-c {11: 215, 12: 818, 10: 595, 9: 214}), pregate pushed 0; dispatch 0 min, 6 workers
+[2026-07-21T08:48:05] ► KTT-W2-oddgap | NEXT: smoke-test hunt.py (odd-gap-parity-bait-r5r6, tiny budgets, scratch dir) to validate pipeline before 54-min full run
+[2026-07-21T08:48:05] ► KTT-W2-oddgap | NEXT: screen r5=346 r6=182 triples (odd-gap fam + even-gap ctl, cap 20000, 4+2 workers)
+[2026-07-21T08:48:06] ✔ KTT-W2-oddgap | DID: r5 screen 346 | RESULT: cdist fam {"0": 31, "1": 31, "10": 5, "11": 15, "12": 8, "13-99": 56, "2": 24, "3": 28, "4 | D: queueing
+[2026-07-21T08:48:06] ✔ KTT-W2-oddgap | DID: r6 screen 182 | RESULT: cdist fam {"0": 21, "1": 17, "100-999": 6, "11": 3, "12": 1, "13-99": 46, "2": 10, "3": 7, | D: queueing
+[2026-07-21T08:48:06] ► KTT-W2-oddgap | NEXT: r5 profile 10 triples (D=6, staged caps, h*-audit)
+[2026-07-21T08:48:06] ► KTT-W2-oddgap | NEXT: r6 profile 6 triples (D=10, staged caps, h*-audit)
+[2026-07-21T08:48:07] ✔ KTT-W2-oddgap | DID: hunt complete | RESULT: screened=528 profiled=16 hits=0 structural=0 anomalies=0 manifest=runs/wave2_odd-gap-parity-bait-r5r6/manifest.json | D: none
+[2026-07-21T08:48:18] ✔ KTT-W2/selfconj-r6 | DID: stratum census+screen | RESULT: 1000 triples, 89 survivors c in {4,6,8,10,12} (all even), runs\wave2_selfconj-nu-involution-r6\screen_stratum.jsonl | Δ: none
+[2026-07-21T05:48:30Z] ✔ KTT-W2-R7-DEGEN | DID: built hunt.py + smoke run 155s | RESULT: sanity gate PASS (c1/c2 validators r=7, A+B agree); 900 screens, keeps 212 (23.6%), s2 path OK | Δ: none
+[2026-07-21T08:48:26] ✔ KTT-W2-FATSKIP-REQUOTE | DID: requote run drained | RESULT: 73 rows, 51 completions, 22 FATSKIP2, hits=0, hstar_neg=0 | manifest.json final
+[2026-07-21T08:48:35] ✔ KTT-W2 CONTROL(R2) | DID: sanity gates | RESULT: interp --selftest exit0 ALL PASS; A/B smoke byte-identical (0 1 2) | Δ: none
+[2026-07-21T08:48:35] ► KTT-W2 CONTROL(R2) | NEXT: write driver.py (exact uniform samplers seed 4313, Stembridge dead-zone prefilter, 6-worker batch pipeline) + driver selftest
+[2026-07-21T08:48:35] ✔ KTT-W2-oddgap | DID: smoke-test hunt.py | RESULT: 528 screened, 16 profiled, validators 8/8 OK, manifest+results.jsonl written in scratch | Δ: pipeline armed
+[2026-07-21T08:48:35] ► KTT-W2-oddgap | NEXT: FULL run hunt.py seed 4312 (r5 38k+r6 16k screens, 3400+900 profiles, 15% even-gap controls, h*-audit, 54-min deadlines)
+[2026-07-21T08:48:45] ► KTT-W2-oddgap | NEXT: screen r5=38006 r6=16004 triples (odd-gap fam + even-gap ctl, cap 20000, 4+2 workers)
+[2026-07-21T08:48:47] ✔ KTT-W2-oddgap | DID: r6 screen 16004 | RESULT: cdist fam {"0": 1578, "1": 971, "10": 203, "100-999": 700, "1000-19999": 1, "11": 232, "12 | D: queueing
+[2026-07-21T08:48:47] ✔ KTT-W2-oddgap | DID: r5 screen 38006 | RESULT: cdist fam {"0": 3971, "1": 4460, "10": 839, "100-999": 15, "11": 733, "12": 788, "13-99":  | D: queueing
+[2026-07-21T08:48:48] ► KTT-W2-oddgap | NEXT: r6 profile 900 triples (D=10, staged caps, h*-audit)
+[2026-07-21T08:48:48] ► KTT-W2-oddgap | NEXT: r5 profile 3400 triples (D=6, staged caps, h*-audit)
+[2026-07-21T08:48:51] ✔ KTT-W2/selfconj-r6 | DID: profiled 89 stratum survivors n=0..12 | RESULT: 0 detectors (0 neg-coeff, 0 anomaly, 0 hstar-neg, 0 deg>=c), min_coeff=1/420, min_hstar=0 | Δ: stratum clean
+[2026-07-21T05:48:54Z] ✔ KTT-W2-c456midshell | DID: full census pass1 W22..34 | RESULT: 650000 screens, 52874 c456+0 offlaw profiled, hits=0 anom=0 mism=0 fat=0 (run_main.log wall 34.4s) | Δ: none
+[2026-07-21T00:12:00] ► KTT-W2-USP-R6 | NEXT: launch driver.py full pass (seeds->orbit+300rand2box->screen c9-12->triage h2/h3->profiles n0..12->hstar audit->gen2)
+[2026-07-21T05:49:50Z] ► KTT-W2-c456midshell | NEXT: extension pass2 resume-from-boundary W22..34, +6.5M screens (500k/W rollover), identical protocol; pass1 stats snapshotted
+[2026-07-21T08:50:14] ✔ KTT-W2 nunearrect | DID: universe+screen | RESULT: 41 nu, 1681 pairs, 9 survivors c3-12 | Δ: none
+[2026-07-21T08:50:17] ✔ KTT-W2 nunearrect | DID: base profiles | RESULT: 9 polys, 0 fat-skips, 0 hits, 0 deg-anom, 0 h*neg | Δ: none
+[2026-07-21T05:50:46Z] ► KTT-W2/hstar-forensics-remine-w1 | NEXT: Phase2b launched in parallel — 7 Reeve-signature seeds (h*=[1,0,1,0,0] internal zero) full 1-box + sampled 2-box orbits
+[2026-07-21T08:50:51] ✔ KTT-W2 nunearrect | DID: orbit mine top-10 | RESULT: 600 neighbors, 97 profiled-eligible, hits 0 | Δ: none
+[2026-07-21T08:51:02] ✔ KTT-W2 nunearrect | DID: extension round (60+60/nu) | RESULT: 2271 pairs, 23 survivors, hits 0 | Δ: none
+[2026-07-21T00:22:00] ✔ KTT-W2-USP-R6 | DID: gen1 screen+triage+pri-profiles | RESULT: 12766 screened, 1335 keeps, 562 flats -> 541 exactly C(n+8,8) (deg8 h*=e0), 21 fat, 0 neg coeff | Δ: none
+[2026-07-21T08:52:41] ✔ KTT-W2 nunearrect (R2) | DID: full run 4552 screens, 129 profiles (base+orbit+ext), interp+h* exact | RESULT: 0 hits/0 anomalies; all polys C(n+3,3) or C(n+4,4); manifest+results.jsonl saved | Δ: corner dead
+[2026-07-21T05:53:00Z] ✔ KTT-W2-RHO | DID: evolver.py built+compiled; sanity gate run | RESULT: SANITY ALL PASS (c=1->P=1, c=2->P=n+1, W1 anchor rho=1/4 min=1/360 hstar=[1,1,0,0,0,0,0]) | Δ: pipeline validated
+[2026-07-21T05:53:30Z] ► KTT-W2-RHO | NEXT: launch island-GA hunt (6x40, elitism4, mig8, plateau12, kernel seed 4310, c[3,12], |nu|<=52, n=0..8 cap 200000) for 45 min wall
+[2026-07-21T05:57:00Z] ✔ KTT-W2-RHO | DID: launched evolver.py run --minutes 45 (bg task b4c3x2m0b) | RESULT: runs/wave2_rho-max-evolver-multibox-r5/run.log streaming; monitor bp9967qld armed | Δ: hunt running
+[2026-07-21T08:53:37] ► KTT-W2-FATSKIP-REQUOTE | NEXT: launch full requote run (queue 1842 deduped c9-12, staged caps 200k/1.5M/6M, 6 workers, 56-min dispatch)
+[2026-07-21T08:53:38] ► KTT-W2-FATSKIP-REQUOTE | queue built: 1842 deduped (stored-c {11: 215, 12: 818, 10: 595, 9: 214}), pregate pushed 0; dispatch 56 min, 6 workers
+[2026-07-21T08:53:41] ✔ KTT-W2 CONTROL(R2) | DID: driver.py written + selftest | RESULT: DRIVER SELFTEST ALL PASS exit0 (tables=brute x5, nu support exact, h* exact, determinism) | Δ: none
+[2026-07-21T08:53:41] ► KTT-W2 CONTROL(R2) | NEXT: launch main control run (seeds 4313005/4313006, WALL 48min, screens cap20000 keep c in [3,12], prof caps 2e5/4e5 flat)
+[2026-07-21T06:02:00Z] ✔ KTT-W2-RHO | DID: init seeding (W1/W2 + wave1-cache recovery) | RESULT: W1,W2 kept c=8 rho=1/4; 2 STRUCTURAL RHO_GE_1 at init: 11,4,3,2,1|7,6,2,1|17,8,5,4,3 and 10,...|16,8,5,4,3 (hstar [1,5,11,3,0,0,0], rho=5/3, c=12) | Δ: wave1 implicit rho-max 1/4 already beaten 6.7x
+[2026-07-21T05:53Z] ✔ KTT-W2/odd-c-deg6-parity-break-r5 | DID: 80000 screens seed4305 oddW window + 3236 exact profiles (2224 odd-c FULL, 1012 even-c 10%ctrl) | RESULT: manifest.json; 0 neg-coeff, 0 anomalies, 0 HSTAR_NEG, spot A/B 25/25 | Δ: none
+[2026-07-21T05:53Z] ✔ KTT-W2/odd-c-deg6-parity-break-r5 | DID: parity map deg6 | RESULT: odd-c deg6 = 0/2224 vs even-c deg6 796/1012 (deg6 c-hist 8:418,10:282,12:96); odd-c max deg = 5 | Δ: parity law extended to odd-W window
+[2026-07-21T08:55:00] ✔ KTT-W2-oddgap | DID: full hunt run 1 (seed 4312) | RESULT: see runs/wave2_odd-gap-parity-bait-r5r6/manifest.json + results.jsonl | Δ: 0 hits, 0 structural, 0 anomalies
+[2026-07-21T05:55:12Z] ✔ KTT-W2-c456midshell | DID: extension pass2 | RESULT: +6.5M screens (tot 7.15M), +593919 profiled (tot 646793), W22-26 pair space EXHAUSTED, hits=0 anom=0 mism=0 | Δ: none
+[2026-07-21T08:55:14] ► KTT-W2-FATSKIP-REQUOTE | checkpoint 200 rows, 124 completions, 76 FATSKIP2, hits=0
+[2026-07-21T08:55:29] ✔ KTT-W2-oddgap | DID: hunt complete | RESULT: screened=54010 profiled=4300 hits=0 structural=0 anomalies=0 manifest=runs/wave2_odd-gap-parity-bait-r5r6/manifest.json | D: none
+[2026-07-21T08:55:47] ► KTT-W2/selfconj-r6 | NEXT: adjudicate A-vs-B disagreement on 5,4,3,2,1,1;6,4,3,2,1;8,6,5,5,4,4 (bheavy full-13 recount, A_stable=true) via per-n diff + swap/conj + interp-on-B
+[2026-07-21T08:56:00] ✔ KTT-W2 CONTROL(R2) | DID: round 1 (scr r5 1200 r6 300) | RESULT: prof r5=180/3000 r6=36/500 fat=0+11 viol=0 hits=0 | Δ: none
+[2026-07-21T08:56:14] ► KTT-W2-FATSKIP-REQUOTE | checkpoint 400 rows, 284 completions, 116 FATSKIP2, hits=0
+[2026-07-21T08:56:40] ► KTT-W2/c11-shell-mapper-r6 | NEXT: shell-BFS screen 350 pairs (seed 4302, depth<=14, <=120/depth, prune c>12, cap 20000) via lr_hive batch
+[2026-07-21T08:56:46] ✔ KTT-W2/c11-shell-mapper-r6 | DID: shell BFS 350 pairs | RESULT: 257890 screens, c11=5138 c12=8969 side=13738, shellmap.jsonl | Δ: none
+[2026-07-21T08:56:46] ► KTT-W2/c11-shell-mapper-r6 | NEXT: profile 14107 primaries (c11 first) n=0..12 staged caps 2e5/1.5e6/6e6, interp nodes 0..10 heldout 11,12, h*-audit, B n=1,2
+[2026-07-21T06:10:00Z] ✔ KTT-W2-RHO | DID: dense-regime valve patch (rho>=1 DENSE: 8 structural events in init; B-verify capped at 12, rest registered cheaply; restart-safe reload) | RESULT: evolver.py recompiled OK; 7 structural JSONs + 5151-line cache preserved | Δ: none
+[2026-07-21T08:57:08+03:00] ✔ KTT-W2-HORNMULTI | DID: main profiles 371/371 | RESULT: 287 ok, 84 fat-skip, 0 anomalies, 0 neg-coeff, 0 h*-neg; results.jsonl | Δ: none
+[2026-07-21T08:57:08+03:00] ► KTT-W2-HORNMULTI | NEXT: orbit-mine top-5 by min coeff (19-way tie 1/120960, seed-4309 pick), nu box-moves interior-preserving
+[2026-07-21T06:14:00Z] ✔ KTT-W2-RHO | DID: relaunch resume (bg b6114orug, 34 min) | RESULT: rescan +117 structural rho>=1 from cache; W1/W2 kept; wave1 recovery 60/60 pool_ok; structural_01-03 engineB_agrees_A=True | Δ: rho>=1 basin confirmed dense+dual-engine-verified
+[2026-07-21T05:57:31Z] ✔ KTT-W2/hstar-forensics-remine-w1 | DID: Phase2 orbits (60 composite + 7 Reeve seeds, 6988 new triples, 3959 profiled) | RESULT: manifest.json — 0 hits, 0 h*-neg, 0 anomalies, 23 new Reeve h*=[1,0,1,0,0] triples | Δ: none
+[2026-07-21T06:22:00Z] ✔ KTT-W2-RHO | DID: interim KPI extraction (init phase, 1465 pool-ok profiles) | RESULT: max rho 23/12 (10,5,4,2,1|5,4,3,1,1|12,8,7,5,4 deg5 c12), deg6 max 5/3; wave1 max 1/4 beaten 7.7x | Δ: KPI rho>=1 achieved by many; hunting deg6-rho + negativity
+[2026-07-21T05:58:33Z] ✔ KTT-W2-c456midshell | DID: manifest+inventory+spotB written | RESULT: 16 polys (c4:3,c5:6,c6:7) all deg<=c-1 h*>=0; spotB 549/549; hits=0 anom=0; manifest.json valid | Δ: mid-shell c456 slice censused, no KTT counterexample
+[2026-07-21T08:58:52+03:00] ► KTT-W2-HORNMULTI | NEXT: fat-skip retry pass, 85 triples, LR_HIVE_NODE_CAP=6e9, stage timeout 1500s, deadline 09:40
+[2026-07-21T09:05:00+03:00] ✔ KTT-WAVE2 | DID: wave2 14/14 hunters + 1 w1-completion finished | RESULT: 7785092 triples live window, 0 candidate hits, 0 verify events; h* of 118639 w1 polys all nonneg; odd-c deg6 empty 0/2224 vs 796/1012 even-c | Δ: wave3 auto-continues
+[2026-07-21T09:01:55] ► KTT-W2/c11-shell-mapper-r6 | NEXT: shell-BFS screen 350 pairs (seed 4302, depth<=14, <=120/depth, prune c>12, cap 20000) via lr_hive batch
+[2026-07-21T09:02:01] ✔ KTT-W2/c11-shell-mapper-r6 | DID: shell BFS 350 pairs | RESULT: 257890 screens, c11=5138 c12=8969 side=13738, shellmap.jsonl | Δ: none
+[2026-07-21T09:02:02] ► KTT-W2/c11-shell-mapper-r6 | NEXT: profile 14107 primaries (c11 first) n=0..12 staged caps 2e5/1.5e6/6e6, interp nodes 0..10 heldout 11,12, h*-audit, B n=1,2
+[2026-07-21T09:02:21+03:00] ✔ KTT-W2-HORNMULTI | DID: family complete+finalized (fatretry truncated 8/85 by orchestrator) | RESULT: manifest.json: 4031 tested, 295 profiled, 0 neg-coeff, 0 h*-neg, 0 anomalies | Δ: family exhausted, no hit
+[2026-07-21T09:03:01] ✔ KTT-W2/selfconj-r6 | DID: lo-stratum+shell2 census, A/B spotcheck+bheavy, hstar forensics, manifest | RESULT: 6151 screened, 1125 profiled, 0 neg-coeff/0 anomaly; 8 internal-zero hstar (B-confirmed) in runs\wave2_selfconj-nu-involution-r6\internal_zero_hstar_Bverify.json | Δ: family exhausted, no hit
+[2026-07-21T00:35:00] ✔ KTT-W2-USP-R6 | DID: driver full pass + nodecap probe | RESULT: 15603 screened, 1545 profiles, 0 neg-coeff; 183 CAP fats = DFS node-cap artifact (A@4e9+B both 75582 forced) | Δ: none
+[2026-07-21T09:07:29] ✘ KTT-W2 CONTROL(R2) | DID: run attempt A died end of round1 | RESULT: UnicodeEncodeError cp1252 in plog console print (driver.py:156); round1 data OK 180r5+36r6 prof, 0 viol | Δ: none
+[2026-07-21T09:07:29] ► KTT-W2 CONTROL(R2) | NEXT: relaunch fixed driver (ascii-safe print, PYTHONUTF8=1, WALL 38min, screen_chunk persisted; crashed jsonl renamed *_attemptA, seeds unchanged -> exact redraw)
+[2026-07-21T09:09:28] ✔ KTT-W2 CONTROL(R2) | DID: round 1 (scr r5 1200 r6 300) | RESULT: prof r5=180/3000 r6=36/500 fat=0+11 viol=0 hits=0 | Δ: none
+[2026-07-21T09:11:06] ✔ KTT-W2 CONTROL(R2) | DID: round 2 (scr r5 3370 r6 715) | RESULT: prof r5=506/3000 r6=94/500 fat=0+21 viol=0 hits=0 | Δ: none
+[2026-07-21T00:40:00] ✔ KTT-W2-USP-R6 | DID: nodecap rescue 23 F-fats + manifest final | RESULT: 583/583 flats == C(n+8,8) exactly, s_max=0, 0 neg coeff in 15603 triples, min coeff 1/40320@k8, manifest.json final | Δ: family exhausted, no hit
+[2026-07-21T09:14:16] ✔ KTT-W2 CONTROL(R2) | DID: round 3 (scr r5 7817 r6 1453) | RESULT: prof r5=1211/3000 r6=180/500 fat=0+42 viol=0 hits=0 | Δ: none
+[2026-07-21T09:16:52] ► KTT-W2/c11-shell-mapper-r6 | NEXT: shell-BFS screen 350 pairs (seed 4302, depth<=14, <=120/depth, prune c>12, cap 20000) via lr_hive batch
+[2026-07-21T09:16:58] ✔ KTT-W2/c11-shell-mapper-r6 | DID: shell BFS 350 pairs | RESULT: 257890 screens, c11=5138 c12=8969 side=13738, shellmap.jsonl | Δ: none
+[2026-07-21T09:16:58] ► KTT-W2/c11-shell-mapper-r6 | NEXT: profile 14107 primaries (c11 first) n=0..12 staged caps 2e5/1.5e6/6e6, interp nodes 0..10 heldout 11,12, h*-audit, B n=1,2
+[2026-07-21T09:17:00] ✔ KTT-W2 CONTROL(R2) | DID: round 4 (scr r5 12597 r6 2043) | RESULT: prof r5=1961/3000 r6=247/500 fat=0+55 viol=0 hits=0 | Δ: none
+[2026-07-21T09:18:40] ✔ KTT-W2 CONTROL(R2) | DID: round 5 (scr r5 18486 r6 2597) | RESULT: prof r5=2898/3000 r6=313/500 fat=0+62 viol=0 hits=0 | Δ: none
+[2026-07-21T09:23:47] ✔ KTT-W2 CONTROL(R2) | DID: round 6 (scr r5 30492 r6 3515) | RESULT: prof r5=4846/3000 r6=405/500 fat=0+92 viol=0 hits=0 | Δ: none
+[2026-07-21T09:25:36] ✔ KTT-W2 CONTROL(R2) | DID: round 7 (scr r5 38473 r6 3938) | RESULT: prof r5=6076/3000 r6=454/500 fat=0+100 viol=0 hits=0 | Δ: none
+[2026-07-21T12:42:00+03:00] ► KTT-RESUME2 | NEXT: resume wf_48e7b8b1-cc6 after 11:50 reset; wave3+ hunters get profile cap 4e6 (was 2e5) to reach r=6 deg9-10 stratum + non-integral-polytope/odd-c-parity redesign mandate
+2026-07-21T09:42:30Z ► KTT-W2-hstar-forensics R2 | NEXT: verify engines A/B + interp.py and audit R1 atlas artifacts before extending search
+[2026-07-21T09:05:00Z] ► KTT-W2-RHOMAX | NEXT: resume evolver.py (run-token R2) from state.json for ~62 min to hunt negative-coefficient stretched-LR polynomials, r=5 D=6
+[2026-07-21T09:43:27Z] > KTT-W2-oddgap | NEXT: extension pass 2 (KTT_EXTEND=1, qoffset r5=3400 r6=900, budgets 12600/3900) to exhaust the seed-4312 survivor queue
+[2026-07-21T12:45:00+03:00] > KTT-W2-horn-multisliver-r6-heavy R2 | NEXT: resume family (R1 complete, 0 hits) with 3 residual queues: 77 still-fat retry at node cap 6e10, 24 deferred unimodular c=9 profiles, orbit round 2
+[2026-07-21T12:43:36] ► KTT-W2-oddgap | NEXT: screen r5=38006 r6=16004 triples (odd-gap fam + even-gap ctl, cap 20000, 4+2 workers)
+[2026-07-21T12:43:39] ✔ KTT-W2-oddgap | DID: r6 screen 16004 | RESULT: cdist fam {"0": 1578, "1": 971, "10": 203, "100-999": 700, "1000-19999": 1, "11": 232, "12 | D: queueing
+[2026-07-21T12:43:39] ✔ KTT-W2-oddgap | DID: r5 screen 38006 | RESULT: cdist fam {"0": 3971, "1": 4460, "10": 839, "100-999": 15, "11": 733, "12": 788, "13-99":  | D: queueing
+[2026-07-21T12:43:40] ► KTT-W2-oddgap | NEXT: r5 profile 12600 triples (D=6, staged caps, h*-audit)
+[2026-07-21T12:43:40] ► KTT-W2-oddgap | NEXT: r6 profile 3900 triples (D=10, staged caps, h*-audit)
+[2026-07-21T09:35 ] ► KTT-W2-unimodular-spike-probe-r6 R2 | NEXT: audit prior pass (1568 profiles, 0 hits) with engine B and launch GEN3 h*-centroid hill-climb from deg8 h1>0 + jmax=3 parents
+[2026-07-21T09:43:47Z] ► WAVE2/odd-c-deg6-parity-break-r5 R2-ext | NEXT: engine A/B + interp sanity gate (c=1 => P=1, c=2 => P=n+1) before extension pass
+[2026-07-21T09:44:08] ► KTT-W2 CONTROL(R2-cont) | NEXT: patch driver for seed-offset continuation and resume unbiased control draws (r5/r6) for ~32 min to finish r6 target 500
+[2026-07-21T09:45:00] ► KTT-W2-c456-midshell-R5 (R2) | NEXT: launch hunt_r2.py to exhaust the depth>=4 mid-shell pair space at W=27..34 resuming from recorded pass-2 boundaries (seed 4307), screen n=1 cap 20000 + full profile n=0..8 of every c in {4,5,6}
+[2026-07-21T09:45:25Z] ✔ SANITY | DID: engine A/B + interp gate | RESULT: c=1 P=1 (n=0..4 all 1), c=2 P=n+1 (coeffs 1 1, EXTRA_POINT_MATCH yes), A==B | Δ: none
+[2026-07-21T09:45:26Z] ► WAVE2 R2-ext | NEXT: launch hunt3.py = 300k fresh in-window screens (seed 430502, dedup vs pass1) + aux high-c stratum c in 13..21
+[2026-07-21T12:46:36] ✔ KTT-W2 CONTROL(R2) | DID: round 1 (scr r5 1200 r6 300) | RESULT: prof r5=212/3000 r6=45/500 fat=0+10 viol=0 hits=0 | Δ: none
+[2026-07-21T12:46:50] ✔ KTT-W2 nunearrect R2 | DID: wide universe 67 nu + exhaustive near-half cell + 300/nu gen-b screen | RESULT: 21611 screened, 775 c3-12 | Δ: none
+[2026-07-21T09:52 ] ✔ KTT-W2-unimodular-spike-probe-r6 | DID: engine-B audit of 10 pass-1 profiles + deg-8 closed-form check | RESULT: B==A on all n<=6, 602/602 deg-8 obey P(n)=C(n+8,8)+(c-9)C(n+7,8) | Δ: none
+[2026-07-21T09:48:24Z] ► WAVE2 R2-ext | NEXT: launch probe3_evenW.py (delta in {0,2,4}, W even, 150k screens) to test if deg6=>c-even is an odd-W artifact
+[2026-07-21T12:52:00] ✔ KTT-W2-c456-midshell-R5 (R2) | DID: own sanity gate + independent audit of R1 census | RESULT: A==B on KTW/Ikenmeyer validators (1,1,1 / 2,3,4), interp --selftest 25/25 PASS, 845109 results.jsonl records re-audited (interpolant reproduces all 9 samples, h* recomputed) 0 failures | Δ: none
+[2026-07-21T12:49:49] ✔ KTT-W2 CONTROL(R2) | DID: round 2 (scr r5 3930 r6 858) | RESULT: prof r5=649/3000 r6=120/500 fat=0+27 viol=0 hits=0 | Δ: none
+[2026-07-21T09:58 ] ► KTT-W2-unimodular-spike-probe-r6 | NEXT: run GEN3/4 (h*-centroid climb, 18871 screens), GEN5 (5/8/13-box long walks, 21816), GEN6 (weight-level-breaking) concurrently; engines A batch 6 workers
+2026-07-21T09:51:40Z ► KTT-W2 Phase2-R2 | NEXT: 6-worker orbit mine of 550 frontier seeds (degfront/latemass/iz/rho/r6bigc), target h*_j<0 or lastnz>=4
+[2026-07-21T12:52:23] ✔ KTT-W2 CONTROL(R2) | DID: round 3 (scr r5 6679 r6 1312) | RESULT: prof r5=1065/3000 r6=160/500 fat=0+42 viol=0 hits=0 | Δ: none
+[2026-07-21T12:55:27] ✔ KTT-W2 CONTROL(R2) | DID: round 4 (scr r5 10077 r6 1669) | RESULT: prof r5=1635/3000 r6=197/500 fat=0+54 viol=0 hits=0 | Δ: none
+[2026-07-21T09:44:00Z] > W2-SELFCONJ-R6-R2B | NEXT: independently re-derive all 1125 stored R2 polynomials/h* from samples with own exact Fraction interpolator
+[2026-07-21T09:45:30Z] + W2-SELFCONJ-R6-R2B | DID: verify_post.py over results.jsonl | RESULT: 1126 recs, 0 mismatches, 0 NEGATIVE_COEFF, 0 DEGREE_ANOMALY, 0 HSTAR_NEG | d: none
+[2026-07-21T09:46:00Z] + W2-SELFCONJ-R6-R2B | DID: engine-A recount of 60 random stored triples (780 evals) | RESULT: 60/60 sample vectors identical | d: none
+[2026-07-21T09:47:00Z] + W2-SELFCONJ-R6-R2B | DID: engine-B recount n=0..4 on 8 random stored triples | RESULT: B=A on all checked | d: none
+[2026-07-21T09:52:00Z] + W2-SELFCONJ-R6-R2B | DID: track-B1 half-fixed locus (lam=lam', mu free) census+profile | RESULT: 14652 screened, 1512 in-band, 1511 profiled, 0 detector hits | d: none
+[2026-07-21T09:57:00Z] + W2-SELFCONJ-R6-R2B | DID: FULL pair census of all 32 self-conj 6-part nu (orbit-deduped) | RESULT: 120590 orbits screened, 5555 new in-band profiled, 0 hits, stratum EXHAUSTIVE | d: none
+[2026-07-21T10:02:00Z] > W2-SELFCONJ-R6-R2B | NEXT: full-pair census on 240 distance-1 symmetry-breaking shell nu (1946113 pairs screened, 195574 in-band), profile seeded subsample
+[2026-07-21T12:57:22] ✔ KTT-W2 CONTROL(R2) | DID: round 5 (scr r5 13883 r6 2034) | RESULT: prof r5=2211/3000 r6=223/500 fat=0+61 viol=0 hits=0 | Δ: none
+[2026-07-21T10:05 ] ✔ KTT-W2-unimodular-spike-probe-r6 | DID: GEN3 h*-centroid climb (18871 screens, 2127 profiles) | RESULT: first deg-8 h* off support{0,1}: 9,7,4,2,1,1|8,6,3,1,1|16,8,7,5,4,3 c=12 h*=(1,3,1,0..0), all coeffs>0 | Δ: rigidity broken at j=2
+[2026-07-21T12:59:53] ✔ KTT-W2 CONTROL(R2) | DID: round 6 (scr r5 20183 r6 2427) | RESULT: prof r5=3247/3000 r6=257/500 fat=0+68 viol=0 hits=0 | Δ: none
+[2026-07-21T10:05:00Z] ✔ KTT-W2-RHOMAX | DID: exact h*-transfer analysis over 18372 profiled + 2.2M-record swarm scan | RESULT: h*-support index <=3 in family (<=4 swarm-wide, 6 triples); cheapest d=6 negativity needs only rho=4/7 < achieved 5/3 => rho is wrong objective | Δ: family obstruction identified as support-ceiling not mass
+[2026-07-21T13:01:00+03:00] v KTT-W2-horn-multisliver-r6-heavy R2 | DID: orbit rounds 2-4 (892 fresh nu screens) + fatretry2 (77 requeued at node cap 6e10) | RESULT: 401 profiles, 47 distinct polys, 0 negative coeffs, 0 hstar-neg, 0 degree anomalies | delta: none
+[2026-07-21T10:10 ] ✔ KTT-W2-unimodular-spike-probe-r6 | DID: GEN5 long-walk (5/8/13-box, 21816 screens, 1203 profiles) | RESULT: 2nd deg-8 support break 9,7,6,3|7,6,4,2,2|15,9,7,6,5,4 h*=(1,3,1,0..), 0 hits 0 anomalies | Δ: none
+[2026-07-21T13:03:54] ✔ KTT-W2 CONTROL(R2) | DID: round 7 (scr r5 28779 r6 2837) | RESULT: prof r5=4565/3000 r6=313/500 fat=0+77 viol=0 hits=0 | Δ: none
+[2026-07-21T13:07:22] ✔ KTT-W2 CONTROL(R2) | DID: round 8 (scr r5 35686 r6 3237) | RESULT: prof r5=5661/3000 r6=361/500 fat=0+93 viol=0 hits=0 | Δ: none
+[2026-07-21T10:08:11Z] ✔ WAVE2 R2-ext probe3 | DID: even-W control 150k screens, 6410 profiles (4522 odd-c targets) | RESULT: 0 odd-c deg6; 1429/1888 even-c controls deg6 => law not an odd-W artifact | Δ: none
+[2026-07-21T10:15 ] ► KTT-W2-unimodular-spike-probe-r6 | NEXT: GEN8 strict-nu probe (both deg-8 h*-support breaks have 6 distinct nu parts: 2/23 vs 0/260 repeated-part nu) from 60 distinct-nu deg-8 parents
+[2026-07-21T13:09:45] ✔ KTT-W2 CONTROL(R2) | DID: round 9 (scr r5 42345 r6 3629) | RESULT: prof r5=6710/3000 r6=401/500 fat=0+102 viol=0 hits=0 | Δ: none
+2026-07-21T10:11:09Z ✔ KTT-W2-hstar-forensics R2 | DID: audited R1 atlas (118639 rows, h* recomputed) + orbit-mined 550 frontier seeds | RESULT: 1479 new full-protocol triples, 0 neg coeff, 0 neg h*, 0 deg-anomaly; max h* last-nonzero index=3 | Δ: none (no KTT counterexample)
+[2026-07-21T13:13:17] ✔ KTT-W2 CONTROL(R2) | DID: round 10 (scr r5 51617 r6 4033) | RESULT: prof r5=8135/3000 r6=449/500 fat=0+114 viol=0 hits=0 | Δ: none
+[2026-07-21T13:13:38] ✔ KTT-W2-oddgap | DID: hunt complete | RESULT: screened=54010 profiled=19971 hits=0 structural=0 anomalies=0 manifest=runs/wave2_odd-gap-parity-bait-r5r6/manifest.json | D: none
+[2026-07-21T10:35:00Z] ✔ KTT-W2-RHOMAX | DID: 215 gens, 49429 triples screened / 28108 profiled, 0 fat-skips | RESULT: 0 hits, 0 anomalies, min coeff floor 1/360 UNBROKEN, max rho 23/12; manifest.json augmented | Δ: none
+[2026-07-21T10:22 ] ✘ KTT-W2-unimodular-spike-probe-r6 | DID: 4 concurrent driver processes | RESULT: gen6b exit127 + gen7/gen8 shells killed mid-group (resource exhaustion); data through last completed group retained | Δ: rerunning gen8 c>=11 solo
+[2026-07-21T10:15:11Z] V KTT-W2-oddgap | DID: pass2 extension (r5 12600 + r6 3071 profiles) | RESULT: cumulative 19971 profiled / 54010 screened, hits=0 structural=0 anomalies=0, min h*=0 everywhere, max(deg-c)=-1, min coeff 1/120960; manifest+parity_crosstab.json written | D: none
+[2026-07-21T10:24 ] ✔ KTT-W2-unimodular-spike-probe-r6 | DID: GEN7 deg-8 spike climb 2 generations (29961 screens, 3199 profiles) | RESULT: 77 deg-8 records with h*_2=1 (freq 3.8%->27.5%), h*_2 never exceeded 1, no j>=3 | Δ: none
+[2026-07-21T10:12:00Z] + W2-SELFCONJ-R6-R2B | DID: shell full-pair census profiled (seeded subsample, 18min cap) | RESULT: 84843 profiled, 57 fat, 0 detector hits | d: none
+[2026-07-21T10:16:00Z] + W2-SELFCONJ-R6-R2B | DID: interp.py --selftest + official-interpolator gate on 20 new records | RESULT: SELFTEST ALL PASS, 20/20 agree with own Fraction interpolation | d: none
+[2026-07-21T10:20:00Z] + W2-SELFCONJ-R6-R2B | DID: single-box mine of all 614 deg>=7 records | RESULT: 11508 candidates, 5643 profiled, 0 detector hits | d: none
+[2026-07-21T10:22:00Z] + W2-SELFCONJ-R6-R2B | DID: audit+manifest merge (runs/wave2_selfconj-nu-involution-r6/manifest.json) | RESULT: 98661 profiled, 75 fat, min coeff 1/40320, min h* 0, 0 hits | d: family closed, no negativity
+[2026-07-21T10:19:27Z] ► WAVE2 R2-ext | NEXT: hunt4_aux.py profiles 2200 odd-c (13..21) + 1300 even-c (14..20) screened triples to map how far in c the deg6=>c-even law holds
+[2026-07-21T13:27] ✔ KTT-W2-nu-near-rectangle-offcorner-r6 (R2) | DID: wide universe 67 nu, exhaustive gen-(a) closure 1521 + 20090 gen-b + 30991 orbit screens (57154 total), 4476 exact profiles, B-audit of 9 exception cells | RESULT: 0 hits, 0 deg-anomalies, 0 h*-neg, min coeff 1/5040, 4467/4476 profiles equal C(n+c-1,c-1) | Δ: none
+[2026-07-21T13:28:00] ✔ KTT-W2-c456-midshell-R5 (R2) | DID: pass-3 sweep + tail recovery of W=27..34 (hunt_r2.py killed ext. at t=1675s exit 127, no traceback; hunt_r2_tail.py finished W=34 w/ dedup) | RESULT: 22,558,093 new screens, 2,343,745 new profiles, 0 hits/0 anomalies/0 mismatches | Δ: slice W=22..34 now EXHAUSTIVE
+[2026-07-21T13:30:00] ✔ KTT-W2-c456-midshell-R5 (R2) | DID: exhaustiveness + inventory + engine-B verification | RESULT: count_admissible.py enumerates 29,712,059 admissible triples = screens performed exactly; 2,990,538 profiles -> 16 polynomials all deg<=c-1 h*>=0; 504/504 engine-B values match | Δ: family closed as exhausted, 0 hits
+[2026-07-21T10:28:02Z] ✔ KTT-HUNT wave2_stair5-heavy-interleave-w2 | DID: 410101 screens + 107723 exact profiles (core band4 62081 / band5 escal 7540 / deg6 single-box orbit 38102) | RESULT: 0 hits, 0 NEGATIVE_COEFF, 0 HSTAR_NEG; global min coeff exactly 1/360 (wave-1 floor unbroken); all 19315 deg-6 rows have c in {8,10,12}, zero odd-c/c=7; 3 R1 anomalies resolved as harness artifacts; manifest problems_external/ktt_lr_negativity/runs/wave2_stair5-heavy-interleave-w2/manifest.json | Δ: none
+[2026-07-21T10:30:34] ✔ KTT-W2 CONTROL(R2-cont) | DID: pass B driver killed at 13:13 mid-round-11 (harness SIGTERM); no relaunch | RESULT: r5+r6 profiles already 4.8x/1.8x targets; finalizing aggregation | Δ: none
+[2026-07-21T10:31:54] ✔ KTT-W2 CONTROL(R2) | DID: combined pass A+B aggregation (build_manifest.py + agg_check.py) | RESULT: manifest.json 15341 profiles 0 audit failures 0 hits 0 law/h* violations | Δ: none
+[2026-07-21T13:38] ✔ KTT-W2-nu-near-rectangle-offcorner-r6 (R2 tail) | DID: 2-step orbit around the 9 non-binomial cells (14779 screens, 5408 profiles) | RESULT: total 9884 exact polys, 27 distinct, 0 negative coeffs, 0 h*-neg, 0 anomalies | Δ: none
+[2026-07-21T10:36:39Z] ✔ WAVE2 odd-c-deg6-parity-break-r5 R2 | DID: 530k screens + 20045 exact profiles (window/evenW/high-c/orbit) | RESULT: 0 negative coeffs, 0 h*-neg, 0 anomalies; law breaks at c=13 (1737 odd-c deg6); all 5079 deg6 normvol EVEN, min 2 | Δ: family mapped, no hit
+[2026-07-21T10:35 ] ✔ KTT-W2-unimodular-spike-probe-r6 | DID: R2 corpus finalize (167010 triples screened, 9756 profiles, 3032 deg-8) | RESULT: 0 hits, 0 anomalies, min coeff 1/40320 at k=8; every deg-8 P = C(n+8,8)+(c-9)C(n+7,8) [+C(n+6,8) in 79] | Δ: none
+[2026-07-21T10:38:37Z] ✔ WAVE2 odd-c-deg6-parity-break-r5 R2 CLOSED | DID: manifest.json + INVARIANT_CHECK.json + ORBIT_ODD_DEG6.json + AB_fullverify written | RESULT: hits=0; parity law = shadow of 'deg6 => normvol even', breaks at c=13 | Δ: none
+[2026-07-21T13:43:00+03:00] v KTT-W2-horn-multisliver-r6-heavy R2 | DID: family closed (5274 triples screened, 443 profiled, 6 orbit rounds, 2 fat-retry passes) | RESULT: 0 hits, 0 hstar-neg, 0 degree anomalies, 49 distinct polys all coefficient-positive, manifest.json written | delta: none
+[2026-07-21T13:05+03:00] ► KTT-W3-DESIGN | NEXT: design 14 wave-3 hunter families for the KTT negativity swarm and hand them an executable triage oracle
+[2026-07-21T13:40+03:00] ✔ KTT-W3-DESIGN | DID: built+selftested engine/hive_poly.py (exact hive-polytope dim/vertex-denominator oracle) and wrote WAVE3_COMMON.md | RESULT: SELFTEST PASS exit 0; dim_lo=6 matches interpolated deg P=6 for lam=mu=(6,5,4,3,2,1) nu=(11,9,8,7,5,2) | Δ: none
+[2026-07-21T13:42+03:00] ✔ KTT-W3-CALIB | DID: measured node-cap artifact + LP yields | RESULT: LR_HIVE_NODE_CAP=2e8 caused CAP_EXCEEDED at n>=10 (raised 2e10 gives 71214/116480/183547 in 4.4/9.8/20.9s); 308 r=6 c-in-[8,25] triples: dim9=24 dim10=4, maxden2=53, min(c-dim)=+1 | Δ: none
+2026-07-21T11:39:29Z ► WAVE3-R7-THIN-HIGHDIM | NEXT: run sanity gate (c=1 KTW, c=2 Ikenmeyer, A-vs-B) then r=7 generator+screen
+[2026-07-21T11:39:30Z] ► W3-NEARMISS-ORBIT-REMINE-W12 | NEXT: build seed cohorts (rho-top300, h*_2>0, fat/thin-skips, wave-2 near-misses) from runs/ and re-quote cohort-(c) skips under LR_HIVE_NODE_CAP=2e10
+[2026-07-21T11:39Z] ► KTT-W3-dim10-lp-census-r6 | NEXT: generate seed-4401 r=6 triples, engine-A screen cap 25 at n=1, keep c in [8,24]
+[2026-07-21T11:39:47Z] ► W3-lowc-highdim-exhaustive-smallnu | NEXT: run engine sanity gate + build exhaustive census generator for r in {6,7,8}, |nu| in [18,34]
+[2026-07-21T14:39:57+03:00] ► WAVE3-KTT stair6-interleave-dimgated-r6 | NEXT: enumerate pool S6 + pairs W in [44,64] + banded 6-part nu, then batch-screen c at n=1 cap 30 with LR_HIVE_NODE_CAP=2e10
+[2026-07-21T11:39:59Z] ► KTT-W3-thinhigh | NEXT: run seeded r6/r7 thin-high generator, screen c in [3,14] with engine A cap 30, analyze hive dim, hunt c - dim_lo <= 0
+2026-07-21T14:40:17+03:00 ► WAVE3-KTT hstar-gradient-evolver-r6 | NEXT: build GA driver (a_1-from-hstar-prefix objective, r=6, dim_lo 8-10, c<=24) and calibrate per-individual cost
+[2026-07-21T14:45:00Z] ► W3-FRACVERTEX-R6 | NEXT: generate+screen r=6 candidates (|nu| 42-60, |lam|,|mu| 20-32, >=4 distinct) with engine A cap 20000, keep c in [3,12]
+2026-07-21T14:41:15+03:00 ► W3-SELFCONJ-R6R7 | NEXT: gate engines (A/B/interp/hive_poly selftests PASSED), enumerate self-conjugate-nu Track A/B triples r=6,7 and screen c with cap 30
+[2026-07-21T11:41:47Z] > W3-HORN-DEGEN-R6 | NEXT: run instrumented hive_poly degeneracy analysis (K=40, |det| per vertex) on c-in-[3,12] Horn-multi-sliver candidates
+[2026-07-21T15:05:00Z] ► KTT-W3-oddc-fulldeg-parity-r6 | NEXT: screen 200k r=6 triples (seed 4407) then LP-analyze 1500 (1200 odd-c + 300 even control) for dim_lo>=9 stratum
+2026-07-21T11:46:03Z ✔ WAVE3-R7 SCREEN | DID: gen+screen 150000 r=7 triples n=1 cap 20000 (36s) | RESULT: 16864 in c-band [9,15], 50587 with 3<=c<=20; 12 LP workers launched | Δ: none
+[2026-07-21T11:47:42Z] ✔ KTT-W3-thinhigh | DID: engines gated (hive_poly SELFTEST PASS, A/B agree on gate_R2), driver launched 2700s wall | RESULT: screen 2000 triples/0.51s, keep-rate 728/2000 in c[3,14] | Δ: hunt live
+2026-07-21T14:48:44+03:00 ✔ W3-SELFCONJ-R6R7 | DID: exhaustive r=6 self-conj-nu census screen (2309 TrackAB + 3986 TrackC), 652 analyzed | RESULT: maxden hist 1:583 2:61 3:8; dim_lo max 8; ZERO triangle-map affine symmetries | Δ: none
+[2026-07-21T11:48:51Z] ✔ W3-NEARMISS-ORBIT-REMINE-W12 | DID: orbit generated from 3540 seeds, engine-A n=1 cap30 screen | RESULT: pool 120048 mutants screened in 1.5s, 78234 with c in [3,25]; 4200 sent to hive_poly oracle
+2026-07-21T14:48:58+03:00 ► WAVE3-KTT hstar-gradient-evolver-r6 | NEXT: launch GA (48 indiv/6 islands, seed 4414, r=6 dim_lo>=8, c<=24, exact a_1-prefix fitness) for 33 min
+[2026-07-21T15:10:00Z] ✔ W3-FRACVERTEX-R6 | DID: screened 40000 r=6 triples (9415 with c in 3..12), analyzed 2500+, orbit-mined nu=(19,8,8,7,6,4) family | RESULT: maxden=3 vertices found (dens {1,3}), 12 profiled deg 6-7 all h*>=0 | Δ: none
+[2026-07-21T11:52:18Z] ► KTT-W3-thinhigh | NEXT: harvest streaming run (near_miss.jsonl) after 35min wall, build manifest with exact (c,dim_lo) joint distribution and min gap
+[2026-07-21T11:55:08Z] ✔ W3-lowc-exhaustive-smallnu STAGE1 | DID: exhaustive engine-A screen r=6,7,8 x |nu|=18..24 | RESULT: 9288190 triples screened, 1024119 keeps c in [3,6], 12829 c>12 | Δ: census cells r6/r7/r8 w18-24 exhausted
+[2026-07-21T14:55:25+03:00] ✔ WAVE3-KTT stair6 | DID: screened 5262089 banded triples (cap 30) + 1201 hive_poly analyses | RESULT: 319715 with 3<=c<=24; dim_lo hist {7:534,8:185,9:17,10:1}; 2 deg-9 profiles clean, min h*=0 | Δ: none
+2026-07-21T11:57:33Z ► WAVE3-R7 LP+SAMPLE | NEXT: 24 workers K=40 oracle + n=0..6 exact samples on gap<=3 / dim_lo>=9 r=7 triples until 12:36Z
+[2026-07-21T12:05Z] ✔ KTT-W3-dim10-lp-census-r6 | DID: 20000 screens + 2400 analyze | RESULT: 175 certified dim>=9 (147 d9, 28 d10), maxden=2 in 400/2400, maxden>=3 zero, best c-dim_lo=+3 | Δ: none
+2026-07-21T15:01:34+03:00 ✔ WAVE3-KTT GA gen33 | DID: 246 evaluated dim>=8 individuals | RESULT: elite a1=1279/420 (dim 8, c=12) unchanged since gen1 | Δ: none
+[2026-07-21T12:03:17Z] ► W3-lowc-exhaustive-smallnu STAGE2 | NEXT: hive_poly.analyze on 8129 stratified keeps + 3600 orbit-mined neighbours of the 66 certified maxden=2 non-lattice seeds
+[2026-07-21T12:03:51Z] ✔ KTT-W3-thinhigh | DID: 396 triples through screen+certified-dim detector (r6 308/r7 88) | RESULT: NO_HIT, min c-dim_lo=1 (173 witnesses), 13 maxden=2 non-integrality certs, sharpest lam=7,5,4,3,2,1 mu=9,8,5,5,3,1 nu=16,12,9,8,5,3 c=6 dim=5 den=2 | Δ: c<=deg still never entered
+[2026-07-21T12:03:51Z] ✔ KTT-W3-thinhigh | DID: diagnosed 40x throughput loss | RESULT: BLAS oversubscription (6 workers x full-width threads on saturated 64C box); OMP/OPENBLAS/MKL=1 fixes it | Δ: swarm-wide advisory
+[2026-07-21T12:52Z] ✔ KTT-W3-dim10-lp-census-r6 | DID: 43 exact profiles (16 deg-10, 27 deg-9) all held-out verified | RESULT: 0 negative coeffs, 0 negative h*, h*-support subset {0..3} in 43/43, max Sum h*=130 | Δ: NO_HIT
+[2026-07-21T12:07:40Z] ✔ W3-NEARMISS-ORBIT-REMINE-W12 | DID: r5 orbit full-exact track (26457 triples, n=0..8, held-out n=7,8) | RESULT: 0 negative coeffs, 0 degree anomalies, 0 fat-skips; max deg by c reconfirms deg<=c-1 and odd-c<=5 parity wall
+[2026-07-21T12:07:40Z] ✔ W3-NEARMISS-ORBIT-REMINE-W12 | DID: cohort-(c) re-quote under LR_HIVE_NODE_CAP=2e10 (879/2998 done) | RESULT: 296 ARTIFACT (33.7% of wave-1/2 skips were node-cap artifacts), 573 THINSKIP, 10 ERROR
+2026-07-21T15:08:36+03:00 ✔ W3-SELFCONJ-R6R7 | DID: complete r=6 self-conj census (6295 triples) + r=7 sample; 852 exact profiles (n=0..D+2, held-out) | RESULT: 0 negative coeffs, 0 anomalies, min h*=0 in 848/848, maxden spectrum r6{1,2,3} r7{1,2,3,4}, 0/1191 affine triangle symmetries | Δ: none (no hit)
+[2026-07-21T14:05:00+03:00] ✔ KTT-W2TAIL | DID: 4 limit-killed wave2 hunters re-ran + wave3 designed | RESULT: w2 tail 0 hits (c456 mid-shell census EXHAUSTIVE 29712059 triples W=22..34); wave3 3/14 done, 0 hits | Δ: none
+[2026-07-21T14:06:00+03:00] ✔ KTT-CAPFIX | DID: cap 2e5->4e6 for wave3+ | RESULT: r=6 deg-9/10 stratum REACHED first time (dim10-lp-census 43 profiles, 16 at deg 10); dead verdict: h*-support subset {0,1,2,3}, sum h*<=130 blocks negativity there | Δ: virgin stratum now measured
+[2026-07-21T12:15:18Z] v W3-HORN-DEGEN-R6 | DID: 9509 exact hive-vertex degeneracy analyses + 209 exact deg-7/8/9 profiles + 45 h*-prefix screens on non-lattice triples | RESULT: 0 negative coefficients, 0 degree anomalies, max vertex |det|=4 and denominator=4 (only at c>=22), min c-dim_lo=1 | D: NO_HIT, manifest.json written
+[2026-07-21T15:20:00Z] ✔ W3-FRACVERTEX-R6 | DID: 40000 screened / 11778 analyzed (K=40) / 32 deep profiles n=0..12 | RESULT: NO_HIT; maxden ceiling 3 (never 4), maxdet<=4, deficiency c-(dim+1) min 0 (never neg), 0 neg coeffs, 0 neg h*, 0 anomalies; deg-10 r=6 profile reached | Δ: none
+[2026-07-21T12:21:28Z] ✔ W3-lowc-exhaustive-smallnu DONE | DID: 9288190 exhaustive screens (r=6,7,8 x |nu|=18..24) + 11712 hive_poly.analyze + 11643 h*-prefix + 40 deep profiles | RESULT: 0 hits, min(c-dim_lo)=1, min h*_j=0, 352 certified maxden=2 non-lattice, 0 anomalies | Δ: cells w18-24 exhausted, c<=dim never reached
+[2026-07-21T15:22:31+03:00] ✔ wave3 dim10-lowc-frontier-r6 | DID: 16689 screens, 172 dim-10 triples, 6 certified deg-10 profiles n=0..12 | RESULT: 0 negative coeffs, min c at dim10 = 16 (lam=12,6,5,3,2,1 mu=8,7,6,3,2,1 nu=14,13,12,7,6,4) | Δ: none
+[2026-07-21T15:50:00Z] ✔ KTT-W3-oddc-fulldeg-parity-r6 | DID: 700k exact n=1 screens + 10188 exact LP-vertex analyses + 68 verified full profiles + 147 dim-10 h*-prefix profiles | RESULT: NO_HIT; 0/6776 odd-c reach dim 10; dim-10 c in {16,20,24} only, 5 distinct h*; manifest.json written | Δ: KTT conjecture untouched, parity wall extended r=5->r=6
+[2026-07-21T13:25Z] ✔ WAVE3-CONTROL | DID: hunter random-thin-control-w3 (seed 4412, 30000 unbiased draws, cap 4e6, 6-16 workers) | RESULT: 5506 triaged, 111 complete deep profiles, 0 negative coefficients, 0 degree anomalies, min h*=0, min(c-dim_lo)=+1, maxden>=2 280/5506, manifest runs/wave3_random-thin-control-w3/manifest.json | Δ: none (control null model, no KTT evidence)
+[2026-07-21T15:25:30+03:00] ✔ WAVE3-KTT stair6 | DID: 10782 hive_poly analyses + 283 deep profiles (cap 1e18, node cap 2e10) | RESULT: deg-10 r=6 stratum REACHED (18 clean deg-10, 42 deg-9); 0 negative coeffs, 0 h*<0, min c-dim_lo=1 | Δ: wave-1 'unreachable' claim refuted
+[2026-07-21T12:25:32Z] ✔ W3-NEARMISS-ORBIT-REMINE-W12 | DID: 431 deep r=6 profiles (358 at deg 9, n=0..12 with held-out 11,12) + manifest | RESULT: 0 negative coeffs, 0 anomalies; 354/358 deg-9 collapse to one poly h*=(1,2,1,0..0)
+2026-07-21T15:31:05+03:00 ✔ WAVE3-KTT hstar-gradient-evolver-r6 | DID: 7248 triples screened, 609 h*-evaluated (dim_lo>=8), 119 gens, 8 deep profiles | RESULT: NO_HIT, 0 neg coeffs, 0 anomalies, min a_1=761/280=H_8 at P(n)=C(n+8,8); manifest.json written | Δ: family dead (a_1-min attractor = unimodular simplex)
+2026-07-21T12:42:18Z ✔ WAVE3-R7-THIN-HIGHDIM | DID: 150000 n=1 screens + 2258 hive_poly K=40 LP analyses + 469 exact P(0..6) tables (376 complete, 93 THINSKIP) | RESULT: 0 hits, 0 lattice-ineq certs, 0 h*<0, min(c-dim_lo)=1 | Δ: none
+2026-07-21T12:42:18Z ✔ WAVE3-R7 STRUCTURE | DID: checked 19 fully-profiled gap-1 r=7 triples | RESULT: all 19 have P(n)=C(n+dim_lo,dim_lo) exactly n=0..6 (unimodular simplices); maxden=3 in 3/2258 | Δ: none
+2026-07-21T12:42:18Z ✘ WAVE3-R7 DEAD | DID: arithmetic check of mandated dim_lo>=10 stratum vs cap 4e6 | RESULT: P(17)>=C(27,10)=8436285>4e6 so held-out D+2 is CAP_EXCEEDED by arithmetic for every mandated triple | Δ: family closed NO_HIT
+[2026-07-21T15:47:17+03:00] ✔ WAVE3-KTT stair6-interleave-dimgated-r6 CLOSED | DID: 5262089 enumerated, 10782 analyze, 330 deep profiles (319 clean, 154 dim>=9, 66 deg-10) | RESULT: 0 hits, 0 anomalies, 0 h*<0, min(c-deg)=1, max sum h*=478 | Δ: none
+[2026-07-21T16:20:00+03:00] ✔ KTT-WAVE3 | DID: wave3 14/14 (cap 4e6) | RESULT: 349826206 triples, 0 hits; deg-9/10 r=6 stratum profiled (16 deg-10); h*_1=c-d-1 => deg<=c-1 is a THEOREM not a law; Stanley h*>=0 makes w1 h*-forensics vacuous | Δ: c<=12 filter falsified as target region
+[2026-07-21T16:21:00+03:00] ► KTT-PIVOT | NEXT: stop run, inject wave4 directive: drop c<=12 filter; hunt (A) non-lattice hive polytopes (vertex denom>=2, Stanley h*>=0 void) and (B) Reeve regime h*_1=0 with large h*_2; use certified dim for sampling
+[2026-07-21T16:35:00+03:00] ✔ KTT-PIVOT | DID: wave4 directives injected (c<=12 filter retired; Route R h*_1=0 max-volume Reeve regime; Route N fractional-vertex dim>=6; certified-dim sampling) | RESULT: node --check clean, waves1-3 prompts byte-identical=cached | Δ: search region redefined
+[2026-07-21T13:04:10Z] ► W4-HIVE-SIMPLEX-DET-MINE | NEXT: run engine sanity gate (hive_poly selftest, A/B agreement on KTW c=1 and c=2 triples, interp selftest)
+[2026-07-21T13:04:23Z] ► W4-S3SYM | NEXT: preflight S_3 complement-convention check (20 random r=6 triples) with engine A
+2026-07-21T13:04:49Z ► W4-maxden-highc-dim9-r6 | NEXT: run engine sanity gate (hive_poly --selftest, interp --selftest, A/B c=1,c=2 agreement) before any hunting
+2026-07-21T16:04:59+03:00 ► W4-R6DIM10 | NEXT: sanity gate PASSED (KTW c=1, IS c=2, A==B, hive_poly+interp selftests); building ROUTE-R r=6 weight-ladder generator, seed 4502
+[2026-07-21T13:05:01Z] ► W4-ASYM-CORNER | NEXT: build generator for unbalanced |lam|/|mu| in [5,25], r in {5,6}, box-transport nu, seed 4513
+2026-07-21T13:05:32Z ✔ W4-maxden-highc-dim9-r6 | DID: sanity gate | RESULT: hive_poly SELFTEST PASS, interp ALL PASS, A=B on c=1 (P=1) and c=2 (P=n+1) n=1..4 | Δ: none
+[2026-07-21T13:05:35Z] ► W4-R-oddc-hstar2-r5 | NEXT: build generator+screen driver for r=5 odd-c dim-6 h*_2 hunt (seed 4506), engines A/B/interp/hive_poly sanity PASSED
+[2026-07-21T15:05:00Z] > W4-HUNT hstar1-le2-dim9-10-prime-cell-r6 | NEXT: build seed-4503 generator (6-part strict-decr pool |lam| in [24,40]) + engine-A screen cap 40, then hive_poly dim certification
+[2026-07-21T16:52:00+03:00] ✔ KTT-W4DESIGN | DID: wave4 designed post-pivot | RESULT: 8 Route-R + 5 Route-N + 1 control; c-filter lifted (one family c in [13,201]); derived exact d=6 criterion 24h*_2+12h*_4>1764 and h*_2 from P(2) alone; det-mine family needs no LR counting | Δ: none
+[2026-07-21T13:06:05Z] ► W4-CONTROL heavy-unbiased-statistic-control-w4 | NEXT: write seed-4514 3-stream unbiased sampler (r 40/40/20, |lam|,|mu| in [20,60], dominance-rejected nu) and pilot 200 draws to calibrate screen cost
+[2026-07-21T13:06:46Z] ✔ W4-S3SYM | DID: preflight sanity gate + S_3 convention check (32 triples, 16 nonzero) | RESULT: SANITY PASS; REV complement sigma*_i=N-sigma_(r+1-i) gives c^{sigma*}_{lam,mu}=c^{lam*}_{mu,sigma}=c^{mu*}_{sigma,lam} 32/32, 0 mismatches | Δ: convention fixed=REV
+[2026-07-21T13:07:23Z] ► KTT-W4-maxden-ladder-fulldim-r5 | NEXT: launch Route-N maxden hill-climb (r=5, K=45, seed 4508, 7 rounds) after engine gate PASS (KTW c=1, Ikenmeyer c=2, A=B) and hive_poly_ext crosscheck PASS
+2026-07-21T13:08:16Z ► W4-maxden-highc-dim9-r6 | NEXT: analyze K=40 all 2809 screened r=6 triples (c in [20,150]) on 16 workers to build joint (q,dim) table
+2026-07-21T13:09:03Z ► W4-nonsimple-vertex-excess | NEXT: stage-2 orbit mining around top-50 E_rel r=6 configs after stage-1 (4558 analyzed, E/q correlation monotone, q=3 x10)
+2026-07-21T13:09:03Z ► W4-nonsimple-vertex-excess | NEXT: h*-prefix on 10 q=3 triples + stage-2 orbit mining | stage1: 6000 gen, 4558 c>=3, 4558 analyzed, P(q>=2) rises 0.00->0.78 with E_rel
+[2026-07-21T16:09:14+03:00] ► W4/near-disconnected-skew-degenerate-content | NEXT: generate+screen 60000 near-disconnected r5/r6 triples (engine A cap 20000) and apply engine-B product-model factorisation filter
+2026-07-21T13:09:19Z ✔ W4-maxden-highc-dim9-r6 | DID: analyze K=40 on 2809 triples | RESULT: 2809/2809 dim certified; joint(q,dim): q=2&dim>=9 = 200, q=2&dim=10 = 68; max q = 2 | Δ: none
+[2026-07-21T13:10:03Z] ✔ W4-HIVE-SIMPLEX-DET-MINE | DID: built engine/simplex_vol.py (exact vertex+Farkas facet certification, SNF volume, box-point h*) | RESULT: --selftest PASS; lam=8,5,4,3,2,1 mu=12,6,4,3,2,1 nu=14,13,7,7,7,3 CERTIFIED_SIMPLEX dim7 V=1 h*1=0, its LA-only polynomial reproduces engine A P(1,2,3)=8,36,120 | Δ: Route-R engine live
+[2026-07-21T13:22:00Z] ► W4-CONTROL | NEXT: launch 6-worker triage over 4800 unbiased draws (analyze K=30 + P(0..4) cap 4e6) from 24000 screened draws (7742 with c>=3, max c=40952, zero screen caps)
+2026-07-21T13:13:25Z ► W4-maxden-highc-dim9-r6 | NEXT: 32-worker h*-prefix P(1..5) over all 200 certified q=2 dim>=9 triples (cap 4e6, node cap 2e10, 300s/sample)
+[2026-07-21T15:35:00Z] v W4-HUNT screen | DID: 120000 engine-A screens cap 40 (2x60000, 3.8s total) + 3451/4344 hive_poly dim certifications | RESULT: 75 certified cell members (all c=12,dim=9,h*_1=2); zero dim-10; odd c never reached dim>=9 | d: none
+[2026-07-21T16:17:37+03:00] ✔ W4/near-disconnected | DID: screen 110000 cand -> 3503 non-factorising kept (5352 factorised discarded); analyze K=40 all 3503 | RESULT: q=3 x8, dim<=10; degenerate-mu cohort caps at dim 6/q2 | Δ: none
+[2026-07-21T13:18:03Z] > KTT-W4-rho-uncapped-margin-evolver | NEXT: island EA (6 islands, seed 4507) steered by exact margin M_d=-d!a_1, after replacing hive_poly dim oracle (falsified) with implicit-equality oracle
+[2026-07-21T16:20:00Z] ✔ W4-R-oddc-hstar2-r5 | DID: 320000 engine-A screens, 7663 hive_poly dim-certs, 2982 exact dim-6 profiles P(0..8) | RESULT: 0 hits, 0 DEGREE_ANOMALY, deg=6 all; max h*_2=31333 (423x74), max Sum h*=183552 | Δ: none
+[2026-07-21T16:20:30Z] ✔ W4-R-oddc-hstar2-r5 | DID: M6=-720a_1 ceiling by c-band | RESULT: max M6=-2232 at c=13, monotone down to -8664 at c=1521 -> route R wrong-way; manifest.json written | Δ: family dead
+[2026-07-21T13:20:12Z] ✔ W4-HIVE-SIMPLEX-DET-MINE | DID: constrained h*-target computation (pairing bound 2*sum j h*_j <= (V-1)(d+1), h*_d<=h*_1) | RESULT: cheapest negative-coeff h* is Reeve-type h*_1=0: d=3 V>=13 [1,0,12,0], d=5 V>=19, d=7 V>=25 | Δ: Route R target sharpened to empty simplices with V>=13
+2026-07-21T13:21:05Z ✔ W4-maxden-highc-dim9-r6 | DID: deep-K=250 vertex pass on 96 top (q,dim) triples | RESULT: q=3 certified at dim 9, vertex 167/3,188/3,69,... lam=23,16,7,6,5 mu=17,17,6,5,4,1 nu=39,32,13,11,10,2 | Δ: first r=6 q=3 at dim>=9
+[2026-07-21T13:21:05Z] ✔ W4-S3SYM | DID: exhaustive LP census r=6 S_3-fixed locus N=8..20 (4463 nonzero) + 975 control shell | RESULT: fixed dim_lo in {0,1,2,4,7,10} ONLY (dim_lo=dim_hi 4463/4463), maxden q=3 rate 5.0% vs control 1.2%; Z/3 invariance 4463/4463 | Δ: q=3 enrichment 4.1x confirmed
+[2026-07-21T13:21:29Z] ✔ W4-ASYM-CORNER | DID: 9000 screens + 2248 LP analyses + 308 verified full profiles (r=5,6, R=5-25) | RESULT: 0 negative coeffs, 0 anomalies unresolved, min h*=0, best rho=14.36 (deg9 c28 SumH*=402 q=2); rho FALLS with R (1.37/1.00/0.53) | Δ: corner closed
+[2026-07-21T13:23:28Z] ✔ KTT-W4-maxden-ladder-fulldim-r5 | DID: 6610 exact vertex certifications (r=5, K=45) + 920 exact stretched profiles + exhaustive 6-row basis LP test | RESULT: max q=2 (never 3), all 5682 bases with |det|>=3 LP-certified degenerate-only, 0 negative h*, 0 negative coeffs, Sum h* max 2220 | Δ: family target q>=4 at dim 6 falsified-in-practice; artifacts runs/wave4_maxden-ladder-fulldim-r5/
+2026-07-21T13:23:28Z ► W4-maxden-highc-dim9-r6 | NEXT: extend h*-prefix to j=8 on the two q=3 dim-9 triples (h* = 1,25,161,260,104,6 drops steeply; h*_6 is the negativity frontier)
+[2026-07-21T17:05+03:00] ✔ KTT-W4 c-eq-dim-plus-1-heavy-r5 | DID: exhaustive r=5 heavy non-staircase pool (14938799 screens, 10153 lam/mu pairs) + exact interior-point full-dim certification | RESULT: Route-R cell c=7&dim=6 EMPTY (0/250459 full-dim; c=9 0/123631, c=11 0/150338); 2121 certified dim-6 triples profiled n=0..8, all h*=(1,c-7,0,0,0,0,0), max Sum h*=6 vs 37 needed, max h*_2=0 vs 74 needed; 0 hits, 0 anomalies, B-audit 55/55 | Δ: family DEAD; manifest problems_external/ktt_lr_negativity/runs/wave4_c-eq-dim-plus-1-heavy-r5/manifest.json
+2026-07-21T13:26:56Z ► W4-maxden-highc-dim9-r6 | NEXT: raise cap 4e6->4e7 for P(8),P(9) on q=3 dim-9 triple lam=23,17,7,6,4 mu=17,17,6,5,4,1 nu=39,32,13,11,10,2 (h*=1,42,388,892,534,60,0,0)
+[2026-07-21T16:27:00+03:00] ✔ W4/near-disconnected-skew-degenerate-content | DID: 5695 triples oracle-analyzed, 756 h*-prefixes, 13 full profiles, 3 orbit rounds | RESULT: NO_HIT; 267 certified q=3 non-lattice hive polytopes (24 at dim 10, |det|=3), 0 negative h*, best Sum h*=240 (c=48,d=6,q=3) | Δ: none
+[2026-07-21T13:29:25Z] ✔ W4-S3SYM | DID: exhaustive exact profiles dim4/dim7 fixed locus (932 polys) + 300 shell + 16 anomaly rechecks | RESULT: 0 negative monomial coeffs, 0 negative h*, 16 shell DEGREE_ANOMALYs all resolved as dim_lo under-estimates (re-profiled at D=10, all match) | Δ: none
+[2026-07-21T13:32:00Z] ✔ W4-CONTROL | DID: engine-B cross-check of DEGREE_ANOMALY idx20 (19,11,10,7,3 / 16,5,1,1,1 / 28,17,15,8,4,2, c=14) | RESULT: A=B all n=1..8; true deg 7 not oracle dim 6; all coeffs positive; anomalies/anom_idx20_record.json | Δ: none (not a hit)
+[2026-07-21T16:45:00Z] v W4-HUNT hstar1-le2-dim9-10-prime-cell-r6 DONE | DID: 160000 screens, 8536 certified dims, 511 cell members, 270 h*-ladders, 9 full deg-9 profiles (n=0..11, held-out matched) | RESULT: 0 hits, 0 anomalies; max Sum h*=4 at h*_1=2; h*_1 in {0,1} EMPTY; dim-10 EMPTY; threshold h*_2>=204 | d: route R at r=6 refuted arithmetically (gap 4 vs 204)
+2026-07-21T16:32:00+03:00 ✔ W4-R6DIM10 | DID: 1359-triple r=6 ladder screen + 1049 dim certs | RESULT: dim hist 9:380 10:114, 92 maxden=2, min h*_1=6 in dim>=9, 487 h*_2 measured | Δ: stratum mapped
+2026-07-21T16:32:00+03:00 ► W4-R6DIM10 | NEXT: 12 full dim-9 profiles n=0..11 (8-rung c=16 ladder + h*_2=171/282/300/533 at cap 4e7), exact interp + held-out
+[2026-07-21T13:33:15Z] ✔ W4-HIVE-SIMPLEX-DET-MINE | DID: 7171 exact hive-polytope analyses, 2171 certified simplices w/ complete exact h* | RESULT: 0 negative coeffs, 0 fractional simplices, (h*_1,V) law h*_1=0 => V=1 in 1886/1886; manifest.json written | Δ: Route R exhausted under filters
+2026-07-21T13:33:17Z ✔ W4-nonsimple-vertex-excess-r6-r7lift | DID: 7373 r=6 + 2410 r=7 analyses, 5 orbit rounds, 59 h*-prefixes, 8 full dual-checked profiles | RESULT: 0 hits, 0 anomalies; max q=5 (r=7, dim 14, verified vertex, CERT_fractional_q4_q5_r7.json), max E_rel=31; every h*>=0 | delta: none
+2026-07-21T13:34:33Z ✔ W4-maxden-highc-dim9-r6 | DID: P(8)=4627524 at cap 4e7 (184s) for q=3 dim-9 c=52 triple | RESULT: h*_0..8 = 1,42,388,892,534,60,0,0,0 (Sum=1917), NO negative entry | Δ: none
+2026-07-21T13:38:56Z ✔ W4-maxden-highc-dim9-r6 | DID: P(9) at cap 4e7 | RESULT: CAP_EXCEEDED after 318s (P(9)>4e7) => h*_9 unreachable; family closes with 0 hits, 0 anomalies, max q=3 | Δ: none
+[2026-07-21T13:41:13Z] ✔ W4-HUNT reeve-weight-ladder-r5 | DID: 5-arm exact sweep (ladder/beam/census/exhaust/a1-margin) | RESULT: 2264 unique triples profiled, 0 negative coeffs, 0 anomalies, max M6=-1884 at d=6, ladder saturates by t<=2 (P bit-identical) | Δ: Reeve-via-weight-scaling mechanism falsified in hives
+[2026-07-21T13:48:13Z] v KTT-W4-rho-uncapped-margin-evolver | DID: 9708 triples screened, 4750 exact full profiles (d<=6) | RESULT: NO HIT; best margin = unimodular value -d!H_d at every d; hive_poly.analyze dim oracle FALSIFIED (3 held-out mismatches, anomalies.json) | D: none
+[2026-07-21T13:57:00Z] ✔ W4-CONTROL | DID: 4800 unbiased measurements + 1110 full profiles | RESULT: 0 verified negative coeffs, 0 negative h*_j; 41/1110 DEGREE_ANOMALY (oracle dim_hi underestimate), 24 of them showed SPURIOUS negative coeffs | Δ: none

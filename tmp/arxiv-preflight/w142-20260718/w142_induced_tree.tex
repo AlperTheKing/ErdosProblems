@@ -1,0 +1,581 @@
+% A proof of Graffiti.pc Conjecture 142 (WOWII):
+% t(G) >= (2/3)g(G) + ecc(G,Periphery(G)).
+\documentclass[11pt]{article}
+\ifdefined\XeTeXversion\else\pdfoutput=1\fi
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\Urlmuskip=0mu plus 1mu\relax
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\tr}{\operatorname{t}}
+\newcommand{\gr}{\operatorname{g}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\ecc}{\operatorname{ecc}}
+\newcommand{\Per}{\operatorname{Per}}
+\newcommand{\dist}{\operatorname{dist}}
+
+\title{Largest induced trees, girth, and distance from the periphery:\\
+a proof of Graffiti.pc's Conjecture 142}
+\author{Alper Ferudun\\\texttt{alper@mercurycodelab.com}}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a finite simple connected graph $G$, let $\tr(G)$ be the largest order of
+an induced subgraph that is a tree, let $\gr(G)$ be the girth, let
+$\Per(G)$ be the set of peripheral vertices, and put
+$f(G)=\max_{x\in V(G)}d(x,\Per(G))$.  We prove
+\[
+  \tr(G)\ge \frac{2}{3}\gr(G)+f(G),
+\]
+which is Conjecture~142 of the conjecture-making program Graffiti.pc
+(DeLaVi\~na, \emph{Written on the Wall II}, 2005).  In the cyclic case we
+prove the stronger integral form
+$\tr(G)\ge f(G)+\lceil2\gr(G)/3\rceil$.
+The main ingredient is a rooted shortest-cycle lemma: in a graph of girth at
+least five, any three prescribed vertices can be placed in a tree obtained
+from a shortest cycle by deleting one cycle vertex and attaching an
+admissible induced forest.  A three-point metric estimate then reduces the
+result to exact arithmetic, with one extremal family handled separately.
+\end{abstract}
+
+\section{Introduction}
+
+Graffiti.pc, developed by DeLaVi\~na~\cite{DeL01,DeLhistory} as a successor
+of Fajtlowicz's Graffiti program~\cite{Faj88}, generates conjectural
+inequalities among graph invariants.  Its conjectures are collected in
+\emph{Written on the Wall II}~\cite{WOWII}; a curated selection is maintained
+by West~\cite{WestReg}.  Several consecutive entries concern the maximum
+order of an induced tree, an invariant systematically studied by Erd\H{o}s,
+Saks, and S\'os~\cite{ESS86}.
+
+Let $G$ be a finite simple connected graph.  The \emph{periphery}
+$\Per(G)$ is the set of vertices of eccentricity $\diam(G)$, and the
+set-eccentricity of the periphery is
+\[
+ f(G):=\max_{x\in V(G)} d(x,\Per(G)).
+\]
+Conjecture~142 of Written on the Wall II asserts
+\[
+  \tr(G)\ge \frac23\gr(G)+f(G).
+\]
+Here and in the formal statement, the girth of an acyclic graph is taken to
+be zero.  We prove the following stronger cyclic statement.
+
+\begin{theorem}[Graffiti.pc Conjecture 142]\label{thm:main}
+Let $G$ be a finite simple connected graph containing a cycle.  If
+$g=\gr(G)$ and $f=f(G)$, then
+\[
+  \tr(G)\ge f+\left\lceil\frac{2g}{3}\right\rceil .
+\]
+Consequently every finite simple connected graph satisfies
+$\tr(G)\ge \frac23\gr(G)+f(G)$.
+\end{theorem}
+
+The proof is self-contained apart from elementary facts about finite graphs.
+Its structural core is Lemma~\ref{lem:rooted-cycle}, which turns three metric
+terminals into an admissible forest attached to a shortest cycle.  The
+resulting metric inequality, Lemma~\ref{lem:three-point}, is then combined
+with a short classification of the equality case in which the admissible
+forest has only one vertex.
+
+\section{Preliminaries}
+
+Write $D=\diam(G)$ and $B=\Per(G)$.  A shortest path is induced, so
+\begin{equation}\label{eq:diam-path}
+  \tr(G)\ge D+1.
+\end{equation}
+A shortest cycle $K$ is chordless and isometric: for $u,v\in V(K)$, their
+graph distance equals their shorter arc-distance in $K$.  Deleting one
+vertex of $K$ therefore gives
+\begin{equation}\label{eq:cycle-base}
+  \tr(G)\ge g-1.
+\end{equation}
+If $f\ge1$, then
+\begin{equation}\label{eq:D-f}
+  D\ge f+1.
+\end{equation}
+Indeed, always $f\le D$; equality would give a vertex $x$ at distance $D$
+from every peripheral vertex, hence $\ecc(x)=D$ and $x\in B$, contradicting
+$f=d(x,B)\ge1$.
+
+For a shortest cycle $K$, define $M(K)$ to be the maximum of $|F|$ over all
+sets $F\subseteq V(G)\setminus V(K)$ for which $G[F]$ is a forest and there
+is a vertex $z\in V(K)$ such that every component $C$ of $G[F]$ sends
+exactly one edge into $V(K)\setminus\{z\}$.  Edges from $C$ to $z$ are
+unrestricted.
+
+\begin{lemma}[Cycle--forest extension]\label{lem:cycle-forest}
+For every shortest cycle $K$,
+\[
+  \tr(G)\ge g-1+M(K).
+\]
+\end{lemma}
+
+\begin{proof}
+Choose $F,z$ realizing $M(K)$ and let $c$ be the number of components of
+$G[F]$.  The graph induced by
+$(V(K)\setminus\{z\})\cup F$ is connected.  Its edges consist of the $g-2$
+edges of the path $K-z$, the $|F|-c$ forest edges, and one attachment edge
+for each of the $c$ components.  Thus it has $g-1+|F|$ vertices and one
+fewer edge, and hence is a tree.
+\end{proof}
+
+\begin{lemma}[An extra cycle vertex]\label{lem:extra}
+Suppose $f\ge1$.  If $g\ge4$, then $\tr(G)\ge g$; if $g\ge5$, then
+$M(K)\ge1$ for every shortest cycle $K$.
+\end{lemma}
+
+\begin{proof}
+If $V(G)=V(K)$, chordlessness and connectedness give $G=C_g$, whose every
+vertex is peripheral, contrary to $f\ge1$.  Hence some vertex $y\notin K$
+is adjacent to $K$.  When $g\ge5$, it has exactly one neighbour on $K$:
+two neighbours and the shorter arc between them would form a cycle of
+length at most $\lfloor g/2\rfloor+2<g$.  Taking $F=\{y\}$ and deleting a
+cycle vertex other than its root proves both assertions.  For $g=4$, the
+only additional possibility is that $y$ has two antipodal neighbours on
+$K$; deleting one of them again leaves an induced tree on four vertices.
+\end{proof}
+
+We shall also need two elementary connector lemmas.
+
+\begin{lemma}[Three terminals]\label{lem:three-tree}
+Every three distinct vertices of a connected triangle-free graph lie in a
+common induced tree.
+\end{lemma}
+
+\begin{proof}
+Let $P$ be an $a$--$b$ geodesic and let $R=r_0\cdots r_\ell$ be a shortest
+path from $c=r_0$ to $P$, where $c\notin P$.  Put $q=r_{\ell-1}$ and
+$R^\circ=R-r_\ell$.  Only $q$ can have additional neighbours on $P$.
+Any two such neighbours have $P$-distance at most two, and triangle-freeness
+excludes distance one; hence $q$ has at most two neighbours on $P$.
+With one neighbour, $P\cup R^\circ$ induces a tree.  With two neighbours
+$u,v$, their $P$-subpath is $u m v$; deleting $m$ joins the two components
+of $P-m$ through $q$ and yields a connected induced graph with one fewer
+edge than vertices.  Since $m\notin\{a,b\}$, this is the required tree.
+\end{proof}
+
+\begin{lemma}[Cycles in a minimal connector]\label{lem:minimal-connector}
+Let $J$ be connected and $Q\subseteq V(J)$.  If no proper induced connected
+subgraph of $J$ contains $Q$, then every cycle $L$ of $J$ has
+$|V(L)|\le |Q|$.
+\end{lemma}
+
+\begin{proof}
+For every $q\in Q$, choose a shortest path from $q$ to $L$, and denote its
+unique first vertex on $L$ by $c(q)$.  Fix $v\in L$.  The path $L-v$ lies
+in one component $J_v$ of $J-v$.  Minimality implies that some
+$q_v\in Q$ is outside $J_v$.  Its chosen path to $L$ must therefore end at
+$v$, so $c(q_v)=v$.  Distinct vertices of $L$ give distinct terminals,
+which injects $V(L)$ into $Q$.
+\end{proof}
+
+\section{A rooted shortest-cycle lemma}
+
+\begin{lemma}[Rooted shortest cycle]\label{lem:rooted-cycle}
+Assume $g\ge5$, and let $S\subseteq V(G)$ with $|S|\le3$.  There exist a
+shortest cycle $K$, a vertex $z\in V(K)\setminus S$, and a set
+$F\subseteq V(G)\setminus V(K)$ such that
+\[
+ S\subseteq (V(K)\setminus\{z\})\cup F,
+\]
+$G[F]$ is a forest, and every component $C$ of $G[F]$ satisfies
+\[
+ e(C,V(K)\setminus\{z\})=1.
+\]
+\end{lemma}
+
+\begin{proof}
+The empty case is immediate.  Fix an arbitrary shortest cycle $K$, and
+choose $X\supseteq V(K)\cup S$ of minimum cardinality such that
+$H:=G[X]$ is connected.
+
+Every component $C$ of $H-V(K)$ contains a terminal.  Indeed, it has an
+edge to $K$, since $H$ is connected; if $S_C:=S\cap V(C)$ were empty, the
+whole component could be deleted while preserving connectedness and all
+required vertices.  Put
+\[
+ A_C:=\{a\in V(C):N_G(a)\cap V(K)\ne\varnothing\}.
+\]
+Form $J_C$ from $G[C]$ by adjoining a new vertex $r_C$ adjacent precisely
+to $A_C$.  This graph is vertex-minimal among induced connected subgraphs
+containing $S_C\cup\{r_C\}$.  Otherwise, replacing $C$ by a smaller
+connector would leave every resulting component attached to $K$ and would
+contradict the choice of $X$.
+
+Lemma~\ref{lem:minimal-connector} shows that every cycle in $J_C$ has length
+at most $|S_C|+1\le4$.  A cycle contained in $G[C]$ would also be a cycle of
+$G$ and would have length at least $g\ge5$.  Consequently
+\begin{equation}\label{eq:C-tree}
+  G[C]\text{ is a tree}.
+\end{equation}
+
+Let $R_C$ be the minimal subtree of $C$ containing $A_C$.  We claim
+\begin{equation}\label{eq:R-small}
+  |V(R_C)|\le |S_C|.
+\end{equation}
+For $v\in V(R_C)$, let $Q_v$ be the component of $J_C-v$ containing $r_C$.
+Minimality supplies $s_v\in S_C\setminus V(Q_v)$.  For $s\in S_C$, let
+$c(s)$ be the first vertex of $R_C$ on the unique path from $s$ to $R_C$.
+Every nonempty component of $R_C-v$ contains a vertex of $A_C$, by the
+minimality of $R_C$.  Thus, if $v\ne c(s)$, the path from $s$ to $c(s)$ and
+then to such an attachment gives an $s$--$r_C$ path in $J_C-v$; hence
+$s\in Q_v$.  Applying this to $s_v$ gives $c(s_v)=v$.  The map
+$v\mapsto s_v$ is injective, proving~\eqref{eq:R-small}.
+
+Every $a\in A_C$ has exactly one neighbour on $K$.  Existence follows from
+the definition, while two distinct neighbours and their shorter $K$-arc
+would form a cycle of length at most $\lfloor g/2\rfloor+2<g$.  Denote the
+unique root by $\rho(a)$.  If $a,a'\in A_C$ are distinct, then
+\begin{equation}\label{eq:attachment-distance}
+ d_C(a,a')\le |V(R_C)|-1\le2
+\end{equation}
+and their roots are distinct: equal roots, together with the
+$a$--$a'$ path in $C$, would form a cycle of length at most four.  Moreover,
+the two root edges, that path, and a shorter arc of $K$ give
+\begin{equation}\label{eq:girth-roots}
+ d_K(\rho(a),\rho(a'))+d_C(a,a')+2\ge g.
+\end{equation}
+
+These inequalities sharply restrict the number of attachments.  If
+$g\ge9$, then two attachments would make the left side of
+\eqref{eq:girth-roots} at most $\lfloor g/2\rfloor+4<g$, so there is only
+one.  For $g\in\{7,8\}$, two attachments cannot be adjacent in $C$; three
+attachments would fill the three vertices of $R_C$ and contain an adjacent
+pair.  For $g=6$, if $R_C=p-q-r$ consisted of three attachments, applying
+\eqref{eq:girth-roots} to $p,q$ and to $q,r$ would force both $\rho(p)$ and
+$\rho(r)$ to be the unique antipode of $\rho(q)$ on the $6$-cycle,
+contrary to distinctness.  Thus every component has at most two
+attachments, except that for $g=5$ one component may have three.  Also, at
+most one component has two or more attachments, because such a component
+contains at least two terminals and $|S|\le3$.
+
+Suppose first that every component has one attachment $a_C$.  The set
+\[
+ Q=(S\cap V(K))\cup\{\rho(a_C):C\text{ a component of }H-V(K)\}
+\]
+has cardinality at most $|S|\le3$.  Since $g\ge5$, choose $z\in V(K)\setminus
+Q$ and take $F=X\setminus V(K)$.  Equation~\eqref{eq:C-tree} gives a forest,
+each component has its single attachment in $Q$, and $z\notin S$.
+
+Next suppose that one component $C_0$ has exactly two attachments with roots
+$u,v$.  It contains at least two terminals, so the set
+\[
+ Q=(S\cap V(K))\cup
+   \{\rho(a_C):C\ne C_0\}
+\]
+has size at most one.  Choose $z\in\{u,v\}\setminus Q$ and again put
+$F=X\setminus V(K)$.  Every ordinary component has one edge into $K-z$,
+while $C_0$ has exactly the two root edges and loses exactly one of them.
+Again $z\notin S$.
+
+It remains to handle three attachments.  Necessarily $g=5$,
+$|V(R_C)|=|S_C|=|S|=3$, there are no other off-cycle components, and
+$R_C=p-q-r$ with all three vertices attachments.  Write
+\[
+ u=\rho(p),\qquad v=\rho(q),\qquad w=\rho(r).
+\]
+Equation~\eqref{eq:girth-roots} gives $d_K(u,v)=d_K(v,w)=2$.  In cyclic
+order, write $K=u\alpha v\beta w u$.  Then
+\[
+  K'=u\alpha v q p u
+\]
+is another shortest $5$-cycle.
+
+The injection used to prove~\eqref{eq:R-small} is now a bijection.  Hence
+there are distinct terminals $s_p,s_q,s_r$ with $c(s_t)=t$.  Let $L_t$ be
+the unique $t$--$s_t$ path in the tree $C$, and set
+\[
+ F'=(V(L_p)\setminus\{p\})\cup
+    (V(L_q)\setminus\{q\})\cup V(L_r),
+ \qquad z=\alpha.
+\]
+The three displayed path-pieces are pairwise disjoint and anticomplete, for
+an edge between two of them would create a cycle in the tree $C$.  The first
+two nonempty pieces attach once to $K'$ at $p$ and $q$, respectively.  The
+third attaches once through the edge $rq$; its other old-cycle edge $rw$
+does not meet $K'$.  Thus $F'$ is admissible for $(K',z)$.  Finally each
+$s_t$ belongs either to its path-piece or, when $s_p=p$ or $s_q=q$, directly
+to $K'-z$.  This completes the exceptional case and the proof.
+\end{proof}
+
+\section{The three-point bridge}
+
+Let
+\[
+  \mu:=\max\{M(K):K\text{ is a shortest cycle of }G\}.
+\]
+
+\begin{lemma}[Three-point inequality]\label{lem:three-point}
+If $g\ge5$, then every three distinct vertices $a,b,c$ satisfy
+\begin{equation}\label{eq:three-point}
+ d(a,b)+d(b,c)+d(c,a)\le g+2\mu.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Apply Lemma~\ref{lem:rooted-cycle} to $S=\{a,b,c\}$ and obtain $K,z,F$.
+Retain all edges of $K$, all edges inside the components of $G[F]$, and each
+component's unique edge into $K-z$; omit possible edges to $z$.  The resulting
+spanning subgraph $U$ of $G[K\cup F]$ is a single cycle $K$ with rooted trees
+attached.  It has exactly $|F|$ edges outside $K$: a component with $k$
+vertices contributes $k-1$ internal edges and one root edge.
+
+For each pair of terminals, use their unique paths to their roots and a
+shortest arc of $K$ between the roots.  An off-cycle edge separates from its
+root $q$ of the three terminals.  If its rooted tree contains $h$ terminals,
+then its total multiplicity in the three selected paths is
+\[
+  q(h-q)+q(3-h)=q(3-q)\le2.
+\]
+Thus the total off-cycle contribution is at most $2|F|$.
+
+The sum of the three pairwise distances between any three roots on a cycle of
+length $g$ is at most $g$.  Indeed, if the roots are distinct and the three
+intervening arc-lengths are all at most $g/2$, their sum is exactly $g$; if
+one arc exceeds $g/2$, the other two provide the shorter route for its
+endpoints and the sum is smaller.  Coincident roots are immediate.  Hence
+the three chosen paths have total length at most
+$g+2|F|\le g+2M(K)\le g+2\mu$.  Graph distances can only be shorter.
+\end{proof}
+
+\begin{corollary}\label{cor:metric-mu}
+Assume $g\ge5$ and $f\ge1$.  Then
+\begin{equation}\label{eq:metric-mu}
+  2\mu+g\ge3f+1.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Choose $x$ with $d(x,B)=f$ and a diametral pair $b,w$.  Both $b,w$ are
+peripheral, so $d(x,b),d(x,w)\ge f$ and $d(b,w)=D\ge f+1$ by
+\eqref{eq:D-f}.  Apply Lemma~\ref{lem:three-point} to $x,b,w$.
+\end{proof}
+
+The estimate is almost sufficient by itself.  The only delicate integer
+case is disposed of by the following sharp classification.
+
+\begin{lemma}[The case $\mu=1$]\label{lem:mu-one}
+Assume $g\ge5$ and $f\ge1$.  If $\mu=1$, then $G$ is obtained from $C_g$ by
+attaching one pendant vertex to one cycle vertex.  Consequently
+\begin{equation}\label{eq:tadpole-f}
+  f\le\left\lfloor\frac{g+2}{4}\right\rfloor.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix a shortest cycle $K$.  Since $M(K)\le\mu=1$, no vertex can have distance
+two from $K$: the first two off-cycle vertices on a geodesic to $K$ would
+form an admissible two-vertex path.  Thus every vertex outside $K$ is
+adjacent to $K$, and by $g\ge5$ it has a unique root.
+
+There cannot be two such vertices $u,v$.  If they are nonadjacent, choose
+$z$ different from both roots; the two singleton components are admissible.
+If they are adjacent, their roots are distinct (otherwise there is a
+triangle), and choosing $z$ to be one root makes $\{u,v\}$ a connected
+admissible component.  Either way $M(K)\ge2$, a contradiction.  Since
+$f\ge1$, there is exactly one outside vertex, and $G$ is the stated tadpole.
+
+Put $k=\lfloor g/2\rfloor$, let $y$ be the pendant vertex, and let $v_0$ be
+its root.  The diameter is $k+1$; the periphery consists of $y$ and the cycle
+vertices at cycle-distance $k$ from $v_0$.  Every cycle vertex at position
+$i$ on one of the $v_0$--antipode arcs is at distance at most
+\[
+  \min(i+1,k-i)\le\left\lfloor\frac{k+1}{2}\right\rfloor
+  =\left\lfloor\frac{g+2}{4}\right\rfloor
+\]
+from the displayed peripheral vertices.  The pendant vertex itself is
+peripheral, proving~\eqref{eq:tadpole-f}.
+\end{proof}
+
+\section{Completion of the proof}
+
+\begin{proposition}\label{prop:large-girth}
+Theorem~\ref{thm:main} holds when $g\ge5$ and $f\ge1$.
+\end{proposition}
+
+\begin{proof}
+Put $a=\lfloor g/3\rfloor$.  Since
+$\lceil2g/3\rceil=g-a$, the target is
+\begin{equation}\label{eq:target-a}
+  \tr(G)\ge f+g-a.
+\end{equation}
+If $f\le a-1$, the cycle bound~\eqref{eq:cycle-base} gives
+$\tr(G)\ge g-1\ge f+g-a$.  Hence write $f=a+s$ with $s\ge0$.
+
+Lemma~\ref{lem:extra} gives $\mu\ge1$, while
+Lemma~\ref{lem:cycle-forest} gives $\tr(G)\ge g-1+\mu$.  It therefore
+suffices to prove
+\begin{equation}\label{eq:mu-goal}
+  \mu\ge s+1.
+\end{equation}
+Corollary~\ref{cor:metric-mu} and the three residues of $g$ give:
+\begin{align*}
+ g=3a   &: &2\mu&\ge3s+1,\\
+ g=3a+1 &: &2\mu&\ge3s,\\
+ g=3a+2 &: &2\mu&\ge3s-1.
+\end{align*}
+In the first case, $\mu\le s$ would imply $2\mu\le2s<3s+1$.
+In the second, $s=0$ is covered by $\mu\ge1$, while for $s\ge1$ we have
+$2s<3s$.  In the third, $s=0$ is again immediate, and $s\ge2$ gives
+$2s<3s-1$.
+
+The only remaining possibility is $g=3a+2$ and $s=1$.  If $\mu=1$,
+Lemma~\ref{lem:mu-one} yields
+\[
+ f\le\left\lfloor\frac{3a+4}{4}\right\rfloor\le a,
+\]
+because $a\ge1$, contradicting $f=a+1$.  Hence $\mu\ge2=s+1$.
+This proves~\eqref{eq:mu-goal}, and therefore~\eqref{eq:target-a}.
+\end{proof}
+
+\begin{proposition}\label{prop:small-girth}
+Theorem~\ref{thm:main} holds for $g=3$ and $g=4$ when $f\ge1$.
+\end{proposition}
+
+\begin{proof}
+For $g=3$, equations~\eqref{eq:diam-path} and~\eqref{eq:D-f} give
+$\tr(G)\ge D+1\ge f+2=f+\lceil2g/3\rceil$.
+
+Let $g=4$.  Choose an $f$-realizer $x$ and a diametral pair $b,w$.  The graph
+is triangle-free, so Lemma~\ref{lem:three-tree} supplies an induced tree $T$
+containing $x,b,w$.  Let $T_0$ be the minimal subtree containing them.  Every
+edge of $T_0$ lies on exactly two of the three terminal-to-terminal paths;
+therefore
+\[
+  2|E(T_0)|=d_T(x,b)+d_T(x,w)+d_T(b,w)
+   \ge 2f+D\ge3f+1.
+\]
+If $f\ge2$, then
+\[
+ |V(T)|\ge1+\left\lceil\frac{3f+1}{2}\right\rceil\ge f+3.
+\]
+If $f=1$, Lemma~\ref{lem:extra} gives $\tr(G)\ge g=4=f+3$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The preceding two propositions cover cyclic graphs with $f\ge1$.  If $G$ is
+cyclic and $f=0$, then $g-1\ge\lceil2g/3\rceil$ for $g\ge3$, so
+\eqref{eq:cycle-base} applies.  This proves the integral cyclic assertion.
+
+If $G$ is acyclic, connectedness makes $G$ itself a tree, so
+$\tr(G)=|V(G)|$ and $f\le D\le |V(G)|-1$ (with the one-vertex case
+immediate).  Since $\gr(G)=0$, the real-valued Formal Conjectures inequality
+also follows.  Finally,
+$\lceil2g/3\rceil\ge2g/3$, completing the proof.
+\end{proof}
+
+\section{Verification and formalization status}\label{sec:verification}
+
+The proof above was checked in two independent forms.  First, a separate
+constructive proof based on descents to an arbitrary shortest cycle was
+implemented literally: every branch produces its cycle vertex $z$, its
+admissible forest, or its induced path, and a fresh checker verifies
+inducedness, connectedness, acyclicity, edge multiplicities, and the claimed
+cardinality.  On a corpus of 10,776 connected cyclic graphs (the complete
+NetworkX atlas through seven vertices, structured extremal families, and
+seeded random and adversarial graphs through 32 vertices), the validator
+reported no failure.  Repeating every free choice with two independent
+random seeds again gave no failure, for 32,328 checked certificates in all.
+These computations are supporting checks, not a substitute for the proof.
+
+The exact statement of Conjecture~142 is formalized in the Google DeepMind
+\emph{Formal Conjectures} repository~\cite{FC,FC142}, using the repository's
+largest-induced-tree invariant, Mathlib's natural-valued girth, and the
+set-eccentricity of the boundary (peripheral) vertices.  A compiled Lean~4
+skeleton already closes the acyclic and $f=0$ branches, and the reusable
+cycle--forest extension API has been checked.  At the date of this draft, the
+rooted shortest-cycle lemma and the final cyclic branch have not yet been
+fully formalized; we therefore make no claim here of a completed Lean proof.
+
+\begin{remark}[Sharpness]
+Equality occurs throughout the $g=3$ diameter branch.  Among the exhaustively
+checked small graphs, the only equality class of girth greater than three is
+the $6$-cycle with one pendant vertex: here $f=2$ and
+$\tr(G)=6=f+\lceil2g/3\rceil$.  In the proof this is exactly the
+$\mu=1$ tadpole case of Lemma~\ref{lem:mu-one}.
+\end{remark}
+
+\paragraph{Acknowledgements.}
+The author thanks Ermelinda DeLaVi\~na and Douglas B.\ West for maintaining
+the Graffiti.pc conjecture lists, and the maintainers of the Formal
+Conjectures repository for the formal statement.  OpenAI GPT Pro and Codex
+were used to explore proof routes, run finite checks, and assist with editing;
+the mathematical argument presented here was separately subjected to
+adversarial proof review.
+
+\begin{thebibliography}{10}
+
+\bibitem{DeL01}
+E.~DeLaVi\~na,
+\emph{Graffiti.pc},
+Graph Theory Notes of New York XLII:3 (2002), 26--30.
+
+\bibitem{DeLhistory}
+E.~DeLaVi\~na,
+\emph{Some history of the development of Graffiti},
+in: Graphs and Discovery, DIMACS Ser.\ Discrete Math.\ Theoret.\ Comput.\
+Sci.\ 69, AMS, 2005, 81--118.
+
+\bibitem{WOWII}
+E.~DeLaVi\~na,
+\emph{Written on the Wall II: Conjectures of Graffiti.pc},
+web list, University of Houston--Downtown,
+\url{http://cms.dt.uh.edu/faculty/delavinae/research/wowII/}
+(retrieved July 2026).
+
+\bibitem{WestReg}
+D.~B. West,
+\emph{Some conjectures of Graffiti.pc}, web register,
+\url{https://dwest.web.illinois.edu/regs/graffiti.html}
+(retrieved July 2026).
+
+\bibitem{Faj88}
+S.~Fajtlowicz,
+\emph{On conjectures of Graffiti},
+Discrete Math.\ 72 (1988), 113--118.
+
+\bibitem{ESS86}
+P.~Erd\H{o}s, M.~Saks, and V.~T. S\'os,
+\emph{Maximum induced trees in graphs},
+J.~Combin.\ Theory Ser.\ B 41 (1986), 61--79.
+\href{https://doi.org/10.1016/0095-8956(86)90028-6}
+{doi:10.1016/0095-8956(86)90028-6}.
+
+\bibitem{DW04}
+E.~DeLaVi\~na and B.~Waller,
+\emph{On some conjectures of Graffiti.pc on the maximum order of induced
+subgraphs},
+Congr.\ Numer.\ 166 (2004), 11--32.
+
+\bibitem{FC}
+Google DeepMind,
+\emph{Formal Conjectures}, GitHub repository,
+\href{https://github.com/google-deepmind/formal-conjectures}{repository homepage}.
+
+\bibitem{FC142}
+Formal Conjectures,
+\emph{GraphConjecture142.lean},
+\href{https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/WrittenOnTheWallII/GraphConjecture142.lean}{source file on GitHub}
+(retrieved July 2026).
+
+\bibitem{Lean4}
+L.~de~Moura and S.~Ullrich,
+\emph{The Lean 4 theorem prover and programming language},
+in: Automated Deduction -- CADE 28, LNCS 12699, Springer, 2021, 625--635.
+
+\end{thebibliography}
+
+\end{document}

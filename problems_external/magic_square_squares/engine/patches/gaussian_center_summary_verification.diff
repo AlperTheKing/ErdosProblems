@@ -1,0 +1,98 @@
+diff --git a/problems_external/magic_square_squares/engine/gaussian_center.cpp b/problems_external/magic_square_squares/engine/gaussian_center.cpp
+--- a/problems_external/magic_square_squares/engine/gaussian_center.cpp
++++ b/problems_external/magic_square_squares/engine/gaussian_center.cpp
+@@ -55,18 +55,18 @@ u128 parse_u128(const std::string& text) {
+     if (text.empty()) {
+         throw std::runtime_error("empty unsigned integer");
+     }
+     u128 value = 0;
++    const u128 maximum = ~static_cast<u128>(0);
+     for (const char ch : text) {
+         if (ch < '0' || ch > '9') {
+             throw std::runtime_error("invalid unsigned integer: " + text);
+         }
+         const unsigned digit = static_cast<unsigned>(ch - '0');
+-        const u128 next = value * 10 + digit;
+-        if (next < value) {
++        if (value > (maximum - digit) / 10) {
+             throw std::runtime_error("unsigned integer overflow: " + text);
+         }
+-        value = next;
++        value = value * 10 + digit;
+     }
+     return value;
+ }
+@@ -1126,13 +1126,16 @@ struct RunState {
+     u128 deviation_total = 0;
+     u128 additive_triples = 0;
+     u64 verified_candidates = 0;
++    int scalar_exit = -1;
++    int independent_exit = -1;
+     std::string status = "RUNNING";
+     std::string candidate_sha256;
++    std::string candidate_file;
+     std::string error;
+ };
+@@ -1158,8 +1161,13 @@ std::string summary_json(const Options& options,
+         << "  \"verified_candidates\":\""
+         << state.verified_candidates << "\",\n"
++        << "  \"verification\":{\"scalar_exit\":"
++        << state.scalar_exit << ",\"independent_exit\":"
++        << state.independent_exit << "},\n"
+         << "  \"candidate_sha256\":\""
+         << json_escape(state.candidate_sha256) << "\",\n"
++        << "  \"candidate_file\":\""
++        << json_escape(state.candidate_file) << "\",\n"
+         << "  \"error\":\"" << json_escape(state.error) << "\",\n"
+         << "  \"result_scope\":\"closed_input_range_only\"\n"
+@@ -1176,6 +1184,18 @@ std::string extract_json_string(const std::string& json,
+     return match[1].str();
+ }
+ 
++int extract_json_integer(const std::string& json,
++                         const std::string& key) {
++    const std::regex pattern(
++        "\"" + key + "\"\\s*:\\s*(-?[0-9]+)");
++    std::smatch match;
++    if (!std::regex_search(json, match, pattern)) {
++        throw std::runtime_error("summary missing integer key: " + key);
++    }
++    const long long value = std::stoll(match[1].str());
++    if (value < std::numeric_limits<int>::min() ||
++        value > std::numeric_limits<int>::max()) {
++        throw std::runtime_error("summary integer out of range: " + key);
++    }
++    return static_cast<int>(value);
++}
++
+ RunState load_summary(const Options& options,
+                       const fs::path& path) {
+@@ -1202,8 +1222,13 @@ RunState load_summary(const Options& options,
+     state.verified_candidates =
+         parse_u64(extract_json_string(json, "verified_candidates"));
++    state.scalar_exit =
++        extract_json_integer(json, "scalar_exit");
++    state.independent_exit =
++        extract_json_integer(json, "independent_exit");
+     state.candidate_sha256 =
+         extract_json_string(json, "candidate_sha256");
++    state.candidate_file =
++        extract_json_string(json, "candidate_file");
+     state.error = extract_json_string(json, "error");
+     return state;
+@@ -1334,6 +1359,8 @@ int search_range(const Options& options) {
+             if (candidate.has_value()) {
+                 const VerifierEvidence evidence =
+                     run_both_verifiers(*candidate, verifier_config);
++                state.scalar_exit = evidence.scalar_exit;
++                state.independent_exit = evidence.independent_exit;
+                 if (evidence.scalar_exit != 0 ||
+                     evidence.independent_exit != 0) {
+@@ -1360,6 +1387,8 @@ int search_range(const Options& options) {
+                 atomic_write(candidate_path, output);
+                 state.status = "CANDIDATE_VERIFIED";
+                 state.candidate_sha256 = digest;
++                state.candidate_file =
++                    fs::absolute(candidate_path).string();
+                 state.verified_candidates = 1;
+                 atomic_write(summary_path, summary_json(options, state));

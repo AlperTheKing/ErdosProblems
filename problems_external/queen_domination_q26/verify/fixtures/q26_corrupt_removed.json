@@ -1,0 +1,22 @@
+{
+  "n": 26,
+  "coordinate_order": "row,column",
+  "expected_count": 14,
+  "require_independent": true,
+  "corruption": "published added square [25,3] removed",
+  "coordinates": [
+    [18, 0],
+    [0, 2],
+    [6, 4],
+    [20, 6],
+    [12, 8],
+    [4, 10],
+    [22, 12],
+    [10, 14],
+    [16, 16],
+    [24, 18],
+    [2, 20],
+    [8, 22],
+    [14, 24]
+  ]
+}

@@ -1,0 +1,17 @@
+# Zero-based row, column transcription of Ostergard--Weakley Q25 fixture.
+n = 25
+expect = 13
+require_independent = true
+18, 0
+0, 2
+6, 4
+20, 6
+12, 8
+4, 10
+22, 12
+10, 14
+16, 16
+24, 18
+2, 20
+8, 22
+14, 24

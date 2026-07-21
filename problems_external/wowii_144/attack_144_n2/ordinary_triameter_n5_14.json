@@ -1,0 +1,76 @@
+{
+  "elapsed_sec": 84.13,
+  "g_5_6": {
+    "failures": [],
+    "min_slack": 0,
+    "tests": 38400
+  },
+  "g_ge_7": {
+    "failures": [],
+    "min_slack": 0,
+    "tests": 14072
+  },
+  "per_n": {
+    "10": {
+      "generated": 464,
+      "girth_lt_5": 106,
+      "nonresidual": 327,
+      "residual": 31
+    },
+    "11": {
+      "generated": 1793,
+      "girth_lt_5": 235,
+      "nonresidual": 1452,
+      "residual": 106
+    },
+    "12": {
+      "generated": 8167,
+      "girth_lt_5": 551,
+      "nonresidual": 7240,
+      "residual": 376
+    },
+    "13": {
+      "generated": 43645,
+      "girth_lt_5": 1301,
+      "nonresidual": 40844,
+      "residual": 1500
+    },
+    "14": {
+      "generated": 275480,
+      "girth_lt_5": 3159,
+      "nonresidual": 265659,
+      "residual": 6662
+    },
+    "5": {
+      "generated": 4,
+      "girth_lt_5": 3,
+      "nonresidual": 1,
+      "residual": 0
+    },
+    "6": {
+      "generated": 8,
+      "girth_lt_5": 6,
+      "nonresidual": 2,
+      "residual": 0
+    },
+    "7": {
+      "generated": 18,
+      "girth_lt_5": 11,
+      "nonresidual": 6,
+      "residual": 1
+    },
+    "8": {
+      "generated": 47,
+      "girth_lt_5": 23,
+      "nonresidual": 22,
+      "residual": 2
+    },
+    "9": {
+      "generated": 137,
+      "girth_lt_5": 47,
+      "nonresidual": 79,
+      "residual": 11
+    }
+  },
+  "test": "W144 ordinary rooted-triameter residual exact n=5..14"
+}

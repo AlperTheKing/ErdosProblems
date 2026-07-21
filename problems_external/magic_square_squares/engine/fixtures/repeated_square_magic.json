@@ -1,0 +1,12 @@
+{
+  "name": "Degenerate repeated-square magic matrix",
+  "expected": {
+    "exit_code": 1,
+    "reason": "All entries are positive squares and all sums agree, but the entries are not distinct."
+  },
+  "matrix": [
+    [1, 1, 1],
+    [1, 1, 1],
+    [1, 1, 1]
+  ]
+}

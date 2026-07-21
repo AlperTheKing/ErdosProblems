@@ -1,0 +1,4406 @@
+{
+  "command": [
+    "E:\\Projects\\ErdosProblems\\tools\\nauty2_8_9\\geng.exe",
+    "-ctfq",
+    "14"
+  ],
+  "cut_equalities": 68,
+  "cut_equality_records": [
+    {
+      "articulations": [
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        3,
+        4,
+        11,
+        12,
+        13
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M????A?oB?B_K_AW?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        1,
+        2,
+        9,
+        10,
+        11
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M????A?o@_D_Q_CW?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        2,
+        3,
+        4,
+        11,
+        12,
+        13
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M????B?gA_@_I_CP?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "M????B?g?oA_Q_HO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        1,
+        2,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???C@?gA_D?F?_g?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        4,
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        7,
+        8
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 10,
+      "graph6": "M???C@?gA_@_K_AW?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        4,
+        5,
+        7,
+        12,
+        13
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???C@?g@_B?B_PO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        2,
+        7,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???C@?K@OO_D_QO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        5,
+        7,
+        12,
+        13
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???C@?K@OA_a_PO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13
+      ],
+      "diameter": 7,
+      "eta": 1,
+      "girth": 13,
+      "graph6": "M???CB?W@_B?B?@o?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 6,
+      "rhs": 1,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 1
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        5,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        4,
+        7,
+        11,
+        13
+      ],
+      "diameter": 8,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???CB?W@_B?@_BO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0,
+        4,
+        10,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        5,
+        6,
+        13
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 10,
+      "graph6": "M???C@_SCOC_C_B_?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "M???C@_S@OA_A_`_?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???C@oqAISOAwEB?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???EA_W?wEWQg_e?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        7
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???EA_KQPK_Boe@?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        9
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???E?oITGR?RGDc?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        2
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???E?oITGR?RGW`?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        9
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???E?oITG@cDcUA?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???EAobBOI_E_HO_",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        2,
+        3,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        10,
+        11
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 10,
+      "graph6": "M??CA?_CCOG_J?Co?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        0
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_sDOEWQg`W?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_sBCTGCwRG?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        0
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_eF?EWQg`W?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_FF?EWQg_[?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_FE_LOCwgS?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAA_sBCBOLOPH?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1
+      ],
+      "beta": 8,
+      "center": [
+        9,
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAA_sBCBOJCPH?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAA_KbOAKt?@b?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        3,
+        13
+      ],
+      "diameter": 3,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAB_Sca@WM?DH?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ow@EIOeORG?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        11
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ow@EIOeOJ@?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oqBCAW`WHD?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oqAKSGAwEB?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oI?wXCCsWa?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        8
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oiE_BGQg`W?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        0
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oiBCY?Eo`W?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oiBCOgAwEB?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oBE@LOeO?{?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        8
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oBE@LOhO?{?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        8
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oBCPLOhO?{?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oBCPLOsC?{?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ooJCB_AwgP?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ooJCAWiOV??",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        6
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ooJCAWiOBg?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        9
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ooISCWeOBD?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oaN?D_U_cP?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        0
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oaN?CWU_dO?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oaHWKOEosA?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oaHWBOPgsA?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        2,
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAAoqBCDGCoHC_",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAAoq@QAWF?W__",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@Oa?YF?HKp@?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        12,
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@OBCQF?gKCs?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        12,
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@OBCQDOgKCs?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@OBD?r?IgCs?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@OaPDBOR?k?_",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB?WcQDT?R?K__",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 9,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@?OwAgQWHgQW?",
+      "kappa": 0,
+      "m": 22,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 1
+      },
+      "tight_terms": [
+        "degree",
+        "diameter"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@?Ow@KI_coQW?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1,
+        8
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOw@DI_CoQW?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        6
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOw@DIGD_ao?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        10
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOw@DIG@oBB?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEF?DOQW_s?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEF?CoTO_s?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEB_CQAwoS?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        2
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEEO@o\\?gc?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        2
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEEO@S\\?gc?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    }
+  ],
+  "equalities": 72,
+  "equality_records": [
+    {
+      "articulations": [
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        3,
+        4,
+        11,
+        12,
+        13
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M????A?oB?B_K_AW?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        1,
+        2,
+        9,
+        10,
+        11
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M????A?o@_D_Q_CW?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        2,
+        3,
+        4,
+        11,
+        12,
+        13
+      ],
+      "diameter": 6,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M????B?gA_@_I_CP?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "M????B?g?oA_Q_HO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        1,
+        2,
+        8,
+        9,
+        10,
+        11
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???C@?gA_D?F?_g?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        4,
+        11,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        7,
+        8
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 10,
+      "graph6": "M???C@?gA_@_K_AW?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        4,
+        5,
+        7,
+        12,
+        13
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???C@?g@_B?B_PO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        2,
+        7,
+        10,
+        11
+      ],
+      "diameter": 8,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???C@?K@OO_D_QO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        5,
+        7,
+        12,
+        13
+      ],
+      "diameter": 7,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???C@?K@OA_a_PO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13
+      ],
+      "diameter": 7,
+      "eta": 1,
+      "girth": 13,
+      "graph6": "M???CB?W@_B?B?@o?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 6,
+      "rhs": 1,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 1,
+        "order_rank": 1
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        5,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        4,
+        7,
+        11,
+        13
+      ],
+      "diameter": 8,
+      "eta": 3,
+      "girth": 11,
+      "graph6": "M???CB?W@_B?@_BO?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 3,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0,
+        4,
+        10,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        5,
+        6,
+        13
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 10,
+      "graph6": "M???C@_SCOC_C_B_?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "diameter": 8,
+      "eta": 2,
+      "girth": 12,
+      "graph6": "M???C@_S@OA_A_`_?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 6,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???C@oqAISOAwEB?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???EA_W?wEWQg_e?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "diameter": 7,
+      "eta": 0,
+      "girth": 14,
+      "graph6": "M???EA_S@OA_A_@_?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 2,
+      "n": 14,
+      "radius": 7,
+      "rhs": 0,
+      "slack": 0,
+      "terms": {
+        "degree": 0,
+        "diameter": 0,
+        "order_rank": 0
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        7
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???EA_KQPK_Boe@?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        9
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???E?oITGR?RGDc?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        2
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???E?oITGR?RGW`?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        9
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???E?oITG@cDcUA?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M???EAobBOI_E_HO_",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [],
+      "beta": 7,
+      "center": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        11,
+        13
+      ],
+      "diameter": 5,
+      "eta": 2,
+      "girth": 6,
+      "graph6": "M???EAob@SJ?D_X??",
+      "kappa": 1,
+      "m": 20,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 3,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        2,
+        3,
+        12,
+        13
+      ],
+      "beta": 1,
+      "center": [
+        0,
+        1,
+        10,
+        11
+      ],
+      "diameter": 9,
+      "eta": 4,
+      "girth": 10,
+      "graph6": "M??CA?_CCOG_J?Co?",
+      "kappa": 0,
+      "m": 14,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 5,
+      "rhs": 4,
+      "slack": 0,
+      "terms": {
+        "degree": 1,
+        "diameter": 4,
+        "order_rank": 4
+      },
+      "tight_terms": [
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        0
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_sDOEWQg`W?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_sBCTGCwRG?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        0
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_eF?EWQg`W?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_FF?EWQg_[?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?_FE_LOCwgS?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAA_sBCBOLOPH?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1
+      ],
+      "beta": 8,
+      "center": [
+        9,
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAA_sBCBOJCPH?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAA_KbOAKt?@b?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        3,
+        13
+      ],
+      "diameter": 3,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAB_Sca@WM?DH?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 1,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ow@EIOeORG?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        11
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ow@EIOeOJ@?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oqBCAW`WHD?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oqAKSGAwEB?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oI?wXCCsWa?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        8
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oiE_BGQg`W?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        0
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oiBCY?Eo`W?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oiBCOgAwEB?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oBE@LOeO?{?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        8
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oBE@LOhO?{?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        8
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oBCPLOhO?{?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oBCPLOsC?{?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ooJCB_AwgP?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ooJCAWiOV??",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        6
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ooJCAWiOBg?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        9
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?ooISCWeOBD?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        11
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oaN?D_U_cP?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        0
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oaN?CWU_dO?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        10
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oaHWKOEosA?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        1
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CA?oaHWBOPgsA?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        2,
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAAoqBCDGCoHC_",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CAAoq@QAWF?W__",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@Oa?YF?HKp@?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        12,
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@OBCQF?gKCs?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        12,
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@OBCQDOgKCs?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@OBD?r?IgCs?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB@OaPDBOR?k?_",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        12
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M??CB?WcQDT?R?K__",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 9,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@?OwAgQWHgQW?",
+      "kappa": 0,
+      "m": 22,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 1
+      },
+      "tight_terms": [
+        "degree",
+        "diameter"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@?Ow@KI_coQW?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        1,
+        8
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOw@DI_CoQW?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        6
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOw@DIGD_ao?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        13
+      ],
+      "beta": 8,
+      "center": [
+        10
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOw@DIG@oBB?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEF?DOQW_s?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        9
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEF?CoTO_s?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        0
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEB_CQAwoS?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        2
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEEO@o\\?gc?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [
+        2
+      ],
+      "beta": 8,
+      "center": [
+        13
+      ],
+      "diameter": 4,
+      "eta": 2,
+      "girth": 5,
+      "graph6": "M?AA@AOEEO@S\\?gc?",
+      "kappa": 0,
+      "m": 21,
+      "maximum_degree": 4,
+      "n": 14,
+      "radius": 2,
+      "rhs": 2,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 2
+      },
+      "tight_terms": [
+        "degree",
+        "diameter",
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [],
+      "beta": 7,
+      "center": [
+        0,
+        8
+      ],
+      "diameter": 4,
+      "eta": 3,
+      "girth": 5,
+      "graph6": "M?AA@?Ws?kT?BOWG?",
+      "kappa": 1,
+      "m": 20,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 3,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    },
+    {
+      "articulations": [],
+      "beta": 7,
+      "center": [
+        2,
+        10
+      ],
+      "diameter": 4,
+      "eta": 3,
+      "girth": 5,
+      "graph6": "M?AA@?WoL_AgAoH_?",
+      "kappa": 1,
+      "m": 20,
+      "maximum_degree": 3,
+      "n": 14,
+      "radius": 3,
+      "rhs": 3,
+      "slack": 0,
+      "terms": {
+        "degree": 2,
+        "diameter": 2,
+        "order_rank": 3
+      },
+      "tight_terms": [
+        "order_rank"
+      ]
+    }
+  ],
+  "equality_tight_terms": {
+    "degree+diameter": 1,
+    "degree+diameter+order_rank": 55,
+    "degree+order_rank": 1,
+    "diameter+order_rank": 7,
+    "order_rank": 8
+  },
+  "equality_types": {
+    "2connected-multicyclic": 3,
+    "2connected-unicyclic": 1,
+    "cut-multicyclic": 54,
+    "cut-unicyclic": 14
+  },
+  "failure_records": [],
+  "failures": 0,
+  "generated_connected_triangle_C4_free": 275480,
+  "minimum_slack": 0,
+  "order": 14,
+  "retained_connected_cyclic_girth_at_least_five": 272321
+}

@@ -1,0 +1,11 @@
+*** Begin Patch
+*** Update File: PROGRESS_CODEX.md
+@@
+ [2026-07-21T16:13:25+03:00] FAIL ATTACK | DID: closed AJT F5,n8 counterexample lane | RESULT: DEAD: resource exit; final 64-worker budget yielded no certificate | D: select
++[2026-07-21T16:47:37+03:00] > SELECT | NEXT: select one current non-Erdos conjecture refutable by a directly checkable finite witness.
++[2026-07-21T16:47:38+03:00] OK SELECT | DID: compared 3 independent candidate audits | RESULT: SSNC has a literal adjacency-list counterexample certificate | D: GATE
++[2026-07-21T16:47:39+03:00] > GATE | NEXT: verify current SSNC status and the exact first unresolved counterexample layer.
++[2026-07-21T16:47:40+03:00] OK GATE | DID: checked 2026 journal/preprint and Seacrest | RESULT: general SSNC open; delta=8 gives finite 18..36 window | D: PLAN
++[2026-07-21T16:47:41+03:00] > PLAN | NEXT: register the literal counterexample bridge, two verifiers, first n=18 action, and hard exit.
++[2026-07-21T16:47:42+03:00] OK PLAN | DID: registered SSNC refutation route | RESULT: problems_external/ssnc_refutation/APPROACH_REGISTRY.md | D: ATTACK
+*** End Patch

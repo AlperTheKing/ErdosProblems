@@ -1,0 +1,71 @@
+{
+  "max_n": 9,
+  "totals": {
+    "girth_3": 201208,
+    "girth_3_failures": 1,
+    "girth_4": 496,
+    "girth_5": 13,
+    "girth_6": 3
+  },
+  "failures": [
+    {
+      "graph6": "C^",
+      "n": 4,
+      "m": 5,
+      "beta": 2,
+      "girth": 3,
+      "radius": 1,
+      "eta": 1,
+      "center": [
+        2,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "deletions": [
+        {
+          "v": 0,
+          "degree": 2,
+          "eta": 0,
+          "delta_eta": -1,
+          "center": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "v": 1,
+          "degree": 2,
+          "eta": 0,
+          "delta_eta": -1,
+          "center": [
+            0,
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  ]
+}

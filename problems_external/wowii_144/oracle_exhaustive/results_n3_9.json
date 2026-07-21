@@ -1,0 +1,477 @@
+{
+  "claims": {
+    "a_C144": {
+      "checked": 273098,
+      "min_slack": 0,
+      "min_slack_graph6": "Bw",
+      "slack_hist": {
+        "0": 133,
+        "1": 3779,
+        "2": 54884,
+        "3": 156337,
+        "4": 55391,
+        "5": 2548,
+        "6": 26
+      },
+      "violating_graph6": [],
+      "violations": 0
+    },
+    "b_E_exists": {
+      "checked": 273098,
+      "min_slack": 0,
+      "min_slack_graph6": "Bw",
+      "slack_hist": {
+        "0": 133,
+        "1": 3795,
+        "2": 55019,
+        "3": 156325,
+        "4": 55268,
+        "5": 2532,
+        "6": 26
+      },
+      "violating_graph6": [],
+      "violations": 0
+    },
+    "c_E_forall_g4": {
+      "checked": 1642,
+      "min_slack": 0,
+      "min_slack_graph6": "C]",
+      "slack_hist": {
+        "0": 49,
+        "1": 259,
+        "2": 663,
+        "3": 535,
+        "4": 123,
+        "5": 13
+      },
+      "violating_graph6": [],
+      "violations": 0
+    },
+    "d_P2": {
+      "checked": 273098,
+      "min_slack": 0,
+      "min_slack_graph6": "Bw",
+      "slack_hist": {
+        "0": 2602,
+        "1": 47887,
+        "2": 157799,
+        "3": 61766,
+        "4": 2998,
+        "5": 46
+      },
+      "violating_graph6": [],
+      "violations": 0
+    }
+  },
+  "cycle_cap": 5000,
+  "cycle_cap_ever_hit": false,
+  "date": "2026-07-18",
+  "elapsed_sec": 37.3,
+  "generator": "geng -c (nauty 2.8.9, tools/nauty2_8_9/geng.exe)",
+  "per_n": {
+    "3": {
+      "acyclic": 1,
+      "claims": {
+        "a_C144": {
+          "checked": 1,
+          "min_slack": 0,
+          "min_slack_graph6": "Bw",
+          "slack_hist": {
+            "0": 1
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "b_E_exists": {
+          "checked": 1,
+          "min_slack": 0,
+          "min_slack_graph6": "Bw",
+          "slack_hist": {
+            "0": 1
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "c_E_forall_g4": {
+          "checked": 0,
+          "min_slack": null,
+          "min_slack_graph6": null,
+          "slack_hist": {},
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "d_P2": {
+          "checked": 1,
+          "min_slack": 0,
+          "min_slack_graph6": "Bw",
+          "slack_hist": {
+            "0": 1
+          },
+          "violating_graph6": [],
+          "violations": 0
+        }
+      },
+      "connected": 2,
+      "cyclic": 1
+    },
+    "4": {
+      "acyclic": 2,
+      "claims": {
+        "a_C144": {
+          "checked": 4,
+          "min_slack": 0,
+          "min_slack_graph6": "CV",
+          "slack_hist": {
+            "0": 4
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "b_E_exists": {
+          "checked": 4,
+          "min_slack": 0,
+          "min_slack_graph6": "CV",
+          "slack_hist": {
+            "0": 4
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "c_E_forall_g4": {
+          "checked": 1,
+          "min_slack": 0,
+          "min_slack_graph6": "C]",
+          "slack_hist": {
+            "0": 1
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "d_P2": {
+          "checked": 4,
+          "min_slack": 0,
+          "min_slack_graph6": "CV",
+          "slack_hist": {
+            "0": 4
+          },
+          "violating_graph6": [],
+          "violations": 0
+        }
+      },
+      "connected": 6,
+      "cyclic": 4
+    },
+    "5": {
+      "acyclic": 3,
+      "claims": {
+        "a_C144": {
+          "checked": 18,
+          "min_slack": 0,
+          "min_slack_graph6": "DEw",
+          "slack_hist": {
+            "0": 8,
+            "1": 9,
+            "2": 1
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "b_E_exists": {
+          "checked": 18,
+          "min_slack": 0,
+          "min_slack_graph6": "DEw",
+          "slack_hist": {
+            "0": 8,
+            "1": 9,
+            "2": 1
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "c_E_forall_g4": {
+          "checked": 3,
+          "min_slack": 0,
+          "min_slack_graph6": "DEw",
+          "slack_hist": {
+            "0": 2,
+            "1": 1
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "d_P2": {
+          "checked": 18,
+          "min_slack": 0,
+          "min_slack_graph6": "DEw",
+          "slack_hist": {
+            "0": 12,
+            "1": 6
+          },
+          "violating_graph6": [],
+          "violations": 0
+        }
+      },
+      "connected": 21,
+      "cyclic": 18
+    },
+    "6": {
+      "acyclic": 6,
+      "claims": {
+        "a_C144": {
+          "checked": 106,
+          "min_slack": 0,
+          "min_slack_graph6": "E?zO",
+          "slack_hist": {
+            "0": 14,
+            "1": 51,
+            "2": 38,
+            "3": 3
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "b_E_exists": {
+          "checked": 106,
+          "min_slack": 0,
+          "min_slack_graph6": "E?zO",
+          "slack_hist": {
+            "0": 14,
+            "1": 51,
+            "2": 38,
+            "3": 3
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "c_E_forall_g4": {
+          "checked": 13,
+          "min_slack": 0,
+          "min_slack_graph6": "E?zO",
+          "slack_hist": {
+            "0": 5,
+            "1": 6,
+            "2": 2
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "d_P2": {
+          "checked": 106,
+          "min_slack": 0,
+          "min_slack_graph6": "E?zO",
+          "slack_hist": {
+            "0": 41,
+            "1": 54,
+            "2": 11
+          },
+          "violating_graph6": [],
+          "violations": 0
+        }
+      },
+      "connected": 112,
+      "cyclic": 106
+    },
+    "7": {
+      "acyclic": 11,
+      "claims": {
+        "a_C144": {
+          "checked": 842,
+          "min_slack": 0,
+          "min_slack_graph6": "F?BvO",
+          "slack_hist": {
+            "0": 25,
+            "1": 196,
+            "2": 442,
+            "3": 173,
+            "4": 6
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "b_E_exists": {
+          "checked": 842,
+          "min_slack": 0,
+          "min_slack_graph6": "F?BvO",
+          "slack_hist": {
+            "0": 25,
+            "1": 197,
+            "2": 442,
+            "3": 172,
+            "4": 6
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "c_E_forall_g4": {
+          "checked": 48,
+          "min_slack": 0,
+          "min_slack_graph6": "F?BvO",
+          "slack_hist": {
+            "0": 9,
+            "1": 21,
+            "2": 14,
+            "3": 4
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "d_P2": {
+          "checked": 842,
+          "min_slack": 0,
+          "min_slack_graph6": "F?BvO",
+          "slack_hist": {
+            "0": 131,
+            "1": 460,
+            "2": 233,
+            "3": 18
+          },
+          "violating_graph6": [],
+          "violations": 0
+        }
+      },
+      "connected": 853,
+      "cyclic": 842
+    },
+    "8": {
+      "acyclic": 23,
+      "claims": {
+        "a_C144": {
+          "checked": 11094,
+          "min_slack": 0,
+          "min_slack_graph6": "G?`F?w",
+          "slack_hist": {
+            "0": 31,
+            "1": 756,
+            "2": 4597,
+            "3": 5019,
+            "4": 678,
+            "5": 13
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "b_E_exists": {
+          "checked": 11094,
+          "min_slack": 0,
+          "min_slack_graph6": "G?`F?w",
+          "slack_hist": {
+            "0": 31,
+            "1": 760,
+            "2": 4608,
+            "3": 5008,
+            "4": 674,
+            "5": 13
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "c_E_forall_g4": {
+          "checked": 244,
+          "min_slack": 0,
+          "min_slack_graph6": "G?`F?w",
+          "slack_hist": {
+            "0": 11,
+            "1": 69,
+            "2": 116,
+            "3": 42,
+            "4": 6
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "d_P2": {
+          "checked": 11094,
+          "min_slack": 0,
+          "min_slack_graph6": "G?ABv_",
+          "slack_hist": {
+            "0": 498,
+            "1": 4181,
+            "2": 5515,
+            "3": 872,
+            "4": 28
+          },
+          "violating_graph6": [],
+          "violations": 0
+        }
+      },
+      "connected": 11117,
+      "cyclic": 11094
+    },
+    "9": {
+      "acyclic": 47,
+      "claims": {
+        "a_C144": {
+          "checked": 261033,
+          "min_slack": 0,
+          "min_slack_graph6": "H?AEB_k",
+          "slack_hist": {
+            "0": 50,
+            "1": 2767,
+            "2": 49806,
+            "3": 151142,
+            "4": 54707,
+            "5": 2535,
+            "6": 26
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "b_E_exists": {
+          "checked": 261033,
+          "min_slack": 0,
+          "min_slack_graph6": "H?AEB_k",
+          "slack_hist": {
+            "0": 50,
+            "1": 2778,
+            "2": 49930,
+            "3": 151142,
+            "4": 54588,
+            "5": 2519,
+            "6": 26
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "c_E_forall_g4": {
+          "checked": 1333,
+          "min_slack": 0,
+          "min_slack_graph6": "H?AEB_k",
+          "slack_hist": {
+            "0": 21,
+            "1": 162,
+            "2": 531,
+            "3": 489,
+            "4": 117,
+            "5": 13
+          },
+          "violating_graph6": [],
+          "violations": 0
+        },
+        "d_P2": {
+          "checked": 261033,
+          "min_slack": 0,
+          "min_slack_graph6": "H?AEB@Y",
+          "slack_hist": {
+            "0": 1915,
+            "1": 43186,
+            "2": 152040,
+            "3": 60876,
+            "4": 2970,
+            "5": 46
+          },
+          "violating_graph6": [],
+          "violations": 0
+        }
+      },
+      "connected": 261080,
+      "cyclic": 261033
+    }
+  },
+  "test": "WOWII144_exhaustive_oracle_n3_9",
+  "totals": {
+    "acyclic": 93,
+    "connected": 273191,
+    "cyclic": 273098,
+    "cyclic_e_ge_1": 190015
+  }
+}

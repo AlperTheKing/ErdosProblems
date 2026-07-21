@@ -1,0 +1,17 @@
+{
+  "statement": "some eta-realizer has an induced connected unicyclic rooted-depth witness",
+  "min_n": 5,
+  "max_n": 11,
+  "total_checked": 1335,
+  "per_order": {
+    "5": 0,
+    "6": 0,
+    "7": 1,
+    "8": 7,
+    "9": 38,
+    "10": 202,
+    "11": 1087
+  },
+  "canonical_witness_sha256": "f30f42229b8ed2d867898f64b6af0d613d9e793a2ee25e13e2a32915e8e95d1d",
+  "failure": null
+}

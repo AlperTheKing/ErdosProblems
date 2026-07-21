@@ -1,0 +1,30 @@
+{
+ "Estar": {
+  "applicable": 7877,
+  "viol": 1,
+  "min_slack": -1,
+  "examples": [
+   {
+    "name": "tree+3(11,117)",
+    "g6": "J?LcCHOC`C?",
+    "n": 11,
+    "girth": 6,
+    "diam": 4,
+    "e": 3,
+    "bestSS": 2
+   }
+  ]
+ },
+ "Astar": {
+  "applicable": 4034,
+  "viol": 0,
+  "min_slack": 0,
+  "examples": []
+ },
+ "T3plus": {
+  "applicable": 87,
+  "viol": 0,
+  "min_slack": 0,
+  "examples": []
+ }
+}

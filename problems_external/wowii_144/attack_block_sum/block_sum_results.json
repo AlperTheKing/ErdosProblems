@@ -1,0 +1,6 @@
+{
+  "status": "NO_COUNTEREXAMPLE",
+  "tested_graphs": 6,
+  "tested_decompositions": 11,
+  "max_order": 7
+}

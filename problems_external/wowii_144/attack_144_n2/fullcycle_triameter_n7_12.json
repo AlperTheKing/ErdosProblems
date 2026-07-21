@@ -1,0 +1,77 @@
+{
+  "definition": "|E_full| + (2r+1-g) <= P_z(H)",
+  "elapsed_sec": 1.41,
+  "failures": [],
+  "min_record": {
+    "E_full": [
+      1,
+      5
+    ],
+    "H": [
+      3
+    ],
+    "K": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7
+    ],
+    "attachments": [
+      7
+    ],
+    "g": 7,
+    "graph6": "G?bB@o",
+    "lambda_": 0,
+    "maximizing_pair": [
+      2,
+      3,
+      3
+    ],
+    "n": 8,
+    "p": {
+      "3": 1
+    },
+    "r": 3,
+    "rooted_triameter": 2,
+    "slack": 0,
+    "z": 0
+  },
+  "min_slack": 0,
+  "per_n": {
+    "10": {
+      "eligible": 23,
+      "generated": 464,
+      "outside": 441
+    },
+    "11": {
+      "eligible": 84,
+      "generated": 1793,
+      "outside": 1709
+    },
+    "12": {
+      "eligible": 304,
+      "generated": 8167,
+      "outside": 7863
+    },
+    "7": {
+      "eligible": 1,
+      "generated": 18,
+      "outside": 17
+    },
+    "8": {
+      "eligible": 2,
+      "generated": 47,
+      "outside": 45
+    },
+    "9": {
+      "eligible": 7,
+      "generated": 137,
+      "outside": 130
+    }
+  },
+  "test": "W144 full-cycle rooted metric lemma, all legal records n=7..12",
+  "tests": 8345
+}

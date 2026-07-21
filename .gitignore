@@ -109,6 +109,14 @@ tmp/codex_o14_emit_probe_*/
 tmp/o14_packed_int_pilot/src/
 problems/864/compute/p20/results/profiles.jsonl.gz
 
+# External-problem bulk search output (multi-GB, regenerable from the engines that stay versioned):
+# per-run sweep dirs, SAT/DRUP calibration proofs, binary certificates. Registries, engine source,
+# writeups and small summaries remain tracked. Distributed manually on request.
+problems_external/*/runs/
+problems_external/*/engine/calibration/
+problems_external/*/engine/logs/
+*.drup
+
 # Generated O14 chart payload shards Chart001..107: local-only (37.5GB aggregate, user-approved
 # 2026-07-09; distributed manually on request). Chart000 pilot family stays versioned;
 # acceptance of the rest is recorded via SHA-pinned PayloadRegistry/ledger.
@@ -121,3 +129,4 @@ tmp/fanout/
 # Oversized #424 wave5 compute dumps (>100MB, GitHub hard-reject; regeneratable)
 problems/424/compute/wave5/C113_cluster_closure_check_all.json
 problems/424/compute/wave5/C113_cluster_endpoint_sieve.json
+_apply_patch_probe.tmp

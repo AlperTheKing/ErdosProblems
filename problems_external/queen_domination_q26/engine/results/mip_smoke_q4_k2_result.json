@@ -1,0 +1,58 @@
+{
+  "configuration": {
+    "backend_accepted_thread_setting": true,
+    "backend_requested": "scip",
+    "backend_resolved": "scip",
+    "solver_output": false,
+    "timeout_enforcement": "backend limit inside hard subprocess wrapper",
+    "timeout_seconds": 10.0,
+    "workers_requested": 2
+  },
+  "finished_utc": "2026-07-18T19:46:12.254+00:00",
+  "instance": {
+    "board_variables": 16,
+    "cardinality": "at-most",
+    "domination_constraints": 16,
+    "k": 2,
+    "n": 4,
+    "structural_restrictions": []
+  },
+  "model_sha256": "bae3aad76c4ec8d6614f7b1527b417c2e56c02c34aa688e5960d8cf3c99ceb10",
+  "schema": "queen-domination-mip-result-v1",
+  "solution": {
+    "cardinality": 2,
+    "coordinates": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "independent_direct_check": {
+      "checked": true,
+      "dominated_count": 16,
+      "errors": [],
+      "method": "direct pairwise row/column/absolute-diagonal comparisons",
+      "queen_count": 2,
+      "uncovered": [],
+      "valid": true
+    }
+  },
+  "solver": {
+    "backend": "SCIP",
+    "backend_id": "SCIP",
+    "backend_wall_time_milliseconds": 8,
+    "branch_and_bound_nodes": 1,
+    "iterations": 0,
+    "ortools_version": "9.14.6206",
+    "python_version": "3.12.4",
+    "status": "OPTIMAL",
+    "status_code": 0,
+    "version": "SCIP 9.2.2 [LP solver: SoPlex 7.1.3]",
+    "wall_seconds": 0.014917199994670227
+  },
+  "started_utc": "2026-07-18T19:46:12.239+00:00"
+}

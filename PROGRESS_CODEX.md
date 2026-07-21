@@ -749,6 +749,7 @@
 [2026-06-12T16:01:52+03:00] OK ATTACK | DID: Added V61 cuts and compiled q15 tools | RESULT: sat_q15_ru_scalar_lazy.exe,q15_profile_audit.exe | D: frontier
 [2026-06-12T16:01:52+03:00] > VERIFY | NEXT: Generate post-V61 q15 frontier jobs and audit first open profiles.
 [2026-06-12T16:02:12+03:00] OK ATTACK | DID: Added V61 cuts and compiled q15 tools | RESULT: sat_q15_ru_scalar_lazy.exe,q15_profile_audit.exe | D: frontier
+[2026-07-21T05:32:10+03:00] FAIL VERIFY | DID: audited Q5 semantic exits | RESULT: supervisor rejected scanner HIT=10 and TIMEOUT=3 | D: fix required
 [2026-06-12T16:02:12+03:00] > VERIFY | NEXT: Generate post-V61 q15 frontier jobs and audit first open profiles.
 [2026-06-12T16:02:49+03:00] OK VERIFY | DID: Audited post-V61 q15 frontier | RESULT: 468 jobs; first=cap56,p20,eR27,(10,5,0)/(11,3,1) | D: next-shapes
 [2026-06-12T16:02:49+03:00] > ATTACK | NEXT: Enumerate support shapes for cap56 (10,5,0)/(11,3,1), eR=47-p.
@@ -4298,6 +4299,7 @@
 2026-06-16T16:36:08.4352242+03:00 OK ATTACK | DID: Launched filtered robust z4/z5 tails | RESULT: z4Jobs=2980 z5Jobs=5284 workers=50+50 pids=58260,75008 wmiSolvers=101 | D: p17-z4z5-filtered
 [2026-06-16T16:36:36+03:00] FAIL ATTACK | DID: Stopped respawned z4 processes again | RESULT: parents=1 children=51 | D: z5-only
 [2026-06-16T16:37:28+03:00] > VERIFY | NEXT: Inspect active solvers and z5 p17 raw tail status before next split.
+[2026-07-21T14:13:10+03:00] OK VERIFY | DID: ran fixed ten-module Q5 readiness suite | RESULT: 166/166 tests in 38.854 s | D: hash freeze
 [2026-06-16T16:37:48+03:00] OK VERIFY | DID: Inspected z5 p17 tail status | RESULT: wmiSolvers=50 remaining80=418/4468 parentCount=2 | D: recover-tail
 [2026-06-16T16:38:06.9879472+03:00] > ATTACK | NEXT: Inspect active p17 z4/z5 solver processes and robust output directories.
 [2026-06-16T16:38:30.0137423+03:00] OK ATTACK | DID: inspected z4/z5 robust runs | RESULT: z5 status=100 active=50; z4 status=0 parent exited | D: relaunch z4 chunk
@@ -36808,3 +36810,1305 @@
 [2026-07-18T14:40:27+03:00] OK VERIFY SN13 target V3 final | DID: audited fixtures, allocation, dry plan, monitor self-test, and verifier gate | RESULT: V3 PASS; 100 unique; target processes=0 | D: launch withheld
 [2026-07-18T14:41:03+03:00] FAIL VERIFY SN13 Lean API smoke | DID: compiled generic enumerator | RESULT: two explicit List.mem_map witnesses remained | D: supply branch witnesses
 [2026-07-18T14:41:03+03:00] > VERIFY SN13 Lean API smoke retry | NEXT: Compile explicit false/true enumeration witnesses and the 2-channel kernel test.
+[2026-07-18T14:42:31+03:00] OK VERIFY SN13 Lean API smoke | DID: compiled generic verifier and 2-channel kernel proof | RESULT: exit=0; 19.877 s; SHA256 4E0704E6...B405A | D: API ready
+[2026-07-18T14:42:31+03:00] > PLAN SN13 formal submission | NEXT: Record FC v4.27 conventions, certificate injection point, collision status, and exact lower-bound gap.
+[2026-07-18T14:42:55+03:00] FAIL VERIFY SN13 V2 referee | DID: stopped 64-worker audit | RESULT: user-authorized cap=100 and six families made V2 obsolete | D: V2 -> V3
+[2026-07-18T14:42:55+03:00] > VERIFY SN13 V3 referee | NEXT: Attack exact100, six fixtures, parser gate, pins, deadline, stop-all, and theorem bridge without search.
+[2026-07-18T14:44:03+03:00] OK PLAN SN13 formal submission | DID: audited FC c252/v4.27 and wrote no-claim prep | RESULT: formal_prep/FORMALIZATION_PREP.md; prototype exit=0 | D: upper-only GO after L44
+[2026-07-18T14:47:25+03:00] OK VERIFY SN13 V3 referee | DID: attacked allocation, fixtures, parser, pins, deadline, stop-all | RESULT: PASS; TARGET_HARNESS_AUDIT_V3.md | D: launch authorized
+[2026-07-18T14:47:50+03:00] > ATTACK SN13 target-100 | NEXT: Launch exactly 100 audited CPU workers for SN13-44; stop on verified hit or 21:57:27+03 deadline.
+[2026-07-18T14:48:54+03:00] OK ATTACK SN13 target-100 | DID: launched audited V3 | RESULT: 100/100 SorterHunter; starts 14:48:03-07; deadline 21:57:27+03 | D: search active
+[2026-07-18T15:14:49+03:00] > ATTACK SN13 structural | NEXT: Single-thread exact search of six L45 seeds by delete, local rewrites, commutations, and support<=4 permutations.
+[2026-07-18T15:22:35+03:00] > VERIFY SN13 structural build | NEXT: Compile expanded single-thread exact search; reject on any warning or build error.
+[2026-07-18T15:23:18+03:00] OK VERIFY SN13 structural build | DID: compiled expanded search | RESULT: structural/structural_search.exe; g++ exit 0; no diagnostics | D: none
+[2026-07-18T15:23:18+03:00] > ATTACK SN13 structural-2 | NEXT: Run 900s single-thread exact search: global 1-edit, local 2-edits, support<=5, 100k permutations, 50k commutations.
+[2026-07-18T15:29:10+03:00] FAIL ATTACK SN13 structural-2 | DID: exhausted 77,836,090 tests; no L44 file | RESULT: structural/STRUCTURAL_NO_GO.md | D: trace-delete route NO-GO
+[2026-07-18T16:48:23+03:00] > GATE WOWII141-144 | NEXT: Read direct-route registries and audit existing proof, Lean, computation, prior-art, and submission files.
+[2026-07-18T16:57:26+03:00] OK GATE WOWII141-144 | DID: audited proofs, Lean, oracles, PR | RESULT: 141/143 proved+PR4454 green; 142 B closes; 144 residual open | D: 142/144
+[2026-07-18T16:57:26+03:00] > PLAN WOWII142-144 | NEXT: Record direct routes for 142 splice certification and 144 residual admissible-forest lemma.
+[2026-07-18T17:05:03+03:00] OK PLAN WOWII142-144 | DID: wrote direct routes | RESULT: wowii_142/APPROACH_REGISTRY.md; wowii_144/APPROACH_REGISTRY.md | D: frontier fixed
+[2026-07-18T17:05:03+03:00] > VERIFY W142 GPT-Pro | NEXT: Referee the supplied alternate proof against every exceptional girth and attachment case.
+[2026-07-18T17:05:03+03:00] > VERIFY W144 GPT-Pro | NEXT: Referee P2 and the claimed g=3,4 closure; isolate the exact g>=5 gap.
+[2026-07-18T17:06:26+03:00] > VERIFY W142 validator | NEXT: Run the fixed 10,776-graph constructive certificate corpus deterministically and with seeds 1,2.
+[2026-07-18T17:07:07+03:00] OK VERIFY W142 validator | DID: ran deterministic and seeds 1,2 | RESULT: 3x10,776 graphs; 0 certificate failures; proverB/*.json | D: none
+[2026-07-18T17:07:20+03:00] FAIL VERIFY W144 GPT-N1 | DID: checked 8,446-graph falsifier | RESULT: N1 false at g=5 and g=11,15; proverC/test_n1_results.json | D: DEAD N1
+[2026-07-18T17:09:52+03:00] OK VERIFY W142 GPT-Pro | DID: independent adversarial referee | RESULT: proof valid; only standard branches/toolkit and typesetting omitted | D: paper proof closed
+[2026-07-18T17:09:52+03:00] OK VERIFY W144 GPT-Pro | DID: adversarially checked Lemmas 1-5 | RESULT: P2 and g<=4 valid; one exposition reorder needed | D: g<=4 paper-closed
+[2026-07-18T17:09:52+03:00] > ATTACK W144 g>=5 | NEXT: Prove the registered residual admissible-forest lemma; test the induced r-ciliate direct bridge.
+[2026-07-18T17:11:13+03:00] > ATTACK W144 ciliate-probe | NEXT: Classify induced radius-critical ciliate types on all atlas residual g>=5 graphs (n<=7).
+[2026-07-18T17:12:52+03:00] OK ATTACK W144 ciliate-probe | DID: classified atlas residual g>=5 | RESULT: sole graph Fh_gG has only endpoint ciliate P4 | D: endpoint bridge needed
+[2026-07-18T17:12:52+03:00] > ATTACK W144 residual-structure | NEXT: Enumerate all n<=9 residual g>=5 graphs by blocks and ciliate endpoint type.
+[2026-07-18T17:15:56+03:00] OK ATTACK W144 residual-structure | DID: enumerated all connected n<=9 | RESULT: 14 residual g>=5; all contain P_2r, 3 biconnected | D: none
+[2026-07-18T17:15:56+03:00] FAIL ATTACK W144 triameter | DID: tested 585 residual graphs | RESULT: 380 violate needed 3-terminal bound; min slack -18 | D: DEAD triameter too weak
+[2026-07-18T17:18:44+03:00] > ATTACK W144 GPT-Pro2 | NEXT: Submit N1 counterexample and exact residual frontier; require a direct g>=5 proof or a falsifying obstruction.
+[2026-07-18T17:24:33+03:00] FAIL ATTACK W144 triameter-M | DID: tested tri>=g+2e on 8,446 graphs | RESULT: 69 violations; min slack -4 | D: DEAD metric bridge
+[2026-07-18T17:33:12+03:00] OK ATTACK W144 ciliate | DID: proved middle-ciliate case | RESULT: DIRECT_ATTACK_RESIDUAL_20260718.md; endpoints remain | D: partial
+[2026-07-18T17:33:12+03:00] FAIL ATTACK W144 4-terminal | DID: exhausted 126 4-sets on theta(2,4,4) | RESULT: W4=16<17 | D: DEAD metric route
+[2026-07-18T17:33:12+03:00] > PACKAGE W142 paper | NEXT: Write a self-contained arXiv TeX from the independently refereed proof.
+[2026-07-18T17:38:47+03:00] > VERIFY W142 TeX | NEXT: Compile w142_induced_tree.tex and inspect every rendered PDF page.
+[2026-07-18T17:41:11+03:00] FAIL VERIFY W142 TeX | DID: recompiled after URL-spacing edit | RESULT: literal newline escape at line 7 | D: retry
+[2026-07-18T17:41:11+03:00] > VERIFY W142 TeX retry | NEXT: Replace the literal escape and rerun Tectonic.
+[2026-07-18T17:42:06+03:00] OK VERIFY W142 TeX | DID: compiled and rendered all 8 pages | RESULT: w142_induced_tree.pdf; 0 layout warnings | D: paper draft ready
+[2026-07-18T17:46:04+03:00] FAIL VERIFY W144 N1 attribution | DID: compared GPT N1 with test_n1.py | RESULT: test targeted a different stronger claim | D: correction
+[2026-07-18T17:46:04+03:00] > ATTACK W144 GPT-Pro3 | NEXT: Re-run consultation on exact N1/N2 capacity after correcting the false attribution.
+[2026-07-18T17:48:08+03:00] > ATTACK W144 N2 pendant | NEXT: Exhaust pendant-cycle length arrays and random large arrays for a reserved-capacity counterexample.
+[2026-07-18T17:50:43+03:00] FAIL ATTACK W144 GPT-Pro3 | DID: awaited corrected N2 consultation | RESULT: ChatGPT Internal Server Error | D: retry
+[2026-07-18T17:50:43+03:00] > ATTACK W144 GPT-Pro3 retry | NEXT: Retry the exact N2 capacity prompt and independently referee any response.
+[2026-07-18T17:52:12+03:00] > VERIFY W142 Lean nearestSet_descent | NEXT: Rebuild the no-sorry descent lemma in the formal-conjectures-w143 environment.
+[2026-07-18T17:52:45+03:00] OK VERIFY W142 Lean nearestSet_descent | DID: rebuilt no-sorry lemma | RESULT: exit 0; 20.2 s; no warnings/output | D: L4 backbone closed
+[2026-07-18T17:53:53.3431057+03:00] > ATTACK W144-N1 | NEXT: Search 200k girth>=5 graph mutations for exact residual-window counterexamples, n=8..40.
+[2026-07-18T17:55:44+03:00] OK ATTACK W144 N2 pendant | DID: tested 354446 pendant-cycle arrays | RESULT: 304 residual instances; 0 N2 failures | D: none
+[2026-07-18T17:56:47.1310996+03:00] OK ATTACK W144-N1 | DID: 200000 exact cycle-leg mutations | RESULT: 65219 residual; 10364 e>k; min slack 0; no fail; exact_residual_n1_mutations.json | D: none
+[2026-07-18T17:59:36+03:00] > ATTACK W144 via W142 | NEXT: Test whether the proved W142 bound closes the residual W144 corpus; seed 20260718, n-g<=15.
+[2026-07-18T18:00:01+03:00] FAIL ATTACK W144 via W142 | DID: tested residual corpus | RESULT: W142 closes 12/315; Fh_gG misses by 1 | D: DEAD standalone bridge
+[2026-07-18T18:00:04.8480037+03:00] > ATTACK W144-N1 | NEXT: Test 30000 exact girth-preserving sparse ear/tree graphs, n<=60, for existential N1 counterexamples.
+[2026-07-18T18:00:56.9087522+03:00] OK ATTACK W144-N1 | DID: exact sparse-ear search stopped at trial 2237 | RESULT: n48 g15 D15 e9 k7; unique K; sole realizer h1<2; JSON exact | D: N1 false
+[2026-07-18T18:02:04+03:00] > ATTACK W144 known-bound synthesis | NEXT: Test the proved P2, W141, W142 and W143 two-leaf bounds jointly on 315 residual graphs.
+[2026-07-18T18:02:12.0217350+03:00] > VERIFY W144-N1 | NEXT: Greedily delete/suppress vertices and edges in exact n48 falsifier, then independently recompute all shortest cycles.
+[2026-07-18T18:02:17+03:00] FAIL ATTACK W144 known-bound synthesis | DID: tested joint proved bounds | RESULT: close 37/315; theta(1,5,6) misses by 1 | D: DEAD synthesis
+[2026-07-18T18:03:13+03:00] FAIL ATTACK W144 GPT-Pro3 retry | DID: inspected live reasoning | RESULT: retry followed superseded false-N1 prompt | D: stopped
+[2026-07-18T18:03:13+03:00] > ATTACK W144 GPT-Pro4 | NEXT: Run a fresh exact N1-or-N2 task with corrected quantifiers and fixed-z counterexample.
+[2026-07-18T18:04:59+03:00] FAIL ATTACK W144 N2 averaging | DID: tested sum-over-z bridge | RESULT: Fh_gG gives 12<16 | D: DEAD averaging
+[2026-07-18T18:04:59+03:00] OK ATTACK W144 N2 nauty | DID: swept connected C3/C4-free n=8..14 | RESULT: 8688 residual; 0 N2 failures | D: none
+[2026-07-18T18:05:41+03:00] FAIL ATTACK W144 GPT-Pro4 | DID: stopped N1 proof attempt | RESULT: local search produced a unique-cycle N1 candidate CE | D: verify
+[2026-07-18T18:05:41+03:00] > VERIFY W144 N1 candidate | NEXT: Independently recompute g,k,r,D,C,e,K,h and residual inequalities for the n=36 graph.
+[2026-07-18T18:06:23.9621549+03:00] > VERIFY W144-N1-M | NEXT: Enumerate all 2^22 outside subsets for every z, certify M_z, a max forest, and N2 coverage on n36 falsifier.
+[2026-07-18T18:06:34+03:00] OK VERIFY W144 N1 candidate | DID: independently decoded graph6 and enumerated cycles<=14 | RESULT: unique K; g14,D14,e8,h0<1 | D: DEAD N1
+[2026-07-18T18:09:55+03:00] OK PLAN W144 N1->extended capacity | DID: replaced invalid N1+N2 bridge | RESULT: APPROACH_REGISTRY.md extended inequality | D: frontier changed
+[2026-07-18T18:10:14+03:00] > ATTACK W144 extended capacity | NEXT: Evaluate S+max(0,2delta-g)<=2(M_z-h) exactly on the n=36 N1 counterexample.
+[2026-07-18T18:10:49+03:00] OK ATTACK W144 extended capacity | DID: exhaustively computed n36 capacities | RESULT: S14, wrap2, max M_z21, slack26 | D: survives
+[2026-07-18T18:11:20+03:00] > ATTACK W144 GPT-Pro5 | NEXT: Prove/falsify the unified wrapped/unwrapped capacity lemma using the verified N1 counterexample.
+[2026-07-18T18:12:11.3197142+03:00] OK VERIFY W144-N1-M | DID: pure-Python cycle/BFS/subset certificate | RESULT: n36 unique K/x, N1 fail; M=21; covsum14; verifier SHA 173D3FF0 | D: N1 dead
+[2026-07-18T18:12:13+03:00] > VERIFY W141 TeX | NEXT: Compile the arXiv source, render every page, and inspect layout before packaging.
+[2026-07-18T18:12:54+03:00] FAIL VERIFY W141 TeX | DID: compiled with Tectonic | RESULT: hpdftex.def:207 undefined control sequence | D: retry driver guard
+[2026-07-18T18:12:54+03:00] > VERIFY W141 TeX retry | NEXT: Guard pdfoutput for XeTeX and recompile.
+[2026-07-18T18:15:42+03:00] FAIL VERIFY W141 TeX retry | DID: reflowed formalization paragraph | RESULT: missing math delimiter at line 250 | D: retry
+[2026-07-18T18:15:42+03:00] > VERIFY W141 TeX retry2 | NEXT: Restore math delimiters and rerun Tectonic.
+[2026-07-18T18:16:47+03:00] OK VERIFY W141 TeX retry2 | DID: compiled and inspected all 5 pages | RESULT: w141_induced_tree.pdf; 0 layout warnings | D: paper ready
+[2026-07-18T18:17:05+03:00] OK VERIFY W144 N1 certificate | DID: py_compile+reread standalone verifier | RESULT: exit0; cycles [14,15,18,19,23,27]; M=21 | D: DEAD N1
+[2026-07-18T18:17:40+03:00] OK ATTACK W144 extended corpus | DID: tested exact n-g<=15 corpus | RESULT: 229 non-tail residual; 0 failures; min slack 0 | D: survives
+[2026-07-18T18:17:40+03:00] OK ATTACK W144 adjacent-z | DID: tested max-h realizer with z=m±1 | RESULT: 352 residual; 0 failures | D: proof target narrowed
+[2026-07-18T18:20:18+03:00] > VERIFY W142 arXiv ancillary | NEXT: Run the copied standalone constructive validator on its 10776-graph corpus.
+[2026-07-18T18:20:53+03:00] OK VERIFY W142 arXiv ancillary | DID: ran copied constructive validator | RESULT: 10776 graphs; 0 failures; 25.4 s | D: package reproducible
+[2026-07-18T18:21:33+03:00] > PACKAGE W141/W142 arXiv | NEXT: Build source ZIPs with metadata and reproducible ancillary files, then validate entries and hashes.
+[2026-07-18T18:22:42+03:00] OK PACKAGE W141/W142 arXiv | DID: built and audited ZIP entries | RESULT: W141 A902D3A4DF03; W142 32CDBC962F0E; no pyc | D: ready
+[2026-07-18T18:22:48+03:00] > VERIFY W141/W142 arXiv ZIPs | NEXT: Extract both packages into fresh directories and compile only packaged sources.
+[2026-07-18T18:23:20+03:00] OK VERIFY W141/W142 arXiv ZIPs | DID: extracted and compiled packaged sources | RESULT: both exit0; both 0 TeX warnings | D: upload-ready
+[2026-07-18T18:23:41+03:00] > VERIFY W143 arXiv ZIP | NEXT: Extract the existing package and compile only its packaged source.
+[2026-07-18T18:25:12+03:00] FAIL VERIFY W143 arXiv ZIP | DID: compiled extracted package | RESULT: underfull boxes at bibliography lines 391,403 | D: retry
+[2026-07-18T18:25:12+03:00] > VERIFY W143 TeX retry | NEXT: Replace long printed GitHub URLs with descriptive links and recompile.
+[2026-07-18T18:26:13+03:00] OK VERIFY W143 TeX retry | DID: rebuilt ZIP, compiled, inspected all 6 pages | RESULT: 0 warnings; ZIP B5923A7178A5 | D: upload-ready
+[2026-07-18T18:27:25+03:00] OK ATTACK W144 z-only | DID: proved adjacent-root sole-component lemma | RESULT: attack_144_n2/Z_ONLY_LEMMA.md | D: z-only case closed
+[2026-07-18T18:27:25+03:00] OK VERIFY W144 z-only | DID: checked all metric decompositions and induced-path attachment counts | RESULT: no gap found | D: active surplus remains
+[2026-07-18T18:27:45+03:00] FAIL ATTACK W144 depth-only | DID: tested rooted-eccentricity surplus | RESULT: n29 graph gives 13>12; mu=11 | D: DEAD depth-only
+[2026-07-18T18:31:02+03:00] > ATTACK W142 LEAN | NEXT: prove shortest-cycle outside-neighbor uniqueness in standalone Lean, no sorry/admit/native_decide.
+[2026-07-18T18:31:22+03:00] > ATTACK W144 ROOTCAP | NEXT: prove exact active-component rooted-tree capacity or produce a verified counterexample.
+[2026-07-18T18:31:31+03:00] > ATTACK W144 active-capacity | NEXT: Test exact componentwise mu_z surplus for safe adjacent roots on the residual corpus.
+[2026-07-18T18:36:00+03:00] > ATTACK W144 ROOTCAP TEST | NEXT: exact n=8..14 test of local capacity, x-tail surplus, and global WN2 gaps.
+[2026-07-18T18:34:24+03:00] OK VERIFY PR4454 | DID: inspected live GitHub PR | RESULT: open; all 6 runnable checks pass; 1 review required | D: await review
+[2026-07-18T18:34:57+03:00] OK ATTACK W144 active-capacity | DID: exact mu_z component sweep, C3/C4-free n<=12 | RESULT: 2228 safe roots; global/ordinary/active min slack 0 | D: proof target survives
+[2026-07-18T18:39:42+03:00] OK VERIFY W142 LEAN | DID: built path-closing helper | RESULT: concat_two_isCycle compiled, no diagnostics | D: none
+[2026-07-18T18:40:05+03:00] > VERIFY W142 LEAN | NEXT: build outside_neighbor_unique_of_length_eq_girth with pinned Lean toolchain.
+[2026-07-18T18:40:29+03:00] FAIL VERIFY W142 LEAN | DID: built outside-neighbor lemma | RESULT: 2 elaboration errors at lines 66,77 | D: none
+[2026-07-18T18:41:05+03:00] > VERIFY W142 LEAN | NEXT: rebuild after explicit Ne.symm and removal of redundant dsimp.
+[2026-07-18T18:36:02+03:00] FAIL VERIFY W144 mu enumerator | DID: audited component capacity | RESULT: prior 2228 sweep used connected-only lower bound, not exact forest mu_z | D: rerun
+[2026-07-18T18:36:02+03:00] > ATTACK W144 exact active-capacity | NEXT: Rerun safe-root surplus using exact multi-component rooted induced-tree capacity.
+[2026-07-18T18:36:28+03:00] OK ATTACK W144 exact active-capacity | DID: swept exact multi-component mu_z on C3/C4-free n<=12 | RESULT: 2228 safe roots; all 3 min slacks 0 | D: proof target survives
+[2026-07-18T18:41:39+03:00] FAIL VERIFY W142 LEAN | DID: rebuilt outside-neighbor lemma | RESULT: 1 omega goal at arc-length split line 77 | D: none
+[2026-07-18T18:42:11+03:00] > VERIFY W142 LEAN | NEXT: rebuild with explicit p,q arc-length equality.
+[2026-07-18T18:42:38+03:00] OK VERIFY W142 LEAN | DID: built outside-neighbor lemma | RESULT: ShortestCycleAttachment.lean compiled, 0 diagnostics | D: L7 prerequisite formalized
+[2026-07-18T18:42:55+03:00] > VERIFY W142 LEAN | NEXT: rebuild attachment lemma with warnings as errors and scan prohibited tokens.
+[2026-07-18T18:43:58+03:00] OK VERIFY W142 LEAN | DID: warning-as-error build and token scan | RESULT: 0 warnings; no sorry/admit/native_decide | D: none
+[2026-07-18T18:39:10+03:00] > SUBMIT W141 arXiv | NEXT: Create a new submission draft and upload the verified W141 source package without final submission.
+[2026-07-18T18:44:37+03:00] > CHECK W142 LEAN | NEXT: map compiled attachment uniqueness to the registered L7 frontier.
+[2026-07-18T18:44:44+03:00] OK CHECK W142 LEAN | DID: mapped L3 to L7 | RESULT: L3 compiled; exact L7 interaction-splice tree/count remains | D: frontier narrowed
+[2026-07-18T18:42:00+03:00] > ATTACK W144 ROOTCAP FAN | NEXT: search exact girth-safe multiattachment fan-tail families for reserved-surplus failures.
+[2026-07-18T18:40:28+03:00] OK SUBMIT W141 arXiv | DID: created draft submit/7842255 | RESULT: start form awaits author legal attestations/license | D: user handoff
+[2026-07-18T18:41:51+03:00] > ATTACK W144 ordinary-mu | NEXT: Exhaust n<=14 all z with A(H)-z nonempty; save exact equality forests and active safe-root records.
+[2026-07-18T18:42:10.4326404+03:00] OK ATTACK W144 ROOTCAP TEST | DID: exact n=8..12 capacity sweep | RESULT: 526 residual graphs; 14,402 choices; 0 local/x/global failures. | D: none
+[2026-07-18T18:42:10.4743403+03:00] > ATTACK W144 ROOTCAP TEST | NEXT: extend exact local/rooted-capacity sweep to all residual n=13,14 graphs.
+[2026-07-18T18:42:22+03:00] OK ARXIV PLAN | DID: deleted empty W141 draft submit/7842255 | RESULT: arXiv user page has no 7842255 row | D: one combined W141-144 paper
+[2026-07-18T18:42:44+03:00] > ATTACK W142 L7 | NEXT: formalize unique-edge path splice tree and exact cardinality in Lean without sorry.
+[2026-07-18T18:43:30+03:00] > ATTACK W144 GPT-Pro6 | NEXT: Prove/falsify the exact adjacent-root active-component surplus including wrap and root chords.
+[2026-07-18T18:46:10.2826089+03:00] FAIL ATTACK W144 ROOTCAP TEST | DID: exact n=13,14 local-capacity run | RESULT: terminated before first order completed; nothing. | D: none
+[2026-07-18T18:46:10.3079777+03:00] > ATTACK W144 ROOTCAP RANDOM | NEXT: test 100,000 girth-safe multiattachment-tree graphs for exact negative WN2 slack.
+[2026-07-18T18:46:22+03:00] OK ATTACK W144 ordinary-mu | DID: exact n<=14 all-z rooted-capacity audit | RESULT: 279517 ordinary, 46070 safe roots, 40390 active; min slack 0; JSON 5AE585A7 | D: none
+[2026-07-18T18:48:45+03:00] > ATTACK W144 active-mutation | NEXT: Run 8400 exact n-g<=18 rooted-cycle mutations against the wrapped capacity inequality.
+[2026-07-18T18:50:14+03:00] FAIL ATTACK W144 active-mutation | DID: ran 7809 exact mutations, 1457 residual | RESULT: script omitted wrap correction; unwrapped min slack 0 | D: rerun required
+[2026-07-18T18:50:30+03:00] > ATTACK W144 wrapped-mutation | NEXT: Rerun 7800 n-g<=18 mutations with exact wrap correction.
+[2026-07-18T18:50:48.7634814+03:00] OK VERIFY W142 LEAN | DID: compiled interacting_descent_splice_certificate | RESULT: exit 0, 0 warnings; SplicePath.lean. | D: local L7 certificate formalized
+[2026-07-18T18:51:54+03:00] OK ATTACK W144 wrapped-mutation | DID: exact wrapped search, 7809 mutations/1457 residual | RESULT: 0 failures; min slack 0 at RhCGGC@?K... | D: none
+[2026-07-18T18:52:19.5023317+03:00] OK ATTACK W142 L7 | DID: documented exact Lean boundary | RESULT: lean/L7_REMAINING.md names 7 remaining maximal-index/M(K) obligations. | D: none
+[2026-07-18T18:43:49.2591272+03:00] > VERIFY W142 LEAN | NEXT: compile SplicePath unique-attachment tree and cardinality lemmas in pinned toolchain.
+[2026-07-18T18:45:31.2221523+03:00] FAIL VERIFY W142 LEAN | DID: compiled SplicePath | RESULT: 8 elaboration errors in induction/cardinality; no theorem compiled. | D: none
+[2026-07-18T18:45:31.2499697+03:00] > VERIFY W142 LEAN | NEXT: recompile corrected induction and set/cardinality equalities for SplicePath.
+[2026-07-18T18:47:14.5293683+03:00] FAIL VERIFY W142 LEAN | DID: recompiled SplicePath | RESULT: 4 name/elaboration errors and 1 arithmetic goal; no theorem compiled. | D: none
+[2026-07-18T18:47:14.5590932+03:00] > VERIFY W142 LEAN | NEXT: compile uniquely named induction cases and omega closure for SplicePath.
+[2026-07-18T18:48:03.7180557+03:00] FAIL VERIFY W142 LEAN | DID: compiled renamed SplicePath induction | RESULT: 2 post-substitution errors; no theorem compiled. | D: none
+[2026-07-18T18:48:03.7459366+03:00] > VERIFY W142 LEAN | NEXT: preserve splice-root name across insert-membership case and recompile.
+[2026-07-18T18:48:28.9173996+03:00] FAIL VERIFY W142 LEAN | DID: recompiled SplicePath | RESULT: 1 snd-normalization error at line 131; no theorem compiled. | D: none
+[2026-07-18T18:48:28.9372381+03:00] > VERIFY W142 LEAN | NEXT: normalize cons.snd in unique cross-edge proof and recompile.
+[2026-07-18T18:49:59.7624320+03:00] OK VERIFY W142 LEAN | DID: compiled SplicePath tree and card lemmas | RESULT: exit 0, 0 warnings; SplicePath.lean lines 13-154. | D: L7 tree core formalized
+[2026-07-18T18:49:59.7887099+03:00] > VERIFY W142 LEAN | NEXT: compile full local splice certificate with unique K-minus-z attachment and distance count.
+[2026-07-18T18:50:26.2319311+03:00] FAIL VERIFY W142 LEAN | DID: compiled full local splice certificate | RESULT: exit 0 with 1 unused-variable warning at line 180. | D: none
+[2026-07-18T18:50:26.2573814+03:00] > VERIFY W142 LEAN | NEXT: remove unused depth bound and recompile SplicePath warning-free.
+[2026-07-18T18:52:42.3067300+03:00] FAIL ATTACK W144 ROOTCAP RANDOM | DID: unrestricted multiattachment random search | RESULT: terminated on exponential exact capacity; nothing. | D: none
+[2026-07-18T18:52:42.3452043+03:00] > ATTACK W144 ROOTCAP RANDOM | NEXT: exact 20,000 bounded multiattachment graphs with outside order <=8.
+[2026-07-18T18:52:59.0190971+03:00] > VERIFY W142 LEAN | NEXT: rebuild SplicePath with warnings as errors and rescan prohibited proof tokens.
+[2026-07-18T18:53:20.8970392+03:00] OK VERIFY W142 LEAN | DID: warning-as-error rebuild and token scan | RESULT: exit 0; tokens none; SHA256 ED4C6684915E4738D8F95CD0BE4317E21EC4D1A949977AC31D22B77FB06E4CFD | D: none
+[2026-07-18T18:53:35.0207964+03:00] OK ATTACK W144 ROOTCAP RANDOM | DID: 20,000 bounded multiattachment graphs | RESULT: 619 residual; all closed by h>=e; 0 frontier instances. | D: none
+[2026-07-18T18:53:35.0242624+03:00] > ATTACK W144 ROOTCAP SEEDED | NEXT: exact 50,000 tight-cycle seeded multiattachment graphs for negative WN2 slack.
+[2026-07-18T18:54:12+03:00] > ATTACK W144 rooted-triterm | NEXT: Falsify the exact three-terminal capacity lemma on every C3/C4-free graph n<=12.
+[2026-07-18T18:54:19+03:00] FAIL ATTACK W144 rooted-triterm | DID: exhaustive general test stopped n9 | RESULT: H?`DBRO has triterm need3>mu2 | D: lemma needs residual/max-realizer
+[2026-07-18T18:55:04.0425093+03:00] > ATTACK W142 L7 INDEX | NEXT: formalize first interacting descent index and its no-earlier-interaction certificate.
+[2026-07-18T18:55:30.8611065+03:00] > VERIFY W142 L7 INDEX | NEXT: compile first-interaction constructor and no-earlier-interaction consequences.
+[2026-07-18T18:56:18.9620066+03:00] FAIL VERIFY W142 L7 INDEX | DID: compiled first-index lemmas | RESULT: 1 predicate mismatch and 1 unused-instance warning. | D: none
+[2026-07-18T18:56:18.9958713+03:00] > VERIFY W142 L7 INDEX | NEXT: add bounded predicate witness and remove unused instance, then recompile.
+[2026-07-18T18:56:48.0734813+03:00] FAIL VERIFY W142 L7 INDEX | DID: recompiled first-index lemmas | RESULT: 1 unused DecidableEq warning at line 224. | D: none
+[2026-07-18T18:56:48.1059909+03:00] > VERIFY W142 L7 INDEX | NEXT: omit final unused instance and recompile warning-free.
+[2026-07-18T18:56:55+03:00] > ATTACK W144 UNIQUE-ROOT | NEXT: Prove active surplus when Hx has no usable attachment except m and q_X>0.
+[2026-07-18T18:57:19.0299763+03:00] FAIL VERIFY W142 L7 INDEX | DID: warning-error build | RESULT: style error requested combined intro at line 230. | D: none
+[2026-07-18T18:57:19.0604834+03:00] > VERIFY W142 L7 INDEX | NEXT: compile combined-intro first-index proof.
+[2026-07-18T18:57:40+03:00] > VERIFY W144 active-root cases | NEXT: Split n<=14 A(Hx) subset {m,z} by q=0/q>0 and wrapped/plain; save tight records.
+[2026-07-18T18:58:15+03:00] OK ATTACK W144 UNIQUE-ROOT | DID: proved active q_X>0 one-usable-root surplus | RESULT: attack_144_n2/ACTIVE_UNIQUE_ROOT_LEMMA.md | D: 2 cases remain
+[2026-07-18T19:00:37.9097826+03:00] OK VERIFY W142 L7 INDEX | DID: compiled first-interaction lemmas | RESULT: exit 0 with warnings-as-errors. | D: index constructor closed
+[2026-07-18T19:00:37.9391640+03:00] > VERIFY W142 CHORDLESS | NEXT: compile ambient-edge membership for every distance-realizing walk.
+[2026-07-18T19:00:47+03:00] OK VERIFY W144 active-root cases | DID: split 40390 active n<=14 records | RESULT: A(Hx)subset{m,z}: 7576 q0/plain; 0 qpos; 0 wrapped | D: narrowed
+[2026-07-18T19:01:12.1617670+03:00] FAIL VERIFY W142 CHORDLESS | DID: compiled geodesic chord lemma | RESULT: 3 induction branch elaboration errors. | D: none
+[2026-07-18T19:01:12.1903774+03:00] > VERIFY W142 CHORDLESS | NEXT: rewrite endpoint equalities explicitly and recompile.
+[2026-07-18T19:01:40.6811963+03:00] FAIL VERIFY W142 CHORDLESS | DID: recompiled chord lemma | RESULT: 2 unnecessary-simpa and 1 unused-instance errors. | D: none
+[2026-07-18T19:01:40.7077507+03:00] > VERIFY W142 CHORDLESS | NEXT: apply linter fixes and rebuild with warnings as errors.
+[2026-07-18T19:03:24.9382443+03:00] OK VERIFY W142 CHORDLESS | DID: compiled chordless_of_length_eq_dist | RESULT: warning-error exit 0. | D: chordless obligation closed
+[2026-07-18T19:03:24.9662405+03:00] > VERIFY W142 L7 TAIL | NEXT: compile reversed-prefix disjointness and unique-cross consequences of first interaction.
+[2026-07-18T19:03:39+03:00] > VERIFY W144 sharpened ordinary | NEXT: Exhaust n<=14 bound |EH|+(2r+1-g)<=2mu for every retained-attachment component.
+[2026-07-18T19:04:22.2653421+03:00] FAIL VERIFY W142 L7 TAIL | DID: compiled reverse-tail lemmas | RESULT: 1 getVert rewrite error and 2 unused arguments. | D: none
+[2026-07-18T19:04:22.2966986+03:00] > VERIFY W142 L7 TAIL | NEXT: normalize take vertices and remove unused attachment arguments.
+[2026-07-18T19:05:41.0251619+03:00] OK VERIFY W142 L7 TAIL | DID: compiled reverse-tail maximality lemmas | RESULT: warning-error exit 0. | D: maximality obligations closed
+[2026-07-18T19:05:41.0552083+03:00] > VERIFY W142 L7 DEPTH | NEXT: compile exact distance-to-target formula along a nearest descent.
+[2026-07-18T19:06:25.5073388+03:00] FAIL VERIFY W142 L7 DEPTH | DID: compiled depth formula | RESULT: 1 unused instance and 1 rewrite-direction error. | D: none
+[2026-07-18T19:06:25.5360498+03:00] > VERIFY W142 L7 DEPTH | NEXT: omit unused instance and prove lower bound by an explicit walk chain.
+[2026-07-18T19:06:56.5148466+03:00] FAIL VERIFY W142 L7 DEPTH | DID: recompiled depth formula | RESULT: 1 unused DecidableEq warning at line 384. | D: none
+[2026-07-18T19:06:56.5429673+03:00] > VERIFY W142 L7 DEPTH | NEXT: omit the final unused instance and rebuild warning-free.
+[2026-07-18T19:07:56+03:00] OK VERIFY W144 sharpened ordinary | DID: exact n<=14 all-z component sweep | RESULT: 175733 nonempty EH tests; min slack 0; 0 failures; SHA 54F8EE54 | D: survives
+[2026-07-18T19:08:23.8250746+03:00] OK VERIFY W142 L7 DEPTH | DID: compiled nearest-walk depth formula | RESULT: warning-error exit 0. | D: depth obligation closed
+[2026-07-18T19:08:23.8567716+03:00] > VERIFY W142 L7 WINDOW | NEXT: compile the two-step index window for two neighbors of the selected vertex.
+[2026-07-18T19:09:08.0188565+03:00] FAIL VERIFY W142 L7 WINDOW | DID: compiled neighbor-window lemmas | RESULT: 3 rewrite/elaboration errors. | D: none
+[2026-07-18T19:09:08.0477294+03:00] > VERIFY W142 L7 WINDOW | NEXT: orient distance and getVert equalities explicitly, then recompile.
+[2026-07-18T19:09:39.0103406+03:00] FAIL VERIFY W142 L7 WINDOW | DID: recompiled neighbor-window lemmas | RESULT: 1 multi-target rewrite error. | D: none
+[2026-07-18T19:09:39.0411224+03:00] > VERIFY W142 L7 WINDOW | NEXT: split neighbor-specific rewrites and rebuild warning-free.
+[2026-07-18T19:09:46.5508423+03:00] OK ATTACK W144 ROOTCAP | DID: proved Lemmas A-C and exact audits | RESULT: attack_144_n2/ROOTED_CAPACITY_AUDIT_20260718.md | D: multiattachment sum open
+[2026-07-18T19:09:48+03:00] > VERIFY W144 active-capacity report | NEXT: Write and referee exact reductions, proved root case, counterexamples, and remaining multiattachment lemma.
+[2026-07-18T19:10:07.9822984+03:00] FAIL VERIFY W142 L7 WINDOW | DID: compiled split rewrites | RESULT: 1 unused DecidableEq warning at line 443. | D: none
+[2026-07-18T19:10:08.0156390+03:00] > VERIFY W142 L7 WINDOW | NEXT: omit final unused instance and compile.
+[2026-07-18T19:11:18.7217021+03:00] OK VERIFY W142 L7 WINDOW | DID: compiled two-neighbor index window | RESULT: warning-error exit 0. | D: index-window obligation closed
+[2026-07-18T19:11:18.7531144+03:00] > VERIFY W142 L7 GIRTH | NEXT: compile the length-at-most-two outside-neighbor uniqueness lemma.
+[2026-07-18T19:11:47.4346478+03:00] FAIL VERIFY W142 L7 GIRTH | DID: compiled short-path uniqueness | RESULT: missing Girth import caused 2 unresolved names. | D: none
+[2026-07-18T19:11:47.4602421+03:00] > VERIFY W142 L7 GIRTH | NEXT: add the Girth import and rebuild warning-free.
+[2026-07-18T19:12:54.6038400+03:00] OK ATTACK W144 ROOTCAP SEEDED | DID: 20,000 seeded exact trials | RESULT: 2,993 residual; 2,708 frontier; min WN2 slack 0. | D: none
+[2026-07-18T19:12:54.6276770+03:00] OK VERIFY W144 ROOTCAP | DID: py_compile 3 audit scripts | RESULT: 0 compiler errors; report SHA256 C713B38B...318F. | D: none
+[2026-07-18T19:13:16.3248370+03:00] OK VERIFY W142 L7 GIRTH | DID: compiled short-path neighbor uniqueness | RESULT: warning-error exit 0. | D: short-cycle lemma closed
+[2026-07-18T19:13:16.3528168+03:00] > VERIFY W142 L7 UNIQUE | NEXT: compile uniqueness of the selected vertex neighbor on the other nearest descent.
+[2026-07-18T19:13:38.9960075+03:00] > ATTACK W144 ORDINARY | NEXT: test exact one/two-witness cover and rooted triameter for g>=7 local components.
+[2026-07-18T19:14:07.5930504+03:00] FAIL VERIFY W142 L7 UNIQUE | DID: compiled selected-neighbor uniqueness | RESULT: 1 let-rewrite error at line 533. | D: none
+[2026-07-18T19:14:07.6240187+03:00] > VERIFY W142 L7 UNIQUE | NEXT: unfold copied subwalk explicitly and recompile.
+[2026-07-18T19:14:30+03:00] > SELECT W144 GLOBAL | NEXT: attack the registered residual capacity frontier for Conjecture 144.
+[2026-07-18T19:14:30+03:00] OK SELECT W144 GLOBAL | DID: selected W144-R | RESULT: registry states exact frontier and bridge | D: SELECT -> GATE
+[2026-07-18T19:14:30+03:00] > GATE W144 GLOBAL | NEXT: inspect the recorded prior-art comparison for the frontier lemma.
+[2026-07-18T19:15:41.0567494+03:00] OK VERIFY W142 L7 UNIQUE | DID: compiled selected-neighbor uniqueness | RESULT: warning-error exit 0. | D: unique-cross obligation closed
+[2026-07-18T19:15:41.0831763+03:00] > VERIFY W142 L7 BASE | NEXT: compile induced-tree and exact-cardinality facts for descent dropLast.
+[2026-07-18T19:16:25+03:00] OK GATE W144 GLOBAL | DID: searched exact invariant and conjecture | RESULT: no published resolution found; W144 remains listed | D: GATE -> PLAN
+[2026-07-18T19:16:25+03:00] > PLAN W144 GLOBAL | NEXT: test the exact 3-terminal metric implication for local capacity at g>=7.
+[2026-07-18T19:16:25+03:00] OK PLAN W144 GLOBAL | DID: set frontier to terminal-distance sum in J_z(H) | RESULT: criterion implies O or X via 3-in-tree | D: PLAN -> ATTACK
+[2026-07-18T19:16:25+03:00] > ATTACK W144 GLOBAL | NEXT: exact-test the terminal-distance criterion on all residual n<=11 rooted components.
+[2026-07-18T19:17:34.7171507+03:00] OK VERIFY W142 L7 BASE | DID: compiled dropLast tree/card lemma | RESULT: warning-error exit 0. | D: base-tree/card obligations closed
+[2026-07-18T19:17:34.7489333+03:00] > VERIFY W142 L7 ATTACH | NEXT: compile unique attachment of a nearest descent to a shortest cycle.
+[2026-07-18T19:18:27.1955143+03:00] FAIL VERIFY W142 L7 ATTACH | DID: compiled cycle attachment | RESULT: 5 linter/tuple/orientation errors. | D: none
+[2026-07-18T19:18:27.2246240+03:00] > VERIFY W142 L7 ATTACH | NEXT: fix tuple order, equality orientation, and unused-instance lint.
+[2026-07-18T19:20:18.4872390+03:00] OK VERIFY W142 L7 ATTACH | DID: compiled nearest-cycle unique attachment | RESULT: warning-error exit 0. | D: base attachment closed
+[2026-07-18T19:20:18.5179082+03:00] > VERIFY W142 L7 ERASE | NEXT: compile erased-endpoint and depth-at-least-two tail attachment lemmas.
+[2026-07-18T19:20:58.0989580+03:00] FAIL VERIFY W142 L7 ERASE | DID: compiled tail attachment lemmas | RESULT: 1 call-order, 1 omit, 1 unused-argument error. | D: none
+[2026-07-18T19:20:58.1197858+03:00] > VERIFY W142 L7 ERASE | NEXT: fix explicit call order and section-variable usage, then recompile.
+[2026-07-18T19:22:03.8985813+03:00] FAIL ATTACK W144 ORDINARY DEPTH | DID: exact residual n<=14 rooted-depth audit | RESULT: g>=7 n13 CE L???C@_UCg@W@g; q=5>4=2R | D: depth route dead
+[2026-07-18T19:22:03.9331479+03:00] > VERIFY W144 ACTIVE WRAP | NEXT: enumerate q_X>0 multiattachment cases and wrapped delta distribution through n=14.
+[2026-07-18T19:22:28.0512051+03:00] > VERIFY W144 COMBINED | NEXT: exhaust n=8..10 whether proved W141-143/P2/radius bounds imply W144 numerically.
+[2026-07-18T19:22:54.3133778+03:00] OK VERIFY W144 COMBINED | DID: exhaustive geng -c -t -f n=8..10 | RESULT: known W141-143/P2/radius leave 1,4,16 cases | D: combined-bound shortcut dead
+[2026-07-18T19:22:56.8099405+03:00] OK VERIFY W142 L7 ERASE | DID: compiled erased/deep tail lemmas | RESULT: warning-error exit 0. | D: tail attachment obligations closed
+[2026-07-18T19:22:56.8370921+03:00] > VERIFY W142 L7 INSTANTIATE | NEXT: compile the nearest-descent safe-root instantiation of the splice certificate.
+[2026-07-18T19:23:53.6689004+03:00] FAIL VERIFY W142 L7 INSTANTIATE | DID: compiled safe-root instantiation | RESULT: 3 orientation/type errors and 1 simpa lint. | D: none
+[2026-07-18T19:23:53.6975364+03:00] > VERIFY W142 L7 INSTANTIATE | NEXT: pass let-bound hypotheses definitionally and fix cross-edge orientation.
+[2026-07-18T19:25:55.8516700+03:00] OK VERIFY W142 L7 INSTANTIATE | DID: compiled safe-root splice instantiation | RESULT: warning-error exit 0. | D: certificate instantiated
+[2026-07-18T19:25:55.8806287+03:00] > VERIFY W142 L7 NU1 | NEXT: compile distinct cycle endpoints for the depth-one interacting splice.
+[2026-07-18T19:26:45.4851777+03:00] FAIL VERIFY W142 L7 NU1 | DID: compiled endpoint-distinct lemma | RESULT: section instance cannot be omitted at line 860. | D: none
+[2026-07-18T19:26:45.5153429+03:00] > VERIFY W142 L7 NU1 | NEXT: retain the referenced Finset instance and recompile.
+[2026-07-18T19:27:30.4881068+03:00] FAIL VERIFY W142 L7 NU1 | DID: recompiled endpoint-distinct lemma | RESULT: ambiguous cycle-set membership at line 869. | D: none
+[2026-07-18T19:27:30.5187516+03:00] > VERIFY W142 L7 NU1 | NEXT: bind cycle-set memberships explicitly and orient depth rewrite.
+[2026-07-18T19:18:40+03:00] OK ATTACK W144 GLOBAL | DID: exact-tested 3-terminal J criterion on residual n<=11 | RESULT: 296 O and 4 X tests, 0 failures | D: none
+[2026-07-18T19:18:40+03:00] > PLAN W144 STEINER | NEXT: reduce W144 to sdiam_(g-1)>=g-2+e and test the exact metric lemma.
+[2026-07-18T19:18:40+03:00] OK PLAN W144 STEINER | DID: applied minimal-connector cycle lemma | RESULT: |S|<=g-1 connector is an induced tree | D: frontier is one Steiner lemma
+[2026-07-18T19:18:40+03:00] > ATTACK W144 STEINER | NEXT: exhaustively test sdiam_(g-1)>=g-2+e on n<=11 girth>=4 graphs.
+[2026-07-18T19:28:39.0684006+03:00] FAIL VERIFY W142 L7 NU1 | DID: compiled explicit cycle sets | RESULT: final path-index injectivity had unresolved indices. | D: none
+[2026-07-18T19:28:39.0979618+03:00] > VERIFY W142 L7 NU1 | NEXT: bind the two getVert indices explicitly and recompile.
+[2026-07-18T19:29:04.0072297+03:00] > VERIFY W144 STEINER | NEXT: exact-test sdiam_(g-1)>=g-2+ecc(center) on all geng n=8..10 girth>=5 graphs.
+[2026-07-18T19:29:40.8423238+03:00] OK VERIFY W144 STEINER | DID: exact sdiam test on 472 cyclic girth>=5 graphs n=8..10 | RESULT: 0 failures; tight counts 7,13,15 | D: direct Steiner route alive
+[2026-07-18T19:29:48.7470014+03:00] OK VERIFY W142 L7 NU1 | DID: compiled crossed-endpoint distinctness | RESULT: warning-error exit 0. | D: nu=1 root distinction closed
+[2026-07-18T19:29:48.7800289+03:00] > VERIFY W142 L7 CASEB | NEXT: compile the unified deep/nu=1 interacting Case-B certificate.
+[2026-07-18T19:31:25.1093808+03:00] FAIL VERIFY W142 L7 CASEB | DID: compiled unified Case B | RESULT: 2 method-call argument errors; elaborator timed out. | D: none
+[2026-07-18T19:31:25.1384519+03:00] > VERIFY W142 L7 CASEB | NEXT: use fully explicit theorem calls and recompile.
+[2026-07-18T19:31:41.9109213+03:00] OK VERIFY W144 STEINER | DID: exact sdiam test on all 1558 cyclic girth>=5 graphs n=11 | RESULT: 0 failures; 15 tight | D: none
+[2026-07-18T19:32:06.2464652+03:00] FAIL VERIFY W142 L7 CASEB | DID: recompiled explicit calls | RESULT: 1 take/dropLast conversion error at line 993. | D: none
+[2026-07-18T19:32:06.2738562+03:00] > VERIFY W142 L7 CASEB | NEXT: rewrite the shallow index before converting the tail support.
+[2026-07-18T19:33:25.9563728+03:00] OK VERIFY W142 L7 CASEB | DID: compiled unified deep/nu=1 Case B | RESULT: warning-error exit 0. | D: Case B closed
+[2026-07-18T19:33:25.9906396+03:00] > VERIFY W142 L7 FULL | NEXT: compile Case A and the unified interacting L7(b) certificate.
+[2026-07-18T19:33:35+03:00] OK ATTACK W144 STEINER | DID: tested 2,040 girth>=5 graphs n<=11 | RESULT: 0 failures; minimum slack 0 | D: none
+[2026-07-18T19:33:35+03:00] FAIL ATTACK W144 STEINER | DID: tested girth-4 n<=9 | RESULT: H?zTbbo has sdiam3=3<4 | D: unrestricted lemma dead
+[2026-07-18T19:33:35+03:00] > ATTACK W144 STEINER G5 | NEXT: prove or falsify the metric lemma restricted to g>=5; g<=4 remains separate.
+[2026-07-18T19:34:15.0076897+03:00] FAIL VERIFY W142 L7 FULL | DID: compiled Case A/L7b | RESULT: 1 product-subst and 2 copied-walk errors. | D: none
+[2026-07-18T19:34:15.0350206+03:00] > VERIFY W142 L7 FULL | NEXT: use product extensionality and an explicitly typed copied prefix walk.
+[2026-07-18T19:35:06.4086577+03:00] FAIL VERIFY W142 L7 FULL | DID: recompiled Case A/L7b | RESULT: 1 unused hkv argument in Case A. | D: none
+[2026-07-18T19:35:06.4366389+03:00] > VERIFY W142 L7 FULL | NEXT: remove unused Case-A endpoint-membership argument and rebuild.
+[2026-07-18T19:36:13+03:00] OK ATTACK | DID: exhaustive Steiner terminal-anchor check, cyclic girth>=5 graphs n=5..10 | RESULT: 0 failures for containing an e-realizer or a center | D: none
+[2026-07-18T19:36:56+03:00] > VERIFY | NEXT: independently recompute GPT Pro 32-vertex counterexample to the active W144 surplus lemma, including both adjacent roots
+[2026-07-18T19:37:27.3948883+03:00] OK VERIFY W142 L7 FULL | DID: compiled unified interacting L7(b) | RESULT: warning-error exit 0. | D: L7(b) core closed
+[2026-07-18T19:37:27.4256348+03:00] > VERIFY W142 L7 OUTSIDE | NEXT: compile F-disjoint-cycle strengthening for the M(K) bridge.
+[2026-07-18T19:37:34+03:00] OK VERIFY | DID: recomputed GPT Pro active-surplus counterexample | RESULT: g=9,r=6,D=9,C={0,1},e=6,q=0,c=1,mu=h=1 for z=7,12 | D: active route false
+[2026-07-18T19:37:34+03:00] FAIL ATTACK | DID: abandoned active-component surplus route | RESULT: DEAD: wrapped correction c=1 with no component surplus (mu-h=0) | D: pivot to Steiner route
+[2026-07-18T19:37:56.9212449+03:00] FAIL VERIFY W142 L7 OUTSIDE | DID: warning-error build | RESULT: type mismatch at SplicePath.lean:1142,1152. | D: coerce target finset explicitly
+[2026-07-18T19:38:10.2220783+03:00] > VERIFY W142 L7 OUTSIDE | NEXT: rebuild after normalizing coerced target finsets.
+[2026-07-18T19:39:14.6015701+03:00] FAIL VERIFY W142 L7 OUTSIDE | DID: rebuilt finset normalization | RESULT: Set.toFinset not simp-identical at lines 1138,1150. | D: prove disjoint by membership
+[2026-07-18T19:39:14.6410423+03:00] > VERIFY W142 L7 OUTSIDE | NEXT: rebuild after direct membership conversion.
+[2026-07-18T19:40:05.5239829+03:00] FAIL VERIFY W142 L7 OUTSIDE | DID: rebuilt direct conversion | RESULT: incompatible finite-set instances at lines 1141,1156. | D: eliminate Set.toFinset
+[2026-07-18T19:40:05.5630999+03:00] > VERIFY W142 L7 OUTSIDE | NEXT: rebuild direct cycle-membership proof.
+[2026-07-18T19:40:17.4124967+03:00] > VERIFY W144 GPT-PRO CE | NEXT: independently recompute girth, residual data, component covers, capacities, and full WN2 on the 32-vertex graph.
+[2026-07-18T19:40:31.1080359+03:00] OK VERIFY W144 GPT-PRO CE | DID: recomputed 32-vertex graph | RESULT: active local fails -1; full WN2 slack 32; ordinary O slack 17 | D: qX=0 split retained
+[2026-07-18T19:40:31.1188737+03:00] OK VERIFY W142 L7 OUTSIDE | DID: compiled F-disjoint-cycle L7(b) | RESULT: warning-error exit 0; theorem interacting_descents_splice_L7b_outside_cycle. | D: M(K) input closed
+[2026-07-18T19:40:33+03:00] OK PLAN W144 STEINER | DID: replaced falsified capacity route in registry | RESULT: DIRECT ROUTE W144-S has exact sdiam frontier and connector bridge | D: Steiner only
+[2026-07-18T19:40:20+03:00] > ATTACK W144 STEINER VERTEX | NEXT: exact-test e_k(v)>=k-1+d(v,C) on every girth>=5 graph/vertex at n=11.
+[2026-07-18T19:42:44+03:00] > ATTACK W144 STEINER VERTEX | NEXT: prove/falsify e_k(v)>=g-2+d(v,C); GPT Pro exact-target consultation dispatched
+[2026-07-18T19:42:44+03:00] > GATE W144 STEINER | NEXT: search primary literature for the exact vertex-specific Steiner eccentricity bound
+[2026-07-18T19:43:03+03:00] OK GATE W144 STEINER | DID: searched exact Steiner eccentricity/center/girth terms | RESULT: no exact vertex-specific lower bound found; arXiv 1509.02801 differs | D: none
+[2026-07-18T19:43:53+03:00] > ATTACK W144 STEINER VERTEX | NEXT: inspect tight n=10 witnesses to identify a constructive proof pattern
+[2026-07-18T19:44:02+03:00] OK ATTACK W144 STEINER VERTEX | DID: inspected all n=10 tests and tight witnesses | RESULT: 3580 vertex tests, 0 failures, min slack 0 | D: none
+[2026-07-18T19:45:56.5153191+03:00] > VERIFY W144 EXTREME PAIR | NEXT: test the unwrapped endpoint-witness perimeter lemma exactly through n=14.
+[2026-07-18T19:47:04+03:00] OK ATTACK W144 STEINER VERTEX | DID: exact n=11 audit | RESULT: 17,138 vertex tests, 0 failures, min slack 0 | D: none
+[2026-07-18T19:47:04+03:00] OK VERIFY W144 STEINER | DID: compiled 2 audit scripts and wrote route report | RESULT: attack_global/STEINER_ROUTE_REPORT.md | D: frontier is VE
+[2026-07-18T19:48:10.8138800+03:00] FAIL VERIFY W144 EXTREME PAIR | DID: exact n<=14 endpoint-witness audit | RESULT: g8 n14 CE M???C@?g?oAoX??Y?; endpoint P4<q+lambda5 | D: use global P
+[2026-07-18T19:48:17.8433573+03:00] > ATTACK W142 M BRIDGE | NEXT: prove short-path chordlessness and induced-tree lemmas from the girth bound.
+[2026-07-18T19:49:15.2173979+03:00] OK VERIFY W144 TRIAMETER | DID: exact residual n<=14 audit | RESULT: 52472 ordinary tests; q+lambda<=P min slack 0; SHA EA66CE0A | D: metric frontier survives
+[2026-07-18T19:49:15.2491767+03:00] > ATTACK W144 TRIAMETER SEARCH | NEXT: mutate girth-safe cycle-ear graphs up to n=24 for a registered metric-window counterexample.
+[2026-07-18T19:49:25.1717338+03:00] > VERIFY W142 SHORT PATH | NEXT: compile girth-chordless and induced-tree lemmas with warnings as errors.
+[2026-07-18T19:50:22+03:00] OK VERIFY W144 STEINER VE | DID: exact vertex audit through n=11 | RESULT: 2040 graphs, 21786 vertex tests, 0 failures, min slack 0 | D: frontier strengthened to VE
+[2026-07-18T19:50:22+03:00] OK CHECK W144 CAPACITY | DID: audited GPT counterexample against full decomposition | RESULT: local active surplus false; full S+c slack 32 | D: global capacity fallback alive
+[2026-07-18T19:50:32.6335995+03:00] OK VERIFY W142 SHORT PATH | DID: compiled two short-girth path lemmas | RESULT: warning-error exit 0. | D: cycle-base chordlessness available
+[2026-07-18T19:50:32.6671890+03:00] > ATTACK W142 CYCLE BASE | NEXT: certify cycle-minus-root path, support equality, tree, and order g-1.
+[2026-07-18T19:51:04.2291016+03:00] > VERIFY W142 CYCLE BASE | NEXT: compile cycle-minus-root certificate with warnings as errors.
+[2026-07-18T19:51:49.0395076+03:00] FAIL VERIFY W142 CYCLE BASE | DID: warning-error build | RESULT: forward references at lines 672,721. | D: inline two list-support facts
+[2026-07-18T19:51:49.0813541+03:00] > VERIFY W142 CYCLE BASE | NEXT: rebuild after inlining support facts.
+[2026-07-18T19:52:17+03:00] > ATTACK W144 STEINER VE | NEXT: exact-test candidate order bound d(v,C)<=n-g through n=11
+[2026-07-18T19:53:55.5541812+03:00] > VERIFY W144 ORDINARY REPORT | NEXT: referee and save exact triameter reduction, counterexamples, searches, and remaining lemmas.
+[2026-07-18T19:53:57+03:00] OK VERIFY W144 BFS CANDIDATES | DID: exhaustive trees n<=11 and cyclic girth>=5 graphs n<=11 | RESULT: 40796 tree tests; order bound 21786/21786 | D: both alive
+[2026-07-18T19:53:57+03:00] > ATTACK W144 TREE LEMMA | NEXT: extend cut tree-Steiner bound through n=13 and prove it by leaf pruning
+[2026-07-18T19:55:16.4891502+03:00] OK VERIFY W142 CYCLE BASE | DID: compiled erase_vertex_path_certificate_splice | RESULT: warning-error exit 0. | D: cycle-minus-root closed
+[2026-07-18T19:55:16.5206438+03:00] > ATTACK W142 UNION | NEXT: prove union of two induced trees with one cross-edge is an induced tree.
+[2026-07-18T19:55:25.7874075+03:00] OK ATTACK W144 TRIAMETER SEARCH | DID: 22320 mutations, 3811 registered ordinary frontiers | RESULT: min metric slack 0; no failure | D: none
+[2026-07-18T19:55:25.8207565+03:00] OK VERIFY W144 ORDINARY REPORT | DID: wrote report and py-compiled 7 audit scripts | RESULT: ORDINARY_TRIAMETER_REPORT_20260718.md SHA 4B786280 | D: 3 obligations open
+[2026-07-18T19:57:29+03:00] > ATTACK W144 STEINER VE | NEXT: run optimized exact VE audit on all 8167 generated n=12 graphs with 32 workers
+[2026-07-18T19:57:34+03:00] OK ATTACK W144 TREE LEMMA | DID: exhaustive cut-bound audit on all trees n<=13 | RESULT: 2287 trees, 316484 (T,v,k) tests, 0 failures | D: prove by hull growth
+[2026-07-18T19:57:34+03:00] > ATTACK W144 STEINER CENTER | NEXT: exact-test decompositions A and B on cyclic girth>=5 graphs n<=11
+[2026-07-18T19:58:36.3174808+03:00] > ATTACK W144 ONE-ROOT | NEXT: prove (O) for every ordinary component with one legal cycle root outside z.
+[2026-07-18T19:59:03+03:00] OK ATTACK W144 STEINER VE | DID: optimized exact n=12 audit with 32 workers | RESULT: 7616 graphs, 91392 vertices, 0 failures, min slack 0 | D: none
+[2026-07-18T19:59:03+03:00] > ATTACK W144 STEINER VE | NEXT: run optimized exact VE audit on all 43645 generated n=13 graphs with 32 workers
+[2026-07-18T19:59:14.9075002+03:00] OK ATTACK W144 ONE-ROOT | DID: proved cycle-layer and rooted-geodesic bound | RESULT: ORDINARY_ONE_ROOT_LEMMA.md; |E|+lambda<=2R<=2mu | D: only >=2 legal roots open
+[2026-07-18T20:00:19+03:00] OK ATTACK W144 STEINER VE | DID: optimized exact n=13 audit with 32 workers | RESULT: 42344 graphs, 550472 vertices, 0 failures, min slack 0 | D: none
+[2026-07-18T20:03:08.9575915+03:00] OK VERIFY W144 REPORT UPDATE | DID: added one-root proof | RESULT: ordinary report SHA 7B50FF74 | D: MW narrowed to >=2 roots
+[2026-07-18T20:03:22.9214738+03:00] > VERIFY W142 UNION | NEXT: compile generic one-cross-edge tree union inside SplicePath.
+[2026-07-18T20:03:34.0535167+03:00] > VERIFY W144 TWO-ROOT | NEXT: test q+lambda<=max(2R, shortest root-cycle length) for g>=7 through n=14.
+[2026-07-18T20:03:39+03:00] FAIL ATTACK W144 STEINER CENTER | DID: exact A/B audit n<=11 | RESULT: A false on F?bBo v0 (5<6); B passed 21786 instances | D: abandon A+B split
+[2026-07-18T20:03:39+03:00] OK VERIFY W144 STEINER REPORT | DID: updated VE evidence and auxiliary reductions | RESULT: STEINER_ROUTE_REPORT.md; 52000 graphs, 663650 roots | D: VE remains frontier
+[2026-07-18T20:03:39+03:00] > ATTACK W144 TIGHT STRUCTURE | NEXT: classify cyclomatic number of all exact VE-tight instances through n=13
+[2026-07-18T20:04:11.7361578+03:00] OK VERIFY W142 UNION | DID: compiled induce_union_of_disjoint_of_unique_adj_splice | RESULT: warning-error exit 0. | D: one-cross union closed
+[2026-07-18T20:04:11.7686085+03:00] > ATTACK W142 M WRAPPER | NEXT: combine L7(b), cycle base, union, and largest-induced-tree supremum.
+[2026-07-18T20:04:50.8991526+03:00] > VERIFY W142 M WRAPPER | NEXT: compile L7(b)-to-largestInducedTreeSize theorem with warnings as errors.
+[2026-07-18T20:05:06+03:00] > ATTACK W144 STEINER TWO-END | NEXT: exact-test a two-endpoint weighted-path terminal construction through n=11
+[2026-07-18T20:05:17.6004417+03:00] FAIL VERIFY W144 TWO-ROOT | DID: exact n<=14 surrogate audit | RESULT: g8 n14 CE M???C@?K@OOoT??Y?; target6>bound5 | D: retain full P
+[2026-07-18T20:05:31.6952906+03:00] FAIL VERIFY W142 M WRAPPER | DID: warning-error build | RESULT: unused DecidableEq linter at SplicePath.lean:263. | D: omit instance
+[2026-07-18T20:05:31.7527533+03:00] > VERIFY W142 M WRAPPER | NEXT: rebuild after omitting unused instance.
+[2026-07-18T20:05:44+03:00] FAIL ATTACK W144 STEINER TWO-END | DID: exact-tested weighted two-endpoint construction | RESULT: DEAD: I??CBbGH_,g7,v0,t3 has no such terminals | D: VE still alive
+[2026-07-18T20:06:15.0476856+03:00] OK VERIFY W142 M WRAPPER | DID: compiled L7(b)-to-largestInducedTreeSize | RESULT: warning-error exit 0; theorem at SplicePath.lean. | D: interacting M bridge closed
+[2026-07-18T20:06:52.8829757+03:00] OK VERIFY W142 HYGIENE | DID: scanned SplicePath.lean | RESULT: no sorry/admit/native_decide; SHA256 DAA4D115...409598. | D: none
+[2026-07-18T20:06:20+03:00] FAIL ATTACK W144 TIGHT STRUCTURE | DID: classified all VE-tight roots n<=13 | RESULT: tight cyclomatic numbers 1..8; FCR`o has mu=2 | D: no unicyclic reduction
+[2026-07-18T20:06:20+03:00] > ATTACK W144 REALIZER CENTER | NEXT: exact-test whether some outer center-realizer satisfies Steiner-center inequality through n=13
+[2026-07-18T20:08:20.5926987+03:00] > ATTACK W142 L7A | NEXT: prove finite-target descent disjointness and choose a cycle root outside two attachments.
+[2026-07-18T20:08:20.6416420+03:00] > VERIFY W142 L7A HELPERS | NEXT: compile cycle-root and finite-target helpers.
+[2026-07-18T20:08:02+03:00] FAIL ATTACK W144 REALIZER CENTER | DID: tested outer-realizer weakening through first n=9 failures | RESULT: H?BDA_{ has both realizers 6<5+2 | D: DEAD Steiner-center split
+[2026-07-18T20:08:55+03:00] > ATTACK W144 COMPLEMENT | NEXT: prove max b(X)>=d(v,C) via a direct separator or min-max construction.
+[2026-07-18T20:09:16.2791803+03:00] > ATTACK W144-MW | NEXT: ask GPT Pro to prove or falsify q_H+lambda<=P_z(H) under the exact residual hypotheses.
+[2026-07-18T20:09:31.7325979+03:00] FAIL VERIFY W142 L7A HELPERS | DID: warning-error build | RESULT: unused Fintype at line 1497; pair-card proof at 1526. | D: specialize omissions
+[2026-07-18T20:09:31.7758429+03:00] > VERIFY W142 L7A HELPERS | NEXT: rebuild corrected helper lemmas.
+[2026-07-18T20:10:21.2552795+03:00] FAIL VERIFY W142 L7A HELPERS | DID: rebuilt helpers | RESULT: unused ha,hb at line 1515. | D: remove redundant hypotheses
+[2026-07-18T20:10:21.3054825+03:00] > VERIFY W142 L7A HELPERS | NEXT: rebuild after removing redundant inputs.
+[2026-07-18T20:10:26.9957154+03:00] OK ATTACK W144-MW | DID: sent exact MW proof-or-counterexample prompt | RESULT: ChatGPT Pro 6a5bb363-acdc-83ed-8118-29e58cadf349 thinking | D: none
+[2026-07-18T20:10:36.4413199+03:00] > ATTACK W144 COMPLEMENT PATH | NEXT: test whether a valid X can contain a full nearest-center geodesic for all roots n<=11.
+[2026-07-18T20:11:14.4075373+03:00] FAIL ATTACK W144 COMPLEMENT PATH | DID: exact-tested geodesic-containing complements | RESULT: DEAD: G?`ad_,g6,v1,t2 has no valid X containing a v-C geodesic | D: VE alive
+[2026-07-18T20:11:15.1281239+03:00] > GATE W144-S | NEXT: search primary literature for an anchored Steiner-eccentricity theorem implying VE.
+[2026-07-18T20:11:39.3587483+03:00] OK VERIFY W142 L7A HELPERS | DID: compiled three helper lemmas | RESULT: warning-error exit 0. | D: L7(a) construction unblocked
+[2026-07-18T20:11:39.4017675+03:00] > VERIFY W142 L7A | NEXT: compile the two-descent noninteracting induced-tree theorem.
+[2026-07-18T20:12:07.2994126+03:00] OK GATE W144-S | DID: searched Steiner k-eccentricity literature | RESULT: arXiv:2112.01140 and 1907.07658 contain no anchored VE theorem | D: none
+[2026-07-18T20:12:22.8455259+03:00] > ATTACK W144 ECC-LIFT | NEXT: exact-test e_(g-1)(v)>=ecc(v)+g-3, which would imply VE directly.
+[2026-07-18T20:12:29.5048442+03:00] FAIL VERIFY W142 L7A | DID: warning-error build | RESULT: unnecessary-simpa linter at lines 1612,1638. | D: simplify witnesses
+[2026-07-18T20:12:29.5469912+03:00] > VERIFY W142 L7A | NEXT: rebuild after linter cleanup.
+[2026-07-18T20:13:20+03:00] > ATTACK W144 STEINER RADIUS | NEXT: exact-test R_(g-1)>=g-2+ecc(C) on all cyclic girth>=5 graphs n<=13
+[2026-07-18T20:13:20.5917534+03:00] FAIL ATTACK W144 ECC-LIFT | DID: exact-tested e_(g-1)(v)>=ecc(v)+g-3 | RESULT: DEAD: ECpo,g5,v0 has ecc=3 and e4=4<5 | D: VE alive
+[2026-07-18T20:13:44.2842975+03:00] OK VERIFY W142 L7A | DID: compiled two-descent noninteracting theorem | RESULT: warning-error exit 0. | D: L7(a) two-tail closed
+[2026-07-18T20:13:44.3188719+03:00] > ATTACK W142 L8 PACK | NEXT: extend the noninteracting construction to three positive descents.
+[2026-07-18T20:14:07.4060131+03:00] > ATTACK W144 GIRTH EXTENSION | NEXT: exact-test e_(g-1)(v)>=ecc(v)+g-4 and isolate only t=radius residue.
+[2026-07-18T20:14:30.8594765+03:00] > VERIFY W142 L8 PACK | NEXT: compile three-descent noninteracting theorem.
+[2026-07-18T20:16:46.9578191+03:00] OK VERIFY W142 L8 PACK | DID: compiled three-tail noninteraction theorem | RESULT: warning-error exit 0. | D: positive three-tail branch closed
+[2026-07-18T20:16:46.9894454+03:00] > ATTACK W142 L8 SUBSETS | NEXT: compile zero-tail and one-tail induced-tree bounds.
+[2026-07-18T20:16:47.0050531+03:00] > VERIFY W142 L8 SUBSETS | NEXT: compile zero-tail and one-tail bounds.
+[2026-07-18T20:17:01.2095182+03:00] > ATTACK W144 BLOCK SPLIT | NEXT: exact-test whether every 2-connected girth>=5 graph has d(v,C)<=1.
+[2026-07-18T20:17:13.2637671+03:00] > ATTACK W144-SR | NEXT: extract smallest equality cases and exact root terminal witnesses for the direct Steiner-radius lemma.
+[2026-07-18T20:17:13.4028747+03:00] FAIL ATTACK W144 BLOCK SPLIT | DID: exact-tested 2-connected center distance<=1 | RESULT: DEAD: G?qa`o,g5,n8,v5 has d(v,C)=2 | D: VE alive
+[2026-07-18T20:17:38.7734879+03:00] OK ATTACK W144-SR | DID: extracted equality cases n<=9 | RESULT: tight families include C5 with leaves at adjacent roots; exact graph6 list in console | D: none
+[2026-07-18T20:17:50.6599995+03:00] > ATTACK W144-SR-GPT | NEXT: ask GPT Pro to prove/falsify the direct Steiner-radius strengthening SR.
+[2026-07-18T20:17:52.5033473+03:00] OK VERIFY W142 L8 SUBSETS | DID: compiled zero-tail and one-tail bounds | RESULT: warning-error exit 0. | D: all cardinality subsets have concrete lemmas
+[2026-07-18T20:17:52.5332913+03:00] > ATTACK W142 L8 DICHOTOMY | NEXT: derive pairwise noninteraction from absent interaction indices and compile the three-tail case split.
+[2026-07-18T20:17:52.5481652+03:00] > VERIFY W142 L8 DICHOTOMY | NEXT: compile positive three-tail interaction split.
+[2026-07-18T20:15:58+03:00] OK ATTACK W144 STEINER RADIUS | DID: exact SR audit through n=13 | RESULT: 52000 graphs, 0 failures, min slack 0 | D: frontier strengthened to SR
+[2026-07-18T20:15:58+03:00] > ATTACK W144 SR EXCHANGE | NEXT: prove every min-e_k root has a terminal set requiring e restored complement vertices
+[2026-07-18T20:18:45.1388472+03:00] FAIL VERIFY W142 L8 DICHOTOMY | DID: warning-error build | RESULT: unused Fintype linter at line 1587. | D: omit instance
+[2026-07-18T20:18:45.1733116+03:00] > VERIFY W142 L8 DICHOTOMY | NEXT: rebuild after omitting unused instance.
+[2026-07-18T20:20:03.4611881+03:00] OK ATTACK W144-SR-GPT | DID: sent exact SR proof-or-counterexample prompt | RESULT: ChatGPT Pro 6a5bb5b0-0c4c-83eb-81f5-2197dde035fb thinking | D: none
+[2026-07-18T20:20:58.2089167+03:00] OK VERIFY W142 L8 DICHOTOMY | DID: compiled positive-tail interaction split | RESULT: warning-error exit 0. | D: structural L8 positive branch closed
+[2026-07-18T20:20:58.2357664+03:00] > ATTACK W142 L6 | NEXT: prove the three-root distance-sum bound on a cycle.
+[2026-07-18T20:20:58.2488652+03:00] > VERIFY W142 L6 ROOTS | NEXT: compile the cycle three-root metric lemma.
+[2026-07-18T20:21:11.0786682+03:00] > ATTACK W144 VE RANDOM | NEXT: search random connected girth>=5 graphs n=14..20 for an exact VE counterexample.
+[2026-07-18T20:21:52.2808098+03:00] FAIL VERIFY W142 L6 ROOTS | DID: warning-error build | RESULT: missing cycle positivity and index rewrite at lines 1505,1509. | D: add three_le_length
+[2026-07-18T20:21:52.3227184+03:00] > VERIFY W142 L6 ROOTS | NEXT: rebuild corrected cycle-index helper and root bound.
+[2026-07-18T20:22:09.2062974+03:00] OK ATTACK W144 VE RANDOM | DID: exact-searched 460 random graphs n14..16 | RESULT: 0 VE failures; girths 5..9; fixed seed 14420260718 | D: none
+[2026-07-18T20:22:55.1452222+03:00] OK VERIFY W142 L6 ROOTS | DID: compiled sum_three_dist_le_length_splice | RESULT: warning-error exit 0. | D: cycle-root metric core closed
+[2026-07-18T20:22:55.1784937+03:00] > ATTACK W142 L6 FULL | NEXT: lift the root bound through three descent walks.
+[2026-07-18T20:22:55.1953218+03:00] > VERIFY W142 L6 FULL | NEXT: compile terminal three-arc inequality.
+[2026-07-18T20:23:50.5766377+03:00] FAIL VERIFY W142 L6 FULL | DID: warning-error build | RESULT: unused Fintype/DecidableEq linter at line 1564. | D: omit instances
+[2026-07-18T20:23:50.6151581+03:00] > VERIFY W142 L6 FULL | NEXT: rebuild with exact instance scope.
+[2026-07-18T20:24:46.1198317+03:00] OK VERIFY W142 L6 FULL | DID: compiled three_arc_inequality_splice | RESULT: warning-error exit 0. | D: L6 closed
+[2026-07-18T20:24:46.1538922+03:00] > ATTACK W142 C8 | NEXT: combine L6 and L8 dichotomy in the main arithmetic range.
+[2026-07-18T20:24:46.1858648+03:00] > VERIFY W142 C8 | NEXT: compile the positive-tail main-range closure.
+[2026-07-18T20:25:28.1864118+03:00] OK VERIFY W144 COMPLEMENT | DID: proved q-cut equivalence and audited two false constructions | RESULT: attack_global/COMPLEMENT_MINMAX_AUDIT_20260718.md | D: exact separator bridge open
+[2026-07-18T20:25:33.7657310+03:00] FAIL VERIFY W142 C8 | DID: warning-error build | RESULT: Nat.le_min is iff at line 2195. | D: use mpr pair
+[2026-07-18T20:25:33.8037590+03:00] > VERIFY W142 C8 | NEXT: rebuild corrected min bound.
+[2026-07-18T20:26:08.9695836+03:00] > ATTACK W144-MW | NEXT: execute existing abstract cover-union falsifier through n=12 to test the nearest-root interval core.
+[2026-07-18T20:26:51.3767250+03:00] FAIL VERIFY W142 C8 | DID: rebuilt min bound | RESULT: hmain unused at line 2181; positivity and L6 suffice. | D: strengthen theorem
+[2026-07-18T20:26:51.4115729+03:00] > VERIFY W142 C8 | NEXT: rebuild strengthened positive-three-tail closure.
+[2026-07-18T20:26:57.9200094+03:00] > ATTACK W144 REALIZER GEODESIC | NEXT: test whether some e-realizer has a valid complement containing a nearest-center geodesic.
+[2026-07-18T20:27:01.1395890+03:00] FAIL ATTACK W144-MW | DID: ran abstract cover-union audit, 491686 cases | RESULT: DEAD; g7 graph6 J??CB?[s@S? has slack -1 | D: shortcut rejected
+[2026-07-18T20:27:42.0934583+03:00] FAIL ATTACK W144 REALIZER GEODESIC | DID: exact-tested favorable outer-realizer path deletion | RESULT: DEAD: H?BDA_Y,g7,e2 unique x1 has no valid X containing x-C geodesic | D: SR alive
+[2026-07-18T20:28:31.4393775+03:00] OK VERIFY W142 C8 | DID: compiled positive-three-tail arithmetic closure | RESULT: warning-error exit 0. | D: three-positive C8 closed
+[2026-07-18T20:28:31.4719125+03:00] > ATTACK W142 C8 SUBSETS | NEXT: compile two-, one-, and zero-positive-tail arithmetic closures.
+[2026-07-18T20:28:31.5043182+03:00] > VERIFY W142 C8 SUBSETS | NEXT: compile the remaining positive-tail cardinality cases.
+[2026-07-18T20:29:00.2319352+03:00] OK VERIFY W144-MW | DID: preserved relaxed-cover counterexample | RESULT: attack_144_n2/ABSTRACT_INTERVAL_COUNTEREXAMPLE_20260718.md | D: none
+[2026-07-18T20:29:33.5026431+03:00] > SELECT | NEXT: W144 ciliate endpoints; residual ranges are exact and internal parameters are closed.
+[2026-07-18T20:29:33.5334128+03:00] OK SELECT | DID: selected t=1 and t=r endpoints | RESULT: registry W144-C has one augmentation frontier | D: none
+[2026-07-18T20:29:33.5341954+03:00] > GATE | NEXT: check primary-source theorem scope and repository prior-art records for an endpoint closure.
+[2026-07-18T20:29:51.8645390+03:00] OK VERIFY W142 C8 SUBSETS | DID: compiled two/one/zero positive-tail closures | RESULT: warning-error exit 0 | D: main-range subsets closed
+[2026-07-18T20:29:57.7742843+03:00] > ATTACK W142 TAIL DISPATCH | NEXT: prove one main-range theorem by splitting the three nearest-cycle walk lengths.
+[2026-07-18T20:30:35.4263269+03:00] OK GATE | DID: checked Fajtlowicz 1988 and repo records | RESULT: DOI 10.1002/jgt.3190120409 has ciliate theorem, no endpoint closure | D: none
+[2026-07-18T20:30:35.4592410+03:00] > PLAN | NEXT: reduce endpoints by P2, then verify fixed-seed and multi-component obstruction families exactly.
+[2026-07-18T20:30:35.4599233+03:00] OK PLAN | DID: set one endpoint augmentation frontier | RESULT: test P2 equality residues and Lemma-M compatibility | D: none
+[2026-07-18T20:30:35.4606541+03:00] > ATTACK | NEXT: run exact checks of L_r and G_m parameters and all induced-tree exchange subsets for bounded r,m.
+[2026-07-18T20:31:32.3772435+03:00] > VERIFY W142 TAIL DISPATCH | NEXT: compile Walk.three_descents_main_range_bound with warnings as errors.
+[2026-07-18T20:31:42.1493216+03:00] FAIL VERIFY W144-S | DID: audited arXiv:2112.01140 Thm 3.1 | RESULT: DEAD; C5,k=4 has e_k(G)=3 but min_T e_k(T)=4 | D: route rejected
+[2026-07-18T20:32:03.1756590+03:00] OK VERIFY W142 TAIL DISPATCH | DID: compiled Walk.three_descents_main_range_bound | RESULT: warning-error exit 0 | D: all 8 tail cases closed
+[2026-07-18T20:32:11.1423945+03:00] > PLAN W142 GLOBAL BRIDGE | NEXT: map paper L8-L10 and compiled eccentricity APIs to the exact theorem statement.
+[2026-07-18T20:32:31.0367180+03:00] OK ATTACK | DID: checked endpoint families r=2..30,m=1..30 | RESULT: verify_endpoint_families.py: 59 instances, 0 assertion failures | D: none
+[2026-07-18T20:32:31.0752479+03:00] > ATTACK | NEXT: derive the exact P2 residues and referee the two endpoint augmentation implications against L_r and G_m.
+[2026-07-18T20:32:48.2839388+03:00] > ATTACK W144-METRIC | NEXT: test whether e=r forces every outer realizer to have ordinary eccentricity at least e+2 through n=13.
+[2026-07-18T20:33:11.8777690+03:00] FAIL ATTACK W144-METRIC | DID: tested 62110 e=r outer realizers through n=13 | RESULT: DEAD; F?bao has e=r=2 and outer v0 eccentricity 3 | D: route rejected
+[2026-07-18T20:34:55.9486242+03:00] > VERIFY W142 GLOBAL C8 | NEXT: compile terminal extraction, T4, nearest-cycle paths, and cyclic_main_range_bound_splice.
+[2026-07-18T20:35:27.0700328+03:00] FAIL VERIFY W142 GLOBAL C8 | DID: compiled bridge | RESULT: l2405 lint; l2414 f/B unfolding; l2477 support coercion errors | D: none
+[2026-07-18T20:36:16.3625346+03:00] > VERIFY W142 GLOBAL C8 RETRY | NEXT: recompile after unfolding f and converting Finset support membership.
+[2026-07-18T20:36:38.5012768+03:00] OK ATTACK | DID: audited P2 and endpoint exchanges | RESULT: CILIATE_ENDPOINT_FINAL_AUDIT_20260718.md proves two infinite obstruction families | D: W144-C DEAD
+[2026-07-18T20:36:38.5382146+03:00] > VERIFY | NEXT: rerun 59 exact instances, compile verifier, and hash the endpoint report and script.
+[2026-07-18T20:36:43.5919598+03:00] > ATTACK W144-ORDER | NEXT: falsify vertex-addition induction e(G)<=e(G-v)+1 on all connected deletions through n=8.
+[2026-07-18T20:36:59.1725983+03:00] OK VERIFY W142 GLOBAL C8 | DID: compiled T4, terminal extraction, nearest-cycle paths, global C8 | RESULT: warning-error exit 0 | D: main range closed
+[2026-07-18T20:37:00.3855680+03:00] OK VERIFY | DID: compiled/reran endpoint verifier | RESULT: 59 instances, 0 failures; report SHA256 1803C3E3...53C5383 | D: none
+[2026-07-18T20:37:00.4263026+03:00] > DECIDE | NEXT: apply W144-C exit rule to the exact fixed-endpoint and one-component falsifiers.
+[2026-07-18T20:37:00.4272635+03:00] FAIL DECIDE | DID: abandoned W144-C as a separate route | RESULT: DEAD: G_m needs multiple outside components for both endpoints | D: return to global frontier
+[2026-07-18T20:37:42.6873756+03:00] FAIL DECIDE | DID: applied direct-proof guard | RESULT: DEAD: reformulation maze - endpoint gives no bound on compatible component-capacity sum | D: W144-C closed
+[2026-07-18T20:37:48.6746978+03:00] > ATTACK W142 ASSEMBLY EASY | NEXT: formalize diameter-tree, girth-3, and small-f cyclic branches.
+[2026-07-18T20:38:10.2242494+03:00] > VERIFY W142 ASSEMBLY EASY | NEXT: compile diameter-tree, girth-three, and small-f branch lemmas.
+[2026-07-18T20:37:43.0471373+03:00] > ATTACK W144 ORDER COVER | NEXT: exact-test |W| and witness-coverage bounds against 2(n-g-h) on the unwrapped residual.
+[2026-07-18T20:38:44.9223181+03:00] FAIL VERIFY W142 ASSEMBLY EASY | DID: compiled branch lemmas | RESULT: l2526 missing three_le_girth arithmetic premise | D: none
+[2026-07-18T20:39:01.3232188+03:00] > VERIFY W142 ASSEMBLY EASY RETRY | NEXT: recompile with cyclic girth lower bound.
+[2026-07-18T20:38:35.1764965+03:00] FAIL ATTACK W144-ORDER | DID: tested 12,112 graphs/89,445 deletions through n=8 | RESULT: FEhf?,v=6 gives eG=2,eH=0 | D: DEAD
+[2026-07-18T20:39:34.3136291+03:00] OK VERIFY W142 ASSEMBLY EASY | DID: compiled diameter-tree, girth-3, and small-f lemmas | RESULT: warning-error exit 0 | D: easy branches closed
+[2026-07-18T20:39:56.9317655+03:00] FAIL ATTACK W144 ORDER COVER | DID: launched n5..12 exact audit | RESULT: ProcessPool WinError 5 before graph checks | D: sequential rerun
+[2026-07-18T20:39:56.9317655+03:00] > ATTACK W144 ORDER COVER | NEXT: run the same n5..12 audit sequentially to obtain an exact candidate verdict.
+[2026-07-18T20:40:36.8445497+03:00] OK ATTACK W144 ORDER COVER | DID: exact-audited n5..12 | RESULT: 9656 graphs,5500 cases,0 failures,both min slack 0 | D: candidate alive
+[2026-07-18T20:40:36.8445497+03:00] > ATTACK W144 ORDER COVER PROOF | NEXT: prove sum_H |E_H cap W| <= 2(n-g-h) by charging witnesses off the x-K tail.
+[2026-07-18T20:40:39.0677439+03:00] > ATTACK W144-S CUT | NEXT: exact-test complete cut-family witnesses, then attack one construction lemma.
+[2026-07-18T20:42:39.0495092+03:00] > ATTACK W142 L9 T6 | NEXT: prove positive-periphery girth-four graphs have diameter at least three.
+[2026-07-18T20:43:10.4078849+03:00] > VERIFY W142 L9 T6 | NEXT: compile the girth-four diameter lower bound.
+[2026-07-18T20:43:49.5215839+03:00] FAIL VERIFY W142 L9 T6 | DID: compiled T6 | RESULT: l2545 explicit index equalities; l2596 distance orientation; l2609 support goals | D: none
+[2026-07-18T20:44:28.9595813+03:00] > VERIFY W142 L9 T6 RETRY | NEXT: recompile explicit cycle indices and oriented distance/support proofs.
+[2026-07-18T20:44:56.4525574+03:00] FAIL ATTACK W144-S CUT | DID: exact-tested two-terminal cut witnesses | RESULT: F?bao,n=7,g=5,e=2,v=1 | D: lemma DEAD
+[2026-07-18T20:45:06.0642264+03:00] OK VERIFY W142 L9 T6 | DID: compiled three_le_diam_of_girth_four_eccSet_pos_splice | RESULT: warning-error exit 0 | D: L9 T6 closed
+[2026-07-18T20:45:52.0468562+03:00] > ATTACK W142 L9 PATH CERTS | NEXT: certify unique attachment and four-cycle reroute attachment over a diametral geodesic.
+[2026-07-18T20:46:15.1669079+03:00] > ATTACK W144-S EXCHANGE | NEXT: exact-test one-swap ascent of b(X) below e on all roots through first obstruction.
+[2026-07-18T20:46:16.6507550+03:00] > VERIFY W142 L9 PATH CERTS | NEXT: compile both diametral-path induced-tree certificates.
+[2026-07-18T20:47:26.3002563+03:00] FAIL VERIFY W142 L9 PATH CERTS | DID: compiled path certs | RESULT: card_insert theorem rename, Fintype omission, concat membership normalization | D: none
+[2026-07-18T20:48:03.0049245+03:00] > VERIFY W142 L9 PATH CERTS RETRY | NEXT: recompile card/Fintype/concat fixes.
+[2026-07-18T20:48:13.9346709+03:00] FAIL ATTACK W144-S EXCHANGE | DID: tested strict one-swap ascent | RESULT: F?q`o,v=4,X={1,5,6},b=1<e=2 is local max | D: lemma DEAD
+[2026-07-18T20:48:38.7538396+03:00] OK VERIFY W142 L9 PATH CERTS | DID: compiled unique-attachment and two-step reroute tree bounds | RESULT: warning-error exit 0 | D: L9 certs closed
+[2026-07-18T20:49:08.0510032+03:00] > ATTACK W144-S CENTRAL-X | NEXT: test whether a minimum center-distance p-complement always has b(X)>=e.
+[2026-07-18T20:49:37.1712670+03:00] > ATTACK W142 L9 GAP | NEXT: prove two neighbors of an outside vertex on a geodesic differ by exactly two indices.
+[2026-07-18T20:49:48.4577646+03:00] > VERIFY W144 ORDER COVER | NEXT: exact-check unwrapped and wrap-corrected cover inequalities on all girth>=5 graphs n5..13.
+[2026-07-18T20:49:53.7370902+03:00] FAIL ATTACK W144-S CENTRAL-X | DID: tested minimum center-distance X | RESULT: G?`F?w,n=8,g=6,e=2,v=0 has best b=1 | D: lemma DEAD
+[2026-07-18T20:49:53.7660488+03:00] FAIL ATTACK W144-S CUT | DID: audited 3 direct selection lemmas | RESULT: all have exact n<=8 obstructions | D: DEAD: missing global cut-family selection bridge
+[2026-07-18T20:49:57.5153694+03:00] > VERIFY W142 L9 GAP | NEXT: compile the exact-two-index neighbor lemma.
+[2026-07-18T20:50:44.2887118+03:00] FAIL VERIFY W142 L9 GAP | DID: compiled gap lemma | RESULT: l2712 copy start, l2724 subwalk-copy API, l2741 endpoint inequality | D: none
+[2026-07-18T20:50:48.3684552+03:00] > VERIFY W144-S CUT REPORT | NEXT: rerun 3 exact falsifiers and validate all cited witnesses.
+[2026-07-18T20:51:00.7739080+03:00] OK VERIFY W144-S CUT REPORT | DID: reran 3 exact falsifiers | RESULT: attack_global/CUTFAMILY_SELECTION_DEAD_20260718.md | D: cut-selection branch DEAD
+[2026-07-18T20:51:05.2447240+03:00] OK VERIFY W144 ORDER COVER | DID: exact-audited n5..13 with wrap correction | RESULT: 52000 graphs,31636 cases,0 failures,min slack 0 | D: lemma proved
+[2026-07-18T20:51:05.2447240+03:00] > VERIFY W144 ORDER PROOF | NEXT: referee-check ORDER_COVER_LEMMA_20260718.md line by line and report its exact bridge scope.
+[2026-07-18T20:51:13.5810228+03:00] > VERIFY W142 L9 GAP RETRY | NEXT: recompile the corrected copied subwalk and endpoint proof.
+[2026-07-18T20:52:31.3664167+03:00] > VERIFY W142 L9 GAP RETRY2 | NEXT: compile using the original subwalk endpoint type without copying.
+[2026-07-18T20:52:53.0683285+03:00] OK ATTACK W144-MW | DID: sent exact g>=7 full-cycle MW to GPT Pro | RESULT: Pro thinking at chat 6a5bb9ac... | D: none
+[2026-07-18T20:53:04.4883450+03:00] OK VERIFY W144-MW LOG | DID: checked GPT tab URL | RESULT: prior chat-id text wrong; exact 6a5bbd61-8700-83eb-b2e6-cb3404391062 | D: corrected
+[2026-07-18T20:53:06.1118083+03:00] FAIL VERIFY W142 L9 GAP | DID: compiled original-endpoint proof | RESULT: l2719 dependent rewrite; use congrArg distance and native endpoint geodesic | D: none
+[2026-07-18T20:53:15.9092784+03:00] > VERIFY W142 L9 GAP RETRY3 | NEXT: recompile congrArg endpoint transport.
+[2026-07-18T20:52:36+03:00] > PLAN W144-MW | NEXT: register exact g>=7 full-cycle metric lemma and its MW-to-Lemma-M bridge.
+[2026-07-18T20:53:05+03:00] OK PLAN W144-MW | DID: added DIRECT ROUTE W144-MW | RESULT: problems_external/wowii_144/APPROACH_REGISTRY.md | D: frontier registered
+[2026-07-18T20:53:51.7883548+03:00] OK VERIFY W142 L9 GAP | DID: compiled geodesic_outside_neighbor_index_gap_two_splice | RESULT: warning-error exit 0 | D: L9 gap closed
+[2026-07-18T20:55:10+03:00] > ATTACK W144-MW | NEXT: exhaustively test full-cycle inequality for every legal g>=7 record through n=12.
+[2026-07-18T20:54:38.7756609+03:00] > ATTACK W142 L9 ASSEMBLY | NEXT: assemble the complete girth-four bound from T4/T6 and the path certificates.
+[2026-07-18T20:54:39.6100804+03:00] > ATTACK W144-IND | NEXT: exact-test deletion monotonicity g(G)+e(G)<=g(G-v)+e(G-v) through n=9.
+[2026-07-18T20:58:12+03:00] OK ATTACK W144-MW | DID: exact full-cycle audit n=7..12 | RESULT: 8,345 records, min slack 0, failures 0; SHA 6192365B | D: none
+[2026-07-18T20:55:21.3397083+03:00] > VERIFY W142 L9 ASSEMBLY | NEXT: compile cyclic_girth_four_bound_splice.
+[2026-07-18T20:56:07.6528373+03:00] FAIL VERIFY W142 L9 ASSEMBLY | DID: compiled L9 | RESULT: only l2857 getVert index transport and l2867 Nat subtraction normalization remain | D: none
+[2026-07-18T20:56:22.7677333+03:00] FAIL ATTACK W144-IND | DID: tested g>=5 deletions | RESULT: ECpo,v=2 gives g+e=6; C5 gives 5 | D: DEAD: monotonicity false
+[2026-07-18T20:56:24.0247532+03:00] > VERIFY W142 L9 ASSEMBLY RETRY | NEXT: recompile explicit getVert index and depth arithmetic.
+[2026-07-18T21:00:10+03:00] > ATTACK W144-MW | NEXT: test whether full far set is one cycle arc and whether its endpoint witnesses attain the bound through n=12.
+[2026-07-18T20:56:27.8790400+03:00] OK VERIFY W144 ORDER PROOF | DID: audited multiplicity, lambda slack, wrap quantifiers | RESULT: ORDER_COVER_LEMMA_20260718.md proves e<=n-g | D: no SR bridge
+[2026-07-18T20:56:45.5497423+03:00] > ATTACK W144-IND2 | NEXT: exact-test paired deletion target rise <= induced-tree rise on g>=5 graphs through n=10.
+[2026-07-18T21:02:14+03:00] FAIL ATTACK W144-MW | DID: arc/endpoint audit n<=12 | RESULT: 142 non-arcs; 12 endpoint-pair failures; full MW still 0 failures | D: endpoint proof DEAD
+[2026-07-18T20:57:19.3445041+03:00] OK VERIFY W142 L9 ASSEMBLY | DID: compiled cyclic_girth_four_bound_splice | RESULT: warning-error exit 0 | D: girth-four branch closed
+[2026-07-18T20:58:52.9449768+03:00] FAIL ATTACK W144-IND2 SAME-G | DID: tested multicyclic n<=12 | RESULT: K??CA?_sDOEg has no deletion preserving g and e | D: retain g+e tradeoff
+[2026-07-18T21:05:07+03:00] > ATTACK W144-MW | NEXT: search 100,000 deterministic g>=7 cycle/ear/tail graphs for a full-cycle metric counterexample.
+[2026-07-18T20:59:32.1958315+03:00] OK ATTACK W144-IND2 MULTI | DID: tested multicyclic n=12 | RESULT: 6192 graphs, each has deletion with phiH>=phiG; min best slack 0 | D: none
+[2026-07-18T20:59:32.2226495+03:00] > ATTACK W144-IND2 N13 | NEXT: exact-test multicyclic phi-preserving deletion on all girth>=5 graphs of order 13.
+[2026-07-18T21:01:25+03:00] FAIL ATTACK W144-MW | DID: verified n=13 full-cycle record | RESULT: LhCKK?@?G?_@C?, g=7,r=5,E=0,lambda=4,P=2 | D: exact counterexample
+[2026-07-18T21:01:26+03:00] > CHECK W144-MW | NEXT: apply the registered exact-counterexample exit condition and close this route.
+[2026-07-18T21:01:27+03:00] OK CHECK W144-MW | DID: applied exact exit | RESULT: FULLCYCLE_METRIC_COUNTEREXAMPLE_20260718.md | D: DEAD; no replacement hierarchy
+[2026-07-18T21:01:47.0956611+03:00] > ATTACK W144-IND2-UNI | NEXT: exact-test M(K)=q-min w and e<=M(K) on unicyclic atlas and rooted-cycle families.
+[2026-07-18T21:02:33.0932768+03:00] OK ATTACK W144-IND2 N13 | DID: exact-tested multicyclic n=13 | RESULT: 38066 graphs,0 failures,min best phi slack 0 | D: frontier sharpened
+[2026-07-18T21:03:07.2148517+03:00] OK ATTACK W144-IND2-UNI | DID: exact-tested n<=11 | RESULT: 2846 graphs; M identity 1040 n<=10; e<=M min slack 0 | D: prove lemma
+[2026-07-18T21:03:19.5293617+03:00] > ATTACK W144-IND2 PROOF | NEXT: prove or refute a phi-preserving cyclic deletion via block/ear minimal-counterexample analysis.
+[2026-07-18T21:04:53.5555643+03:00] > ATTACK W144-IND2 EQ | NEXT: classify all tight phi-preserving deletions at n=8 to isolate a structural lemma.
+[2026-07-18T21:05:12.5368943+03:00] > VERIFY W144-UNI | NEXT: exhaust all unlabeled unicyclic graphs through n=15 for M=q-min w and e<=M.
+[2026-07-18T21:05:21.5043943+03:00] OK ATTACK W144-IND2 EQ | DID: classified all multicyclic g>=5 graphs n=8 | RESULT: 3 tight graphs; each has degree-2 winner | D: test ear deletion
+[2026-07-18T21:05:36.7129243+03:00] > ATTACK W142 L10 TREE PATH | NEXT: prove uniqueness of ambient paths supported inside an induced tree.
+[2026-07-18T21:05:56.9433705+03:00] > VERIFY W142 L10 TREE PATH | NEXT: compile induced-tree ambient path uniqueness.
+[2026-07-18T21:06:15.5135286+03:00] OK VERIFY W144-UNI | DID: enumerated n<=15 | RESULT: 171512 graphs, no failure; exact M identity on 1040 n<=10 | D: write proof
+[2026-07-18T21:06:44.3756922+03:00] FAIL VERIFY W142 L10 TREE PATH | DID: compiled uniqueness helper | RESULT: map path inference/map_induce explicitness and DecidableEq linter | D: none
+[2026-07-18T21:07:07.1681600+03:00] OK ATTACK W144-IND2 PRO | DID: sent exact multicyclic deletion lemma to GPT Pro | RESULT: Pro thinking, chat 6a5bc08b-e9c4-83eb-8a3a-462675a5377c | D: none
+[2026-07-18T21:07:04.6516881+03:00] FAIL ATTACK W144-IND2 EQ10 | DID: stopped unfiltered geng n=10 after 70 s | RESULT: nothing | D: use existing exact corpus
+[2026-07-18T21:07:57.1001915+03:00] > ATTACK W144-IND2 METRIC | NEXT: exact-test whether connected vertex deletion can lower center-depth by more than one through n=7.
+[2026-07-18T21:08:20.1973432+03:00] FAIL ATTACK W144-IND2 METRIC | DID: tested 6098 connected deletions n<=7 | RESULT: FEhf?,v=6 lowers center-depth 2 to 0 | D: restrict to girth>=5
+[2026-07-18T21:08:39.4912204+03:00] > VERIFY W142 L10 TREE PATH | NEXT: rebuild ambient path uniqueness after explicit induced-map fixes
+[2026-07-18T21:08:36.3059115+03:00] > VERIFY W144-UNI PROOF | NEXT: referee-check M=q-min w, center cases, and Lean-friendly composition.
+[2026-07-18T21:08:44.9165263+03:00] > ATTACK W144-IND2 LOWDEG | NEXT: test whether every e>0 multicyclic g>=5 graph n<=10 has a good deletion of degree at most two.
+[2026-07-18T21:09:19.1471931+03:00] FAIL VERIFY W142 L10 TREE PATH | DID: warningAsError build | RESULT: map_induce rewrite still needed in hp₀/hq₀ | D: none
+[2026-07-18T21:09:19.1881157+03:00] > VERIFY W142 L10 TREE PATH | NEXT: rebuild after direct map_induce rewrites
+[2026-07-18T21:09:33.6575160+03:00] FAIL ATTACK W144-IND2 LOWDEG | DID: tested 248 multicyclic g>=5 graphs n<=10 | RESULT: I?`acgwg_ needs degree-3 deletion; e=2,rank=5 | D: ear-only lemma DEAD
+[2026-07-18T21:10:12.5432932+03:00] FAIL VERIFY W142 L10 TREE PATH | DID: warningAsError build | RESULT: copy endpoint proof placeholders unresolved at hpᵢ/hqᵢ | D: none
+[2026-07-18T21:10:12.5837130+03:00] > VERIFY W142 L10 TREE PATH | NEXT: rebuild with explicit subtype endpoint equalities
+[2026-07-18T21:10:13.8938800+03:00] OK VERIFY W144-UNI PROOF | DID: referee pass and compile | RESULT: attack_ind2_unicyclic/UNICYCLIC_W144_THEOREM_20260718.md | D: base closed
+[2026-07-18T21:11:16.5744687+03:00] OK VERIFY W142 L10 TREE PATH | DID: warningAsError build | RESULT: ambient_path_unique_of_support_subset_splice compiled | D: frontier moves to residue q=2
+[2026-07-18T21:11:22.9908783+03:00] > ATTACK W144-IND2 RANDOM | NEXT: test 1000 seeded subdivided-core graphs with random attached trees up to order about 80.
+[2026-07-18T21:11:42+03:00] > ATTACK W144-IND2 | NEXT: search deterministic ear/block/tail families and seeded random graphs n=14..40 for a phi-deletion counterexample.
+[2026-07-18T21:12:43.8517052+03:00] > ATTACK W142 L10 STRONG SUM | NEXT: add L6/L8 dispatcher proving tree>=g+1 when the terminal distance sum is at least g+3
+[2026-07-18T21:13:19.1207322+03:00] OK ATTACK W144-IND2 RANDOM | DID: tested 1000 seeded subdivided-core/tree graphs | RESULT: 0 failures,min best phi slack 0,87 tight | D: none
+[2026-07-18T21:13:35.9889222+03:00] > VERIFY W142 L10 STRONG SUM | NEXT: warningAsError build of four new L6/L8 closure lemmas
+[2026-07-18T21:14:18.1057829+03:00] FAIL VERIFY W142 L10 STRONG SUM | DID: warningAsError build | RESULT: line 3008 needs nil-length simplification before omega | D: none
+[2026-07-18T21:14:18.1535011+03:00] > VERIFY W142 L10 STRONG SUM | NEXT: rebuild after simplifying nil walk lengths in L6
+[2026-07-18T21:14:16+03:00] FAIL ATTACK W144-IND2 | DID: launched old 20,000-trial generator | RESULT: stopped after 120 s with no records; script emits only at end | D: none
+[2026-07-18T21:14:03.9988062+03:00] > VERIFY W144-MW REG | NEXT: independently audit GPT Pro's order-25 registered ordinary MW counterexample.
+[2026-07-18T21:14:47.0246124+03:00] OK VERIFY W144-MW REG | DID: ran exact auditor on order-25 graph6 | RESULT: g=15,r=e=7,q=11,P=10,slack=-1 | D: ordinary MW DEAD
+[2026-07-18T21:15:07.2480997+03:00] OK ATTACK W144-IND2 STRONG | DID: tested multicyclic g>=5 graphs n<=12 | RESULT: each has cyclic connected deletion with center-depth nondecrease | D: test universal form
+[2026-07-18T21:15:07.2812540+03:00] > ATTACK W144-IND2 UNIVERSAL | NEXT: exact-test center-depth-nondecreasing deletion without girth restriction through n=8.
+[2026-07-18T21:15:08.7377927+03:00] FAIL VERIFY W142 L10 STRONG SUM | DID: retry build | RESULT: intended simp edit absent at line 3008 | D: none
+[2026-07-18T21:15:08.8079585+03:00] > VERIFY W142 L10 STRONG SUM | NEXT: rebuild with confirmed simp line 3008
+[2026-07-18T21:15:33.1079660+03:00] FAIL ATTACK W144-IND2 UNIVERSAL | DID: tested unrestricted multicyclic graphs from n=4 | RESULT: C^=K4-e has e=1 and best deleted e=0 | D: girth restriction essential
+[2026-07-18T21:15:41.0540809+03:00] OK VERIFY W142 L10 STRONG SUM | DID: warningAsError build | RESULT: three_descents_strong_sum_bound_splice compiled | D: D>=f+2 branch ready
+[2026-07-18T21:19:03.1693076+03:00] FAIL ATTACK W144-S PRO | DID: audited Pro response | RESULT: extremal connector=>geodesic exchange unsupported; no proof/counterexample | D: none
+[2026-07-18T21:20:24.6832755+03:00] > ATTACK W142 L10 CYCLE METRIC | NEXT: prove shortest half-arcs geodesic when the girth cycle covers all vertices
+[2026-07-18T21:20:00+03:00] > ATTACK W144-BETA | NEXT: exact-test eta<=n-g-beta+1 on the existing girth>=5 corpus through n=13.
+[2026-07-18T21:20:51.7214380+03:00] > ATTACK W144-IND2 CRITICAL | NEXT: attach leaves to all four good vertices of K??CA?whAg@W and test the resulting order-16 graph exactly.
+[2026-07-18T21:21:00.8217478+03:00] > VERIFY W142 L10 CYCLE METRIC | NEXT: warningAsError build of take_geodesic_of_vertex_cover_splice
+[2026-07-18T21:20:57.0106490+03:00] FAIL ATTACK W144-BETA | DID: exact-tested n<=10 | RESULT: I?`acgwg_,n=10,g=5,e=2,beta=5,slack=-1 | D: W144-BETA DEAD
+[2026-07-18T21:21:16.0509321+03:00] OK ATTACK W144-IND2 CRITICAL | DID: tested O??CA?whAg@W_?O??O?A? | RESULT: best phi slack 4; core deletions became stronger | D: no counterexample
+[2026-07-18T21:21:41.3514813+03:00] FAIL VERIFY W142 L10 CYCLE METRIC | DID: warningAsError build | RESULT: theorem compiles except unused Fintype linter at line 3078 | D: none
+[2026-07-18T21:21:41.4244452+03:00] > VERIFY W142 L10 CYCLE METRIC | NEXT: rebuild with Fintype omitted
+[2026-07-18T21:21:37+03:00] OK ATTACK W144-IND2 | DID: tested 4,590 family + 12,000 seeded n=14..40 graphs | RESULT: ind2_large_audit_results.json; no counterexample | D: none
+[2026-07-18T21:22:01+03:00] > PLAN W144-IND2 | NEXT: prove the shortest-cycle exterior deletion lemma and state its exact consequence for a minimal phi-critical graph.
+[2026-07-18T21:22:23.7841717+03:00] FAIL VERIFY W142 L10 CYCLE METRIC | DID: retry build | RESULT: omit wrapper was placed inside doc comment declaration | D: none
+[2026-07-18T21:22:23.8618836+03:00] > VERIFY W142 L10 CYCLE METRIC | NEXT: rebuild with omit wrapper before declaration comment
+[2026-07-18T21:23:14.2719235+03:00] OK VERIFY W142 L10 CYCLE METRIC | DID: warningAsError build | RESULT: take_geodesic_of_vertex_cover_splice compiled | D: pure-cycle metric available
+[2026-07-18T21:23:40+03:00] > ATTACK W144-IND2 | NEXT: classify eta-critical admissible vertices in exact n<=10 graphs to test one direct structural criterion.
+[2026-07-18T21:24:10.4585888+03:00] > ATTACK W142 L10 PURE CYCLE | NEXT: derive diameter=floor(g/2), all vertices peripheral, and eccSet=0 from cycle cover
+[2026-07-18T21:24:15.6899467+03:00] FAIL ATTACK W144-IND2 EXTERIOR | DID: audited K??CA?_sDOEg | RESULT: all K-exterior deletions lower eta 3 to 2 | D: exterior lemma DEAD
+[2026-07-18T21:24:15.7147747+03:00] > ATTACK W144-IND2 CYCLE | NEXT: test existence of an eta-nondecreasing admissible vertex on a shortest cycle through n=12.
+[2026-07-18T21:24:30.4006332+03:00] > VERIFY W142 L10 PURE CYCLE | NEXT: warningAsError build of pure-cycle periphery lemma
+[2026-07-18T21:24:27.1179281+03:00] > ATTACK W144-IND2 KCORE | NEXT: compute exact ear/block structure and all shortest-cycle deletions of K??CA?_sDOEg.
+[2026-07-18T21:24:43.6364507+03:00] FAIL ATTACK W144-IND2 CYCLE | DID: tested shortest-cycle good deletion through n=11 | RESULT: J?AAD?oTEO? has none; eta=2 | D: cycle-only lemma DEAD
+[2026-07-18T21:25:09.1777792+03:00] FAIL VERIFY W142 L10 PURE CYCLE | DID: warningAsError build | RESULT: exists_dist_eq_diam needs explicit Nonempty instance at line 3214 | D: none
+[2026-07-18T21:25:09.2334860+03:00] > VERIFY W142 L10 PURE CYCLE | NEXT: rebuild with cycle basepoint as Nonempty witness
+[2026-07-18T21:25:43.9095362+03:00] OK ATTACK W144-IND2 KCORE | DID: computed K??CA?_sDOEg | RESULT: rank2 theta C5/C6/C7; only v=3,7 keep eta=3 | D: exterior-only DEAD
+[2026-07-18T21:25:58.8518425+03:00] FAIL VERIFY W142 L10 PURE CYCLE | DID: retry build | RESULT: final max' of constant-zero image needs explicit singleton rewrite | D: none
+[2026-07-18T21:25:58.9268360+03:00] > VERIFY W142 L10 PURE CYCLE | NEXT: rebuild after constant-image singleton normalization
+[2026-07-18T21:26:10+03:00] OK ATTACK W144-IND2 | DID: classified 248 exact n<=10 graphs | RESULT: leaf/noncenter/nonrealizer criteria fail; probe_eta_critical_structure.py | D: none
+[2026-07-18T21:26:10+03:00] OK PLAN W144-IND2 | DID: proved shortest-cycle exterior deletion lemma | RESULT: IND2_LARGE_AUDIT_20260718.md | D: metric eta-drop remains
+[2026-07-18T21:26:35.4742270+03:00] FAIL VERIFY W142 L10 PURE CYCLE | DID: retry build | RESULT: singleton-image ext goal is equality symmetry only | D: none
+[2026-07-18T21:26:35.5415750+03:00] > VERIFY W142 L10 PURE CYCLE | NEXT: rebuild after closing singleton equality symmetry
+[2026-07-18T21:27:12.2914021+03:00] OK VERIFY W142 L10 PURE CYCLE | DID: warningAsError build | RESULT: eccSet_periphery_eq_zero_of_vertex_cover_splice compiled | D: pure-cycle obstruction closed
+[2026-07-18T21:28:00.4515780+03:00] > ATTACK W142 L10 TADPOLE METRIC | NEXT: extend half-arc geodesic lemma to one uniquely attached outside vertex
+[2026-07-18T21:28:16+03:00] OK VERIFY W144-IND2 | DID: audited exterior upgrade on K??CA?_sDOEg | RESULT: report correction records eta-only exterior route false | D: retain full phi tradeoff
+[2026-07-18T21:28:30.5467164+03:00] FAIL VERIFY W144-IND2 LARGE | DID: reran verifier | RESULT: killed at 33 s after 5000 random records | D: retry 120 s
+[2026-07-18T21:28:31+03:00] > VERIFY W144-IND2 LARGE | NEXT: rerun deterministic verifier with 120-second timeout.
+[2026-07-18T21:28:53.1334574+03:00] > VERIFY W142 L10 TADPOLE METRIC | NEXT: warningAsError build of unique one-vertex extension half-arc lemma
+[2026-07-18T21:29:33.7568264+03:00] FAIL VERIFY W142 L10 TADPOLE METRIC | DID: warningAsError build | RESULT: rfl branch removed binder x at line 3386 | D: none
+[2026-07-18T21:29:33.7930354+03:00] > VERIFY W142 L10 TADPOLE METRIC | NEXT: rebuild with anonymous inserted-vertex binder
+[2026-07-18T21:30:08.4012729+03:00] OK VERIFY W142 L10 TADPOLE METRIC | DID: warningAsError build | RESULT: take_geodesic_of_unique_one_vertex_extension_splice compiled | D: tadpole distance core ready
+[2026-07-18T21:29:58.1727676+03:00] OK VERIFY W144-IND2 LARGE | DID: independent rerun | RESULT: 4590 family+5000 seeded graphs,0 CE,exit 0 | D: none
+[2026-07-18T21:30:12.9097021+03:00] > VERIFY W144-IND2 AUDIT | NEXT: write referee audit with exact DEAD sublemmas and the sole unsupported eta-criticality implication.
+[2026-07-18T21:29:58.7530310+03:00] > ATTACK W144-IND2 CENTER | NEXT: test exact identity eta=max eccentricity-radius and deletion consequences on n<=10 corpus.
+[2026-07-18T21:30:26.3943636+03:00] > ATTACK W142 L10 TADPOLE DIST | NEXT: prove pendant-to-half-cycle distance equals half length plus one
+[2026-07-18T21:30:31.0617543+03:00] > ATTACK W144-IND2 CYCLE-PHI | NEXT: test direct phi-preserving deletion on a girth-cycle, allowing girth rise to pay eta loss, through n=12.
+[2026-07-18T21:30:45.9745321+03:00] > VERIFY W142 L10 TADPOLE DIST | NEXT: warningAsError build of pendant half-distance lemma
+[2026-07-18T21:30:53.9821975+03:00] FAIL ATTACK W144-IND2 CYCLE-PHI | DID: tested direct cycle deletion through n=11 | RESULT: J?AAD?WsAQ? has no admissible girth-cycle vertex | D: cycle-phi lemma DEAD
+[2026-07-18T21:31:02+03:00] FAIL ATTACK W144-IND2 CENTER | DID: tested 178 connected atlas graphs | RESULT: Fh_gG has eta=2 but diam-radius=1 | D: identity unavailable
+[2026-07-18T21:31:25+03:00] > ATTACK W144-IND2 ETA | NEXT: exact-test existence of admissible eta-nondecreasing deletion on all n=13 multicyclic girth>=5 graphs.
+[2026-07-18T21:31:29.1392682+03:00] FAIL VERIFY W142 L10 TADPOLE DIST | DID: warningAsError build | RESULT: rfl branch removed x in loopless contradiction at line 3440 | D: none
+[2026-07-18T21:31:29.1705495+03:00] > VERIFY W142 L10 TADPOLE DIST | NEXT: rebuild with inferred loop vertex
+[2026-07-18T21:31:37.4614733+03:00] > ATTACK W144-FROM142 | NEXT: exact-test f_periphery>=eta+floor(g/3)-1 for multicyclic g>=5 through n=13.
+[2026-07-18T21:32:11+03:00] OK ATTACK W144-IND2 ETA | DID: exact-tested all n=13 cases | RESULT: 38066 graphs; each has admissible eta-nondecreasing deletion | D: prove stronger lemma
+[2026-07-18T21:32:01.8388358+03:00] OK VERIFY W142 L10 TADPOLE DIST | DID: warningAsError build | RESULT: dist_pendant_getVert_of_unique_one_vertex_extension_splice compiled | D: diameter lower bound ready
+[2026-07-18T21:32:01.8999578+03:00] FAIL ATTACK W144-FROM142 | DID: exact-tested n<=8 | RESULT: G?`F@w,g=5,e=2,f=1,slack=-1 | D: route DEAD
+[2026-07-18T21:32:20.1507289+03:00] > ATTACK W142 L10 STRONG GLOBAL | NEXT: lift strong-sum descent dispatcher to eccentricity realizer and diametral terminals
+[2026-07-18T21:32:26.0114853+03:00] OK VERIFY W144-IND2 AUDIT | DID: py_compile and diff-check | RESULT: IND2_DELETION_PROOF_AUDIT_20260718.md SHA256 7685517C...5430 | D: frontier open
+[2026-07-18T21:32:43.2182232+03:00] > VERIFY W142 L10 STRONG GLOBAL | NEXT: warningAsError build of cyclic_strong_terminal_sum_bound_splice
+[2026-07-18T21:33:21.7440025+03:00] OK VERIFY W142 L10 STRONG GLOBAL | DID: warningAsError build | RESULT: cyclic_strong_terminal_sum_bound_splice compiled | D: q=2 reduces to D=f+1
+[2026-07-18T21:33:52.6408237+03:00] > ATTACK W142 L10 FIVE TADPOLE | NEXT: prove periphery eccentricity at most one for a 5-cycle plus one pendant
+[2026-07-18T21:34:24.8547761+03:00] > VERIFY W142 L10 FIVE TADPOLE | NEXT: warningAsError build of five-cycle pendant periphery bound
+[2026-07-18T21:35:28.4874541+03:00] FAIL VERIFY W142 L10 FIVE TADPOLE | DID: warningAsError build | RESULT: reverse index rewrite plus four <=1 coercions remain at 3540,3597,3603,3605,3612 | D: none
+[2026-07-18T21:35:28.5301861+03:00] > VERIFY W142 L10 FIVE TADPOLE | NEXT: rebuild after explicit reverse and zero-distance normalizations
+[2026-07-18T21:35:54+03:00] > PLAN | NEXT: Register W144-MIN and exact-test eta-minimal induced cyclic subgraphs through the existing n<=13 corpus.
+[2026-07-18T21:36:44.4177635+03:00] FAIL VERIFY W142 L10 FIVE TADPOLE | DID: retry build | RESULT: reverse-index rw closes goal; trailing norm_num at line 3541 is redundant | D: none
+[2026-07-18T21:36:44.4812262+03:00] > VERIFY W142 L10 FIVE TADPOLE | NEXT: rebuild without redundant reverse-index tactic
+[2026-07-18T21:36:50+03:00] OK PLAN | DID: Registered W144-MIN with exact frontier, bridge, falsifier, and exit. | RESULT: problems_external/wowii_144/APPROACH_REGISTRY.md | D: none
+[2026-07-18T21:36:50+03:00] > ATTACK | NEXT: Run exact one-step eta audit with geng -ctfq for all orders 5--13; S implies W144-MIN on this corpus.
+[2026-07-18T21:37:23+03:00] FAIL ATTACK | DID: Ran eta-preserving deletion audit for orders 5--13. | RESULT: assertion good failed at first graph; exact record not emitted. | D: none
+[2026-07-18T21:37:23+03:00] > ATTACK | NEXT: Re-run order 13 only and emit the first graph with no eta-nondecreasing admissible deletion.
+[2026-07-18T21:37:25.7264216+03:00] OK VERIFY W142 L10 FIVE TADPOLE | DID: warningAsError build | RESULT: eccSet_periphery_le_one_of_unique_one_vertex_extension_five_splice compiled | D: final tadpole exception closed
+[2026-07-18T21:38:10+03:00] > ATTACK W144-IND2 RADIUS | NEXT: exact-test whether any admissible radius-nondecreasing deletion must preserve phi on n<=10 corpus.
+[2026-07-18T21:38:31+03:00] FAIL ATTACK W144-IND2 RADIUS | DID: exact-tested n<=8 | RESULT: G?`F@w,v0 has (g,e,r)=(5,2,2)->(5,1,2) | D: radius bridge false
+[2026-07-18T21:38:37.6533693+03:00] > ATTACK W142 L10 RESIDUE ONE | NEXT: prove positive periphery distance forces a vertex outside the girth cycle, then close q=1
+[2026-07-18T21:38:56.6467796+03:00] > VERIFY W142 L10 RESIDUE ONE | NEXT: warningAsError build of outside-cycle and q=1 lemmas
+[2026-07-18T21:41:05+03:00] FAIL ATTACK W144-IND2 CENTERSET | DID: exact-tested center-nonexpansion witness n<=7 | RESULT: FCR`o has none | D: must allow center expansion
+[2026-07-18T21:39:39.1729406+03:00] OK VERIFY W142 L10 RESIDUE ONE | DID: warningAsError build | RESULT: cyclic_residue_one_bound_splice compiled | D: q=1 closed
+[2026-07-18T21:40:15.6777259+03:00] > ATTACK W142 L10 RESIDUE TWO | NEXT: combine strong diameter, two descents, and tadpole exclusions for g=3m+2,f=m+1
+[2026-07-18T21:43:10+03:00] > ATTACK W144-IND2 EVOLVE | NEXT: mutate exact tight graphs up to n=35 to minimize best phi-deletion slack and return first negative record.
+[2026-07-18T21:40:47.5813372+03:00] > VERIFY W142 L10 RESIDUE TWO | NEXT: warningAsError build of cyclic_residue_two_bound_splice
+[2026-07-18T21:40:48+03:00] OK ATTACK | DID: Tested all 38,066 n=13 multicyclic girth>=5 graphs. | RESULT: every graph has an admissible v with eta(G-v)>=eta(G). | D: none
+[2026-07-18T21:40:48+03:00] > VERIFY | NEXT: Emit the restricted-script first failure and full deletion table to isolate its girth-preservation mismatch.
+[2026-07-18T21:41:38.2713552+03:00] FAIL VERIFY W142 L10 RESIDUE TWO | DID: warningAsError build | RESULT: redundant norm_num at 3775; H unfolding missing in hfarLe at 3798 | D: none
+[2026-07-18T21:41:38.3315081+03:00] > VERIFY W142 L10 RESIDUE TWO | NEXT: rebuild with shared half-index normalization
+[2026-07-18T21:42:27.7295228+03:00] OK VERIFY W142 L10 RESIDUE TWO | DID: warningAsError build | RESULT: cyclic_residue_two_bound_splice compiled | D: q=2 closed; L10 complete
+[2026-07-18T21:43:35.7229297+03:00] > ATTACK W142 ASSEMBLY POSITIVE | NEXT: partition g>=5 by f range and combine girth 3,4,L8,L10 into cyclic positive theorem
+[2026-07-18T21:43:59.1499713+03:00] > VERIFY W142 ASSEMBLY POSITIVE | NEXT: warningAsError build of g>=5 and cyclic-positive assembly lemmas
+[2026-07-18T21:44:34.1540289+03:00] OK VERIFY W142 ASSEMBLY POSITIVE | DID: warningAsError build | RESULT: cyclic_positive_integral_bound_splice compiled | D: cyclic hard branch complete
+[2026-07-18T21:44:50.6322509+03:00] > ATTACK W142 FULL INTEGRAL | NEXT: add acyclic and zero-eccentricity branches to obtain unconditional integral theorem
+[2026-07-18T21:48:05+03:00] FAIL ATTACK W144-IND2 EVOLVE | DID: evaluated 15736 exact mutations n<=35 | RESULT: no CE; best GCR`oG has best slack 0 | D: no proof
+[2026-07-18T21:45:06.9632428+03:00] > VERIFY W142 FULL INTEGRAL | NEXT: warningAsError build of conjecture142_integral_splice
+[2026-07-18T21:48:20+03:00] > ATTACK W144-IND2 CENTRAL | NEXT: find first exact failures of admissible-center existence and eta-preserving center deletion.
+[2026-07-18T21:48:44+03:00] FAIL ATTACK W144-IND2 CENTRAL | DID: exact-tested n<=8 | RESULT: FCR`o no good center; G?`e_w no admissible center | D: center rule DEAD
+[2026-07-18T21:45:41.8878433+03:00] OK VERIFY W142 FULL INTEGRAL | DID: warningAsError build | RESULT: conjecture142_integral_splice compiled | D: exact integral strengthening complete
+[2026-07-18T21:45:53.2033267+03:00] > ATTACK W142 REAL WRAPPER | NEXT: cast integral strengthening to the exact two-thirds real-valued conjecture statement
+[2026-07-18T21:46:13.8940236+03:00] > VERIFY W142 REAL WRAPPER | NEXT: warningAsError build of conjecture142_real_splice
+[2026-07-18T21:50:02+03:00] FAIL ATTACK W144-IND2 CENTER-CONTROL | DID: checked corrected center-containment criterion | RESULT: FCR`o has no qualifying deletion | D: criterion DEAD
+[2026-07-18T21:50:18+03:00] > ATTACK W144-IND2 UEP | NEXT: exact-test whether every admissible non-UEP-target deletion preserves phi through n=10.
+[2026-07-18T21:46:54.3337037+03:00] FAIL VERIFY W142 REAL WRAPPER | DID: warningAsError build | RESULT: hceil still contains cast of Nat subtraction at line 3889 | D: none
+[2026-07-18T21:46:54.4363125+03:00] > VERIFY W142 REAL WRAPPER | NEXT: rebuild after normalizing casted Nat subtraction
+[2026-07-18T21:50:39+03:00] FAIL ATTACK W144-IND2 UEP | DID: exact-tested n<=9 | RESULT: H?ABE_],v5 non-UEP but phi 7->6 | D: UEP implication false
+[2026-07-18T21:47:44.6841386+03:00] OK VERIFY W142 REAL WRAPPER | DID: warningAsError build | RESULT: conjecture142_real_splice compiled | D: exact W142 theorem complete
+[2026-07-18T21:53:10+03:00] > ATTACK W144-IND2 RAD-EXISTS | NEXT: exact-test a good admissible deletion among vertices with rad(G-v)>=rad(G) through n=10.
+[2026-07-18T21:48:00.0935299+03:00] OK VERIFY W142 SCAN | DID: scanned SplicePath.lean | RESULT: no sorry/admit/native_decide; exact theorems at lines 3840 and 3870 | D: none
+[2026-07-18T21:49:22.5315072+03:00] > VERIFY W142 FINAL | NEXT: Independently rebuild full proof with warningAsError and scan forbidden placeholders.
+[2026-07-18T21:49:28+03:00] FAIL ATTACK | DID: Launched theta(a,b,c), 1<=a<=b<=c<=30 eta-deletion search. | RESULT: terminated after 150s before output. | D: none
+[2026-07-18T21:49:28+03:00] > ATTACK | NEXT: Exact-test theta lengths at most 12 and emit any eta-critical girth>=5 instance.
+[2026-07-18T21:56:00+03:00] > ATTACK W144-IND2 RANK | NEXT: exact-test same-girth eta-preserving deletion by cycle rank through n=13.
+[2026-07-18T21:50:37.1372046+03:00] OK VERIFY W142 FINAL | DID: independent warningAsError build+scan | RESULT: exit 0; forbidden placeholders 0; real theorem line 3870 | D: W142 formal proof complete
+[2026-07-18T21:56:47+03:00] FAIL ATTACK W144-IND2 RANK | DID: exact-tested 45593 n<=13 graphs | RESULT: L???CB?KAAh_i_,rank3 lacks same-girth eta witness | D: rank split DEAD
+[2026-07-18T21:50:57+03:00] OK ATTACK | DID: Tested all 320 theta(a,b,c), 1<=a<=b<=c<=12, girth>=5. | RESULT: 0 eta-critical failures; 7 tight instances. | D: none
+[2026-07-18T21:50:57+03:00] > PLAN | NEXT: Derive a minimal-counterexample contradiction from bad-deletion center witnesses in block and ear cases.
+[2026-07-18T21:58:05+03:00] > ATTACK W144-IND2 TRANSVERSAL | NEXT: exact-test every admissible vertex hitting all shortest cycles for phi preservation through n=13.
+[2026-07-18T21:51:22.8496249+03:00] > IMPLEMENT W142 FC | NEXT: Create clean upstream-main worktree and integrate the compiled proof module.
+[2026-07-18T21:58:26+03:00] FAIL ATTACK W144-IND2 TRANSVERSAL | DID: exact-tested n<=10 | RESULT: I?`@f?[Q_,v9 has (g,e)=(5,2)->(6,0) | D: universal cycle-hit DEAD
+[2026-07-18T22:02:10+03:00] > ATTACK W144-IND2 ECC-CAND | NEXT: exact-test existence of an admissible vertex eccentric to an old center through n=13.
+[2026-07-18T21:53:19+03:00] > ATTACK | NEXT: Run 2,000 seeded subdivided-core girth>=6 trials against unrestricted eta-deletion S; stop on first exact failure.
+[2026-07-18T21:54:48.6116569+03:00] > VERIFY W142 FC CLEAN | NEXT: Build proof module and exact conjecture on upstream main with warningAsError.
+[2026-07-18T22:04:05+03:00] > ATTACK W144-IND2 ECC-APEX | NEXT: test whether a center-eccentric feedback apex must itself be central through n=13.
+[2026-07-18T21:55:09.8989123+03:00] FAIL VERIFY W142 FC CLEAN | DID: direct Lean check | RESULT: clean worktree lacked local ForMathlib oleans | D: build dependencies
+[2026-07-18T21:55:09.9327294+03:00] > VERIFY W142 FC DEPS | NEXT: Build required ForMathlib modules in the clean worktree.
+[2026-07-18T22:07:05+03:00] > ATTACK W144-IND2 NEWCENTER | NEXT: test distance from new centers to old center after bad center-eccentric deletions n<=10.
+[2026-07-18T21:56:58.5819102+03:00] FAIL VERIFY W142 FC TARGET | DID: target Lean check | RESULT: clean worktree lacked FormalConjecturesUtil olean | D: build utility module
+[2026-07-18T22:07:32+03:00] FAIL ATTACK W144-IND2 NEWCENTER | DID: tested 113 bad center-ecc deletions n<=10 | RESULT: G?`e_w,v2 has new center distance 2 from C | D: adjacency false
+[2026-07-18T22:08:05+03:00] > VERIFY W144-IND2 CENTER | NEXT: write referee audit of the exact bad-deletion center lemma and sole unsupported global contradiction.
+[2026-07-18T21:58:44+03:00] OK ATTACK SN13 target-100 | DID: completed V3 run | RESULT: target_found=false; 100 hard-deadline; wall=715.61 worker-h; L44=0; stderr=0 | D: active -> DEAD
+[2026-07-18T22:10:12+03:00] OK VERIFY W144-IND2 CENTER | DID: proved and exact-checked bad-deletion lemma | RESULT: 248 graphs,114 bad deletions,190 new centers; audit md | D: global UEP gap
+[2026-07-18T22:00:24.8360189+03:00] OK VERIFY W142 FC CLEAN | DID: clean warningAsError target build+axiom scan | RESULT: exit 0; only propext,choice,Quot.sound; placeholders 0 | D: ready to commit
+[2026-07-18T22:00:52.5643668+03:00] > COMMIT W142 PROOF | NEXT: Commit the clean compiled proof branch for an immutable formal-proof link.
+[2026-07-18T22:01:12+03:00] OK ATTACK | DID: Tested 2,000 seeded subdivided-core girth>=6 graphs against eta-deletion S. | RESULT: 0 failures; min best delta 0; 272 tight. | D: none
+[2026-07-18T22:01:12+03:00] > VERIFY | NEXT: Produce reproducible n=5--13 eta-minimal audit with per-order counts and SHA-256 corpus/witness hashes.
+[2026-07-18T22:01:32.7141385+03:00] OK COMMIT W142 PROOF | DID: committed compiled proof | RESULT: 46bf390, 3937 insertions, target theorem closed | D: push proof branch
+[2026-07-18T22:01:32.7365303+03:00] > PUSH W142 PROOF | NEXT: Push immutable proof commit to the user fork.
+[2026-07-18T22:01:57.4706826+03:00] OK PUSH W142 PROOF | DID: pushed fork branch | RESULT: fork/codex/wowii-142-proof at 46bf390 | D: create upstream metadata PR
+[2026-07-18T22:02:40.8621353+03:00] > VERIFY W142 PR | NEXT: Compile the metadata-only DeepMind PR change with warningAsError.
+[2026-07-18T22:03:12.6885882+03:00] FAIL VERIFY W142 PR | DID: warningAsError metadata check | RESULT: repository convention keeps target sorry; warning promoted | D: regular compile
+[2026-07-18T22:03:41.2420697+03:00] OK VERIFY W142 PR | DID: compiled metadata-only target | RESULT: exit 0 with expected repository sorry warning | D: commit PR branch
+[2026-07-18T22:03:57.0053168+03:00] > COMMIT W142 PR | NEXT: Commit solved status with immutable proof link.
+[2026-07-18T22:04:14.6426768+03:00] OK COMMIT W142 PR | DID: committed metadata change | RESULT: 852338f, one file | D: push and open PR
+[2026-07-18T22:04:48+03:00] OK VERIFY | DID: Audited 45,593 n=5..13 graphs with canonical hashes. | RESULT: eta_minimal_audit_results.json; 0 failures; min delta 0. | D: none
+[2026-07-18T22:04:48+03:00] FAIL ATTACK | DID: Tested block/ear center-expansion route. | RESULT: global UEP-plus-radius-increase contradiction unproved; ETA_MINIMAL_SUBGRAPH_AUDIT_20260718.md | D: route open
+[2026-07-18T22:05:38+03:00] OK VERIFY | DID: Recompiled verifier and hashed final audit. | RESULT: script exit 0; report SHA256 43E63667...39DAB | D: W144-MIN unproved
+[2026-07-18T22:06:04.5798893+03:00] > PR W142 | NEXT: Create DeepMind PR from the verified metadata branch with proof and checks documented.
+[2026-07-18T22:06:46.9794871+03:00] OK PR W142 | DID: opened DeepMind PR | RESULT: https://github.com/google-deepmind/formal-conjectures/pull/4457 | D: W142 submitted
+[2026-07-18T22:07:32.0023070+03:00] > ATTACK W144-MIN | NEXT: Prove eta-critical multicyclic graphs impossible via block tree and disjoint UEP new-center sets.
+[2026-07-18T22:08:26+03:00] > ATTACK | NEXT: Test rooted eta-minimal induced cyclic subgraphs through order 11 for a multicyclic minimal witness.
+[2026-07-18T22:08:54+03:00] > ATTACK W144-EAR | NEXT: audit terminal-ear deletions and UEP witnesses on exact eta-tight graphs through order 13.
+[2026-07-18T22:08:56.7938190+03:00] > VERIFY W144-S PRO | NEXT: Independently check GPT Pro root-free obstruction HhEK__D and rooted Steiner values.
+[2026-07-18T22:09:07.7003774+03:00] > ATTACK W144-MIN | NEXT: Audit noncentral cyclic-block eta-preserving deletions through order 12.
+[2026-07-18T22:09:13.8340148+03:00] FAIL ATTACK W144-MIN | DID: Audited noncentral cyclic blocks n<=12 | RESULT: H?`DA_{, n=9, eta=2, C={8}, no good noncentral deletion | D: rule dead
+[2026-07-18T22:09:38.2782714+03:00] > ATTACK W144-MIN | NEXT: Re-audit blocks whose only central vertices are articulations, through order 12.
+[2026-07-18T22:09:39.4277690+03:00] FAIL VERIFY W144-S PRO | DID: audited final Pro answer+CE | RESULT: no proof; HhEK__D root-free reduction false; report SHA 1ED6A21C9336 | D: W144-S open
+[2026-07-18T22:09:45.0684165+03:00] OK ATTACK W144-MIN | DID: Re-audited central-articulation blocks n<=12 | RESULT: 211/211 multi-cyclic-block graphs had a good block deletion | D: none
+[2026-07-18T22:09:51.8934304+03:00] > SELECT FAMOUS-R5 | NEXT: gate Q26 and other long-open non-Erdos candidates for one exact one-day certificate.
+[2026-07-18T22:10:18+03:00] FAIL ATTACK | DID: Rooted eta-deletion audit through n=11 | RESULT: G?`e_w,x=1 is rank-2 rooted-minimal at depth 2 | D: fixed-root route dead
+[2026-07-18T22:10:50+03:00] > PLAN | NEXT: Test W144-ROOT exact unicyclic witness lemma through order 11.
+[2026-07-18T22:12:59+03:00] > ATTACK | NEXT: Test whether requiring a fixed eta-realizer in an eta-minimal induced cyclic subgraph can leave rank at least two.
+[2026-07-18T22:13:45.3231812+03:00] > ATTACK W144-MIN | NEXT: Test whether multi-block witnesses can always be chosen peripheral to an old center, n<=12.
+[2026-07-18T22:13:50.3270902+03:00] FAIL ATTACK W144-MIN | DID: Tested peripheral good block deletions n<=12 | RESULT: J??CAAoR@U?, n=11, r=eta=3, C={10} has none | D: rule dead
+[2026-07-18T22:14:46.0227062+03:00] > ATTACK W144-S ECC | NEXT: test e_(g-1)(v)>=min(ecc(v)+g-3,n-1) on all girth>=5 graphs n<=11.
+[2026-07-18T22:15:18.9906204+03:00] FAIL ATTACK W144-S ECC | DID: launched n<=11 exact audit | RESULT: WinError 5 creating process pool | D: rerun with threads
+[2026-07-18T22:15:19.0127637+03:00] > ATTACK W144-S ECC | NEXT: rerun exact audit n<=11 with 16 sandbox-safe threads.
+[2026-07-18T22:15:21.1431003+03:00] > ATTACK W144-MIN | NEXT: Test the direct UEP counting inequality for all multicyclic graphs through order 12.
+[2026-07-18T22:15:27.6196800+03:00] FAIL ATTACK W144-MIN | DID: Tested raw UEP count n<=12 | RESULT: FCR`o has exact count slack 0 (|A|=4, |V-C|=4) | D: raw count insufficient
+[2026-07-18T22:15:42.8001955+03:00] FAIL ATTACK W144-S ECC | DID: tested eccentricity saturation | RESULT: C5 DUW violates n-1 cap by 1 | D: test exact n-2 cap
+[2026-07-18T22:15:42.8064156+03:00] > ATTACK W144-S ECC2 | NEXT: test e_(g-1)(v)>=min(ecc(v)+g-3,n-2) through n=11.
+[2026-07-18T22:15:47.5783108+03:00] > ATTACK W144-MIN | NEXT: Test whether a radius-nonincreasing deletion fails its exact UEP cover obligation, n<=12.
+[2026-07-18T22:16:03.0103598+03:00] FAIL ATTACK W144-S ECC2 | DID: tested n-2 saturation | RESULT: FCR`o,v0 has need5, actual4 | D: eccentricity route dead
+[2026-07-18T22:16:03.0308587+03:00] > ATTACK W144-S VE-PAIR | NEXT: test pair-cut construction only at eta-realizers through n=11.
+[2026-07-18T22:16:13.5871749+03:00] > ATTACK W144-MIN | NEXT: Test the direct triangle-distance obstruction d(x,v)<=r-eta+1, n<=12.
+[2026-07-18T22:16:19.1737201+03:00] FAIL ATTACK W144-MIN | DID: Tested distance-only UEP obstruction n<=12 | RESULT: I??ED`KI_, n=10, r=eta=3, R={3,5} has none | D: shortcut dead
+[2026-07-18T22:16:56.9706252+03:00] > ATTACK W144-MIN | NEXT: Test the fixed-realizer UEP ball-count contradiction through order 12.
+[2026-07-18T22:17:24.9174270+03:00] > ATTACK W144-MIN | NEXT: Test UEP count using only eccentricity-(r+1) vertices, through order 12.
+[2026-07-18T22:17:27+03:00] > VERIFY | NEXT: Independently enumerate every rooted connected cyclic induced subgraph of G?`e_w.
+[2026-07-18T22:18:15.4625091+03:00] > ATTACK W144-MIN | NEXT: Extend exact UEP-cover obstruction audit to all 38,066 order-13 graphs.
+[2026-07-18T22:18:53+03:00] OK VERIFY | DID: Enumerated all 11 rooted cyclic induced subgraphs of G?`e_w | RESULT: rooted_radius_counterexample.json | D: fixed-root false
+[2026-07-18T22:18:53+03:00] FAIL ATTACK | DID: Tested Fajtlowicz bridge | RESULT: rooted C5 keeps radius 2 but has eta 0 | D: W144-ROOT radius route dead
+[2026-07-18T22:18:58+03:00] OK ATTACK | DID: Audited rooted-unicyclic witnesses through n=11 | RESULT: 1,335 graphs, 0 failures | D: finite evidence only
+[2026-07-18T22:18:58+03:00] OK ATTACK | DID: Audited eta-minimal subgraphs containing a root through n=11 | RESULT: 1,335 graphs, 0 rank-2 minima | D: none
+[2026-07-18T22:19:14.7121637+03:00] OK ATTACK W144-MIN | DID: Audited exact UEP-cover obstruction at n=13 | RESULT: 38,066/38,066 graphs have an uncovered realizer | D: none
+[2026-07-18T22:19:27.0087700+03:00] > ATTACK W144-MIN | NEXT: Test whether an admissible nonexceptional deletion can always have empty UEP fiber, n<=12.
+[2026-07-18T22:19:40.4572102+03:00] > ATTACK W144-MIN | NEXT: Test aggregate UEP-realizer incidence count through order 12.
+[2026-07-18T22:19:53.2196654+03:00] OK SELECT FAMOUS-R5 | DID: compared 8 candidates | RESULT: Q26 chosen; 13<=gamma<=14; registry created | D: SN13 DEAD -> Q26 SELECTED
+[2026-07-18T22:19:53.2196654+03:00] > GATE Q26 | NEXT: recheck July-2026 papers, code, FC issues and PRs for an exact Q26 resolution or priority collision.
+[2026-07-18T22:20:01+03:00] OK ATTACK W144-EAR | DID: exact ear/UEP probes through n=12 and theta lengths 24 | RESULT: 101 exchange failures; 0 theta failures/2508 | D: theta base isolated
+[2026-07-18T22:20:01+03:00] > ATTACK W144-EAR | NEXT: enumerate all biconnected graphs through n=9 to isolate whether girth 4 also forbids eta-critical obstructions.
+[2026-07-18T22:20:44.0481339+03:00] OK GATE Q26 | DID: scanned 2022-26 papers, OEIS, FC and GitHub | RESULT: gamma(Q26) still 13/14; exact collision 0 | D: SELECTED -> NOVEL
+[2026-07-18T22:20:44.0481339+03:00] > PLAN Q26 | NEXT: fix the full-board Q26-13 certificate route, calibration fixtures, two encodings and independent verifiers.
+[2026-07-18T22:20:53+03:00] > GATE W144 | NEXT: Search primary sources for a theorem directly implying tree(G)>=girth(G)-1+eta(G).
+[2026-07-18T22:21:45.7758208+03:00] OK PLAN Q26 | DID: fixed two-outcome direct route | RESULT: frontier Q26-13; witness or full UNSAT cert; 2 encoders+2 verifiers | D: NOVEL -> PLANNED
+[2026-07-18T22:21:45.7758208+03:00] > ATTACK Q26 CAL | NEXT: test scalar+bitset verifiers and CP-SAT/PySAT on Q25 k=13 and Q13 k=6, using at most 64 workers.
+[2026-07-18T22:23:47+03:00] > ATTACK W144-EAR | NEXT: test interval structure of radius-increasing deletions along every maximal degree-two ear through order 12.
+[2026-07-18T22:24:10.3041041+03:00] > ATTACK W144-COMB | NEXT: audit exact residual after proved W141/W142/W143/P2/radius bounds through n=13.
+[2026-07-18T22:25:10.3254399+03:00] > VERIFY W144-MIN | NEXT: Compile verifiers, check exact block records, and reproduce the UEP-cover audit for n=5..13.
+[2026-07-18T22:25:50.9713242+03:00] > VERIFY W144-MIN | NEXT: Re-run the full UEP-cover audit with a sufficient timeout to obtain exit code zero.
+[2026-07-18T22:26:11.5791337+03:00] OK ATTACK W144-COMB | DID: audited 52,000 graphs n<=13 | RESULT: 1,463 residual; max deficit 2; first G?`F@w | D: bounds do not close
+[2026-07-18T22:26:32.1586009+03:00] OK VERIFY W144-MIN | DID: Ran block verifier and UEP-cover audit n=5..13 | RESULT: 45,593 checked, failure=null, exit 0 | D: none
+[2026-07-18T22:27:36+03:00] OK GATE W144 | DID: Bounded primary-source audit | RESULT: no direct theorem found; ESS86 Thm 2.2 and Fajtlowicz88 Thms 1-2 are partial | D: none
+[2026-07-18T22:28:09.4356222+03:00] > VERIFY W144-MIN | NEXT: Referee-check the UEP lemma, obstruction records, report, and stored certificate.
+[2026-07-18T22:28:25.1673138+03:00] OK VERIFY W144-MIN | DID: Referee-checked block/UEP audit | RESULT: BLOCK_UEP_FINAL_AUDIT_20260718.md and both verifiers pass | D: none
+[2026-07-18T22:28:25.1885066+03:00] FAIL ATTACK W144-MIN | DID: Stopped block/UEP proof | RESULT: J??CAAoR@U? permits disjoint fibers; global UEP-COVER remains unproved | D: STOPPED
+[2026-07-18T22:30:35.5261328+03:00] > PLAN→ATTACK W144-BLOCK | NEXT: test the exact 1-sum tree-capacity bound on small girth≥5 decompositions.
+[2026-07-18T22:31:02+03:00] > ATTACK W144-EAR | NEXT: audit P2 and W141 deficits on every biconnected multicyclic girth>=5 graph through order 13.
+[2026-07-18T22:32:15.4159284+03:00] > PLAN W144-SD | NEXT: prove or refute eta-realizer Steiner lemma via a global minimal connector; exit at first unsupported exchange.
+[2026-07-18T22:33:42.1721676+03:00] > ATTACK W144-SD | NEXT: rerun exact stronger rooted Steiner audit on all girth>=5 graphs n=5..9 to inspect sharp witnesses.
+[2026-07-18T22:33:44+03:00] > VERIFY W144-EAR | NEXT: recompute theta radius, center anchors, tadpole eta, and deletion delta for all path lengths <=30.
+[2026-07-18T22:34:16.9655520+03:00] FAIL ATTACK W144-SD | DID: sandbox exact audit n=5..9 | RESULT: WinError 5 before enumeration | D: none
+[2026-07-18T22:34:16.9883637+03:00] OK ATTACK W144-SD | DID: exact rooted Steiner audit n=5..9, 124 graphs/1068 roots | RESULT: 0 failures, min slack 0 | D: none
+[2026-07-18T22:33:03.1020192+03:00] > ATTACK W144-MIN | NEXT: classify eta-good deletions by connectivity, degree, radius change and cycle rank to isolate a provable rule.
+[2026-07-18T22:38:14.3755605+03:00] > ATTACK W144-BLOCK | NEXT: exact-test exterior end-block deletions for phi=g+eta on connected girth≥5 graphs through first failure.
+[2026-07-18T22:40:05+03:00] > ATTACK W144-SD | NEXT: exhaust all eta-realizer/center geodesics and constrained maximum induced trees through order 9.
+[2026-07-18T22:41:20.2433118+03:00] OK ATTACK W144-SD | DID: Audited center-geodesic-containing induced trees through n=12 | RESULT: 7,394/7,394 multicyclic graphs have a target-size tree | D: none
+[2026-07-18T22:44:09+03:00] OK VERIFY W144-EAR | DID: reran theta deletion verifier for all 4,844 triples with lengths<=30 | RESULT: min delta_eta=0; failure=null | D: beta=2 proved
+[2026-07-18T22:44:25.2717552+03:00] FAIL ATTACK Q26 CP-CAL | DID: ran Q25 k13 and Q13 k6 full models | RESULT: no-hint UNKNOWN at 47.1s/91.2s; hinted Q25 SAT | D: CP lane dead
+[2026-07-18T22:44:25.2717552+03:00] FAIL ATTACK Q26 SAT-CAL1 | DID: ran seqcounter CaDiCaL195 seed1 | RESULT: Q25 k13 UNKNOWN/120s; Q13 k6 UNKNOWN/180s | D: retune encoding
+[2026-07-18T22:44:25.2717552+03:00] > ATTACK Q26 LOCAL-CAL | NEXT: run Q25 3x20s and Q26 3x30s, 16 threads, unrestricted local search; verify any hit twice.
+[2026-07-18T22:44:25.2717552+03:00] > ATTACK Q26 SAT-CAL2 | NEXT: run Q13 k6 mtotalizer+Hilbert CaDiCaL195 seed1 for 180s, one worker.
+[2026-07-18T22:44:25.2717552+03:00] > ATTACK Q26 MIP-CAL | NEXT: run unrestricted SCIP Q25 k13 and Q13 k6 for 120s each with at most 32 threads.
+[2026-07-18T22:44:48+03:00] > ATTACK W144-EAR | NEXT: enumerate biconnected beta>=3 graphs to test the last-ear degree-two eta deletion reduction.
+[2026-07-18T22:45:51+03:00] > ATTACK W144-EAR | NEXT: exact-test whether each bad degree-two deletion has an eta-good admissible neighbor through order 13.
+[2026-07-18T22:46:12.0859947+03:00] > ATTACK W144-BLOCK | NEXT: exact-test eta(G)<=max(eta(A),dist(v,shortest cycles of A)+ecc_B(v)) on all n<=13 cut splits.
+[2026-07-18T22:47:23.6916191+03:00] > ATTACK W144-IND2 | NEXT: exact-test whether every multicyclic graph has at least two eta-nondecreasing admissible deletions, enabling prescribed-root induction.
+[2026-07-18T22:47:50+03:00] > VERIFY W144-EAR | NEXT: independently recompute max-tree, degree-two, and neighbor-exchange counterexamples.
+[2026-07-18T22:48:11+03:00] OK VERIFY W144-EAR | DID: recomputed 3 exact counterexamples and compiled audit scripts | RESULT: verifier exit 0; compileall exit 0 | D: D2 and MT dead
+[2026-07-18T22:48:20+03:00] OK ATTACK W144-EAR | DID: proved eta-preserving theta deletion | RESULT: THETA_ETA_DELETION_THEOREM_20260718.md, SHA 5D4999EA | D: beta=2 closed
+[2026-07-18T22:48:20+03:00] FAIL ATTACK W144-SD | DID: exhausted max-tree/geodesic choices | RESULT: I?ABAaIBO has best Q-path overlap 2 | D: MT route dead
+[2026-07-18T22:48:20+03:00] FAIL ATTACK W144-EAR | DID: tested last-ear degree-2 deletion | RESULT: I?`acgwg_ has eta 2; both degree-2 deletions eta 1 | D: D2 dead
+[2026-07-18T22:49:31.5000544+03:00] > VERIFY W144-BLOCK | NEXT: compile and rerun the exact rooted 1-sum audit for orders 5..13.
+[2026-07-18T22:49:37.3147263+03:00] OK ATTACK W144-IND2 | DID: Audited multiplicity of eta-good deletions through n=13 | RESULT: 45,593 graphs; minimum good deletions 2; verifier exit 0 | D: prescribed-root frontier isolated
+[2026-07-18T22:49:49.0567673+03:00] > PLAN W144-2DEL | NEXT: prove two eta-good admissible deletions via minimal counterexample and center witnesses.
+[2026-07-18T22:50:45.6516092+03:00] OK ATTACK Q26 LOCAL-CAL | DID: ran Q25 3x20s and Q26 3x30s,16T | RESULT: Q25 SAT 2/3 verified twice; Q26 no hit,best uncovered=2 | D: lane alive
+[2026-07-18T22:50:45.6516092+03:00] > PLAN Q26 PARITY | NEXT: register Weakley Prop.11+Thm.18 as an exact 6/7-parity equivalence for size-13 Q26 search.
+[2026-07-18T22:50:46.0811748+03:00] > ATTACK W144-2DEL | NEXT: test two-good deletion in all biconnected graph-atlas graphs to isolate needed hypotheses.
+[2026-07-18T22:51:58.3842795+03:00] > ATTACK W144-141 | NEXT: test low-degree eta-good deletion under the exact residual Delta<=eta+1 through n=13.
+[2026-07-18T22:52:45.3633602+03:00] FAIL ATTACK W144-141 | DID: Tested residual low-degree deletion | RESULT: I?`acgwg_ has Delta=3=eta+1; both degree-2 deletions lower eta 2->1 | D: shortcut DEAD
+[2026-07-18T22:52:54.3633394+03:00] OK PLAN Q26 PARITY | DID: audited Weakley Prop.11+Thm.18 | RESULT: every size-13 Q26 witness has a 6/7 square-parity split | D: certified pruning
+[2026-07-18T22:52:54.3633394+03:00] OK ATTACK Q26 SAT-CAL2 | DID: ran official-compatible Hilbert+mtotalizer CaDiCaL195 seed1 | RESULT: Q13 k6 UNSAT in 17.235s;998 vars,4018 clauses | D: SAT lane alive
+[2026-07-18T22:53:05.5559038+03:00] > VERIFY W144-SD | NEXT: referee-check the center-geodesic extremal connector and record its first unsupported exchange.
+[2026-07-18T22:53:15.0307067+03:00] OK ATTACK W144-2DEL | DID: tested all 194,604 biconnected graphs n<=9 | RESULT: min eta-good connected deletions 2; no failure | D: biconnected lemma isolated
+[2026-07-18T22:53:57.6024291+03:00] FAIL VERIFY W144-SD | DID: referee audit of eta-realizer extremal connector | RESULT: attack_global/ETA_REALIZER_STEINER_AUDIT_20260718.md, gap (3.2) | D: stopped
+[2026-07-18T22:55:29.8565511+03:00] OK VERIFY W144-BLOCK | DID: audited orders 5..13 | RESULT: 46,347 cut graphs; 179,705 splits; 0 rooted-sum failures | D: none
+[2026-07-18T22:55:29.8565511+03:00] OK PROOF W144-BLOCK | DID: proved 1-sum center/tree formulas and two rooted bounds | RESULT: attack_block_sum/BLOCK_SUM_FINAL_AUDIT_20260718.md | D: none
+[2026-07-18T22:55:29.8565511+03:00] FAIL ATTACK W144-BLOCK | DID: tested the center dichotomy | RESULT: F?bao has eta 2 > max(eta1 1,h 0+R2 1) | D: shortcut DEAD
+[2026-07-18T22:55:29.8565511+03:00] FAIL ATTACK W144-BLOCK | DID: tested exterior end-block phi deletion | RESULT: F?bao and multicyclic G?`e_w drop phi 7→6 | D: rule DEAD
+[2026-07-18T22:55:29.8565511+03:00] OK CHECK W144-BLOCK | DID: isolated the exact remaining lemma | RESULT: prove rho(G,v)>=g-1+eta(G) for cut vertices v | D: frontier refined
+[2026-07-18T22:56:07.9852795+03:00] OK VERIFY W144-BLOCK | DID: ran independent formula/record verifier | RESULT: block_sum_record_verification.json PASS | D: none
+[2026-07-18T22:55:57+03:00] > SELECT->GATE | NEXT: Test exact tree>=Delta+g-1, then tree>=Delta+g-2, on 2-connected multicyclic girth>=5 graphs.
+[2026-07-18T22:55:58+03:00] OK GATE | DID: Registered W144-DEG direct route | RESULT: problems_external/wowii_144/APPROACH_REGISTRY.md | D: none
+[2026-07-18T22:55:59+03:00] > GATE->PLAN | NEXT: Build an exact maximum-induced-tree verifier and find the first graph6 obstruction or minimum slack.
+[2026-07-18T22:56:52.8536858+03:00] > ATTACK W144-2CONN | NEXT: test eta<=max(Delta,D-floor(g/2)) on every biconnected girth>=5 graph through n=13.
+[2026-07-18T22:57:24.5345837+03:00] FAIL ATTACK Q26 MIP-CAL | DID: ran SCIP/32 Q25 k13 and Q13 k6 for 120s | RESULT: both unhinted UNKNOWN; hinted Q25 SAT/0.058s | D: MIP lane dead
+[2026-07-18T22:57:26.9415139+03:00] > PLAN->ATTACK | NEXT: Run geng -ctfq through n=13 and exact subset search for tree>=Delta+g-1 and tree>=Delta+g-2.
+
+[2026-07-18T22:59:42.0416673+03:00] > GATE->PLAN W144-MET | NEXT: Prove eta>Delta implies D>=eta+floor(g/2), or return an exact counterexample.
+[2026-07-18T23:00:19.3341985+03:00] > PLAN->ATTACK W144-MET | NEXT: Reproduce exact biconnected audit through n=13, then attack eta>Delta via Menger.[2026-07-18T23:00:22.6893697+03:00] OK ATTACK | DID: Exact geng/subset audit through n=13 | RESULT: 5,644 graphs; +g-1 fails FCR`o; +g-2 min slack 0, no failure | D: +g-1 DEAD
+
+[2026-07-18T23:00:30.2110857+03:00] OK ATTACK W144-MET | DID: exact biconnected audit n<=13 | RESULT: 5,653 graphs; no failure; min slack 0 | D: none[2026-07-18T23:00:49.3566979+03:00] > ATTACK | NEXT: Test t>=Delta+g-1 through n=13 on eta=Delta and D-floor(g/2)<eta residual graphs.
+[2026-07-18T23:02:53.8887637+03:00] OK ATTACK | DID: Exact conditional strong-bound audit through n=13 | RESULT: 104 residuals; 0 failures; min slack 1; first J?AA@agU?M? | D: none
+
+[2026-07-18T23:04:07.2699419+03:00] > ATTACK->VERIFY W144-MET | NEXT: Independently verify Theta(2,8,8) counterexample and exact invariants.
+[2026-07-18T23:04:25.4247459+03:00] FAIL VERIFY W144-MET | DID: ran verifier | RESULT: graph6 node-order assertion failed | D: verifier fix required
+[2026-07-18T23:04:25.4346787+03:00] > VERIFY W144-MET | NEXT: Re-run corrected independent counterexample verifier.
+[2026-07-18T23:04:47+03:00] > ATTACK | NEXT: Random-stress W144-MET on larger 2-connected girth>=5 graphs to seek an exact counterexample.
+[2026-07-18T23:04:53.5205301+03:00] OK VERIFY W144-MET | DID: verified Theta(2,8,8) | RESULT: eta 4 > max(Delta 3,D-floor(g/2) 3); verifier PASS | D: DEAD
+[2026-07-18T23:05:27+03:00] FAIL ATTACK | DID: Abandoned W144-MET before random stress | RESULT: Theta(2,8,8) exact CE in METRIC_SPLIT_COUNTEREXAMPLE_20260718.md | D: W144-MET DEAD
+[2026-07-18T23:05:27+03:00] > VERIFY | NEXT: Independently rerun the exact Theta(2,8,8) metric-split counterexample verifier.
+[2026-07-18T23:05:27+03:00] OK VERIFY | DID: Ran metric-split counterexample verifier | RESULT: exit=0; report=METRIC_SPLIT_COUNTEREXAMPLE_20260718.md | D: none
+[2026-07-18T23:06:48.2280452+03:00] OK CHECK W144-MET | DID: searched theta lengths <=14 | RESULT: smaller CE Theta(1,7,8), n=15, graph6 NpCGIE??G?_@?@??g?G | D: DEAD
+[2026-07-18T23:08:31.8775313+03:00] > ATTACK->VERIFY | NEXT: Independently rerun exact subset enumeration through n=13 and check both degree-girth audit artifacts.
+
+[2026-07-18T23:10:12.5621856+03:00] > ATTACK W144-IND2-RAD | NEXT: Test equal-radius eta preservation and rooted r-ciliate containment on exact girth>=5 corpus.
+[2026-07-18T23:10:52.7923582+03:00] OK VERIFY | DID: Independent NetworkX combination audit through n=13 | RESULT: 5,644 checked; min slack 0; conditional 104/0 failures | D: theorem verified
+[2026-07-18T23:11:07.0436680+03:00] > ATTACK Q26 TARGET-LS | NEXT: run Q26 k13 parity-6/7 local search; seed=260100,64T,48 samples,3600s; auto-verify any hit twice.
+[2026-07-18T23:11:58+03:00] > VERIFY | NEXT: Independently audit the proved 2-connected degree-girth theorem and exact corpus certificate.
+[2026-07-18T23:13:33+03:00] OK VERIFY | DID: Reran degree-girth verifier with 120s limit | RESULT: exit=0; 5,644 graphs; min slack 0 | D: none
+[2026-07-18T23:14:19.8662263+03:00] > ATTACK | NEXT: Extend conditional t>=Delta+g-1 exact audit to all geng -Ctfq order-14 graphs.
+[2026-07-18T23:15:13.7847758+03:00] OK ATTACK | DID: Exact conditional strong audit at n=14 | RESULT: 34,546 retained, 383 residuals, 0 failures, min slack 2 | D: none
+[2026-07-18T23:15:52.4602488+03:00] > ATTACK | NEXT: Extend conditional strong exact audit to all 302,185 geng -Ctfq order-15 graphs.
+[2026-07-18T23:16:43.0580150+03:00] > VERIFY W144-2DEL | NEXT: run the independent metric/obstruction verifier and compile both deletion scripts.
+[2026-07-18T23:16:59.4409405+03:00] > ATTACK Q26 TARGET-LS2 | NEXT: add seed=260101,36T,48 samples,3600s beside active 64T run; aggregate=100 workers.
+[2026-07-18T23:17:02+03:00] > VERIFY | NEXT: Independently recompute the GPT-Pro beta=3 metric counterexample, exact tree number, and admissible deletions.
+[2026-07-18T23:17:07+03:00] OK VERIFY | DID: Recomputed beta=3 MET counterexample | RESULT: g6,D5,Delta3,eta4,rhs3; tree13,target9; 6 eta-good deletions | D: MET3 DEAD
+
+[2026-07-18T23:17:14.6904643+03:00] > PLAN->ATTACK W144-MET3 | NEXT: Independently verify graph6 NhCGGE@?O?_@O@G???g as beta=3 metric-split counterexample.
+[2026-07-18T23:18:08.1011519+03:00] OK ATTACK Q26 TARGET-LS2 | DID: launched seed=260101 at 36T beside 64T seed | RESULT: PIDs 93936/103248; stderr=0/0; aggregate=100 | D: none
+[2026-07-18T23:18:39.7942856+03:00] OK VERIFY W144-2DEL | DID: ran both verifiers n<=13 | RESULT: 45,593 graphs, min 2; obstruction JSON PASS; py_compile 0 | D: none
+[2026-07-18T23:18:39.7942856+03:00] FAIL ATTACK W144-2DEL | DID: proved radius-drop/UEP lemmas and beta2 base | RESULT: J??CBBOi?{? kills local completion | D: beta>=3 open
+[2026-07-18T23:19:12.5784438+03:00] OK ATTACK | DID: Exact conditional strong audit at n=15 | RESULT: 302,184 retained, 1,422 residuals, 0 failures, min slack 2 | D: none
+[2026-07-18T23:19:12.5784438+03:00] > ATTACK W144-COMB | NEXT: Test the exact three-bound cover on every geng -Ctfq graph through n=14.
+[2026-07-18T23:19:28+03:00] > ATTACK | NEXT: Exact-test W144-GCOMB on all connected girth>=5 graphs through n=13.
+
+[2026-07-18T23:19:49.9767908+03:00] OK VERIFY W144-MET3 | DID: checked beta=3 graph6 and all subsets/deletions | RESULT: MET RHS 3<eta 4; tree 13>=target 9 | D: DEAD
+[2026-07-18T23:19:57.8786310+03:00] FAIL VERIFY W144-2DEL | DID: recomputed biconnected total | RESULT: 538+7,123+194,066=201,727, not 194,604 | D: report corrected
+[2026-07-18T23:20:11.4963964+03:00] OK ATTACK W144-COMB | DID: Exact geng -Ctfq audit through n=14 | RESULT: 40,190 graphs, 487 residuals, 0 failures, min slack 0 | D: none
+[2026-07-18T23:21:05+03:00] FAIL ATTACK | DID: First GCOMB sweep admitted acyclic nx.girth=inf records | RESULT: invalid filter; no cyclic conclusion | D: none
+[2026-07-18T23:21:05+03:00] OK ATTACK | DID: Reran GCOMB with finite-girth filter n=5..13 | RESULT: 52,000 cyclic g>=5 graphs; 0 failures | D: GCOMB retained
+
+[2026-07-18T23:21:11.1509246+03:00] > PLAN->ATTACK W144-GCOMB-SEP | NEXT: Test whether order-rank term alone bounds eta on all separable g>=5 graphs through n=13.
+[2026-07-18T23:22:06.7683205+03:00] > PLAN W144-GCOMB-CUT | NEXT: stress the exact global cover on deterministic/random cut block sums of orders 14..50.
+[2026-07-18T23:22:54.0535621+03:00] > PLAN->ATTACK W144-COMB | NEXT: Test rank-refined total-cover bound on all exact residual cycle/realizer/anchor cases through n=13.
+[2026-07-18T23:23:31.4051132+03:00] > ATTACK W144-GCOMB-CUT | NEXT: compile and smoke-test seed 20260718, 500 block sums, n14..50, 8 threads.
+[2026-07-18T23:23:39+03:00] > ATTACK | NEXT: Exhaustively test global W144-GCOMB on all connected girth>=5 graphs of order 14.
+[2026-07-18T23:24:17.7803262+03:00] OK ATTACK W144-GCOMB-CUT | DID: ran 500-case smoke, n14..50, 8T | RESULT: 1,098 retained; min slack 0; failures 0 | D: none
+[2026-07-18T23:24:17.7803262+03:00] > ATTACK W144-GCOMB-CUT | NEXT: run seed 20260718, 30,000 random plus deterministic block sums, n14..50, 8T.
+[2026-07-18T23:25:26+03:00] OK ATTACK | DID: Exhaustive global GCOMB sweep at n=14 | RESULT: 272,321 graphs; 0 failures; min slack 0; 72 equality | D: certificate now n<=14
+[2026-07-18T23:26:38+03:00] > ATTACK | NEXT: Test rooted branch budget ecc(v)<=max(Delta-2,n-beta-1) as a direct 1-sum GCOMB bridge.
+[2026-07-18T23:27:34+03:00] OK ATTACK | DID: Stress-tested GCOMB on Hoffman-Singleton plus tails 1..200 | RESULT: 200 graphs; 0 failures; diameter term closes | D: none
+[2026-07-18T23:27:34+03:00] OK ATTACK | DID: Tested rooted branch-budget auxiliary n<=13 | RESULT: 663,650 roots; 0 failure finite-only; dense-core tails show restriction needed | D: none
+[2026-07-18T23:27:39.1623252+03:00] OK ATTACK W144-COMB | DID: Rank-refined cover audit through n=13 | RESULT: 104 graphs, 569 cases, min slack 0, no failure | D: none
+[2026-07-18T23:27:39.1623252+03:00] > ATTACK W144-COMB | NEXT: Search 10,000 random subdivisions of 2-connected min-degree-three cores for a three-bound counterexample.
+[2026-07-18T23:28:05.7960292+03:00] FAIL ATTACK W144-GCOMB-CUT | DID: ran 30,000-case stress | RESULT: JSON written; stdout OSError after 129s | D: verify JSON
+[2026-07-18T23:28:05.7960292+03:00] OK VERIFY W144-GCOMB-CUT | DID: parsed stress JSON | RESULT: 30,175 cut graphs; min slack 0; failures 0; equality 15 | D: none
+[2026-07-18T23:28:05.7960292+03:00] > VERIFY W144-GCOMB-N14 | NEXT: reproduce exact geng -ctfq order-14 sweep and store all equality cut records.
+[2026-07-18T23:28:15.8099306+03:00] > ATTACK Q26 CPU-REDUCE | NEXT: stop only seed=260101 wrapper/36T child, preserve logs, and leave seed=260100 at 64 workers.
+[2026-07-18T23:29:22.5213232+03:00] OK ATTACK Q26 CPU-REDUCE | DID: stopped only 36T seed PIDs 97420/93936 | RESULT: PID 103248 remains at 64 workers; logs preserved | D: none
+[2026-07-18T23:32:02.8433442+03:00] OK ATTACK W144-COMB | DID: Random subdivision search on 177 cores | RESULT: 9,653 eligible/10,000, no failure, min slack 3 | D: none
+[2026-07-18T23:32:14.1286494+03:00] > ATTACK W144-COMB | NEXT: Extend exact three-bound audit to all 302,184 biconnected noncycle graphs at n=15.
+[2026-07-18T23:32:47.1947623+03:00] OK VERIFY W144-GCOMB-N14 | DID: standalone geng -ctfq order-14 rerun | RESULT: 272,321; 0 fail; min 0; 72 eq, 68 cut | D: none
+[2026-07-18T23:33:10.1597010+03:00] > VERIFY W144-GCOMB-CUT | NEXT: rerun deterministic seed 20260718, 30,000 block sums, n14..50, 8T to clean exit.
+[2026-07-18T23:33:20.9913526+03:00] FAIL VERIFY W144-GCOMB-CUT | DID: compiled then invoked stress | RESULT: CLI rejects --min-order/--max-order; expects --min-n/--max-n | D: none
+[2026-07-18T23:33:21.0224732+03:00] > VERIFY W144-GCOMB-CUT | NEXT: rerun seed 20260718, 30,000 block sums, n14..50, 8T with corrected CLI.
+[2026-07-18T23:34:06.6692092+03:00] > ATTACK W144-COMB | NEXT: Search deterministic n=16 nauty shard 17/100 for a three-bound counterexample.
+[2026-07-18T23:34:50.5646482+03:00] > ATTACK W144-COMB | NEXT: Falsify rooted rank-distance lemma on all connected girth>=5 graphs through n=14.
+[2026-07-18T23:35:27.2278103+03:00] OK VERIFY W144-GCOMB-CUT | DID: clean deterministic 30,000-case rerun, exit 0 | RESULT: 30,175; 0 fail; min 0; 15 eq | D: none
+[2026-07-18T23:35:27.2507094+03:00] > PLAN->ATTACK W144-GCOMB-LEAF | NEXT: prove eta(H+leaf)<=eta(H)+1 and audit RHS compensation under one-leaf extension.
+[2026-07-18T23:36:42.0000000+03:00] OK ATTACK W144-COMB | DID: rooted rank-distance test through n=14 | RESULT: 324,321 graphs/2,830,937 roots, 0 fail | D: none
+[2026-07-18T23:38:08.6690023+03:00] FAIL ATTACK W144-COMB | DID: Tested rooted cyclerank auxiliary | RESULT: HS plus length-12 ear has N61,beta127,Delta=R=8, RHS -67 | D: DEAD auxiliary
+[2026-07-18T23:39:02.7534631+03:00] > PLAN->WRITEUP W141-143 | NEXT: audit the three proof sources and metadata, then design one combined arXiv manuscript.
+[2026-07-18T23:39:53.5622317+03:00] > VERIFY | NEXT: referee W141-W143 registries, theorem statements, proof texts, and Lean artifacts for exact agreement
+[2026-07-18T23:38:10.0000000+03:00] OK SCOPE W144 | DID: stopped all W144 agents at user direction | RESULT: W144 excluded from PR/arXiv deliverable | D: W144 open
+[2026-07-18T23:38:11.0000000+03:00] > WRITEUP W141-143 | NEXT: merge three proofs into one arXiv source and verify rendered PDF.
+[2026-07-18T23:41:45.2419828+03:00] > PLAN Q26 MINCONFLICT | NEXT: isolate exact target-covering 1-swap scan from user source; preserve active binary; delta-audit before A/B.
+[2026-07-18T23:44:11.6480932+03:00] OK PLAN->WRITEUP W141-143 | DID: audited three TeX sources and metadata | RESULT: author Alper Ferudun; labels/bibs need merging | D: none
+[2026-07-18T23:44:11.7362170+03:00] > WRITEUP W141-143 | NEXT: compose one monolithic TeX, prefix references, update W142 formalization, and exclude W144 files.
+[2026-07-18T23:44:21.1940045+03:00] > VERIFY | NEXT: Lean-check W141 exact theorem conjecture141 in formal-conjectures-w141c
+[2026-07-18T23:45:29.4942852+03:00] OK VERIFY | DID: Lean-checked W141 conjecture141 | RESULT: exit 0 in formal-conjectures-w141c | D: none
+[2026-07-18T23:45:29.5216391+03:00] > VERIFY | NEXT: Lean-check W143 exact theorem conjecture143 in formal-conjectures-w141c
+[2026-07-18T23:46:11.6594485+03:00] OK VERIFY | DID: Lean-checked W143 conjecture143 | RESULT: exit 0 in formal-conjectures-w141c | D: none
+[2026-07-18T23:46:11.6915706+03:00] > VERIFY | NEXT: Lean-check W142 exact theorem conjecture142 at proof commit 46bf390
+[2026-07-18T23:47:30.6292952+03:00] OK VERIFY | DID: Lean-checked W142 conjecture142 | RESULT: exit 0 at commit 46bf390 | D: none
+[2026-07-18T23:48:43.8139962+03:00] OK WRITEUP W141-143 | DID: composed one TeX and curated 8 Lean files | RESULT: 0 W144 refs; 0 placeholders; labels/refs/cites complete | D: none
+[2026-07-18T23:48:43.8494366+03:00] > VERIFY W141-143 PDF | NEXT: compile graffiti_141_143.tex with Tectonic 0.16.9 and inspect all rendered pages.
+[2026-07-18T23:48:45.2794060+03:00] > VERIFY | NEXT: audit Lean axioms for W141 and W143 exact theorems
+[2026-07-18T23:49:52.7443653+03:00] > VERIFY W141-143-PDF | NEXT: compile combined TeX with Tectonic 0.16.9 and inspect log.
+[2026-07-18T23:51:20.5138323+03:00] OK VERIFY | DID: audited W141 and W143 axioms | RESULT: propext, Classical.choice, Quot.sound only | D: none
+[2026-07-18T23:51:20.5410822+03:00] > VERIFY | NEXT: audit Lean axioms for W142 exact theorem
+[2026-07-18T23:51:47.1659696+03:00] FAIL VERIFY | DID: W142 axiom probe via '-' input | RESULT: Lean requires --stdin | D: none
+[2026-07-18T23:51:47.2270398+03:00] > VERIFY | NEXT: rerun W142 axiom audit with Lean --stdin
+[2026-07-18T23:52:36.7705054+03:00] OK VERIFY W141-143-PDF | DID: independent Tectonic compile + 16-page render | RESULT: exit 0; no undefined refs/cites or overfull boxes | D: none
+[2026-07-18T23:54:01.5156390+03:00] OK VERIFY | DID: audited W142 axioms | RESULT: propext, Classical.choice, Quot.sound only | D: none
+[2026-07-18T23:54:33.3381992+03:00] OK VERIFY W141-143 PDF | DID: Tectonic compile plus 16-page PNG audit | RESULT: exit 0; 16 pages; no TeX warnings, overflow, clipping, or bad glyphs | D: complete
+[2026-07-18T23:54:33.3698457+03:00] OK WRITEUP W141-143 | DID: finalized metadata and source ZIP | RESULT: graffiti_141_143_arxiv_source.zip; 11 entries; 0 W144 refs | D: complete
+[2026-07-18T23:57:08.0749779+03:00] > VERIFY Q26 MINCONFLICT BUILD | NEXT: compile isolated local_search_minconflicts.exe; preserve active local_search.exe SHA-256.
+[2026-07-18T23:57:16.1044454+03:00] > VERIFY W141-143-FINAL | NEXT: rebuild PDF/ZIP after referee corrections and rerun source/render audits.
+[2026-07-18T23:58:30.6125694+03:00] OK VERIFY W141-143-FINAL | DID: referee fixes, rebuild, 3-page visual QA, ZIP CRC | RESULT: 16 pages; 11 files; no W144/ref/cite/layout error | D: ready
+[2026-07-18T23:58:52.7604927+03:00] OK VERIFY Q26 MINCONFLICT BUILD | DID: compiled isolated binary | RESULT: new SHA=84EA4998; active SHA=1837E29B unchanged; --help exit0 | D: none
+
+[2026-07-19T00:01:29.4153329+03:00] > SUBMIT W141-143 ARXIV | NEXT: await author's personal agreement, authorship, and irrevocable-license selections on draft 7842732.
+[2026-07-19T00:01:29.4153329+03:00] FAIL SUBMIT W141-143 ARXIV | DID: opened combined submission draft 7842732 | RESULT: legal start form requires author action | D: user handoff[2026-07-19T00:02:00.9452256+03:00] OK VERIFY | DID: refereed W141-W143 proofs, exact Lean, final TeX and ZIP | RESULT: 3 builds exit0; 3 axiom audits standard; 11-entry ZIP current | D: ready
+[2026-07-19T00:02:13.2061898+03:00] OK VERIFY | DID: final W141-W143 referee pass | RESULT: 3 Lean builds exit0; standard axioms only; final 11-entry ZIP current | D: ready
+[2026-07-19T00:02:37.7348646+03:00] FAIL VERIFY Q26 MINCONFLICT REVIEW | DID: two-agent static audit | RESULT: final-iteration 1-swap SAT could emit NO_HIT at source line 510 | D: fix
+[2026-07-19T00:03:26.3095607+03:00] > VERIFY Q26 MINCONFLICT REBUILD | NEXT: rebuild candidate after last-iteration SAT fix; active binary must remain unchanged.
+[2026-07-19T00:03:57.0227539+03:00] OK VERIFY Q26 MINCONFLICT REBUILD | DID: fixed immediate 1-swap SAT check and rebuilt | RESULT: candidate SHA=B4622440; active SHA=1837E29B | D: audit next
+
+[2026-07-19T00:04:27.4029501+03:00] > SUBMIT W141-143 ARXIV | NEXT: upload verified 11-file source ZIP, compile, enter metadata, inspect preview, and submit if no new author attestation.
+[2026-07-19T00:07:38.0978049+03:00] OK PLAN Q26 MINCONFLICT | DID: integrated exact target-swap and wrapper | RESULT: SHA=B4622440; wrapper parse OK; runtime audit queued | D: staged
+
+[2026-07-19T00:12:25.4053376+03:00] OK SUBMIT W141-143 ARXIV | DID: uploaded ZIP, compiled 16p, fixed MathJax metadata, submitted 7842732 | RESULT: Article submitted; on hold | D: moderation
+[2026-07-19T00:22:05.7723663+03:00] OK ATTACK Q26 TARGET-LS | DID: 64T,3600s,seed260100 | RESULT: NO_HIT; u=6; iter=28901109298; summary.json present | D: calibrate minconflict
+[2026-07-19T00:22:25.1804002+03:00] > VERIFY Q26 MINCONFLICT Q4 | NEXT: run Q4 k2,1T,3s,seed4101 with full delta audit; require SAT and two verifier passes.
+[2026-07-19T00:23:08.3215102+03:00] OK VERIFY Q26 MINCONFLICT Q4 | DID: Q4 k2 audit smoke | RESULT: SAT; verifiers=0/0; audit=true; iterations=0; summary.json | D: Q25
+[2026-07-19T00:23:08.3254207+03:00] > VERIFY Q26 MINCONFLICT Q25 | NEXT: run Q25 k13,4T,30s,seed251001 with delta audit; require SAT and two verifier passes.
+[2026-07-19T00:24:18.5560450+03:00] FAIL VERIFY Q26 MINCONFLICT Q25 | DID: Q25 k13,4T,30s,audit | RESULT: NO_HIT; u=2; iter=1352997; stderr=0 | D: DEAD implementation lane
+[2026-07-19T00:36:36.5757831+03:00] > VERIFY Q26 SAT PORTFOLIO | NEXT: parse harness and re-encode unrestricted CNF; require 4630 vars/29272 clauses before 64-lane launch.
+[2026-07-19T00:38:47.9671293+03:00] FAIL VERIFY Q26 SAT PROOF | DID: Q13 CaDiCaL195 proof smoke | RESULT: 140383456-byte DRUP then exit3221226505; no JSON | D: reject proof lane
+[2026-07-19T00:38:47.9700757+03:00] > VERIFY Q26 SAT PROOF2 | NEXT: test Glucose42 proof tracing on calibrated unrestricted Q13 k6 before any Q26 launch.
+[2026-07-19T00:42:16.6741538+03:00] FAIL VERIFY Q26 SAT PROOF2 | DID: Q13 Glucose42 proof smoke,60s | RESULT: UNKNOWN; clean timeout; no proof | D: test CaDiCaL153
+[2026-07-19T00:42:16.6844342+03:00] > VERIFY Q26 SAT PROOF3 | NEXT: require clean Q13 UNSAT+JSON+DRUP from CaDiCaL153 before assigning Q26 proof lane.
+[2026-07-19T00:48:35.8330398+03:00] FAIL VERIFY Q26 SAT PROOF3 | DID: Q13 CaDiCaL153 proof smoke | RESULT: 140856924-byte DRUP then exit3221226505; no JSON | D: lifecycle fix
+[2026-07-19T00:48:35.8397939+03:00] > VERIFY Q26 SAT PROOF4 | NEXT: retest Q13 CaDiCaL195 after retained-solver/streaming-write/direct-exit fix; require UNSAT+JSON+DRUP.
+[2026-07-19T00:50:39.1307718+03:00] OK VERIFY Q26 SAT PROOF4 | DID: fixed Q13 CaDiCaL195 proof smoke | RESULT: UNSAT; JSON; 1673149-line/140383456-byte DRUP | D: proof lane alive
+[2026-07-19T00:50:39.1307718+03:00] FAIL VERIFY Q26 SAT HARNESS | DID: independent static audit | RESULT: deadline race; cleanup leak; double-start race | D: reject v1
+[2026-07-19T00:50:39.1307718+03:00] > VERIFY Q26 SAT HARNESS-V2 | NEXT: build atomic-lock/final-harvest/finally-cleanup launcher, then re-audit before 64-lane launch.
+[2026-07-19T01:08:22.1303963+03:00] OK VERIFY Q26 SAT HARNESS-V2 | DID: parser+race audit | RESULT: SHA 2973CDCE; expired probe rejected; GO | D: launch eligible
+[2026-07-19T01:08:22.1303963+03:00] OK VERIFY Q26 CNF | DID: independent clause audit | RESULT: 4630 vars;29272 clauses;SHA 71E71F35; unrestricted | D: none
+[2026-07-19T01:08:22.1303963+03:00] > ATTACK Q26 SAT-PORTFOLIO | NEXT: launch unrestricted Q26 at-most-13 with 48 CaDiCaL195+16 Glucose42, one thread each.
+[2026-07-19T01:10:50.0230116+03:00] OK ATTACK Q26 SAT | DID: launched 48C+16G,1T to 22:20 | RESULT: logs/sat-unrestricted-atmost13-20260719T010922;64/64 live;stderr=0;SHA=71E71F35 | D: running
+[2026-07-19T01:13:26.1433636+03:00] > VERIFY Q26 DRUP-CHECKER | NEXT: compile independent drat-trim; reserve Q13 trace calibration until the 64-lane portfolio releases a worker slot.
+[2026-07-19T01:15:05.0499783+03:00] FAIL VERIFY Q26 DRUP-CHECKER | DID: MinGW compile | RESULT: getc_unlocked undefined | D: retry with source-preserving macro
+[2026-07-19T01:15:05.0499783+03:00] OK VERIFY Q26 DRUP-CHECKER | DID: compile -Dgetc_unlocked=getc | RESULT: drat-trim.exe;SHA 6AB11211;usage OK | D: Q13 check pending
+[2026-07-19T08:47:56.6669294+03:00] > ATTACK->STOP Q26 SAT | NEXT: stop exactly 64 state-listed lanes at user request; preserve all run artifacts and verify zero survivors.
+[2026-07-19T08:48:50.6092828+03:00] FAIL ATTACK Q26 SAT | DID: user cancelled; stopped 64 state-listed lanes | RESULT: 0 solver survivors;no model/proof;summary=FAILED(user stop) | D: cancelled
+[2026-07-20T06:33:08+03:00] OK SELECT | DID: ranked EC-linked open problems | RESULT: selected rational Diophantine septuple;registry created | D: SELECT->GATE
+[2026-07-20T06:33:09+03:00] OK GATE | DID: checked Dujella 2026 P3.2 and IMRN 2017 | RESULT: both state no rational septuple is known | D: GATE->PLAN
+[2026-07-20T06:33:10+03:00] OK PLAN | DID: fixed induced-curve 4-clique route | RESULT: rational_diophantine_septuple/APPROACH_REGISTRY.md | D: PLAN->ATTACK
+[2026-07-20T06:33:11+03:00] > ATTACK | NEXT: build exact verifier and calibrate it on a published sextuple and almost-septuple.
+[2026-07-20T06:42:50+03:00] OK ATTACK | DID: ran exact verifier+EC calibration | RESULT: engine unittest 16/16;Gibbs 15/15;almost-7 20/21 | D: frontier calibrated
+[2026-07-20T06:42:51+03:00] > ATTACK | NEXT: scan Rathbun's 2001 sextuples for shared triples, extension cliques, and non-order-3 seed curves.
+[2026-07-20T06:47:26+03:00] FAIL ATTACK | DID: scanned 2001 sextuples/39490 triples | RESULT: catalog NO_HIT;all max cliques size 3;summary.json | D: choose EC seed
+[2026-07-20T06:47:27+03:00] > PLAN | NEXT: define a finite Mordell-Weil lattice box on the best non-Z6x2 seed with seven known extensions.
+[2026-07-20T06:50:26+03:00] OK PLAN | DID: fixed seed1 7D box [-1,1] | RESULT: seed1_box1_20260720T0648/manifest.json;2187 vectors | D: PLAN->ATTACK
+[2026-07-20T06:50:27+03:00] > ATTACK | NEXT: enumerate the exact 7D EC lattice and seek one point extending any of three known sextuples.
+[2026-07-20T06:51:47+03:00] FAIL ATTACK | DID: enumerated seed1 [-1,1]^7 | RESULT: 2187 vectors;558 x;0 coset failures;0 hits | D: expand same direct lane
+[2026-07-20T06:51:48+03:00] > PLAN | NEXT: declare and run seed1 [-2,2]^7 while retaining the exact sextuple-extension target.
+[2026-07-20T06:53:05+03:00] OK PLAN | DID: fixed seed1 7D box [-2,2] | RESULT: seed1_box2_20260720T0652/manifest.json;78125 vectors | D: PLAN->ATTACK
+[2026-07-20T06:53:06+03:00] > ATTACK | NEXT: enumerate 78125 exact EC combinations and independently verify any clique extension.
+[2026-07-20T06:58:29+03:00] FAIL ATTACK | DID: enumerated seed1 [-2,2]^7 | RESULT: 78125 vectors;6203 x;0 coset failures;0 hits | D: finite lane exhausted
+[2026-07-20T06:58:30+03:00] OK PLAN | DID: fixed non-Z6x2 shared-triple portfolio | RESULT: catalog_multiseed_box1_20260720T0655/manifest.json | D: PLAN->ATTACK
+[2026-07-20T06:58:31+03:00] > ATTACK | NEXT: run exact [-1,1] EC lattices for every eligible unsearched shared catalog triple.
+[2026-07-20T07:03:11+03:00] FAIL ATTACK | DID: ran 341-seed EC portfolio | RESULT: 33291 vectors;18097 candidates;0 filter failures;0 hits | D: targeted lane exhausted
+[2026-07-20T07:03:12+03:00] > PLAN | NEXT: search the complete seed1 box2 compatibility graph for an exact 4-clique.
+[2026-07-20T07:07:02+03:00] OK PLAN | DID: fixed full-graph scan and tests | RESULT: manifest.json;6202 vertices;19229301 pairs;21 tests pass | D: PLAN->ATTACK
+[2026-07-20T07:07:03+03:00] > ATTACK | NEXT: build the exact compatibility graph and test it exhaustively for a 4-clique.
+[2026-07-20T07:09:07+03:00] FAIL ATTACK | DID: scanned seed1 box2 full graph | RESULT: 6202 vertices;19229301 pairs;5360 edges;max clique 3;summary.json | D: finite lane exhausted
+[2026-07-20T07:14:07+03:00] > PLAN | NEXT: complete all 341 declared box1 seeds by searching every within-box compatibility graph.
+[2026-07-20T07:16:21+03:00] OK PLAN | DID: fixed 341-seed full-graph scan | RESULT: manifest.json;19486 vertices;634648 pairs;21 tests pass | D: PLAN->ATTACK
+[2026-07-20T07:16:22+03:00] > ATTACK | NEXT: exhaust all complete within-box graphs and verify any exact 4-clique.
+[2026-07-20T07:17:31+03:00] FAIL ATTACK | DID: scanned 341 complete box1 graphs | RESULT: 19486 vertices;634648 pairs;8981 edges;max clique 3;summary.json | D: lane exhausted
+[2026-07-20T07:26:53+03:00] > PLAN | NEXT: gate the Gibbs ACE curve with proven rank, certified generators, and full saturation.
+[2026-07-20T07:26:54+03:00] OK PLAN | DID: fixed Sage proof-gate request | RESULT: gibbs_ace_mw_20260720T072344/manifest.json;SHA256 98CC9192 | D: PLAN->ATTACK
+[2026-07-20T07:26:55+03:00] > ATTACK | NEXT: run one proof-enabled Sage computation and record the complete response.
+[2026-07-20T07:35:08+03:00] FAIL ATTACK | DID: submitted the proof gate to SageCell | RESULT: HTTP 520 for curve code and print(2+2);no response file | D: switch CAS
+[2026-07-20T07:35:09+03:00] > ATTACK | NEXT: run the identical rank and saturation gate in official Magma V2.29-8.
+[2026-07-20T08:01:56+03:00] FAIL ATTACK | DID: ran the full Magma gate | RESULT: official calculator returned 504 after its 60-second limit | D: split same gate
+[2026-07-20T08:01:57+03:00] > ATTACK | NEXT: run the archived basic Magma probe for torsion, independence, heights, and exact point relations.
+[2026-07-20T08:05:23+03:00] OK ATTACK | DID: ran Magma basic probe | RESULT: torsion [2,2];independent=true;3 relations=true;SHA256 FDEB6A50 | D: rank gate open
+[2026-07-20T08:09:14+03:00] > ATTACK | NEXT: run separate Magma rank-bounds and all-prime saturation probes under the 60-second service limit.
+[2026-07-20T08:10:43+03:00] OK ATTACK | DID: ran Magma RankBounds | RESULT: unconditional rank interval [4,4];SHA256 A54C9B76 | D: three-point basis rejected
+[2026-07-20T08:10:44+03:00] > ATTACK | NEXT: compute a certified rank-four Mordell-Weil group and extract all curve generators.
+[2026-07-20T08:14:08+03:00] FAIL ATTACK | DID: ran MordellWeilGroup alone | RESULT: official 60-second termination;SHA256 7B2CBF8C | D: split generator extraction
+[2026-07-20T08:14:09+03:00] > ATTACK | NEXT: extract four independent rank witnesses using Magma's rank-only descent information.
+[2026-07-20T08:15:52+03:00] OK ATTACK | DID: ran rank-only descent | RESULT: 4 independent generators;rank [4,4];SHA256 62622684 | D: saturation gate open
+[2026-07-20T08:15:53+03:00] > ATTACK | NEXT: compute the unbounded saturation of the four independent rank witnesses.
+[2026-07-20T08:19:18+03:00] FAIL ATTACK | DID: ran unbounded saturation | RESULT: official 60-second termination;SHA256 D16BE1B7 | D: optimize rank-four basis
+[2026-07-20T08:19:19+03:00] > ATTACK | NEXT: compare four rank-four bases and select the minimum-regulator basis for saturation.
+[2026-07-20T08:20:30+03:00] OK ATTACK | DID: compared four bases | RESULT: min regulator 39.9522746201 for [Q0,Q1,Q2,G1];SHA256 7067A0FD | D: basis selected
+[2026-07-20T08:20:31+03:00] > ATTACK | NEXT: run unbounded saturation on the minimum-regulator rank-four basis.
+[2026-07-20T08:23:20+03:00] FAIL ATTACK | DID: saturated optimized basis | RESULT: official 60-second termination;SHA256 E05C2776 | D: expose finite prime set
+[2026-07-20T08:23:21+03:00] > ATTACK | NEXT: rerun saturation with certified diagnostic output to identify the finite prime set.
+[2026-07-20T08:27:09+03:00] OK ATTACK | DID: ran verbose saturation | RESULT: prime bound 1048576;aux q limit 202799600;SHA256 5361C0E0 | D: use local GPL CAS
+[2026-07-20T08:27:10+03:00] > ATTACK | NEXT: install workspace-local eclib/mwrank and run automatic saturation without the 60-second cap.
+[2026-07-20T08:31:42+03:00] OK ATTACK | DID: extracted GPL eclib locally | RESULT: mwrank 20231211;binary SHA256 42DC7C9B | D: local backend ready
+[2026-07-20T08:31:43+03:00] > ATTACK | NEXT: calibrate mwrank on rank-one curve 37a1 before launching the ACE automatic-saturation run.
+[2026-07-20T08:35:18+03:00] OK ATTACK | DID: calibrated mwrank on 37a1 | RESULT: rank 1;saturated;unconditional;SHA256 D629A5F7 | D: launch ACE
+[2026-07-20T08:35:19+03:00] > ATTACK | NEXT: run ACE rank descent and automatic saturation with one worker, 100-bit precision, and a 7200-second cap.
+[2026-07-20T08:38:24+03:00] OK ATTACK | DID: ran ACE mwrank | RESULT: rank 4;automatic saturation;full basis unconditional;SHA256 4148E99C | D: basis gate passed
+[2026-07-20T08:38:25+03:00] OK VERIFY | DID: checked four basis coordinates exactly | RESULT: 4/4 satisfy the integral curve equation | D: none
+[2026-07-20T08:38:26+03:00] > PLAN | NEXT: compute the basis height-pairing matrix and specify a complete finite canonical-height region.
+[2026-07-20T08:42:28+03:00] > VERIFY | NEXT: repeat the ACE proof run with a 7200-second timeout and persist raw stdout, stderr, exit code, and hashes.
+[2026-07-20T08:43:39+03:00] OK VERIFY | DID: captured the ACE proof run | RESULT: exit 0;stdout SHA256 9E2B0DC4;stderr SHA256 9808AB7A | D: audit transcript
+[2026-07-20T08:43:40+03:00] > VERIFY | NEXT: parse the raw certificate, reject failure markers, and exact-check all four projective generators.
+[2026-07-20T08:48:52+03:00] OK VERIFY | DID: audited raw mwrank output | RESULT: certificate_check.json valid=true;4/4 points on curve | D: proof gate closed
+[2026-07-20T08:48:53+03:00] > VERIFY | NEXT: run full engine tests and adversarial checks for the two independent septuple verifiers.
+[2026-07-20T08:49:38+03:00] OK VERIFY | DID: tested both septuple verifiers | RESULT: 33 tests passed;py_compile exit 0 | D: dual gate ready
+[2026-07-20T08:49:39+03:00] > ATTACK | NEXT: reproduce the 4x4 height matrix at 200 and 400 bits and exact-check the Q0 torsion relation.
+[2026-07-20T09:04:06+03:00] OK ATTACK | DID: computed the height matrix twice | RESULT: 200/400-bit digits agree;exact residual (-1672000,0) order 2 | D: fix q12 region
+[2026-07-20T09:04:07+03:00] OK PLAN | DID: fixed one complete q12 region | RESULT: 48714 vectors;manifest SHA256 3E5A3B16 | D: launch search
+[2026-07-20T09:04:08+03:00] > ATTACK | NEXT: enumerate all 48714 q12 vectors with one exact-arithmetic worker and a 7200-second timeout.
+[2026-07-20T09:05:59+03:00] OK ATTACK | DID: consumed the q12 region | RESULT: 48714 vectors;6 pass B;2 pass BD;0 pass BDG;NO_HIT | D: verify independently
+[2026-07-20T09:06:00+03:00] > VERIFY | NEXT: re-enumerate the same q12 region with an independent Fraction-based group law and square test.
+[2026-07-20T09:11:04+03:00] OK VERIFY | DID: independently re-enumerated q12 | RESULT: counts 48714/48706/6/2/0 match;report SHA256 6B1A586D | D: NO_HIT certified
+[2026-07-20T09:11:05+03:00] > GATE | NEXT: audit prior coverage before using the same certified vertices for the direct 4-clique graph route.
+[2026-07-20T09:23:32+03:00] OK GATE | DID: audited ACE graph coverage | RESULT: prior 53/24356 vertices and 25683/296595190 pairs | D: full graph is new
+[2026-07-20T09:23:33+03:00] > PLAN | NEXT: build a 64-worker complete graph search with a one-byte certificate for every pair and an independent replay.
+[2026-07-20T09:30:55+03:00] OK PLAN | DID: compiled the full-graph engine | RESULT: source SHA256 8EB329D4;binary SHA256 E0974087 | D: preflight vertices
+[2026-07-20T09:30:56+03:00] > VERIFY | NEXT: generate only the canonical q12 vertices and require exactly 24356 unique nonzero values.
+[2026-07-20T09:32:17+03:00] OK VERIFY | DID: generated canonical q12 vertices | RESULT: 24356 unique nonzero;SHA256 E8A0D54F | D: audit engine
+[2026-07-20T09:40:51+03:00] > VERIFY | NEXT: rerun FD01FE76/78B42654 in vertices-only mode and require the prior 24356-row SHA256.
+[2026-07-20T09:42:07+03:00] OK VERIFY | DID: reran current binary | RESULT: 24356 vertices;SHA256 E8A0D54F matched | D: freeze graph engine
+[2026-07-20T09:44:22+03:00] > VERIFY | NEXT: independently replay every row of the current 24356-vertex artifact.
+[2026-07-20T09:46:27+03:00] OK VERIFY | DID: replayed current vertices | RESULT: 24356 rows;10 exact checks PASS;SHA256 E8A0D54F | D: pair gate
+[2026-07-20T09:46:28+03:00] > VERIFY | NEXT: run the frozen AD15A870/B74BC584 certificate checker self-test before launch.
+[2026-07-20T09:48:01+03:00] OK VERIFY | DID: tested certificate replay | RESULT: 10 bytes;0 mismatches;6 edges;K4 [0,1,2,3] | D: manifest
+[2026-07-20T09:50:23+03:00] > ATTACK | NEXT: process all 296595190 pairs with 64 workers and a 1800-second timeout;manifest SHA256 991EB3DD.
+[2026-07-20T09:55:02+03:00] OK ATTACK | DID: consumed 296595190 pairs | RESULT: exit0;22366 edges;2 triangles;K4 none;cert 296595190 bytes | D: replay
+[2026-07-20T09:55:03+03:00] > VERIFY | NEXT: replay all certificate bytes, exact survivors, and K4 search independently with 64 workers.
+[2026-07-20T09:58:05+03:00] OK VERIFY | DID: replayed full graph independently | RESULT: 296595190 bytes;0 mismatches;22366 edges;2 triangles;K4 null | D: q12 NO_HIT
+[2026-07-20T09:59:57+03:00] OK VERIFY | DID: extracted all graph triangles | RESULT: indices 1069/2983/2997 and 2983/2997/2998 | D: known ACE values
+[2026-07-20T09:59:58+03:00] FAIL ATTACK | DID: closed q12 enlargement | RESULT: DEAD: reformulation maze - larger height regions give only more finite exclusions | D: select
+[2026-07-20T10:02:15+03:00] FAIL ATTACK | DID: enforced q12 exit | RESULT: DEAD: reformulation maze — larger height regions give only more finite exclusions | D: select
+[2026-07-20T10:02:16+03:00] > SELECT | NEXT: audit the two exact sextuple-completion fibers and current prior art for a theorem-closing route.
+[2026-07-20T10:11:27+03:00] OK SELECT | DID: selected the fixed-sextuple quotient gate | RESULT: 40 exact elliptic quotients;no height boxes | D: novelty gate
+[2026-07-20T10:11:28+03:00] OK GATE | DID: checked 2026 status and fixed fibers | RESULT: problem open;no published complete fiber analysis found | D: rank gate
+[2026-07-20T10:11:29+03:00] > PLAN | NEXT: generate 40 integral quotient models and calibrate the ACE model before rank computations.
+[2026-07-20T10:19:36+03:00] OK PLAN | DID: generated genus-1 quotient models | RESULT: 70 records;55 unique;ACE d=336 and certified model match | D: rank gate
+[2026-07-20T10:19:37+03:00] > ATTACK | NEXT: run exact mwrank 2-descent on all 55 frozen quotient models;manifest SHA256 C0EB5B14.
+[2026-07-20T10:21:58+03:00] OK ATTACK | DID: ranked all genus-1 quotients | RESULT: 55 ranks;histogram 3:3,4:21,5:28,6:3;rank0=0 | D: verify
+[2026-07-20T10:21:59+03:00] > VERIFY | NEXT: compare all 70 models and 55 ranks against an independent exact implementation.
+[2026-07-20T10:25:02+03:00] OK VERIFY | DID: independently compared quotient ranks | RESULT: 55/55 match;min rank 3;rank0=0;stderr empty | D: close gate
+[2026-07-20T10:25:03+03:00] FAIL ATTACK | DID: closed genus-1 quotient gate | RESULT: no rank-zero quotient;positive-rank boxes forbidden | D: select
+[2026-07-20T10:31:43+03:00] OK SELECT | DID: selected ACE triangle genus-2 gate | RESULT: 7 exact quotient curves;rank-bound exit fixed | D: novelty gate
+[2026-07-20T10:31:44+03:00] OK GATE | DID: audited fixed completion fibers | RESULT: no published complete rational-point analysis found | D: Magma rank bounds
+[2026-07-20T10:31:45+03:00] > PLAN | NEXT: generate seven exact genus-2 models and frozen one-curve Magma V2.29-8 inputs.
+[2026-07-20T10:36:35+03:00] OK PLAN | DID: froze seven exact genus-2 Magma inputs | RESULT: manifest SHA 872DFEEDED441F06F2CC7AEFF001789154E3A1FE9E3A4650F2A751ECAAB9764B | D: rank jobs
+[2026-07-20T10:36:36+03:00] > ATTACK | NEXT: submit seven frozen RankBounds jobs to Magma V2.29-8, one curve per 60-second calculator job.
+[2026-07-20T10:50:24+03:00] OK ATTACK | DID: ran 7 frozen Magma rank jobs | RESULT: ace_triangle_genus2_20260720T103143/rank_results.json; upper<=1 count 0 | D: verify
+[2026-07-20T10:50:25+03:00] > VERIFY | NEXT: independently replay all hashes, exact models, and seven rank transcripts.
+[2026-07-20T10:52:33+03:00] OK VERIFY | DID: audited 7 inputs, models, scales, hashes, and outputs | RESULT: independent_audit.json; 7/7 match; minimum upper 3 | D: none
+[2026-07-20T10:52:34+03:00] FAIL ATTACK | DID: closed ACE triangle genus-2 gate | RESULT: no upper<=1; bounds inconclusive; no theorem inference | D: select
+[2026-07-20T10:59:22+03:00] OK SELECT | DID: selected records501/502 common-quintuple curve | RESULT: one genus-2 curve covers every extension of 5 fixed values | D: gate
+[2026-07-20T10:59:23+03:00] OK GATE | DID: audited catalogue and indexed sources | RESULT: 2 incompatible extensions; no complete C_Q analysis found | D: plan
+[2026-07-20T11:01:50+03:00] > PLAN | NEXT: generate and independently calibrate the exact common-quintuple model and conditional Magma inputs.
+[2026-07-20T11:05:46+03:00] OK PLAN | DID: froze common-quintuple model and conditional inputs | RESULT: manifest SHA F5015A94227FCE3D9CF2E1074E016042301DEE3CBD920E7E12204DA1B820922E | D: rank job
+[2026-07-20T11:06:34+03:00] > ATTACK | NEXT: submit rank input SHA 75894CDFC5A2FCA19E568D096E8EC3ACD4E1A44BC268F6679F55B6B6BC2CFEFF to Magma; stop unless upper<=1.
+[2026-07-20T11:14:08+03:00] OK ATTACK | DID: ran common-quintuple RankBounds | RESULT: 1<=rank<=6; output SHA 3E7671AA56E7FCFE97ED3E457FAD0D7EC3BF806E65B0647A63325AF57EEB76C9 | D: verify
+[2026-07-20T11:14:09+03:00] OK VERIFY | DID: independently parsed rank transcript and hashes | RESULT: rank_output_audit.json; no discrepancies | D: close lane
+[2026-07-20T11:14:10+03:00] FAIL SELECT | DID: applied final catalogue-lane stop | RESULT: DEAD: serial fixed-family exclusions lack a global existence bridge | D: stop
+[2026-07-20T11:42:18+03:00] OK SELECT | DID: selected DKMS reverse induced-curve shift | RESULT: 2 residual square equations over one parameter | D: gate
+[2026-07-20T11:42:19+03:00] OK GATE | DID: checked 2026 status and primary literature | RESULT: open; no published reverse residual-cover analysis found | D: plan
+[2026-07-20T11:42:20+03:00] > PLAN | NEXT: reconstruct DKMS functions, verify 15 identities, and normalize both residual covers with exact arithmetic.
+[2026-07-20T11:55:57+03:00] OK PLAN | DID: froze DKMS formulas and exact reduction engine | RESULT: manifest.json; engine SHA A4F63A15; source SHA 4A12244F | D: attack
+[2026-07-20T11:59:45+03:00] > ATTACK | NEXT: verify 15 identities and compute exact square classes and genera for both frozen reverse-shift covers.
+[2026-07-20T12:03:46+03:00] OK ATTACK | DID: reduced both reverse-shift covers exactly | RESULT: SHA 0580CFAF; branch counts 178/178; genera 175/175 | D: verify
+[2026-07-20T12:03:47+03:00] > VERIFY | NEXT: replay source specialization, 29 identities, group law, square classes, and both genus counts independently.
+[2026-07-20T12:06:27+03:00] OK VERIFY | DID: independently replayed reverse-shift reduction | RESULT: audit SHA 4C3AB75E; genera 175/175; all checks PASS | D: close
+[2026-07-20T12:06:28+03:00] FAIL ATTACK | DID: applied genus exit to both covers | RESULT: INCONCLUSIVE; genus 175 exceeds gate; parameter scans forbidden | D: select
+[2026-07-20T12:08:00+03:00] OK SELECT | DID: selected omitted second regular extension | RESULT: one global 19/21 family bridge; no finite boxes | D: gate
+[2026-07-20T12:08:01+03:00] OK GATE | DID: audited 2019/2017 sources and 2026 status | RESULT: a7 explicitly unused; no published two-condition analysis found | D: plan
+[2026-07-20T12:08:02+03:00] > PLAN | NEXT: reconstruct a1..a7, factor the Piezas condition, and certify component dimensions and genera.
+[2026-07-20T12:16:35+03:00] OK PLAN | DID: froze DKP source, Vieta bridge, H, and exact reconstruction engine | RESULT: manifest.json; engine SHA 5ECB7478 | D: attack
+[2026-07-20T12:16:36+03:00] > ATTACK | NEXT: verify 18 inherited identities, u=-1 calibration, Vieta a7, H square class, and factor numerator(G) over Q.
+[2026-07-20T12:29:18+03:00] FAIL ATTACK | DID: stopped redundant expanded quadratic replay | RESULT: KeyboardInterrupt at SymPy cancel; no output artifact | D: optimize
+[2026-07-20T12:29:19+03:00] > ATTACK | NEXT: rerun unchanged gate with coefficient-level Vieta derivation; engine SHA 80F92AA4.
+[2026-07-20T12:34:28+03:00] > VERIFY | NEXT: run one independent exact Q(u,t) reconstruction and factor audit; write independent_factor_audit.json.
+[2026-07-20T12:39:17+03:00] OK VERIFY | DID: independently reconstructed and factored G over Q(u,t) | RESULT: audit SHA 42D26392; 10+15 pairs, Vieta, 4 factors PASS | D: none
+[2026-07-20T12:48:30+03:00] > VERIFY | NEXT: replay exact Q P1xP1 singular support and blowups once; write base_geometry_replay.json.
+[2026-07-20T12:50:27+03:00] OK VERIFY | DID: replayed exact blowups and Magma genus | RESULT: SHAs 9CC9815F/3A061FF7; four irreducible curves have genus 5 | D: close
+[2026-07-20T12:50:28+03:00] > ATTACK | NEXT: apply the registered genus exit and stop redundant reconstruction process PID 74392.
+[2026-07-20T12:56:54+03:00] FAIL ATTACK | DID: applied genus gate and stopped PID 74392 | RESULT: INCONCLUSIVE; base genera 5/5/5/5 force cover genus at least 5 | D: select
+[2026-07-20T13:07:49+03:00] > SELECT | NEXT: compare three new direct elliptic routes and quantify one finite theorem-linked attack surface.
+[2026-07-20T13:16:55+03:00] OK SELECT | DID: compared Kummer, Z6x2, and order-4 routes | RESULT: selected fixed strong-pair 3P/5P cover with 3 square classes | D: gate
+[2026-07-20T13:16:56+03:00] > GATE | NEXT: freeze the 2025 primary formulas and audit publication status of the fixed 3P/5P cover.
+[2026-07-20T13:26:45+03:00] OK GATE | DID: froze 2025 source and audited 3P/5P coverage | RESULT: TeX SHA E939AA58; fixed cover absent; 2026 Problem 3.2 open | D: plan
+[2026-07-20T13:26:46+03:00] > PLAN | NEXT: derive 3 residual functions in Q(C), verify 18 inherited conditions, and compute square-class and branch ranks.
+[2026-07-20T13:36:29+03:00] FAIL PLAN | DID: checked the printed calibration on p=0 | RESULT: p(-119/128,-135/169)=79514590977/3041632256; it lies on s1=0 | D: use sigma
+[2026-07-20T13:36:30+03:00] OK PLAN | DID: audited the sigma point and root identity | RESULT: p(-128/119,135/169)=0; p+t=4(uv+1)^2D^2 | D: none
+[2026-07-20T13:39:04+03:00] OK PLAN | DID: froze corrected p branch, roots, and fixed 3P/5P cover | RESULT: registry route; source SHA E939AA58 | D: attack
+[2026-07-20T13:39:05+03:00] > ATTACK | NEXT: complete exact Q(u)[v]/(p) reconstruction PID 73864; verify P,S,3P,5P and 3 residuals.
+[2026-07-20T13:42:19+03:00] FAIL ATTACK | DID: stopped unused final 8P doubling in PID 73864 | RESULT: no output artifact; formulas unchanged | D: optimize
+[2026-07-20T13:42:20+03:00] > ATTACK | NEXT: complete optimized exact reconstruction PID 68584; engine SHA FE54E14C.
+[2026-07-20T13:43:49+03:00] OK ATTACK | DID: checked the source half point | RESULT: printed x fails; x(R)=1+rs+rt+st gives 2R=S exactly | D: none
+[2026-07-20T13:50:00+03:00] OK ATTACK | DID: certified two transverse F109 branch rows by Python/Magma | RESULT: SHAs 66FD6762/7A26DA09; rank>=2 gives genus>=3 | D: verify
+[2026-07-20T13:50:01+03:00] > VERIFY | NEXT: rerun the frozen mod-109 witness calculation and compare both branch rows independently.
+[2026-07-20T13:51:06+03:00] OK VERIFY | DID: replayed both F109 branch witnesses | RESULT: SHA F5DDA952; witnesses, parity, rank, and genus bounds match | D: close
+[2026-07-20T13:51:07+03:00] > ATTACK | NEXT: apply the registered genus exit, stop residual route work, and preserve all artifacts.
+[2026-07-20T13:53:12+03:00] FAIL ATTACK | DID: applied genus gate and stopped reconstruction PIDs 78276/75840 | RESULT: INCONCLUSIVE; every component has genus>=3 | D: select
+[2026-07-20T13:54:10+03:00] > SELECT | NEXT: compare the fixed Z6x2 finite region with two direct elliptic alternatives and select one falsifiable route.
+[2026-07-20T14:02:20+03:00] OK SELECT | DID: compared companion, Z6x2, and order-4 routes | RESULT: selected unconsumed 531441-expression Z6x2 region | D: gate
+[2026-07-20T14:02:21+03:00] > GATE | NEXT: freeze catalogue hashes and audit whether the exact Z6x2 region appears in primary or current sources.
+[2026-07-20T14:05:17+03:00] OK GATE | DID: audited exact triple/R3 strings and frozen sources | RESULT: no treatment found; 2026 Problem 3.2 remains open | D: plan
+[2026-07-20T14:05:18+03:00] > PLAN | NEXT: freeze the 11-orbit manifest and build calibrated primary and independent exact enumerators.
+[2026-07-20T14:28:43+03:00] FAIL PLAN | DID: referee rejected initial freeze 5A08D1C7 | RESULT: Fraction hit handoff failed standalone verifier type gate | D: refreeze
+[2026-07-20T14:28:44+03:00] OK PLAN | DID: refroze C9965E2F and replayed 729 rows twice | RESULT: 3 ledger digests match; referee PASS | D: attack
+[2026-07-20T14:28:45+03:00] > ATTACK | NEXT: run 27 primary and 27 independent shards over 531441 expressions each; aggregate cap 54 workers.
+[2026-07-20T14:30:00+03:00] OK ATTACK | DID: completed 54 exact shards | RESULT: 2x531441 expressions; all shard masks zero; no worker failed | D: verify
+[2026-07-20T14:30:01+03:00] > VERIFY | NEXT: aggregate 27 primary shards and compare all 27 terminal digests with the independent replay.
+[2026-07-20T14:34:10+03:00] OK VERIFY | DID: aggregated and refereed 54 shards | RESULT: SHAs 7902D2AE/47DCC135; 27 digests match, 531441 rows, 0 hits | D: close
+[2026-07-20T14:34:11+03:00] > ATTACK | NEXT: apply the fixed-region exit, preserve artifacts, and forbid coefficient or seed enlargement.
+[2026-07-20T14:34:12+03:00] FAIL ATTACK | DID: closed the Z6x2 region | RESULT: NO_HIT only in 531441 expressions; 6570 distinct finite x values | D: select
+[2026-07-20T14:35:03+03:00] > SELECT | NEXT: compare one final canonical-shift scan with a non-catalogue direct elliptic route.
+[2026-07-20T14:38:47+03:00] OK SELECT | DID: compared canonical catalogue and rank-12 cube routes | RESULT: selected fixed non-catalogue 4096-point rank-12 cube | D: gate
+[2026-07-20T14:38:48+03:00] > GATE | NEXT: freeze the rank-12 primary source, exact map, twelve points, and audit prior coverage of this Boolean cube.
+[2026-07-20T14:43:31+03:00] OK GATE | DID: froze source 3C0F200A and audited exact strings | RESULT: only source pages found; 2026 Problem 3.2 remains open | D: plan
+[2026-07-20T14:43:32+03:00] > PLAN | NEXT: register the 4096-point cube, validate its map and 12 points twice, then freeze dual exact engines.
+[2026-07-20T15:05:30+03:00] OK PLAN | DID: froze manifest 0D757177 and replayed 201 masks twice | RESULT: 3 referee and 3 ledger hashes match | D: attack
+[2026-07-20T15:05:31+03:00] > ATTACK | NEXT: run two exact engines over all 4096 masks and every retained pair; aggregate worker count 2.
+[2026-07-20T15:07:03+03:00] OK ATTACK | DID: completed both exact searches | RESULT: each has 4096 masks, 4095 vertices, 8382465 pairs, 2047 edges, 0 K4 | D: verify
+[2026-07-20T15:07:04+03:00] > VERIFY | NEXT: independently parse both ledger sets, compare hashes and counts, and referee the complete graph result.
+[2026-07-20T15:12:45+03:00] OK VERIFY | DID: terminally compared both runs | RESULT: SHAs CC2C3BDA/A9B3C540; 3 ledgers match, max degree 1, 0 K4 | D: close
+[2026-07-20T15:12:46+03:00] > ATTACK | NEXT: apply the fixed-cube exit, preserve artifacts, and forbid every declared cube enlargement.
+[2026-07-20T15:12:47+03:00] FAIL ATTACK | DID: closed the rank-12 cube | RESULT: NO_HIT only for 4096 expressions and 8382465 retained pairs | D: select
+[2026-07-20T15:13:50+03:00] > SELECT | NEXT: audit one terminal embedded-triple canonical-shift scan against every prior catalogue route.
+[2026-07-20T15:13:51+03:00] OK SELECT | DID: compared remaining direct routes | RESULT: selected one-shot 80040-context canonical shift | D: gate
+[2026-07-20T15:13:52+03:00] > GATE | NEXT: confirm that prior catalogue, multiseed, and Z6x2 searches did not exhaust these signed contexts.
+[2026-07-20T15:13:53+03:00] OK GATE | DID: audited prior manifests and exact formulas | RESULT: no 80040-context ledger found; 2026 Problem 3.2 is open | D: plan
+[2026-07-20T15:13:54+03:00] > PLAN | NEXT: freeze all 2001 records, 20 position triples, two signs, and dual exact ledger contracts.
+[2026-07-20T15:46:53+03:00] OK PLAN | DID: froze A10D6B34 and ran 3 calibrations | RESULT: ledgers BE43F7D6 and summaries 8E4E89F5 match; referee PASS | D: attack
+[2026-07-20T15:46:54+03:00] > ATTACK | NEXT: run 2 exact engines over all 80040 contexts; aggregate worker count 2.
+[2026-07-20T15:47:58+03:00] OK ATTACK | DID: completed both full engines | RESULT: each has 80040 rows and 0 survivors; ledger SHA E3FEAEB8 matches | D: verify
+[2026-07-20T15:47:59+03:00] > VERIFY | NEXT: independently recompute 80040 rows, compare both ledgers, summaries, survivors, and dual-verify every hit.
+[2026-07-20T15:49:18+03:00] OK VERIFY | DID: ran terminal referee | RESULT: SHA 4CBE81A5; all 80040 rows match, 0 survivors | D: close
+[2026-07-20T15:49:19+03:00] > ATTACK | NEXT: apply the final catalogue-screen exit and preserve all exact artifacts.
+[2026-07-20T15:49:20+03:00] FAIL ATTACK | DID: closed canonical-shift route | RESULT: NO_HIT only for 80040 contexts; ledger SHA E3FEAEB8 | D: select
+[2026-07-20T15:50:06+03:00] > SELECT | NEXT: compare only non-catalogue elliptic routes with a direct seven-value certificate and one finite exit.
+
+[2026-07-20T15:45:35.5523859+03:00] > VERIFY W142 LINK | NEXT: compile the independent proof file, audit imports/axioms, then repoint PR #4457 to its theorem line.
+
+[2026-07-20T16:06:10.8437764+03:00] OK VERIFY W142 LINK | DID: fixed proof URL in 60e4ec9; answered review | RESULT: Lean files exit 0; discussion_r3614477788 | D: awaiting review
+[2026-07-20T16:24:30+03:00] OK SELECT | DID: audited the 2026 exotic family | RESULT: fixed conjugates f,g give one direct 3-square septuple cover | D: gate
+[2026-07-20T16:24:31+03:00] > GATE | NEXT: check 2604.08729 and 1904.00348 for prior treatment of the fixed f,g cover.
+[2026-07-20T16:24:32+03:00] OK GATE | DID: searched current primary records | RESULT: neither source treats this fixed 3-square cover | D: plan
+[2026-07-20T16:24:33+03:00] > PLAN | NEXT: reconstruct the 3 residual square classes and certify every horizontal component's genus.
+[2026-07-20T16:27:33+03:00] OK PLAN | DID: froze one conjugate pair and its lemma tree | RESULT: plan SHA EFB32F6E, tree SHA 992511C2 | D: attack
+[2026-07-20T16:27:34+03:00] > ATTACK | NEXT: derive the 3 exact residual functions and certify independent branch places on the base curve.
+2026-07-20T16:45:59+03:00 > VERIFY W142 SKETCH | NEXT: add the requested informal proof sketch and compile GraphConjecture142.lean.
+[2026-07-20T16:46:29+03:00] > VERIFY W142 SKETCH | NEXT: compile the amended theorem docstring with the targeted --wfail module build.
+[2026-07-20T16:47:08+03:00] OK VERIFY W142 SKETCH | DID: built targeted module with --wfail | RESULT: 8038/8038; exit 0; 23s | D: review request implemented.
+[2026-07-20T16:47:23+03:00] > PACKAGE W142 PR REVIEW | NEXT: commit only the verified proof-sketch docstring and push the existing PR branch.
+[2026-07-20T16:47:56+03:00] OK PACKAGE W142 PR REVIEW | DID: committed proof-sketch docstring | RESULT: commit 3c2ab13; one file; 35 lines | D: push pending.
+[2026-07-20T16:49:38+03:00] OK ATTACK | DID: derived 3 residual classes and transverse branch witnesses | RESULT: parity I3; rank 3; SHA 37DD1F6B | D: verify
+[2026-07-20T16:49:39+03:00] > VERIFY | NEXT: replay the symbolic audit and compare its identities, hashes, witnesses, and Riemann--Hurwitz result.
+[2026-07-20T16:51:06+03:00] OK PACKAGE W142 PR REVIEW | DID: pushed 3c2ab13 and replied to review | RESULT: discussion_r3614771678; thread unresolved | D: await reviewer.
+[2026-07-20T16:54:01+03:00] OK VERIFY | DID: replayed the exact primary and independent referee | RESULT: terminal SHA 45BB748C; degree 8, B>=4, genus>=9 | D: close
+[2026-07-20T16:54:02+03:00] > ATTACK | NEXT: apply the registered high-genus exit and preserve the fixed-cover artifacts.
+[2026-07-20T16:54:03+03:00] FAIL ATTACK | DID: closed the exotic f,g cover | RESULT: INCONCLUSIVE; connected cover genus>=9; SHA 45BB748C | D: select
+[2026-07-20T16:54:04+03:00] > SELECT | NEXT: audit current elliptic-curve constructions for one unclosed route with a direct seven-value bridge.
+[2026-07-20T17:19:05+03:00] FAIL SELECT | DID: audited the canonical order-4 orbit | RESULT: C4 only; regular branch repeats and includes zero | D: no direct route
+[2026-07-20T17:24:31+03:00] > SELECT | NEXT: seek a sourced canonical-order-4 triple with an independent point and a genus-2 diagonal quotient.
+[2026-07-20T17:41:02+03:00] FAIL SELECT | DID: tested the strong-entry fixed triple | RESULT: 4S is nonzero; canonical S is not order 4 | D: reject
+[2026-07-20T17:41:03+03:00] OK SELECT | DID: fixed the published order-4 triple and genus-2 quotient | RESULT: route registered; audit SHA 7909C6EB | D: gate
+[2026-07-20T17:42:16+03:00] > GATE | NEXT: search current primary sources for this fixed quotient and freeze its exact model if untreated.
+[2026-07-20T17:42:57+03:00] OK GATE | DID: searched the fixed triple and quotient formulas | RESULT: only source rank study found; quotient untreated | D: plan
+[2026-07-20T17:42:58+03:00] > PLAN | NEXT: freeze the exact C2 model and replay the quotient identities in two implementations.
+[2026-07-20T17:45:02+03:00] > ATTACK | NEXT: generate the fixed C2 model and exact quotient certificates; no point or parameter scan.
+[2026-07-20T17:52:29+03:00] > ATTACK | NEXT: rank the two fixed bielliptic quotients with mwrank -p60 -b8 -x10 -S10, one thread each.
+[2026-07-20T17:53:18+03:00] FAIL ATTACK | DID: ran the C2 generator | RESULT: TypeError at math.prod start; no artifacts written | D: fix
+[2026-07-20T17:54:08+03:00] OK ATTACK | DID: generated C2 and both elliptic quotients | RESULT: model SHA F243AA66; checks SHA 02657368 | D: verify
+[2026-07-20T18:00:11+03:00] FAIL ATTACK | DID: ran both quotient ranks with mwrank for 240 s | RESULT: timeout; no rank bound returned | D: use fixed Magma gate
+[2026-07-20T18:00:12+03:00] > ATTACK | NEXT: submit the frozen E+ rank input to Magma V2.29-8 for one 60 s exact-rank gate.
+[2026-07-20T18:02:18+03:00] FAIL ATTACK | DID: submitted frozen E+ RankBounds to Magma V2.29-8 | RESULT: 60 s timeout; no rank bound | D: close genus-2 gate
+[2026-07-20T18:02:19+03:00] OK CHECK | DID: verified the two elliptic quotient maps | RESULT: Jac(C) is isogenous to E+ x E- | D: select rank-zero gate
+[2026-07-20T18:02:20+03:00] > ATTACK | NEXT: certify ranks of the two fixed minimal quotient models; rank zero gives a complete torsion-lift list.
+[2026-07-20T18:08:07+03:00] > ATTACK | NEXT: submit fixed minimal E+ input SHA 39D11AED to Magma V2.29-8 for one 60 s rank bound.
+[2026-07-20T18:16:58+03:00] FAIL ATTACK | DID: ran minimal E+ on public Magma | RESULT: torsion [2,4]; rank timed out | D: switch to local eclib
+[2026-07-20T18:16:59+03:00] > ATTACK | NEXT: run fixed E+ and E- models with local mwrank p80 b4 x15 S-1, two threads, 3600 s cap.
+[2026-07-20T18:20:04+03:00] OK ATTACK | DID: launched two bounded local mwrank descents | RESULT: PIDs 8387,8398; manifest bounded_full_manifest.json | D: wait
+[2026-07-20T18:24:11+03:00] > ATTACK | NEXT: exhaust all eight E+ torsion points and their exact C2/E lifts, conditional on rank zero.
+[2026-07-20T18:25:03+03:00] OK ATTACK | DID: exhausted E+ torsion lifts | RESULT: 8 C lifts, 16 E lifts, 8 unique T, 0 candidates; SHA 911BA5B5 | D: await rank
+[2026-07-20T18:31:04+03:00] OK VERIFY | DID: replayed torsion lifts in standalone C++ | RESULT: exact ledger match; 0 candidates; SHA 3489E7D5 | D: await rank
+[2026-07-20T18:39:12+03:00] > ATTACK | NEXT: run fixed E+ with PARI 2.15.4 ellrank effort 0, one thread, 3600 s cap, as an independent algebraic descent.
+[2026-07-20T18:42:47+03:00] OK ATTACK | DID: launched bounded PARI E+ descent | RESULT: PID 9111; manifest pari_plus_manifest.json | D: wait
+[2026-07-20T18:46:37+03:00] OK VERIFY | DID: checked both eclib minimal changes exactly | RESULT: c4,c6,Delta scaling and j agree; SHA 69437067 | D: none
+[2026-07-20T18:51:05+03:00] > VERIFY | NEXT: replay the 1024-class E+ descent audit with the independent pure-Python verifier.
+[2026-07-20T18:51:31+03:00] OK VERIFY | DID: replayed E+ finite descent | RESULT: 1024 classes verified; 1022 excluded, 2 unresolved; SHA 9F3A5675 | D: await solvers
+[2026-07-20T18:55:41+03:00] > VERIFY | NEXT: audit local PARI ellrank bound semantics, fixed-model input, and hard-cap wrapper without altering the active run.
+[2026-07-20T19:00:10+03:00] OK VERIFY | DID: audited PARI rank semantics and model | RESULT: [0,0,s,L] is unconditional; model SHA A57F73C7; kill cap 3610 s | D: none
+[2026-07-20T19:25:30+03:00] FAIL ATTACK | DID: bounded eclib E+/E- descents ended | RESULT: both exit 124; no final rank; SHA 6E1F91D4,263DBB2A | D: await PARI
+[2026-07-20T19:48:30+03:00] FAIL ATTACK | DID: bounded PARI E+ descent ended | RESULT: exit 124; empty output; manifest SHA 72869CBD | D: rank zero unproved
+[2026-07-20T19:49:34+03:00] > DECIDE | NEXT: apply the registered exit condition and verify the exact obstruction before closing the fixed bielliptic gate.
+[2026-07-20T19:51:59+03:00] OK VERIFY | DID: checked bounded exits and workers | RESULT: three exits=124; PIDs 8387,8398,9111 absent | D: none
+[2026-07-20T19:52:00+03:00] FAIL DECIDE | DID: closed fixed bielliptic gate | RESULT: E+ 0..2, E- 0..4; no rank-zero or septuple certificate | D: INCONCLUSIVE
+[2026-07-20T19:52:01+03:00] FAIL PLAN | DID: audited further elliptic routes | RESULT: DEAD: reformulation maze — no low-genus bridge supplies all six K4 edges | D: stop
+[2026-07-20T19:53:08+03:00] > SELECT | NEXT: audit current primary sources for a new elliptic construction with a direct seven-value certificate bridge.
+[2026-07-20T20:00:20+03:00] > VERIFY | NEXT: replace the 60-second Magma basis check with a workspace-local eclib rank, basis, and relation replay.
+[2026-07-20T20:08:10+03:00] OK VERIFY | DID: replayed ACE curve with local eclib and exact Python | RESULT: rank 4; torsion C2xC2; 3 relations true; SHA FB0E9205 | D: none
+[2026-07-20T20:08:11+03:00] FAIL GATE | DID: audited current sources and elliptic identities | RESULT: no theorem forces all six K4 edges; audit SHA 549C5D1C | D: stop
+[2026-07-20T20:09:10+03:00] > DECIDE | NEXT: apply the third consecutive missing-bridge audit and preserve the goal as unresolved rather than open another finite lane.
+[2026-07-20T20:09:34+03:00] FAIL DECIDE | DID: applied the third missing-bridge audit | RESULT: no registered direct route; audit SHA 549C5D1C | D: blocked
+[2026-07-20T23:56:12+03:00] > SELECT | NEXT: run 64 method-neutral lanes and retain one current open target with a direct closure certificate.
+[2026-07-21T00:05:33+03:00] OK SELECT | DID: audited 64 method-neutral lanes | RESULT: 3x3 square-magic-square has an exact elliptic certificate route | D: GATE
+[2026-07-21T00:05:33+03:00] > GATE | NEXT: verify current open status and reject recent solution claims for the 3x3 square-magic-square.
+[2026-07-21T00:05:33+03:00] OK GATE | DID: checked Acta Arith. 222 and recent claims | RESULT: no exact nine-square certificate found | D: REGISTER
+[2026-07-21T00:10:03+03:00] OK PLAN | DID: registered MSQ-D and its direct matrix bridge | RESULT: problems_external/magic_square_squares/APPROACH_REGISTRY.md | D: ATTACK
+[2026-07-21T00:10:03+03:00] > ATTACK | NEXT: build two exact verifiers and reproduce calibration squares before freezing 64 lanes.
+[2026-07-21T00:20:18+03:00] OK ATTACK | DID: calibrated Python and C++ exact verifiers | RESULT: 8 unit tests and 12 C++ checks passed; Sallows 7/8 rejected | D: manifest
+[2026-07-21T00:20:18+03:00] > ATTACK | NEXT: audit and freeze 64 finite MSQ-D lanes before launching the eight-hour tranche.
+[2026-07-21T00:26:46+03:00] OK ATTACK | DID: froze and audited 64 finite MSQ-D lanes | RESULT: LANE_MANIFEST.md SHA 917F8F14; 16 G/E/N/S rows | D: engines
+[2026-07-21T00:26:46+03:00] > ATTACK | NEXT: implement and cross-calibrate exact G/N, E, and S lane engines without launching the tranche.
+[2026-07-21T00:36:50+03:00] OK ATTACK | DID: implemented and cross-calibrated E engine | RESULT: calibration_summary.json valid; 4 bounds and 3 chunks agree | D: none
+[2026-07-21T01:15:28+03:00] OK ATTACK | DID: cross-calibrated G/N, S, and supervisor | RESULT: G m=1..4096 exact; S 3/3; harness 3/3 | D: launch
+[2026-07-21T01:15:28+03:00] > ATTACK | NEXT: launch frozen 16 G, 16 E, 16 N, and 16 S lanes for one common eight-hour tranche.
+[2026-07-21T01:18:28+03:00] OK ATTACK | DID: launched frozen 64-lane tranche | RESULT: 64 launched; 46 active; 18 NO_HIT; stderr 0; deadline 09:17:30 | D: monitor
+[2026-07-21T01:19:10+03:00] FAIL ATTACK | DID: supervisor stopped frozen tranche | RESULT: N14 atomic replace failed; 19 NO_HIT; 64 owned PIDs closed | D: recovery
+[2026-07-21T01:23:32+03:00] > ATTACK | NEXT: fix transient Windows replace and recover the same domains under the original 09:17:30 deadline.
+[2026-07-21T01:52:29+03:00] FAIL ATTACK | DID: audited recovery harness | RESULT: 6/7; N12 left a temp summary; production not launched | D: atomic retry
+[2026-07-21T02:11:44+03:00] FAIL ATTACK | DID: stress-tested recovery writes | RESULT: 9/10; locked target exhausted retry; 0 search workers | D: backoff
+[2026-07-21T02:25:12+03:00] OK ATTACK | DID: fixed and triple-audited recovery | RESULT: SHA 163BEAD; 12/12 x3; 2 launch approvals | D: launch
+[2026-07-21T02:25:12+03:00] > ATTACK | NEXT: launch 45 interrupted lanes under the original 09:17:30 deadline; retain 19 exact completions.
+[2026-07-21T02:26:25+03:00] OK ATTACK | DID: launched same-deadline recovery | RESULT: parent 80960; 45/45 alive; 19 retained; stderr 0 | D: monitor
+[2026-07-21T03:02:14+03:00] > VERIFY | NEXT: independently recompute G/N interval continuity and exact center coverage from original and recovery artifacts.
+[2026-07-21T03:03:51+03:00] OK VERIFY | DID: cross-checked 32 G/N checkpoint joins | RESULT: 536870913 centers contiguous; 0 additive triples; 0 candidates | D: none
+[2026-07-21T03:45:56+03:00] > AUDIT | NEXT: register and calibrate a queued direct torsor-certificate route for the open fifth-power taxicab problem.
+[2026-07-21T03:50:29+03:00] > VERIFY | NEXT: build an independent C++ exact-integer verifier and bounded Python-oracle calibration; launch no search.
+[2026-07-21T03:55:12+03:00] > VERIFY | NEXT: run exact verifier unit tests and exhaust the deterministic P=Q=N=D=1 reference box.
+[2026-07-21T03:59:22+03:00] OK VERIFY | DID: ran exact Python certificate and reference suites | RESULT: 19/19 tests; 2 quartic rejects; tiny box NO_HIT | D: none
+[2026-07-21T04:00:12+03:00] OK VERIFY | DID: built cpp_int verifier; ran 11 self-checks and 64 oracle cases | RESULT: 9/9 tests; SHA 8086463B | D: calibrated
+[2026-07-21T04:01:41+03:00] OK VERIFY | DID: ran combined quintic engine discovery | RESULT: 34/34 tests in 1.994s | D: none
+[2026-07-21T04:01:43+03:00] OK VERIFY | DID: repeated strict build and full oracle suite | RESULT: 9/9; EXE SHA 52ACF874; source SHA 36411292 | D: none
+[2026-07-21T04:18:56+03:00] FAIL VERIFY | DID: replayed PARI wrapper | RESULT: p181 args ignored, then case dispatch raised TypeError | D: fixed
+[2026-07-21T04:18:57+03:00] OK VERIFY | DID: froze rebuilt C++ verifier | RESULT: 11/11 self-tests; 9/9 oracle; EXE SHA 055206B6 | D: none
+[2026-07-21T04:18:58+03:00] OK AUDIT | DID: calibrated Q5-TORSOR with two verifiers and PARI | RESULT: 35/35; 2 point sets agree; SHA 8B2D9E1B | D: queued
+[2026-07-21T04:22:30+03:00] > ATTACK | NEXT: implement and cross-calibrate a manifest-driven Q5-TORSOR worker without launching the main search.
+[2026-07-21T04:38:57+03:00] OK GATE | DID: audited Q5 status | RESULT: Asiryan v3 open; FC b8b5208 open; A046881 >10^33 | D: queued
+[2026-07-21T04:52:29+03:00] > VERIFY | NEXT: independently reproduce the exact Q5 H=46/47 denominator-bound maxima.
+[2026-07-21T04:53:25+03:00] OK VERIFY | DID: maximized coprime p,q at H=46,47 | RESULT: M=2942160 pass; M=5699220 fail | D: none
+[2026-07-21T05:28:02+03:00] > VERIFY | NEXT: rerun frozen Q5 scanner and 64-lane harness suites and compare artifact hashes.
+[2026-07-21T05:32:10+03:00] FAIL VERIFY | DID: audited Q5 semantic exits | RESULT: supervisor rejected scanner HIT=10 and TIMEOUT=3 | D: fix required
+[2026-07-21T05:35:40+03:00] FAIL VERIFY | DID: audited Q5 LPT weights | RESULT: rejected N*D trials could have zero weight and skew lanes | D: fix required
+[2026-07-21T05:39:05+03:00] FAIL VERIFY | DID: audited Q5 runtime binding | RESULT: launcher runtime was not bound to manifest artifact hashes | D: fix required
+[2026-07-21T05:41:10+03:00] FAIL VERIFY | DID: audited Q5 child cleanup | RESULT: termination failures could be hidden as owned_pids=[] | D: fix required
+[2026-07-21T05:41:11+03:00] FAIL VERIFY | DID: audited Q5 launch exclusivity | RESULT: run-dir freshness had a duplicate-launch race | D: fix required
+[2026-07-21T05:43:15+03:00] FAIL VERIFY | DID: audited Q5 stderr gate | RESULT: post-exit stderr write could escape the pre-poll check | D: fix required
+[2026-07-21T05:45:20+03:00] OK VERIFY | DID: independently refereed Q5 torsor and bounds | RESULT: lossless bridge; H46 pass; H47 bound fails | D: math route retained
+[2026-07-21T05:52:05+03:00] FAIL VERIFY | DID: audited Q5 exit state | RESULT: invalid exited result could retain RUNNING and a stale PID | D: fix required
+[2026-07-21T05:53:30+03:00] FAIL REPORT | DID: audited log placement | RESULT: duplicate 05:32 event remains at line 752; canonical copy is line 38027 | D: none
+[2026-07-21T06:01:10+03:00] OK VERIFY | DID: replayed revised Q5 code suites | RESULT: py_compile; scanner 11/11; harness 29/29 | D: calibration pending
+[2026-07-21T06:10:20+03:00] OK VERIFY | DID: replayed frozen Q5 artifacts | RESULT: 30/30+11/11; audit f637b093; stderr 0 | D: referee pending
+[2026-07-21T06:17:05+03:00] OK VERIFY | DID: completed independent Q5 referee replay | RESULT: launch-safe; 30+11+9+9+11; 64/64 lanes | D: bounds pending
+[2026-07-21T06:29:43+03:00] > PLAN | NEXT: freeze one common 8-hour Q5 tranche, exact pilot gates, and deterministic main-bound selection rule.
+[2026-07-21T06:32:04+03:00] OK PLAN | DID: froze corrected Q5 tranche protocol | RESULT: registry SHA 4FFB5697; 63+1 audit; common T0/S/G | D: queued
+[2026-07-21T06:33:38+03:00] > ATTACK | NEXT: implement and test the outer 8-hour Q5 tranche lock and deterministic pilot-to-main selector.
+[2026-07-21T07:14:37+03:00] FAIL ATTACK | DID: attempted Q5 outer-controller build | RESULT: spec audit only; no launchable controller or search | D: queued
+[2026-07-21T07:19:08+03:00] > ATTACK | NEXT: implement and independently test a pure no-launch Q5 tranche preflight and selector.
+[2026-07-21T07:46:12+03:00] OK VERIFY | DID: tested frozen Q5 candidate table | RESULT: 6/6; JSON C9CB4151; EXE E4B062DD | D: selector pending
+[2026-07-21T09:09:57+03:00] > ATTACK | NEXT: harden Q5 terminal acceptance, magic handoff semantics, and immutable evidence-set checks.
+[2026-07-21T09:21:19+03:00] OK ATTACK | DID: closed frozen MSQ-D tranche at deadline | RESULT: 60 NO_HIT; 4 TIMEOUT_INCOMPLETE; stderr 0; no candidate | D: Q5 gate
+[2026-07-21T09:24:48+03:00] > VERIFY | NEXT: run 109 no-launch Q5 tests, compile checks, and two exact-hash independent launch-safety reviews.
+[2026-07-21T09:39:00+03:00] FAIL VERIFY | DID: audited Q5 launch safety | RESULT: deadline, phase, artifact, census, and public-gate binding incomplete | D: launch blocked
+[2026-07-21T09:39:01+03:00] > ATTACK | NEXT: bind every launch to state, deadline, readiness, live status, and immutable terminal artifacts.
+[2026-07-21T10:44:14+03:00] FAIL VERIFY | DID: cross-audited Q5 launch | RESULT: duplicate-target, hit-peer-label, and readiness-lock mismatches found | D: launch blocked
+[2026-07-21T10:44:15+03:00] > VERIFY | NEXT: repair three cross-contract defects and rerun the fixed ten-module suite.
+[2026-07-21T11:36:20+03:00] FAIL VERIFY | DID: ran fixed Q5 ten-module suite | RESULT: 135/140 passed; 5 controller fixture errors; no launch | D: blocked
+[2026-07-21T11:36:21+03:00] > VERIFY | NEXT: repair state-bound fixtures, rerun all 140+ tests, and obtain two independent exact-hash reviews.
+[2026-07-21T12:12:48+03:00] OK VERIFY | DID: ran frozen Q5 ten-module suite | RESULT: 154/154; suite SHA 9DBF3BE8; no launch artifacts | D: referee gate
+[2026-07-21T12:12:49+03:00] > VERIFY | NEXT: obtain two independent LAUNCH_SAFE verdicts bound to reviewed SHA 1E8D5F43.
+[2026-07-21T12:17:57+03:00] FAIL VERIFY | DID: ran first Q5 hash referee | RESULT: stale q5_manifest pin blocked start | D: refreeze
+[2026-07-21T12:17:58+03:00] OK VERIFY | DID: repaired pin and reran frozen suite | RESULT: 154/154; review SHA 6C50F2ED | D: referee gate
+[2026-07-21T12:17:59+03:00] > VERIFY | NEXT: obtain two new independent verdicts on review SHA 6C50F2ED.
+[2026-07-21T12:37:44+03:00] FAIL VERIFY | DID: ran second Q5 hash referee | RESULT: auth/census bypass and nonexact run inventory found | D: launch blocked
+[2026-07-21T12:37:45+03:00] > ATTACK | NEXT: close spawn/API bypasses, enforce exact terminal inventories, and rerun the full gate.
+[2026-07-21T13:15:10+03:00] FAIL VERIFY | DID: ran focused tranche tests after API hardening | RESULT: 8 pass, 23 fixture/API errors | D: repair tests
+[2026-07-21T13:22:13+03:00] FAIL VERIFY | DID: audited hardened Q5 APIs | RESULT: import spawn/state forgery and revalidation gaps found | D: launch blocked
+[2026-07-21T13:22:14+03:00] > ATTACK | NEXT: make launch and transitions source-bound, close evidence drift, and rerun security tests.
+[2026-07-21T13:40:39+03:00] OK ATTACK | DID: made run_campaign sole worker-spawn boundary with exact inventory/cleanup | RESULT: 55/55 tests | D: controller audit
+[2026-07-21T14:10:12+03:00] OK ATTACK | DID: source-bound closure-private Q5 controller hardening | RESULT: 37/37 tests | D: exact suite
+[2026-07-21T14:10:13+03:00] > VERIFY | NEXT: run the fixed ten-module Q5 suite and freeze exact artifact/test hashes.
+[2026-07-21T14:14:26+03:00] FAIL REPORT | DID: append patch targeted line 4302, not EOF | RESULT: line preserved; corrected event appended | D: none
+[2026-07-21T14:14:27+03:00] OK VERIFY | DID: ran fixed ten-module Q5 readiness suite | RESULT: 166/166 tests in 38.854 s | D: hash freeze
+[2026-07-21T14:15:45+03:00] OK VERIFY | DID: froze Q5 runtime/test bytes twice | RESULT: review SHA 0963769b5cae; suite SHA f29f2d1e57cf | D: referee gate
+[2026-07-21T14:15:46+03:00] > VERIFY | NEXT: two independent referees audit exact review SHA 0963769b5cae for launch safety.
+[2026-07-21T14:24:28+03:00] FAIL ATTACK | DID: stopped Q5 launch-hardening branch | RESULT: no production search launched; unowned-child interrupt window found | D: DEAD
+[2026-07-21T14:24:29+03:00] > SELECT | NEXT: choose a current non-Erdos open problem with a direct result-bearing action in the first hours.
+[2026-07-21T15:02:00+03:00] OK SELECT | DID: selected AJT over F5 at n=8 | RESULT: one 8x8 matrix plus 65536 checks refutes AJT | D: novelty gate
+[2026-07-21T15:02:01+03:00] OK GATE | DID: checked 2021 and 2026 AJT sources | RESULT: p=5 remains open; Yu covers n<8, not n=8 | D: plan
+[2026-07-21T15:02:02+03:00] OK PLAN | DID: fixed direct hyperplane-cover route | RESULT: problems_external/ajt_f5_n8/APPROACH_REGISTRY.md | D: attack
+[2026-07-21T15:02:03+03:00] > ATTACK | NEXT: build exact masks and two verifiers, then run independent finite counterexample searches.
+[2026-07-21T15:18:00+03:00] > VERIFY | NEXT: compile local search and run focused verifier/CEGIS self-tests before any production search.
+[2026-07-21T14:54:20+03:00] FAIL REPORT | DID: prior AJT lines used planned times ahead of host clock | RESULT: lines preserved; actual clock 14:54+03 | D: none
+[2026-07-21T14:54:21+03:00] OK VERIFY | DID: compiled search and ran CEGIS tests plus smoke | RESULT: 7/7 tests; 2-thread 3 s best uncovered 2100 | D: attack
+[2026-07-21T14:54:22+03:00] > ATTACK | NEXT: run CP-SAT CEGIS with 8 workers for 30 s, seed 20260721; accept only an exhaustive verified hit.
+[2026-07-21T15:04:10+03:00] FAIL ATTACK | DID: ran CP-SAT CEGIS, 8 workers, 30 s, seed 20260721 | RESULT: 28 candidates; no verified hit | D: production portfolio
+[2026-07-21T15:04:11+03:00] > ATTACK | NEXT: launch local search with 48 threads for 600 s, seed 2026072101, preserving best matrix and logs.
+[2026-07-21T15:06:46+03:00] FAIL ATTACK | DID: attempted 48-thread launch | RESULT: logs directory absent; no process created | D: retry same parameters
+[2026-07-21T15:06:47+03:00] > ATTACK | NEXT: create the scoped logs directory and retry the unchanged 48-thread, 600 s run.
+[2026-07-21T15:12:17+03:00] OK ATTACK | DID: launched local search, 48 threads, 600 s, seed 2026072101 | RESULT: PID 118984; run portfolio-20260721T150754 | D: CEGIS lane
+[2026-07-21T15:12:18+03:00] OK VERIFY | DID: tested structural CEGIS pruning | RESULT: 8/8 tests; 2 s smoke produced 3 rank-8 candidates | D: attack
+[2026-07-21T15:12:19+03:00] > ATTACK | NEXT: launch structural CP-SAT CEGIS with 16 workers for 600 s, seed 2026072201, in the same run directory.
+[2026-07-21T15:15:26+03:00] > VERIFY | NEXT: independently audit active CEGIS exactness and local-search score without modifying the 64-worker portfolio.
+[2026-07-21T15:20:09+03:00] FAIL ATTACK | DID: completed local search, 48 threads, 600 s, seed 2026072101 | RESULT: NO_HIT; best 1404/16384 after 79333648 iterations | D: reseed
+[2026-07-21T15:20:10+03:00] > ATTACK | NEXT: launch an independent 48-thread, 600 s local run with seed 2026072102 while CEGIS continues.
+[2026-07-21T15:24:10+03:00] FAIL VERIFY | DID: independently checked local best | RESULT: score 1404 but column degrees 1,4,1,1,5,4,1,5 and c2=5 | D: invalid basin
+[2026-07-21T15:24:11+03:00] FAIL ATTACK | DID: completed structural CEGIS, 16 workers, 600 s | RESULT: TIMEOUT_INCONCLUSIVE; 138 candidates; no certificate | D: v2
+[2026-07-21T15:24:12+03:00] > ATTACK | NEXT: stop local2 PID 62796, preserve artifacts, and replace it with hard-constraint local search v2.
+[2026-07-21T15:26:47+03:00] > VERIFY | NEXT: compile and smoke-test hard-constraint local v2 and batched-kernel CEGIS v2 before relaunch.
+[2026-07-21T15:31:07+03:00] OK VERIFY | DID: compiled local v2 and tested both v2 lanes | RESULT: local valid; CEGIS 4/4 tests; bounded smokes NO_HIT | D: production
+[2026-07-21T15:31:08+03:00] > ATTACK | NEXT: launch v2 portfolio: local 48 threads and CEGIS 16 workers, each 600 s, seeds 2026072301/2026072302.
+[2026-07-21T15:33:54+03:00] > VERIFY | NEXT: audit v2 candidate exactness and throughput while the 64-worker portfolio remains unchanged.
+[2026-07-21T15:38:19+03:00] > VERIFY | NEXT: run py_compile, focused tests, and a 5 s/2-worker smoke for 32-cut CEGIS v3 without changing v2.
+[2026-07-21T15:39:38+03:00] OK VERIFY | DID: tested 32-cut CEGIS v3 | RESULT: 4/4 tests; smoke learned 32 cover plus 1 kernel cut; no output | D: replace v2
+[2026-07-21T15:39:39+03:00] > ATTACK | NEXT: stop CEGIS v2 PID 105664 and launch exact v3 with 16 workers for 600 s, seed 2026072401.
+[2026-07-21T15:55:35+03:00] OK ATTACK | DID: proved exact AJT n8 support bounds | RESULT: problems_external/ajt_f5_n8/STRUCTURAL_LEMMAS.md | D: v4
+[2026-07-21T15:55:36+03:00] FAIL ATTACK | DID: completed local v2, 48 threads, 600 s | RESULT: NO_HIT; best 1518/16384 after 107760678 iterations | D: v3
+[2026-07-21T15:55:37+03:00] FAIL ATTACK | DID: completed CEGIS v3, 16 workers, 600 s | RESULT: TIMEOUT_INCONCLUSIVE; 9 candidates; no certificate | D: v4
+[2026-07-21T15:55:38+03:00] OK VERIFY | DID: tested v4 CEGIS and local v3 | RESULT: CEGIS 21/21; bounded smokes NO_HIT; two verifiers rejected local best | D: production
+[2026-07-21T15:55:39+03:00] > ATTACK | NEXT: launch final 600 s v4 portfolio with local 48 threads and CEGIS 16 workers, seeds 2026072502/2026072503.
+[2026-07-21T15:59:15+03:00] > VERIFY | NEXT: independently referee the degree-five-column and row-support-three lemmas while v4 runs unchanged.
+[2026-07-21T16:04:15+03:00] OK VERIFY | DID: independently refereed three exact support lemmas | RESULT: PASS; exhaustive/random checks found 0 failures | D: row>=4
+[2026-07-21T16:04:16+03:00] > ATTACK | NEXT: encode row degree >=4 in v5 CEGIS/local constraints and test it before changing production.
+[2026-07-21T16:11:37+03:00] FAIL ATTACK | DID: completed final v4, 48+16 workers, 600 s | RESULT: local NO_HIT best1700/16384; CEGIS timeout, 5 candidates | D: exit
+[2026-07-21T16:11:38+03:00] OK VERIFY | DID: encoded exact row>=4 pruning in v5 engines | RESULT: g++ exit0; Python tests 26/26 | D: smoke
+[2026-07-21T16:11:39+03:00] > VERIFY | NEXT: run only 5 s/2-worker CEGIS and local v5 smokes; do not launch production.
+[2026-07-21T16:13:24+03:00] OK VERIFY | DID: ran v5 5 s/2-worker smokes | RESULT: local NO_HIT 1821; CEGIS UNKNOWN; row min4, col min5; both verifiers rejected | D: none
+[2026-07-21T16:13:25+03:00] FAIL ATTACK | DID: closed AJT F5,n8 counterexample lane | RESULT: DEAD: resource exit; final 64-worker budget yielded no certificate | D: select

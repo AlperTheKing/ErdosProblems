@@ -1,0 +1,1009 @@
+{
+  "lemma": "exists v: G-v connected cyclic and phi(G-v)>=phi(G)",
+  "phi": "girth + maximum distance to center set",
+  "seed": 14420260718,
+  "requested_random_trials": 30,
+  "counts": {
+    "deterministic": 4590,
+    "random": 30
+  },
+  "order_counts": {
+    "14": 73,
+    "15": 104,
+    "16": 135,
+    "17": 168,
+    "18": 202,
+    "19": 240,
+    "20": 270,
+    "21": 298,
+    "22": 316,
+    "23": 334,
+    "24": 340,
+    "25": 332,
+    "26": 317,
+    "27": 293,
+    "28": 257,
+    "29": 225,
+    "30": 189,
+    "31": 155,
+    "32": 119,
+    "33": 86,
+    "34": 63,
+    "35": 44,
+    "36": 27,
+    "37": 15,
+    "38": 8,
+    "39": 7,
+    "40": 3
+  },
+  "first_witness_slack_counts": {
+    "0": 3531,
+    "1": 350,
+    "2": 207,
+    "3": 180,
+    "4": 104,
+    "5": 101,
+    "6": 49,
+    "7": 44,
+    "8": 18,
+    "9": 21,
+    "10": 14,
+    "12": 1
+  },
+  "tight_examples": [
+    {
+      "name": "theta(2,3,3)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "N[UAK?@?G?_@?@??_?G",
+      "n": 15,
+      "girth": 5,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 4,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 5,
+        "radius_h": 5,
+        "center_h": [
+          9
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,3)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "M[UAK?@?I??@?@??_",
+      "n": 14,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 9,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          1
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,4)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "O[U?IE??G?_@?@??_?G?@",
+      "n": 16,
+      "girth": 5,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 15,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 5,
+        "radius_h": 5,
+        "center_h": [
+          9
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,4)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "N[U?IE??G?g??@??_?G",
+      "n": 15,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 10,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          1
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,5)+tail(5)",
+      "corpus": "deterministic",
+      "graph6": "M[U?GD@_??_@?@??_",
+      "n": 14,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 7,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          9
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,5)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "P[U?GD@_??_@?@??_?G?@??C",
+      "n": 17,
+      "girth": 5,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 16,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 5,
+        "radius_h": 5,
+        "center_h": [
+          10
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,5)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "O[U?GD@_??_@O???_?G?@",
+      "n": 16,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 11,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          1
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,6)+tail(5)",
+      "corpus": "deterministic",
+      "graph6": "N[U?GC@OK??@?@??_?G",
+      "n": 15,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 14,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          0
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,6)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "Q[U?GC@OK??@?@??_?G?@??C??G",
+      "n": 18,
+      "girth": 5,
+      "eta": 6,
+      "rank": 2,
+      "witness": {
+        "v": 7,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 6,
+        "radius_h": 6,
+        "center_h": [
+          11
+        ],
+        "phi_h": 11,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,6)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "P[U?GC@OK??@?@O???G?@??C",
+      "n": 17,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 12,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          1
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,7)+tail(5)",
+      "corpus": "deterministic",
+      "graph6": "O[U?GC@?I?o??@??_?G?@",
+      "n": 16,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 15,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          0
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,7)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "R[U?GC@?I?o??@??_?G?@??C??G??G",
+      "n": 19,
+      "girth": 5,
+      "eta": 6,
+      "rank": 2,
+      "witness": {
+        "v": 8,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 6,
+        "radius_h": 6,
+        "center_h": [
+          12
+        ],
+        "phi_h": 11,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,7)+2tails(1,2)",
+      "corpus": "deterministic",
+      "graph6": "M[U?GC@?I?o?O???_",
+      "n": 14,
+      "girth": 5,
+      "eta": 3,
+      "rank": 2,
+      "witness": {
+        "v": 7,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 3,
+        "radius_h": 4,
+        "center_h": [
+          1,
+          2,
+          4
+        ],
+        "phi_h": 8,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,7)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "Q[U?GC@?I?o??@??g???@??C??G",
+      "n": 18,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 13,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          1
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,8)+tail(5)",
+      "corpus": "deterministic",
+      "graph6": "P[U?GC@?G?g@_???_?G?@??C",
+      "n": 17,
+      "girth": 5,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 8,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 5,
+        "radius_h": 5,
+        "center_h": [
+          0
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,8)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "S[U?GC@?G?g@_???_?G?@??C??G??G??C",
+      "n": 20,
+      "girth": 5,
+      "eta": 6,
+      "rank": 2,
+      "witness": {
+        "v": 19,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 6,
+        "radius_h": 6,
+        "center_h": [
+          12
+        ],
+        "phi_h": 11,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,8)+2tails(1,2)",
+      "corpus": "deterministic",
+      "graph6": "N[U?GC@?G?g@_?O???G",
+      "n": 15,
+      "girth": 5,
+      "eta": 2,
+      "rank": 2,
+      "witness": {
+        "v": 12,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 2,
+        "radius_h": 5,
+        "center_h": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          9,
+          10,
+          11
+        ],
+        "phi_h": 7,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,8)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "R[U?GC@?G?g@_???_?I????C??G??G",
+      "n": 19,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 14,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 5,
+        "center_h": [
+          1,
+          2,
+          4,
+          11
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,9)+tail(2)",
+      "corpus": "deterministic",
+      "graph6": "N[U?GC@?G?_@O@_???G",
+      "n": 15,
+      "girth": 5,
+      "eta": 2,
+      "rank": 2,
+      "witness": {
+        "v": 14,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 2,
+        "radius_h": 5,
+        "center_h": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          12
+        ],
+        "phi_h": 7,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,9)+tail(5)",
+      "corpus": "deterministic",
+      "graph6": "Q[U?GC@?G?_@O@_???G?@??C??G",
+      "n": 18,
+      "girth": 5,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 9,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 5,
+        "radius_h": 5,
+        "center_h": [
+          0
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,9)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "T[U?GC@?G?_@O@_???G?@??C??G??G??C??@",
+      "n": 21,
+      "girth": 5,
+      "eta": 6,
+      "rank": 2,
+      "witness": {
+        "v": 20,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 6,
+        "radius_h": 6,
+        "center_h": [
+          13
+        ],
+        "phi_h": 11,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,9)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "S[U?GC@?G?_@O@_???G?@O????G??G??C",
+      "n": 20,
+      "girth": 5,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 7,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 5,
+        "radius_h": 5,
+        "center_h": [
+          1
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,10)+tail(5)",
+      "corpus": "deterministic",
+      "graph6": "R[U?GC@?G?_@?@O?o???@??C??G??G",
+      "n": 19,
+      "girth": 5,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 10,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 5,
+        "radius_h": 5,
+        "center_h": [
+          0
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,10)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "U[U?GC@?G?_@?@O?o???@??C??G??G??C??@???G",
+      "n": 22,
+      "girth": 5,
+      "eta": 7,
+      "rank": 2,
+      "witness": {
+        "v": 9,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 7,
+        "radius_h": 7,
+        "center_h": [
+          14
+        ],
+        "phi_h": 12,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,10)+2tails(1,2)",
+      "corpus": "deterministic",
+      "graph6": "P[U?GC@?G?_@?@O?o?A????C",
+      "n": 17,
+      "girth": 5,
+      "eta": 2,
+      "rank": 2,
+      "witness": {
+        "v": 14,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 2,
+        "radius_h": 6,
+        "center_h": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          10,
+          11,
+          12,
+          13
+        ],
+        "phi_h": 7,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,10)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "T[U?GC@?G?_@?@O?o???@??D?????G??C??@",
+      "n": 21,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 20,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 6,
+        "center_h": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          13
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,11)+tail(2)",
+      "corpus": "deterministic",
+      "graph6": "P[U?GC@?G?_@?@??g?K????C",
+      "n": 17,
+      "girth": 5,
+      "eta": 2,
+      "rank": 2,
+      "witness": {
+        "v": 16,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 2,
+        "radius_h": 6,
+        "center_h": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          8,
+          12,
+          13,
+          14
+        ],
+        "phi_h": 7,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,11)+tail(5)",
+      "corpus": "deterministic",
+      "graph6": "S[U?GC@?G?_@?@??g?K????C??G??G??C",
+      "n": 20,
+      "girth": 5,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 10,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 5,
+        "radius_h": 6,
+        "center_h": [
+          0,
+          2,
+          3
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,11)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "V[U?GC@?G?_@?@??g?K????C??G??G??C??@???G???_",
+      "n": 23,
+      "girth": 5,
+      "eta": 7,
+      "rank": 2,
+      "witness": {
+        "v": 10,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 7,
+        "radius_h": 7,
+        "center_h": [
+          15
+        ],
+        "phi_h": 12,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,11)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "U[U?GC@?G?_@?@??g?K????C??I?????C??@???G",
+      "n": 22,
+      "girth": 5,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 9,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 5,
+        "eta_h": 5,
+        "radius_h": 6,
+        "center_h": [
+          1,
+          2,
+          4
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,12)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "W[U?GC@?G?_@?@??_?I?@_????G??G??C??@???G???_??@",
+      "n": 24,
+      "girth": 5,
+      "eta": 7,
+      "rank": 2,
+      "witness": {
+        "v": 23,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 7,
+        "radius_h": 7,
+        "center_h": [
+          0
+        ],
+        "phi_h": 12,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,12)+2tails(1,2)",
+      "corpus": "deterministic",
+      "graph6": "R[U?GC@?G?_@?@??_?I?@_?@?????G",
+      "n": 19,
+      "girth": 5,
+      "eta": 2,
+      "rank": 2,
+      "witness": {
+        "v": 16,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 2,
+        "radius_h": 7,
+        "center_h": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "phi_h": 7,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,3,12)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "V[U?GC@?G?_@?@??_?I?@_????G??I?????@???G???_",
+      "n": 23,
+      "girth": 5,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 22,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 5,
+        "eta_h": 4,
+        "radius_h": 7,
+        "center_h": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          14,
+          15
+        ],
+        "phi_h": 9,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,4,4)+tail(5)",
+      "corpus": "deterministic",
+      "graph6": "M[DK?D@_??_@?@??_",
+      "n": 14,
+      "girth": 6,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 5,
+        "degree": 2,
+        "rank_h": 1,
+        "girth_h": 6,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          9
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,4,4)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "P[DK?D@_??_@?@??_?G?@??C",
+      "n": 17,
+      "girth": 6,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 16,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 6,
+        "eta_h": 5,
+        "radius_h": 5,
+        "center_h": [
+          10
+        ],
+        "phi_h": 11,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,4,4)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "O[DK?D@_??_@O???_?G?@",
+      "n": 16,
+      "girth": 6,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 11,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 6,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          1
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,4,5)+tail(8)",
+      "corpus": "deterministic",
+      "graph6": "Q[DK?C@OK??@?@??_?G?@??C??G",
+      "n": 18,
+      "girth": 6,
+      "eta": 5,
+      "rank": 2,
+      "witness": {
+        "v": 17,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 6,
+        "eta_h": 5,
+        "radius_h": 5,
+        "center_h": [
+          11
+        ],
+        "phi_h": 11,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,4,5)+2tails(3,4)",
+      "corpus": "deterministic",
+      "graph6": "P[DK?C@OK??@?@O???G?@??C",
+      "n": 17,
+      "girth": 6,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 12,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 6,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          1
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,4,6)+tail(5)",
+      "corpus": "deterministic",
+      "graph6": "O[DK?C@?I?o??@??_?G?@",
+      "n": 16,
+      "girth": 6,
+      "eta": 4,
+      "rank": 2,
+      "witness": {
+        "v": 15,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 6,
+        "eta_h": 4,
+        "radius_h": 4,
+        "center_h": [
+          0
+        ],
+        "phi_h": 10,
+        "slack": 0
+      }
+    },
+    {
+      "name": "theta(2,4,6)+2tails(1,2)",
+      "corpus": "deterministic",
+      "graph6": "M[DK?C@?I?o?O???_",
+      "n": 14,
+      "girth": 6,
+      "eta": 2,
+      "rank": 2,
+      "witness": {
+        "v": 13,
+        "degree": 1,
+        "rank_h": 2,
+        "girth_h": 6,
+        "eta_h": 2,
+        "radius_h": 4,
+        "center_h": [
+          0,
+          1,
+          2,
+          6,
+          10
+        ],
+        "phi_h": 8,
+        "slack": 0
+      }
+    }
+  ],
+  "counterexample": null
+}

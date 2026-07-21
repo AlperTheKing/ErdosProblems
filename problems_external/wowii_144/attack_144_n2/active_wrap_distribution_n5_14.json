@@ -1,0 +1,115 @@
+{
+  "active_qpos": 25120,
+  "active_total": 40390,
+  "by_delta": {
+    "1": 18010,
+    "2": 7108,
+    "3": 2
+  },
+  "by_g": {
+    "5": 11876,
+    "6": 12290,
+    "7": 920,
+    "8": 32,
+    "9": 2
+  },
+  "by_g_h_delta": {
+    "5,1,1": 3464,
+    "5,1,2": 2770,
+    "5,2,1": 5642,
+    "6,1,1": 1160,
+    "6,1,2": 3750,
+    "6,2,1": 7356,
+    "6,2,2": 6,
+    "6,3,1": 18,
+    "7,1,1": 4,
+    "7,1,2": 580,
+    "7,1,3": 2,
+    "7,2,1": 328,
+    "7,3,1": 6,
+    "8,1,1": 2,
+    "8,2,1": 26,
+    "8,2,2": 2,
+    "8,3,1": 2,
+    "9,2,1": 2
+  },
+  "by_h": {
+    "1": 11732,
+    "2": 13362,
+    "3": 26
+  },
+  "by_n": {
+    "10": 2,
+    "11": 82,
+    "12": 542,
+    "13": 3206,
+    "14": 21288
+  },
+  "elapsed_sec": 84.46,
+  "per_n": {
+    "10": {
+      "generated": 464,
+      "girth_lt_5": 106,
+      "nonresidual": 327,
+      "residual": 31
+    },
+    "11": {
+      "generated": 1793,
+      "girth_lt_5": 235,
+      "nonresidual": 1452,
+      "residual": 106
+    },
+    "12": {
+      "generated": 8167,
+      "girth_lt_5": 551,
+      "nonresidual": 7240,
+      "residual": 376
+    },
+    "13": {
+      "generated": 43645,
+      "girth_lt_5": 1301,
+      "nonresidual": 40844,
+      "residual": 1500
+    },
+    "14": {
+      "generated": 275480,
+      "girth_lt_5": 3159,
+      "nonresidual": 265659,
+      "residual": 6662
+    },
+    "5": {
+      "generated": 4,
+      "girth_lt_5": 3,
+      "nonresidual": 1,
+      "residual": 0
+    },
+    "6": {
+      "generated": 8,
+      "girth_lt_5": 6,
+      "nonresidual": 2,
+      "residual": 0
+    },
+    "7": {
+      "generated": 18,
+      "girth_lt_5": 11,
+      "nonresidual": 6,
+      "residual": 1
+    },
+    "8": {
+      "generated": 47,
+      "girth_lt_5": 23,
+      "nonresidual": 22,
+      "residual": 2
+    },
+    "9": {
+      "generated": 137,
+      "girth_lt_5": 47,
+      "nonresidual": 79,
+      "residual": 11
+    }
+  },
+  "qpos_multi": 25120,
+  "qpos_multi_wrapped": 0,
+  "test": "W144 active qpos multiattachment wrap distribution exact n=5..14",
+  "wrapped_examples": []
+}

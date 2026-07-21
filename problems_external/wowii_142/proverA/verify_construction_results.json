@@ -1,0 +1,19 @@
+{
+  "tags": {
+    "g3": 3647,
+    "T1": 2907,
+    "T2": 194,
+    "m1": 13,
+    "g4_direct": 133,
+    "good:three_tails": 3364,
+    "m2_ear": 3,
+    "good:merge_xw": 66,
+    "good:merge_xb,three_tails": 45,
+    "good:merge_xw,three_tails": 60,
+    "good:merge_bw": 23,
+    "good:merge_xb": 7,
+    "good:merge_xb,merge_xw": 13,
+    "good:merge_xb,merge_xw,three_tails": 6
+  },
+  "failures": []
+}

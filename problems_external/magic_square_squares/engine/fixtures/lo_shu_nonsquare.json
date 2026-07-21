@@ -1,0 +1,12 @@
+{
+  "name": "Lo Shu ordinary magic square",
+  "expected": {
+    "exit_code": 1,
+    "reason": "The entries are positive and distinct and all eight sums are 15, but several entries are not squares."
+  },
+  "matrix": [
+    [8, 1, 6],
+    [3, 5, 7],
+    [4, 9, 2]
+  ]
+}

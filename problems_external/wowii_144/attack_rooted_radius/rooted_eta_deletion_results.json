@@ -1,0 +1,296 @@
+{
+  "checked_graphs": 1335,
+  "checked_roots": 5143,
+  "first_failed_fixed_root": {
+    "graph6": "G?`e_w",
+    "n": 8,
+    "m": 9,
+    "rank": 2,
+    "girth": 5,
+    "radius": 2,
+    "eta": 2,
+    "center": [
+      7
+    ],
+    "realizers": [
+      0,
+      1,
+      2,
+      6
+    ],
+    "failed_root": 1,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "root_rows": [
+      {
+        "x": 0,
+        "deletions": [
+          {
+            "v": 1,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              7
+            ],
+            "rooted_depth": 2,
+            "good": true
+          },
+          {
+            "v": 2,
+            "girth": 5,
+            "radius": 2,
+            "eta": 1,
+            "center": [
+              3,
+              6,
+              7
+            ],
+            "rooted_depth": 1,
+            "good": false
+          },
+          {
+            "v": 3,
+            "girth": 6,
+            "radius": 3,
+            "eta": 1,
+            "center": [
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            "rooted_depth": 1,
+            "good": false
+          },
+          {
+            "v": 4,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              1
+            ],
+            "rooted_depth": 2,
+            "good": true
+          }
+        ]
+      },
+      {
+        "x": 1,
+        "deletions": [
+          {
+            "v": 0,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              5,
+              7
+            ],
+            "rooted_depth": 1,
+            "good": false
+          },
+          {
+            "v": 2,
+            "girth": 5,
+            "radius": 2,
+            "eta": 1,
+            "center": [
+              3,
+              6,
+              7
+            ],
+            "rooted_depth": 1,
+            "good": false
+          },
+          {
+            "v": 3,
+            "girth": 6,
+            "radius": 3,
+            "eta": 1,
+            "center": [
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            "rooted_depth": 0,
+            "good": false
+          },
+          {
+            "v": 4,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              1
+            ],
+            "rooted_depth": 0,
+            "good": false
+          }
+        ]
+      },
+      {
+        "x": 2,
+        "deletions": [
+          {
+            "v": 0,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              5,
+              7
+            ],
+            "rooted_depth": 1,
+            "good": false
+          },
+          {
+            "v": 1,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              7
+            ],
+            "rooted_depth": 2,
+            "good": true
+          },
+          {
+            "v": 3,
+            "girth": 6,
+            "radius": 3,
+            "eta": 1,
+            "center": [
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            "rooted_depth": 1,
+            "good": false
+          },
+          {
+            "v": 4,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              1
+            ],
+            "rooted_depth": 2,
+            "good": true
+          }
+        ]
+      },
+      {
+        "x": 6,
+        "deletions": [
+          {
+            "v": 0,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              5,
+              7
+            ],
+            "rooted_depth": 2,
+            "good": true
+          },
+          {
+            "v": 1,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              7
+            ],
+            "rooted_depth": 2,
+            "good": true
+          },
+          {
+            "v": 2,
+            "girth": 5,
+            "radius": 2,
+            "eta": 1,
+            "center": [
+              3,
+              6,
+              7
+            ],
+            "rooted_depth": 0,
+            "good": false
+          },
+          {
+            "v": 3,
+            "girth": 6,
+            "radius": 3,
+            "eta": 1,
+            "center": [
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            "rooted_depth": 0,
+            "good": false
+          },
+          {
+            "v": 4,
+            "girth": 5,
+            "radius": 2,
+            "eta": 2,
+            "center": [
+              1
+            ],
+            "rooted_depth": 1,
+            "good": false
+          }
+        ]
+      }
+    ]
+  },
+  "first_graph_without_any_good_root": null
+}

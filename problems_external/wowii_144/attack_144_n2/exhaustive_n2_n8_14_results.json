@@ -1,0 +1,57 @@
+{
+  "elapsed_sec": 104.19,
+  "failures": [],
+  "generator": "nauty geng 2.8.9 -c -t -f",
+  "per_n": {
+    "10": {
+      "connected_triangle_square_free": 464,
+      "failures": 0,
+      "girth_lt_5": 106,
+      "nonresidual": 327,
+      "residual": 31
+    },
+    "11": {
+      "connected_triangle_square_free": 1793,
+      "failures": 0,
+      "girth_lt_5": 235,
+      "nonresidual": 1452,
+      "residual": 106
+    },
+    "12": {
+      "connected_triangle_square_free": 8167,
+      "failures": 0,
+      "girth_lt_5": 551,
+      "nonresidual": 7240,
+      "residual": 376
+    },
+    "13": {
+      "connected_triangle_square_free": 43645,
+      "failures": 0,
+      "girth_lt_5": 1301,
+      "nonresidual": 40844,
+      "residual": 1500
+    },
+    "14": {
+      "connected_triangle_square_free": 275480,
+      "failures": 0,
+      "girth_lt_5": 3159,
+      "nonresidual": 265659,
+      "residual": 6662
+    },
+    "8": {
+      "connected_triangle_square_free": 47,
+      "failures": 0,
+      "girth_lt_5": 23,
+      "nonresidual": 22,
+      "residual": 2
+    },
+    "9": {
+      "connected_triangle_square_free": 137,
+      "failures": 0,
+      "girth_lt_5": 47,
+      "nonresidual": 79,
+      "residual": 11
+    }
+  },
+  "test": "WOWII144_Candidate_N2_exhaustive_n8_14"
+}

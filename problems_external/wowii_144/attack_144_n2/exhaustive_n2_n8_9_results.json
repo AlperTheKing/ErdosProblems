@@ -1,0 +1,22 @@
+{
+  "elapsed_sec": 14.73,
+  "failures": [],
+  "generator": "nauty geng 2.8.9 -c",
+  "per_n": {
+    "8": {
+      "connected": 11117,
+      "failures": 0,
+      "girth_lt_5": 11093,
+      "nonresidual": 22,
+      "residual": 2
+    },
+    "9": {
+      "connected": 261080,
+      "failures": 0,
+      "girth_lt_5": 260990,
+      "nonresidual": 79,
+      "residual": 11
+    }
+  },
+  "test": "WOWII144_Candidate_N2_exhaustive_n8_9"
+}

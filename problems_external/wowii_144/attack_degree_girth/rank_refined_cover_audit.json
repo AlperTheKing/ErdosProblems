@@ -1,0 +1,8 @@
+{
+  "max_n": 13,
+  "residual_graphs": 104,
+  "cases": 569,
+  "direct_cases": 73,
+  "minimum_slack": 0,
+  "failures": []
+}

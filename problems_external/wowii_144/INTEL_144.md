@@ -71,6 +71,16 @@ Numeric status (exact arithmetic, seed 20260718):
 - At g=3: if a tail's last vertex q is adjacent to ≥ 2 triangle vertices, {q} ∪ (2 adjacent K-vertices)
   is ANOTHER shortest triangle — switching K is the standard repair at g=3.
 
+## NEW (2026-07-18 late): σ*-distillation FALSIFIED — multi-tail-per-component is ESSENTIAL
+
+The "one geodesic stem per branch component" distillation σ* (sum of branch heights, drop the smallest
+when k ≥ g) is FALSE as an upper bound for e: graph6 `J?LcCHOC`C?` (n=11, g=6, D=4, r=3, e=3) has
+σ* = 2 on every shortest cycle but M(K) = 4 on ALL THREE shortest cycles (E_exists holds with slack 1;
+verified exactly 2026-07-18). Consequence for any general proof: the witness forest may need TWO OR MORE
+tails drawn from the SAME component of G − K (attached at different K-positions); a per-component
+"one stem" accounting CANNOT work. Any referee should test candidate proofs against this graph.
+Also: class-P proof steps re-verified this session: 3342 class-P graphs with e ≥ 1, 0 failures.
+
 ## Sharp/tight instances the proof must respect (slack 0 in E_exists)
 
 - C_g + path of length L ≤ ⌊g/2⌋ attached: e = L, M = L.

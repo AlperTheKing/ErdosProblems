@@ -1,0 +1,233 @@
+{
+  "statement": "some degree-two vertex has eta(G-v)>=eta(G) in every biconnected beta>=3 graph",
+  "max_n": 13,
+  "checked_before_failure": 40,
+  "applicable_before_failure": 40,
+  "first_failure": {
+    "graph6": "I?`acgwg_",
+    "n": 10,
+    "m": 14,
+    "beta": 5,
+    "girth": 5,
+    "radius": 2,
+    "eta": 2,
+    "center": [
+      2,
+      3,
+      7,
+      9
+    ],
+    "degree_sequence": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        9
+      ]
+    ],
+    "degree_two_deletions": [
+      {
+        "v": 1,
+        "degree": 2,
+        "radius": 2,
+        "eta": 1,
+        "delta_eta": -1,
+        "center": [
+          0,
+          2,
+          3,
+          7,
+          8,
+          9
+        ],
+        "girth": 5,
+        "beta": 4
+      },
+      {
+        "v": 4,
+        "degree": 2,
+        "radius": 2,
+        "eta": 1,
+        "delta_eta": -1,
+        "center": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "girth": 5,
+        "beta": 4
+      }
+    ],
+    "eta_good_deletions": [
+      {
+        "v": 0,
+        "degree": 3,
+        "radius": 2,
+        "eta": 2,
+        "delta_eta": 0,
+        "center": [
+          2,
+          3
+        ],
+        "girth": 5,
+        "beta": 3
+      },
+      {
+        "v": 2,
+        "degree": 3,
+        "radius": 2,
+        "eta": 2,
+        "delta_eta": 0,
+        "center": [
+          3,
+          7
+        ],
+        "girth": 5,
+        "beta": 3
+      },
+      {
+        "v": 3,
+        "degree": 3,
+        "radius": 2,
+        "eta": 2,
+        "delta_eta": 0,
+        "center": [
+          2,
+          9
+        ],
+        "girth": 5,
+        "beta": 3
+      },
+      {
+        "v": 5,
+        "degree": 3,
+        "radius": 2,
+        "eta": 2,
+        "delta_eta": 0,
+        "center": [
+          3,
+          9
+        ],
+        "girth": 5,
+        "beta": 3
+      },
+      {
+        "v": 6,
+        "degree": 3,
+        "radius": 2,
+        "eta": 2,
+        "delta_eta": 0,
+        "center": [
+          2,
+          7
+        ],
+        "girth": 5,
+        "beta": 3
+      },
+      {
+        "v": 7,
+        "degree": 3,
+        "radius": 2,
+        "eta": 2,
+        "delta_eta": 0,
+        "center": [
+          2,
+          9
+        ],
+        "girth": 5,
+        "beta": 3
+      },
+      {
+        "v": 8,
+        "degree": 3,
+        "radius": 2,
+        "eta": 2,
+        "delta_eta": 0,
+        "center": [
+          7,
+          9
+        ],
+        "girth": 5,
+        "beta": 3
+      },
+      {
+        "v": 9,
+        "degree": 3,
+        "radius": 2,
+        "eta": 2,
+        "delta_eta": 0,
+        "center": [
+          3,
+          7
+        ],
+        "girth": 5,
+        "beta": 3
+      }
+    ]
+  }
+}

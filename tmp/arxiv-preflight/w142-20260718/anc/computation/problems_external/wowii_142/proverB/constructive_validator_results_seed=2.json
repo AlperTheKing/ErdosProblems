@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "P0": 2938,
+    "P1t1": 1103,
+    "P5": 410,
+    "P3a": 121,
+    "P6b": 26,
+    "P4_three_tails": 3547,
+    "P6a": 402,
+    "P4_splice_B": 814,
+    "P1": 179,
+    "P3b": 12,
+    "P4_splice_A": 3
+  },
+  "n_failures": 0,
+  "randomized": true,
+  "failures": []
+}

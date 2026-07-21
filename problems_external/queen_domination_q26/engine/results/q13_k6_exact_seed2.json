@@ -1,0 +1,43 @@
+{
+  "configuration": {
+    "hint_coordinate_count": 0,
+    "hint_is_nonbinding": true,
+    "hint_json": null,
+    "random_seed": 2,
+    "timeout_seconds": 90.0,
+    "workers": 64
+  },
+  "finished_utc": "2026-07-18T19:32:09.443+00:00",
+  "instance": {
+    "board_variables": 169,
+    "cardinality": "exact",
+    "domination_constraints": 169,
+    "k": 6,
+    "n": 13,
+    "structural_restrictions": []
+  },
+  "schema": "queen-domination-cpsat-result-v1",
+  "solution": {
+    "cardinality": null,
+    "coordinates": [],
+    "local_verification": {
+      "cardinality_ok": null,
+      "checked": false,
+      "dominating": null,
+      "uncovered": null
+    }
+  },
+  "solver": {
+    "branches": 15625113,
+    "conflicts": 4544963,
+    "name": "OR-Tools CP-SAT",
+    "ortools_version": "9.14.6206",
+    "python_version": "3.12.4",
+    "response_stats": "CpSolverResponse summary:\nstatus: UNKNOWN\nobjective: 0\nbest_bound: 0\nintegers: 169\nbooleans: 169\nconflicts: 4544963\nbranches: 15625113\npropagations: 385962851\ninteger_propagations: 17981563\nrestarts: 283273\nlp_iterations: 0\nwalltime: 91.2206\nusertime: 91.2206\ndeterministic_time: 12080.9\ngap_integral: 0\n",
+    "status": "UNKNOWN",
+    "status_code": 0,
+    "user_time_seconds": 91.2206202,
+    "wall_time_seconds": 91.2206199
+  },
+  "started_utc": "2026-07-18T19:30:38.187+00:00"
+}

@@ -1,0 +1,178 @@
+{
+  "scope": "biconnected multicyclic girth>=5; eta=Delta and diameter-floor(girth/2)<eta",
+  "max_n": 13,
+  "total_base_graphs": 5644,
+  "residual_graphs": 104,
+  "per_order": {
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 3,
+    "12": 13,
+    "13": 88
+  },
+  "failures": 0,
+  "minimum_slack": 1,
+  "first_residual": {
+    "graph6": "J?AA@agU?M?",
+    "n": 11,
+    "m": 13,
+    "girth": 6,
+    "diameter": 4,
+    "maximum_degree": 3,
+    "eta": 3,
+    "center": [
+      7
+    ],
+    "tree": 9,
+    "slack": 1,
+    "witness": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9
+    ],
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        7,
+        10
+      ]
+    ]
+  },
+  "first_minimum": {
+    "graph6": "J?AA@agU?M?",
+    "n": 11,
+    "m": 13,
+    "girth": 6,
+    "diameter": 4,
+    "maximum_degree": 3,
+    "eta": 3,
+    "center": [
+      7
+    ],
+    "tree": 9,
+    "slack": 1,
+    "witness": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9
+    ],
+    "edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        7,
+        10
+      ]
+    ]
+  },
+  "first_failure": null
+}

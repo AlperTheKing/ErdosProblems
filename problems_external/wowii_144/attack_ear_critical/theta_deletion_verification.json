@@ -1,0 +1,9 @@
+{
+  "statement": "Theta(a,b,c), a<=b<=c, a+b>=5: delete first internal b-path vertex without decreasing eta",
+  "max_length": 30,
+  "checked": 4844,
+  "minimum_delta_eta": 0,
+  "minimum_theta_bound_slack": 0,
+  "tight": 110,
+  "first_failure": null
+}
