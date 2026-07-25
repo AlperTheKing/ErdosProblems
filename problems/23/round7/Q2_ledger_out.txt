@@ -1,0 +1,272 @@
+
+==============================================================================
+1.  C5[n]  ledger, n = 1..6   (target: 25|M| = N^2 exactly)
+==============================================================================
+
+ C5[1]: bip = 1   (N^2/25 = 25/25 = 1)   #part-cuts attaining it = 10
+  cut 00101: N=5 |E|=5 |M|=1 |B|=4  25|M|=25 N^2=25 25|M|-N^2=0
+    part0 size=   1 d=   2 sigma=    0 d_M=1 mu=-15/2
+    part1 size=   1 d=   2 sigma=    0 d_M=1 mu=-15/2
+    part2 size=   1 d=   2 sigma=    2 d_M=0 mu=5
+    part3 size=   1 d=   2 sigma=    2 d_M=0 mu=5
+    part4 size=   1 d=   2 sigma=    2 d_M=0 mu=5
+    maximum-cut certificate (all 2^5 corners): PASS
+    switch-star  sigma(v) >= sum_T (2-sigma):  p0: 0 >= 0 slack 0 | p1: 0 >= 0 slack 0 | p2: 2 >= 2 slack 0 | p3: 2 >= 0 slack 2 | p4: 2 >= 2 slack 0
+    family (*) S=N(v)uT   max Delta (must be <=0, =0 means TIGHT):
+       v in part0: max Delta = -2  at s=(0, 1, 0, 0, 1)
+       v in part1: max Delta = -2  at s=(1, 0, 1, 0, 0)
+       v in part2: max Delta = 0  at s=(0, 1, 1, 1, 0)
+       v in part3: max Delta = 0  at s=(0, 1, 1, 1, 1)
+       v in part4: max Delta = 0  at s=(1, 0, 0, 1, 1)
+
+ C5[2]: bip = 4   (N^2/25 = 100/25 = 4)   #part-cuts attaining it = 10
+  cut 00101: N=10 |E|=20 |M|=4 |B|=16  25|M|=100 N^2=100 25|M|-N^2=0
+    part0 size=   2 d=   4 sigma=    0 d_M=2 mu=-15
+    part1 size=   2 d=   4 sigma=    0 d_M=2 mu=-15
+    part2 size=   2 d=   4 sigma=    4 d_M=0 mu=10
+    part3 size=   2 d=   4 sigma=    4 d_M=0 mu=10
+    part4 size=   2 d=   4 sigma=    4 d_M=0 mu=10
+    maximum-cut certificate (all 2^5 corners): PASS
+    switch-star  sigma(v) >= sum_T (2-sigma):  p0: 0 >= 0 slack 0 | p1: 0 >= 0 slack 0 | p2: 4 >= 4 slack 0 | p3: 4 >= 0 slack 4 | p4: 4 >= 4 slack 0
+    family (*) S=N(v)uT   max Delta (must be <=0, =0 means TIGHT):
+       v in part0: max Delta = -8  at s=(0, 2, 0, 0, 2)
+       v in part1: max Delta = -8  at s=(2, 0, 2, 0, 0)
+       v in part2: max Delta = 0  at s=(0, 2, 2, 2, 0)
+       v in part3: max Delta = 0  at s=(0, 2, 2, 2, 2)
+       v in part4: max Delta = 0  at s=(2, 0, 0, 2, 2)
+
+ C5[3]: bip = 9   (N^2/25 = 225/25 = 9)   #part-cuts attaining it = 10
+  cut 00101: N=15 |E|=45 |M|=9 |B|=36  25|M|=225 N^2=225 25|M|-N^2=0
+    part0 size=   3 d=   6 sigma=    0 d_M=3 mu=-45/2
+    part1 size=   3 d=   6 sigma=    0 d_M=3 mu=-45/2
+    part2 size=   3 d=   6 sigma=    6 d_M=0 mu=15
+    part3 size=   3 d=   6 sigma=    6 d_M=0 mu=15
+    part4 size=   3 d=   6 sigma=    6 d_M=0 mu=15
+    maximum-cut certificate (all 2^5 corners): PASS
+    switch-star  sigma(v) >= sum_T (2-sigma):  p0: 0 >= 0 slack 0 | p1: 0 >= 0 slack 0 | p2: 6 >= 6 slack 0 | p3: 6 >= 0 slack 6 | p4: 6 >= 6 slack 0
+    family (*) S=N(v)uT   max Delta (must be <=0, =0 means TIGHT):
+       v in part0: max Delta = -18  at s=(0, 3, 0, 0, 3)
+       v in part1: max Delta = -18  at s=(3, 0, 3, 0, 0)
+       v in part2: max Delta = 0  at s=(0, 3, 3, 3, 0)
+       v in part3: max Delta = 0  at s=(0, 3, 3, 3, 3)
+       v in part4: max Delta = 0  at s=(3, 0, 0, 3, 3)
+
+ C5[4]: bip = 16   (N^2/25 = 400/25 = 16)   #part-cuts attaining it = 10
+  cut 00101: N=20 |E|=80 |M|=16 |B|=64  25|M|=400 N^2=400 25|M|-N^2=0
+    part0 size=   4 d=   8 sigma=    0 d_M=4 mu=-30
+    part1 size=   4 d=   8 sigma=    0 d_M=4 mu=-30
+    part2 size=   4 d=   8 sigma=    8 d_M=0 mu=20
+    part3 size=   4 d=   8 sigma=    8 d_M=0 mu=20
+    part4 size=   4 d=   8 sigma=    8 d_M=0 mu=20
+    maximum-cut certificate (all 2^5 corners): PASS
+    switch-star  sigma(v) >= sum_T (2-sigma):  p0: 0 >= 0 slack 0 | p1: 0 >= 0 slack 0 | p2: 8 >= 8 slack 0 | p3: 8 >= 0 slack 8 | p4: 8 >= 8 slack 0
+    family (*) S=N(v)uT   max Delta (must be <=0, =0 means TIGHT):
+       v in part0: max Delta = -32  at s=(0, 4, 0, 0, 4)
+       v in part1: max Delta = -32  at s=(4, 0, 4, 0, 0)
+       v in part2: max Delta = 0  at s=(0, 4, 4, 4, 0)
+       v in part3: max Delta = 0  at s=(0, 4, 4, 4, 4)
+       v in part4: max Delta = 0  at s=(4, 0, 0, 4, 4)
+
+ C5[5]: bip = 25   (N^2/25 = 625/25 = 25)   #part-cuts attaining it = 10
+  cut 00101: N=25 |E|=125 |M|=25 |B|=100  25|M|=625 N^2=625 25|M|-N^2=0
+    part0 size=   5 d=  10 sigma=    0 d_M=5 mu=-75/2
+    part1 size=   5 d=  10 sigma=    0 d_M=5 mu=-75/2
+    part2 size=   5 d=  10 sigma=   10 d_M=0 mu=25
+    part3 size=   5 d=  10 sigma=   10 d_M=0 mu=25
+    part4 size=   5 d=  10 sigma=   10 d_M=0 mu=25
+    maximum-cut certificate (all 2^5 corners): PASS
+    switch-star  sigma(v) >= sum_T (2-sigma):  p0: 0 >= 0 slack 0 | p1: 0 >= 0 slack 0 | p2: 10 >= 10 slack 0 | p3: 10 >= 0 slack 10 | p4: 10 >= 10 slack 0
+    family (*) S=N(v)uT   max Delta (must be <=0, =0 means TIGHT):
+       v in part0: max Delta = -50  at s=(0, 5, 0, 0, 5)
+       v in part1: max Delta = -50  at s=(5, 0, 5, 0, 0)
+       v in part2: max Delta = 0  at s=(0, 5, 5, 5, 0)
+       v in part3: max Delta = 0  at s=(0, 5, 5, 5, 5)
+       v in part4: max Delta = 0  at s=(5, 0, 0, 5, 5)
+
+ C5[6]: bip = 36   (N^2/25 = 900/25 = 36)   #part-cuts attaining it = 10
+  cut 00101: N=30 |E|=180 |M|=36 |B|=144  25|M|=900 N^2=900 25|M|-N^2=0
+    part0 size=   6 d=  12 sigma=    0 d_M=6 mu=-45
+    part1 size=   6 d=  12 sigma=    0 d_M=6 mu=-45
+    part2 size=   6 d=  12 sigma=   12 d_M=0 mu=30
+    part3 size=   6 d=  12 sigma=   12 d_M=0 mu=30
+    part4 size=   6 d=  12 sigma=   12 d_M=0 mu=30
+    maximum-cut certificate (all 2^5 corners): PASS
+    switch-star  sigma(v) >= sum_T (2-sigma):  p0: 0 >= 0 slack 0 | p1: 0 >= 0 slack 0 | p2: 12 >= 12 slack 0 | p3: 12 >= 0 slack 12 | p4: 12 >= 12 slack 0
+    family (*) S=N(v)uT   max Delta (must be <=0, =0 means TIGHT):
+       v in part0: max Delta = -72  at s=(0, 6, 0, 0, 6)
+       v in part1: max Delta = -72  at s=(6, 0, 6, 0, 0)
+       v in part2: max Delta = 0  at s=(0, 6, 6, 6, 0)
+       v in part3: max Delta = 0  at s=(0, 6, 6, 6, 6)
+       v in part4: max Delta = 0  at s=(6, 0, 0, 6, 6)
+
+==============================================================================
+2.  W_b = P4[b+1,b,b,b+1]  ledger, b = 1..12
+==============================================================================
+
+ W_1: N=6 parts=[2, 1, 1, 2]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[1, 3, 3, 1] 25|M|-N^2=-36 [MAXIMUM]
+   cut 0110: |M|=1 sigma=[1, 1, 1, 1] 25|M|-N^2=-11 [local-only]
+
+ W_2: N=10 parts=[3, 2, 2, 3]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[2, 5, 5, 2] 25|M|-N^2=-100 [MAXIMUM]
+   cut 0110: |M|=4 sigma=[2, 1, 1, 2] 25|M|-N^2=0 [local-only]
+
+ W_3: N=14 parts=[4, 3, 3, 4]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[3, 7, 7, 3] 25|M|-N^2=-196 [MAXIMUM]
+   cut 0110: |M|=9 sigma=[3, 1, 1, 3] 25|M|-N^2=29 [local-only]
+    ->: N=14 |E|=33 |M|=9 |B|=24  25|M|=225 N^2=196 25|M|-N^2=29
+    part0 size=   4 d=   3 sigma=    3 d_M=0 mu=14
+    part1 size=   3 d=   7 sigma=    1 d_M=3 mu=-47/2
+    part2 size=   3 d=   7 sigma=    1 d_M=3 mu=-47/2
+    part3 size=   4 d=   3 sigma=    3 d_M=0 mu=14
+      switch-star slacks: p0: 3>=3 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 3>=3 slack 0
+      MIN IMPROVING SWITCH: |S|=5 s=(0, 0, 2, 3) Delta=1 ratio |S|/N = 5/14 = 0.3571
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 9 at s=(4, 3, 0, 0)
+         v in part1: max Delta = 0 at s=(4, 3, 3, 4)
+         v in part2: max Delta = 0 at s=(4, 3, 3, 4)
+         v in part3: max Delta = 9 at s=(0, 0, 3, 4)
+
+ W_4: N=18 parts=[5, 4, 4, 5]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[4, 9, 9, 4] 25|M|-N^2=-324 [MAXIMUM]
+   cut 0110: |M|=16 sigma=[4, 1, 1, 4] 25|M|-N^2=76 [local-only]
+    ->: N=18 |E|=56 |M|=16 |B|=40  25|M|=400 N^2=324 25|M|-N^2=76
+    part0 size=   5 d=   4 sigma=    4 d_M=0 mu=18
+    part1 size=   4 d=   9 sigma=    1 d_M=4 mu=-32
+    part2 size=   4 d=   9 sigma=    1 d_M=4 mu=-32
+    part3 size=   5 d=   4 sigma=    4 d_M=0 mu=18
+      switch-star slacks: p0: 4>=4 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 4>=4 slack 0
+      MIN IMPROVING SWITCH: |S|=5 s=(0, 0, 3, 2) Delta=1 ratio |S|/N = 5/18 = 0.2778
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 16 at s=(5, 4, 0, 0)
+         v in part1: max Delta = 0 at s=(5, 4, 4, 5)
+         v in part2: max Delta = 0 at s=(5, 4, 4, 5)
+         v in part3: max Delta = 16 at s=(0, 0, 4, 5)
+
+ W_5: N=22 parts=[6, 5, 5, 6]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[5, 11, 11, 5] 25|M|-N^2=-484 [MAXIMUM]
+   cut 0110: |M|=25 sigma=[5, 1, 1, 5] 25|M|-N^2=141 [local-only]
+    ->: N=22 |E|=85 |M|=25 |B|=60  25|M|=625 N^2=484 25|M|-N^2=141
+    part0 size=   6 d=   5 sigma=    5 d_M=0 mu=22
+    part1 size=   5 d=  11 sigma=    1 d_M=5 mu=-81/2
+    part2 size=   5 d=  11 sigma=    1 d_M=5 mu=-81/2
+    part3 size=   6 d=   5 sigma=    5 d_M=0 mu=22
+      switch-star slacks: p0: 5>=5 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 5>=5 slack 0
+      MIN IMPROVING SWITCH: |S|=6 s=(0, 0, 4, 2) Delta=2 ratio |S|/N = 3/11 = 0.2727
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 25 at s=(6, 5, 0, 0)
+         v in part1: max Delta = 0 at s=(6, 5, 5, 6)
+         v in part2: max Delta = 0 at s=(6, 5, 5, 6)
+         v in part3: max Delta = 25 at s=(0, 0, 5, 6)
+
+ W_6: N=26 parts=[7, 6, 6, 7]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[6, 13, 13, 6] 25|M|-N^2=-676 [MAXIMUM]
+   cut 0110: |M|=36 sigma=[6, 1, 1, 6] 25|M|-N^2=224 [local-only]
+    ->: N=26 |E|=120 |M|=36 |B|=84  25|M|=900 N^2=676 25|M|-N^2=224
+    part0 size=   7 d=   6 sigma=    6 d_M=0 mu=26
+    part1 size=   6 d=  13 sigma=    1 d_M=6 mu=-49
+    part2 size=   6 d=  13 sigma=    1 d_M=6 mu=-49
+    part3 size=   7 d=   6 sigma=    6 d_M=0 mu=26
+      switch-star slacks: p0: 6>=6 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 6>=6 slack 0
+      MIN IMPROVING SWITCH: |S|=7 s=(0, 0, 4, 3) Delta=2 ratio |S|/N = 7/26 = 0.2692
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 36 at s=(7, 6, 0, 0)
+         v in part1: max Delta = 0 at s=(7, 6, 6, 7)
+         v in part2: max Delta = 0 at s=(7, 6, 6, 7)
+         v in part3: max Delta = 36 at s=(0, 0, 6, 7)
+
+ W_7: N=30 parts=[8, 7, 7, 8]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[7, 15, 15, 7] 25|M|-N^2=-900 [MAXIMUM]
+   cut 0110: |M|=49 sigma=[7, 1, 1, 7] 25|M|-N^2=325 [local-only]
+    ->: N=30 |E|=161 |M|=49 |B|=112  25|M|=1225 N^2=900 25|M|-N^2=325
+    part0 size=   8 d=   7 sigma=    7 d_M=0 mu=30
+    part1 size=   7 d=  15 sigma=    1 d_M=7 mu=-115/2
+    part2 size=   7 d=  15 sigma=    1 d_M=7 mu=-115/2
+    part3 size=   8 d=   7 sigma=    7 d_M=0 mu=30
+      switch-star slacks: p0: 7>=7 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 7>=7 slack 0
+      MIN IMPROVING SWITCH: |S|=7 s=(0, 0, 5, 2) Delta=1 ratio |S|/N = 7/30 = 0.2333
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 49 at s=(8, 7, 0, 0)
+         v in part1: max Delta = 0 at s=(8, 7, 7, 8)
+         v in part2: max Delta = 0 at s=(8, 7, 7, 8)
+         v in part3: max Delta = 49 at s=(0, 0, 7, 8)
+
+ W_8: N=34 parts=[9, 8, 8, 9]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[8, 17, 17, 8] 25|M|-N^2=-1156 [MAXIMUM]
+   cut 0110: |M|=64 sigma=[8, 1, 1, 8] 25|M|-N^2=444 [local-only]
+    ->: N=34 |E|=208 |M|=64 |B|=144  25|M|=1600 N^2=1156 25|M|-N^2=444
+    part0 size=   9 d=   8 sigma=    8 d_M=0 mu=34
+    part1 size=   8 d=  17 sigma=    1 d_M=8 mu=-66
+    part2 size=   8 d=  17 sigma=    1 d_M=8 mu=-66
+    part3 size=   9 d=   8 sigma=    8 d_M=0 mu=34
+      switch-star slacks: p0: 8>=8 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 8>=8 slack 0
+      MIN IMPROVING SWITCH: |S|=8 s=(0, 0, 5, 3) Delta=1 ratio |S|/N = 4/17 = 0.2353
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 64 at s=(9, 8, 0, 0)
+         v in part1: max Delta = 0 at s=(9, 8, 8, 9)
+         v in part2: max Delta = 0 at s=(9, 8, 8, 9)
+         v in part3: max Delta = 64 at s=(0, 0, 8, 9)
+
+ W_9: N=38 parts=[10, 9, 9, 10]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[9, 19, 19, 9] 25|M|-N^2=-1444 [MAXIMUM]
+   cut 0110: |M|=81 sigma=[9, 1, 1, 9] 25|M|-N^2=581 [local-only]
+    ->: N=38 |E|=261 |M|=81 |B|=180  25|M|=2025 N^2=1444 25|M|-N^2=581
+    part0 size=  10 d=   9 sigma=    9 d_M=0 mu=38
+    part1 size=   9 d=  19 sigma=    1 d_M=9 mu=-149/2
+    part2 size=   9 d=  19 sigma=    1 d_M=9 mu=-149/2
+    part3 size=  10 d=   9 sigma=    9 d_M=0 mu=38
+      switch-star slacks: p0: 9>=9 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 9>=9 slack 0
+      MIN IMPROVING SWITCH: |S|=9 s=(0, 0, 6, 3) Delta=3 ratio |S|/N = 9/38 = 0.2368
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 81 at s=(10, 9, 0, 0)
+         v in part1: max Delta = 0 at s=(10, 9, 9, 10)
+         v in part2: max Delta = 0 at s=(10, 9, 9, 10)
+         v in part3: max Delta = 81 at s=(0, 0, 9, 10)
+
+ W_10: N=42 parts=[11, 10, 10, 11]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[10, 21, 21, 10] 25|M|-N^2=-1764 [MAXIMUM]
+   cut 0110: |M|=100 sigma=[10, 1, 1, 10] 25|M|-N^2=736 [local-only]
+    ->: N=42 |E|=320 |M|=100 |B|=220  25|M|=2500 N^2=1764 25|M|-N^2=736
+    part0 size=  11 d=  10 sigma=   10 d_M=0 mu=42
+    part1 size=  10 d=  21 sigma=    1 d_M=10 mu=-83
+    part2 size=  10 d=  21 sigma=    1 d_M=10 mu=-83
+    part3 size=  11 d=  10 sigma=   10 d_M=0 mu=42
+      switch-star slacks: p0: 10>=10 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 10>=10 slack 0
+      MIN IMPROVING SWITCH: |S|=9 s=(0, 0, 7, 2) Delta=1 ratio |S|/N = 3/14 = 0.2143
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 100 at s=(11, 10, 0, 0)
+         v in part1: max Delta = 0 at s=(11, 10, 10, 11)
+         v in part2: max Delta = 0 at s=(11, 10, 10, 11)
+         v in part3: max Delta = 100 at s=(0, 0, 10, 11)
+
+ W_11: N=46 parts=[12, 11, 11, 12]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[11, 23, 23, 11] 25|M|-N^2=-2116 [MAXIMUM]
+   cut 0110: |M|=121 sigma=[11, 1, 1, 11] 25|M|-N^2=909 [local-only]
+    ->: N=46 |E|=385 |M|=121 |B|=264  25|M|=3025 N^2=2116 25|M|-N^2=909
+    part0 size=  12 d=  11 sigma=   11 d_M=0 mu=46
+    part1 size=  11 d=  23 sigma=    1 d_M=11 mu=-183/2
+    part2 size=  11 d=  23 sigma=    1 d_M=11 mu=-183/2
+    part3 size=  12 d=  11 sigma=   11 d_M=0 mu=46
+      switch-star slacks: p0: 11>=11 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 11>=11 slack 0
+      MIN IMPROVING SWITCH: |S|=10 s=(0, 0, 7, 3) Delta=2 ratio |S|/N = 5/23 = 0.2174
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 121 at s=(12, 11, 0, 0)
+         v in part1: max Delta = 0 at s=(12, 11, 11, 12)
+         v in part2: max Delta = 0 at s=(12, 11, 11, 12)
+         v in part3: max Delta = 121 at s=(0, 0, 11, 12)
+
+ W_12: N=50 parts=[13, 12, 12, 13]  bip=0 (P4 is bipartite)
+   cut 0101: |M|=0 sigma=[12, 25, 25, 12] 25|M|-N^2=-2500 [MAXIMUM]
+   cut 0110: |M|=144 sigma=[12, 1, 1, 12] 25|M|-N^2=1100 [local-only]
+    ->: N=50 |E|=456 |M|=144 |B|=312  25|M|=3600 N^2=2500 25|M|-N^2=1100
+    part0 size=  13 d=  12 sigma=   12 d_M=0 mu=50
+    part1 size=  12 d=  25 sigma=    1 d_M=12 mu=-100
+    part2 size=  12 d=  25 sigma=    1 d_M=12 mu=-100
+    part3 size=  13 d=  12 sigma=   12 d_M=0 mu=50
+      switch-star slacks: p0: 12>=12 slack 0 | p1: 1>=0 slack 1 | p2: 1>=0 slack 1 | p3: 12>=12 slack 0
+      MIN IMPROVING SWITCH: |S|=11 s=(0, 0, 7, 4) Delta=1 ratio |S|/N = 11/50 = 0.2200
+      family (*) S=N(v)uT  max Delta (>0 means (*) REFUTES this cut):
+         v in part0: max Delta = 144 at s=(13, 12, 0, 0)
+         v in part1: max Delta = 0 at s=(13, 12, 12, 13)
+         v in part2: max Delta = 0 at s=(13, 12, 12, 13)
+         v in part3: max Delta = 144 at s=(0, 0, 12, 13)

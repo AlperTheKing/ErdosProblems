@@ -1,0 +1,2 @@
+bip histogram for tf10.g6: [(0, 5479), (1, 5270), (2, 1397), (3, 25), (4, 1)]
+graphs with 25*bip >= n^2: [('I?rFf_{N?', 10, 4)]
