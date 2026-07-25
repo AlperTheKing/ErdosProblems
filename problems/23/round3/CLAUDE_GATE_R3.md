@@ -545,3 +545,66 @@ a maximum cut of the same graph.
 closure of the neighbourhood cuts — also fails. On the Grötzsch graph it returns `5` against
 `bip = 4`, and `25·5 = 125 > 121 = N²`. A smaller and sharper witness for the plain neighbourhood
 family: `C6`, where `bip = 0` but `min_v e(C6 − N(v)) = 2` and `25·2 = 50 > 36 = N²`.
+
+
+---
+
+## R3-C17 — MILESTONE: `max_x ψ(And(3)) = 1/25` is PROVED (the Wagner case is closed)
+
+Root-agent entry, 2026-07-26. The Wagner graph `V8 = C8(1,4) = And(3) = Γ_8` has been this
+campaign's recurring hard case since Round 1: the tightest open pattern in Round 2, the graph whose
+far-regular configuration killed my moment criterion in Round 5 (R5-K22), and the first Andrásfai
+graph that is **not** `C5`-colourable. Its ceiling is now proved, by two independent routes, and I
+verified the decisive one myself.
+
+### The route (Round 7 family Q5), and my verification of it
+
+```
+   Guenin / Barahona:  for a signed graph with no odd-K5 minor, the odd-cycle covering LP is
+                       integral, i.e.  psi(G,x) = Lambda(G,x)  for every weighting x
+   Thm A            :  Lambda(G,x) <= 1/25 for every triangle-free G and every x
+   ==>  THEOREM C   :  G triangle-free with no odd-K5 minor  ==>  psi(G,x) <= 1/25 for every x.
+```
+
+`V8` is cubic on 8 vertices and is **K5-minor-free** — Wagner's own classical theorem — so Theorem C
+applies, and the plateau gives the matching lower bound:
+
+```
+        max_x ψ(And(3), x)  =  1/25   exactly.
+```
+
+**Verified by me, independently** (`claude_gate_wagner_cert.py` companion run):
+
+* `V8` rebuilt from the circle definition (`3·circdist > 8`): 8 vertices, 12 edges, 3-regular;
+* **exhaustive** search over every assignment of the 8 vertices to 5 branch sets plus "unused",
+  with connectivity and all-pairs-adjacency checks: **no K5 minor exists** in `V8`;
+* the covering LP is integral here: over 25 random exact weightings, `ψ` (minimum over all 128 cuts,
+  exact rationals) equals `Λ` (the LP over all 16 odd cycles) in **25 of 25** cases;
+* the fractional bound holds where it must: `max Λ` over uniform + 40 random weightings is
+  `0.04000000` on `C5` (tight), `0.0204` on `C7`, `0.03125` on `V8`, `0.0331` on `And(4)`, `0.0300`
+  on Petersen, `0.0331` on Grötzsch — never above `1/25`.
+
+### What the class contains, and exactly where it stops
+
+* **the extremal family**: `C5[2]` has a `K5` minor but no **odd** `K5` minor (exhaustive search), so
+  the theorem covers `C5` blow-ups — it does not dodge the sharp case;
+* all planar triangle-free graphs (planar ⟹ no `K5` minor);
+* `And(3) = V8`;
+* **it stops at `And(4)`**: `Γ_11` carries an explicit odd-`K5` minor with branch sets
+  `{0,4,8}, {1,5,9}, {2,6,10}, {3}, {7}`, and `And(4)` is an induced subgraph of `And(k)` for
+  `k = 5..8`, so the certificate is provably unavailable from `And(4)` on.
+
+### Independent second proof
+
+Round 7 family Q4 produced an exact rational Positivstellensatz certificate for the same statement —
+29 inclusion-minimal cuts, 284 nonnegative degree-2 multiplier coefficients, `Σ_S ν_S = 25 L²`, 99
+PSD Gram blocks, zero residual in the polynomial identity — which its auditor verified in full. Note
+this also **corrects my own Round-5 conclusion** that degree-2 multipliers are infeasible for Wagner:
+they are feasible, and my infeasibility finding was an artefact of restricting the cut family to
+arcs. Only 12 of the 29 cuts used are arcs.
+
+### Consequence for the programme
+
+The `δ > N/3` route needs `max_x ψ = 1/25` on every Andrásfai graph and every Vega graph. That is now
+**proved for `And(2) = C5` and `And(3) = Wagner`**, and provably out of reach of this particular
+mechanism from `And(4)` on. The open part of the Andrásfai side is exactly `And(k)`, `k ≥ 4`.
