@@ -70,3 +70,38 @@ conjecture is sharp and where every averaging argument must be tight.
 
 The open case is the last one. Its empirical size: of 3600 random exact measures only 3 fall in the
 region where both plain averages fail, and all three are closed by the harmonic mean.
+
+
+## Proof strategy for the general case, with the pieces that are already proved
+
+Write `A = W − 2T` (half-arc average) and `H = 1/E_μ[1/m]` (harmonic mean of the neighbourhood-cut
+values). The target is `min(A,H) ≤ 1/25`. Empirically the dichotomy is complete: over 1182 random
+exact measures, both terms work in 944 cases, only `H` in 68, only `A` in 170, and **neither fails in
+0 cases**.
+
+**The mechanism, from the Fourier identity (R5-K10).**
+`A = 1/36 + 2Σ_{n≥1} ψ̂(n)|μ̂(n)|²`, and `Σ_{n≥1, ψ̂(n)>0} ψ̂(n) = 0.11385`. So
+
+> **Case I (proved, crude form).** If `|μ̂(n)|² ≤ 0.0537` for every `n` with `ψ̂(n) > 0`, then
+> `A ≤ 1/36 + 2(0.0537)(0.11385) < 1/25`.
+
+So `A` can only fail when the measure has substantial `n`-fold Fourier mass for some `n` with
+`ψ̂(n) > 0` — and the significant ones are `n = 3` (`+0.0113`) and `n = 5` (`+0.0102`), with
+`n = 2, 8, 9, 11` an order of magnitude smaller and all multiples of 6 exactly zero.
+
+**Case II: the dangerous frequencies all collapse `H`.**
+
+* `n = 5` (five clusters in pentagram position): **proved** in R5-K19 — `m(b) = x_{i−1}x_{i+1}` and
+  AM–GM twice give `Σ_b x_b/m(b) ≥ 5(Πx)^{−1/5} ≥ 25`, i.e. `H ≤ 1/25`, with equality exactly at the
+  balanced blow-up. This is the extremal family, where the bound must be tight.
+* `n = 3` (three clusters at mutual distance `≈1/3`): the neighbourhood cut at a point of the middle
+  cluster has `m(b) = 0` (verified: `∫g²dμ = W` there), so `E_μ[1/m] = ∞` and `H = 0`.
+* `n = 2` (two antipodal clusters): the far-graph is bipartite, some neighbourhood cut has `m(b) = 0`,
+  so again `H = 0`.
+
+So each frequency that can make `A` fail forces a cluster structure that makes `H` small, and the two
+sides meet exactly at `C5`, where `A = H = 1/25` simultaneously.
+
+**What remains:** the quantitative interpolation — "approximately `n`-fold" instead of exactly, i.e.
+a stability version of R5-K19 and of the `n = 2, 3` collapses. That is the single open step of the
+whole chain.

@@ -55,8 +55,9 @@ def arcbound_float(x, adj):
             acc_r += rowsum[j]
             u[j] = 1.0
             quad = float(u @ (B @ u))
-            cross = acc_r - quad                       # u^T B (1-u)
-            mono = Wtot - 0.5 * cross
+            # acc_r = sum_{j in S} x_j g_j = 2*in(S) + cross(S);  quad = 2*in(S)
+            cross = acc_r - quad                       # unordered crossing mass
+            mono = Wtot - cross
             if mono < best:
                 best = mono
     return min(best, Wtot)
