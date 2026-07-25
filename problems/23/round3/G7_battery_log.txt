@@ -4,3 +4,5 @@ Gamma_3        n= 8  covered q<=144  max 25M/q^2 = 1
 Gamma_4        n=11  covered q<=59  max 25M/q^2 = 1
 Gamma_5        n=14  covered q<=43  max 25M/q^2 = 1
 Gamma_6        n=17  covered q<=29  max 25M/q^2 = 1
+Gamma_7        n=20  covered q<=26  max 25M/q^2 = 1
+Gamma_8        n=23  covered q<=20  max 25M/q^2 = 1

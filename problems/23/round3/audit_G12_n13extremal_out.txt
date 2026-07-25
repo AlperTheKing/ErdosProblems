@@ -1,0 +1,43 @@
+all 8 connected triangle-free graphs on 13 vertices with bip = 6 = a(13):
+
+L??ED@_~?~^_Fw: |E|=30 degs=[4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6]   bip = 6   |E|/5 = 6
+    exact 5-cycle packing (feasibility re-checked) = 6   (72 five-cycles)
+    ==> nu* = 6 = bip exactly (tight; uniform 1/5 cover need not be optimal)
+
+L??EDB_~?~^_Fw: |E|=31 degs=[4, 4, 4, 4, 4, 4, 4, 5, 5, 6, 6, 6, 6]   bip = 6   |E|/5 = 31/5
+    exact 5-cycle packing (feasibility re-checked) = 6   (84 five-cycles)
+    ==> nu* = 6 = bip exactly (tight; uniform 1/5 cover need not be optimal)
+
+L??EFB_~FwB{Fw: |E|=32 degs=[4, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6]   bip = 6   |E|/5 = 32/5
+    exact 5-cycle packing (feasibility re-checked) = 6   (96 five-cycles)
+    ==> nu* = 6 = bip exactly (tight; uniform 1/5 cover need not be optimal)
+
+L??FFB_~?~^_Fw: |E|=33 degs=[4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6]   bip = 6   |E|/5 = 33/5
+    exact 5-cycle packing (feasibility re-checked) = 6   (108 five-cycles)
+    ==> nu* = 6 = bip exactly (tight; uniform 1/5 cover need not be optimal)
+
+L?`DAboU`w@{hS: |E|=28 degs=[4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5]   bip = 6   |E|/5 = 28/5
+    5*bip = 30 > |E| = 28  =>  bip > |E|/5 >= tau* = nu*
+    ==> INTEGRALITY GAP on an EXTREMAL object: deficit >= 2/5, gap >= 15/14
+
+L?`DAboUdIF_Bo: |E|=26 degs=[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]   bip = 6   |E|/5 = 26/5
+    5*bip = 30 > |E| = 26  =>  bip > |E|/5 >= tau* = nu*
+    ==> INTEGRALITY GAP on an EXTREMAL object: deficit >= 4/5, gap >= 15/13
+
+L?`DAboUdIF_Bw: |E|=27 degs=[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5]   bip = 6   |E|/5 = 27/5
+    5*bip = 30 > |E| = 27  =>  bip > |E|/5 >= tau* = nu*
+    ==> INTEGRALITY GAP on an EXTREMAL object: deficit >= 3/5, gap >= 10/9
+
+L?`DE`gl@YJODg: |E|=26 degs=[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]   bip = 6   |E|/5 = 26/5
+    5*bip = 30 > |E| = 26  =>  bip > |E|/5 >= tau* = nu*
+    ==> INTEGRALITY GAP on an EXTREMAL object: deficit >= 4/5, gap >= 15/13
+
+RESULT: of the 8 extremal graphs at N = 13, 4 have bip > nu* (EXACT), 4 are tight, 0 undecided by this test.
+    GAP  L?`DAboU`w@{hS: |E|=28, bip=6, nu* <= 28/5, deficit >= 2/5, gap >= 15/14 = 1.07143
+    GAP  L?`DAboUdIF_Bo: |E|=26, bip=6, nu* <= 26/5, deficit >= 4/5, gap >= 15/13 = 1.15385
+    GAP  L?`DAboUdIF_Bw: |E|=27, bip=6, nu* <= 27/5, deficit >= 3/5, gap >= 10/9 = 1.11111
+    GAP  L?`DE`gl@YJODg: |E|=26, bip=6, nu* <= 26/5, deficit >= 4/5, gap >= 15/13 = 1.15385
+
+report's HEADLINE at N = 14 (M?AE@bH{AYN_LgBs?): bip = 7, nu* = 32/5,
+    deficit 3/5 = 0.6, gap 35/32 = 1.09375  -- strictly weaker than the N = 13
+    extremal witnesses above (smaller N, larger deficit, larger gap).

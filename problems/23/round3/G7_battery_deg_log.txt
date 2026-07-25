@@ -2,3 +2,7 @@ Gamma_2        n= 5  covered q<=596  max 25Mdeg/q^2 = 1            (=1.000000 at
 Gamma_3        n= 8  covered q<=98  max 25Mdeg/q^2 = 1925/2116    (=0.909735 at q=92)
 Gamma_4        n=11  covered q<=48  max 25Mdeg/q^2 = 1950/2209    (=0.882752 at q=47)
 Gamma_5        n=14  covered q<=34  max 25Mdeg/q^2 = 825/1024     (=0.805664 at q=32)
+Gamma_6        n=17  covered q<=27  max 25Mdeg/q^2 = 225/289      (=0.778547 at q=17)
+Gamma_7        n=20  covered q<=23  max 25Mdeg/q^2 = 3/4          (=0.750000 at q=20)
+Ups_2-y-2i     n=11  covered q<=45  max 25Mdeg/q^2 = 1450/1681    (=0.862582 at q=41)
+Ups_2-y        n=12  covered q<=39  max 25Mdeg/q^2 = 425/512      (=0.830078 at q=32)

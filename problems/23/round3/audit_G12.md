@@ -22,7 +22,10 @@ The report's negative results (the packing/covering LP route is dead) are correc
 already implied in one line by the campaign's own accepted fact 8.
 
 I resolved the report's one declared open arithmetic (the N = 12 sweep) and it **contradicts
-the report's minimality framing**: exact integrality-gap witnesses exist at N = 12.
+the report's minimality framing**: exact integrality-gap witnesses exist at N = 12. I also
+enumerated *all* extremal graphs at N = 12 and N = 13, which **refutes the report's bolded
+characterisation of the extremal objects** and supersedes its N = 14 "headline" falsifier by
+a smaller, sharper one at N = 13.
 
 ---
 
@@ -39,6 +42,8 @@ the report's minimality framing**: exact integrality-gap witnesses exist at N = 
 | R1(ii) | N = 14, `M?AE@bH{AYN_LgBs?`: `bip = 7`, `nu* = 32/5`, gap `35/32`, deficit `3/5` | CONFIRMED |
 | R1(i) | OK5: N = 13, \|E\| = 18, `bip = 4`, `nu* = 10/3`, gap `6/5` | CONFIRMED **except girth** |
 | R1(i) | "OK5 … girth 5" | **REFUTED: girth(OK5) = 4** |
+| P1 | "**The extremal objects up to N = 13 are exactly the graphs on which the trivial uniform cover `x ≡ 1/5` is LP-optimal and integral**"; "Same phenomenon on the extremal graphs at N = 12 (both of them) and N = 13: there `bip = nu* = \|E\|/5` exactly" | **REFUTED: 4 of the 8 extremal graphs at N = 13 have `bip = 6 > \|E\|/5 ≥ nu*`** |
+| R1(ii) | the N = 14 graph as *the* first/headline extremal object where the LP fails | **REFUTED: superseded at N = 13** (gap `≥ 15/13 = 1.154 > 35/32`, deficit `≥ 4/5 > 3/5`) |
 | R1 | "minimum witness size is 12, 13 or 14" | **REFUTED / RESOLVED: it is exactly 12** |
 | R1 | "no gap witness on N ≤ 11" (evidence: float LP) | claim TRUE — I re-proved it exactly; the report's own evidence is UNSUPPORTED (float on the acceptance path) |
 | R2 | mechanism breaking values (Petersen 6, Clebsch 15, And(3..6), N=14 extremal 9, M5 on C5) | CONFIRMED |
@@ -183,6 +188,44 @@ was a one-line consequence of facts already accepted by the campaign, with far l
 (`50/35 = 10/7` vs the report's headline `35/32`). The report's contribution here is the
 *small* witnesses, and the smallest is N = 12, which the report did not have.
 
+### 4a′. The N = 14 "headline" is superseded at N = 13, and the P1 characterisation is false
+
+The report checked the *one* N = 13 graph it was handed. My exhaustive sweep of all
+19 425 052 connected triangle-free graphs on 13 vertices returns **exactly 8** graphs with
+`bip = 6 = a(13)`. Exact results (`audit_G12_n13extremal.py`; for the four gap cases the
+certificate is the one-line exact argument `5·bip > |E| ⇒ bip > |E|/5 ≥ tau* = nu*`, valid
+because triangle-freeness makes `x ≡ 1/5` a feasible cover; for the four tight cases the
+certificate is an exactly verified 5-cycle packing of value `6 = bip`):
+
+| graph6 (N = 13, bip = 6) | \|E\| | degrees | nu* | deficit | gap |
+|---|---|---|---|---|---|
+| `L?`DAboUdIF_Bo` | 26 | 4-regular | ≤ 26/5 | ≥ 4/5 | ≥ 15/13 = 1.1538 |
+| `L?`DE`gl@YJODg` | 26 | 4-regular | ≤ 26/5 | ≥ 4/5 | ≥ 15/13 = 1.1538 |
+| `L?`DAboUdIF_Bw` | 27 | 4^11 5^2 | ≤ 27/5 | ≥ 3/5 | ≥ 10/9 = 1.1111 |
+| `L?`DAboU`w@{hS` | 28 | 4^9 5^4 | ≤ 28/5 | ≥ 2/5 | ≥ 15/14 = 1.0714 |
+| `L??ED@_~?~^_Fw` (the report's) | 30 | 4^9 6^4 | = 6 | 0 | 1 |
+| `L??EDB_~?~^_Fw` | 31 | — | = 6 | 0 | 1 |
+| `L??EFB_~FwB{Fw` | 32 | — | = 6 | 0 | 1 |
+| `L??FFB_~?~^_Fw` | 33 | — | = 6 | 0 | 1 |
+
+So:
+
+* the bolded P1 claim *"The extremal objects up to N = 13 are exactly the graphs on which
+  the trivial uniform cover `x ≡ 1/5` is LP-optimal and integral"* is **false**: half of
+  the N = 13 extremal objects have `bip > nu*`;
+* the P1 sentence *"Same phenomenon on the extremal graphs at N = 12 (both of them) and
+  N = 13: there `bip = nu* = |E|/5` exactly"* is **false** at N = 13 — and even among the
+  four tight ones, `nu* = |E|/5` fails for `|E| = 31, 32, 33` (there `nu* = 6 < |E|/5`,
+  i.e. `bip = nu*` holds while the uniform cover is *not* optimal);
+* the "THE HEADLINE" framing of the N = 14 graph as the extremal object on which the
+  packing LP first falls short is **wrong by one vertex and by a factor**: two 4-regular
+  13-vertex extremal graphs give deficit ≥ 4/5 and gap ≥ 15/13 = 1.1538, against the
+  report's 3/5 and 35/32 = 1.0938.
+
+(The two N = 12 extremal graphs *are* exactly the report's two strings — my sweep of all
+1 144 061 connected triangle-free graphs on 12 vertices finds exactly two with `bip = 5`,
+`K?ABBBwerwBw` and `K?BD@g]Qvo^?`, both with `bip = nu* = |E|/5 = 5`. That half of P1 stands.)
+
 ### 4b. "no gap witness on N ≤ 11" — true, but the report's proof is floating point
 
 `G12_e_scan.py` computes `nu` with `scipy.optimize.linprog(method="highs")` (float) and
@@ -248,13 +291,7 @@ be recorded as DEAD, not "blocked at 1/25 by AES".
 * P5's planar corollary is vacuous: planar triangle-free ⇒ `|E| ≤ 2N−4` ⇒ `bip ≤ (2N−4)/5`,
   linear, and the report says so itself in P6 — yet still lists the Guenin consequence as a
   result in the PROVED section.
-* "The extremal objects up to N = 13 are exactly the graphs on which the trivial uniform
-  cover `x ≡ 1/5` is LP-optimal and integral" — I verified the underlying enumeration is
-  complete at N = 12: exactly **two** connected triangle-free graphs on 12 vertices attain
-  `bip = 5 = a(12)`, and they are precisely the report's two strings. At N = 13,
-  `max bip = 6` is attained and the report's `L??ED@_~?~^_Fw` is an attainer (my exhaustive
-  sweep of all 19 425 052 connected triangle-free graphs on 13 vertices returns
-  `max bip = 6` with that graph as an argmax).
+* the P1 characterisation of the extremal objects: see §4a′ — refuted at N = 13.
 
 ---
 
@@ -270,7 +307,7 @@ be recorded as DEAD, not "blocked at 1/25 by AES".
 | N odd / not divisible by 5 / disconnected / isolated vertices / unbalanced blow-ups | Handled. Connectivity reduction is valid (`bip`, `nu*` both additive over components). Unbalanced C5 blow-ups are covered in `G12_d_theorem.py`. |
 | constant weakened to 1/25 + ε or "N large" | NO. All constants are exactly `1/25`, `1/16`, `1/20`, `2/25` as rationals. |
 | circularity (assumes something of strength ≥ the conjecture) | NO. |
-| finite verification presented as a general argument | NO for P3/P4 (the proof is general; the 11 563-graph run is only validation). YES in spirit for the "extremal objects up to N = 13 are exactly …" sentence, which is a 3-graph observation phrased as a characterisation. |
+| finite verification presented as a general argument | NO for P3/P4 (the proof is general; the 11 563-graph run is only validation). **YES** for the "extremal objects up to N = 13 are exactly …" sentence: it is a 3-graph observation phrased as a characterisation, and it is false — see §4a′. |
 | quoted theorem whose hypotheses do not match the use | Guenin: correctly used (weak bipartiteness = integrality of the odd-cycle covering polyhedron ⇒ `tau = tau*`, and `tau* = nu*` by LP duality; K5-minor-free ⇒ no odd-K5 minor since the underlying graph of a signed minor is a minor). Andrásfai–Erdős–Sós: correctly used (`δ > 2n/5 ⇒ bipartite`, applied to regular graphs where `δ = d`). Mantel, Cauchy–Schwarz: correct. **The missing citation is the fatal one**: EFPS 1988 Theorem 1 / Lemma 2.1, which the report re-derives and calls new. |
 
 ---
@@ -291,4 +328,19 @@ be recorded as DEAD, not "blocked at 1/25 by AES".
 * `...\audit_G12_pack.cpp` / `.exe` + `audit_G12_residue.txt` — integral edge-disjoint
   odd-cycle certificates, residue extraction
 * `...\audit_G12_residue.py` — exact settlement of the 1 459 residue graphs
+* `...\audit_G12_n13extremal.py` + `audit_G12_n13extremal_out.txt` — all 8 extremal graphs
+  at N = 13, each decided exactly (4 gaps, 4 tight)
 * `...\audit_G12_scan_n13.txt`, `audit_G12_extremal_n13.txt`, `audit_G12_m1max.py`
+
+## 7. Reusable exact facts produced by this audit
+
+* `a(12) = 5`, attained by exactly 2 connected triangle-free graphs; `a(13) = 6`, attained
+  by exactly 8; `a(N)` for N = 5..13 = 1,1,1,2,2,4,4,5,6 (independent exhaustive recount,
+  20 671 518 graphs).
+* Smallest triangle-free graph with `bip > nu*`: N = 12, `K??E@_qi?]Ia`, `bip = 4`,
+  `nu* = 10/3`.
+* Sharpest small extremal gap witness: N = 13, `L?`DAboUdIF_Bo` (4-regular, 26 edges),
+  `bip = 6`, `nu* ≤ 26/5`.
+* `sup_G M1(G)/N² = 1/16`, attained by every `d`-regular triangle-free graph on `N = 4d`
+  vertices (smallest: `C8`).
+* `π(G) > N²/25` (5-cycle packing LP) is impossible for every triangle-free `G`.

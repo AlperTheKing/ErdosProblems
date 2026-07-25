@@ -1,0 +1,17 @@
+n=12: 1144061 connected triangle-free graphs
+   max bip = 5 (K?ABBBwerwBw)  bip/N^2 = 5/144 = 0.034722   N^2/25 = 144/25
+   max nu* = 5.000000 (K?ABBBwerwBw)  nu*/N^2 = 0.034722
+   max M1  = 9 (K?AEF@oM?w@o)  M1/N^2 = 1/16 = 0.062500
+   max M2  = 8 (K?`FE`wl?{Dg)  M2/N^2 = 1/18 = 0.055556
+   covering-theorem violations (bip > M1 or bip > M2): 0
+   integrality gap witnesses (bip > nu*): 10
+       K??E@_qi?]Ia bip=4 nu*~3.333333
+       K??EDbGIaYAe bip=4 nu*~3.666667
+       K?AAD?WNBHCs bip=4 nu*~3.333333
+       K?AAD?WXHLN_ bip=4 nu*~3.666667
+       K?AA@bGNAY@w bip=4 nu*~3.666667
+       K?AA@agRPw@w bip=4 nu*~3.666667
+       K?AA@b@ZDcPW bip=4 nu*~3.666667
+       K?ABA`ocdQBo bip=4 nu*~3.666667
+       K?ABAaIs?{TG bip=4 nu*~3.666667
+       K?`D@POd@wAw bip=4 nu*~3.666667

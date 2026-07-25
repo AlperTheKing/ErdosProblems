@@ -106,3 +106,48 @@ Two boundary cases show what any proof must reconcile, and neither family of arc
 A useful reformulation for the attack: transporting `μ` to Lebesgue by its quantile map turns the
 problem into one about a monotone circle map `φ` with `φ³ = id + 1`, adjacency `y ∈ (φ(x), φ²(x))`,
 and Lebesgue measure — arcs remain arcs, and the extremal object becomes the five-step `φ`.
+
+
+---
+
+## 6. STRENGTHENING FOUND AFTERWARDS: `ARCBOUND · (Σx)² ≤ W²`
+
+While looking for the missing mechanism in the `W > 3/25` regime I noticed that the arc bound is
+governed by the total adjacent mass `W = Σ_{u~v} x_u x_v` alone, in the sharpest possible way:
+
+> **CONJECTURE (W-square).** For every weighting of every circle graph,
+> `ARCBOUND(x) · (Σx)² ≤ W(x)²`; equivalently, for a probability measure, `ARCBOUND ≤ W²`.
+
+Evidence, all exact rational arithmetic (`claude_arccut.py` and the inline gate):
+
+* **uniform weighting, `Γ_m` for every `m = 5..25`** — 21 cases, 0 violations, and **equality for
+  every odd `m`**: `(m, ARCBOUND, W²)` = `(5, 1/25, 1/25)`, `(7, 1/49, 1/49)`, `(9, 1/81, 1/81)`,
+  `(11, 4/121, 4/121)`, `(13, 4/169, 4/169)`, `(15, 4/225, 4/225)`, `(17, 9/289, 9/289)`,
+  `(19, 9/361, 9/361)`, `(21, 1/49, 1/49)`, `(23, 16/529, 16/529)`, `(25, 16/625, 16/625)`;
+  even `m` is strictly below (e.g. `Γ_8`: `1/32 < 9/256`);
+* 540 random rational weightings over `Γ_5, Γ_7, Γ_8, Γ_10, Γ_11, Γ_13, Γ_14, Γ_16, Γ_17` — 0
+  violations.
+
+Why it matters: `W² ≤ 1/25 ⟺ W ≤ 1/5`, so the W-square conjecture would settle the arc-cut
+conjecture — hence `max_x ψ(And(k),x) = 1/25` for every `k` — for every measure with
+`W ≤ 1/5`, which is far past the `W ≤ 3/25` that the proved three-thirds bound reaches. The
+equality family (all odd cycles `C_L`, where `W = 1/L` and `ARCBOUND = 1/L²`) shows it is exactly
+the right shape and cannot be improved.
+
+**Open remainder after that:** measures with `W ∈ (1/5, 1/4]`. The endpoint `W = 1/4` is the
+Motzkin–Straus maximum, attained only by two antipodal atoms, where `ARCBOUND = 0`; and the samples
+in that regime found so far (three atoms at `0, 1/3+ε, 2/3+2ε` with `W = 2/9`; four atoms at the
+quarters with `W = 1/8`) all have `ARCBOUND = 0` because the adjacency graph degenerates to a path
+or a matching. So the regime looks easy but has no proof yet.
+
+## 7. Extended exhaustive verification
+
+`claude_arccut.exe` over **all** integer weightings, rotation-canonical, zeros allowed:
+
+| `m` | 5 | 8 | 10 | 11 | 13 | 14 | 16 | 17 | 19 | 20 | 22 | 23 | 25 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `q` searched | ≤16 | ≤16 | ≤16 | ≤16 | ≤16 | ≤15 | ≤15 | ≤15 | ≤15 | ≤15 | ≤15 | ≤15 | ≤15 |
+| violations of `25·ARCBOUND ≤ q²` | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+In every one of the thirteen circle graphs the profile `q ↦ max_a ARCBOUND(a)` is identical to the
+`C5` profile and the maximisers are five-atom configurations.
