@@ -1,0 +1,97 @@
+==============================================================================
+(c) covering mechanisms, exact values.  'BREAKS' = exceeds N^2/25.
+==============================================================================
+C5[1]: N=5 |E|=5 Delta=2 delta=2   N^2/25 = 1 = 1.0000
+    bip = 1    M1 min_v e(G-N(v)) = 1 OK    M2 min_I e(G-I) = 1 OK
+    M3 BFS-layer = 1 OK    M4 |E|-sum d^2/N = 1 = 1.0000 OK    M5 (N-Delta)^2/4 = 9/4 BREAKS
+    ratios vs bip: M1 1  M2 1  M3 1
+    M2/N^2 = 1/25 = 0.040000   (mechanism-2 ceiling)
+C5[2]: N=10 |E|=20 Delta=4 delta=4   N^2/25 = 4 = 4.0000
+    bip = 4    M1 min_v e(G-N(v)) = 4 OK    M2 min_I e(G-I) = 4 OK
+    M3 BFS-layer = 4 OK    M4 |E|-sum d^2/N = 4 = 4.0000 OK    M5 (N-Delta)^2/4 = 9 BREAKS
+    ratios vs bip: M1 1  M2 1  M3 1
+    M2/N^2 = 1/25 = 0.040000   (mechanism-2 ceiling)
+C5[3]: N=15 |E|=45 Delta=6 delta=6   N^2/25 = 9 = 9.0000
+    bip = 9    M1 min_v e(G-N(v)) = 9 OK    M2 min_I e(G-I) = 9 OK
+    M3 BFS-layer = 9 OK    M4 |E|-sum d^2/N = 9 = 9.0000 OK    M5 (N-Delta)^2/4 = 81/4 BREAKS
+    ratios vs bip: M1 1  M2 1  M3 1
+    M2/N^2 = 1/25 = 0.040000   (mechanism-2 ceiling)
+C5[4]: N=20 |E|=80 Delta=8 delta=8   N^2/25 = 16 = 16.0000
+    bip = 16    M1 min_v e(G-N(v)) = 16 OK    M2 min_I e(G-I) = 16 OK
+    M3 BFS-layer = 16 OK    M4 |E|-sum d^2/N = 16 = 16.0000 OK    M5 (N-Delta)^2/4 = 36 BREAKS
+    ratios vs bip: M1 1  M2 1  M3 1
+    M2/N^2 = 1/25 = 0.040000   (mechanism-2 ceiling)
+Petersen: N=10 |E|=15 Delta=3 delta=3   N^2/25 = 4 = 4.0000
+    bip = 3    M1 min_v e(G-N(v)) = 6 BREAKS    M2 min_I e(G-I) = 3 OK
+    M3 BFS-layer = 6 BREAKS    M4 |E|-sum d^2/N = 6 = 6.0000 BREAKS    M5 (N-Delta)^2/4 = 49/4 BREAKS
+    ratios vs bip: M1 2  M2 1  M3 2
+    M2/N^2 = 3/100 = 0.030000   (mechanism-2 ceiling)
+Clebsch(folded 5-cube): N=16 |E|=40 Delta=5 delta=5   N^2/25 = 256/25 = 10.2400
+    bip = 8    M1 min_v e(G-N(v)) = 15 BREAKS    M2 min_I e(G-I) = 15 BREAKS
+    M3 BFS-layer = 15 BREAKS    M4 |E|-sum d^2/N = 15 = 15.0000 BREAKS    M5 (N-Delta)^2/4 = 121/4 BREAKS
+    ratios vs bip: M1 15/8  M2 15/8  M3 15/8
+    M2/N^2 = 15/256 = 0.058594   (mechanism-2 ceiling)
+Grotzsch: N=11 |E|=20 Delta=5 delta=3   N^2/25 = 121/25 = 4.8400
+    bip = 4    M1 min_v e(G-N(v)) = 5 BREAKS    M2 min_I e(G-I) = 5 BREAKS
+    M3 BFS-layer = 5 BREAKS    M4 |E|-sum d^2/N = 70/11 = 6.3636 BREAKS    M5 (N-Delta)^2/4 = 9 BREAKS
+    ratios vs bip: M1 5/4  M2 5/4  M3 5/4
+    M2/N^2 = 5/121 = 0.041322   (mechanism-2 ceiling)
+Andrasfai(2): N=5 |E|=5 Delta=2 delta=2   N^2/25 = 1 = 1.0000
+    bip = 1    M1 min_v e(G-N(v)) = 1 OK    M2 min_I e(G-I) = 1 OK
+    M3 BFS-layer = 1 OK    M4 |E|-sum d^2/N = 1 = 1.0000 OK    M5 (N-Delta)^2/4 = 9/4 BREAKS
+    ratios vs bip: M1 1  M2 1  M3 1
+    M2/N^2 = 1/25 = 0.040000   (mechanism-2 ceiling)
+Andrasfai(3): N=8 |E|=12 Delta=3 delta=3   N^2/25 = 64/25 = 2.5600
+    bip = 2    M1 min_v e(G-N(v)) = 3 BREAKS    M2 min_I e(G-I) = 3 BREAKS
+    M3 BFS-layer = 3 BREAKS    M4 |E|-sum d^2/N = 3 = 3.0000 BREAKS    M5 (N-Delta)^2/4 = 25/4 BREAKS
+    ratios vs bip: M1 3/2  M2 3/2  M3 3/2
+    M2/N^2 = 3/64 = 0.046875   (mechanism-2 ceiling)
+Andrasfai(4): N=11 |E|=22 Delta=4 delta=4   N^2/25 = 121/25 = 4.8400
+    bip = 4    M1 min_v e(G-N(v)) = 6 BREAKS    M2 min_I e(G-I) = 6 BREAKS
+    M3 BFS-layer = 6 BREAKS    M4 |E|-sum d^2/N = 6 = 6.0000 BREAKS    M5 (N-Delta)^2/4 = 49/4 BREAKS
+    ratios vs bip: M1 3/2  M2 3/2  M3 3/2
+    M2/N^2 = 6/121 = 0.049587   (mechanism-2 ceiling)
+Andrasfai(5): N=14 |E|=35 Delta=5 delta=5   N^2/25 = 196/25 = 7.8400
+    bip = 6    M1 min_v e(G-N(v)) = 10 BREAKS    M2 min_I e(G-I) = 10 BREAKS
+    M3 BFS-layer = 10 BREAKS    M4 |E|-sum d^2/N = 10 = 10.0000 BREAKS    M5 (N-Delta)^2/4 = 81/4 BREAKS
+    ratios vs bip: M1 5/3  M2 5/3  M3 5/3
+    M2/N^2 = 5/98 = 0.051020   (mechanism-2 ceiling)
+Andrasfai(6): N=17 |E|=51 Delta=6 delta=6   N^2/25 = 289/25 = 11.5600
+    bip = 9    M1 min_v e(G-N(v)) = 15 BREAKS    M2 min_I e(G-I) = 15 BREAKS
+    M3 BFS-layer = 15 BREAKS    M4 |E|-sum d^2/N = 15 = 15.0000 BREAKS    M5 (N-Delta)^2/4 = 121/4 BREAKS
+    ratios vs bip: M1 5/3  M2 5/3  M3 5/3
+    M2/N^2 = 15/289 = 0.051903   (mechanism-2 ceiling)
+Kneser(7,3): N=35 |E|=70 Delta=4 delta=4   N^2/25 = 49 = 49.0000
+    bip = None    M1 min_v e(G-N(v)) = 54 BREAKS    M2 min_I e(G-I) = 10 OK
+    M3 BFS-layer = 18 OK    M4 |E|-sum d^2/N = 54 = 54.0000 BREAKS    M5 (N-Delta)^2/4 = 961/4 BREAKS
+    M2/N^2 = 2/245 = 0.008163   (mechanism-2 ceiling)
+Hoffman-Singleton: N=50 |E|=175 Delta=7 delta=7   N^2/25 = 100 = 100.0000
+    bip = 50    M1 min_v e(G-N(v)) = 126 BREAKS    M2 min_I e(G-I) = 70 OK
+    M3 BFS-layer = 126 BREAKS    M4 |E|-sum d^2/N = 126 = 126.0000 BREAKS    M5 (N-Delta)^2/4 = 1849/4 BREAKS
+    ratios vs bip: M1 63/25  M2 7/5  M3 63/25
+    M2/N^2 = 7/250 = 0.028000   (mechanism-2 ceiling)
+extremal N=12 (K?ABBBwerwBw): N=12 |E|=25 Delta=5 delta=3   N^2/25 = 144/25 = 5.7600
+    bip = 5    M1 min_v e(G-N(v)) = 5 OK    M2 min_I e(G-I) = 5 OK
+    M3 BFS-layer = 5 OK    M4 |E|-sum d^2/N = 43/6 = 7.1667 BREAKS    M5 (N-Delta)^2/4 = 49/4 BREAKS
+    ratios vs bip: M1 1  M2 1  M3 1
+    M2/N^2 = 5/144 = 0.034722   (mechanism-2 ceiling)
+extremal N=12 (K?BD@g]Qvo^?): N=12 |E|=25 Delta=5 delta=4   N^2/25 = 144/25 = 5.7600
+    bip = 5    M1 min_v e(G-N(v)) = 5 OK    M2 min_I e(G-I) = 5 OK
+    M3 BFS-layer = 5 OK    M4 |E|-sum d^2/N = 15/2 = 7.5000 BREAKS    M5 (N-Delta)^2/4 = 49/4 BREAKS
+    ratios vs bip: M1 1  M2 1  M3 1
+    M2/N^2 = 5/144 = 0.034722   (mechanism-2 ceiling)
+extremal N=13 (L??ED@_~?~^_Fw): N=13 |E|=30 Delta=6 delta=4   N^2/25 = 169/25 = 6.7600
+    bip = 6    M1 min_v e(G-N(v)) = 6 OK    M2 min_I e(G-I) = 6 OK
+    M3 BFS-layer = 6 OK    M4 |E|-sum d^2/N = 102/13 = 7.8462 BREAKS    M5 (N-Delta)^2/4 = 49/4 BREAKS
+    ratios vs bip: M1 1  M2 1  M3 1
+    M2/N^2 = 6/169 = 0.035503   (mechanism-2 ceiling)
+extremal N=14 (M?AE@bH{AYN_LgBs?): N=14 |E|=32 Delta=5 delta=4   N^2/25 = 196/25 = 7.8400
+    bip = 7    M1 min_v e(G-N(v)) = 9 BREAKS    M2 min_I e(G-I) = 9 BREAKS
+    M3 BFS-layer = 9 BREAKS    M4 |E|-sum d^2/N = 76/7 = 10.8571 BREAKS    M5 (N-Delta)^2/4 = 81/4 BREAKS
+    ratios vs bip: M1 9/7  M2 9/7  M3 9/7
+    M2/N^2 = 9/196 = 0.045918   (mechanism-2 ceiling)
+
+==============================================================================
+worst mechanism-2 ratio  min_I e(G-I) / N^2  (mechanism ceiling)
+==============================================================================
+    worst = Clebsch(folded 5-cube): 15/256 = 0.058594   vs 1/25 = 0.04

@@ -1,0 +1,14 @@
+n=10: 9832 connected triangle-free graphs
+   max bip = 4 (I?rFf_{N?)  bip/N^2 = 1/25 = 0.040000   N^2/25 = 4
+   max nu* = 4.000000 (I?rFf_{N?)  nu*/N^2 = 0.040000
+   max M1  = 6 (I?bFB_wF?)  M1/N^2 = 3/50 = 0.060000
+   max M2  = 4 (I?`DF`YN?)  M2/N^2 = 1/25 = 0.040000
+   covering-theorem violations (bip > M1 or bip > M2): 0
+   integrality gap witnesses (bip > nu*): 0
+n=11: 90842 connected triangle-free graphs
+   max bip = 4 (J?BEFboL`{?)  bip/N^2 = 4/121 = 0.033058   N^2/25 = 121/25
+   max nu* = 4.000000 (J?`cn@W]?y?)  nu*/N^2 = 0.033058
+   max M1  = 7 (J??CB`gd?[?)  M1/N^2 = 7/121 = 0.057851
+   max M2  = 6 (J?bFF`wN?{?)  M2/N^2 = 6/121 = 0.049587
+   covering-theorem violations (bip > M1 or bip > M2): 0
+   integrality gap witnesses (bip > nu*): 0

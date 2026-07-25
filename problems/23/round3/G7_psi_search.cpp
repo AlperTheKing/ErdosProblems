@@ -36,6 +36,26 @@ static long long g_T;               // shared lower bound (mode max) / threshold
 
 static const int APOOL = 8;         // active (incremental) cut pool
 
+// per active cut: its monochromatic edges (u<v) sorted by u, and, for each k,
+// the index of the first such edge with u >= k.
+static std::vector<std::pair<int, int> > MONO[APOOL];
+static int MSTART[APOOL][34];
+
+static void build_mono(int p, uint32_t S) {
+    MONO[p].clear();
+    for (int e = 0; e < M_EDGES; e++) {
+        int u = EU[e], v = EV[e];
+        if (u > v) std::swap(u, v);
+        if ((((S >> u) ^ (S >> v)) & 1) == 0) MONO[p].push_back(std::make_pair(u, v));
+    }
+    std::sort(MONO[p].begin(), MONO[p].end());
+    size_t j = 0;
+    for (int k = 0; k <= N + 1; k++) {
+        while (j < MONO[p].size() && MONO[p][j].first < k) j++;
+        MSTART[p][k] = (int)j;
+    }
+}
+
 // ---------------------------------------------------------------- exact bip
 // bip = W - maxcut, maxcut by Gray code over 2^(n-1) cuts (vertex n-1 fixed out)
 static long long exact_bip(const int *a, uint32_t &argcut) {
@@ -136,11 +156,32 @@ static void dfs(Ctx &X, int k, int r, std::mutex &mtx) {
             }
         }
         int rem = r - t;
+        // TIGHT bound: for each active cut S, max over REAL completions of Q_S.
+        // By the Motzkin-Straus shifting argument the maximiser of
+        //   sum_v c_v a_v + sum_{uv mono, both free} a_u a_v   on {a>=0, sum=rem}
+        // is supported on a clique of the free monochromatic graph, i.e. on one
+        // vertex or one edge (that graph is triangle-free).  Everything is
+        // computed times 4 to stay in integers.
         bool prune = false;
+        long long T4 = 4 * X.T;
         for (int p = 0; p < APOOL && !prune; p++) {
-            long long cmax = 0;
-            for (int v = k + 1; v < N; v++) if (X.c[p][v] > cmax) cmax = X.c[p][v];
-            if (X.FF[p] + (long long)rem * cmax + (long long)rem * rem / 4 <= X.T) prune = true;
+            long long bestc = 0;                     // 4 * (best completion)
+            for (int v = k + 1; v < N; v++) {
+                long long z = 4LL * rem * X.c[p][v];
+                if (z > bestc) bestc = z;
+            }
+            const std::vector<std::pair<int,int> > &ME = MONO[p];
+            for (size_t j = MSTART[p][k + 1]; j < ME.size(); j++) {
+                int u = ME[j].first, v = ME[j].second;   // u < v, u >= k+1
+                long long cu = X.c[p][u], cv = X.c[p][v];
+                long long d = cu - cv + rem;             // 2*s*
+                long long z;
+                if (d <= 0) z = 4LL * rem * cv;
+                else if (d >= 2LL * rem) z = 4LL * rem * cu;
+                else z = d * d + 4LL * rem * cv;
+                if (z > bestc) bestc = z;
+            }
+            if (4 * X.FF[p] + bestc <= T4) prune = true;
         }
         if (!prune) dfs(X, k + 1, rem, mtx);
         for (int p = 0; p < APOOL; p++) {
@@ -184,6 +225,7 @@ int main(int argc, char **argv) {
       for (size_t j = 0; j < all.size() && (int)seed.size() < APOOL; j++) seed.push_back(all[j].second);
     }
     while ((int)seed.size() < APOOL) seed.push_back(0);
+    for (int p = 0; p < APOOL; p++) build_mono(p, seed[p]);
 
     long long gbest = -1; int gbesta[32]; memset(gbesta, 0, sizeof gbesta);
     long long gvio = 0; int gvioa[32]; memset(gvioa, 0, sizeof gvioa);

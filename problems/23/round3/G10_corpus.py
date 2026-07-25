@@ -69,7 +69,10 @@ def named_graphs():
                     continue
                 if is_triangle_free(nn, ee):
                     out.append(("Circ%d_%s" % (n, "-".join(map(str, conn))), nn, ee))
-    return out
+    # The circulants above are filtered individually; the named/Kneser entries
+    # were not, and Kneser(7,2) has triangles ({1,2},{3,4},{5,6} are pairwise
+    # disjoint).  Filter the whole list so the corpus cannot be contaminated.
+    return [(nm, n, e) for (nm, n, e) in out if is_triangle_free(n, e)]
 
 
 def cayley_nonabelian(maxord=30):
