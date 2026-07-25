@@ -78,3 +78,36 @@ has, from R5-K7, `W ∈ (0.12, 0.2)`, `∫g² < W − 1/25` (so `g` is close to 
 that those two conditions force `Var_μ(m)` to be large enough — intuitively, mass concentrated at
 distance exactly `1/3` makes `g` jump, and a jumping `g` makes `m` spread out. Making that
 quantitative closes the whole `δ > N/3` range.
+
+
+## 7. The g^k hierarchy (replaces the ad-hoc variance term)
+
+Averaging the neighbourhood-cut value `m(b)` over `b` with weight `g(b)^k dμ(b)` gives, for each
+`k ≥ 0`, a closed-form upper bound on `min_b m(b)`:
+
+```
+        bound_k  =  ( Σ_b x_b g(b)^k m(b) ) / ( Σ_b x_b g(b)^k ) ,      m(b) = W − Σ_{u ∈ N(b)} x_u g(u).
+```
+
+`k = 0` is `W − ∫g²dμ`; `k = 1` is `W − Q/(2W)` with `Q = ∫∫_{far} g(x)g(y)dμdμ`. Behaviour:
+
+| case | `k=0` | `k=1` | `k=2` | `k=3` | `k=4` | `k=5` | true `min_b m(b)` |
+|---|---|---|---|---|---|---|---|
+| **C5 extremal** | **0.0400** | **0.0400** | **0.0400** | **0.0400** | **0.0400** | **0.0400** | **0.0400** |
+| residual `Γ_11` | 0.0420 | 0.0408 | **0.0397** | 0.0387 | 0.0379 | 0.0373 | 0.0260 |
+| `W1` `(1,1,2,2,1)` | 0.0379 | 0.0363 | 0.0343 | 0.0321 | 0.0300 | 0.0281 | 0.0204 |
+| three-atom near-path | 0.0370 | **0.0000** | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| seven-atom (g constant) | 0.0612 | 0.0612 | 0.0612 | 0.0612 | 0.0612 | 0.0612 | 0.0612 |
+
+Two structural facts make this the right object:
+
+* **At `C5` every level equals `1/25` exactly**, because `g` is constant there, so the weighting does
+  nothing. The hierarchy cannot overshoot the extremal case at any level — the tightness is
+  automatic, not tuned.
+* **The hierarchy is stuck exactly when `g` is constant** (last row). And a constant `g` is precisely
+  the case the half-arc bound `A = W − 2T` handles: by R5-K10 the Fourier mass that makes `A` large
+  is 3-fold or 5-fold structure, and `1̂_far(n) = (−1)ⁿ sin(πn/3)/(πn)` kills the 3-fold component of
+  `g`, so a `g`-flat measure has no room left.
+
+So the proof splits along "is `g` constant?", with the hierarchy on one side and the Fourier bound on
+the other — and the two sides meet exactly at `C5`, where both give `1/25`.
