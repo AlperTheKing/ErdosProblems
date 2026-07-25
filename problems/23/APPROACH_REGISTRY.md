@@ -5,7 +5,7 @@ root agent. Status values: LIVE / BLOCKED / DEAD. A route is BLOCKED when it ter
 of strength ≥ the conjecture, or when an exact falsifier kills its mechanism; the blocking statement
 is quoted verbatim.
 
-Last updated 2026-07-25 (Rounds 3–5 of the CDC-template restart).
+Last updated 2026-07-26 (Rounds 3–6 of the CDC-template restart).
 
 | # | family (mechanism) | status | decisive fact |
 |---|---|---|---|
@@ -24,6 +24,8 @@ Last updated 2026-07-25 (Rounds 3–5 of the CDC-template restart).
 | A13 | **Box branch-and-bound on `ψ`** | DEAD | bound ignores `Σx = 1`; stalls past 3·10⁶ nodes at `n = 8, 10` |
 | A14 | **Flag algebras** (Balogh–Clemen–Lidický) | LIVE but external | published `n²/23.5`; exactness would need stability/spectrum machinery not yet applied to this problem |
 | A15 | **Motzkin–Straus-style support reduction** | DEAD | `ψ` is *concave* along transfer lines (a min of affine functions), so the optimum sits at interior kinks; no endpoint argument exists |
+| A17 | **Any functional of the neighbourhood-cut values `{m(b)}` together with `A = W−2T`** | **DEAD** | far-regular Wagner configuration `Γ_14`, support `{0,1,2,5,6,7,10,11}` uniform: `m(b) = 3/64` at every support point so every mean/variance/hierarchy collapses to one number, and `A = 9/224 > 1/25`, while the true `ARCBOUND = 1/32`. Refuted twice independently — the same machinery also fails on the Vega side |
+| A18 | Degree-2-multiplier SOS certificate (the shape verified for `C5`) applied to `And(3)` | **DEAD at that degree** | parity-blocked SDP over 20 arc cuts is infeasible under a strict margin; the coefficient-wise LP form is infeasible even for `C5` |
 | A16 | **Inherited soft-collision / Hall / bank-certificate machinery (R52–R58)** | BLOCKED | terminal lemma `canonicalSoftCollisionFeasibleTuple_exists` has strength ≥ the conjecture |
 
 ## Diversity check (LOOP rule 5: at least three incompatible routes alive)
