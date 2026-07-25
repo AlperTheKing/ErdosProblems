@@ -1,0 +1,58 @@
+==============================================================================
+C1.  MINIMUM IMPROVING SWITCH of W*(u,u)  --  own engine, u = 1..40
+==============================================================================
+   u    N   min|S|  ceil((7u+3)/2)  |S|/N        Q2.md   witness s=(c0,c1,c2,c3a,R,c4)
+    1    12       5             5         5/12 = 0.41667           5   (0, 1, 3, 0, 1, 0)   [formula ok]
+    2    24       9             9          3/8 = 0.37500           9   (0, 1, 6, 0, 2, 0)   [formula ok]
+    3    36      12            12          1/3 = 0.33333          12   (0, 1, 8, 0, 3, 0)   [formula ok]
+    4    48      16            16          1/3 = 0.33333          16   (0, 1, 11, 0, 4, 0)   [formula ok]
+    5    60      19            19        19/60 = 0.31667          19   (0, 1, 13, 0, 5, 0)   [formula ok]
+    6    72      23            23        23/72 = 0.31944          23   (0, 1, 16, 0, 6, 0)   [formula ok]
+    7    84      26            26        13/42 = 0.30952          26   (0, 1, 18, 0, 7, 0)   [formula ok]
+    8    96      30            30         5/16 = 0.31250          30   (0, 1, 21, 0, 8, 0)   [formula ok]
+    9   108      33            33        11/36 = 0.30556          33   (0, 1, 23, 0, 9, 0)   [formula ok]
+   10   120      37            37       37/120 = 0.30833               (0, 1, 26, 0, 10, 0)   [formula ok]
+   11   132      40            40        10/33 = 0.30303               (0, 1, 28, 0, 11, 0)   [formula ok]
+   12   144      44            44        11/36 = 0.30556               (0, 1, 31, 0, 12, 0)   [formula ok]
+   13   156      47            47       47/156 = 0.30128               (0, 1, 33, 0, 13, 0)   [formula ok]
+   14   168      51            51        17/56 = 0.30357               (0, 1, 36, 0, 14, 0)   [formula ok]
+   15   180      54            54         3/10 = 0.30000               (0, 1, 38, 0, 15, 0)   [formula ok]
+   16   192      58            58        29/96 = 0.30208               (0, 1, 41, 0, 16, 0)   [formula ok]
+   17   204      61            61       61/204 = 0.29902               (0, 1, 43, 0, 17, 0)   [formula ok]
+   18   216      65            65       65/216 = 0.30093               (0, 1, 46, 0, 18, 0)   [formula ok]
+   19   228      68            68        17/57 = 0.29825               (0, 1, 48, 0, 19, 0)   [formula ok]
+   20   240      72            72         3/10 = 0.30000               (0, 1, 51, 0, 20, 0)   [formula ok]
+   25   300      89            89       89/300 = 0.29667               (0, 1, 63, 0, 25, 0)   [formula ok]
+   30   360     107           107      107/360 = 0.29722               (0, 1, 76, 0, 30, 0)   [formula ok]
+   40   480     142           142       71/240 = 0.29583               (0, 1, 101, 0, 40, 0)   [formula ok]
+
+  Q2.md table u=1..9 : CONFIRMED
+  min over u<=9 of |S|/N = 11/36 = 0.30556  (Q2.md claims >= 0.3055 for N<=108)
+  limit of ceil((7u+3)/2)/(12u) = 7/24 = 0.291667
+
+==============================================================================
+C2.  Is 7/24 really the INFIMUM?  exact min|S|/N for large u
+==============================================================================
+   u=  40 N=  480 min|S|=  142  |S|/N = 0.295833  pred ceil((7u+3)/2) = 142   s=(0, 1, 101, 0, 40, 0)
+   u=  60 N=  720 min|S|=  212  |S|/N = 0.294444  pred ceil((7u+3)/2) = 212   s=(0, 1, 151, 0, 60, 0)
+   u= 100 N= 1200 min|S|=  352  |S|/N = 0.293333  pred ceil((7u+3)/2) = 352   s=(0, 1, 251, 0, 100, 0)
+   analytic witness family:  s = (0, 1, floor(5u/2)+1, 0, u, 0)
+   Delta = -(5u*1 + 2u*k) + 2(1*k + k*u) = 2k - 5u  > 0  iff  k >= floor(5u/2)+1,
+   so |S| = 1 + u + floor(5u/2)+1 = ceil((7u+3)/2)  -- an exact PROOF of the upper
+   bound on min|S| for every u (the enumeration supplies the matching lower bound).
+     u=   3: s=(0, 1, 8, 0, 3, 0)  Delta=1  |S|=12  ceil((7u+3)/2)=12
+     u=   7: s=(0, 1, 18, 0, 7, 0)  Delta=1  |S|=26  ceil((7u+3)/2)=26
+     u=  11: s=(0, 1, 28, 0, 11, 0)  Delta=1  |S|=40  ceil((7u+3)/2)=40
+     u=  40: s=(0, 1, 101, 0, 40, 0)  Delta=2  |S|=142  ceil((7u+3)/2)=142
+     u= 100: s=(0, 1, 251, 0, 100, 0)  Delta=2  |S|=352  ceil((7u+3)/2)=352
+
+==============================================================================
+C3.  the r-range claim of Q2.md section 5
+==============================================================================
+  u=1: r with sigma>=0 & star & (*) & SUP & NBRU & PAIRNBR all satisfied = [1]    Q2.md claims [1]   MATCH
+  u=2: r with sigma>=0 & star & (*) & SUP & NBRU & PAIRNBR all satisfied = [1, 2, 3]    Q2.md claims [1, 2, 3]   MATCH
+  u=3: r with sigma>=0 & star & (*) & SUP & NBRU & PAIRNBR all satisfied = [1, 2, 3, 4, 5]    Q2.md claims [1, 2, 3, 4, 5]   MATCH
+  u=4: r with sigma>=0 & star & (*) & SUP & NBRU & PAIRNBR all satisfied = [2, 3, 4, 5, 6]    Q2.md claims [2, 3, 4, 5, 6]   MATCH
+  u=5: r with sigma>=0 & star & (*) & SUP & NBRU & PAIRNBR all satisfied = [2, 3, 4, 5, 6, 7, 8]    Q2.md claims [2, 3, 4, 5, 6, 7, 8]   MATCH
+  u=6: r with sigma>=0 & star & (*) & SUP & NBRU & PAIRNBR all satisfied = [2, 3, 4, 5, 6, 7, 8, 9, 10]    Q2.md claims [2, 3, 4, 5, 6, 7, 8, 9, 10]   MATCH
+  u=7: r with sigma>=0 & star & (*) & SUP & NBRU & PAIRNBR all satisfied = [3, 4, 5, 6, 7, 8, 9, 10, 11]    Q2.md claims [3, 4, 5, 6, 7, 8, 9, 10, 11]   MATCH

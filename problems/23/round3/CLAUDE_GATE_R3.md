@@ -509,3 +509,39 @@ still below `1/25` but with far less margin than claimed, and it cannot be dismi
 **Status of the `δ > N/3` reduction.** Both halves — the Andrásfai ceiling and the Vega ceiling —
 remain unproved. What is now known is that they resist the *same* machinery, and that the Vega half
 is not the soft one.
+
+
+---
+
+## R3-C16 — discharging/switching schemes cannot reach 1/25: a sharper obstruction on the extremal family itself (GATED)
+
+Round-7 family Q2 produced this; its own auditor corrected the statement, and I verified the witness
+independently.
+
+**Witness.** `G = C5[7,7,12,7,12]`, the blow-up of `C5` with those class sizes. Verified by me:
+`N = 45`, `|E| = 385`, `bip(G) = min_i a_i a_{i+1} = 49 ≤ 81 = N²/25` — **the conjecture holds
+comfortably**. Now take the class-constant cut with classes `{c0, c2}` on one side:
+
+```
+        |M| = a_3 a_4 = 7·12 = 84 ,      25|M| = 2100  >  2025 = N² .
+```
+
+At that cut every vertex satisfies `σ(v) ≥ 0` (per class: `19, 19, 14, 0, 0`), and the **smallest
+switching set with `σ(S) < 0` has size 11 = 0.2444·N** (namely one vertex of `c0` and ten of `c4`).
+
+**Consequence.** Any discharging or switching scheme whose cut hypotheses are the inequalities
+`σ(S) ≥ 0` for sets of size below `0.2444 N` — which includes the vertex case, the whole switch-star
+family (sets `{v} ∪ T` with `T ⊆ N_B(v)`), and every bounded-radius local rule — is **satisfied by a
+cut carrying `25|M| > N²`**. Such a scheme therefore cannot prove `25|M| ≤ N²`; the best it can
+reach is `|M| ≤ N²/24.1`.
+
+This strengthens the recorded `P4`-blow-up obstruction (threshold `0.27N`, `bip = 0`) in the way that
+matters: the new witness is **a `C5` blow-up**, i.e. it lives inside the extremal family itself, so
+no argument that "the extremal structure is a `C5` blow-up" can dodge it, and the threshold drops to
+`0.244N`. Adding a global term to the scheme does not help unless that term separates this cut from
+a maximum cut of the same graph.
+
+**Also gated from the same round (Q1):** the "union of neighbourhoods" cut family — the natural
+closure of the neighbourhood cuts — also fails. On the Grötzsch graph it returns `5` against
+`bip = 4`, and `25·5 = 125 > 121 = N²`. A smaller and sharper witness for the plain neighbourhood
+family: `C6`, where `bip = 0` but `min_v e(C6 − N(v)) = 2` and `25·2 = 50 > 36 = N²`.

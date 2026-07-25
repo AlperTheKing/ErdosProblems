@@ -3,9 +3,9 @@ Determines the exact zero set of any tight certificate, hence the exact kernel o
 """
 import sys
 from itertools import combinations_with_replacement
-from Q4_graphs import gamma_graph, all_cuts, nondominated_cuts
+from Q4_graphs import graph_by_key as gamma_graph, all_cuts, nondominated_cuts
 
-m = int(sys.argv[1]) if len(sys.argv) > 1 else 8
+m = sys.argv[1] if len(sys.argv) > 1 else 8
 Ns = [int(t) for t in sys.argv[2].split(',')] if len(sys.argv) > 2 else [10, 15]
 n, E = gamma_graph(m)
 cuts = nondominated_cuts(all_cuts(n, E))

@@ -1,0 +1,6 @@
+distinct cut polynomials: 34
+candidate psi(t) = (50*t**2 - 10*t + 1)/25 = 2*t**2 - 2*t/5 + 1/25
+cut polynomials that dip below the candidate on [0,1/10]: 0
+PROVED: psi(prism,(1/5-t)x5,(t)x5) = 1/25 - 2t(1/5-t)  for all t in [0,1/10].
+hom-phi weighted edit distance = 5*(1/5-t)*t = -5*t**2 + t
+R = d/deficit = 5/2

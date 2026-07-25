@@ -1,0 +1,56 @@
+==============================================================================
+C1  counts of maximal triangle-free graphs (own geng + own filter)
+==============================================================================
+   n=  3:     1   (Q2.md     1)  ok   [connected tri-free total 1]
+   n=  4:     2   (Q2.md     2)  ok   [connected tri-free total 3]
+   n=  5:     3   (Q2.md     3)  ok   [connected tri-free total 6]
+   n=  6:     4   (Q2.md     4)  ok   [connected tri-free total 19]
+   n=  7:     6   (Q2.md     6)  ok   [connected tri-free total 59]
+   n=  8:    10   (Q2.md    10)  ok   [connected tri-free total 267]
+   n=  9:    16   (Q2.md    16)  ok   [connected tri-free total 1380]
+   n= 10:    31   (Q2.md    31)  ok   [connected tri-free total 9832]
+   n= 11:    61   (Q2.md    61)  ok   [connected tri-free total 90842]
+   n= 12:   147   (Q2.md   147)  ok   [connected tri-free total 1144061]
+   total 5<=n<=12 = 278   Q2.md says 278   ok
+   disconnected maximal triangle-free graphs on 3..9 vertices = 0 (so 'connected' is not a restriction here)
+
+==============================================================================
+C2  PART A (maximum cuts) / PART B (locally-good, bound-violating)
+==============================================================================
+   maximum cuts examined (vertex 0 pinned) = 587   Q2.md says 587  ok
+   PART A failures of 25|M| <= N^2 : 0   (Q2.md: 0)
+   PART A charge-identity failures : 0   (Q2.md: 0)
+   PART A (*) failures             : 0   (Q2.md: 0)
+   PART B (sigma>=0 + switch-star + (*) but 25|M|>N^2) : 15   Q2.md says 15  ok
+   distinct graphs carrying them: 6  ['J?`F?|wlF_?', 'K??FF?^Fvw^_', 'K?BD@j_QvoBs', 'K?`@F?{UckBw', 'K?`FAo]]DgSg', 'K?`FE`wl?{Dg']
+      J?`F?|wlF_?    N=11 cut=0x383 M=5 25M-N^2=+4  25M/N^2=125/121
+      K??FF?^Fvw^_   N=12 cut=0x4f8 M=6 25M-N^2=+6  25M/N^2=25/24
+      K??FF?^Fvw^_   N=12 cut=0x707 M=6 25M-N^2=+6  25M/N^2=25/24
+      K?BD@j_QvoBs   N=12 cut=0x7e M=6 25M-N^2=+6  25M/N^2=25/24
+      K?BD@j_QvoBs   N=12 cut=0x1db M=6 25M-N^2=+6  25M/N^2=25/24
+      K?BD@j_QvoBs   N=12 cut=0x33d M=6 25M-N^2=+6  25M/N^2=25/24
+      K?`@F?{UckBw   N=12 cut=0x3e1 M=6 25M-N^2=+6  25M/N^2=25/24
+      K?`@F?{UckBw   N=12 cut=0x5d2 M=6 25M-N^2=+6  25M/N^2=25/24
+      K?`@F?{UckBw   N=12 cut=0x6b4 M=6 25M-N^2=+6  25M/N^2=25/24
+      K?`FE`wl?{Dg   N=12 cut=0x5a5 M=6 25M-N^2=+6  25M/N^2=25/24
+      K?`FE`wl?{Dg   N=12 cut=0x696 M=6 25M-N^2=+6  25M/N^2=25/24
+      K?`FAo]]DgSg   N=12 cut=0xfc M=6 25M-N^2=+6  25M/N^2=25/24
+      K?`FAo]]DgSg   N=12 cut=0x2e9 M=6 25M-N^2=+6  25M/N^2=25/24
+      K?`FAo]]DgSg   N=12 cut=0x587 M=6 25M-N^2=+6  25M/N^2=25/24
+      K?`FAo]]DgSg   N=12 cut=0x6f0 M=6 25M-N^2=+6  25M/N^2=25/24
+   best PART-B ratio = 25/24 at K??FF?^Fvw^_ cut=0x4f8 M=6   Q2.md says 150/144 = 25/24  ok
+
+==============================================================================
+C3  is the champion K??FF?^Fvw^_ the blow-up C5[2,2,3,2,3] = W*(1,1)?
+==============================================================================
+   decoded n=12 |E|=28 tri-free=True maximal=True
+   twin classes (identical neighbourhoods): [[0, 1, 2], [3, 4, 5], [6, 7], [8, 9], [10, 11]]  sizes [3, 3, 2, 2, 2]
+   quotient adjacency:
+      00101
+      00011
+      10010
+      01100
+      11000
+   quotient is a 5-cycle: True;  class sizes in cyclic order = [3, 2, 2, 3, 2]
+   -> G = C5[3, 2, 2, 3, 2];  Q2.md claims C5[2,2,3,2,3] = W*(1,1)
+   equals C5[2,2,3,2,3] up to rotation/reflection: True

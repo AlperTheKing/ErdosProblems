@@ -1,0 +1,6 @@
+N=48  LOC  max 25M/N^2 = 5450/2304  count=339837  H=EEj_ col=011110 a=11,4,9,4,9,11 N=48 M=218
+N=48  STAR max 25M/N^2 = 2400/2304  count=10  H=ECxo col=010110 a=8,2,6,8,12,12 N=48 M=96
+N=48  ALL  max 25M/N^2 = 0/1  count=0  
+N=60  LOC  max 25M/N^2 = 8900/3600  count=981736  H=EEj_ col=011110 a=14,4,12,4,12,14 N=60 M=356
+N=60  STAR max 25M/N^2 = 3750/3600  count=14  H=ECxo col=010110 a=10,2,8,10,15,15 N=60 M=150
+N=60  ALL  max 25M/N^2 = 0/1  count=0  

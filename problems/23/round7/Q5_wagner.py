@@ -171,9 +171,22 @@ def main():
             best = (v, cur[:], D)
         print(f"  denominator {D}: best psi = {v} = {float(v):.6f}  at {cur}")
     v, c, D = best
-    print(f"  BEST: psi(V8,x) = {v} = {float(v):.6f} at x = {c}/{sum(c)}"
-          f"   [<= 1/25 = 0.04 by Theorem A + W2/W3]")
-    print(f"  recorded 'tightest open case' value 0.038652 -> now capped by 1/25, PROVED")
+    print(f"  BEST from ascent: psi(V8,x) = {v} = {float(v):.6f} at x = {c}/{sum(c)}"
+          f"  (a LOCAL optimum -- accepted base 2 warns about exactly this)")
+    # the plateau: concentrate on an induced C5
+    cyc = [0, 1, 2, 3, 4]
+    ind_ok = all((cyc[(i + 1) % 5] in adj3[cyc[i]]) for i in range(5)) and \
+        all(cyc[j] not in adj3[cyc[i]] for i in range(5) for j in range(5)
+            if (j - i) % 5 not in (1, 4) and i != j)
+    print(f"  V8 has the induced 5-cycle {cyc}: {ind_ok}")
+    x = [Fraction(1, 5) if i in cyc else Fraction(0) for i in range(8)]
+    ww = {e: x[e[0]] * x[e[1]] for e in E}
+    vp = bip_exact(n3, adj3, weights=ww)[0]
+    print(f"  psi(V8, uniform on that induced C5) = {vp} = {float(vp):.6f}"
+          f"  (plateau lower bound 1/25)")
+    print(f"  => max_x psi(V8,x) = 1/25 EXACTLY: >= 1/25 by the plateau, "
+          f"<= 1/25 by Theorem A + K5-minor-freeness")
+    print(f"  the recorded 'tightest open case' (Wagner config on Gamma_14, 0.038652) is CLOSED")
 
 
 if __name__ == "__main__":

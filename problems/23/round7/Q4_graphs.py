@@ -20,6 +20,24 @@ def gamma_graph(m):
     return m, sorted(E)
 
 
+def petersen():
+    """Kneser graph K(5,2): vertices = 2-subsets of {0..4}, adjacent iff disjoint."""
+    V = sorted(combinations(range(5), 2))
+    idx = {v: i for i, v in enumerate(V)}
+    E = [(idx[a], idx[b]) for a, b in combinations(V, 2) if not set(a) & set(b)]
+    return len(V), sorted(E)
+
+
+def graph_by_key(key):
+    """key: an integer (or digit string) m -> Gamma_m ; 'petersen' -> Petersen graph."""
+    s = str(key)
+    if s.isdigit():
+        return gamma_graph(int(s))
+    if s.lower() == 'petersen':
+        return petersen()
+    raise ValueError(f"unknown graph {key}")
+
+
 def cycle(m):
     return m, sorted((i, (i + 1) % m) if i + 1 < m else (0, i) for i in range(m))
 

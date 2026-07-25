@@ -1,0 +1,9 @@
+IMCoGX@oo	C5[2]-1match	k=2	j=1	predict_bip=3	predict_dist=5
+IKC_GP@__	C5[2]-2match	k=2	j=2	predict_bip=2	predict_dist=10
+NBz_Ww[?WF?[WBwF[B_	C5[3]-1match	k=3	j=1	predict_bip=8	predict_dist=5
+NBj_Wg[?WD?[WBgD[B_	C5[3]-2match	k=3	j=2	predict_bip=7	predict_dist=10
+NBj?WgW?WD?WWBgDWB?	C5[3]-3match	k=3	j=3	predict_bip=6	predict_dist=15
+S?^vf_FBo]@w?F?N?F_@w[?^oBv_Ff_F_	C5[4]-1match	k=4	j=1	predict_bip=15	predict_dist=5
+S?]vf_FAo]@w?F?J?F_@w[?]oAv_Ff_F_	C5[4]-2match	k=4	j=2	predict_bip=14	predict_dist=10
+S?]uf_FAoY@w?F?J?E_@w[?]oAu_Ef_F_	C5[4]-3match	k=4	j=3	predict_bip=13	predict_dist=15
+S?]uf?FAoY@o?F?J?E_@o[?]oAu_Ef?F?	C5[4]-4match	k=4	j=4	predict_bip=12	predict_dist=20

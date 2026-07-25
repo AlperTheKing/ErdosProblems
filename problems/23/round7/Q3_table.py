@@ -27,7 +27,7 @@ def load(path):
             Q = int(p[ix['Q']]) if 'Q' in ix else int(p[ix['n']])
             bip = int(p[ix['bip']])
             dist = int(p[ix['dist']])
-            n = int(p[ix['n']])
+            n = int(p[ix['n']]) if 'n' in ix else 0
             m = int(p[ix['m']]) if 'm' in ix else -1
             w = p[ix['w']] if 'w' in ix else ''
             rows.append((g6, n, m, Q, bip, dist, w))

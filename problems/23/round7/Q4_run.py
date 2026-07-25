@@ -4,10 +4,10 @@ Usage: python Q4_run.py <m> <d> [mode] [cuts:nd|all] [solver]
 """
 import sys, time, pickle
 import numpy as np
-from Q4_graphs import gamma_graph, all_cuts, nondominated_cuts
+from Q4_graphs import graph_by_key as gamma_graph, all_cuts, nondominated_cuts
 import Q4_sos as Q
 
-m = int(sys.argv[1]) if len(sys.argv) > 1 else 5
+m = sys.argv[1] if len(sys.argv) > 1 else 5
 d = int(sys.argv[2]) if len(sys.argv) > 2 else 1
 mode = sys.argv[3] if len(sys.argv) > 3 else 'coef'
 cutsel = sys.argv[4] if len(sys.argv) > 4 else 'nd'

@@ -12,7 +12,7 @@ This module computes, in exact rationals:
 """
 from fractions import Fraction as F
 from itertools import combinations
-from Q4_graphs import gamma_graph, all_cuts, nondominated_cuts, induced_C5s
+from Q4_graphs import graph_by_key as gamma_graph, all_cuts, nondominated_cuts, induced_C5s
 from Q4_sos import monomials, parity_blocks
 
 
@@ -107,7 +107,7 @@ def block_kernel(n, B, Zpts):
 
 if __name__ == "__main__":
     import sys
-    m = int(sys.argv[1]) if len(sys.argv) > 1 else 8
+    m = sys.argv[1] if len(sys.argv) > 1 else 8
     d = int(sys.argv[2]) if len(sys.argv) > 2 else 1
     n, E = gamma_graph(m)
     cuts = nondominated_cuts(all_cuts(n, E))

@@ -50,3 +50,5 @@ nbhd Ups_7 12
 nbhd Ups_7-y 12
 nbhd Ups_7-2i 12
 nbhd Ups_7-y-2i 12
+nbhd Ups_8 12
+nbhd Ups_8-y 12

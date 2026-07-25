@@ -1,0 +1,56 @@
+==============================================================================
+D1.  counts of maximal triangle-free graphs  (own geng run + own filter)
+==============================================================================
+   n=  3:      1   Q2.md says     1   ok
+   n=  4:      2   Q2.md says     2   ok
+   n=  5:      3   Q2.md says     3   ok
+   n=  6:      4   Q2.md says     4   ok
+   n=  7:      6   Q2.md says     6   ok
+   n=  8:     10   Q2.md says    10   ok
+   n=  9:     16   Q2.md says    16   ok
+   n= 10:     31   Q2.md says    31   ok
+   n= 11:     61   Q2.md says    61   ok
+   n= 12:    147   Q2.md says   147   ok
+   total for 5<=n<=12 : 278    Q2.md says 278   ok
+   VERDICT counts: CONFIRMED
+
+==============================================================================
+D2.  PART A (maximum cuts) and PART B (locally-good but bound-violating cuts)
+==============================================================================
+   maximum cuts examined (vertex 0 pinned) = 587    Q2.md says 587  ok
+   PART A failures of 25|M| <= N^2 : 0   (Q2.md: 0)
+   charge-identity failures        : 0   (Q2.md: 0)
+   (*) violated at a maximum cut   : 0   (Q2.md: 0)
+
+   PART B: cuts with sigma>=0, all switch-stars, all (*), yet 25|M|>N^2 : 15    Q2.md says 15   ok
+      J?`F?|wlF_?    N=11 cut=0x383 M=5 25M-N^2=+4
+      K??FF?^Fvw^_   N=12 cut=0x4f8 M=6 25M-N^2=+6
+      K??FF?^Fvw^_   N=12 cut=0x707 M=6 25M-N^2=+6
+      K?BD@j_QvoBs   N=12 cut=0x7e M=6 25M-N^2=+6
+      K?BD@j_QvoBs   N=12 cut=0x1db M=6 25M-N^2=+6
+      K?BD@j_QvoBs   N=12 cut=0x33d M=6 25M-N^2=+6
+      K?`@F?{UckBw   N=12 cut=0x3e1 M=6 25M-N^2=+6
+      K?`@F?{UckBw   N=12 cut=0x5d2 M=6 25M-N^2=+6
+      K?`@F?{UckBw   N=12 cut=0x6b4 M=6 25M-N^2=+6
+      K?`FAo]]DgSg   N=12 cut=0xfc M=6 25M-N^2=+6
+      K?`FAo]]DgSg   N=12 cut=0x2e9 M=6 25M-N^2=+6
+      K?`FAo]]DgSg   N=12 cut=0x587 M=6 25M-N^2=+6
+      K?`FAo]]DgSg   N=12 cut=0x6f0 M=6 25M-N^2=+6
+      K?`FE`wl?{Dg   N=12 cut=0x5a5 M=6 25M-N^2=+6
+      K?`FE`wl?{Dg   N=12 cut=0x696 M=6 25M-N^2=+6
+   distinct graphs carrying them: 6  ['J?`F?|wlF_?', 'K??FF?^Fvw^_', 'K?BD@j_QvoBs', 'K?`@F?{UckBw', 'K?`FAo]]DgSg', 'K?`FE`wl?{Dg']
+
+==============================================================================
+D3.  Is the champion K??FF?^Fvw^_  equal to C5[2,2,3,2,3] = W*(1,1)?
+==============================================================================
+   decoded: n=12 |E|=28 triangle-free=True maximal=True
+   twin classes (by identical neighbourhood): [[0, 1, 2], [3, 4, 5], [6, 7], [8, 9], [10, 11]]
+   class sizes: [2, 2, 2, 3, 3]
+   quotient adjacency on the 5 classes:
+      00101
+      00011
+      10010
+      01100
+      11000
+   C5[2,2,3,2,3] built here: graph6 = K]Kp_[Mo]BWK  |E|=28
+   isomorphic(K??FF?^Fvw^_ , C5[2,2,3,2,3]) = True

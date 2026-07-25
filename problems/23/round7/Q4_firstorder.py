@@ -19,7 +19,7 @@ import sys
 from fractions import Fraction as F
 import numpy as np
 from scipy.optimize import linprog
-from Q4_graphs import gamma_graph, all_cuts, nondominated_cuts
+from Q4_graphs import graph_by_key as gamma_graph, all_cuts, nondominated_cuts
 from Q4_zeroset import zero_points, psi_exact
 
 
@@ -63,7 +63,7 @@ def firstorder_lp(n, E, cuts, x, verbose=False):
 
 
 if __name__ == "__main__":
-    m = int(sys.argv[1]) if len(sys.argv) > 1 else 8
+    m = sys.argv[1] if len(sys.argv) > 1 else 8
     n, E = gamma_graph(m)
     cuts = nondominated_cuts(all_cuts(n, E))
     Z = zero_points(n, E, cuts)

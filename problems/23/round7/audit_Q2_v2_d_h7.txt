@@ -1,0 +1,6 @@
+N=24  LOC  max 25M/N^2 = 1050/576  count=328933  H=F?qf_ col=0111110 a=5,2,3,2,4,3,5 N=24 M=42
+N=24  STAR max 25M/N^2 = 600/576  count=294  H=F?o~_ col=0110100 a=1,3,4,0,6,4,6 N=24 M=24
+N=24  ALL  max 25M/N^2 = 0/1  count=0  
+N=30  LOC  max 25M/N^2 = 1950/900  count=626624  H=F?qf_ col=0110110 a=6,4,4,0,4,5,7 N=30 M=78
+N=30  STAR max 25M/N^2 = 0/1  count=0  
+N=30  ALL  max 25M/N^2 = 0/1  count=0  
