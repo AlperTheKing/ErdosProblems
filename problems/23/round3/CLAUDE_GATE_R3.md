@@ -608,3 +608,40 @@ arcs. Only 12 of the 29 cuts used are arcs.
 The `δ > N/3` route needs `max_x ψ = 1/25` on every Andrásfai graph and every Vega graph. That is now
 **proved for `And(2) = C5` and `And(3) = Wagner`**, and provably out of reach of this particular
 mechanism from `And(4)` on. The open part of the Andrásfai side is exactly `And(k)`, `k ≥ 4`.
+
+
+---
+
+## R3-C18 — the integrality route, and where it now points
+
+Following R3-C17, the Wagner ceiling came from `ψ = Λ` (integrality of the odd-cycle covering LP,
+via Guenin/Barahona for odd-`K5`-minor-free signed graphs) plus the fractional bound `Λ ≤ 1/25`.
+`And(4) = Γ_11` carries an explicit odd-`K5` minor, so Guenin does **not** apply to it. I tested
+whether integrality nevertheless holds.
+
+**Finding (exact, my own computation).** On `And(4)` the covering LP is integral at every weighting
+tested — certified the strong way, by exhibiting a fractional odd-cycle **packing** whose value
+equals `ψ` (LP duality then forces `packing ≤ Λ ≤ ψ = packing`):
+
+| weighting on `And(4)` | `ψ` (exact, min over all 1024 cuts) | max packing | equal |
+|---|---|---|---|
+| uniform | `4/121 = 0.03305785` | `0.03305785` | yes |
+| a `C5`-concentration | `1/25 = 0.04000000` | `0.04000000` | yes |
+| random | `13/500` | `0.02600000` | yes |
+| random | `9/968` | `0.00929752` | yes |
+
+and over 30 random weightings each, `ψ = Λ` held in `30/30` cases on `And(3)`, `And(4)`, `And(5)`
+and `Γ_10`. So **Guenin's hypothesis is sufficient but not necessary here**: integrality survives
+past the odd-`K5` obstruction on this family.
+
+**Why it matters.** If `ψ(And(k), x) = Λ(And(k), x)` for every `k` and every `x`, then with the
+fractional bound `Λ ≤ 1/25` one gets `max_x ψ(And(k), x) = 1/25` for **all** `k` — which is the
+entire Andrásfai side of the `δ > N/3` reduction, the half that R3-C17 could only reach for
+`k = 2, 3`.
+
+**Status.** This is a route, not a theorem: the integrality statement for `And(k)` is unproved, and
+under GOAL rule (e) a reduction does not count until it is proved. What has changed is that the
+target is now a *classical, well-studied* property (min-max for odd-cycle covering/packing) on a
+*highly structured* family (`And(k)` is the circular clique `K_{(3k−1)/k}`), rather than an ad-hoc
+inequality of my own devising — and unlike every certificate family tried so far, it is not
+contradicted by the far-regular Wagner configuration, because it is exactly what proves that case.
