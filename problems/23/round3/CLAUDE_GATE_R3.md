@@ -440,3 +440,37 @@ by the per-vertex accounting that `W_t` saturates. The conjecture itself is unto
 band `0.16N < δ ≤ 0.375N` is a hard barrier for every deletion-style argument. The band can only be
 attacked from the *upper* end — which is exactly where the arc-cut mechanism (R3-C11) and the
 Brandt–Thomassé structure theory operate.
+
+
+---
+
+## R3-C14 — the first x-DEPENDENT certificate, exact and root-gated (accepted)
+
+Round-4 family H5 produced an exact rational Positivstellensatz certificate for `C5`; I verified it
+with my own implementation (`round5/claude_gate_sos_cert.py`: polynomials as dicts
+`{exponent -> Fraction}` expanded by hand, positive semidefiniteness by my own rational LDL^T with
+symmetric pivoting, no sympy, no code shared with the constructor or with the agent's own verifier).
+
+**The certificate.** Quadratic forms `λ_e(z)`, one per edge of `C5`, with
+
+```
+   (1)  Σ_e λ_e(z) = (Σ_j z_j)²                                    [verified: every entry of Σ_e L_e is 1]
+   (2)  every λ_e has nonnegative coefficients                     [verified]
+   (3)  eleven Gram blocks, sizes 15 and 5, all symmetric PSD      [verified, own rational LDL^T]
+   (4)  (Σ_j y_j²)⁴ − 25 Σ_{e=(u,v)} λ_e(y²) y_u² y_v²  =  Σ_b Σ_{i,j} G_b[i,j] y^{m_i} y^{m_j}
+                                                                   [verified: exact, zero residual]
+```
+
+Substituting `x_j = y_j² ≥ 0` with `Σx = 1`: by (1) and (2) the numbers `λ_e(x)` form a probability
+distribution **over the edges, depending on `x`**, and (3)+(4) give
+`Σ_e λ_e(x)·x_u x_v ≤ 1/25`, hence `min_e x_u x_v ≤ 1/25`, which for `C5` is exactly
+`ψ(C5,x) ≤ 1/25`. Sharpness re-checked: uniform `x` gives exactly `1/25`.
+
+**Why this is a methodological unlock, not just a new proof of a known case.** R3-C1 proves that no
+`x`-*independent* distribution over cuts can certify `1/25` — the floor is `1/20` on every `C5[n]`.
+This certificate is the first object in the campaign of the required shape: the multiplier is a
+*quadratic form in `x`*, so the distribution over cuts genuinely reads the weights. The construction
+(Lasserre level 3 in epigraph form, dual rounded to rationals, exactly repaired) is not `C5`-specific
+and is the concrete route to rigorous ψ-ceilings for the Andrásfai family, i.e. to the `δ > N/3`
+range. The corresponding certificate for `And(3) = Wagner` is the next object to produce; it did not
+exist at the time of this entry.
