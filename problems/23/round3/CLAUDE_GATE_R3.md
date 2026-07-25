@@ -235,3 +235,62 @@ No accepted result depended on the bad entry: the only consumer was the corpus b
 `Kneser72` appears in no ledger table. Recorded because a triangle-free corpus that is not
 triangle-free will silently manufacture a false counterexample, which under the GOAL is the one
 outcome that must never be produced in error.
+
+---
+
+## R3-C8 — density-band theorem: GATED, with the posted band CORRECTED
+
+Gate: `claude_gate_r3c.py` (mine). The G12 agent posted the chain plus the band
+"`|E| >= N^2/5` or `|E| <= 2N^2/25`". The chain is right, the sparse endpoint is not.
+
+**Theorem (gated).** For every triangle-free `G`,
+
+```
+        bip(G)  <=  min_v e(G - N(v))  <=  |E| - (1/N) sum_v d(v)^2  <=  |E| - 4|E|^2/N^2.
+```
+
+Proof: `N(v)` is independent, so `(N(v), V - N(v))` is a bipartition and
+`bip(G) <= e(G - N(v)) = |E| - sum_{u in N(v)} d(u)`; averaging the subtracted term over `v`
+replaces `max_v` by the mean `(1/N) sum_u d(u)^2`; Cauchy-Schwarz gives `sum d^2 >= 4|E|^2/N`.
+Verified exactly on 23 graphs (odd cycles `C5..C25`, `And(2..7)`, `C5[1..4]`, Petersen,
+Clebsch), 0 violations of the chain and 0 violations of the conjecture.
+
+**Corollary (gated, exact).** With `x = |E|/N^2` the last bound is `N^2(x - 4x^2)`, so it
+certifies `1/25` iff `4x^2 - x + 1/25 >= 0`. The discriminant `1 - 16/25 = 9/25` is a
+rational square, so the roots are **exactly** `x = 1/20` and `x = 1/5`:
+
+```
+        bip(G) <= N^2/25   is PROVED UNCONDITIONALLY whenever   |E| <= N^2/20   or   |E| >= N^2/5.
+        OPEN BAND:   N^2/20 < |E| < N^2/5.
+```
+
+**Correction.** The posted sparse endpoint `2N^2/25` is wrong: `2/25 = 0.08` lies strictly
+inside the open interval `(1/20, 1/5) = (0.05, 0.2)`, and `x - 4x^2 = 34/625 = 0.0544 > 1/25`
+there. Explicit falsifiers of the posted claim, all satisfying `|E| <= 2N^2/25`:
+
+| `G` | `N` | `|E|` | `2N^2/25` | `|E| - 4|E|^2/N^2` | `N^2/25` |
+|---|---|---|---|---|---|
+| `C13` | 13 | 13 | 338/25 | **9** | 169/25 = 6.76 |
+| `C15` | 15 | 15 | 18 | **11** | 9 |
+| `C17` | 17 | 17 | 578/25 | **13** | 289/25 = 11.56 |
+| `C19` | 19 | 19 | 722/25 | **15** | 361/25 = 14.44 |
+
+The conjecture is untouched (`bip = 1` on every odd cycle); only the certificate fails there.
+
+**Why the dense side is worth having.** `C5[n]` sits *exactly* on the upper endpoint:
+`|E| = 5n^2` and `N^2/5 = 5n^2`, so `|E|/N^2 = 1/5` for every `n`, and the entire chain holds
+with **equality** (`bip = M1 = M4 = |E| - 4|E|^2/N^2 = n^2 = N^2/25`, checked for `n <= 5`).
+So the closed half `|E| >= N^2/5` is closed *including* the extremal family — this is not a
+vacuous range, it is the range containing the sharp case.
+
+**Consequence for the minimal-counterexample frontier.** Combining with base (6):
+a minimal counterexample has `delta > (4N-2)/25 > 0.16N`, hence `|E| >= delta N/2 > 0.08N^2`,
+so the sparse branch can never apply to it, and by the dense branch it must satisfy
+`|E| < N^2/5`. Writing `dbar = 2|E|/N` for the average degree,
+
+```
+        a minimal counterexample satisfies    0.16 N  <  delta  <=  dbar  <  0.4 N.
+```
+
+The upper constraint is now on the **average** degree, not the minimum degree, which is
+strictly stronger information than the Haggkvist end of base (6) gave.
