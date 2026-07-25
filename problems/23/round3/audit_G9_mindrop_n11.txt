@@ -1,0 +1,7 @@
+graphs=90842
+delta | #graphs | maxA(all) | maxB(all) | floor(d/2) | maxB(maxtf) | witnessB(all) | witnessB(maxtf)
+    1 |   54302 |         0 |         0 |          0 |           0 | J???????F~_ | J???????F~_
+    2 |   34488 |         1 |         1 |          1 |           1 | J???E?pNu\? | J??FFB_~?~?
+    3 |    2028 |         1 |         1 |          1 |           1 | J??FF?^Fvw? | J??FF?^Fvw?
+    4 |      23 |         2 |         2 |          2 |           2 | J?bFF`wN?{? | J?bFF`wN?{?
+    5 |       1 |         0 |         0 |          2 |           0 | J??F~z{~Fw? | J??F~z{~Fw?

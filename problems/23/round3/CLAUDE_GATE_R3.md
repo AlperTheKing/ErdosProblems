@@ -406,3 +406,37 @@ Verified (`claude_gate_indep_concavity.py`): 1590 exact midpoint-concavity check
 points and random independent-support directions over 7 patterns, 0 failures. The control direction
 tried (positive support an edge of `C5`) happened to remain concave, so the experiment confirms the
 hypothesis is *sufficient* and says nothing about necessity.
+
+
+---
+
+## R3-C13 — the low-degree constant 4/25 is EXACTLY optimal for the deletion mechanism (GATED)
+
+Round-3 family G9 produced this; I re-derived and re-verified it independently
+(`claude_gate_r3_c9c10.py` companion run, blow-up identity plus a from-scratch enumeration of all
+`2^24` cuts of the explicit 25-vertex graph).
+
+**Witness family.** `W_t := C5[7t, 2t, 7t, 7t, 2t]` (parts around the 5-cycle).
+
+| `t` | `N` | `bip` | `δ` | drop at a minimum-degree vertex | budget `(2N−1)/25` | step fails |
+|---|---|---|---|---|---|---|
+| 1 | 25 | 14 | 4 = `4N/25` | 2 | 49/25 = 1.96 | **yes** |
+| 2 | 50 | 56 | 8 = `4N/25` | 4 | 99/25 = 3.96 | **yes** |
+| 3 | 75 | 126 | 12 = `4N/25` | 6 | 149/25 = 5.96 | **yes** |
+
+`bip(W_t) = min_i a_i a_{i+1} = 14t²` (products `14, 14, 49, 14, 14` in units of `t²`), and the
+independent brute force at `t = 1` gives `bip = 14` and `bip(W_1 − v) = 12` for `v` in the
+minimum-degree part, matching the identity exactly. `W_t` is maximal triangle-free (any `C5`
+blow-up with all parts nonempty is), so the WLOG of accepted fact 5 does not escape it.
+
+**Consequence.** Every vertex of `W_t` has degree exactly `4N/25`, and at every one of them the
+one-vertex deletion step misses its budget by exactly `1/25`. Therefore the constant `4/25` in
+`δ > (4N−2)/25` **cannot be raised by the deletion mechanism** — not by single vertices, not by
+independent sets, not by arbitrary sets with greedy re-insertion, since all of those are dominated
+by the per-vertex accounting that `W_t` saturates. The conjecture itself is untouched:
+`bip(W_t) = 0.0224 N² < N²/25`.
+
+**Strategic consequence, recorded because it redirects the campaign.** The *lower* end of the open
+band `0.16N < δ ≤ 0.375N` is a hard barrier for every deletion-style argument. The band can only be
+attacked from the *upper* end — which is exactly where the arc-cut mechanism (R3-C11) and the
+Brandt–Thomassé structure theory operate.
