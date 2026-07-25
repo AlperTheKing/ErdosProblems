@@ -343,6 +343,44 @@ of a(N)/N^2 along multiples), the conjecture is exactly the statement c <= 1/25,
 
 ---
 
+## 3g. R1-C8 — partial gate on the weighted-pattern ceiling (one-sided: no refutation)
+
+Round-1 family F8 claimed `max_x psi(H,x) = 1/25` for all 573 reduced patterns on 5..15 vertices,
+attained only by C5 blow-ups, where `psi(H,x) = min over cuts S of sum_{uv monochromatic} x_u x_v`
+on the simplex. By R1-C7 that quantity is exactly the best ratio `bip/N^2` achievable by any graph
+homomorphic to `H`, so the claim is load-bearing. **No verifier agent ever ran on it** (session
+quota), so it is unaccepted. My own independent partial gate (`claude_gate_psi.py`: own
+`psi` evaluator over all `2^(n-1)` cuts, multi-start projected hill-climb, then EXACT rational
+re-evaluation at the best point):
+
+| pattern | n | exact value at the best point found |
+|---|---|---|
+| C5 | 5 | **1/25 = 0.040000** |
+| Wagner `C8(1,4)` | 8 | 15341/396900 = 0.038652 |
+| Grötzsch | 11 | 119515/3170162 = 0.037700 |
+| `C11(1,3)` | 11 | 231872/6365529 = 0.036426 |
+| `C13(1,5)` (the (3,5)-Ramsey graph) | 13 | 2279/64800 = 0.035170 |
+| Petersen | 10 | 195936/6345361 = 0.030879 |
+| C7 | 7 | **1/49 = 0.020408** |
+| C9 | 9 | 78108/6345361 = 0.012309 |
+| `K_{3,3}`, `K_{4,4}` | 6, 8 | **0** |
+
+Engine validation: `psi(C5, uniform) = 1/25` and `psi(C7, uniform) = 1/49` come out exactly, matching
+the closed form `psi(C_L, uniform) = L^{-2}`, and both complete bipartite graphs give exactly 0.
+
+**Verdict: NO REFUTATION.** Nothing exceeds 1/25, and C5 is the unique maximiser among the patterns
+tested; Wagner `C8(1,4)` is the closest non-C5 competitor at 0.0387. This is consistent with the F8
+claim but does **not** confirm it: hill-climbing produces only LOWER bounds on `max_x psi`, so this
+gate can refute the ceiling and cannot establish it. Recorded as a one-sided check. A real
+confirmation needs a rigorous upper bound per pattern (an SDP/LP relaxation with an exactly verified
+rational dual, or exhaustive certified global optimisation).
+
+Complete proof available for one row: `max_x psi(C_L, x) = L^{-2}` for odd `L >= 5`, since
+`psi(C_L,x) = min_i x_i x_{i+1} <= (prod_i x_i)^{2/L} <= L^{-2}` by AM-GM twice, with equality only
+at uniform weights.
+
+---
+
 ## 4. Blocked-route ledger after these results
 
 | route | status | blocking lemma / falsifier |
