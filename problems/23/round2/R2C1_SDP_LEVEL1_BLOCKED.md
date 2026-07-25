@@ -65,12 +65,48 @@ the Lovász theta number of `C5` is `√5`. The level-1 lift is essentially seei
 > SDP relaxation of `max_x psi(H,x)` has value `(5 − √5)/50 > 1/25` on `C5`, so no aggregation of
 > level-1 SDP duals can certify the `1/25` ceiling for any pattern.*
 
-Reopen only with a **level ≥ 2 Lasserre relaxation**, whose moment matrix is indexed by monomials of
-degree ≤ 2 and therefore has size `1 + n + C(n,2)`: 16 for `C5`, 37 for Wagner, 56 for Petersen,
-92 for `C13(1,5)`. Those sizes are computationally feasible; the work is in generating the localizing
-matrices for the simplex constraints and the `2^(n-1)` cut inequalities, then rationalising the dual.
-**Calibrate any such attempt on `C5` first** — if level 2 does not return exactly `1/25` there, it is
-equally useless, and that single computation decides the whole route cheaply.
+## Level 2 was then run, per the decision rule above. It also fails.
+
+`claude_lasserre2_c5.py` implements the genuine level-2 moment relaxation on `C5`: moment vector
+indexed by `|α| ≤ 4` (126 entries), moment matrix `M₂` of size 21×21, localizing matrices `M₁(xᵢ y)`
+for each `xᵢ ≥ 0`, the simplex equalities `Σᵢ y_{α+eᵢ} = y_α` on every `|α| ≤ 3`, all moments
+nonnegative, and a localizing matrix `M₁(q_S y) − t·M₁(y) ⪰ 0` per cut. `t` enters bilinearly so the
+optimum is found by bisection (24 steps), each step a feasibility SDP.
+
+| relaxation | bound on `max_x ψ(C5,x)` | ratio to the true `1/25` |
+|---|---|---|
+| truth | **0.040000** | 1.000× |
+| level 1 (doubly nonnegative) | 0.055279 = (5 − √5)/50 | 1.382× |
+| **level 2 (moment, 21×21)** | **0.053170** | **1.329×** |
+
+**A bug I made and fixed, recorded because the fix matters.** My first level-2 run returned
+`0.057409`, which is *larger* than the level-1 bound — impossible for a hierarchy, and therefore a
+formulation error rather than a result. The cause: I had omitted the nonnegativity of the moments
+themselves. Since `x ≥ 0` on the simplex, every monomial is nonnegative and hence every moment
+`y_α ≥ 0`; without that the level-2 relaxation is genuinely weaker than the doubly-nonnegative
+level-1 one, which does impose entrywise `Y ≥ 0`. With `y ≥ 0` added the hierarchy is monotone again
+(`0.053170 < 0.055279`) and the numbers above are the corrected ones. **Anyone rebuilding this must
+include the moment nonnegativity.**
+
+**Verdict: the moment/SOS hierarchy is not a practical certificate route here.** Going from level 1
+to level 2 closed `0.00211` of a `0.01528` gap — about 14 % of the remaining distance — while the
+moment matrix grew from `n+1` to `1 + n + C(n+1,2)`. At that rate roughly fifteen levels would be
+needed on `C5` alone, and the whole computation would then have to be redone, at far larger size,
+for every pattern. Level 3 on `C5` already needs a 56×56 moment matrix and level 3 on Wagner a
+165×165 one, for a bound that would still be far from `1/25`.
+
+Blocking statement, verbatim:
+
+> *on `C5`, whose true value is exactly `1/25`, the Lasserre relaxations give `(5 − √5)/50 ≈ 0.05528`
+> at level 1 and `≈ 0.05317` at level 2, closing only about one seventh of the gap per level; the
+> hierarchy therefore cannot certify the `1/25` ceiling at any computationally reachable level.*
+
+Reopen only with a **structurally different certificate** — not a generic relaxation of the max-min.
+The natural candidates left are: a combinatorial argument exploiting that `q_S` ranges over *cuts*
+rather than arbitrary quadratics; or a symmetry-reduced relaxation for vertex-transitive patterns,
+where `C5`'s own rotational symmetry could collapse the SDP and might be tight where the generic one
+is not. That symmetry reduction is the cheapest untried idea and should be calibrated on `C5` the
+same way.
 
 ## Files
 
