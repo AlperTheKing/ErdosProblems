@@ -185,3 +185,41 @@ That is the single unproved step. It is not a reformulation of the conjecture �
 about three explicit moments of a measure on the circle, in a region of parameter space that is
 about 0.1 % of the sampled space, with the extremal `C5` sitting exactly on its boundary at
 `W = 1/5`, `T/W = 2/5`, `Var_μ(g) = 0`.
+
+
+## 10. CLEANEST FORM: two terms suffice
+
+The `g^k` hierarchy can be replaced by a single harmonic mean. For any weight the weighted average
+of `m` bounds `min_b m(b)`; taking the weight that makes the average a **harmonic** mean gives the
+sharpest member of the power-mean family that is still an explicit functional:
+
+```
+        H(μ) := 1 / E_μ[ 1/m ]  =  1 / Σ_b x_b / m(b)          (harmonic mean of m under μ)
+        A(μ) := W − 2T                                          (half-arc average)
+
+        ARCBOUND(μ)  ≤  min( A(μ) , H(μ) )   by AM–HM, H ≤ E_μ[m] = W − ∫g²dμ, so H is sharper
+                                              than every bound_k at k = 0 and needs no hierarchy.
+```
+
+> **CONJECTURE (final).** `min( W − 2T , 1/E_μ[1/m] ) ≤ 1/25` for every probability measure on the
+> circle with adjacency `d(x,y) > 1/3`.
+
+This implies the arc-cut conjecture, hence `max_x ψ(And(k),x) = 1/25` for every `k`, hence Erdős #23
+for every triangle-free graph with `δ > N/3` (modulo the Vega half of Brandt–Thomassé).
+
+**Tightness.** At the five-atom extremal `m ≡ 1/25`, so the harmonic mean equals `1/25` exactly, and
+`A = 1/5 − 4/25 = 1/25` exactly. Both terms are simultaneously tight, and neither can overshoot:
+`H = E_μ[m]` precisely when `m` is constant.
+
+**Verification, exact rational arithmetic, zero violations in 3606 tests:**
+
+| test | measures | violations |
+|---|---|---|
+| 9-witness regression set | 9 | 0 |
+| the two cases that killed weaker rules (`Γ_11` residual, `Γ_40` danger) | 2 | 0 |
+| random exact measures, `Γ_8…Γ_30` | 1500 | 0 |
+| near-extremal perturbations, `Γ_25…Γ_70`, positions and weights free | 2095 | 0 |
+
+Both hard cases are closed with room: the `Γ_11` residual gives `H = 0.038815` against failing
+averages `0.041980` and `0.041522`; the `Γ_40` case gives `H = 0.038815` against `0.041495` for the
+argmax-`g` rule and `0.041238` for `A`.
