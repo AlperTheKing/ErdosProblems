@@ -517,6 +517,58 @@ strongly-regular triangle-free graph of this type can reach `1/25`.
 
 ---
 
+## 3i. R1-C11 — the sharp star lemma: PROVED (a strengthening of the accepted base)
+
+Round-1 family F2 asserted this and no verifier ever ran on it. It is not merely confirmed here but
+**proved**, and the proof gives a whole family of inequalities of which both it and the
+accepted-base star lemma are special cases.
+
+**Lemma (general switch-star inequality).** Let `G` be triangle-free with a maximum cut, `B` the
+crossing edges, `sigma(u) = d_B(u) - d_M(u)`. Then for every vertex `v` and **every**
+`T subset N_B(v)`:
+
+        sigma(v)  >=  sum_{a in T} (2 - sigma(a)).
+
+**Proof.** For `S subset V`, counting degrees over `S` gives
+`sum_{u in S} d_B(u) = |boundary_B S| + 2 e_B(S)` and likewise for `M`, so
+`sigma(S) = sum_{u in S} sigma(u) - 2 e_B(S) + 2 e_M(S)`. Take `S = {v} u T`. Triangle-freeness
+makes `N_B(v)` independent, so `T` spans no edges at all; every edge inside `S` therefore joins `v`
+to a member of `T`, and each is a crossing edge by definition of `N_B(v)`. Hence `e_B(S) = |T|`,
+`e_M(S) = 0`, and `sigma({v} u T) = sigma(v) + sum_{a in T} sigma(a) - 2|T|`. At a maximum cut
+`sigma(S) >= 0` for every `S`, since switching `S` cannot decrease the monochromatic count.
+Rearranging gives the claim. []
+
+**Corollary (SHARP, the F2 statement).** Taking `T = {a in N_B(v) : sigma(a) < 2}`, which maximises
+the right-hand side,
+
+        sum_{a in N_B(v)} max(2 - sigma(a), 0)  <=  sigma(v).
+
+**Corollary (BASE, the accepted-base star lemma).** Taking `T = N_B(v)`,
+`sum_{a in N_B(v)} sigma(a) >= 2 d_B(v) - sigma(v)`.
+
+So BASE is one instance of a family, SHARP is its optimised instance, and SHARP is strictly
+stronger exactly when some crossing neighbour has `sigma(a) > 2`.
+
+**Exhaustive verification** (`claude_gate_sharpstar.py`), over **every maximum cut** of every
+connected triangle-free graph on at most 10 vertices — not one cut per graph, all of them:
+
+| n | graphs | SHARP failures | BASE failures | tight instances | instances where SHARP is strictly stronger |
+|---|---|---|---|---|---|
+| 4 | 3 | 0 | 0 | 1 | 3 |
+| 5 | 6 | 0 | 0 | 21 | 13 |
+| 6 | 19 | 0 | 0 | 27 | 89 |
+| 7 | 59 | 0 | 0 | 150 | 427 |
+| 8 | 267 | 0 | 0 | 761 | 2,774 |
+| 9 | 1,380 | 0 | 0 | 4,562 | 19,072 |
+| 10 | 9,832 | 0 | 0 | 36,392 | 172,312 |
+
+Zero failures, and SHARP is strictly stronger than BASE in 194,690 vertex-cut instances in this
+range, so the strengthening is real and not vacuous. **ACCEPTED**, and the general `T`-form should
+replace the base star lemma in any downstream use, since it supplies one inequality per subset of
+the crossing star rather than a single one.
+
+---
+
 ## 4. Blocked-route ledger after these results
 
 | route | status | blocking lemma / falsifier |
