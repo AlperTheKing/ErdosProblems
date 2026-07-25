@@ -429,21 +429,29 @@ a **proof** of `max_x psi(H,x) <= target`.
 Two-sided validation: with target `1/25` it closes on `C7` in 4895 nodes; with target `1/26`, which
 is strictly below the true maximum `1/25`, it correctly fails to close on `C5`.
 
-| pattern | best point found (lower bd) | gap to 1/25 | target 1/25 | nodes |
-|---|---|---|---|---|
-| C7 | 1/49 = 0.020408 | 0.019592 | **CERTIFIED** | 4,895 |
-| C9 | 0.012309 | 0.027691 | **CERTIFIED** | 9,261 |
-| Wagner `C8(1,4)` | 0.038652 | **0.001348** | inconclusive | >3,000,000 |
+| pattern | `n` | best point found (lower bd) | gap to 1/25 | target 1/25 | nodes |
+|---|---|---|---|---|---|
+| C7 | 7 | 1/49 = 0.020408 | 0.019592 | **CERTIFIED** | 4,895 |
+| C9 | 9 | 0.012309 | 0.027691 | **CERTIFIED** | 9,261 |
+| Wagner `C8(1,4)` | 8 | 0.038652 | **0.001348** | inconclusive | >3,000,000 |
+| Petersen | 10 | 0.030879 | 0.009121 | inconclusive | >3,000,000 |
 
-**The finding is the threshold, not the certificates.** Plain interval branch-and-bound closes
-comfortably when the pattern sits well below `1/25` (gaps of 0.02–0.028 close in under ten thousand
-nodes) and is hopeless on the near-extremal ones (Wagner, gap 0.0013, survives three million nodes
-at only `n = 8`). Since the whole difficulty of the conjecture is precisely the near-extremal
-patterns, **this certificate shape does not scale to the cases that matter**, and the box bound is
-the reason: it evaluates `hi_u hi_v` and so ignores the simplex constraint `sum x = 1` entirely
-except as a feasibility filter. Any usable certifier must incorporate that constraint into the
-bound -- which is exactly what an SDP/Lasserre dual does. Recorded so that the next agent does not
-re-derive this engine and re-discover its ceiling.
+**Verdict: this certifier produced NO new mathematics.** The only two patterns it closed are cycles,
+and `max_x psi(C_L,x) = L^{-2}` was already proved above by AM-GM — so the certificates are
+redundant. It failed on both genuinely interesting patterns.
+
+An earlier draft of this entry attributed the failure to the size of the gap ("closes comfortably
+when the pattern sits well below 1/25"). **Petersen refutes that**: its gap to `1/25` is `0.0091`,
+seven times Wagner's, and it still survives three million nodes. Dimension is at least as important
+as the gap — `C9` at `n = 9` closed in 9,261 nodes while Petersen at `n = 10` did not close in
+three million. The correct statement is that plain box branch-and-bound is useless here for **both**
+reasons, and the underlying defect is the bound itself: `sum_{uv mono} hi_u hi_v` uses the simplex
+constraint `sum x = 1` only as a feasibility filter and never inside the bound, so the bound stays
+far above the truth on every region that is not already tiny. Any usable certifier must put that
+constraint into the bound -- which is exactly what an SDP/Lasserre dual does.
+
+Recorded so that the next agent does not rebuild this engine and rediscover its ceiling. The open
+task of section 3g stands unchanged.
 
 ---
 
