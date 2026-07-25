@@ -379,6 +379,44 @@ Complete proof available for one row: `max_x psi(C_L, x) = L^{-2}` for odd `L >=
 `psi(C_L,x) = min_i x_i x_{i+1} <= (prod_i x_i)^{2/L} <= L^{-2}` by AM-GM twice, with equality only
 at uniform weights.
 
+### What a rigorous ceiling certificate would have to be, and two attempts that FAIL
+
+Since `psi(H,x)` is a minimum over cuts, for any probability distribution `lambda` on cuts,
+`psi(H,x) <= sum_i lambda_i q_i(x) = sum_{uv in E} c_uv x_u x_v` where
+`c_uv = Prob_lambda[uv monochromatic]`. So any fixed `lambda` yields the upper bound
+
+        max_x psi(H,x)  <=  max over the simplex of  sum_{uv in E} c_uv x_u x_v.
+
+This is the natural certificate shape. **Both obvious choices of `lambda` are too weak, verified by
+hand:**
+
+* **`lambda` = uniform over all `2^(n-1)` cuts.** Then `c_uv = 1/2` for every edge, so the bound is
+  `(1/2) * max_x sum_{uv in E} x_u x_v`. By Motzkin-Straus that maximum is
+  `(1/2)(1 - 1/omega(H))`, and `omega = 2` for triangle-free `H`, giving `1/4`. The bound is
+  therefore `1/8 = 0.125`, three times too large.
+* **`lambda` = uniform over the five "rotation" cuts of `C5`** (the cuts `{i, i+2}`, which are the
+  ones that make the elementary argument work). Each edge is monochromatic in exactly one of the
+  five, so `c_uv = 1/5` on all five edges and the bound is `(1/5) max_x sum_i x_i x_{i+1}`. That
+  inner maximum is `1/4`, attained at `x = (1/2, 1/2, 0, 0, 0)`, so the bound is
+  `1/20 = 0.05 > 1/25`. Even on `C5` itself, where the truth is exactly `1/25`, a fixed `lambda`
+  fails.
+
+The reason both fail is structural and worth recording: the inner maximum over the simplex is
+attained at a **degenerate** point where the weight collapses onto a single edge, and at such a
+point the cut that actually achieves the minimum is a different one from the cuts `lambda` favours.
+A valid certificate must therefore let the multiplier depend on `x` — i.e. it must be an SDP or a
+piecewise/branch-and-bound object, not a single averaging weight. Concretely, the open technical
+task is:
+
+> Produce, for each pattern `H`, a rigorously certified upper bound on
+> `max over the simplex of min over cuts S of sum_{uv monochromatic} x_u x_v`,
+> for instance by a Shor/Lasserre relaxation of the max-min with an exactly verified rational dual,
+> or by exhaustive certified global optimisation over the support lattice (for each support
+> `T subset V(H)` solve the KKT system exactly and take the maximum).
+
+Until that exists, every "max_x psi(H,x) = 1/25" statement in this project -- mine and family
+F8's -- is a LOWER-BOUND search result only.
+
 ---
 
 ## 4. Blocked-route ledger after these results
