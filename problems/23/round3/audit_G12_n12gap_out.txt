@@ -1,0 +1,38 @@
+============================================================================
+A. N=12 exact integrality-gap witnesses  (report claimed min witness in {12,13,14})
+============================================================================
+K??E@_qi?]Ia: N=12 |E|=18 tri-free=True girth=4 degs=[2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4]
+   bip = 4 (exhaustive cuts)   |E|/5 = 18/5   5*bip = 20 > |E| = 18: True
+   uniform 1/5 cover feasible on all 40 odd cycles: True  => nu* <= 18/5
+   exact LP over all odd cycles: nu* = tau* = 10/3   bip - nu* = 2/3   gap = 6/5
+   bip/N^2 = 1/36 vs 1/25 (no threat to the conjecture)
+
+K??EDbGIaYAe: N=12 |E|=19 tri-free=True girth=4 degs=[2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4]
+   bip = 4 (exhaustive cuts)   |E|/5 = 19/5   5*bip = 20 > |E| = 19: True
+   uniform 1/5 cover feasible on all 67 odd cycles: True  => nu* <= 19/5
+   exact LP over all odd cycles: nu* = tau* = 11/3   bip - nu* = 1/3   gap = 12/11
+   bip/N^2 = 1/36 vs 1/25 (no threat to the conjecture)
+
+K?AAD?WNBHCs: N=12 |E|=18 tri-free=True girth=4 degs=[2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4]
+   bip = 4 (exhaustive cuts)   |E|/5 = 18/5   5*bip = 20 > |E| = 18: True
+   uniform 1/5 cover feasible on all 34 odd cycles: True  => nu* <= 18/5
+   exact LP over all odd cycles: nu* = tau* = 10/3   bip - nu* = 2/3   gap = 6/5
+   bip/N^2 = 1/36 vs 1/25 (no threat to the conjecture)
+
+============================================================================
+B. the exact ceiling of the neighbourhood-cut mechanism M1
+============================================================================
+K??FEb_F?wD_: N=12 |E|=18 degrees=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3] bipartite=True bip=0
+   M1 = 9 = 1/16 N^2 = 0.062500 N^2   (N^2/16 = 9, N^2/25 = 144/25)
+   M2 = 0 = 0 N^2     M4 = 9 = 1/16 N^2
+   M1 == N^2/16 exactly: True
+
+K?`FE`wl?{Dg: N=12 |E|=24 degrees=[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4] bipartite=False bip=4
+   M1 = 8 = 1/18 N^2 = 0.055556 N^2   (N^2/16 = 9, N^2/25 = 144/25)
+   M2 = 8 = 1/18 N^2     M4 = 8 = 1/18 N^2
+   M1 == N^2/16 exactly: False
+
+Every 3-regular triangle-free graph on 12 vertices has
+   M1 = m - 3*3 = 18 - 9 = 9 = 144/16 = N^2/16 exactly,
+so sup_G M1(G)/N^2 = 1/16 is ATTAINED, not merely a limit;
+the report's 'worst ratio found 5/81 = 0.061728' is not the worst (1/16 = 0.0625).

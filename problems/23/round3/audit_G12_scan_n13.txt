@@ -1,0 +1,23 @@
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???C@_sAQCrFg n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???C@_UCh@[hc n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???C@_U@KqcEw n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???C@_cIoSpBw n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???C@oq@I@sCe n=13 m=18 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???E?oKTO@kTa n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???E?oITG?{Ua n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???EAoq@IGsCe n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???EAoq@I@sCe n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L???E?pb@SIQDQ n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CAA_KEObo`S n=13 m=18 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CAA_KEObobS n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CAA_KEOoiV_ n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CAA_EBCfOHs n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CAA_EBCcYN_ n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CAB_WdA^_FM n=13 m=23 bip=5
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CA?owEPBo`W n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CA?oI?XYaDs n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CA?oICXYADs n=13 m=19 bip=4
+EXACT GAP WITNESS (bip > m/5 >= nu*) L??CA?oiEHBoaW n=13 m=19 bip=4
+graphs=19425052  covering-violations=0  M4-violations=0  exact-gap-witnesses=155  conj-counterexamples=0
+max bip=6 (L??ED@_~?~^_Fw)   max M1=10 (L???E?xmBKIob_)   max M2=10 (L?`DE`gl@YJODg)
+DONE

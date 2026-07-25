@@ -1,0 +1,139 @@
+==============================================================================
+1. l/(3l-1) is strictly decreasing; the ladder thresholds
+==============================================================================
+  [OK]   t/(3t-1) strictly decreasing
+   k   threshold (k+1)/(3k+2)          target And_k   |V(And_k)|   vs 3/8      vs 10/29
+    1        2/5 = 0.400000   And_1          2       >=3/8   >10/29
+    2        3/8 = 0.375000   And_2          5       >=3/8   >10/29
+    3       4/11 = 0.363636   And_3          8        <3/8   >10/29
+    4       5/14 = 0.357143   And_4         11        <3/8   >10/29
+    5       6/17 = 0.352941   And_5         14        <3/8   >10/29
+    6       7/20 = 0.350000   And_6         17        <3/8   >10/29
+    7       8/23 = 0.347826   And_7         20        <3/8   >10/29
+    8       9/26 = 0.346154   And_8         23        <3/8   >10/29
+    9      10/29 = 0.344828   And_9         26        <3/8   =10/29
+   10      11/32 = 0.343750   And_10        29        <3/8   <10/29
+   11      12/35 = 0.342857   And_11        32        <3/8   <10/29
+  [OK]   (k+1)/(3k+2) == l/(3l-1) at l=k+1
+  [OK]   threshold at k=2 is exactly 3/8 (Haggkvist)
+  [OK]   threshold at k=3 is 4/11 and 4/11 < 3/8  => band SHRINKS   4/11=0.363636 < 3/8=0.375
+  [OK]   threshold at k=9 is exactly 10/29 (Jin's exact value)
+  [OK]   (k+1)/(3k+2) >= 10/29 exactly for k <= 9
+
+==============================================================================
+2. Vega l-values l = 9i-(6+mu+nu): re-derived from the BT weights I built
+   (BT Thm 3 degree = l, BT Thm 3 total weight must equal 3l-1)
+==============================================================================
+   Ups_2          l = deg =  12   total weight =  35   3l-1 =  35   OK
+  [OK]   Ups_2: total weight == 3l-1
+   Ups_2-2i       l = deg =  11   total weight =  32   3l-1 =  32   OK
+  [OK]   Ups_2-2i: total weight == 3l-1
+   Ups_2-y        l = deg =  11   total weight =  32   3l-1 =  32   OK
+  [OK]   Ups_2-y: total weight == 3l-1
+   Ups_2-y-2i     l = deg =  10   total weight =  29   3l-1 =  29   OK
+  [OK]   Ups_2-y-2i: total weight == 3l-1
+   Ups_3          l = deg =  21   total weight =  62   3l-1 =  62   OK
+  [OK]   Ups_3: total weight == 3l-1
+   Ups_3-2i       l = deg =  20   total weight =  59   3l-1 =  59   OK
+  [OK]   Ups_3-2i: total weight == 3l-1
+   Ups_3-y        l = deg =  20   total weight =  59   3l-1 =  59   OK
+  [OK]   Ups_3-y: total weight == 3l-1
+   Ups_3-y-2i     l = deg =  19   total weight =  56   3l-1 =  56   OK
+  [OK]   Ups_3-y-2i: total weight == 3l-1
+   Ups_4          l = deg =  30   total weight =  89   3l-1 =  89   OK
+  [OK]   Ups_4: total weight == 3l-1
+   Ups_4-2i       l = deg =  29   total weight =  86   3l-1 =  86   OK
+  [OK]   Ups_4-2i: total weight == 3l-1
+   Ups_4-y        l = deg =  29   total weight =  86   3l-1 =  86   OK
+  [OK]   Ups_4-y: total weight == 3l-1
+   Ups_4-y-2i     l = deg =  28   total weight =  83   3l-1 =  83   OK
+  [OK]   Ups_4-y-2i: total weight == 3l-1
+   Ups_5          l = deg =  39   total weight = 116   3l-1 = 116   OK
+  [OK]   Ups_5: total weight == 3l-1
+   Ups_5-2i       l = deg =  38   total weight = 113   3l-1 = 113   OK
+  [OK]   Ups_5-2i: total weight == 3l-1
+   Ups_5-y        l = deg =  38   total weight = 113   3l-1 = 113   OK
+  [OK]   Ups_5-y: total weight == 3l-1
+   Ups_5-y-2i     l = deg =  37   total weight = 110   3l-1 = 110   OK
+  [OK]   Ups_5-y-2i: total weight == 3l-1
+   Ups_6          l = deg =  48   total weight = 143   3l-1 = 143   OK
+  [OK]   Ups_6: total weight == 3l-1
+   Ups_6-2i       l = deg =  47   total weight = 140   3l-1 = 140   OK
+  [OK]   Ups_6-2i: total weight == 3l-1
+   Ups_6-y        l = deg =  47   total weight = 140   3l-1 = 140   OK
+  [OK]   Ups_6-y: total weight == 3l-1
+   Ups_6-y-2i     l = deg =  46   total weight = 137   3l-1 = 137   OK
+  [OK]   Ups_6-y-2i: total weight == 3l-1
+   Ups_7          l = deg =  57   total weight = 170   3l-1 = 170   OK
+  [OK]   Ups_7: total weight == 3l-1
+   Ups_7-2i       l = deg =  56   total weight = 167   3l-1 = 167   OK
+  [OK]   Ups_7-2i: total weight == 3l-1
+   Ups_7-y        l = deg =  56   total weight = 167   3l-1 = 167   OK
+  [OK]   Ups_7-y: total weight == 3l-1
+   Ups_7-y-2i     l = deg =  55   total weight = 164   3l-1 = 164   OK
+  [OK]   Ups_7-y-2i: total weight == 3l-1
+   Ups_8          l = deg =  66   total weight = 197   3l-1 = 197   OK
+  [OK]   Ups_8: total weight == 3l-1
+   Ups_8-2i       l = deg =  65   total weight = 194   3l-1 = 194   OK
+  [OK]   Ups_8-2i: total weight == 3l-1
+   Ups_8-y        l = deg =  65   total weight = 194   3l-1 = 194   OK
+  [OK]   Ups_8-y: total weight == 3l-1
+   Ups_8-y-2i     l = deg =  64   total weight = 191   3l-1 = 191   OK
+  [OK]   Ups_8-y-2i: total weight == 3l-1
+   smallest Vega l-value = (10, 'Ups_2-y-2i')
+  [OK]   smallest Vega l-value is 10 (Ups_2-y-2i = Grotzsch) => no Vega target for k<=9   (10, 'Ups_2-y-2i')
+
+==============================================================================
+3. And_j is an INDUCED subgraph of And_k for j < k (so And_k is the
+   hardest target of the ladder, and max_x psi(And_k) dominates)
+==============================================================================
+   And_3 - {v_5, v_6, v_7}  iso  And_2 : True   (n 5 vs 5, m 5 vs 5)
+  [OK]   And_2 is an induced subgraph of And_3
+   And_4 - {v_8, v_9, v_10}  iso  And_3 : True   (n 8 vs 8, m 12 vs 12)
+  [OK]   And_3 is an induced subgraph of And_4
+   And_5 - {v_11, v_12, v_13}  iso  And_4 : True   (n 11 vs 11, m 22 vs 22)
+  [OK]   And_4 is an induced subgraph of And_5
+   And_6 - {v_14, v_15, v_16}  iso  And_5 : True   (n 14 vs 14, m 35 vs 35)
+  [OK]   And_5 is an induced subgraph of And_6
+   And_7 - {v_17, v_18, v_19}  iso  And_6 : True   (n 17 vs 17, m 51 vs 51)
+  [OK]   And_6 is an induced subgraph of And_7
+   And_8 - {v_20, v_21, v_22}  iso  And_7 : True   (n 20 vs 20, m 70 vs 70)
+  [OK]   And_7 is an induced subgraph of And_8
+   And_9 - {v_23, v_24, v_25}  iso  And_8 : True   (n 23 vs 23, m 92 vs 92)
+  [OK]   And_8 is an induced subgraph of And_9
+   And_10 - {v_26, v_27, v_28}  iso  And_9 : True   (n 26 vs 26, m 117 vs 117)
+  [OK]   And_9 is an induced subgraph of And_10
+
+==============================================================================
+4. delta of the balanced blow-up of And_k equals k n/(3k-1) (LPR Fact 2.1b
+   is tight), so the threshold (k+1)/(3k+2) cannot be lowered for And_k
+==============================================================================
+   And_2: k-regular on 3k-1 = 5 vertices, delta(balanced blow-up)/n = 2/5 = 0.400000   > (k+1)/(3k+2) = 3/8 ? True
+  [OK]   And_2 balanced blow-up has delta/n = k/(3k-1) > (k+1)/(3k+2)
+  [OK]   And_3 balanced blow-up has delta/n = (k+1)/(3k+2), NOT > it
+   And_3: k-regular on 3k-1 = 8 vertices, delta(balanced blow-up)/n = 3/8 = 0.375000   > (k+1)/(3k+2) = 4/11 ? True
+  [OK]   And_3 balanced blow-up has delta/n = k/(3k-1) > (k+1)/(3k+2)
+  [OK]   And_4 balanced blow-up has delta/n = (k+1)/(3k+2), NOT > it
+   And_4: k-regular on 3k-1 = 11 vertices, delta(balanced blow-up)/n = 4/11 = 0.363636   > (k+1)/(3k+2) = 5/14 ? True
+  [OK]   And_4 balanced blow-up has delta/n = k/(3k-1) > (k+1)/(3k+2)
+  [OK]   And_5 balanced blow-up has delta/n = (k+1)/(3k+2), NOT > it
+   And_5: k-regular on 3k-1 = 14 vertices, delta(balanced blow-up)/n = 5/14 = 0.357143   > (k+1)/(3k+2) = 6/17 ? True
+  [OK]   And_5 balanced blow-up has delta/n = k/(3k-1) > (k+1)/(3k+2)
+  [OK]   And_6 balanced blow-up has delta/n = (k+1)/(3k+2), NOT > it
+   And_6: k-regular on 3k-1 = 17 vertices, delta(balanced blow-up)/n = 6/17 = 0.352941   > (k+1)/(3k+2) = 7/20 ? True
+  [OK]   And_6 balanced blow-up has delta/n = k/(3k-1) > (k+1)/(3k+2)
+  [OK]   And_7 balanced blow-up has delta/n = (k+1)/(3k+2), NOT > it
+   And_7: k-regular on 3k-1 = 20 vertices, delta(balanced blow-up)/n = 7/20 = 0.350000   > (k+1)/(3k+2) = 8/23 ? True
+  [OK]   And_7 balanced blow-up has delta/n = k/(3k-1) > (k+1)/(3k+2)
+  [OK]   And_8 balanced blow-up has delta/n = (k+1)/(3k+2), NOT > it
+
+==============================================================================
+5. the k=3 target: Wagner V8 = And_3 = Gamma_3, exact data
+==============================================================================
+   And_3: n=8 m=12 degrees=[3, 3, 3, 3, 3, 3, 3, 3] bip=2 maxcut=10 bip/n^2=1/32
+   psi(And_3, uniform) = 1/32 = 0.031250 (a LOWER bound on max_x psi; fact 3 gives max_x psi >= 1/25)
+  [OK]   And_3 is 3-regular on 8 vertices with bip = 2
+  [OK]   psi(And_3, uniform) = 1/32 < 1/25 (so the uniform point is NOT the max)
+
+==============================================================================
+TOTAL FAILURES: 0

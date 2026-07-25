@@ -1,0 +1,108 @@
+# R3-C11 — the ARC-CUT mechanism: a weight-reading certificate that is exactly tight on the whole Andrásfai family
+
+Root-agent result, 2026-07-25. This is the first candidate mechanism in the campaign that satisfies
+the constraint imposed by R3-C1 (*a proof must read the weights*) **and** is exactly tight at `1/25`
+on an infinite family, and it targets the one place where the literature has reduced the conjecture
+on an explicit degree range to a named finite/structured family.
+
+## 1. Where it comes from
+
+`And(k)` is the **circular complete graph** `K_{(3k−1)/k}`: on `Z_m` with `m = 3k−1`,
+`u ~ v ⟺ 3·circdist(u,v) > m` (verified independently in `claude_arccut.py`, definition check for
+`k = 2..7`; the multiplier `v ↦ kv mod m` carries the residue-`1 mod 3` connection set onto the
+"far" relation). Equivalently: **`And(k)` is the circle graph `Γ` on `R/Z` — `x ~ y ⟺ d(x,y) > 1/3` —
+restricted to `3k−1` equally spaced points.** Write `Γ_m` for the graph on `m` equally spaced points,
+so `And(k) = Γ_{3k−1}` and every finite discretisation of `Γ` is some `Γ_m`.
+
+Two facts make the family a single object rather than infinitely many cases:
+
+* `K_{p/q} → K_{p'/q'}` iff `p/q ≤ p'/q'`, and `(3k−1)/k = 3 − 1/k` increases, so
+  `And(2) → And(3) → And(4) → …`; since `H → K` implies `max ψ(H) ≤ max ψ(K)`,
+  **`A(k) := max_x ψ(And(k),x)` is nondecreasing with `A(2) = 1/25`.** The Andrásfai question is a
+  single limit question.
+* `χ_f(And(k)) = (3k−1)/k > 5/2` for `k ≥ 3`, so no `And(k)` with `k ≥ 3` maps to `C5` and the
+  elementary AM–GM certificate is unavailable for the entire family.
+
+## 2. The mechanism
+
+For a weighting `x` on `Γ_m` define
+
+```
+    ARCBOUND(x) = min over ARCS A = {i, i+1, …, i+ℓ−1} of
+                  [ Σ_{u,v ∈ A, u~v} x_u x_v  +  Σ_{u,v ∉ A, u~v} x_u x_v ].
+```
+
+Every arc cut is a cut, so `ψ(Γ_m, x) ≤ ARCBOUND(x)` always. The cut is chosen **after** looking at
+`x` — the position and the length of the arc both depend on the weights — so this family is not
+excluded by R3-C1, unlike every averaging certificate.
+
+**CONJECTURE (arc-cut).** `25·ARCBOUND(x) ≤ (Σx)²` for every nonnegative weighting of every `Γ_m`.
+
+Equivalently, in the continuum: for every probability measure `μ` on the circle there is an arc `A`
+with monochromatic mass at most `1/25`.
+
+## 3. Why it would settle an explicitly named open case
+
+The arc-cut conjecture implies `max_x ψ(And(k),x) = 1/25` for **every** `k` — that is Heinig's
+Conjecture 6 — and hence `bip(G) ≤ N²/25` for every triangle-free `G` homomorphic to an Andrásfai
+graph. By Chen–Jin–Koh (weighted form as quoted by Brandt–Thomassé) the twin-free maximal
+triangle-free weighted graphs with `δ > 1/3` are exactly the Andrásfai graphs `Γ_i` and the
+4-chromatic **Vega** graphs. So arc-cut + the Vega analogue give the conjecture unconditionally on
+`δ > N/3`, shrinking the open band from `(0.16N, 0.375N]` to `(0.16N, N/3]` — which GOAL rule (c)
+admits as progress, and which is the sharpest target the literature offers.
+
+## 4. Exhaustive exact evidence
+
+`claude_arccut.cpp`: for a given `m`, enumerate **all** integer weightings `a ≥ 0` with `Σa = q`
+(rotation-canonical), compute `ARCBOUND` exactly in integers, and compare `25·ARCBOUND` with `q²`.
+
+| `m` | arc cuts | `q` searched | `max_a 25·ARCBOUND(a) − q²` | tight configurations |
+|---|---|---|---|---|
+| 5 (`And(2) = C5`) | 11 | 1..16 | `≤ 0`, `= 0` exactly at `q ≡ 0 (mod 5)` | `(t,t,t,t,t)` |
+| 8 (`And(3)` = Wagner) | 29 | 1..16 | `≤ 0`, `= 0` at `q ≡ 0 (mod 5)` | `(0,t,0,t,t,0,t,t)` |
+| 10 | 46 | 1..16 | `≤ 0`, `= 0` at `q ≡ 0 (mod 5)` | `(0,t,0,t,0,t,0,t,0,t)` |
+| 11 (`And(4)`) | 56 | 1..16 | `≤ 0`, `= 0` at `q ≡ 0 (mod 5)` | 5 atoms |
+| 13 | 79 | 1..16 | `≤ 0`, `= 0` at `q ≡ 0 (mod 5)` | 5 atoms |
+
+In every case the whole profile `q ↦ max_a ARCBOUND(a)` is **identical to the `C5` profile**
+`0,0,0,0,1,1,1,2,2,4,4,4,6,6,9,9,…`, and the maximisers are always five-atom configurations. So on
+these graphs the arc family alone already certifies the ceiling, with equality exactly where the
+conjecture is sharp.
+
+Two sanity anchors, both exact:
+
+* five equally spaced atoms inside `Γ_20 = And(7)` give `ARCBOUND = 1/25` exactly;
+* the uniform weighting gives `1/32, 4/121, 3/98, 9/289, 3/100` on `And(3..7)` — matching the true
+  `bip/n²` in each case, and tending to the continuum half-arc value `1/36`, so the family is tight
+  in the `5`-atom case and *also* correct on the uniform measure. A cut family that were tight only
+  at the extremal point would be suspect; this one is not.
+
+## 5. What is proved, and what is open
+
+Proved here:
+
+* `And(k) = Γ_{3k−1}` exactly (own verification), so the family is one continuum object;
+* every arc cut is a cut, hence `ψ ≤ ARCBOUND` and every arc-cut bound is a *valid* upper bound —
+  the conjecture above can only ever be **too weak**, never wrong in the dangerous direction;
+* the "three thirds" identity: for any rotation `c`, the circle splits into three consecutive arcs
+  each of which is independent (an arc of length `≤ 1/3` spans distance `≤ 1/3`), every adjacent pair
+  joins two *different* thirds, and the three `1/3`-arc cuts have values exactly the three
+  between-thirds masses `S12, S23, S31`, whose sum is the total adjacent mass `W`. Hence
+  `ARCBOUND ≤ W/3` for every measure, and the conjecture holds outright whenever `W ≤ 3/25`.
+
+Open (this is the technical target):
+
+> For every probability measure `μ` on `R/Z` with total adjacent mass `W > 3/25`, some arc `A`
+> satisfies `mono(A) ≤ 1/25`.
+
+Two boundary cases show what any proof must reconcile, and neither family of arcs alone suffices:
+
+* the **uniform** measure has `W = 1/6 > 3/25`, all three thirds carry exactly `W/3 = 1/18 > 1/25`,
+  and it is saved only by the **half-arc**, which gives exactly `1/36`;
+* the **five-atom** measure has `W = 1/5`, is saved by a `1/3`-arc giving exactly `1/25`, and the
+  crude bound `mono ≤ β₁β₂` is off by a factor two there — the exact "staircase" structure
+  `mono = ∫∫_{t<s} dν₁(t) dν₂(s)` between the two remaining thirds is what makes `1/25` appear.
+
+A useful reformulation for the attack: transporting `μ` to Lebesgue by its quantile map turns the
+problem into one about a monotone circle map `φ` with `φ³ = id + 1`, adjacency `y ∈ (φ(x), φ²(x))`,
+and Lebesgue measure — arcs remain arcs, and the extremal object becomes the five-step `φ`.

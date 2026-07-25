@@ -1,0 +1,4 @@
+Gamma_2        n= 5  covered q<=596  max 25Mdeg/q^2 = 1            (=1.000000 at q=5)
+Gamma_3        n= 8  covered q<=98  max 25Mdeg/q^2 = 1925/2116    (=0.909735 at q=92)
+Gamma_4        n=11  covered q<=48  max 25Mdeg/q^2 = 1950/2209    (=0.882752 at q=47)
+Gamma_5        n=14  covered q<=34  max 25Mdeg/q^2 = 825/1024     (=0.805664 at q=32)

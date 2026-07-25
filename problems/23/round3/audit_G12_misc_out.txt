@@ -1,0 +1,61 @@
+============================================================================
+1. band algebra, exact (sympy)
+============================================================================
+   roots of x - 4x^2 = 1/25 : [1/20, 1/5]   (1/20 and 1/5: True)
+   max of x-4x^2 = 1/16 at x = 1/8: True
+   at x = 1/5 the bound is exactly 1/25
+
+============================================================================
+2. mechanisms M1..M5 on the named graphs (exact)
+============================================================================
+C5: N=5 |E|=5 bip=1 N^2/25=1=1.0000
+    M1=1 ok   M2=1 ok   M3=1 ok
+    M4=1=1.0000 ok   M5=9/4 BREAKS   M2/N^2=1/25
+C5[2]: N=10 |E|=20 bip=4 N^2/25=4=4.0000
+    M1=4 ok   M2=4 ok   M3=4 ok
+    M4=4=4.0000 ok   M5=9 BREAKS   M2/N^2=1/25
+C5[3]: N=15 |E|=45 bip=9 N^2/25=9=9.0000
+    M1=9 ok   M2=9 ok   M3=9 ok
+    M4=9=9.0000 ok   M5=81/4 BREAKS   M2/N^2=1/25
+Petersen: N=10 |E|=15 bip=3 N^2/25=4=4.0000
+    M1=6 BREAKS   M2=3 ok   M3=6 BREAKS
+    M4=6=6.0000 BREAKS   M5=49/4 BREAKS   M2/N^2=3/100
+Clebsch: N=16 |E|=40 bip=8 N^2/25=256/25=10.2400
+    M1=15 BREAKS   M2=15 BREAKS   M3=15 BREAKS
+    M4=15=15.0000 BREAKS   M5=121/4 BREAKS   M2/N^2=15/256
+And(3): N=8 |E|=12 bip=2 N^2/25=64/25=2.5600
+    M1=3 BREAKS   M2=3 BREAKS   M3=3 BREAKS
+    M4=3=3.0000 BREAKS   M5=25/4 BREAKS   M2/N^2=3/64
+And(4): N=11 |E|=22 bip=4 N^2/25=121/25=4.8400
+    M1=6 BREAKS   M2=6 BREAKS   M3=6 BREAKS
+    M4=6=6.0000 BREAKS   M5=49/4 BREAKS   M2/N^2=6/121
+And(5): N=14 |E|=35 bip=6 N^2/25=196/25=7.8400
+    M1=10 BREAKS   M2=10 BREAKS   M3=10 BREAKS
+    M4=10=10.0000 BREAKS   M5=81/4 BREAKS   M2/N^2=5/98
+And(6): N=17 |E|=51 bip=9 N^2/25=289/25=11.5600
+    M1=15 BREAKS   M2=15 BREAKS   M3=15 BREAKS
+    M4=15=15.0000 BREAKS   M5=121/4 BREAKS   M2/N^2=15/289
+extremal N=14: N=14 |E|=32 bip=7 N^2/25=196/25=7.8400
+    M1=9 BREAKS   M2=9 BREAKS   M3=9 BREAKS
+    M4=76/7=10.8571 BREAKS   M5=81/4 BREAKS   M2/N^2=9/196
+extremal N=12a: N=12 |E|=25 bip=5 N^2/25=144/25=5.7600
+    M1=5 ok   M2=5 ok   M3=5 ok
+    M4=43/6=7.1667 BREAKS   M5=49/4 BREAKS   M2/N^2=5/144
+   (bip <= M1,M2,M4,M5 verified on every row)
+
+============================================================================
+3. P6 statement 1 (coset of the cut space) and statement 2 (double cover)
+============================================================================
+C5: bip=1  min weight of coset 1+Cut(G) = 1  equal=True   double-cover equivalence on 200 random F: True   (cycle-space dim 1 = |E|-n+1 = 1)
+C5[2]: bip=4  min weight of coset 1+Cut(G) = 4  equal=True   double-cover equivalence on 200 random F: True   (cycle-space dim 11 = |E|-n+1 = 11)
+Petersen: bip=3  min weight of coset 1+Cut(G) = 3  equal=True   double-cover equivalence on 200 random F: True   (cycle-space dim 6 = |E|-n+1 = 6)
+extremal N=12a: bip=5  min weight of coset 1+Cut(G) = 5  equal=True   double-cover equivalence on 200 random F: True   (cycle-space dim 14 = |E|-n+1 = 14)
+
+============================================================================
+4. Higman-Sims / Clebsch arithmetic for the M2 ceiling
+============================================================================
+   Clebsch  srg(16,5,0,2): m=40, alpha=5  -> M2 = 40-5*5 = 15, M2/N^2 = 15/256 = 0.058594
+   Higman-Sims srg(100,22,0,6): m=1100, alpha=22 -> M2 = 1100-22*22 = 616, M2/N^2 = 77/1250 = 0.061600  (literature alpha, not recomputed)
+   N^2/16 for N=100 is 625 = 625 > 616
+   C8 (2-regular, N=8=4*2): M1 = 8-2*2 = 4 = N^2/16 = 4 EXACT
+   any d-regular triangle-free graph on N=4d vertices: M1 = 2d^2-d^2 = d^2 = N^2/16

@@ -1,0 +1,6 @@
+Gamma_1        n= 2  covered q<=12522  max 25M/q^2 = 0
+Gamma_2        n= 5  covered q<=785  max 25M/q^2 = 1
+Gamma_3        n= 8  covered q<=144  max 25M/q^2 = 1
+Gamma_4        n=11  covered q<=59  max 25M/q^2 = 1
+Gamma_5        n=14  covered q<=43  max 25M/q^2 = 1
+Gamma_6        n=17  covered q<=29  max 25M/q^2 = 1

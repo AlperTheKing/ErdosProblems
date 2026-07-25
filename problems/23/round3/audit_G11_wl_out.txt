@@ -1,0 +1,6 @@
+V8 : n=8 m=12 degrees=[3, 3, 3, 3, 3, 3, 3, 3] bipartite=False
+Q3 : n=8 m=12 degrees=[3, 3, 3, 3, 3, 3, 3, 3] bipartite=True
+target WL certificate equal ?  True
+actually isomorphic ?         False
+
+RESULT: the WL-1 certificate used by G11_verify_andrasfai.py part (D) declares V8 and Q3 identical although they are not isomorphic (Q3 bipartite, V8 not). The method proves nothing on regular graphs.

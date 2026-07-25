@@ -1,0 +1,318 @@
+
+==============================================================================
+A. bip(And_k) by INDEPENDENT exhaustive max-cut vs floor(k^2/4)
+==============================================================================
+   k=2  n=  5  |E|=  5  maxcut=  4  bip=  1  floor(k^2/4)=  1  bip/n^2=1/25=0.040000
+  [OK]   bip(And_2) == floor(k^2/4)  (1 vs 1)
+  [OK]   bip(And_2)/n^2 <= 1/25
+   k=3  n=  8  |E|= 12  maxcut= 10  bip=  2  floor(k^2/4)=  2  bip/n^2=1/32=0.031250
+  [OK]   bip(And_3) == floor(k^2/4)  (2 vs 2)
+  [OK]   bip(And_3)/n^2 <= 1/25
+   k=4  n= 11  |E|= 22  maxcut= 18  bip=  4  floor(k^2/4)=  4  bip/n^2=4/121=0.033058
+  [OK]   bip(And_4) == floor(k^2/4)  (4 vs 4)
+  [OK]   bip(And_4)/n^2 <= 1/25
+   k=5  n= 14  |E|= 35  maxcut= 29  bip=  6  floor(k^2/4)=  6  bip/n^2=3/98=0.030612
+  [OK]   bip(And_5) == floor(k^2/4)  (6 vs 6)
+  [OK]   bip(And_5)/n^2 <= 1/25
+   k=6  n= 17  |E|= 51  maxcut= 42  bip=  9  floor(k^2/4)=  9  bip/n^2=9/289=0.031142
+  [OK]   bip(And_6) == floor(k^2/4)  (9 vs 9)
+  [OK]   bip(And_6)/n^2 <= 1/25
+   k=7  n= 20  |E|= 70  maxcut= 58  bip= 12  floor(k^2/4)= 12  bip/n^2=3/100=0.030000
+  [OK]   bip(And_7) == floor(k^2/4)  (12 vs 12)
+  [OK]   bip(And_7)/n^2 <= 1/25
+
+==============================================================================
+B. Heinig F_k: subset, bipartification, |F_k| = floor(k^2/4)
+==============================================================================
+   k= 2 n=  5 |F|=  1 floor(k^2/4)=  1 floor((n+1)^2/36)=  1 subset=True bipartite=True
+  [OK]   F_2 subset E(And_2)
+  [OK]   And_2-F_2 bipartite
+  [OK]   |F_2| == floor(k^2/4) == floor((n+1)^2/36)
+   k= 3 n=  8 |F|=  2 floor(k^2/4)=  2 floor((n+1)^2/36)=  2 subset=True bipartite=True
+  [OK]   F_3 subset E(And_3)
+  [OK]   And_3-F_3 bipartite
+  [OK]   |F_3| == floor(k^2/4) == floor((n+1)^2/36)
+   k= 4 n= 11 |F|=  4 floor(k^2/4)=  4 floor((n+1)^2/36)=  4 subset=True bipartite=True
+  [OK]   F_4 subset E(And_4)
+  [OK]   And_4-F_4 bipartite
+  [OK]   |F_4| == floor(k^2/4) == floor((n+1)^2/36)
+   k= 5 n= 14 |F|=  6 floor(k^2/4)=  6 floor((n+1)^2/36)=  6 subset=True bipartite=True
+  [OK]   F_5 subset E(And_5)
+  [OK]   And_5-F_5 bipartite
+  [OK]   |F_5| == floor(k^2/4) == floor((n+1)^2/36)
+   k= 6 n= 17 |F|=  9 floor(k^2/4)=  9 floor((n+1)^2/36)=  9 subset=True bipartite=True
+  [OK]   F_6 subset E(And_6)
+  [OK]   And_6-F_6 bipartite
+  [OK]   |F_6| == floor(k^2/4) == floor((n+1)^2/36)
+   k= 7 n= 20 |F|= 12 floor(k^2/4)= 12 floor((n+1)^2/36)= 12 subset=True bipartite=True
+  [OK]   F_7 subset E(And_7)
+  [OK]   And_7-F_7 bipartite
+  [OK]   |F_7| == floor(k^2/4) == floor((n+1)^2/36)
+   k= 8 n= 23 |F|= 16 floor(k^2/4)= 16 floor((n+1)^2/36)= 16 subset=True bipartite=True
+  [OK]   F_8 subset E(And_8)
+  [OK]   And_8-F_8 bipartite
+  [OK]   |F_8| == floor(k^2/4) == floor((n+1)^2/36)
+   k= 9 n= 26 |F|= 20 floor(k^2/4)= 20 floor((n+1)^2/36)= 20 subset=True bipartite=True
+  [OK]   F_9 subset E(And_9)
+  [OK]   And_9-F_9 bipartite
+  [OK]   |F_9| == floor(k^2/4) == floor((n+1)^2/36)
+   k=10 n= 29 |F|= 25 floor(k^2/4)= 25 floor((n+1)^2/36)= 25 subset=True bipartite=True
+  [OK]   F_10 subset E(And_10)
+  [OK]   And_10-F_10 bipartite
+  [OK]   |F_10| == floor(k^2/4) == floor((n+1)^2/36)
+   k=11 n= 32 |F|= 30 floor(k^2/4)= 30 floor((n+1)^2/36)= 30 subset=True bipartite=True
+  [OK]   F_11 subset E(And_11)
+  [OK]   And_11-F_11 bipartite
+  [OK]   |F_11| == floor(k^2/4) == floor((n+1)^2/36)
+
+==============================================================================
+C. floor((n+1)^2/36) <= n^2/25 for n=3k-1: EXACT, ALL k (not a finite check)
+==============================================================================
+   k^2/4 <= (3k-1)^2/25  <=>  25k^2 <= 36k^2-24k+4  <=>  11k^2-24k+4 >= 0
+   roots of 11k^2-24k+4: k = (24 +- 20)/22 = 2 and 2/11
+     k=2: 11k^2-24k+4 = 0  (EQUALITY)
+     k=3: 11k^2-24k+4 = 31  (strict)
+     k=4: 11k^2-24k+4 = 84  (strict)
+     k=5: 11k^2-24k+4 = 159  (strict)
+     k=6: 11k^2-24k+4 = 256  (strict)
+  [OK]   11k^2-24k+4 >= 0 for all integers k>=2, =0 only at k=2
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=2  1 vs 1  EQUALITY
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=3  2 vs 64/25
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=4  4 vs 121/25
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=5  6 vs 196/25
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=6  9 vs 289/25
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=7  12 vs 16
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=8  16 vs 529/25
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=9  20 vs 676/25
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=10  25 vs 841/25
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=11  30 vs 1024/25
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=12  36 vs 49
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=13  42 vs 1444/25
+  [OK]   floor((n+1)^2/36) <= n^2/25 at k=14  49 vs 1681/25
+
+==============================================================================
+D. Gamma_i == And_i by an EXPLICIT multiplier map (x -> 3x mod 3i-1)
+==============================================================================
+  [OK]   Gamma_2 --(x->3x)--> And_2 is an edge-set bijection  3*S_BT=[1, 4]  S_Heinig=[1, 4]
+  [OK]   Gamma_3 --(x->3x)--> And_3 is an edge-set bijection  3*S_BT=[1, 4, 7]  S_Heinig=[1, 4, 7]
+  [OK]   Gamma_4 --(x->3x)--> And_4 is an edge-set bijection  3*S_BT=[1, 4, 7, 10]  S_Heinig=[1, 4, 7, 10]
+  [OK]   Gamma_5 --(x->3x)--> And_5 is an edge-set bijection  3*S_BT=[1, 4, 7, 10, 13]  S_Heinig=[1, 4, 7, 10, 13]
+  [OK]   Gamma_6 --(x->3x)--> And_6 is an edge-set bijection  3*S_BT=[1, 4, 7, 10, 13, 16]  S_Heinig=[1, 4, 7, 10, 13, 16]
+  [OK]   Gamma_7 --(x->3x)--> And_7 is an edge-set bijection  3*S_BT=[1, 4, 7, 10, 13, 16, 19]  S_Heinig=[1, 4, 7, 10, 13, 16, 19]
+  [OK]   Gamma_8 --(x->3x)--> And_8 is an edge-set bijection  3*S_BT=[1, 4, 7, 10, 13, 16, 19, 22]  S_Heinig=[1, 4, 7, 10, 13, 16, 19, 22]
+  [OK]   Gamma_9 --(x->3x)--> And_9 is an edge-set bijection  3*S_BT=[1, 4, 7, 10, 13, 16, 19, 22, 25]  S_Heinig=[1, 4, 7, 10, 13, 16, 19, 22, 25]
+  [OK]   Gamma_10 --(x->3x)--> And_10 is an edge-set bijection  3*S_BT=[1, 4, 7, 10, 13, 16, 19, 22, 25, 28]  S_Heinig=[1, 4, 7, 10, 13, 16, 19, 22, 25, 28]
+  [OK]   Gamma_11 --(x->3x)--> And_11 is an edge-set bijection  3*S_BT=[1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31]  S_Heinig=[1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31]
+  [OK]   Gamma_3 iso Moebius ladder M_8 (exhaustive 8! search)
+  [OK]   bip(Wagner V8) == 2 and 2/64 == 1/32  bip=2 maxcut=10 |E|=12
+
+==============================================================================
+E. VEGA graphs: independent construction + structure + exact bip and psi
+==============================================================================
+   name            n   TF  maxTF twinF  wreg  deg  totw   bip   bip/n^2      psi_BT
+   Ups_2           13  True  True  True  True  12=12? 35=35?     6       6/169   psi=6/175 = 0.034286
+  [OK]   Ups_2: triangle-free
+  [OK]   Ups_2: maximal triangle-free
+  [OK]   Ups_2: twin-free
+  [OK]   Ups_2: BT weights regular with degree 12  got 12
+  [OK]   Ups_2: total weight 35  got 35
+  [OK]   Ups_2: bip/n^2 <= 1/25  6/169
+  [OK]   Ups_2: psi_BT <= 1/25  6/175
+   Ups_2-2i        12  True  True  True  True  11=11? 32=32?     4        1/36   psi=17/512 = 0.033203
+  [OK]   Ups_2-2i: triangle-free
+  [OK]   Ups_2-2i: maximal triangle-free
+  [OK]   Ups_2-2i: twin-free
+  [OK]   Ups_2-2i: BT weights regular with degree 11  got 11
+  [OK]   Ups_2-2i: total weight 32  got 32
+  [OK]   Ups_2-2i: bip/n^2 <= 1/25  1/36
+  [OK]   Ups_2-2i: psi_BT <= 1/25  17/512
+   Ups_2-y         12  True  True  True  True  11=11? 32=32?     4        1/36   psi=17/512 = 0.033203
+  [OK]   Ups_2-y: triangle-free
+  [OK]   Ups_2-y: maximal triangle-free
+  [OK]   Ups_2-y: twin-free
+  [OK]   Ups_2-y: BT weights regular with degree 11  got 11
+  [OK]   Ups_2-y: total weight 32  got 32
+  [OK]   Ups_2-y: bip/n^2 <= 1/25  1/36
+  [OK]   Ups_2-y: psi_BT <= 1/25  17/512
+   Ups_2-y-2i      11  True  True  True  True  10=10? 29=29?     4       4/121   psi=1/29 = 0.034483
+  [OK]   Ups_2-y-2i: triangle-free
+  [OK]   Ups_2-y-2i: maximal triangle-free
+  [OK]   Ups_2-y-2i: twin-free
+  [OK]   Ups_2-y-2i: BT weights regular with degree 10  got 10
+  [OK]   Ups_2-y-2i: total weight 29  got 29
+  [OK]   Ups_2-y-2i: bip/n^2 <= 1/25  4/121
+  [OK]   Ups_2-y-2i: psi_BT <= 1/25  1/29
+   Ups_3           16  True  True  True  True  21=21? 62=62?     8        1/32   psi=63/1922 = 0.032778
+  [OK]   Ups_3: triangle-free
+  [OK]   Ups_3: maximal triangle-free
+  [OK]   Ups_3: twin-free
+  [OK]   Ups_3: BT weights regular with degree 21  got 21
+  [OK]   Ups_3: total weight 62  got 62
+  [OK]   Ups_3: bip/n^2 <= 1/25  1/32
+  [OK]   Ups_3: psi_BT <= 1/25  63/1922
+   Ups_3-2i        15  True  True  True  True  20=20? 59=59?     8       8/225   psi=114/3481 = 0.032749
+  [OK]   Ups_3-2i: triangle-free
+  [OK]   Ups_3-2i: maximal triangle-free
+  [OK]   Ups_3-2i: twin-free
+  [OK]   Ups_3-2i: BT weights regular with degree 20  got 20
+  [OK]   Ups_3-2i: total weight 59  got 59
+  [OK]   Ups_3-2i: bip/n^2 <= 1/25  8/225
+  [OK]   Ups_3-2i: psi_BT <= 1/25  114/3481
+   Ups_3-y         15  True  True  True  True  20=20? 59=59?     6        2/75   psi=112/3481 = 0.032175
+  [OK]   Ups_3-y: triangle-free
+  [OK]   Ups_3-y: maximal triangle-free
+  [OK]   Ups_3-y: twin-free
+  [OK]   Ups_3-y: BT weights regular with degree 20  got 20
+  [OK]   Ups_3-y: total weight 59  got 59
+  [OK]   Ups_3-y: bip/n^2 <= 1/25  2/75
+  [OK]   Ups_3-y: psi_BT <= 1/25  112/3481
+   Ups_3-y-2i      14  True  True  True  True  19=19? 56=56?     6        3/98   psi=101/3136 = 0.032207
+  [OK]   Ups_3-y-2i: triangle-free
+  [OK]   Ups_3-y-2i: maximal triangle-free
+  [OK]   Ups_3-y-2i: twin-free
+  [OK]   Ups_3-y-2i: BT weights regular with degree 19  got 19
+  [OK]   Ups_3-y-2i: total weight 56  got 56
+  [OK]   Ups_3-y-2i: bip/n^2 <= 1/25  3/98
+  [OK]   Ups_3-y-2i: psi_BT <= 1/25  101/3136
+   Ups_4           19  True  True  True  True  30=30? 89=89?    11      11/361   psi=255/7921 = 0.032193
+  [OK]   Ups_4: triangle-free
+  [OK]   Ups_4: maximal triangle-free
+  [OK]   Ups_4: twin-free
+  [OK]   Ups_4: BT weights regular with degree 30  got 30
+  [OK]   Ups_4: total weight 89  got 89
+  [OK]   Ups_4: bip/n^2 <= 1/25  11/361
+  [OK]   Ups_4: psi_BT <= 1/25  255/7921
+   Ups_4-2i        18  True  True  True  True  29=29? 86=86?    10       5/162   psi=237/7396 = 0.032044
+  [OK]   Ups_4-2i: triangle-free
+  [OK]   Ups_4-2i: maximal triangle-free
+  [OK]   Ups_4-2i: twin-free
+  [OK]   Ups_4-2i: BT weights regular with degree 29  got 29
+  [OK]   Ups_4-2i: total weight 86  got 86
+  [OK]   Ups_4-2i: bip/n^2 <= 1/25  5/162
+  [OK]   Ups_4-2i: psi_BT <= 1/25  237/7396
+   Ups_4-y         18  True  True  True  True  29=29? 86=86?     9        1/36   psi=235/7396 = 0.031774
+  [OK]   Ups_4-y: triangle-free
+  [OK]   Ups_4-y: maximal triangle-free
+  [OK]   Ups_4-y: twin-free
+  [OK]   Ups_4-y: BT weights regular with degree 29  got 29
+  [OK]   Ups_4-y: total weight 86  got 86
+  [OK]   Ups_4-y: bip/n^2 <= 1/25  1/36
+  [OK]   Ups_4-y: psi_BT <= 1/25  235/7396
+   Ups_4-y-2i      17  True  True  True  True  28=28? 83=83?     8       8/289   psi=218/6889 = 0.031645
+  [OK]   Ups_4-y-2i: triangle-free
+  [OK]   Ups_4-y-2i: maximal triangle-free
+  [OK]   Ups_4-y-2i: twin-free
+  [OK]   Ups_4-y-2i: BT weights regular with degree 28  got 28
+  [OK]   Ups_4-y-2i: total weight 83  got 83
+  [OK]   Ups_4-y-2i: bip/n^2 <= 1/25  8/289
+  [OK]   Ups_4-y-2i: psi_BT <= 1/25  218/6889
+   Ups_5           22  True  True  True  True  39=39? 116=116?    14       7/242   psi=429/13456 = 0.031882
+  [OK]   Ups_5: triangle-free
+  [OK]   Ups_5: maximal triangle-free
+  [OK]   Ups_5: twin-free
+  [OK]   Ups_5: BT weights regular with degree 39  got 39
+  [OK]   Ups_5: total weight 116  got 116
+  [OK]   Ups_5: bip/n^2 <= 1/25  7/242
+  [OK]   Ups_5: psi_BT <= 1/25  429/13456
+   Ups_5-2i        21  True  True  True  True  38=38? 113=113?    13      13/441   psi=405/12769 = 0.031717
+  [OK]   Ups_5-2i: triangle-free
+  [OK]   Ups_5-2i: maximal triangle-free
+  [OK]   Ups_5-2i: twin-free
+  [OK]   Ups_5-2i: BT weights regular with degree 38  got 38
+  [OK]   Ups_5-2i: total weight 113  got 113
+  [OK]   Ups_5-2i: bip/n^2 <= 1/25  13/441
+  [OK]   Ups_5-2i: psi_BT <= 1/25  405/12769
+   Ups_5-y         21  True  True  True  True  38=38? 113=113?    12       4/147   psi=403/12769 = 0.031561
+  [OK]   Ups_5-y: triangle-free
+  [OK]   Ups_5-y: maximal triangle-free
+  [OK]   Ups_5-y: twin-free
+  [OK]   Ups_5-y: BT weights regular with degree 38  got 38
+  [OK]   Ups_5-y: total weight 113  got 113
+  [OK]   Ups_5-y: bip/n^2 <= 1/25  4/147
+  [OK]   Ups_5-y: psi_BT <= 1/25  403/12769
+   Ups_5-y-2i      20  True  True  True  True  37=37? 110=110?    11      11/400   psi=19/605 = 0.031405
+  [OK]   Ups_5-y-2i: triangle-free
+  [OK]   Ups_5-y-2i: maximal triangle-free
+  [OK]   Ups_5-y-2i: twin-free
+  [OK]   Ups_5-y-2i: BT weights regular with degree 37  got 37
+  [OK]   Ups_5-y-2i: total weight 110  got 110
+  [OK]   Ups_5-y-2i: bip/n^2 <= 1/25  11/400
+  [OK]   Ups_5-y-2i: psi_BT <= 1/25  19/605
+   Ups_6           25  True  True  True  True  48=48? 143=143?     -           -   psi=skipped(n>22)
+  [OK]   Ups_6: triangle-free
+  [OK]   Ups_6: maximal triangle-free
+  [OK]   Ups_6: twin-free
+  [OK]   Ups_6: BT weights regular with degree 48  got 48
+  [OK]   Ups_6: total weight 143  got 143
+   Ups_6-2i        24  True  True  True  True  47=47? 140=140?     -           -   psi=skipped(n>22)
+  [OK]   Ups_6-2i: triangle-free
+  [OK]   Ups_6-2i: maximal triangle-free
+  [OK]   Ups_6-2i: twin-free
+  [OK]   Ups_6-2i: BT weights regular with degree 47  got 47
+  [OK]   Ups_6-2i: total weight 140  got 140
+   Ups_6-y         24  True  True  True  True  47=47? 140=140?     -           -   psi=skipped(n>22)
+  [OK]   Ups_6-y: triangle-free
+  [OK]   Ups_6-y: maximal triangle-free
+  [OK]   Ups_6-y: twin-free
+  [OK]   Ups_6-y: BT weights regular with degree 47  got 47
+  [OK]   Ups_6-y: total weight 140  got 140
+   Ups_6-y-2i      23  True  True  True  True  46=46? 137=137?     -           -   psi=skipped(n>22)
+  [OK]   Ups_6-y-2i: triangle-free
+  [OK]   Ups_6-y-2i: maximal triangle-free
+  [OK]   Ups_6-y-2i: twin-free
+  [OK]   Ups_6-y-2i: BT weights regular with degree 46  got 46
+  [OK]   Ups_6-y-2i: total weight 137  got 137
+   MAX bip/n^2 over the Vega graphs tested: (Fraction(8, 225), 'Ups_3-2i', 8, 15)
+  [OK]   report's max bip/n^2 = 8/225 on Ups_3-2i  (Fraction(8, 225), 'Ups_3-2i', 8, 15)
+
+==============================================================================
+F. Ups_2 - {y,2i} vs the Grotzsch graph (Mycielskian of C5)
+==============================================================================
+   Ups_2-y-2i: n=11 |E|=20   Grotzsch: n=11 |E|=20
+  [OK]   Ups_2-y-2i has 11 vertices and 20 edges
+  [OK]   chi(Ups_2-y-2i) == 4
+  [OK]   Ups_2-y-2i IS ISOMORPHIC to the Grotzsch graph (exact backtracking)  degseq [3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5] vs [3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5]
+
+==============================================================================
+G. delta_2 vs delta: is {delta_2 > floor(n/8)} a SUPERSET of {delta > floor(3n/8)}?
+==============================================================================
+   G = K_{8,8} - perfect matching: n=16 |E|=56 delta=7 floor(3n/8)=6  delta_2=0 floor(n/8)=2  bip=0
+  [OK]   FALSIFIER: triangle-free
+  [OK]   FALSIFIER: delta > floor(3n/8)  7 > 6
+  [OK]   FALSIFIER: delta_2 <= floor(n/8)  => region containment FAILS  delta_2=0 <= 2
+   G_2 = C5[7,14,7,7,14]: n=49 delta=14 floor(3n/8)=18 delta_2=7 floor(n/8)=6  maximal-TF=True
+  [OK]   G_2: delta_2 > floor(n/8)  7 > 6
+  [OK]   G_2: delta <= floor(3n/8)  14 <= 18
+
+==============================================================================
+H. EFPS Theorem 1 second term:  c - 4c^2 <= 1/25 iff c<=1/20 or c>=1/5
+==============================================================================
+   c=1/20: c-4c^2 = 1/25 = 0.040000   <=1/25? True
+   c=1/5: c-4c^2 = 1/25 = 0.040000   <=1/25? True
+   c=1/8: c-4c^2 = 1/16 = 0.062500   <=1/25? False
+   c=21/100: c-4c^2 = 21/625 = 0.033600   <=1/25? True
+   c=1/4: c-4c^2 = 0 = 0.000000   <=1/25? True
+   c=3/50: c-4c^2 = 57/1250 = 0.045600   <=1/25? False
+  [OK]   equality at c=1/20
+  [OK]   equality at c=1/5
+  [OK]   100c^2-25c+1 = (5c-1)(20c-1)
+  [OK]   max over c of min{c/2, c-4c^2, 1/4-c} = 1/16 at c=1/8
+  [OK]   1/4 - c <= 1/25 iff c >= 21/100
+
+==============================================================================
+I. exact constants quoted in the report
+==============================================================================
+  [OK]   1/23.5 == 2/47
+  [OK]   0.0409 < 2/47  2/47=0.0425532
+  [OK]   Clebsch 8/256 = 1/32
+  [OK]   HoffmanSingleton 50/2500 = 1/50
+  [OK]   Gewirtz 84/3136 = 3/112
+  [OK]   HigmanSims 350/10000 = 7/200
+  [OK]   8/225 < 1/25 (= 9/225)
+  [OK]   all four SRG ratios < 1/25
+  [OK]   BT weighted delta (9i-6)/(27i-19) > 1/3 for i=2..40
+
+==============================================================================
+SUMMARY
+==============================================================================
+   checks failed: 0

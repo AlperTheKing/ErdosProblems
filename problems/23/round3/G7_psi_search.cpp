@@ -32,6 +32,7 @@ static int N, Q, M_EDGES;
 static int EU[1024], EV[1024];
 static uint32_t ADJ[32];
 static int MODE_CERT;
+static int DEGCON = 0;      // 1 = restrict to weightings with min weighted degree > q/3
 static long long g_T;               // shared lower bound (mode max) / threshold
 
 static const int APOOL = 8;         // active (incremental) cut pool
@@ -136,6 +137,7 @@ struct Ctx {
     long long c[APOOL][32];
     std::vector<uint32_t> passive;
     int a[32];
+    long long pd[32];           // partial weighted degree
     long long T;
     long long bestval; int besta[32];
     long long violators; int vio[32];
@@ -146,6 +148,13 @@ static void dfs(Ctx &X, int k, int r, std::mutex &mtx) {
     if (k == N - 1) {
         X.a[k] = r;
         if (NAUT && orbit_prune(X.a, k)) return;
+        if (DEGCON) {
+            long long pdl[32];
+            for (int v = 0; v < N; v++) pdl[v] = X.pd[v];
+            uint32_t nb0 = ADJ[k];
+            while (nb0) { int u = __builtin_ctz(nb0); nb0 &= nb0 - 1; pdl[u] += r; }
+            for (int v = 0; v < N; v++) if (3 * pdl[v] <= Q) return;
+        }
         long long mn = -1;
         for (int p = 0; p < APOOL; p++) {
             long long q = X.FF[p] + (long long)r * X.c[p][k];
@@ -176,6 +185,15 @@ static void dfs(Ctx &X, int k, int r, std::mutex &mtx) {
     for (int t = 0; t <= r; t++) {
         X.a[k] = t;
         if (NAUT && orbit_prune(X.a, k)) continue;
+        if (DEGCON) {
+            if (t) { uint32_t nb0 = ADJ[k];
+                while (nb0) { int u = __builtin_ctz(nb0); nb0 &= nb0 - 1; X.pd[u] += t; } }
+            bool infeas = false;
+            for (int v = 0; v < N; v++) if (3 * (X.pd[v] + (r - t)) <= Q) { infeas = true; break; }
+            if (infeas) { if (t) { uint32_t nb0 = ADJ[k];
+                    while (nb0) { int u = __builtin_ctz(nb0); nb0 &= nb0 - 1; X.pd[u] -= t; } }
+                continue; }
+        }
         long long saveFF[APOOL];
         for (int p = 0; p < APOOL; p++) {
             saveFF[p] = X.FF[p];
@@ -217,6 +235,8 @@ static void dfs(Ctx &X, int k, int r, std::mutex &mtx) {
             if (4 * X.FF[p] + bestc <= T4) prune = true;
         }
         if (!prune) dfs(X, k + 1, rem, mtx);
+        if (DEGCON && t) { uint32_t nb0 = ADJ[k];
+            while (nb0) { int u = __builtin_ctz(nb0); nb0 &= nb0 - 1; X.pd[u] -= t; } }
         for (int p = 0; p < APOOL; p++) {
             X.FF[p] = saveFF[p];
             if (t) {
@@ -244,7 +264,8 @@ int main(int argc, char **argv) {
           i = j + 1;
       } }
     Q = atoi(argv[3]);
-    MODE_CERT = (strcmp(argv[4], "cert") == 0);
+    MODE_CERT = (strncmp(argv[4], "cert", 4) == 0);
+    DEGCON = (strstr(argv[4], "deg") != NULL);
     int nthr = (argc > 5) ? atoi(argv[5]) : 8;
     if (argc > 6) {
         FILE *f = fopen(argv[6], "r");
@@ -295,6 +316,14 @@ int main(int argc, char **argv) {
             }
             X.a[0] = t0;
             if (NAUT && orbit_prune(X.a, 0)) continue;
+            for (int v = 0; v < N; v++) X.pd[v] = 0;
+            if (DEGCON) {
+                if (t0) { uint32_t nb0 = ADJ[0];
+                    while (nb0) { int u = __builtin_ctz(nb0); nb0 &= nb0 - 1; X.pd[u] += t0; } }
+                bool infeas = false;
+                for (int v = 0; v < N; v++) if (3 * (X.pd[v] + (Q - t0)) <= Q) { infeas = true; break; }
+                if (infeas) continue;
+            }
             if (t0) for (int p = 0; p < APOOL; p++) {
                 uint32_t nb = ADJ[0];
                 while (nb) { int u = __builtin_ctz(nb); nb &= nb - 1;
@@ -313,11 +342,11 @@ int main(int argc, char **argv) {
     for (auto &t : th) t.join();
 
     if (MODE_CERT) {
-        printf("CERT n=%d q=%d T=floor(q^2/25)=%lld violators=%lld\n", N, Q, T0, gvio);
+        printf("CERT%s n=%d q=%d T=floor(q^2/25)=%lld violators=%lld\n", DEGCON ? "DEG" : "", N, Q, T0, gvio);
         if (gvio) { printf("VIOLATOR a ="); for (int v = 0; v < N; v++) printf(" %d", gvioa[v]); printf("\n"); }
     } else {
         if (gbest < 0) gbest = 0;
-        printf("MAX n=%d q=%d M=%lld 25M=%lld q2=%d %s\n", N, Q, gbest, 25 * gbest, Q * Q,
+        printf("MAX%s n=%d q=%d M=%lld 25M=%lld q2=%d %s\n", DEGCON ? "DEG" : "", N, Q, gbest, 25 * gbest, Q * Q,
                (25 * gbest <= (long long)Q * Q) ? "OK" : "***REFUTATION***");
         printf("ARGMAX a ="); for (int v = 0; v < N; v++) printf(" %d", gbesta[v]); printf("\n");
     }

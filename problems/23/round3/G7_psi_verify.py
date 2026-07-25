@@ -106,3 +106,44 @@ if __name__ == '__main__':
         monos = mono_lists(5, C5[1])
         print('  a=%s  psi-route=%d  explicit-blow-up=%d'
               % (str(a), bip_weighted(5, monos, a), bip_blowup_bruteforce(5, C5[1], a)))
+
+
+# ---------------------------------------------------------------------------
+# DEGREE-RESTRICTED variant (independent check of the 'maxdeg' engine mode):
+#   maximise bip(H[a]) over a >= 0, sum a = q, subject to 3*(A a)_v > q for all v
+#   (this is the exact set of weightings that can arise from a triangle-free G
+#    with delta(G) > N/3 via the twin quotient, with q = N).
+def M_exact_deg(n, edges, q):
+    monos = mono_lists(n, edges)
+    adj = [[] for _ in range(n)]
+    for (u, v) in edges:
+        adj[u].append(v); adj[v].append(u)
+    best, arg = -1, None
+    for a in compositions(q, n):
+        if any(3 * sum(a[u] for u in adj[v]) <= q for v in range(n)):
+            continue
+        m = bip_weighted(n, monos, a)
+        if m > best:
+            best, arg = m, a
+    return best, arg
+
+
+def _selftest_deg():
+    from fractions import Fraction as F
+    print()
+    print('== degree-restricted cross-check (independent implementation) ==')
+    W = (8, [(0, 3), (0, 4), (0, 5), (1, 4), (1, 5), (1, 6), (2, 5), (2, 6),
+             (2, 7), (3, 6), (3, 7), (4, 7)])
+    for q in range(5, 21):
+        m, a = M_exact(*C5, q)
+        md, ad = M_exact_deg(*C5, q)
+        print('  C5      q=%2d  M=%3d  Mdeg=%3d  25Mdeg/q^2=%-10s argmax_deg=%s'
+              % (q, m, md, F(25 * md, q * q), ad))
+    for q in range(8, 21):
+        md, ad = M_exact_deg(*W, q)
+        print('  Wagner  q=%2d  Mdeg=%3d  25Mdeg/q^2=%-10s argmax_deg=%s'
+              % (q, md, F(25 * md, q * q), ad))
+
+
+if __name__ == '__main__' and '--deg' in sys.argv:
+    _selftest_deg()
