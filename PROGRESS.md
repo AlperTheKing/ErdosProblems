@@ -4658,3 +4658,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T01:15:02] ✔ R8 HARVEST | DID: read round7/Q4.md before rebuilding | RESULT: degree-2 scheme REFUTED for And(4), exact dual ray c* <= 25445007099/1021743686 = 24.9035 < 25 | Δ: my planned round cancelled
 [2026-07-26T01:15:02] ✔ R8 HARVEST | DID: read Q4 theorem list | RESULT: Thm Q4-1, multipliers nonneg on all R^n force lambda_S = c_S L^2d, collapsing to the dead averaging certificate at EVERY degree | Δ: A2 narrowed
 [2026-07-26T01:15:02] ✔ ANDK CEILING | DID: claude_gate_andk_ceiling.py on Gamma_11/14/17 with mandatory C5 starts | RESULT: max_x psi = 0.0400000000 on And(4), And(5), And(6); 0 voids | Δ: plateau flat to k=6
+[2026-07-26T01:17:46] ✔ ANDK CEILING | DID: claude_gate_andk_ceiling.py on Gamma_20 = And(7), 524288 cuts | RESULT: max_x psi = 0.0400000000, 0 voids | Δ: plateau flat on And(4)..And(7)
+[2026-07-26T01:17:46] ► R8 WAVE | NEXT: 4 independent families launched (Theorem A adversarial audit, entropy/counting, transport/flow, stability), none told the favoured route
