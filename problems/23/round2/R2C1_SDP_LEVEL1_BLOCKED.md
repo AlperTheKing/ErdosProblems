@@ -101,12 +101,47 @@ Blocking statement, verbatim:
 > at level 1 and `≈ 0.05317` at level 2, closing only about one seventh of the gap per level; the
 > hierarchy therefore cannot certify the `1/25` ceiling at any computationally reachable level.*
 
-Reopen only with a **structurally different certificate** — not a generic relaxation of the max-min.
-The natural candidates left are: a combinatorial argument exploiting that `q_S` ranges over *cuts*
-rather than arbitrary quadratics; or a symmetry-reduced relaxation for vertex-transitive patterns,
-where `C5`'s own rotational symmetry could collapse the SDP and might be tight where the generic one
-is not. That symmetry reduction is the cheapest untried idea and should be calibrated on `C5` the
-same way.
+## Correction: symmetry reduction CANNOT help, and I should not have suggested it
+
+An earlier version of this note proposed a symmetry-reduced SDP for vertex-transitive patterns, on
+the idea that `C5`'s rotational symmetry "could be tight where the generic one is not". **That is
+false, and the one-line proof is worth recording so nobody spends time on it.**
+
+If a convex program is invariant under a group `G` acting on its variables, then for any feasible
+point `p` the average `(1/|G|) Σ_{g∈G} g·p` is again feasible (the feasible set is convex and
+`G`-invariant) and has the same objective value (the objective is linear and `G`-invariant). Hence
+the optimum is attained at a `G`-invariant point, and restricting the program to `G`-invariant
+points returns **exactly the same optimal value**. Symmetry reduction (block-diagonalisation) is a
+purely computational device: it makes the SDP smaller and faster, never tighter.
+
+Since the level-1 and level-2 relaxations above are already invariant under `Aut(C5) = D₅`, their
+symmetry-reduced versions would return `(5 − √5)/50` and `0.053170` unchanged. Route closed.
+
+## What is actually left
+
+A **structurally different certificate** is needed — one that uses the fact that `q_S` ranges over
+*cuts* rather than over arbitrary quadratic forms. Generic relaxations of the max-min do not see
+that, which is exactly why they stall at `0.053` on an object whose truth is `0.040`.
+
+## Exact lower bounds via the blow-up identity (side result)
+
+While testing this, the blow-up identity gives a way to compute **exact rational** lower bounds
+instead of floating-point ones: `psi(H, a/q) = bip(H[a])/q²`, so
+`u_q(H) := max over integer a with Σa = q of bip(H[a])/q²` is exact and increases to
+`max_x psi(H,x)` (`claude_blowup_sup.cpp`).
+
+Calibration on `C5` is perfect: `u_q` never exceeds `1/25` and attains it exactly at
+`q = 5, 10, 15` — the multiples of five, i.e. the balanced blow-ups.
+
+For Wagner `C8(1,4)`, `u_q` for `q = 8 … 26` climbs to `6/169 = 0.035503`, still well under `1/25`.
+**But this does not settle Wagner**, and the honest reason is that the sequence has not converged:
+the exact rational point found earlier by hill-climbing already gives
+`max_x psi(Wagner) ≥ 15341/396900 = 0.038652`, which the integer-weight search only reaches at
+denominators far beyond `q = 26`. So the current status of Wagner is
+
+> `0.038652 ≤ max_x psi(Wagner) ≤ ?`, with no upper bound available by any method tried here.
+
+Wagner remains the tightest open case and the right first target for any new certificate.
 
 ## Files
 
