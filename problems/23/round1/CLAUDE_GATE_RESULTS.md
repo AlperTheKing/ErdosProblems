@@ -455,6 +455,39 @@ task of section 3g stands unchanged.
 
 ---
 
+## 3h. R1-C10 — two of the strongly-regular claims GATED (accepted)
+
+Round-1 families F5 and F8 both asserted `bip(Hoffman-Singleton) = 50`, `bip(Higman-Sims) = 350`,
+`bip(Gewirtz) = 84`, `bip(Clebsch) = 8`. Every verifier agent quota-failed, so all four were
+unaccepted. Two are now settled by my own two-sided exact computation, independent of those reports.
+
+**`bip(Hoffman-Singleton) = 50`. ACCEPTED** (`claude_gate_hosi.py`).
+Construction built from scratch (five pentagons `P_i`, five pentagrams `Q_k`, `P_i[j] ~ Q_k[ik+j]`)
+and checked: 50 vertices, 175 edges, 7-regular, triangle-free. The strongly-regular identity
+`A^2 + A - 6I = J` was verified entry by entry in exact integer arithmetic, which pins the spectrum
+to `7` and the roots of `x^2 + x - 6`, i.e. `2` and `-3`. Hence by the regular-graph maximum-cut
+bound `maxcut <= (n/4)(d - lambda_min) = (50/4)(7+3) = 125`, so `bip >= 175 - 125 = 50`. A balanced
+`25/25` bipartition with exactly `125` crossing edges was found and then recounted independently
+over the edge list, giving `bip <= 50`. Therefore `maxcut = 125` and `bip = 50` exactly.
+Ratio `50/2500 = 1/50 = 0.02`.
+
+**`bip(Clebsch) = 8`. ACCEPTED** (`claude_gate_clebsch.py`), and here with no bound needed at all:
+at `n = 16` the maximum cut was computed **exhaustively over all `2^15` bipartitions**. Construction
+(`u ~ v` iff `u XOR v` has weight 1 or 4 on `GF(2)^4`) checked: 16 vertices, 40 edges, 5-regular,
+triangle-free; identity `A^2 + 2A - 3I = 2J` exact, spectrum `5, 1, -3`. Exhaustive `maxcut = 32`
+attained by a balanced `8/8` cut (recounted independently), so `bip = 8`, and the spectral bound
+`(16/4)(5+3) = 32` is matched exactly. Ratio `8/256 = 1/32 = 0.03125`.
+
+Both sit comfortably below `1/25 = 0.04`, so neither is near-extremal. **Still unaccepted:**
+`bip(Higman-Sims) = 350` and `bip(Gewirtz) = 84`. The same recipe closes them --- build the graph
+from its combinatorial design, verify the SRG identity in exact integers to pin `lambda_min`, take
+the regular-graph bound for `bip >=`, then exhibit and recount a cut meeting it --- the only real
+work being an explicit `S(3,6,22)` for Higman-Sims and `S(2,4,21)`-type data for Gewirtz.
+Higman-Sims is the interesting one: at `350/10000 = 0.035` it is the largest exactly-known `bip`
+ratio in the project after the blow-ups themselves.
+
+---
+
 ## 4. Blocked-route ledger after these results
 
 | route | status | blocking lemma / falsifier |
