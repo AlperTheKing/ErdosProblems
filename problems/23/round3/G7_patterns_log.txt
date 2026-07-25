@@ -1,0 +1,90 @@
+== Andrasfai definition cross-check ==
+  k=2  |V|=5(exp 5)  k-regular=True  BT~Heinig=True  BT~circulant{k..2k-1}=True  alpha=2
+  k=3  |V|=8(exp 8)  k-regular=True  BT~Heinig=True  BT~circulant{k..2k-1}=True  alpha=3
+  k=4  |V|=11(exp 11)  k-regular=True  BT~Heinig=True  BT~circulant{k..2k-1}=True  alpha=4
+  k=5  |V|=14(exp 14)  k-regular=True  BT~Heinig=True  BT~circulant{k..2k-1}=True  alpha=5
+  k=6  |V|=17(exp 17)  k-regular=True  BT~Heinig=True  BT~circulant{k..2k-1}=True  alpha=6
+  k=7  |V|=20(exp 20)  k-regular=True  BT~Heinig=True  BT~circulant{k..2k-1}=True  alpha=7
+
+== Gamma_i = And(i) ==
+  Gamma_1: n=2(exp 2) deg=1(exp 1) tri-free=True maxTF=True twin-free=True alpha=1 chi=2  delta/n=1/2
+  Gamma_2: n=5(exp 5) deg=2(exp 2) tri-free=True maxTF=True twin-free=True alpha=2 chi=3  delta/n=2/5
+  Gamma_3: n=8(exp 8) deg=3(exp 3) tri-free=True maxTF=True twin-free=True alpha=3 chi=3  delta/n=3/8
+  Gamma_4: n=11(exp 11) deg=4(exp 4) tri-free=True maxTF=True twin-free=True alpha=4 chi=3  delta/n=4/11
+  Gamma_5: n=14(exp 14) deg=5(exp 5) tri-free=True maxTF=True twin-free=True alpha=5 chi=3  delta/n=5/14
+  Gamma_6: n=17(exp 17) deg=6(exp 6) tri-free=True maxTF=True twin-free=True alpha=6 chi=3  delta/n=6/17
+  Gamma_7: n=20(exp 20) deg=7(exp 7) tri-free=True maxTF=True twin-free=True alpha=7 chi=3  delta/n=7/20
+  Gamma_8: n=23(exp 23) deg=8(exp 8) tri-free=True maxTF=True twin-free=True alpha=8 chi=3  delta/n=8/23
+
+== Vega graphs (Brandt-Thomasse p.4 + Theorem 3 exact weight check) ==
+  Upsilon_2        n=13(exp 13) triFree=True maxTF=True twinFree=True chi=4 alpha=5 | weights: regular=True deg=12(exp 12) total=35(exp 35) maxWtStable=12(<=delta:True)
+  Upsilon_2-y      n=12(exp 12) triFree=True maxTF=True twinFree=True chi=4 alpha=5 | weights: regular=True deg=11(exp 11) total=32(exp 32) maxWtStable=11(<=delta:True)
+  Upsilon_2-2i     n=12(exp 12) triFree=True maxTF=True twinFree=True chi=4 alpha=5 | weights: regular=True deg=11(exp 11) total=32(exp 32) maxWtStable=11(<=delta:True)
+  Upsilon_2-y-2i   n=11(exp 11) triFree=True maxTF=True twinFree=True chi=4 alpha=5 | weights: regular=True deg=10(exp 10) total=29(exp 29) maxWtStable=10(<=delta:True)
+  Upsilon_3        n=16(exp 16) triFree=True maxTF=True twinFree=True chi=4 alpha=6 | weights: regular=True deg=21(exp 21) total=62(exp 62) maxWtStable=21(<=delta:True)
+  Upsilon_3-y      n=15(exp 15) triFree=True maxTF=True twinFree=True chi=4 alpha=6 | weights: regular=True deg=20(exp 20) total=59(exp 59) maxWtStable=20(<=delta:True)
+  Upsilon_3-2i     n=15(exp 15) triFree=True maxTF=True twinFree=True chi=4 alpha=6 | weights: regular=True deg=20(exp 20) total=59(exp 59) maxWtStable=20(<=delta:True)
+  Upsilon_3-y-2i   n=14(exp 14) triFree=True maxTF=True twinFree=True chi=4 alpha=6 | weights: regular=True deg=19(exp 19) total=56(exp 56) maxWtStable=19(<=delta:True)
+  Upsilon_4        n=19(exp 19) triFree=True maxTF=True twinFree=True chi=4 alpha=7 | weights: regular=True deg=30(exp 30) total=89(exp 89) maxWtStable=30(<=delta:True)
+  Upsilon_4-y      n=18(exp 18) triFree=True maxTF=True twinFree=True chi=4 alpha=7 | weights: regular=True deg=29(exp 29) total=86(exp 86) maxWtStable=29(<=delta:True)
+  Upsilon_4-2i     n=18(exp 18) triFree=True maxTF=True twinFree=True chi=4 alpha=7 | weights: regular=True deg=29(exp 29) total=86(exp 86) maxWtStable=29(<=delta:True)
+  Upsilon_4-y-2i   n=17(exp 17) triFree=True maxTF=True twinFree=True chi=4 alpha=7 | weights: regular=True deg=28(exp 28) total=83(exp 83) maxWtStable=28(<=delta:True)
+  Upsilon_5        n=22(exp 22) triFree=True maxTF=True twinFree=True chi=4 alpha=8 | weights: regular=True deg=39(exp 39) total=116(exp 116) maxWtStable=39(<=delta:True)
+  Upsilon_5-y      n=21(exp 21) triFree=True maxTF=True twinFree=True chi=4 alpha=8 | weights: regular=True deg=38(exp 38) total=113(exp 113) maxWtStable=38(<=delta:True)
+  Upsilon_5-2i     n=21(exp 21) triFree=True maxTF=True twinFree=True chi=4 alpha=8 | weights: regular=True deg=38(exp 38) total=113(exp 113) maxWtStable=38(<=delta:True)
+  Upsilon_5-y-2i   n=20(exp 20) triFree=True maxTF=True twinFree=True chi=4 alpha=8 | weights: regular=True deg=37(exp 37) total=110(exp 110) maxWtStable=37(<=delta:True)
+  Upsilon_6        n=25(exp 25) triFree=True maxTF=True twinFree=True chi=4 alpha=9 | weights: regular=True deg=48(exp 48) total=143(exp 143) maxWtStable=48(<=delta:True)
+  Upsilon_6-y      n=24(exp 24) triFree=True maxTF=True twinFree=True chi=4 alpha=9 | weights: regular=True deg=47(exp 47) total=140(exp 140) maxWtStable=47(<=delta:True)
+  Upsilon_6-2i     n=24(exp 24) triFree=True maxTF=True twinFree=True chi=4 alpha=9 | weights: regular=True deg=47(exp 47) total=140(exp 140) maxWtStable=47(<=delta:True)
+  Upsilon_6-y-2i   n=23(exp 23) triFree=True maxTF=True twinFree=True chi=4 alpha=9 | weights: regular=True deg=46(exp 46) total=137(exp 137) maxWtStable=46(<=delta:True)
+
+== identifications flagged in the source ==
+  Upsilon_2-{y,4} ~= Grotzsch : True   (n=11, m=20)
+  Upsilon_2-{y} ~= Upsilon_2-{4} : True   (BT p.4 parenthetical)
+  Upsilon_3-{y} ~= Upsilon_3-{2i} : False
+  Upsilon_4-{y} ~= Upsilon_4-{2i} : False
+  Upsilon_5-{y} ~= Upsilon_5-{2i} : False
+
+== induced-subgraph containments that COLLAPSE the list ==
+  Upsilon_2-y      is an INDUCED subgraph of Upsilon_2 : True
+  Upsilon_2-2i     is an INDUCED subgraph of Upsilon_2 : True
+  Upsilon_2-y-2i   is an INDUCED subgraph of Upsilon_2 : True
+  Gamma_2          is an INDUCED subgraph of Upsilon_2 : True
+  Upsilon_3-y      is an INDUCED subgraph of Upsilon_3 : True
+  Upsilon_3-2i     is an INDUCED subgraph of Upsilon_3 : True
+  Upsilon_3-y-2i   is an INDUCED subgraph of Upsilon_3 : True
+  Gamma_3          is an INDUCED subgraph of Upsilon_3 : True
+  Upsilon_4-y      is an INDUCED subgraph of Upsilon_4 : True
+  Upsilon_4-2i     is an INDUCED subgraph of Upsilon_4 : True
+  Upsilon_4-y-2i   is an INDUCED subgraph of Upsilon_4 : True
+  Gamma_4          is an INDUCED subgraph of Upsilon_4 : True
+  Upsilon_5-y      is an INDUCED subgraph of Upsilon_5 : True
+  Upsilon_5-2i     is an INDUCED subgraph of Upsilon_5 : True
+  Upsilon_5-y-2i   is an INDUCED subgraph of Upsilon_5 : True
+  Gamma_5          is an INDUCED subgraph of Upsilon_5 : True
+  Upsilon_2 induced in Upsilon_3 : True
+  Gamma_2   induced in Gamma_3   : True
+  Upsilon_2-y-2i induced in Upsilon_3-y-2i : True
+  Upsilon_3 induced in Upsilon_4 : True
+  Gamma_3   induced in Gamma_4   : True
+  Upsilon_3-y-2i induced in Upsilon_4-y-2i : True
+  Upsilon_4 induced in Upsilon_5 : True
+  Gamma_4   induced in Gamma_5   : True
+  Upsilon_4-y-2i induced in Upsilon_5-y-2i : True
+  Upsilon_5 induced in Upsilon_6 : True
+  Gamma_5   induced in Gamma_6   : True
+  Upsilon_5-y-2i induced in Upsilon_6-y-2i : True
+
+== |Aut| of the small patterns ==
+  Gamma_1          |Aut| = 2
+  Gamma_2          |Aut| = 10
+  Gamma_3          |Aut| = 16
+  Gamma_4          |Aut| = 22
+  Gamma_5          |Aut| = 28
+  Upsilon_2        |Aut| = 8
+  Upsilon_2-y      |Aut| = 4
+  Upsilon_2-2i     |Aut| = 4
+  Upsilon_2-y-2i   |Aut| = 10
+  Upsilon_3-y-2i   |Aut| = 2
+
+wrote 28 graphs to E:\Projects\ErdosProblems\problems\23\round3\G7_patterns.g6

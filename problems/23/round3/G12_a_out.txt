@@ -1,0 +1,53 @@
+==============================================================================
+(a1) C5[n]:  bip = n^2 (accepted fact 1);  nu* computed exactly
+==============================================================================
+n=1 N=5 |E|=5  bip=1
+    closed-form PRIMAL packing value = 1, feasible=True, every edge load = 1..1
+    closed-form DUAL cover value    = 1, feasible=True, min odd cycle x-weight = 1
+    ==> nu* = tau* = 1 = bip;  integrality gap = 1;  deficit = 0;  nu*/N^2 = 1/25
+    [independent] cutting-plane nu* = 1 (1 generated cycles)
+    [independent] full-enumeration nu* = 1 (1 odd cycles, primal_ok=True, dual_ok=True)
+n=2 N=10 |E|=20  bip=4
+    closed-form PRIMAL packing value = 4, feasible=True, every edge load = 1..1
+    closed-form DUAL cover value    = 4, feasible=True, min odd cycle x-weight = 1
+    ==> nu* = tau* = 4 = bip;  integrality gap = 1;  deficit = 0;  nu*/N^2 = 1/25
+    [independent] cutting-plane nu* = 4 (22 generated cycles)
+    [independent] full-enumeration nu* = 4 (352 odd cycles, primal_ok=True, dual_ok=True)
+n=3 N=15 |E|=45  bip=9
+    closed-form PRIMAL packing value = 9, feasible=True, every edge load = 1..1
+    closed-form DUAL cover value    = 9, feasible=True, min odd cycle x-weight = 1
+    ==> nu* = tau* = 9 = bip;  integrality gap = 1;  deficit = 0;  nu*/N^2 = 1/25
+    [independent] cutting-plane nu* = 9 (63 generated cycles)
+n=4 N=20 |E|=80  bip=16
+    closed-form PRIMAL packing value = 16, feasible=True, every edge load = 1..1
+    closed-form DUAL cover value    = 16, feasible=True, min odd cycle x-weight = 1
+    ==> nu* = tau* = 16 = bip;  integrality gap = 1;  deficit = 0;  nu*/N^2 = 1/25
+n=5 N=25 |E|=125  bip=25
+    closed-form PRIMAL packing value = 25, feasible=True, every edge load = 1..1
+    closed-form DUAL cover value    = 25, feasible=True, min odd cycle x-weight = 1
+    ==> nu* = tau* = 25 = bip;  integrality gap = 1;  deficit = 0;  nu*/N^2 = 1/25
+n=6 N=30 |E|=180  bip=36
+    closed-form PRIMAL packing value = 36, feasible=True, every edge load = 1..1
+    closed-form DUAL cover value    = 36, feasible=True, min odd cycle x-weight = 1
+    ==> nu* = tau* = 36 = bip;  integrality gap = 1;  deficit = 0;  nu*/N^2 = 1/25
+
+==============================================================================
+(a2) known extremal graphs N = 12,13,14,15
+==============================================================================
+N=12 g6=K?ABBBwerwBw |E|=25 tri-free=True delta=3 Delta=5
+    bip = 5   (N^2/25 = 144/25,  bip/N^2 = 5/144 = 0.034722)
+    nu* = tau* = 5 = 5.000000   [cutting planes, 32 rows]
+    integrality gap bip/nu* = 1 = 1.000000   deficit bip-nu* = 0
+    nu*/N^2 = 5/144 = 0.034722    |E|/5 = 5 (uniform-1/5 cover bound)
+    [independent] full enumeration: 972 odd cycles, nu* = 5, primal_ok=True, dual_ok=True
+N=12 g6=K?BD@g]Qvo^? |E|=25 tri-free=True delta=4 Delta=5
+    bip = 5   (N^2/25 = 144/25,  bip/N^2 = 5/144 = 0.034722)
+    nu* = tau* = 5 = 5.000000   [cutting planes, 26 rows]
+    integrality gap bip/nu* = 1 = 1.000000   deficit bip-nu* = 0
+    nu*/N^2 = 5/144 = 0.034722    |E|/5 = 5 (uniform-1/5 cover bound)
+    [independent] full enumeration: 1121 odd cycles, nu* = 5, primal_ok=True, dual_ok=True
+N=13 g6=L??ED@_~?~^_Fw |E|=30 tri-free=True delta=4 Delta=6
+    bip = 6   (N^2/25 = 169/25,  bip/N^2 = 6/169 = 0.035503)
+    nu* = tau* = 6 = 6.000000   [cutting planes, 41 rows]
+    integrality gap bip/nu* = 1 = 1.000000   deficit bip-nu* = 0
+    nu*/N^2 = 6/169 = 0.035503    |E|/5 = 6 (uniform-1/5 cover bound)
