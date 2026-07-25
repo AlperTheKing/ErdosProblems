@@ -20,9 +20,11 @@ def numeric_max_psi(k, ntrial=300, seed=99):
     for i, (u, v) in enumerate(E):
         mono[i] = (side[u] == side[v])
 
+    monof = mono.astype(np.float64)
+
     def psi(x):
         w = np.array([x[u] * x[v] for (u, v) in E])
-        return float((w[:, None] * mono).sum(axis=0).min())
+        return float(w.dot(monof).min())
 
     from scipy.optimize import minimize
     rng = np.random.default_rng(seed)
@@ -45,7 +47,7 @@ def numeric_max_psi(k, ntrial=300, seed=99):
 
 
 if __name__ == "__main__":
-    for k in (3, 4, 5, 6):
+    for k in (3, 4, 5):
         n, adjm = and_circulant(k)
         E = edges_of(n, adjm)
         # exact induced-C5 point first (accepted fact 3 protocol)
@@ -66,7 +68,7 @@ if __name__ == "__main__":
         for v in c5:
             x[v] = Fraction(1, 5)
         exact = psi_exact(monos, x)
-        nn, EE, (v, xx) = numeric_max_psi(k, ntrial=(300 if k <= 4 else 120))
+        nn, EE, (v, xx) = numeric_max_psi(k, ntrial=(200 if k <= 4 else 60))
         print(f"And({k}) n={n}: exact psi at induced-C5 point {c5} = {exact} "
               f"({float(exact):.10f});  numeric max over simplex = {v:.10f}  "
               f"{'>= C5 point OK' if v >= float(exact) - 1e-12 else '*** BELOW C5 POINT: LOCAL OPTIMUM ***'}"

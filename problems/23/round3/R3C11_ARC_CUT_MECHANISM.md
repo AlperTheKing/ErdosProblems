@@ -151,3 +151,27 @@ or a matching. So the regime looks easy but has no proof yet.
 
 In every one of the thirteen circle graphs the profile `q ↦ max_a ARCBOUND(a)` is identical to the
 `C5` profile and the maximisers are five-atom configurations.
+
+
+## 8. Three selection rules that do NOT work (recorded so the proof is not attempted along them)
+
+The arc must be chosen adaptively (R3-C1), and these three natural adaptive rules are now refuted:
+
+1. **Half-arcs only** (position adaptive, length fixed at `1/2`): fails at `q = 7` on `Γ_8, Γ_11,
+   Γ_16, Γ_20`. Witness: the weighting `(1,1,2,2,1)` on an induced `C5` sitting at *unequally spaced*
+   positions gives half-arc minimum `2` against `q²/25 = 49/25 = 1.96`, while the full arc family
+   gives `1`. So the LENGTH must adapt too.
+2. **The 5-block averaging route**: the inequality `ARCBOUND ≤ (1/5)(W + 4P₀ + 2P₁)` is correct
+   (verified on 400 random measure/cut-choice pairs, 0 failures) and is exactly tight at the
+   five-atom measure, but it cannot be *realised*: on `Γ_11` there is a weighting with `W = 0.1818`
+   for which **every** choice of five cut points gives `W + 4P₀ + 2P₁ = 0.2174 > 1/5`. Since the
+   route needs `W + 4P₀ + 2P₁ ≤ 1/5`, it is BLOCKED as a proof of the arc-cut conjecture.
+3. **Mass-window rules** (choose any arc whose *μ-mass* lies in a fixed window): all of
+   `[1/3,1/2]`, `[2/5,3/5]`, `[1/3,2/3]`, `[2/5,1/2]`, `[3/10,1/2]` fail, with 29 to 74 violations
+   of `1/25` in ~700 random measures each and worst ratios up to `2.9 × (1/25)`. So the selection
+   cannot be a function of the arc's mass alone; the geometry (position and length together) is
+   essential.
+
+What survives every probe: the **full** two-parameter arc family. The continuous optimisation over
+atom positions *and* weights (`k = 5..9` atoms, 120–200 restarts each, exact re-evaluation) returns
+`0.0400000000` for every `k`, with the optima always collapsing onto five effective clusters.
