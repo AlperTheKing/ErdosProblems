@@ -5,7 +5,8 @@ S1. On the flat cone the support graph is always a SUBGRAPH of a complete C5 blo
     COMPLETE blow-up; otherwise psi drops at second order at the exact rate
         max_i  Miss_i(d),   Miss_i(d) = sum over non-adjacent twin pairs (v,w),
                                         v a twin of class i, w a twin of class i+1, of d_v d_w.
-S2. THEOREM A (local exactness ball).  H triangle-free, C an induced C5,
+S2. THEOREM A of this file == "Theorem D" of R8_stability.md (local exactness ball).
+    H triangle-free, C an induced C5,
         T = {v notin C : N(v) cap C = {c_{i-1},c_{i+1}} for some i}   ("full twins"),
         R = V \ (C u T),  rho = x(R),  eta = x(V \ C).
     Then    psi(H,x) <= (1-rho)^2/25 + rho*eta.

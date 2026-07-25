@@ -4,7 +4,47 @@ Everything below is stated for the weighted (pattern) form and is verified in **
 arithmetic** (`fractions.Fraction`) or **exact integer arithmetic** (the C++ census). Floating point
 appears only inside search loops; nothing floating decides a claim.
 
-## 0. Notation
+## 0. Executive summary
+
+**Proved (new, unconditional, no threshold in `N`):**
+
+1. **Theorem B** — for a complete blow-up, `psi(C5[V_1..V_5], x) = min_i y_i y_{i+1}` exactly (`y_i` =
+   class sums). Hence the extremal set is an exact **plateau**: `{x : y_i = 1/5 ∀i}`, a product of
+   five simplices. Proof by multilinearity + AM–GM.
+2. **Theorem C** — the complete exact local classification at a C5-concentration: the active cut set
+   is `5·2^{n−5}` bipartitions; the directional derivative is `(1/5)·min_i(a_i + a_{i+1})` with
+   `a_i = d_{c_i} + (`weight moved onto full twins of class `i)`; the **flat cone is exactly the
+   twin-splitting cone**; `D_d psi ≤ −(1/60)·dist_1(d, FlatCone)`; and on the flat cone the drop is
+   exactly second order with rate `max_i Miss_i(d)` (missing twin–twin edges), verified with the
+   exact identity `psi = 1/25 − ts`.
+3. **Theorem D** — `psi(H,x) ≤ (1−ρ)²/25 + ρη`, hence **`psi ≤ 1/25` on an explicit ball**:
+   whenever the off-`C` mass `η ≤ 1/13`, and *unconditionally* (any `η`) when all off-`C` mass sits
+   on full twins. This is the `LOC` half of a stability program, proved for every triangle-free `H`
+   and every `n`.
+4. **Proposition 1** — `psi(C5,x) ≤ 1/25 − D/60 + D²/576 ≤ 1/25 − D/72`, `D = ‖x−u‖_1`, with the
+   linear constant **`1/60` sharp** (infimum, not attained), extremal direction `(2,−3,2,−3,2)`.
+
+**Exhaustive exact census:** for all connected triangle-free graphs on `n ≤ 9`,
+`{attain psi = 1/25} = {contain an induced C_5}` exactly, every maximiser is a balanced blow-up
+weighting, and `C_5`-free graphs (odd girth `≥ 7`) top out at `1/49 = (25/49)·(1/25)`.
+
+**Four kills, each with an exact witness:**
+
+* **K-0** `psi` **has spurious local maxima**: on Petersen, `x* = (1/8,1/8,1/8,0,1/8,0,1/4,1/8,0,1/8)`
+  with `psi = 1/32` exactly, LP ascent optimum `t* = 0`, `ℓ_1`-distance `3/5` from the extremal set.
+  Forces `ε < 7/800` in any stability window `STAB(ε,δ)` with `δ < 3/5`.
+* **K-1** quantitative monotonicity in the naive metric is false at `ε = 0` (witness `C5[2]`,
+  distance `→ 2` = the simplex diameter).
+* **K-2** the unweighted / edit-distance form is false at `N = 14`: the `bip`-maximiser has `bip = 7`,
+  every `C_5` blow-up on 14 vertices has `bip ≤ 6`, and its exact edit distance to the blow-up family
+  is `15` of its `32` edges.
+* **K-3** the induction that would remove the `ρη` term in Theorem D dies on the exact identity
+  `2ρ/25` (cost) `= 2ρ/25` (gain).
+
+**Net effect on the conjecture:** `LOC` is now partially proved; `STAB` remains completely open and
+this round produced no partial result on it. Nothing here improves the global bound `n²/23.5`.
+
+## 0'. Notation
 
 `H` is a finite simple **triangle-free** graph on `V`, `Δ(V) = {x ≥ 0 : Σ x_v = 1}`.
 For `S ⊆ V` write `mono_H(S;x) = Σ_{uv ∈ E(H), |{u,v} ∩ S| ≠ 1} x_u x_v` and
@@ -327,14 +367,75 @@ rationals) gives:
 | `FhdL?` `(4,4,4,4,4,0,0)/20`, `(4,0,4,4,4,0,4)/20` | `1/25` | 20, 20 | first-order local max |
 | `FhdL?` `(3,3,4,4,4,1,1)/20` | `3/80` | 3 | **not** — `1521/40000` |
 
-**Observed law (tested, not proved): on every graph examined, every continuous first-order local
-maximum of `psi` is a GLOBAL maximum.** Equivalently `psi` appears to have no spurious local maxima —
-which, if it could be proved, would be a genuine stability mechanism (it converts local certificates
-into global ones). No counterexample was found.
+So *every* grid-local maximum of value `< 1/25` in that list is a lattice artifact. That suggested the
+law "every local maximum of `psi` is global", which would be a genuine stability mechanism. **It is
+false.**
+
+### 5.5 K-0 (the strongest negative of the round): `psi` HAS spurious local maxima
+
+Multistart ascent (§5.6) stalls on Petersen. The stalling point, polished to exact rationals:
+
+```
+x* = (1/8, 1/8, 1/8, 0, 1/8, 0, 1/4, 1/8, 0, 1/8)  on Petersen
+     (outer 0-1-2-3-4-0, spokes i ~ i+5, inner 5-7-9-6-8-5)
+
+psi(Petersen, x*) = 1/32   EXACTLY          (Psi(Petersen) = 1/25)
+```
+
+Certificates (`R8_stability_spurious.py`, all exact):
+
+* **first-order local maximum, rigorously**: 88 active cuts, and the LP
+  `max t` s.t. `⟨∇q_S(x*),d⟩ ≥ t` over all active `S`, `Σd = 0`, `d_v ≥ 0` where `x*_v = 0`,
+  has optimum `t* = 0` — **no direction of ascent exists**;
+* no improvement among **all** grid points within 2 unit transfers at `q = 40, 200, 1000`
+  (`ℓ_1` radii `1/10, 1/50, 1/250`), nor among **6000** random exact rational perturbations;
+* `ℓ_1` distance from `x*` to the nearest global maximiser is exactly **3/5** — this is a genuinely
+  separated local maximum, not a boundary effect;
+* **why `1/32`**: the support `{0,1,2,4,6,7,9}` induces the theta-graph `Θ(2,3,3)` (branch vertices
+  `1, 9`; paths `1-6-9`, `1-0-4-9`, `1-2-7-9`). Its two odd cycles are the two `C_5`s, and they share
+  the length-2 path; the cheapest odd-cycle transversal is a single edge of that path, of weight
+  `(1/8)(1/4) = 1/32`. Two further Petersen stalling points, with different supports, also have
+  `psi = 1/32` exactly.
+
+By contrast the analogous Wagner stalling point (uniform `x = (1/8)^8`, `psi = bip(Γ_8)/64 = 2/64 =
+1/32`, LP `t* = 0`) is **not** a local maximum: an exact probe gives `psi(x + εd) = 167/4800 > 1/32`.
+So `t* = 0` alone is not sufficient — the flat cone must be probed at second order, exactly as in
+Theorem C(v).
+
+**Consequence.** Any stability route that tries to convert a local certificate into a global one, or
+that runs a descent/ascent on `psi`, must deal with the `1/32` family. Together with the
+non-monotone Petersen profile of §5.3 this rules out "hill-climbing / potential-function" stability
+arguments on `psi` itself.
+
+### 5.6 Multistart under OPTIMISER DISCIPLINE
+
+Every induced `C_5` at weight `1/5` is used as a start, plus uniform and 40 random starts;
+the reported optimum is polished to exact rationals.
+
+| graph | `n` | #induced `C_5` | `Psi` (exact) | `25·Psi` | random starts reaching the max |
+|---|---|---|---|---|---|
+| `C_5` | 5 | 1 | `1/25` | 1 | 42/42 |
+| `C5[2]` | 10 | 32 | `1/25` | 1 | 73/73 |
+| `C5[3,1,2,2,1]` | 9 | 12 | `1/25` | 1 | 53/53 |
+| `C5[2,0,2,2,2]` | 8 | 0 | `0` | 0 | 41/41 (bipartite, as it must be) |
+| **Petersen** | 10 | 12 | `1/25` | 1 | **45/53** (8 stalls at `1/32`, §5.5) |
+| Grötzsch | 11 | 31 | `1/25` | 1 | 72/72 |
+| Wagner `Γ_8` | 8 | 8 | `1/25` | 1 | 48/49 |
+| `Γ_11` | 11 | 33 | `1/25` | 1 | 73/74 |
+| `Γ_14` | 14 | 98 | `1/25` | 1 | 138/139 |
+| `C_7` | 7 | 0 | `1/49` | `25/49` | 41/41 |
+| `K_{3,3}` | 6 | 0 | `0` | 0 | 41/41 |
+| `C5+`twins (`FhdLG`) | 7 | 4 | `1/25` | 1 | 45/45 |
+| `C5+`twins`−vw` (`FhdL?`) | 7 | 3 | `1/25` | 1 | 44/44 |
+
+No run on a `C_5`-containing graph returned an exact optimum below `1/25`, so no run is VOID.
 
 ---
 
-## 6. Three explicit KILLS
+## 6. Explicit KILLS
+
+**K-0** is §5.5: `psi` has spurious local maxima (Petersen, value exactly `1/32`, `ℓ_1`-distance
+`3/5` from the extremal set, full certificate).
 
 ### K-1. Quantitative monotonicity in the naive metric is FALSE at `ε = 0`.
 
@@ -415,9 +516,16 @@ if the two halves are not kept separate.
   has no analogue when the classes are large (an `R`-vertex can then meet a whole class, and choosing
   its side costs `Θ(ρ/5)`, far above the `2ρ/25` budget). This is the concrete open step.
 * `STAB`: **completely open**, and the round produced no partial result on it. The only new inputs
-  are negative: K-1 fixes the metric that a true `STAB` must use, K-2 shows `STAB` cannot be phrased
-  at the graph/edit-distance level at finite `N`, and §5.3 shows the natural potential function
-  (distance to the extremal set) is not monotone even on Petersen.
+  are negative: K-0 shows `psi` has separated non-global local maxima (so `STAB` cannot be obtained
+  by any ascent/descent or local-to-global promotion), K-1 fixes the metric that a true `STAB` must
+  use, K-2 shows `STAB` cannot be phrased at the graph/edit-distance level at finite `N`, and §5.3
+  shows the natural potential function (distance to the extremal set) is not monotone even on
+  Petersen.
+
+**Concretely, `STAB` must be false as stated for small `δ` unless `ε` is small enough to exclude
+`1/32`:** the Petersen point `x*` of K-0 has `psi = 1/32 = 1/25 − 7/800`, so any `STAB(ε,δ)` with
+`ε ≥ 7/800 = 0.00875` and `δ < 3/5` is refuted outright by `x*`. This is the first explicit numerical
+constraint the project has on the admissible `(ε,δ)` window: **`ε < 7/800`**.
 
 **Also note:** neither Theorem B, C, D nor Proposition 1 gives *any* upper bound on `psi` for a
 weighting far from every C5-concentration, so nothing here improves the published `n²/23.5`.
@@ -437,6 +545,7 @@ No statement in this document should be read as progress on the global bound.
 | `R8_stability_census.cpp/.exe` | exact integer census: `M(a)`, argmax sets, grid-local maxima, stability profiles |
 | `R8_stability_analyze.py` | census post-processing, blow-up-weighting checker |
 | `R8_stability_localmax.py` | exact continuous local-maximum certificates / refutations |
+| `R8_stability_spurious.py` | **K-0**: full certificate for the `psi = 1/32` spurious local maximum on Petersen |
 | `R8_stability_editdist.py/.cpp/.exe` | the `N = 14` kill K-2 (bip, blow-up optimum, exact edit distance) |
 | `R8_stability_multistart.py` | multistart ascent under OPTIMISER DISCIPLINE |
 | `R8_tf{5..9}.g6`, `R8_census_n*_q*.txt`, `R8_*_q*.txt`, `R8_verify.log`, `R8_c5sharp.log` | data |

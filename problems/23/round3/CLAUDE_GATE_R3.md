@@ -645,3 +645,59 @@ target is now a *classical, well-studied* property (min-max for odd-cycle coveri
 *highly structured* family (`And(k)` is the circular clique `K_{(3k−1)/k}`), rather than an ad-hoc
 inequality of my own devising — and unlike every certificate family tried so far, it is not
 contradicted by the far-regular Wagner configuration, because it is exactly what proves that case.
+
+
+---
+
+## R3-C20 — round 8 stability family: a proved local-exactness ball, and spurious local maxima (GATED)
+
+Root-agent entry, 2026-07-26. Re-verified with my own implementation
+(`round5/claude_gate_r8_stability.py`); nothing imported from the family's code.
+
+### Accepted
+
+**Theorem B.** For the complete blow-up `B = C5[V_1..V_5]` and any `x` on the simplex with class
+sums `y_i = x(V_i)`, `psi(B,x) = min_i y_i y_{i+1}` exactly, hence `psi(H,x) <= 1/25` for every
+`H` subgraph of `B`. Gated on 36 exact weightings including unbalanced blow-ups and one with a
+ZERO part: 0 mismatches. (The `rho = 0` case of Theorem D below is exactly this C5-colourable
+case, since in a triangle-free graph two full twins of the same class cannot be adjacent.)
+
+**Theorem D — the first quantitative positive result of the campaign in this direction.**
+`H` triangle-free, `C` an induced `C5`, `T_i` the full twins of class `i`
+(`N(v) ∩ C = {c_{i-1}, c_{i+1}}`), `R` everything else off `C`, `eta = x(V\C)`, `rho = x(R)`:
+
+```
+        psi(H,x)  <=  (1-rho)^2/25 + rho*eta
+        ==>  psi(H,x) <= 1/25   whenever  25*eta <= 2 - rho,   in particular whenever eta <= 1/13.
+```
+
+Gated on 1032 exact rational instances over C5, Petersen, Grotzsch, Wagner, Gamma_11, C5[2] and
+C5[3,1,2,2,1], every induced C5 of each: **0 violations of the inequality and 0 violations of the
+corollary**. This proves the conjecture in an explicit ball around every C5-concentration.
+
+### Accepted, and it constrains my own methodology
+
+**K-0: `psi` has SPURIOUS LOCAL MAXIMA.** On Petersen, 30 of the 840 arrangements of the multiset
+`(1/8 x6, 1/4, 0 x3)` give `psi = 1/32` exactly. For one such `x` the support is
+`{1,2,3,4,6,8,9}`, inducing a 7-vertex 8-edge graph with degree sequence `[2,2,2,2,2,3,3]` =
+`Theta(2,3,3)`, whose two C5s share the length-2 path. There are 88 active cuts, the first-order
+ascent LP returns `t* = 0` (no ascent direction), and 3000 exact rational perturbations produce
+**0** improvements.
+
+Consequence I must apply to my own record: **every multistart-optimiser sweep in this campaign is
+evidence, not proof.** The n <= 15 exhaustive pattern sweeps and the randomised n = 16..20 hunt
+report `max_x psi = 1/25`; those runs always start from C5-concentrations, so the reported values
+are valid LOWER bounds, but a local maximum ABOVE 1/25 unreachable from the seeded starts is not
+excluded by them. This does not retract any accepted result, since no ceiling was ever accepted on
+optimiser output alone -- the proved ceilings (C5, Wagner, Petersen, C5-colourable, odd-K5-minor-free)
+all rest on exact certificates.
+
+### Open, stated honestly by the family
+
+`STAB(eps,delta) ∧ LOC(delta) ==> conjecture` is a legal split (neither conjunct alone has strength
+>= the conjecture). `LOC` is now partly proved (Theorem D); **`STAB` is completely open and this
+round produced no partial result on it.** Blocking step, verbatim: Theorem D's proof uses
+`|N(v) ∩ C| <= 1` for `v` in `R`, which has no analogue at a blow-up point with large classes,
+where placing an R-vertex costs `Theta(rho/5)` against a `2*rho/25` budget. K-0 additionally forces
+`eps < 7/800` in any `STAB(eps,delta)` with `delta < 3/5`. Nothing here improves the published
+`n^2/23.5`.

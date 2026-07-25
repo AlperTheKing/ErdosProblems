@@ -4664,3 +4664,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T02:03:28] ✔ R8 TRANSPORT GATE | DID: Grotzsch at x=(0^5,(1/10)^5,1/2) | RESULT: 5 admissible cuts all give nu = 1/20 exactly while psi = 0; fails by 1.25x | Δ: A21 kill confirmed twice
 [2026-07-26T02:03:28] ✘ CONJECTURE T | DID: recompute the mono-incidence fraction at uniform x | RESULT: I get 7/8 Wagner, 7/8 Petersen, 31/32 Grotzsch vs the family's 1/2, 3/5, 5/11; false under both | Δ: none
 [2026-07-26T02:03:28] ✔ BIP/E BOUND | DID: exact check on M?AE@bH{AYN_LgBs? | RESULT: bip = 7 > 32/5 = |E|/5, so bip <= |E|/5 is false | Δ: A22 recorded DEAD
+[2026-07-26T02:13:17] ✔ R8 STABILITY GATE | DID: claude_gate_r8_stability.py Theorem D over 1032 exact instances, 7 graphs, every induced C5 | RESULT: 0 violations | Δ: psi <= 1/25 proved for eta <= 1/13
+[2026-07-26T02:13:17] ✔ R8 STABILITY GATE | DID: Theorem B on 36 exact blow-up weightings incl. unbalanced and a zero part | RESULT: psi = min_i y_i y_(i+1), 0 mismatches | Δ: A23 opened LIVE
+[2026-07-26T02:13:17] ✔ K-0 SPURIOUS MAX | DID: 840 arrangements on Petersen, ascent LP + 3000 exact perturbations | RESULT: 30 give psi = 1/32 exactly, support Theta(2,3,3), 0 ascent | Δ: A24 DEAD, sweeps are evidence only

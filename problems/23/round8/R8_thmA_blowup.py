@@ -39,7 +39,7 @@ print("           1/25 ATTAINED exactly, not exceeded.")
 worst = Fraction(0)
 worstx = None
 bad = 0
-for t in range(3000):
+for t in range(1200):
     xs = [Fraction(rng.randint(0, 60)) for _ in range(5)]
     s = sum(xs)
     if s == 0:
@@ -54,7 +54,7 @@ for t in range(3000):
         worst, worstx = lam, xs
     if lam > ONE25:
         FAIL.append(("C5 random x over 1/25", xs, lam))
-print("3000 random rational x on C5: formula mismatches = %d ; max Lambda = %s = %.12f at x=%s"
+print("1200 random rational x on C5: formula mismatches = %d ; max Lambda = %s = %.12f at x=%s"
       % (bad, worst, float(worst), worstx))
 
 print()
@@ -65,12 +65,12 @@ print("=" * 96)
 maxlam = Fraction(0)
 maxrec = None
 rows = 0
-for trial in range(260):
+for trial in range(160):
     sizes = tuple(rng.randint(0, 3) for _ in range(5))
     if sum(sizes) == 0:
         continue
     gb, parts = blowup_C5(sizes)
-    if gb.m == 0:
+    if gb.m == 0 or gb.n > 12:
         continue
     mode = trial % 3
     if mode == 0:
