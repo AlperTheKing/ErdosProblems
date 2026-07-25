@@ -1,0 +1,184 @@
+=== A. Gamma_i: BT verbatim definition vs the circular-distance form ===
+  i= 1 n= 2 m=  1  BTdef==distform:True  regular:True  deg=[1]  tf=True
+  i= 2 n= 5 m=  5  BTdef==distform:True  regular:True  deg=[2]  tf=True
+  i= 3 n= 8 m= 12  BTdef==distform:True  regular:True  deg=[3]  tf=True
+  i= 4 n=11 m= 22  BTdef==distform:True  regular:True  deg=[4]  tf=True
+  i= 5 n=14 m= 35  BTdef==distform:True  regular:True  deg=[5]  tf=True
+  i= 6 n=17 m= 51  BTdef==distform:True  regular:True  deg=[6]  tf=True
+  i= 7 n=20 m= 70  BTdef==distform:True  regular:True  deg=[7]  tf=True
+  i= 8 n=23 m= 92  BTdef==distform:True  regular:True  deg=[8]  tf=True
+  i= 9 n=26 m=117  BTdef==distform:True  regular:True  deg=[9]  tf=True
+  i=10 n=29 m=145  BTdef==distform:True  regular:True  deg=[10]  tf=True
+  i=11 n=32 m=176  BTdef==distform:True  regular:True  deg=[11]  tf=True
+  i=12 n=35 m=210  BTdef==distform:True  regular:True  deg=[12]  tf=True
+
+=== B. Gamma_i structural ===
+  Gamma_1 n= 2 deg=1 tf=True maxTF=True twinfree=True alpha=1 chi=2 delta_reg=1/2 inducedC5=False
+  Gamma_2 n= 5 deg=2 tf=True maxTF=True twinfree=True alpha=2 chi=3 delta_reg=2/5 inducedC5=True
+  Gamma_3 n= 8 deg=3 tf=True maxTF=True twinfree=True alpha=3 chi=3 delta_reg=3/8 inducedC5=True
+  Gamma_4 n=11 deg=4 tf=True maxTF=True twinfree=True alpha=4 chi=3 delta_reg=4/11 inducedC5=True
+  Gamma_5 n=14 deg=5 tf=True maxTF=True twinfree=True alpha=5 chi=3 delta_reg=5/14 inducedC5=True
+  Gamma_6 n=17 deg=6 tf=True maxTF=True twinfree=True alpha=6 chi=3 delta_reg=6/17 inducedC5=True
+  Gamma_7 n=20 deg=7 tf=True maxTF=True twinfree=True alpha=7 chi=3 delta_reg=7/20 inducedC5=True
+  Gamma_8 n=23 deg=8 tf=True maxTF=True twinfree=True alpha=8 chi=3 delta_reg=8/23 inducedC5=True
+  Gamma_9 n=26 deg=9 tf=True maxTF=True twinfree=True alpha=9 chi=3 delta_reg=9/26 inducedC5=True
+
+=== C. Vega graphs: BT Theorem 3 weights, exact regularity ===
+  Ups_2        n=13(exp 13) m= 28 tf=True maxTF=True twinfree=True regular=True deg=12(exp 12) tot=35(exp 35) delta_reg=12/35 = t/(3t-1) with t=12
+  Ups_2-y      n=12(exp 12) m= 24 tf=True maxTF=True twinfree=True regular=True deg=11(exp 11) tot=32(exp 32) delta_reg=11/32 = t/(3t-1) with t=11
+  Ups_2-2i     n=12(exp 12) m= 24 tf=True maxTF=True twinfree=True regular=True deg=11(exp 11) tot=32(exp 32) delta_reg=11/32 = t/(3t-1) with t=11
+  Ups_2-y-2i   n=11(exp 11) m= 20 tf=True maxTF=True twinfree=True regular=True deg=10(exp 10) tot=29(exp 29) delta_reg=10/29 = t/(3t-1) with t=10
+  Ups_3        n=16(exp 16) m= 41 tf=True maxTF=True twinfree=True regular=True deg=21(exp 21) tot=62(exp 62) delta_reg=21/62 = t/(3t-1) with t=21
+  Ups_3-y      n=15(exp 15) m= 37 tf=True maxTF=True twinfree=True regular=True deg=20(exp 20) tot=59(exp 59) delta_reg=20/59 = t/(3t-1) with t=20
+  Ups_3-2i     n=15(exp 15) m= 36 tf=True maxTF=True twinfree=True regular=True deg=20(exp 20) tot=59(exp 59) delta_reg=20/59 = t/(3t-1) with t=20
+  Ups_3-y-2i   n=14(exp 14) m= 32 tf=True maxTF=True twinfree=True regular=True deg=19(exp 19) tot=56(exp 56) delta_reg=19/56 = t/(3t-1) with t=19
+  Ups_4        n=19(exp 19) m= 57 tf=True maxTF=True twinfree=True regular=True deg=30(exp 30) tot=89(exp 89) delta_reg=30/89 = t/(3t-1) with t=30
+  Ups_4-y      n=18(exp 18) m= 53 tf=True maxTF=True twinfree=True regular=True deg=29(exp 29) tot=86(exp 86) delta_reg=29/86 = t/(3t-1) with t=29
+  Ups_4-2i     n=18(exp 18) m= 51 tf=True maxTF=True twinfree=True regular=True deg=29(exp 29) tot=86(exp 86) delta_reg=29/86 = t/(3t-1) with t=29
+  Ups_4-y-2i   n=17(exp 17) m= 47 tf=True maxTF=True twinfree=True regular=True deg=28(exp 28) tot=83(exp 83) delta_reg=28/83 = t/(3t-1) with t=28
+  Ups_5        n=22(exp 22) m= 76 tf=True maxTF=True twinfree=True regular=True deg=39(exp 39) tot=116(exp 116) delta_reg=39/116 = t/(3t-1) with t=39
+  Ups_5-y      n=21(exp 21) m= 72 tf=True maxTF=True twinfree=True regular=True deg=38(exp 38) tot=113(exp 113) delta_reg=38/113 = t/(3t-1) with t=38
+  Ups_5-2i     n=21(exp 21) m= 69 tf=True maxTF=True twinfree=True regular=True deg=38(exp 38) tot=113(exp 113) delta_reg=38/113 = t/(3t-1) with t=38
+  Ups_5-y-2i   n=20(exp 20) m= 65 tf=True maxTF=True twinfree=True regular=True deg=37(exp 37) tot=110(exp 110) delta_reg=37/110 = t/(3t-1) with t=37
+  Ups_6        n=25(exp 25) m= 98 tf=True maxTF=True twinfree=True regular=True deg=48(exp 48) tot=143(exp 143) delta_reg=48/143 = t/(3t-1) with t=48
+  Ups_6-y      n=24(exp 24) m= 94 tf=True maxTF=True twinfree=True regular=True deg=47(exp 47) tot=140(exp 140) delta_reg=47/140 = t/(3t-1) with t=47
+  Ups_6-2i     n=24(exp 24) m= 90 tf=True maxTF=True twinfree=True regular=True deg=47(exp 47) tot=140(exp 140) delta_reg=47/140 = t/(3t-1) with t=47
+  Ups_6-y-2i   n=23(exp 23) m= 86 tf=True maxTF=True twinfree=True regular=True deg=46(exp 46) tot=137(exp 137) delta_reg=46/137 = t/(3t-1) with t=46
+  Ups_7        n=28(exp 28) m=123 tf=True maxTF=True twinfree=True regular=True deg=57(exp 57) tot=170(exp 170) delta_reg=57/170 = t/(3t-1) with t=57
+  Ups_7-y      n=27(exp 27) m=119 tf=True maxTF=True twinfree=True regular=True deg=56(exp 56) tot=167(exp 167) delta_reg=56/167 = t/(3t-1) with t=56
+  Ups_7-2i     n=27(exp 27) m=114 tf=True maxTF=True twinfree=True regular=True deg=56(exp 56) tot=167(exp 167) delta_reg=56/167 = t/(3t-1) with t=56
+  Ups_7-y-2i   n=26(exp 26) m=110 tf=True maxTF=True twinfree=True regular=True deg=55(exp 55) tot=164(exp 164) delta_reg=55/164 = t/(3t-1) with t=55
+
+  chi / alpha of the Vega graphs (i=2..6):
+    Ups_2        chi=4 alpha=5 inducedC5=True
+    Ups_2-y      chi=4 alpha=5 inducedC5=True
+    Ups_2-2i     chi=4 alpha=5 inducedC5=True
+    Ups_2-y-2i   chi=4 alpha=5 inducedC5=True
+    Ups_3        chi=4 alpha=6 inducedC5=True
+    Ups_3-y      chi=4 alpha=6 inducedC5=True
+    Ups_3-2i     chi=4 alpha=6 inducedC5=True
+    Ups_3-y-2i   chi=4 alpha=6 inducedC5=True
+    Ups_4        chi=4 alpha=7 inducedC5=True
+    Ups_4-y      chi=4 alpha=7 inducedC5=True
+    Ups_4-2i     chi=4 alpha=7 inducedC5=True
+    Ups_4-y-2i   chi=4 alpha=7 inducedC5=True
+    Ups_5        chi=4 alpha=8 inducedC5=True
+    Ups_5-y      chi=4 alpha=8 inducedC5=True
+    Ups_5-2i     chi=4 alpha=8 inducedC5=True
+    Ups_5-y-2i   chi=4 alpha=8 inducedC5=True
+    Ups_6        chi=4 alpha=9 inducedC5=True
+    Ups_6-y      chi=4 alpha=9 inducedC5=True
+    Ups_6-2i     chi=4 alpha=9 inducedC5=True
+    Ups_6-y-2i   chi=4 alpha=9 inducedC5=True
+
+=== D. delta_reg ladder identity (exact) ===
+  Ups_2        delta_reg=12/35       t=12  (9j-6,9j-7,9j-7,9j-8)=12
+  Ups_2-y      delta_reg=11/32       t=11  (9j-6,9j-7,9j-7,9j-8)=11
+  Ups_2-2i     delta_reg=11/32       t=11  (9j-6,9j-7,9j-7,9j-8)=11
+  Ups_2-y-2i   delta_reg=10/29       t=10  (9j-6,9j-7,9j-7,9j-8)=10
+  Ups_3        delta_reg=21/62       t=21  (9j-6,9j-7,9j-7,9j-8)=21
+  Ups_3-y      delta_reg=20/59       t=20  (9j-6,9j-7,9j-7,9j-8)=20
+  Ups_3-2i     delta_reg=20/59       t=20  (9j-6,9j-7,9j-7,9j-8)=20
+  Ups_3-y-2i   delta_reg=19/56       t=19  (9j-6,9j-7,9j-7,9j-8)=19
+  Ups_4        delta_reg=30/89       t=30  (9j-6,9j-7,9j-7,9j-8)=30
+  Ups_4-y      delta_reg=29/86       t=29  (9j-6,9j-7,9j-7,9j-8)=29
+  Ups_4-2i     delta_reg=29/86       t=29  (9j-6,9j-7,9j-7,9j-8)=29
+  Ups_4-y-2i   delta_reg=28/83       t=28  (9j-6,9j-7,9j-7,9j-8)=28
+  Ups_5        delta_reg=39/116      t=39  (9j-6,9j-7,9j-7,9j-8)=39
+  Ups_5-y      delta_reg=38/113      t=38  (9j-6,9j-7,9j-7,9j-8)=38
+  Ups_5-2i     delta_reg=38/113      t=38  (9j-6,9j-7,9j-7,9j-8)=38
+  Ups_5-y-2i   delta_reg=37/110      t=37  (9j-6,9j-7,9j-7,9j-8)=37
+  Ups_6        delta_reg=48/143      t=48  (9j-6,9j-7,9j-7,9j-8)=48
+  Ups_6-y      delta_reg=47/140      t=47  (9j-6,9j-7,9j-7,9j-8)=47
+  Ups_6-2i     delta_reg=47/140      t=47  (9j-6,9j-7,9j-7,9j-8)=47
+  Ups_6-y-2i   delta_reg=46/137      t=46  (9j-6,9j-7,9j-7,9j-8)=46
+  Ups_7        delta_reg=57/170      t=57  (9j-6,9j-7,9j-7,9j-8)=57
+  Ups_7-y      delta_reg=56/167      t=56  (9j-6,9j-7,9j-7,9j-8)=56
+  Ups_7-2i     delta_reg=56/167      t=56  (9j-6,9j-7,9j-7,9j-8)=56
+  Ups_7-y-2i   delta_reg=55/164      t=55  (9j-6,9j-7,9j-7,9j-8)=55
+  Ups_8        delta_reg=66/197      t=66  (9j-6,9j-7,9j-7,9j-8)=66
+  Ups_8-y      delta_reg=65/194      t=65  (9j-6,9j-7,9j-7,9j-8)=65
+  Ups_8-2i     delta_reg=65/194      t=65  (9j-6,9j-7,9j-7,9j-8)=65
+  Ups_8-y-2i   delta_reg=64/191      t=64  (9j-6,9j-7,9j-7,9j-8)=64
+
+=== E. identifications ===
+  Ups_2-y-2i ~= Grotzsch(Mycielski C5): True
+  Ups_2-y    ~= Ups_2-2i             : True
+  Ups_3-y    ~= Ups_3-2i             : False
+  Ups_4-y    ~= Ups_4-2i             : False
+  Ups_5-y    ~= Ups_5-2i             : False
+  Ups_6-y    ~= Ups_6-2i             : False
+
+=== F. Theorem B1 (collapse): induced subgraphs of Upsilon_i ===
+  Ups_2-y      induced in Ups_2: True
+  Ups_2-2i     induced in Ups_2: True
+  Ups_2-y-2i   induced in Ups_2: True
+  Gamma_2      induced in Ups_2: True
+  Ups_3-y      induced in Ups_3: True
+  Ups_3-2i     induced in Ups_3: True
+  Ups_3-y-2i   induced in Ups_3: True
+  Gamma_3      induced in Ups_3: True
+  Ups_4-y      induced in Ups_4: True
+  Ups_4-2i     induced in Ups_4: True
+  Ups_4-y-2i   induced in Ups_4: True
+  Gamma_4      induced in Ups_4: True
+  Ups_5-y      induced in Ups_5: True
+  Ups_5-2i     induced in Ups_5: True
+  Ups_5-y-2i   induced in Ups_5: True
+  Gamma_5      induced in Ups_5: True
+  Ups_6-y      induced in Ups_6: True
+  Ups_6-2i     induced in Ups_6: True
+  Ups_6-y-2i   induced in Ups_6: True
+  Gamma_6      induced in Ups_6: True
+  Ups_7-y      induced in Ups_7: True
+  Ups_7-2i     induced in Ups_7: True
+  Ups_7-y-2i   induced in Ups_7: True
+  Gamma_7      induced in Ups_7: True
+
+=== G. Theorem B2 (chain): Ups_i = Ups_{i+1} - {i+1,2i+2,3i+2} ===
+  i= 2  |Ups_3 - D| = 13  explicit-map-entrywise-equal: True  nauty-iso: True
+  i= 3  |Ups_4 - D| = 16  explicit-map-entrywise-equal: True  nauty-iso: True
+  i= 4  |Ups_5 - D| = 19  explicit-map-entrywise-equal: True  nauty-iso: True
+  i= 5  |Ups_6 - D| = 22  explicit-map-entrywise-equal: True  nauty-iso: True
+  i= 6  |Ups_7 - D| = 25  explicit-map-entrywise-equal: True  nauty-iso: True
+  i= 7  |Ups_8 - D| = 28  explicit-map-entrywise-equal: True  nauty-iso: True
+  i= 8  |Ups_9 - D| = 31  explicit-map-entrywise-equal: True  nauty-iso: True
+  i= 9  |Ups_10 - D| = 34  explicit-map-entrywise-equal: True  nauty-iso: True
+  i=10  |Ups_11 - D| = 37  explicit-map-entrywise-equal: True  nauty-iso: True
+  i=11  |Ups_12 - D| = 40  explicit-map-entrywise-equal: True  nauty-iso: True
+  i=12  |Ups_13 - D| = 43  explicit-map-entrywise-equal: True  nauty-iso: True
+
+=== H. Jin falsifier: homomorphisms Gamma_i -> C5 ===
+  Gamma_2  n= 5 delta_reg=2/5     > 10/29 : True   alpha=2  chi_f>=n/alpha=5/2  hom->C5: True  chi=3
+  Gamma_3  n= 8 delta_reg=3/8     > 10/29 : True   alpha=3  chi_f>=n/alpha=8/3  hom->C5: False  chi=3
+  Gamma_4  n=11 delta_reg=4/11    > 10/29 : True   alpha=4  chi_f>=n/alpha=11/4  hom->C5: False  chi=3
+  Gamma_5  n=14 delta_reg=5/14    > 10/29 : True   alpha=5  chi_f>=n/alpha=14/5  hom->C5: False  chi=3
+  Gamma_6  n=17 delta_reg=6/17    > 10/29 : True   alpha=6  chi_f>=n/alpha=17/6  hom->C5: False  chi=3
+  Gamma_7  n=20 delta_reg=7/20    > 10/29 : True   alpha=7  chi_f>=n/alpha=20/7  hom->C5: False  chi=3
+  Gamma_8  n=23 delta_reg=8/23    > 10/29 : True   alpha=8  chi_f>=n/alpha=23/8  hom->C5: False  chi=3
+  Gamma_9  n=26 delta_reg=9/26    > 10/29 : True   alpha=9  chi_f>=n/alpha=26/9  hom->C5: False  chi=3
+  Gamma_10 n=29 delta_reg=10/29   > 10/29 : False  alpha=10  chi_f>=n/alpha=29/10  hom->C5: False  chi=3
+
+=== I. Grotzsch = Ups_2-{y,4}: BT weighting is Haggkvist 29-vertex 10-regular ===
+  weights: [('1', 2), ('2', 2), ('3', 3), ('5', 3), ('a', 4), ('b', 3), ('c', 3), ('u', 3), ('v', 2), ('w', 2), ('x', 2)]
+  total=29  weighted degrees=[10]  chi=4  tf=True
+  blow-up N=29, delta=10, delta/N=10/29 vs 10/29=10/29
+
+=== J. Corollary 4.3(4) check: order <= 3i-4 whenever delta_reg > i/(3i-1) ===
+  violations of "at most 3i-4 vertices" for i=2..39: NONE
+
+=== K. the ladder L_t ===
+  t= 2 band delta> 2/5        |L_t|= 1 maxorder= 2  vega=[]
+  t= 3 band delta> 3/8        |L_t|= 2 maxorder= 5  vega=[]
+  t= 4 band delta> 4/11       |L_t|= 3 maxorder= 8  vega=[]
+  t= 5 band delta> 5/14       |L_t|= 4 maxorder=11  vega=[]
+  t= 6 band delta> 6/17       |L_t|= 5 maxorder=14  vega=[]
+  t= 7 band delta> 7/20       |L_t|= 6 maxorder=17  vega=[]
+  t= 8 band delta> 8/23       |L_t|= 7 maxorder=20  vega=[]
+  t= 9 band delta> 9/26       |L_t|= 8 maxorder=23  vega=[]
+  t=10 band delta> 10/29      |L_t|= 9 maxorder=26  vega=[]
+  t=11 band delta> 11/32      |L_t|=11 maxorder=29  vega=['Ups_2-y-2i']
+  t=12 band delta> 12/35      |L_t|=14 maxorder=32  vega=['Ups_2-y', 'Ups_2-2i', 'Ups_2-y-2i']
+  t=13 band delta> 13/38      |L_t|=16 maxorder=35  vega=['Ups_2', 'Ups_2-y', 'Ups_2-2i', 'Ups_2-y-2i']
+  t=20 band delta> 20/59      |L_t|=24 maxorder=56  vega=['Ups_2', 'Ups_2-y', 'Ups_2-2i', 'Ups_2-y-2i', 'Ups_3-y-2i']
+  t=30 band delta> 30/89      |L_t|=40 maxorder=86  vega=['Ups_2', 'Ups_2-y', 'Ups_2-2i', 'Ups_2-y-2i', 'Ups_3', 'Ups_3-y', 'Ups_3-2i', 'Ups_3-y-2i', 'Ups_4-y', 'Ups_4-2i', 'Ups_4-y-2i']
