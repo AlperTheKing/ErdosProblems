@@ -1,0 +1,7 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38477,0 +38478,3 @@
++[2026-07-23T18:22:52+03:00] OK VERIFY | DID: audited 12-offset covariant family | RESULT: 60-var/192736-clause UNSAT; DRAT and 3-column core verified | D: lane DEAD
++[2026-07-23T18:22:53+03:00] FAIL ATTACK | DID: applied direct-proof guard | RESULT: DEAD: reformulation maze — restricted families lack global bridge | D: variants stopped
++[2026-07-23T18:22:54+03:00] > ATTACK | NEXT: run unrestricted K26 search and prove or falsify the all-r Ramsey--Turan edge lemma R2.

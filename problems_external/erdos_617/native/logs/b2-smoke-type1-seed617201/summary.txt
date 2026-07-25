@@ -1,0 +1,7 @@
+status NO_HIT
+threads 1
+seconds 10
+seed 617201
+type 1
+best_missing_pairs 873
+total_moves 56117

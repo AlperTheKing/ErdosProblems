@@ -1,0 +1,2768 @@
+                                                THE MAXIMAL LENGTH OF THE ERDŐS–HERZOG–PIRANIAN
+                                                           LEMNISCATE IN HIGH DEGREE
+
+                                                                                       TERENCE TAO
+
+                                                  Abstract. Let n ≥ 1, and let p : C → C be a monic polynomial of degree n. It was
+                                                  conjectured by Erdős, Herzog, and Piranian that the maximal length of lemniscate {z ∈
+                                                  C : |p(z)| = 1} is attained by the polynomial p(z) = z n − 1. In this paper, building upon
+arXiv:2512.12455v2 [math.CV] 22 Dec 2025
+
+
+
+
+                                                  a previous analysis of Fryntov and Nazarov, we establish this conjecture for all sufficiently
+                                                  large n.
+
+
+
+
+                                                                                     1. Introduction
+                                           1.1. The Erdős–Herzog–Piranian conjecture. Let n ≥ 1, and let p : C → C be a monic
+                                           polynomial of degree n. We introduce the regions
+                                                                          ER = ER (p) := {z ∈ C : |p(z)| < R}
+                                           for any R ≥ 0, with corresponding boundaries
+                                                                         ∂ER = ∂ER (p) = {z ∈ C : |p(z)| = R}.
+                                           We refer to ∂E1 (p) = {z ∈ C : |p(z)| = 1} as the Erdős–Herzog–Piranian lemniscate (or
+                                           lemniscate for short) associated to p. The problem of bounding the arclength ℓ(∂E1 (p)) of
+                                           this lemniscate was raised (amongst many other questions) by Erdős, Herzog, and Piranian
+                                           in [6]. For instance, when n = 1, ∂E1 (p) is a unit circle and ℓ(∂E1 (p)) = 2π.
+                                              As r → ∞, the lemniscates ∂E1 (z 2 − r2 ), which are Cassini ovals with foci ±r and
+                                           eccentricity e = 1/r, can be calculated to have length O(1/r). Thus the lemniscate length
+                                           can be arbitrarily small without further hypotheses; however, in [6, Problem 12] it was
+                                           conjectured that when one also required E1 (p) to be connected, then one had the lower
+                                           bound
+                                                                          ℓ(∂E1 (p)) ≥ ℓ(∂E1 (z n )) = 2π.
+                                           This was quickly verified by Pommerenke [17].
+                                             The question of upper bounds for ℓ(∂E1 (p)) was more difficult, with the following conjec-
+                                           ture raised in [6, Problem 12] (see also [7, p. 247], [8], [9], [10], [1, Problem 114]):
+                                           Conjecture 1.1 (Erdős–Herzog–Piranian conjecture). If n ≥ 1, and p is monic of degree
+                                           n, then
+                                                                         ℓ(∂E1 (p)) ≤ ℓ(∂E1 (p0 ))
+                                           where p0 (z) := z n − 1.
+
+                                             Date: December 23, 2025.
+                                             2020 Mathematics Subject Classification. 30C75.
+                                                                                               1
+       Figure 1. The lemniscate ∂E1 (p0 ) for n = 3, 9. The approximation 2n +
+       4 log 2 to the lemniscate length is ≈ 8.773 for n = 3 and ≈ 20.773 for n = 9.
+       The initial code for this and subsequent plots were provided by AlphaEvolve
+       and Gemini.
+
+Remark 1.1. Note that the lemniscate length is unaffected if one replaces a polynomial p(z)
+by a translate p(z − z0 ) or a rotation e−inθ p(eiθ z) for z0 ∈ C and θ ∈ R. Thus for instance
+one could replace p0 in the above conjecture by any translated, rotated version (z − z0 )n − eiθ
+of this polynomial (and it is natural to conjecture, especially in view of Theorem 1.1(iv)
+below, that these are in fact the full set of maximizers of this length). To eliminate these
+symmetries, we will find it convenient to work with polynomials p that are normalized in the
+sense that the z n−1 coefficient vanishes and the constant coefficient is a non-positive real.
+Then, p0 is the only remaining conjectural candidate for a maximizer.
+  From the above discussion, Conjecture 1.1 holds for n = 1. To avoid minor degeneracies,
+we will now assume n ≥ 2 henceforth. Numerical experimentation by the author using the
+tool AlphaEvolve suggested that this conjecture was true for all n, as the tool quickly settled
+on p0 (or a rotation and translation thereof) as a potential maximizer of ℓ(∂E1 (p)) for various
+choices of degree n, though this fell well short of a rigorous proof.
+  A routine calculation (see Lemma 3.2) shows that
+                                                             
+                                                  1/n   1 1
+(1.1)                             ℓ(∂E1 (p0 )) = 2 B       ,
+                                                        2 2n
+where B is the beta function. In particular, from the Stirling approximation one can calculate
+that
+                                                       
+                                                         1
+(1.2)                 ℓ(∂E1 (p0 )) = 2n + 4 log 2 + O        = 2n + O(1).
+                                                        n
+as n → ∞.
+Remark 1.2. It is also instructive to try to establish the bound (1.2) geometrically. The
+region E1 (p0 ) decomposes into n thin “petals” emenating from the origin, while the lemniscate
+∂E1 (p0 ) consists of 2n “spokes” emenating from the origin that are approximately unit line
+                                               2
+       Figure 2. The curve {w : |ew − 1| = 1}, together with the roots w = 2kπi of
+       ew − 1 = 0. This is the asymptotic profile of the lemniscate E1 (p0 ) as n → ∞,
+       after rescaling around an nth root of unity.
+
+
+sgments, together with n “tips” resembling semicircles of radius 1/n, for a total length of
+approximately 2n + O(1); see Figure 1. The spokes arise from the observation that in the
+bulk region D(0, 1 − C/n) for a large constant C, the condition |p0 (z)| = 1 is approximately
+equivalent to the condition that z n lies on the imaginary axis. If instead one takes an ansatz
+z = e2πij/n (1+w/n) to study the j th tip, the condition |p0 (z)| = 1 is approximately equivalent
+to the condition that |ew − 1| = 1; see Figure 2. See Lemma 3.2 for a more rigorous
+justification of these heuristics.
+
+  There are several results in the literature obtaining upper bounds on ℓ(∂E1 (p)) in the
+direction of establishing Conjecture 1.1: see Table 1. In particular, prior to this work, this
+conjecture was settled for n = 2 [11], and for p sufficiently close to p0 [12, §6], and up to an
+error of O(n7/8 ) in the general case [12, §8]. In [12, §8] the authors write “We have no doubt
+that the power 7/8 can be substantially improved though to bring it below 1/2 seems quite
+a challenging problem.”
+                                                3
+              Upper bound          Hypotheses               Reference
+                       2
+                   74n                                   Pommerenke [18]
+                   8eπn                                    Borwein [3]
+                   4πn                                     Dolženko [5]
+                 4πn − 2π                            Fryntov–Nazarov [12, §7]
+                  9.173n
+                      √                               Eremenko–Hayman [11]
+            2πn + 2π n − 2π                          Fryntov–Nazarov [12, §8]
+                   2πn
+                     √                                    Danchenko [4]
+            πn + O( n log n)           n≥2           Kosukhin [14, Theorem 3]
+              2n + O(n7/8 )                          Fryntov–Nazarov [12, §9]
+                ℓ(∂E1 (p0 ))           n=1                    trivial
+                ℓ(∂E1 (p0 ))           n=2            Eremenko–Hayman [11]
+                ℓ(∂E1 (p√0 ))      p close to  p 0   Fryntov–Nazarov   [12, §6]
+               2n + O( n)                                 Theorem 1.1(i)
+                2n + O(1)                                Theorem 1.1(ii)
+            2n + 4 log 2 + o(1)                          Theorem 1.1(iii)
+                ℓ(∂E1 (p0 ))    n sufficiently large     Theorem 1.1(iv)
+       Table 1. A summary of upper bounds on the lemniscate length ℓ(∂E1 (p))
+       for monic polynomials p of degree n ≥ 2, including the new results in this
+       paper.
+
+
+1.2. Main results. Our main results sharpen the upper bounds, and in fact establish the
+Erdős–Herzog–Piranian conjecture for sufficiently large n:
+Theorem 1.1 (Main theorem). Let p be a monic polynomial of degree n.
+                                      √
+   (i) One has ℓ(∂E1 (p)) ≤ 2n + O( n).
+  (ii) One has ℓ(∂E1 (p)) ≤ 2n + O(1).
+ (iii) One has ℓ(∂E1 (p)) ≤ 2n + 4 log 2 + o(1) as n → ∞.
+  (iv) If n is sufficiently large, then ℓ(∂E1 (p)) ≤ ℓ(∂E1 (p0 )). Furthermore, equality is
+       attained if and only if p is equal to p0 up to rotation and translation (i.e., p(z) =
+       (z − z0 )n − eiθ for some z0 ∈ C and θ ∈ R).
+  Of course, each part of this theorem implies the previous ones, so one could retain only
+the strongest conclusion (iv) and discard the other three components (i), (ii), (iii) of the
+theorem; but our proof will be structured by establishing (i), (ii), (iii), and (iv) in turn, with
+the proof of each part relying on the preceding ones. Part (iv) has some resemblance to a
+previous result [19] of the author establishing Sendov’s conjecture for sufficiently high degree
+polynomials, but the proof techniques here are rather different from those in that paper.
+Remark 1.3. All implied constants in our arguments are effectively computable. Thus, in
+view of Theorem 1.1(iv), the full verification of Conjecture 1.1 now reduces to checking the
+conjecture for an explicitly bounded number of n, although we have made no attempt to op-
+timize this bound. This almost allows us to declare this conjecture to be decidable; however,
+there is still one (very unlikely) scenario which could obstruct this conjecture from being
+decided in finite time, in which there is some bounded degree n and some competitor nor-
+malized extremizer p1 ̸= p0 for which the lemniscate lengths ℓ(∂E1 (p0 )), ℓ(∂E1 (p1 )) happen
+                                                4
+to be identical. Due to the (likely) transcendental nature of these lengths, it is not imme-
+diately obvious that one could decide between the rival scenarios ℓ(∂E1 (p0 )) < ℓ(∂E1 (p1 )),
+ℓ(∂E1 (p0 )) = ℓ(∂E1 (p1 )), or ℓ(∂E1 (p0 )) > ℓ(∂E1 (p1 )) by a finite computation.
+1.3. Methods of proof. We now discuss the methods of proof of Theorem 1.1. It will be
+convenient to use the following result of Eremenko and Hayman [11]:
+Proposition 1.2. Let n ≥ 1. Then there exists a monic polynomial p of degree n which
+maximizes ℓ(∂E1 (p)) among all such polynomials. Furthermore, the lemniscate ∂E1 (p) is
+connected and contains all the critical points of p. Finally, we can assume p to be normalized
+in the sense of Remark 1.1.
+Proof. The existence of a maximizing p whose lemniscate is connected and contains all of
+its critical points follow from1 [11, Lemmas 5,6]. One can then replace p(z) by a translation
+p(z −z0 ) so that the z n−1 coefficient vanishes, and then replace p(z) by a rotation e−inθ p(eiθ z)
+so that p(0) is a non-positive real.                                                              □
+    Let us refer to a polynomial p obeying all the properties of Proposition 1.2 as a normalized
+maximizer. For instance, when n = 2 the only possible normalized maximizer is p0 (z) =
+z 2 − 1, which explains why the n = 2 case of Conjecture 1.1 was already established in [11].
+However, these properties do not uniquely identify the normalized maximizer for n ≥ 3; see
+Figure 3.
+    To prove Theorem 1.1, it clearly suffices to do so for normalized maximizers; in particu-
+lar, (iv) is equivalent to the assertion that p0 is the only normalized maximizer when n is
+sufficiently large.
+    An important role in the arguments2 will be played by the n − 1 critical points ζ of p (the
+roots of p′ , counting multiplicity), as well as the constant term p(0) of the polynomial. Note
+that from the fundamental theorem of algebra we have
+                                                  Y
+(1.3)                                   p′ (z) = n (z − ζ)
+                                                          ζ
+
+and hence by the fundamental theorem of calculus, p is completely determined by the critical
+points ζ and the constant term p(0). For instance, we have p = p0 if and only if all the critical
+points ζ vanish and p(0) = −1. To measure the deviation of p from p0 , we introduce the (ℓ1 )
+dispersion
+                                               X
+(1.4)                                 ∥p∥1 :=      |ζ|,
+                                                              ζ
+
+the origin repulsion
+(1.5)                                     ∥p∥0 := n|1 + p(0)|1/n ,
+and the total size
+(1.6)                                       ∥p∥ := ∥p∥1 + ∥p∥0
+  1We remark that the proofs of these lemmas are non-elementary, relying on the theory of quasiconformal
+mapping as well as the Riemann–Hurwitz formula. It seems of interest to obtain more elementary proofs of
+these results. The fact that the lemniscate contains its critical points is not essential for our arguments, as
+we can use the Gauss–Lucas theorem as a substitute; but the connectedness will be used in a few places,
+namely in Section 4 and in the proof of Lemma 11.1.
+   2In contrast, the n zeroes of p shall play almost no role whatsoever.
+                                                      5
+                                                         √
+        Figure 3. The lemniscate ∂E1 (z 3 − 3eiπ/3 a2 z − 1 − 4a6 ) for a = 1/2. This
+        lemniscate is connected and contains the two critical points ±eiπ/6 a (as self-
+        crossings), and is normalized, but is not a maximizer, since its length is less
+        than that of ∂E1 (z 3 − 1).
+
+Clearly we have
+(1.7)                               0 ≤ ∥p∥1 , ∥p∥0 ≤ ∥p∥
+and ∥p∥ vanishes if and only if p = p0 . Thus one can view the quantities ∥p∥1 , ∥p∥0 , ∥p∥
+as measuring the extent to which p deviates from p0 . For future reference, we make the
+simple but useful observation (from Markov’s inequality) that ∥p∥1 (and hence ∥p∥) limits
+the number of critical points ζ that lie outside of a disk, in that
+                                                      ∥p∥1   ∥p∥
+(1.8)                                 / D(0, r)} ≤
+                              #{ζ : ζ ∈                    ≤
+                                                       r      r
+for any r > 0 (where ζ ranges over critical points counted with multiplicity). In particular,
+as there are only n − 1 critical points in all, one has (assuming n > 2)
+                                                               n
+(1.9)                   #{ζ : ζ ∈ D(0, 2∥p∥1 /n)} ≥ n − 1 − ≫ n.
+                                                               2
+                                               6
+  Also, as p(0) is normalized to be a non-positive real, we have
+                             dist(p(0), ∂D(0, 1)) = |1 + p(0)| = n−n ∥p∥n0
+and hence
+(1.10)                                  |p(z) − p(0)| ≥ n−n ∥p∥n0
+for any z ∈ ∂E1 (p). This already hints at why we view ∥p∥0 as a measure of origin repulsion;
+see Lemma 6.1 for a further development of this inequality.
+Remark 1.4. Another natural measure of deviation from p0 is the ℓ2 dispersion (or unnor-
+malized variance)
+                                          X
+(1.11)                           ∥p∥2 :=      |ζ|2 .
+                                                          ζ
+
+This quantity will occasionally arise in our arguments, but in view of the trivial bound
+(1.12)                                         ∥p∥2 ≤ ∥p∥21 ,
+control on ∥p∥2 is not as desirable as control on ∥p∥1 . For instance, by (1.9), a bound of the
+form ∥p∥1 = O(1) will localize most of the critical points to lie within O(1/n) of the origin,
+     √ the weaker bound ∥p∥2 = O(1) merely localizes most of
+whereas
+                                                                2
+                                                                   the critical points to within
+O(1/ n) of the origin. As such, we will avoid relying on the ℓ dispersion in our arguments.
+  A guiding heuristic for our analysis is as follows:
+Heuristic 1.1. For normalized polynomials p, the lemniscate length ℓ(∂E1 (p)) “behaves like”
+ℓ(∂E1 (p0 )) − c∥p∥ for some constant c > 0. In particular:
+    (i) Any increase in the dispersion ∥p∥1 is expected to induce a proportional decrease in
+        the lemniscate length.
+   (ii) Any increase in the origin repulsion ∥p∥0 is expected to induce a proportional decrease
+        in the lemniscate length.
+  (iii) As ℓ(∂E1 (p)) approaches ℓ(∂E1 (p0 )), both the dispersion ∥p∥1 and the origin repulsion
+        ∥p∥0 are expected to approach zero, and the lemniscate ∂E1 (p) should increasingly
+        resemble ∂E1 (p0 ) in shape.
+   We now pause to illustrate this heuristic with some examples. Let us first consider the
+normalized polynomial
+                                                 n 2 n−2
+(1.13)                           p(z) = z n −        az     −1
+                                              n−2
+for some n > 2 and 0 < a < 1. Here, there is no origin repulsion: ∥p∥0 = 0. However, the
+dispersion ∥p∥1 is equal to 2a, since two of the critical points have moved from 0 to ±a when
+compared against p0 . When n is odd, what happens to the n “petals” of the lemniscate
+∂E1 (p0 ) when one replaces it with ∂E1 (p) is that one of the petals retreats3 a distance ≈ a
+from the origin, and two other opposing petals merge for a similar distance, shortening the
+total length by ≈ 4a = 2∥p∥1 ; see Figure 4. When n is even, one instead has two petals
+retreat by distance ≈ a, again shortening the lemniscate length by ≈ 4a = 2∥p∥1 ; see Figure
+  3Because of this, the lemniscate is no longer connected, and no longer contains all of its critical points.
+However, this does not contradict Proposition 1.2, since p is no longer a maximizer. Similarly for the example
+(1.14) below.
+                                                      7
+                                               n
+         Figure 4. The lemniscate ∂E1 (z n − n−2  a2 z n−2 − 1) with n = 9 and a = 1/2,
+         which has shortened in length from ∂E1 (p0 ) by approximately 4a = 2∥p∥1 = 2.
+
+5. From the perspective of the argument principle (or Rouche’s theorem), this reflects the
+fact that the polynomial p(z) is well approximated by p0 (z) for |z| ≫ a, but is instead
+                  n
+approximated by n−2 a2 z n−2 − 1 for |z| ≪ a, causing the 2n “spokes” in the lemniscate to
+drop down to 2(n − 2) in this region.
+  The second key example is the normalized polynomial
+(1.14)                                p(z) = z n − 1 − (a/n)n
+for some 0 < a ≪ 1. Here there is no dispersion as all the critical points remain at the
+origin: ∥p∥1 = 0. On the other hand, the origin repulsion ∥p∥0 is equal to a. Effectively, the
+(a/n)n term repels the 2n spokes of the lemniscate ∂E1 (p0 ) outwards by a distance ≈ a/n,
+shortening the lemniscate length by an amount slightly less4 than 2a = 2∥p∥0 ; see Figure 6.
+   It remains to make these heuristics rigorous. The first step in this direction is to fol-
+low Fryntov and Nazarov [12] and use Stokes’ theorem to represent the lemniscate length
+ℓ(∂E1 (p)) as an area integral. There are multiple useful representations of this type. In [12],
+  4There is a lower order correction term comparable to the circumference 2πa/n of ∂D(0, a/n).
+                                                   8
+                                                n
+         Figure 5. The lemniscate ∂E1 (z n − n−2   a2 z n−2 − 1) with n = 10 and a = 1/2,
+         which experiences a similar length shortening to the example in Figure 4, albeit
+         with a different topology caused by the change in the parity of n.
+
+the representations
+                                                                |φ| φ′
+                                                     Z
+(1.15)                           ℓ(∂E1 (p)) = −                        dA
+                                                         E1 (p) φ φ
+
+and
+                                                                         |pφ|
+                                          Z                        Z
+                                                    ′
+(1.16)                   ℓ(∂E1 (p)) = 2            |p | dA −                  ψ dA
+                                          E1 (p)                   E1 (p) φ
+
+were utilized, where dA denotes area measure,
+                                                         p′ (z)
+(1.17)                                        φ(z) :=
+                                                         p(z)
+is the logarithmic derivative of p, and
+                                                         p′′ (z)
+(1.18)                                        ψ(z) :=
+                                                         p′ (z)
+                                                     9
+         Figure 6. The lemniscate ∂E1 (z n −1−(a/n)n ) with n = 9 and a = 1/2, which
+         has shortened in length from ∂E1 (p0 ) by slightly less than 2a = 2∥p∥0 = 1. due
+         to the n petals of the lemniscate being repelled from the origin by a distance
+         ≈ a/n.
+
+
+is the logarithmic derivative of p′ . The function ψ will play a central role in our arguments.
+Note from (1.3) that
+                                                 X     1
+(1.19)                                 ψ(z) =             ,
+                                                  ζ
+                                                      z−ζ
+
+which by the triangle inequality yields the trivial upper bound
+                                                 X       1
+(1.20)                                |ψ(z)| ≤                .
+                                                  ζ
+                                                      |z − ζ|
+
+As we shall see, an analysis of the defect in (1.20) will be crucial in obtaining the later
+components of Theorem 1.1.
+                                                 10
+  The representation (1.15), when combined with (1.20) and the classical Pólya inequality
+[16]
+(1.21)                                 |Er (p)| ≤ |Er (z n )| = πr2/n ,
+(with |E| denoting the area of E) was shown in [12, §7] to easily lead to the bound
+                             √ §8] a similar argument used (1.16) to obtain the improve-
+ℓ(∂E1 (p)) ≤ 4πn − 2π; in [12,
+ment ℓ(∂E1 (p)) ≤ 2πn + 2π n − 2π. Finally, in [12, §9] the identity (1.16), combined with
+additional decompositions and an integration by parts, was used to eventually obtain the
+asymptotically superior bound ℓ(∂E1 (p)) ≤ 2n + O(n7/8 ).
+   In Section 8 below, we modify the above identities by inserting various cutoffs, and also
+implement the integration by parts argument from [12, §9] to “homogenize” the integrand.
+This lets us obtain the following flexible and useful variant of (1.15), (1.16). We define an
+absolutely continuous measure Ψ on the complex plane by the formula
+                                               Z
+                                             1
+(1.22)                              Ψ(E) :=       |ψ| dA.
+                                             π E
+The key result below asserts, roughly speaking, that this absolutely continuous measure Ψ
+is a good (upper bound) proxy5 for the arclength measure on the lemniscale ∂E1 (p); this is
+illustrated visually in Figure 7.
+Theorem 1.3 (Application of Stokes’ theorem). Let p be a polynomial, Ω ⊂ C a semi-
+algebraic6 open set, and λ : C → R+ be an arbitrary smooth everywhere positive function.
+Then we have the estimate
+(1.23)           ℓ(∂E1 (p) ∩ Ω) ≤ Ψ(E2 (p) ∩ Ω) + O(X1 + X2 + X3 + X4 + X5 ),
+where ψ was given by (1.18), and the error terms X1 , X2 , X3 , X4 , X5 are given by
+                                     Z
+(1.24)                        X1 :=           |p′ | dA
+                                      E (p)∩Ω
+                                     Z 2
+(1.25)                        X2 :=                  |ψ| dA
+                                               E2 (p)∩Ω,|ψ|≤λ
+                                                               |ψ ′ |
+                                              Z
+(1.26)                                X3 :=                           dA
+                                             E2 (p)∩Ω,|ψ|≥λ/2 |ψ|
+                                                       |λ′ |
+                                            Z
+(1.27)                                X4 :=                  dA
+                                             E2 (p)∩Ω |λ|
+(1.28)                                X5 := ℓ(∂Ω).
+  A key feature here is the additional factor of π1 in (1.22), which is not present in (1.15)
+or (1.16), and is the key to obtaining estimates that are close to 2n rather than to 2πn or
+4πn. Roughly speaking, the restriction to E1 (p) in (1.15), (1.16), together with the phase
+  5This phenomenon is faintly reminscent of the landscape function being a good proxy for the distribution
+of eigenfunctions of a Schrödinger operator [15]. We do not know if there is any deeper insight to be drawn
+from this resemblance.
+   6That is to say, Ω is defined by a finite number of polynomial inequalities involving the real and imaginary
+part of the variable z. In particular, the boundary of Ω will be piecewise smooth by the semi-algebraic
+stratification theorem [2].
+                                                      11
+       Figure 7. The lemniscate from Figure 4, superimposed upon a heat map of
+       the density π1 |ψ| of Ψ. The dispersion of the zeroes creates “holes” in the
+       heat map between the critical points 0, ±1/2 due to defects in the triangle
+       inequality (1.20). These holes correspond to the portions of the lemniscate
+       that have retreated from the origin.
+|φ|
+ φ
+    , introduces a weight that behaves like cos− (x) := max(− cos x, 0) where x is related to the
+argument of φ. As observed in [12, (16)], the average of this weight is π1 , which heuristically
+explains (1.23); see Figure 8. Integration by parts is used to make this heuristic rigorous.
+Remark 1.5. Another way to heuristically justify the link between ℓ(∂E1 (p)∩Ω) and Ψ(E2 (p)∩
+Ω) in Theorem 1.3 as follows. Suppose we work in a region Ω where the functions ψ, p are
+roughly constant: ψ(z) ≈ ψ0 , p(z) ≈ c0 . For simplicity let us normalize ψ0 to be real, and
+c0 to be negative real. In order to have a non-trivial lemniscate in this region, c0 should be
+close to −1, in which case we expect
+                                                      ψ0
+(1.29)                              Ψ(E2 (p) ∩ Ω) ≈      |Ω|.
+                                                      π
+Because the unit circle ∂D(0, 1) is tangent to the line {w : Re w = −1} at −1, the lemniscate
+condition |p(z)| = 1 is then heuristically approximated by the condition that Re(p(z)+1) = 0.
+                                               12
+       Figure 8. An illustration (generated by ChatGPT Pro) of the easily ver-
+       ified fact that the average value of the 2π-periodic function cos− (x) =
+       max(− cos x, 0) is π1 . The regions where cos− is positive correspond, roughly
+       speaking, to how E1 is situated within E2 in, say, Figure 9.
+
+On the other hand, the hypothesis ψ(z) ≈ ψ0 and (1.18) suggests that p′ (z) ≈ Aeψ0 z for
+some amplitude z, which heuristically integrates to p(z) ≈ c0 + ψA0 eψ0 z . Writing ψA0 in polar
+coordinates as Reiθ and z in Cartesian coordinates as x + iy, the condition Re(p(z) + 1) = 0
+can then be rearranged after some algebra as
+                                                      1 + c0
+                                   cos(ψ0 y + θ) ≈ − ψ0 x .
+                                                      Re
+If the right-hand side is much larger than 1 in magnitude, we thus expect the lemniscate to
+be empty in this region; but if instead the right-hand side is much less than 1 in magnitude,
+we expect the lemniscate to behave like a periodic sequence of horizontal lines of spacing ψπ0 .
+Thus, the total length of the lemniscate in this region Ω would be expected to not exceed ψπ0 |Ω|
+up to lower order errors; comparing this with (1.29) we arrive at a heuristic justification of
+(1.23).
+   In practice, the various error terms X1 , . . . , X5 can by controlled (for suitable choices of λ
+and Ω) by a variety of tools, including classical area inequalities (see Section 4), rearrange-
+ment inequalities (see Section 5), and partial fraction decompositions (see Section 2.4). It
+is an easy matter to obtain Theorem 1.1(i) from Theorem 1.3 and the aforementioned tools
+to control error terms; this can be viewed as an optimized      √ version of the arguments in [12]
+(who, as mentioned previously, already identified the O( n), as a natural barrier to their
+method). We carry out these arguments in Section 9.
+   To proceed further, we analyze the defect in various inequalities used in the proof of
+Theorem 1.1(i). It turns out that the most fruitful component inequality to analyze in this
+fashion is the triangle inequality (1.20). One can use a defect version of this inequality
+(see Section 7) to control the dispersion ∥p∥1 in terms of the lemniscate length ℓ(∂E1 (p)),
+thus partially justifying Heuristic 1.1(i). This control on the dispersion in turn allows for
+refined estimates for the error terms X1 , . . . , X5 , which ultimately leads to the improvement
+Theorem 1.1(ii). We carry out these arguments in Section 10.
+                                                 13
+   To push beyond the O(1) error term in Theorem 1.1(ii) requires further analysis. The
+previous arguments allow one to show that in all remaining cases, the dispersion ∥p∥1 is
+bounded; elementary arguments (combined with another application of Theorem 1.3) also
+permit one to show that the origin repulsion ∥p∥0 is also bounded; see Section 6. This
+permits for further elementary pointwise estimates on p and p′ (again, see Section 6) that
+are quite precise (especially in the interior portion of the disk D(0, 1)), and allow for very
+accurate estimation of the lemniscate length ℓ(∂E1 (p)), both in interior, intermediate, and
+outer portions of that disk by direct arclength calculations (and some tools for counting
+zeroes of polynomials, such as Bezout’s theorem and Rouche’s theorem). This eventually
+allows one to reduce the O(1) losses in lemniscate length estimates to O(ε) for any fixed
+ε > 0, leading to the proof of Theorem 1.1(iii). We carry out these arguments in Section 11.
+   The final part (iv) of Theorem 1.1 is achieved by a similar strategy. Firstly, the analysis
+used to establish part (iii) is pushed further to show that the total size ∥p∥ is not merely
+bounded, but is in fact small. A finer inspection of the various defect inequalities available
+then shows that one can in fact improve the upper bound on lemniscate length by a small
+multiple of ∥p∥, as per Heuristic 1.1; there are some losses incurred when doing so, but one
+can contain these losses to be of size O(∥p∥/C0 ) or better for a large constant C0 , which lets
+us show that ∥p∥ is not only small, but in fact vanishes. We carry out these arguments in
+Section 12.
+
+1.4. Organization of the paper. The proofs of the four components of Theorem 1.1 share
+many common ingredients. In order to keep the paper at a manageable length, we have
+therefore structured the paper to first introduce some general classes of tools for controlling
+various aspects of the geometry of lemniscates, and then use these tools to establish each of
+the four components of Theorem 1.1 in turn. More precisely:
+     • In Section 2 we lay out our basic notation and easy observations.
+     • In Section 3 we establish some formulae for the arclength of a lemniscate, and use
+       this to obtain precise control on the standard lemniscate ∂E1 (p0 ).
+     • In Section 4 we establish some area theorems that give reasonable control on the
+       “roundness” of regions such as E2 (p) or E4 (p), as well as some preliminary L2 control
+       on p′ .
+     • In Section 5 we use rearrangement inequalities to control Riesz-type potentials, which
+       are particularly useful to control the various expressions appearing in Theorem 1.3.
+     • In Section 6 we establish some elementary pointwise estimates on p and p′ that are
+       particularly useful in the regime when ∥p∥ is small.
+     • In Section 7 we investigate the defect in the triangle inequality (1.20), and use this
+       to obtain upper and lower bounds on Ψ(E) for various sets E.
+     • In Section 8 we establish the crucial estimate, Theorem 1.3, through an application
+       of Stokes’ theorem combined with an integration by parts argument.
+     • In Section 9 we use the tools from the previous sections (particularly those from
+       Sections 4, 5, 8) to give a very short proof of Theorem 1.1(i).
+     • In Section 10 we use the tools from the previous sections (particularly those from
+       Sections 4, 5, 7, 8) to obtain the improved bound of Theorem 1.1(ii).
+     • In Section 11 we use the tools from all of the previous sections to give a (significantly
+       more complicated) proof of the further improvement in Theorem 1.1(iii).
+                                               14
+      • Finally, in Section 12 we use the tools from all of the previous sections (and a repe-
+        tition of the arguments in Section 11) to prove the final result, Theorem 1.1(iv).
+  It is possible that the proofs of Theorem 1.1(iii), (iv) could be merged together; however
+the combined proof would then be extremely complicated, and so we have elected to prove
+them separately, even if this causes some of the arguments to be repeated.
+1.5. Acknowledgments. The author learned about this problem from the Erdős problem
+site [1].
+   Various AI tools, including Gemini, Gemini DeepResearch, ChatGPT Pro, and AlphaE-
+volve, were used to perform literature searches and provide numerical experiments, proofs
+and verifications of individual claims in the paper, and initial code for the figures used.
+However, the final arguments in this paper are human-generated.
+   The author was supported by the James and Carol Collins Chair, the Mathematical Anal-
+ysis & Application Research Fund, and by NSF grant DMS-2347850, and is particularly
+grateful to recent donors to the Research Fund.
+
+                                        2. Notation
+2.1. Asymptotic notation. We use the following asymptotic notation conventions:
+     • We use X ≪ Y , Y ≫ X, or X = O(Y ) to denote an estimate of the form estimate
+       |X| ≤ CY for some absolute constant C > 0. If this implied constant C needs to
+       depend on additional parameters, we denote this by subscripts; for instance X ≪ε Y
+       denotes an estimate of the form |X| ≤ Cε Y where Cε can depend on ε.
+     • We use X ≍ Y as an abbreviation for X ≪ Y ≪ X.
+     • The degree n is viewed as an asymptotic parameter going to infinity, and we will
+       always assume n > 2 to avoid some minor degeneracies arising from the n = 1, 2
+       cases. We use X = o(Y ) to denote a bound of the form |X| ≤ c(n)Y where c(n) → 0
+       as n → ∞. Here we allow the decay rate c(n) to depend on other parameters such
+       as ε that are declared to be fixed as n → ∞.
+2.2. The geometry of sets in the plane. For any complex number z0 and radius r > 0,
+we use
+                              D(z0 , r) := {z ∈ C : |z − z0 | < r}
+                              D(z0 , r) := {z ∈ C : |z − z0 | ≤ r}
+                             ∂D(z0 , r) := {z ∈ C : |z − z0 | = r}
+to denote the open disk, closed disk, and circle respectively of radius r centered at z0 . For
+r1 < r2 , we also define the annulus
+              Ann(z0 , r1 , r2 ) := D(z0 , r2 )\D(z0 , r1 ) = {z ∈ C : r1 ≤ |z − z0 | < r2 }.
+                                                            R
+   If E is a measurable subset of C, we use |E| = E dA to denote its area, and 1E to denote
+its indicator function, thus 1E (z) equals 1 when z ∈ E and 0 otherwise. We use
+(2.1)                               rad[E] := (|E|/π)1/2
+to denote the area-equivalent radius of a disk with the same area as E, thus
+(2.2)                         |E| = π rad[E]2 = |D(z0 , rad[E])|
+                                              15
+for all z0 ∈ C. This radius rad[E] will be a usefully normalized way of measuring the area
+of E. For instance, the Pólya inequality (1.21) can be rewritten as
+
+(2.3)                             rad[Er (p)] ≤ rad[Er (z n )] = r1/n .
+
+ If A is a finite set, we use #A to denote its cardinality.
+ Given a non-empty multiset {z1 , . . . , zn } of complex numbers z1 , . . . , zn , we define their
+mean
+                                                   n
+                                               1X
+                                         z̄ :=       zi
+                                               n i=1
+
+and ℓ1 dispersion
+                                                                 n
+                                                                 X
+(2.4)                             Dispℓ1 {z1 , . . . , zn } :=         |zi − z̄|
+                                                                 i=1
+
+This will be our primary way of measuring how “concentrated” a set of complex numbers
+are around their mean. Observe from the triangle inequality that
+                                   n
+                              1X                            1
+(2.5)             |z0 − z̄| ≤       |z0 − zi | ≤ |z0 − z̄| + Dispℓ1 {z1 , . . . , zn }
+                              n i=1                         n
+
+for any complex number z0 . Hence by further application of the triangle inequality, we have
+                                                           n
+                                                           X                       n
+                                                                                   X
+(2.6)           Dispℓ1 {z1 , . . . , zn } ≤ n|z0 − z̄| +         |zi − z0 | ≤ 2          |zi − z0 |.
+                                                           i=1                     i=1
+
+Obviously, this implies that
+                                                                        n
+                                                          2 XX
+(2.7)                        Dispℓ1 {z1 , . . . , zn } ≤            |zi − ξ|
+                                                         #A ξ∈A i=1
+
+for any finite non-empty set A of complex numbers.
+
+
+2.3. Complex differentiation. If z is a non-zero complex number, we use log z ∈ C/2πiZ
+to denote the (multi-valued) complex logarithm of z, and arg z = Im log z ∈ R/2πZ to denote
+the (multi-valued) argument, thus
+                                               z = |z|ei arg z .
+
+We use ∂ to denote the usual Wirtinger derivative
+
+                                                  1 ∂   i ∂
+                                           ∂ :=       −     .
+                                                  2 ∂x 2 ∂y
+                                                      16
+Thus, for any meromorphic function f and any smooth function η : R → R, one sees from
+the Cauchy–Riemann equations and the usual laws of differentiation that
+(2.8)                                                     ∂f = f ′
+(2.9)                                                     ∂f = 0
+(2.10)                                   ∂(|f |2 ) = ∂(f f ) = f f ′
+                                                    ∂(|f |2 )   ff′
+(2.11)                                    ∂|f | =             =
+                                                     2|f |      2|f |
+                                                                       ff′
+(2.12)                                              ∂η(|f |) = η ′ (|f |)
+                                                                       2|f |
+                                                        |f |     |f | f ′
+(2.13)                                                ∂      =−
+                                                         f        f 2f
+                                                                ′
+                                                              f
+(2.14)                                              ∂ log f =
+                                                              f
+(2.15)                                              ∂log f = 0
+                                      log f − log f   1 f′
+(2.16)                       ∂ arg f = ∂            =
+                                            2i        2i f
+away from the poles and zeroes of f , and choosing suitable branches of the logarithm and
+argument as needed.
+2.4. Critical points and partial fraction expansions. Let p be a normalized maximizing
+polynomial of degree n. Throughout this paper, summations or set builder notation over ζ
+(or ζ ′ ) are assumed to range over the n−1 critical points p′ (ζ) = 0 of p, counting multiplicity.
+Thus for example {ζ} is the multiset of critical points, while {ζ : ζ ∈ D(z0 , r)} denotes the
+multiset of critical points in the disk D(z0 , r). Since p has vanishing z n−1 coefficient, p′ has
+vanishing z n−2 coefficients, hence from (1.3) the critical points ζ have mean zero:
+                                             1 X
+(2.17)                                ζ̄ :=           ζ = 0.
+                                            n−1 ζ
+
+In particular, comparing (2.4) and (1.4) we have
+                                             X
+(2.18)                          Dispℓ1 {ζ} =     |ζ| = ∥p∥1 .
+                                                      ζ
+
+We also record a variant:
+Lemma 2.1 (Splitting the dispersion). If r ≥ 2∥p∥1 /n, then
+                              X
+(2.19)             ∥p∥1 ≪           |ζ| + n Dispℓ1 {ζ : ζ ∈ D(0, r)}.
+                                ζ:ζ ∈D(0,r)
+                                    /
+
+Proof. From (2.17) and the triangle inequality we have
+                               X                    X                 X
+                                         ζ =                 ζ ≤                 |ζ|,
+                            ζ:ζ∈D(0,r)         ζ:ζ ∈D(0,r)
+                                                   /               ζ:ζ ∈D(0,r)
+                                                                       /
+                                                     17
+            P we have ≫ n critical points ζ in D(0, r). Hence the mean of these critical
+while from (1.9)
+points is O( ζ:ζ ∈D(0,r)
+                 /       |ζ|/n). From (2.5) we conclude that
+                        X              X
+                               |ζ| ≪         |ζ| + Dispℓ1 {ζ : ζ ∈ D(0, r)},
+                       ζ:ζ∈D(0,r)       ζ:ζ ∈D(0,r)
+                                            /
+
+and the claim follows from (1.4).                                                           □
+  Similarly to (1.19), we also have
+                                                       X        1
+(2.20)                                    φ(z) =
+                                                               z−η
+                                                      p(η)=0
+
+where η ranges over the n zeroes of p, counting multiplicity, as well as the variant formulae
+                      φ′ (z)                  X 1          X       1
+(2.21)                       = ψ(z) − ϕ(z) =            −
+                      φ(z)                     ζ
+                                                 z−ζ             z−η
+                                                                      p(η)=0
+
+and
+                                    ψ ′ (z)    X  1    X 1
+(2.22)                                      =        −
+                                    ψ(z)      ′′
+                                                 z−ξ   ζ
+                                                         z−ζ
+                                            p (ξ)=0
+
+where ξ ranges over the n − 2 roots of p′′ , counting multiplicity.
+
+2.5. Conjugation. Given a polynomial p of degree n, we define its conjugate p̃ to be the
+polynomial
+(2.23)                                        p̃(z) := p(z),
+that is to say the polynomial formed by applying complex conjugation to each of the coef-
+ficients of p. Note that if z is on the circle ∂D(0, r) for some r > 0, we have z = r2 /z, and
+hence the condition |p(z)| = 1 is equivalent on this circle to the degree 2n equation
+(2.24)                                 z n p(z)p̃(r2 /z) − z n = 0.
+In particular, we see that the lemniscate ∂E1 (p) either intersects the circle ∂D(0, r) in at
+most 2n points, or contains the entire circle; this can also be seen from Bezout’s theorem,
+and was also noted explicitly in [11, Lemma 1].
+
+                                     3. Arclength formulae
+  One obvious way to compute the length of lemniscates ℓ(∂E1 (p)) is by parameterizing
+the curves that comprise the lemniscate. A potential difficulty is caused by critical points
+ζ, around which the lemniscate may self-intersect or have cusps. However, provided one
+restricts to open sets that avoid the critical points, we have explicit formulae7:
+Lemma 3.1 (Arclength formulae). Let p be a non-zero polynomial, and let Ω be a semial-
+gebraic open set that does not contain any critical points of p in its closure.
+  7See [14, Theorem 1] for a version of (3.1) that can handle critical points within Ω.
+                                                       18
+    (i) (First arclength formuula) We have have the arclength formula
+                                           Z π  X           1
+(3.1)                     ℓ(∂E1 (p) ∩ Ω) =                ′
+                                                                dα.
+                                            −π       iα
+                                                        |p (z)|
+                                                          z∈Ω:p(z)=e
+
+        Note that the sum over z is finite by the fundamental theorem of algebra, and is
+        multiplicity-free since Ω avoids critical points.
+   (ii) (Second arclength formula) If in addition Ω avoids the origin 0, and we have the
+        transversality condition
+                                        p(z)
+(3.2)                              arg ′       ̸= 0 (mod π)
+                                       zp (z)
+        for all z ∈ ∂E1 (p) ∩ Ω, then we have
+                                     Z ∞      X                               1
+(3.3)               ℓ(∂E1 (p) ∩ Ω) =                                                     dr,
+                                                                                p(z)
+                                           0       z∈∂E1 (p)∩Ω∩∂D(0,r) sin arg zp′ (z)
+
+        where the sum over z is again finite and multiplicity-free. In particular, we have the
+        lower bound
+                                     Z ∞
+                    ℓ(∂E1 (p) ∩ Ω) ≥       #(∂E1 (p) ∩ Ω ∩ ∂D(0, r)) dr.
+                                               0
+               8
+  In practice , the first arclength formula (3.1) will be useful to control outer regions ∂E1 (p)∩
+Ann(0, r+ , 1 + σ) of the lemniscate when ∥p∥ is small and r+ , 1 + σ are reasonably close to 1,
+while the second arclength formula (3.3) is useful to control intermediate regions ∂E1 (p) ∩
+Ann(r− , r+ ) of the lemniscate when ∥p∥ is small and r− , r+ are bounded away from both
+0 and 1, though in both cases one should remove exceptional sets corresponding to regions
+that are too close to a critical point. For future reference we observe that
+                                                                         2 !
+                            1                              p(z) π
+(3.4)                                  = 1 + O dist arg ′ , + πZ
+                      sin arg zpp(z)                      zp (z) 2
+                                 ′ (z)
+
+
+
+if arg zpp(z)
+          ′ (z) is bounded away from πZ.
+
+
+Proof. By the hypotheses on Ω, the partial lemniscate ∂E1 (p) ∩ Ω is smooth, semi-algebraic,
+and one-dimensional, and is thus the union of a finite number γ1 , . . . , γm of smooth curves.
+The polynomial p maps each curve γj to the unit circle by a local diffeomorphism; by
+decomposing the curves (and removing some endpoints), we may assume that each curve
+maps to an arc {eiα : α ∈ Ij } for some open interval Ij ⊂ (−π, π). Making the change of
+variables p(z) = eiα , we obtain
+                                            Z
+                                                    1
+                                   ℓ(γj ) =       ′
+                                                        dα,
+                                             Ij |p (z)|
+
+and (i) follows by summing over j.
+  8In principle, one could use other one-dimensional arclength formulae as well, such as the Crofton formula;
+while versions of this formula have been useful in other literature on this problem (see, e.g., [12, §5]), we
+were unable to make good use of it here. On the other hand, we will certainly make use of two-dimensional
+arclength formulae arising from Stokes’ theorem; see Section 8.
+                                                         19
+   Now we prove (ii). If z ∈ γj is non-zero and v is a tangent vector to γj at z, then p′ (z)v
+                                                  ′ (z)v
+must be tangent to the unit circle at p(z), thus pp(z)   is imaginary. Assuming (3.2), this shows
+that the tangent vector v cannot be orthogonal to z. By the inverse function theorem, we
+can therefore parameterize γj in polar coordinates as z = reiθj (r) for some smooth function
+θj : Jj → R on some open interval Jj ⊂ (0, ∞). Differentiating the identity
+                                           |p(reiθj (r) )|2 = 1
+in r, we see that
+                       Re p(reiθj (r) )p′ (reiθj (r))(1 + irθj′ (r))eiθj (r) = 0
+                                                                           
+
+which on taking arguments and writing z = reiθj (r) gives
+                                                   p(z)     π
+                         arctan(rθj′ (r)) − arg     ′
+                                                         =±        (mod π),
+                                                  zp (z)    2
+and hence
+                                                           −1
+                                                    p(z)
+                                 θj′ (r) =
+                                        r tan arg ′             .
+                                                  zp (z)
+Reparameterizing γj by r, we conclude that
+                                       Z
+                              ℓ(γj ) =     |1 + irθj′ (r)| dr
+                                        J
+                                       Zj
+                                                  1
+                                     =                       dr,
+                                                      p(z)
+                                        Jj sin arg ′
+                                                     zp (z)
+
+and the claim (ii) follows by summing over j.                                                    □
+  We illustrate these formulae in the model case p = p0 (z) = z n − 1.
+Lemma 3.2 (The lemniscate for p0 ). We have
+                                Z π                          
+                                           iα − n−1      1 1
+(3.5)            ℓ(∂E1 (p0 )) =      |1 + e | n dα = B    ,
+                                  −π                     2 2n
+and
+(3.6)                      ℓ(∂E1 (p0 ) ∩ D(0, r0 )) = 2nr0 + O(r02n+1 )
+for any 0 < r0 ≤ 1. In particular,
+                                   Z
+                                                        n−1
+(3.7)     ℓ(∂E1 (p0 )\D(0, r0 )) =         |1 + eiα |− n dα = ℓ(∂E1 (p0 )) − 2nr0 + O(r02n+1 )
+                                     Ir0
+
+where Ir0 is the set of all −π < α < π with |1 + eiα |1/n ≥ r0 .
+Proof. Substituting p = p0 into (3.1) with Ω = C\D(0, ε), and then sending ε → 0, we
+obtain                                  Z π  X        1
+                         ℓ(∂E1 (p0 )) =                    dα.
+                                         −π n   iα
+                                                   n|z|n−1
+                                                   z:z =1+e
+                                                   20
+For each α ∈ (−π, π), there are n roots to the equation z n = 1 + eiα , each with |z|n−1 =
+          n−1
+|1 + eiα | n . This gives the first part of (3.5). For the second part, we make the change of
+variables t = α/2 and note that |1 + eiα | = 2 cos t, and use symmetry, to write
+                        Z π                            Z π/2
+                                   iα − n−1        n+1               n−1
+                            |1 + e |     n  dα = 2  n        (cos t)− n dt.
+                           −π                               0
+
+The claim (3.5) now follows from the standard beta function identity
+                                      Z π/2
+                          B(p, q) = 2       (sin t)2p−1 (cos t)2q−1 dt
+                                              0
+
+for p, q > 0.
+   To prove (3.6), we use (3.3) with Ω = D(0, r0 )\D(0, ε) (and then send ε → 0 as before).
+If z ∈ ∂D(0, r) for some 0 < r < r0 non-zero with p0 (z) = eiα , then from the identity
+zp′0 (z) = n(1 + p0 (z)) we have
+                                      p0 (z)         eiα      α
+                                arg     ′
+                                              = arg      iα
+                                                            =     mod π
+                                      zp0 (z)       1+e       2
+ensuring (3.3) (since r < r0 ≤ 1 forces α bounded away from zero); then by (3.4) we have
+                    1
+                                = 1 + O((π − |α|)2 ) = 1 + O(|1 + eiα |2 ) = 1 + O(r2n ).
+                      p0 (z)
+             sin arg zp ′ (z)
+                        0
+
+
+From (3.3) and a perturbative analysis near the origin we also see that ∂E1 (p0 ) ∩ D(0, r0 )
+consists of 2n disjoint curves emenating from the origin to the boundary ∂D(0, r0 ) that
+intersect each intermediate circle ∂D(0, r) transversally; thus ∂E1 intersects ∂D(0, r) in
+exactly 2n points for 0 < r < r0 . We conclude from (3.3) that
+                                           Z r0
+                                                n 1 + O(r2n ) dr
+                                                             
+                          ℓ(∂E1 (p) ∩ Ω) =
+                                                   0
+
+and the claim (3.6) follows. Finally, the first identity in (3.7) follows from a further appeal
+to (3.1), and the second identity then follows by subtracting (3.6) from (3.5).              □
+
+                                          4. Area theorems
+   In this section we record some consequences of the classical area theorems of complex
+analysis for a normalized maximizing polynomial p of degree n. These theorems will not be
+strong in the regime where ∥p∥ is bounded or small, but are valid even when ∥p∥ is large,
+and will be useful for controlling various error terms, as well as placing regions such as E2
+or E4 in a slight enlargement of the standard unit disk D(0, 1).
+   For any R > 0, the map p is an n-to-one holomorphic map from ER (p) onto D(0, R), and
+hence by the change of variables formula
+                           Z                   Z
+                                    ′ 2
+(4.1)                             |p | dA = n         dA = πnR2 .
+                                 ER (p)                D(0,R)
+
+ By definition of normalized maximizing polynomial, the complement of E1 (p) in the Rie-
+mann sphere C∪{∞} is simply connected, and hence by the Riemann mapping theorem (and
+                                                    21
+the Schwartz lemma) there exists a unique conformal map with a Laurent series expansion
+                                               a1    a2
+                             z = a−1 w + a0 +     + 2 + ...
+                                               w     w
+from C\D(0, 1) to C\E1 (p), with a−1 a positive real (the logarithmic capacity of E1 (p)).
+Indeed, this map must equal the inverse of a branch of p(z)1/n on C\E1 (p). Since p is
+normalized, we have p(z)1/n = z + O(1/z) as |z| → ∞, and hence a−1 = 1 and a0 = 0. We
+conclude the identity
+                                          ∞
+                                                  !n
+                                         X    ak
+(4.2)                            p w+           k
+                                                     =w
+                                         k=1
+                                             w
+
+for all w ∈ C\E1 (p). In particular, for R > 1, ER (p) is connected, whose boundary curve
+∂ER (p) is simple, smooth, and parameterized by the formula
+                               (            ∞
+                                                                     )
+                                           X     a k
+(4.3)                ∂ER (p) = R1/n eiθ +                : 0 ≤ θ ≤ 2π .
+                                           k=1
+                                               Rk/n einθ
+A standard application of Stokes’ theorem then gives the familiar Grönwall area formula
+                                                  ∞
+                                                 X   k|ak |2
+(4.4)                          |ER | = πR2/n − π
+                                                 k=1
+                                                     R2k/n
+for R > 1, which is of course consistent with (1.21), but describes precisely the defect in this
+inequality. From (2.1) we thus have
+                                                   ∞
+                                                               !1/2
+                                                             2
+                                                  X    k|ak |
+(4.5)                         rad[ER ] = R2/n −
+                                                  k=1
+                                                       R2k/n
+or equivalently
+                                ∞
+                                X k|ak |2
+(4.6)                                         = R2/n − rad[ER ]2 .
+                                k=1
+                                      R2k/n
+We also obtain the arclength formula
+                                   Z 2π         ∞
+                                         1/n iθ
+                                                X                ikak
+(4.7)                 ℓ(∂ER (p)) =      R ie −                               dθ,
+                                       0                  k=1
+                                                                 k/n
+                                                                R eikθ
+By Cauchy–Schwarz and Plancherel we thus have
+                                                                                  1/2
+                                Z 2π          ∞                          2
+                                       1/n iθ
+                                              X                  ikak
+              ℓ(∂ER (p)) ≤ 2π       R ie −                                  dθ
+                                       0                  k=1
+                                                                 k/n
+                                                                R eikθ
+(4.8)                                                         !1/2
+                                               X k 2 |ak |2
+                             = 2π R2/n +                             .
+                                                k
+                                                      R2k/n
+In practice, this will mean that ∂ER (p) will be considerably shorter than ∂E1 (p) for say
+R = 4. Indeed, ER (p) typically becomes significantly “rounder” and more disk-like as R
+increases: see Figure 9.
+                                                 22
+         Figure 9. The lemniscates ∂ER (p0 ) for n = 9 and R = 1, 2, 4. Note how
+         much closer E2 (p0 ) and E4 (p0 ) are to disks than E1 (p0 ).
+
+
+
+  From (4.3), the triangle inequality, and Rouche’s theorem we also obtain the inclusions
+
+                                   ∞
+                                              !                            ∞
+                                                                                        !
+                         1/n
+                                   X |ak |                                 X |ak |
+(4.9)           D 0, R         −                  ⊂ ER (p) ⊂ D 0, R1/n +
+                                   k=1
+                                       Rk/n                                k=1
+                                                                                 Rk/n
+
+(with the former inclusion vacuous if the radius is zero or negative). In particular, since the
+lemniscate contains all the critical points, one has
+
+                                                             ∞
+                                                   1/n
+                                                             X |ak |
+(4.10)                                  |ζ| ≤ R          +
+                                                             k=1
+                                                                   Rk/n
+
+for all critical points ζ (this can also be obtained from the Gauss–Lucas theorem).
+                                                      23
+                                    5. Riesz potentials
+   Given a bounded measurable set E ⊂ C, define the Riesz potential I1 1E : C → R to be
+the function                                  Z
+                                                    1
+                               I1 1E (z0 ) :=              dA(z)
+                                               E |z − z0 |
+where we recall that dA is area measure. In this section we record various basic properties
+of this potential.
+   The Hardy-Littlewood rearrangement inequality [13, Theorems 368–370, 378] implies that
+for any bounded measurable set E, one has
+(5.1)                      I1 1E (z0 ) ≤ I1 1D(0,rad[E]) (0) = 2π rad[E]
+for all z0 , where rad[E] was defined in (2.1). In particular, for any complex numbers
+ζ1 , . . . , ζm , one has
+                             Z X m
+                                        1
+(5.2)                                         dA(z) ≤ 2πm rad[E]
+                              E j=1 |z − ζj |
+
+for all E; applying this to a superlevel set E = {z : m       1
+                                                       P
+                                                        j=1 |z−ζj | ≥ λ} and rearranging, one
+obtains the distributional bound
+                               (     m
+                                                     )
+                                    X       1            4πm2
+(5.3)                            z:                ≥λ ≤
+                                    j=1
+                                         |z − ζj |         λ2
+
+for any λ > 0. (The constant 4π here can likely be improved, but we will not need to do so
+here.)
+Remark 5.1. One can obtain defect versions of the inequalities (5.1), (5.2), (5.3). In the
+case of (5.2), for instance, it is possible to extract additional gains proportional to the ℓ2
+dispersion ∥p∥2 (assuming p is normalized). However, as discussed in Remark 1.4, any
+control on ℓ2 dispersion ∥p∥2 obtained by such methods will be inferior to control on ℓ1
+dispersion ∥p∥1 , which as we shall see in Section 7 can be extracted from defect inequalities
+for the triangle inequality (1.20).
+
+                                  6. Elementary bounds
+   Let p be a monic polynomial of degree n obeying (2.17). In this section we collect some
+elementary estimates on p in terms of the critical points ζ. It will be useful to introduce the
+normalized distance function
+                                            minζ |z − ζ|
+(6.1)                              δ(z) :=
+                                                 |z|
+to the critical points, for any z ̸= 0. Note from (1.9) and the triangle inequality that
+(6.2)                                       δ(z) ≪ 1
+whenever |z| ≫ ∥p∥1 /n.                P
+  Observe that if the dispersion ∥p∥1 = ζ |ζ| vanishes, then
+                                         p′ (z) = nz n−1
+                                                24
+and hence also
+                                           p(z) = z n + p(0).
+In particular, p is nearly constant near the origin. The following proposition shows that this
+behavior persists when the dispersion is merely small, rather than vanishing.
+Proposition 6.1 (Near-constancy near origin). Let z ∈ C.
+   (i) If z ̸= 0, we have the upper bound
+                                                                        2       2
+(6.3)                         |p′ (z)| ≤ n|z|n−1 eO(min(∥p∥1 /|z|,∥p∥1 /|z| ))
+        and the lower bound
+                                                                2   2
+(6.4)                |p′ (z)| ≥ n|z|n−1 e−O(min(∥p∥1 /|z|,∥p∥1 /|z| )) δ(z)O(∥p∥1 /|z|) .
+        and
+                                                                            2       2
+(6.5)                     p(z) = p(0) + O(|z|n eO(min(∥p∥1 /|z|,∥p∥1 /|z| )) ).
+        If |z| > 2∥p∥1 , the δ(z)O(∥p∥1 /|z|) factor in (6.4) can be omitted.
+   (ii) If z = O(∥p∥1 /n), then
+(6.6)                                 |p′ (z)| ≤ eO(n) n−n ∥p∥n−1
+                                                              1
+
+        and
+(6.7)                             p(z) = p(0) + O(eO(n) n−n ∥p∥n1 ).
+Proof. We begin with (i). From (1.3) we can write
+                                                 Y   ζ
+                              |p′ (z)| = n|z|n−1   1− .
+                                                 ζ
+                                                     z
+
+In the spirit of the Weierstrass factorization theorem, we can also use (2.17) to obtain the
+alternate factorization
+                                                Y     ζ
+                                                         
+                               ′            n−1
+                             |p (z)| = n|z|         1−     eζ/z .
+                                                ζ
+                                                       z
+From Taylor expansion we have the upper bounds
+                                                   ζ
+                                             1−      ≤ e|ζ|/|z|
+                                                   z
+and                                   
+                                     ζ                  2   2
+                                 1−       eζ/z ≤ eO(|ζ| /|z| ) ;
+                                     z
+inserting these bounds and using (1.12) we obtain (6.3). Similarly, for ζ ∈ D(0, |z|/2), we
+have the lower bounds
+                                        ζ
+                                    1−      ≥ e−O(|ζ|/|z|)
+                                        z
+and                                   
+                                     ζ                    2   2
+                                 1−      eζ/z ≥ e−O(|ζ| /|z| )
+                                     z
+                                                     25
+            / D(0, |z|/2), we have the variant lower bounds
+while for ζ ∈
+                                                ζ
+                                        1−        ≥ δ(z)e−O(|ζ|/|z|)
+                                                z
+and                                    
+                                      ζ                     2    2
+                                   1−     eζ/z ≥ δ(z)e−O(|ζ| /|z| ) .
+                                      z
+By (1.8), there are only O(∥p∥1 /|z|) values of ζ outside of D(0, |z|/2) (and none at all if
+|z| > 2∥p∥1 ), so inserting these lower bounds into the two factorizations of |p′ (z)| gives (6.4).
+   We skip (6.5) for now and turn to (ii). For |z| ≍ ∥p∥1 /n the claim (6.6) comes from
+(6.3); the case |z| ≪ ∥p∥1 /n then follows from the maximum principle. To obtain (6.7), we
+integrate (6.6). Finally we now turn to (6.5). Let C be a sufficiently large constant. For
+|z| ≤ 2C∥p∥1 /n, the claim follows from (ii) (after adjusting constants), so we may assume
+|z| ≥ 2C∥p∥1 /n. Consider the quantity
+                                   |p(z) − p(0)| − C|z|n eC∥p∥1 /|z| .
+The radial derivative of this quantity is at most
+                      |p′ (z)| − Cn|z|n−1 eC∥p∥1 /|z| + C 2 ∥p∥1 |z|n−2 eC∥p∥1 /|z| .
+By (6.3), this derivative is negative for |z| ≥ 2C∥p∥1 /n if C is large enough. Integrating and
+using (ii) we conclude that
+                       |p(z) − p(0)| − C|z|n eC∥p∥1 /|z| ≪C eOC (n) n−n ∥p∥n1
+for |z| ≥ 2C∥p∥1 /n. This gives the bound
+                                  p(z) = p(0) + O(|z|n eO(∥p∥1 /|z|) )
+(after adjusting constants). Thus, if we let C ′ be another large constant, we have obtained
+(6.5) when |z| ≤ 3C ′ ∥p∥1 . To handle the case |z| ≥ 3C ′ ∥p∥1 , we work with the
+                                                                ′   2   2
+                                  |p(z) − p(0)| − C ′ |z|n eC ∥p∥1 /|z| ,
+whose radial derivative is at most
+                                            ′    2   2                          ′   2    2
+                  |p′ (z)| − C ′ n|z|n−1 eC ∥p∥1 /|z| + 2(C ′ )2 ∥p∥1 |z|n−2 eC ∥p∥1 /|z| .
+Again, (6.3) ensures that this derivative is negative for |z| ≥ 3C ′ ∥p∥1 if C ′ is large enough.
+Integrating and using the previous case, we obtain the |z| ≥ 3C ′ ∥p∥1 case of (6.5).          □
+Corollary 6.1 (Near constancy near origin, II). We have the estimates
+(6.8)                              p(z) = −1 + O(eO(n) n−n ∥p∥n )
+for z = O(∥p∥/n) and
+                                                                        2   2
+(6.9)                       p(z) = −1 + O(|z|n eO(min(∥p∥/|z|,∥p∥ /|z| )) )
+for z ̸= 0.
+Proof. From (1.5), (1.6) one has p(0) = −1 + O(n−n ∥p∥n ) and ∥p∥1 ≤ ∥p∥. The claims now
+follow from Proposition 6.1 and the triangle inequality.                               □
+  The next bound explains why we view ∥p∥0 as a measure of origin repulsion.
+                                                         26
+Lemma 6.1 (Origin repulsion). We have
+                               ∥p∥0 ≪ ∥p∥1 + n dist(0, ∂E1 (p)).
+In particular, by (1.6), one has
+                               ∥p∥ ≪ ∥p∥1 + n dist(0, ∂E1 (p)).
+   Informally: if ∥p∥0 is the dominant contribution to the total size ∥p∥, then the lemniscate
+E1 (p) is repelled away from the origin by ≫ ∥p∥0 /n. In practice, this will cause the lemniscate
+length to decrease by an amount proportional to ∥p∥0 , as per Heuristic 1.1.
+Proof. Let z be the closest point in ∂E1 (p) to the origin, thus our task is to show that
+∥p∥0 ≪ ∥p∥1 + n|z|. If |z| ≥ ∥p∥1 /n, then from (6.5), (1.10) one has
+                                          n−n ∥p∥n0 ≪ |z|n
+giving the claim; if instead |z| < ∥p∥1 /n, then from (6.7), (1.10) one has
+                                    n−n ∥p∥n0 ≪ eO(n) n−n ∥p∥n1
+again giving the claim.                                                                        □
+  For the model polynomial p0 (z) = z n − 1 we have the identity
+                                                 zp′0 (z)
+                                      p0 (z) = −1 +       .
+                                                    n
+It turns out that we can obtain an approximate version of this identity as long as one stays
+away from the origin and from the critical points.
+Proposition 6.2 (More precise formula for p). Suppose that |z| ≫ ∥p∥ and δ(z) ≫ 1/n.
+Then we have
+                                      zp′ (z)          ∥p∥2
+                                                              
+                         p(z) = −1 +           1+O                 .
+                                         n           n|z|2 δ(z)
+In particular, from (6.4), we have p(z) ̸= −1.
+Proof. For any 0 < t ≤ 1, we introduce the function
+                                                          tzp′ (tz)
+                                   f (t) := p(tz) + 1 −             ,
+                                                             n
+then our task is to establish the bound
+                                                 |p′ (z)|∥p∥2
+                                       f (1) ≪                .
+                                                  n2 |z|δ(z)
+Set t0 := c∥p∥
+           |z|
+               for a small constant c > 0, then 0 < t0 ≤ 1. From Proposition 6.1(i) (bounding
+∥p∥1 by ∥p∥) and (6.9) we have
+                                                    t0 p′ (t0 z)
+                                    f (t0 ) = p(t0 z) −
+(6.10)                                                   n
+                                          = −1 + Oc ((c∥p∥)n )
+and also
+                      |p′ (z)|∥p∥2
+                         2
+                                   ≫ n−O(1) |z|n−2 ∥p∥2 δ(z)O(1) ≫ (c∥p∥)n
+                       n |z|δ(z)
+                                                  27
+for c small enough, by the lower bounds on |z| and δ(z). Thus, by the triangle inequality, it
+will suffice to show that
+                                                    |p′ (z)|∥p∥2
+                                f (1) − f (t0 ) ≪c 2             .
+                                                     n |z|δ(z)
+From the fundamental theorem of calculus and the triangle inequality it will suffice to show
+that                            Z 1
+                                                    |p′ (z)|∥p∥2
+                                     |f ′ (t)| dt ≪c 2           .
+                                 t0                  n |z|δ(z)
+We therefore turn to estimating f ′ (t) for t0 ≤ t ≤ 1. Using (1.19), (2.17) we bound
+                                 n−1 ′           tz 2 p′′ (tz)
+                         f ′ (t) =     zp (tz) −
+                                   n                   n            !
+                                   ′
+                                 zp (tz)               X       tz
+                               =           (n − 1) −
+                                    n                     ζ
+                                                             tz − ζ
+                                         zp′ (z) p′ (tz) X ζ
+                               =−
+                                           n p′ (z) ζ tz − ζ
+                                                                        !
+                                  zp′ (z) p′ (tz)     X      ζ    ζ
+                               =−                               −
+                                    n p′ (z)          ζ
+                                                          tz − ζ tz
+                                     ′      ′
+                                 p (z) p (tz) X ζ 2
+                               =
+                                  tn p′ (z) ζ tz − ζ
+                                                        !
+                                 |p′ (z)| X |ζ|2             Y |tz − ζ ′ |
+                               ≪
+                                    tn       ζ
+                                               |z − ζ| ζ ′ ̸=ζ |z − ζ ′ |
+                                 |p′ (z)| ζ |ζ|2
+                                         P
+                                                     Y |tz − ζ ′ |
+                               ≪                 sup
+                                     nt|z|δ(z)    ζ
+                                                     ζ ′ ̸=ζ
+                                                             |z − ζ ′ |
+and so by (1.12) we reduce to showing that
+                              Z 1      Y |tz − ζ ′ | dt     1
+                                   sup               ′
+                                                          ≪c .
+                                t0  ζ
+                                       ζ ′ ̸=ζ
+                                               |z − ζ | t   n
+If ζ ′ ∈ D(0, c∥p∥/4), then from Taylor expansion we have
+                        |tz − ζ ′ |    |1 − ζ ′ /tz|
+                               ′
+                                    =t         ′
+                                                     = t exp(O(|ζ ′ |/t|z|))
+                         |z − ζ |       |1 − ζ /z|
+while for ζ ′ ∈
+              / D(0, c∥p∥/4) we have
+                        |tz − ζ ′ |     (1 − t)|z|
+                               ′
+                                    ≤1+             ≤ 1 + O(n(1 − t))
+                         |z − ζ |        |z − ζ ′ |
+since δ(z) ≫ 1/n. By (1.6) only Oc (1) of the critical points are in the latter category.
+Applying (1.6) again, we conclude that
+                Y |tz − ζ ′ |
+            sup                ′|
+                                  ≪ tn−Oc (1) (1 + O(n(1 − t)))O(1) exp(O(∥p∥/t|z|)).
+              ζ
+                ζ ′ ̸=ζ
+                        |z − ζ
+                                                 28
+Since t ≥ t0 , we have exp(O(∥p∥/t|z|)) = Oc (1). Thus we reduce to showing that
+                           Z 1
+                                                                 1
+                               tn−Oc (1) (1 + n(1 − t))O(1) dt ≪c .
+                            t0                                   n
+Performing the substitution t = 1 − ns , we reduce to showing that
+                         Z ∞
+                                    s n−Oc (1)
+                                1−              (1 + s)Oc (1) ds ≪c 1.
+                           0        n
+                        s n−Oc (1)
+                                   ≪c e−s/2 , giving the claim.
+                         
+But we can bound 1 − n                                                                         □
+  The above bounds are mostly useful in the regime where ∥p∥ or ∥p∥1 is bounded or small.
+However, even when ∥p∥1 is somewhat large, we can still obtain some useful control on p′
+that improves upon the Cauchy inequality:
+Lemma 6.2 (Improved Cauchy inequality). If D(z0 , s) is a disk obeying the condition
+                                                s     2∥p∥1
+(6.11)                                     |z0 | +  >       ,
+                                              10        n
+the one has the improved Cauchy inequality
+                                       −
+                                         cns+O(∥p∥1 ) sup
+                                                         z∈D(z0 ,s) |p(z)|
+(6.12)                   |p′ (z0 )| ≪ e     |z0 |+s
+                                                              s
+for some absolute constant c > 0.
+  Comparing (6.12) against the standard Cauchy inequality
+                                            supz∈D(z0 ,s) |p(z)|
+(6.13)                               |p′ (z0 )| ≤                ,
+                                                    s
+we see that the former inequality enjoys an exponential gain in the regime s ≫ ∥p∥1 /n.
+This can be contrasted with the bounds in Proposition 6.1 or Proposition 6.2, which are
+significantly more precise than (6.12), but are only effective under the condition |z0 | ≫ ∥p∥1 ,
+which is often more restrictive in practice.
+Proof. Write z0 = reiθ and M := supz∈D(z0 ,s) |p(z)|. From (6.13) we have
+                                                                M
+                                          p′ ((r + ts)eiθ ) ≪
+                                                                s
+for all 1/3 ≤ t ≤ 2/3. In particular,
+                                                M          |p′ (reiθ )|
+                       log |p′ (reiθ )| ≤ log     + log ′                 + O(1).
+                                                s      |p ((r + ts)eiθ )|
+Applying (1.3) to the right-hand side, we conclude that
+                                         M X           |reiθ − ζ|
+                  log |p′ (reiθ )| ≤ log   +   log            iθ − ζ|
+                                                                      + O(1).
+                                         s   ζ
+                                                   |(r + ts)e
+By (1.9), (6.11) we see that ≫ n of the critical points ζ lie in the disk D(0, |z0 | + s/10),
+while only O( |z∥p∥ 1
+                 0 |+s
+                       ) lie outside this disk. By elementary geometry, we see that
+                                              |reiθ − ζ|         s
+                                  − log              iθ
+                                                          ≫
+                                          |(r + ts)e − ζ|   |z0 | + s
+                                                      29
+for all critical points in the former category. We conclude that
+                                M     cns        X               |reiθ − ζ|
+         log |p′ (reiθ )| ≤ log   −           +          log                   + O(1).
+                                s   |z0 | + s                |(r + ts)eiθ − ζ|
+                                                         ζ ∈D(0,|z
+                                                           /      0 |+s/10)
+
+
+for all 1/3 ≤ t ≤ 2/3 and some absolute constant c > 0. We average in t to obtain
+                                                       Z 2/3
+             ′   iθ        M     cns          X                      |reiθ − ζ|
+(6.14) log |p (re )| ≤ log   −           +3                  log                   dt + O(1).
+                           s   |z0 | + s                1/3      |(r + ts)eiθ − ζ|
+                                                         ζ ∈D(0,|z
+                                                           /      0 |+s/10)
+
+
+Routine computation shows that
+                                           Z 2/3
+                                                           |z|
+                                                   log           dt ≤ O(1)
+                                            1/3          |z + t|
+for any complex number z. Indeed for |z| ≥ 2 this is immediate from the triangle inequality,
+while for |z| < 2 we may discard the numerator and use the uniform local integrability of
+the logarithm on horizontal lines. Rotating and rescaling, we conclude that the summands
+in (6.14) are bounded above by O(1). Thus by (1.8) we have
+                                                                  
+                        ′   iθ        M     cns            ∥p∥1
+                  log |p (re )| ≤ log   −           +O               + O(1),
+                                      s   |z0 | + s      |z0 | + s
+giving the claim.                                                                                 □
+
+                          7. The defect in the triangle inequality
+  The triangle inequality asserts that
+                                                   n
+                                                   X              n
+                                                                  X
+                                                         zi ≤           |zi |
+                                                   i=1            i=1
+
+for any complex numbers z1 , . . . , zn . We can lower bound the defect in this inequality as
+follows:
+Lemma 7.1 (Defect version of triangle inequality). For any complex numbers z1 , . . . , zn with
+n ≥ 2, we have
+                    n               n
+                    X               X               ⌊n/2⌋ X
+                          |zi | −         zi ≥                      |zi | + |zj | − |zi + zj |.
+                    i=1             i=1
+                                                   n(n − 1) 1≤i,j≤n
+
+Proof. By summing zi in pairs and using the triangle inequality, we have
+                                            n               n/2
+                                            X               X
+                                                   zi ≤           |z2i−1 + z2i |
+                                            i=1             i=1
+
+when n is even and
+                                     n              (n−1)/2
+                                     X               X
+                                           zi ≤               |z2i−1 + z2i | + |zn |
+                                     i=1              i=1
+                                                             30
+when n is odd. In either case, we conclude that
+                     n                n            ⌊n/2⌋
+                     X                X            X
+                            |zi | −         zi ≥           |z2i−1 | + |z2i | − |z2i−1 + z2i |.
+                      i=1             i=1          i=1
+
+Averaging over all permutations of the z1 , . . . , zn , we obtain the claim.                    □
+  Specializing this to the expression (1.19), we can lower bound the defect in (1.20):
+Corollary 7.1. For any z that is not a critical point, we have
+           X 1                    1X 1                 1         1     1
+(7.1)                  − |ψ(z)| ≫                +        ′
+                                                            −       +
+            ζ
+               |z − ζ|            n ζ,ζ ′ |z − ζ| |z − ζ |     z − ζ z − ζ′
+
+(recalling the convention that ζ, ζ ′ both vary over critical points counting multiplicity).
+  We can control the summands on the right-hand side of (7.1) in an integral sense:
+Lemma 7.2 (Averaged defect in triangle inequality). Suppose that ζ ∈ D(z0 , r/2) and
+ζ ′ ∈ D(z0 , Cr) for some z0 ∈ C and C, r > 0. Then
+                Z
+                              1         1           1       1
+                                   +        ′
+                                                −       +       ′
+                                                                  dA(z) ≍C |ζ − ζ ′ |.
+                  D(z0 ,r) |z − ζ|   |z − ζ   |   z − ζ   z − ζ
+Proof. By translation we can take ζ = 0, and then by complex dilation we can take ζ ′ = 1.
+                                                                   1
+Then we have |z0 | < r/2 and |z0 − 1| < Cr, which imply that r ≥ C+1/2 and hence
+                                             
+                                         1
+                                D 0,            ⊂ D(z0 , r).
+                                       2C + 1
+Direct calculation shows that the integrand
+                                            1     1     1  1
+                                              +        − +
+                                           |z| |z − 1|  z z−1
+is non-negative, absolutely integrable, and non-vanishing away from the real axis. The claim
+follows.                                                                                   □
+  Putting this together, we can now obtain useful lower and upper bounds on the measure
+Ψ introduced in (1.22).
+Corollary 7.2 (Upper bound on Ψ). Suppose that r ≥ 10∥p∥1 /n. For any measurable set
+E containing a disk D(z0 , r) and C > 0, we have
+                    Ψ(E) ≤ 2(n − 1) rad[E] − cC Dispℓ1 {ζ : ζ ∈ D(z0 , Cr)}
+for some constant cC > 0 depending only on C.
+  Note that this bound is consistent with Heuristic 1.1 and Theorem 1.3.
+Proof. From (5.2) one has
+                                  Z X
+                              1                1
+                                                    dA(z) ≤ 2(n − 1) rad[E].
+                              π   E    ζ
+                                            |z − ζ|
+                                                           31
+Hence by (7.1) and the triangle inequality, it suffices to show that
+    Z X
+                1         1            1
+                     +         −                   dA(z) ≫C n Dispℓ1 {ζ : ζ ∈ D(z0 , Cr)}.
+     E ζ,ζ ′ |z − ζ|
+                             ′
+                       |z − ζ | |z − ζ + z − ζ ′ |
+
+We may replace E by the smaller set D(z0 , r). Applying Lemma 7.2, the left-hand side is
+                                        X
+                           ≫C                       |ζ − ζ ′ |.
+                                     ζ∈D(z0 ,r/2);ζ ′ ∈D(z0 ,Cr)
+
+By (1.9) and the hypothesis r ≥ 10∥p∥1 /n, we have ≫ n critical points ζ in D(z0 , r/2). The
+claim now follows from (2.7).                                                             □
+
+  We also record the following variant:
+
+Lemma 7.3 (Lower bound on Ψ). For any r > 0, we have
+
+                           Ψ(Ann(0, r/2, r)) ≥ (n − 1)r − O(∥p∥1 ).
+
+Proof. By (1.19) and the triangle inequality, we have
+                                          n−1 X 1     1
+                              |ψ(z)| ≥         −    −    .
+                                           |z|   ζ
+                                                   z z−ζ
+
+Since
+                                            n−1
+                               Z
+                                                 dA = (n − 1)πr,
+                                Ann(0,r/2,r) |z|
+
+it thus suffices by (1.22), (1.4) to show that
+                              Z
+                                             1    1
+                                               −             dA(z) ≪ |ζ|
+                                Ann(0,r/2,r) z   z−ζ
+
+for all ζ. For |ζ| ≥ r/4 this follows from (5.1) and the triangle inequality, while for |ζ| < r/4
+it follows from the observation that the integrand is pointwise bounded by O(|ζ|/r2 ).         □
+
+  Finally, we record a simple lower bound:
+
+Lemma 7.4 (Lower bound). If z1 , . . . , zm are nonzero complex numbers with arg zi ∈ I
+(mod 2π) for all i = 1, . . . , m and some interval I of length at most π − α, then
+                                    m
+                                    X                        m
+                                                             X
+                                          zi ≥ sin(α/2)            |zi |.
+                                    i=1                      i=1
+
+Proof. By rotating we may take I to be a subset of [−(π − α)/2, (π − α)/2]. We then have
+
+                                       Re zi ≥ sin(α/2)|zi |
+
+for all i = 1, . . . , m, and the claim follows by summing in i.                               □
+                                                   32
+                        8. An application of Stokes’ theorem
+   In this section we prove Theorem 1.3. Our arguments here are inspired by the calculations
+in [12, §4,9], but use smooth cutoffs in place of the localization to squares that is performed
+in [12, §9]. We abbreviate ER (p) as ER .
+   In [12, §4] it is observed that one has the Stokes identity
+                                    Z                  Z
+                                        s(z) dz
+                                 Re             = 2 Re ∂s dA
+                                      γ    i            E
+
+whenever γ is a closed piecewise smooth curve oriented anticlockwise around a region E,
+and s is a locally bounded function whose derivative ∂s is quasismooth in the sense that it
+is smooth away from a finite set of singularities and whose gradient is locally integrable. In
+particular, we have (see [12, (4)])
+                                                   Z
+(8.1)                               ℓ(∂E1 ) = 2 Re   ∂s dA
+                                                       E1
+
+whenever s is bounded, has quasismooth derivative, and coincides on ∂E1 with the outward
+unit normal to E1 outside of critical points. This outward unit normal can be computed to
+be |φ|/φ, where φ := p′ /p was introduced in (1.17).
+  If we integrate on E1 ∩Ω for some semi-algebraic open set Ω, and assume that s is bounded
+by O(1) on E1 ∩ Ω, then the boundary ∂E1 ∩ Ω, being a semi-algebraic curve, is piecewise
+smooth, and we obtain the variant
+                                              Z
+(8.2)                     ℓ(∂E1 ∩ Ω) = 2 Re        ∂s dA + O(X5 )
+                                                   E1 ∩Ω
+
+thanks to (1.28).
+  In [12], the identity (8.1) was applied to the functions s = |φ|/φ and s = |pφ|/φ to obtain
+the identities (1.15) and (1.16) respectively. Here, we will adopt the slightly different choice
+                                                 |φ|
+                                          s :=       η(|p|)
+                                                  φ
+where η : R → [0, 1] is a fixed smooth cutoff to [1/2, 2] that equals 1 on a neighborhood of
+1. It is easy to see that s is bounded by O(1), has quasismooth derivative, and coincides
+with the outward unit normal |φ|/φ on ∂E1 away from critical points, so that (8.2) applies.
+From (2.12), (2.13) and the product rule one has
+                                      |φ| φ′          |φ| ′      pp′
+                             ∂s = −          η(|p|) +    η (|p|)      .
+                                       φ 2φ            φ         2|p|
+The second term on the right-hand side is O(|p′ |). Thus by (1.24) and (8.2) we have
+                                          |φ| φ′
+                                     Z
+                 ℓ(∂E1 ∩ Ω) ≤ − Re               η(|p|) dA + O(X1 + X5 )
+                                      E1 φ φ
+
+(cf. (1.15)). By (2.21) we have
+                                  φ′      p′
+                                     = ψ − = ψ + O(|p′ |)
+                                  φ       p
+                                                  33
+on the support of η(|p|), thus by (1.24) again we have
+                                             |φ|
+                                      Z
+                 ℓ(∂E1 ∩ Ω) ≤ − Re               ψη(|p|)1E1 dA + O(X1 + X5 )
+                                       E2 ∩Ω φ
+
+(cf., (1.16)). Let σ : R → [0, 1] be a smooth cutoff to [1/2, ∞) that equals 1 on [1, ∞) with
+derivative bounds σ ′ = O(1). By (1.25), we have
+                                                     
+                                |φ|
+                         Z
+                                                      ψ
+                                    ψη(|p|)1E1 1 − σ          dA ≪ X2
+                          E2 ∩Ω φ                      λ
+and thus
+                                                       
+                                   |φ|
+                              Z
+                                                       ψ
+           ℓ(∂E1 ∩ Ω) ≤ − Re           ψη(|p|)1E1 σ       dA + O(X1 + X2 + X5 ).
+                             E2 ∩Ω φ                   λ
+Now we perform some manipulations inspired by [12, §9]. We factor
+                        |φ|   |p′ | p ψ                 ′
+                            ψ= ′         |ψ| = e−i(arg p −arg p−arg ψ) |ψ|
+                         φ     p |p| |ψ|
+noting that the cutoffs force p, p′ to be non-zero; the argument is only defined up to multiples
+of 2π, but this will not affect the calculations. Thus we have
+                 Z                                             
+                                  ′                            ψ
+ℓ(∂E1 ∩ Ω) ≤ −          cos(arg p − arg p − arg ψ)η(|p|)1E1 σ       |ψ| dA + O(X1 + X2 + X5 ).
+                  E2 ∩Ω                                        λ
+Using the pointwise bound
+                                     − cos(θ)1F ≤ cos− (θ)
+for any indicator function F and real number θ, where cos− (x) := max(− cos(x), 0), we
+conclude that
+               Z                                            
+                                  ′                         ψ
+  ℓ(∂E1 ∩ Ω) ≤         cos− (arg p − arg p − arg ψ)η(|p|)σ     |ψ| dA + O(X1 + X2 + X5 ).
+                 E2 ∩Ω                                      λ
+From (1.22) we have
+                          Z                   
+                                 1            ψ
+                                   η(|p|)σ       |ψ| dA ≤ Ψ(E2 ∩ Ω),
+                           E2 ∩Ω π            λ
+and so it suffices to show that
+      Z                                                  
+                          ′                   1            ψ
+(8.3)          cos− (arg p − arg p − arg ψ) −     η(|p|)σ     |ψ| dA ≪ X1 + X3 + X4 + X5 .
+       E2 ∩Ω                                  π            λ
+The function x 7→ cos− (x) − 1/π is 2π-periodic with mean zero (cf. Figure 8). Thus it has
+an antiderivative F : R → R that is also 2π-periodic. Observe from (2.16) and the chain
+rule that
+                                                               ′′
+                                                                      p′ ψ ′
+                                                                             
+               ′                     1 ′       ′                p
+      ∂F (arg p − arg p − arg ψ) = F (arg p − arg p − arg ψ)       − −
+                                     2i                         p′     p   ψ
+                                                                           ′ 
+                     1               ′                   1           ′        |ψ |
+                  =       cos− (arg p − arg p − arg ψ) −     ψ + O(|p |) + O
+                     2i                                  π                     |ψ|
+                                                 34
+on the support of η(|p|). We therefore can write the integrand
+                                                                 
+                                 ′                    1             ψ
+                      cos− (arg p − arg p − arg ψ) −      η(|p|)σ     |ψ|
+                                                      π             λ
+as
+                η(|p|)σ ψλ |ψ|
+                                                                        ′ 
+                                        ′                         ′       |ψ |
+             2i                ∂F (arg p − arg p − arg ψ) + O(|p |) + O
+                       ψ                                                  |ψ|
+and thus by (1.24), (1.26) one can majorize the left-hand side of (8.3) by
+                       η(|p|)σ ψλ |ψ|
+                Z                  
+            ≪                         ∂F (arg p′ − arg p − arg ψ) dA + X1 + X3 .
+                 E2 ∩Ω        ψ
+               η(|p|)σ ( ψ
+                         λ)
+                            |ψ|
+The function          ψ
+                                 is bounded with quasismooth derivative and thus suitable for in-
+tegration by parts. Performing this integration, and noting that the only non-vanishing
+boundary contribution comes from ∂Ω, and is O(X5 ) by (1.28) and the boundedness of the
+both factors in the integration by parts formula, we can bound this by
+                                            !!
+                          σ ψλ |ψ|
+         Z                       
+     ≪             ∂                  η(|p|)   F (arg p′ − arg p − arg ψ) dA + X1 + X3 + X5 .
+          E2 ∩Ω                 ψ
+The integrand is supported on the region where |ψ| ≥ λ/2, and we can bound
+                                        !
+                            η(|p|)σ ψλ |ψ|      |ψ ′ | |λ′ |
+                         ∂                   ≪        +      + |p′ |
+                                   ψ             |ψ|    |λ|
+(recalling that the cutoff η(|p|) localizes to the region |p| ≍ 1). Since F is bounded, we can
+use (1.24), (1.26), (1.27) to bound this expression by O(X1 + X3 + X4 + X5 ) as desired.
+
+                      9. An initial bound on lemniscate length
+  We now have all the tools to quickly prove Theorem 1.1(i). Let p be a normalized maxi-
+mizer of degree n. We abbreviate ER (p) as ER . From (2.3) (or (4.5)) we have
+                                                           
+                                               1/n           1
+(9.1)                   rad[E2 ] ≤ rad[E4 ] ≤ 4 = 1 + O          .
+                                                             n
+                                                                   √ in the next one.)
+(The bounds on E4 are not needed for this section, but will be useful
+  We apply Theorem 1.3 with the constant function choice λ = n and Ω = C. From
+(1.27), (1.28) we have
+                                     X4 = X5 = 0.
+From (1.25), (9.1), (2.2) we have
+                                     √                √
+                                 X2 ≤ nπ rad[E2 ]2 ≪ n.
+From (1.24), (9.1), (4.1), (2.2) and Cauchy–Schwarz we have
+                                  √                          √
+                            X1 ≪ 2πn × 22 (π rad[E2 ]2 )1/2 ≪ n.
+From (1.26), (5.2), (2.22), (9.1) we have
+                                                                          √
+                      Z X
+                  1              1       X    1
+          X3 ≤ √                     +             dA(ξ) ≪ n1/2 rad[E2 ] ≪ n.
+                   n E2 ζ |z − ζ|       ′′
+                                           |z − ξ|
+                                        p (ξ)=0
+                                                  35
+Theorem 1.3 then gives
+                                                         √
+(9.2)                               ℓ(∂E1 ) ≤ Ψ(E2 ) + O( n).
+On the other hand, from (1.22), (1.20), (5.2), (9.1) we have
+                  Z                   Z
+                1               1X            1
+(9.3) Ψ(E2 ) =        |ψ| dA ≤                     dA(z) ≤ 2 rad[E2 ](n − 1) = 2n + O(1).
+                π E2            π ζ E2 |z − ζ|
+
+Combining (9.2) and (9.3), we obtain Theorem 1.1(i).
+
+                                 10. An improved bound
+  In this section we refine the analysis of the preceding section to obtain Theorem 1.1(ii).
+Again, let p be a normalized maximizing polynomial of degree n, and abbreviate ER (p)
+as ER . We may take n to be sufficiently large, since the claim follows from (say) part (i)
+otherwise.
+  As p is a normalized maximizer, we have
+(10.1)                    ℓ(∂E1 ) ≥ ℓ(∂E1 (p0 )) = 2n + 4 log 2 + o(1)
+thanks to (1.2). Comparing this with (9.2), (9.3), we conclude that
+(10.2)                              Ψ(E2 ) = 2n + O(1) − K
+for some K with
+                                                     √
+(10.3)                                   1≤K≪            n.
+  The quantity K measures the gain in the main term of Theorem 1.3; the strategy will be
+to show that the error terms X1 , . . . , X5 in that theorem are of lower order than K. To do
+this, we use several of the tools from previous sections to control some other quantities in
+terms of K.
+Lemma 10.1 (K controls the geometry of p).
+  (i) (E4 is nearly round) We have
+(10.4)                       D(0, 1 − o(1)) ⊂ E4 ⊂ D(0, 1 + o(1))
+         with the perimeter bound
+(10.5)                                   ℓ(∂E4 ) ≪ K 1/2 .
+         In particular, from the Gauss–Lucas theorem we have
+(10.6)                                    |ζ| ≤ 1 + o(1)
+        for all critical points ζ.
+   (ii) (Dispersion bound) We have (cf. Heuristic 1.1)
+                                                     X
+(10.7)                           Dispℓ1 {ζ} = ∥p∥1 =   |ζ| ≪ K.
+                                                         ζ
+
+         In particular, from (1.8) one has
+                                                              K
+(10.8)                                      / D(0, r)} ≪
+                                    #{ζ : ζ ∈
+                                                              r
+         for all r > 0.
+                                                36
+  (iii) (Exponential decay of p′ away from ∂E4 ) For any z0 ∈ E4 , we have
+                                                 eO(K)−cn dist(z0 ,∂E4 )
+(10.9)                              p′ (z0 ) ≪
+                                                   dist(z0 , ∂E4 )
+          for some absolute constant c > 0.
+Proof. By comparing (9.3) with (10.2) we have
+                                                                     
+                                                                  K
+                                      rad[E2 ] ≥ 1 − O                    .
+                                                                  n
+Inserting this into the area theorem (4.6), we obtain
+                                          ∞
+                                          X k|ak |2           K
+                                                          ≪     .
+                                          k=1
+                                                 22k/n        n
+In particular, by Cauchy–Schwarz and (10.3) we have
+                          ∞
+                          X |ak |    K 1/2 log1/2 n   log1/2 n
+                                   ≪                ≪          = o(1).
+                          k=1
+                              4k/n        n1/2          n1/4
+Applying (4.9) we obtain (10.4). Similarly, we have
+                               ∞                      ∞
+                               X k 2 |ak |2           X k|ak |2
+                                                 ≪n                   ≪ K,
+                                k=1
+                                      24k/n           k=1
+                                                          22k/n
+and the claim (10.5) then follows from (4.8).
+  From Corollary 7.2 and (10.4), (10.6) one has
+                            Ψ(E2 ) ≤ 2(n − 1) rad[E2 ] − c Dispℓ1 {ζ}
+for some absolute constant c > 0. From this and (2.18) we conclude (ii).
+   Finally, for (iii) it suffices by the maximum principle (and (10.4)) to verify the claim for
+z0 ∈ E4 \D(0, 1/2). We apply from Lemma 6.2 with s = dist(z0 , ∂E4 ) (the hypothesis (6.11)
+being satisfied thanks to (10.3)). Since D(z0 , s) ⊂ E4 , we have supz∈D(z0 ,s) |p(z)| ≤ 4, and
+hence Lemma 6.2 and (10.7) gives the desired bound (iv).                                      □
+  Let 0 < ρ < 1/2 be a small radius to be chosen later. We will apply Theorem 1.3 with
+Ω = C\D(0, ρ) and the function
+                                               µn
+                                       λ(z) :=
+                                               |z|
+where 0 < µ < 1 is a small parameter to be chosen later. By (1.28), we have
+(10.10)                                         X5 = 2πρ.
+By (1.27) and direct calculation we conclude that
+(10.11)                                          X4 ≪ 1.
+  Now we control the other error terms X1 , X2 , X3 . Some of the bounds established here
+will be stated in more generality than needed for the current application, as they will also
+be useful in the next section.
+                                                     37
+Lemma 10.2 (Control on X1 ). We have
+                                            X1 ≪ K 7/8 .
+  The exponent 7/8 can be improved, but the key point here is that the bound is of lower
+order than O(K).
+Proof. By (1.24), it suffices to show that
+                                  Z
+                                      |p′ (z0 )| dA(z0 ) ≪ K 7/8 .
+                                     E2
+                         5/4
+   From (10.5), the K /n-neighborhood of ∂E4 has area O(K 7/4 /n). From (4.1) and
+Cauchy–Schwarz, we conclude that the contribution to X1 of z0 with dist(z0 , ∂E4 ) ≤ K 5/4 /n
+is acceptable.
+   For m ≥ 0, the annular region 2m−1 K 5/4 /n ≤ dist(z0 , ∂E4 ) ≤ 2m K 5/4 /n similarly has area
+O(2m K 7/4 /n). From (10.9) we have the pointwise bound
+                                                              m−1   5/4
+                                      ′         eO(K)−c2 K
+                                   |p (z0 )| ≪
+                                                  2m K 5/4 /n
+in this region. The total contribution of all these regions to X1 is then
+                       ∞                      m−1 5/4
+                      X    2m K 7/4 eO(K)−c2 K                        5/4
+                   ≪                    m    5/4
+                                                      ≪ K 1/2 eO(K)−cK ≪ 1
+                      m=1
+                              n        2 K /n
+which is also acceptable.                                                                      □
+Lemma 10.3 (Control on X2 ). If µ > 0 is sufficiently small, then
+                                           X2 ≪ µ∥p∥1 .
+Proof. Let C0 be a large constant (independent of µ), and set rk := 2k C0 ∥p∥1 /n for k =
+0, 1, 2, . . . . By (1.25) and dyadic decomposition we have
+                         Z                                                                
+                                    µn            X µn                                  µn
+(10.12)            X2 ≪                 dA(z) +              Ann(0, rk , rk+1 ) ∩ |ψ| ≤      .
+                           D(0,r0 ) |z|         k≥1:r ≪1
+                                                         r k                            rk
+                                                  k
+
+The first term integrates to O(µnr0 ) = O(µC0 ∥p∥1 ). Now let z be an element of the annulus
+Ann(0, rk , rk+1 ) with |ψ(z)| ≤ µn
+                                 rk
+                                    , where k ≥ 1 and rk ≪ 1. We use (1.19) to split ψ = ψ1 +ψ2 ,
+where                                           X        1
+                                       ψ1 :=
+                                                       z−ζ
+                                              ζ∈D(0,rk−1 )
+and                                               X            1
+                                      ψ2 :=                       .
+                                                              z−ζ
+                                              ζ ∈D(0,r
+                                                /     k−1 )
+                                                                                 1
+As z lies in Ann(0, rk , rk+1 ), we see from elementary geometry that the terms z−ζ contributing
+                                                 r
+                                             −1 k−1
+to ψ1 all lie in a sector of aperture 2 sin        rk
+                                                      = π/3 < π and have magnitude ≍ 1/rk , and
+there are ≫ n such terms by (1.9), (10.7) if C is large enough. From Lemma 7.4 we conclude
+that
+                                                        n
+                                            |ψ1 (z)| ≫ .
+                                                        rk
+                                                   38
+In particular, for µ small enough, the condition |ψ(z)| ≤ µn/rk will force |ψ2 (z)| ≫ n/rk
+from the triangle inequality. If we let
+                                 Nk := |{ξ : ξ ∈
+                                               / D(0, rk−1 )}|
+be the number of critical points that contribute to ψ2 , then from (5.3) we have
+                                                               r2
+                                                       
+                                                     µn
+                          Ann(0, rk , rk+1 ) ∩ |ψ| ≤        ≪ k2 Nk2
+                                                     rk        n
+and hence by (10.12)
+                                                     ∞
+                                                     X             Nk
+                               X2 ≪ µC0 ∥p∥1 + µ           rk Nk      .
+                                                     k=1
+                                                                   n
+By (10.7) we have
+                                       ∞
+                                       X
+(10.13)                                      rk Nk ≪ ∥p∥1
+                                       k=1
+
+and we trivially have Nnk ≤ 1. The claim follows.                                       □
+Lemma 10.4 (Control on X3 ). For any r > 0, we have
+                                           |ψ ′ |      nr + ∥p∥1 log n
+                  Z
+                                                  dA ≪                 .
+                    z∈D(0,r):|ψ(z)|≥µn/|z| |ψ|               µn
+In particular, taking r = 2 (say), we have
+                                             n + ∥p∥1 log n
+                                    X3 ≪                    .
+                                                  µn
+Proof. We first deal with a technical contribution near the critical points ζ. In a disk
+D(ζ, rn−3 ), we can use (5.2) and (2.22) to conclude
+                                           |ψ ′ |
+                                Z
+                                                  dA ≪ rn−3 × n.
+                                       −3
+                                 D(ζ,rn )  |ψ|
+Thus, the contribution of ζ D(ζ, rn−3 ) to X3 is O(n × rn−3 × n), which is acceptable. The
+                          S
+remaining contribution can now be bounded by
+                                                      |ψ ′ |
+                               Z
+                                                             dA(z).
+                                D(0,r)\ ζ D(ζ,rn−3 ) µn/|z|
+                                       S
+
+
+Using (1.19) and the triangle inequality, we can bound this by
+                                                       |z|
+                                   Z
+                              1 X
+                         ≪                                   dA(z).
+                             µn ζ D(0,r)\D(ζ,rn−3 ) |z − ζ|2
+
+Direct computation (splitting into the regions |z| ≥ 2|ζ| and |z| < 2|ζ|) shows that the
+integral is bounded by O(r + |ζ| log n). The claim now follows from (1.4).            □
+  Combining these three lemmas and (10.11), (10.2) with Theorem 1.3, we conclude that
+                                                                               
+                                                  7/8         n + ∥p∥1 log n
+   ℓ(∂E1 \D(0, ρ)) ≤ 2n − K − Ψ(D(0, ρ)) + O K + µ∥p∥1 +                     +1 .
+                                                                    µn
+                                                39
+Selecting µ := K −1/2 and using (10.3), (10.7), we simplify to
+(10.14)              ℓ(∂E1 \D(0, ρ)) ≤ 2n − K − Ψ(D(0, ρ)) + O(K 7/8 )
+and thus
+(10.15)                  ℓ(∂E1 \D(0, ρ)) ≤ 2n − Ψ(D(0, ρ)) + O(1).
+Sending ρ → 0, we obtain Theorem 1.1(ii).
+
+                               11. An even sharper bound
+  Now we prove Theorem 1.1(iii). Let ε > 0 be a small parameter. Assume that n is
+sufficiently large depending on ε, and that p is a normalized maximizing polynomial of
+degree n. We abbreviate ER (p) as ER . It will suffice to show that
+(11.1)                         ℓ(∂E1 ) = 2n + 4 log 2 + O(ε1/2 ).
+  We can control the total size of ∥p∥ defined in (1.6), in the spirit of Heuristic 1.1:
+Proposition 11.1 (Total size bound). We have
+(11.2)                                      ∥p∥1 ≪ 1
+and
+(11.3)                                      ∥p∥0 ≪ 1
+and hence by (1.6)
+(11.4)                                      ∥p∥ ≪ 1.
+In particular, from (11.2), (1.8) one has
+                                                           1
+(11.5)                                     / D(0, r)} ≪
+                                   #{ζ : ζ ∈
+                                                           r
+for all r > 0.
+Proof. As before, we have (10.1). Comparing this against the limiting case ρ → 0 of (10.14),
+we conclude that the quantity K from the previous section obeys the bound K = O(1).
+Thus, by (10.7), one has (11.2).
+  Let r := Cn , where C is a large constant. To show (11.3) or (11.4), it suffices by Lemma 6.1,
+(11.2) to show that ∂E1 intersects D(0, r). Suppose for contradiction that the lemniscate
+avoids D(0, r). From (10.15) we then have
+                              ℓ(∂E1 ) ≤ 2n − Ψ(D(0, r)) + O(1).
+But from Lemma 7.3 and (11.2) one has
+                     Ψ(D(0, r)) ≥ Ψ(Ann(0, r/2, r)) ≥ (n − 1)r − O(1),
+and thus
+                            |ℓ(∂E1 )| ≤ 2n − (n − 1)r + O(1 + r),
+which contradicts (10.1) for C large enough. The claim follows.                               □
+                                               40
+  From Proposition 6.2 we have
+                                       zp′ (z)
+                                                                     
+                                                                 1
+(11.6)                     p(z) = −1 +              1 + Or
+                                         n                     nδ(z)
+whenever |z| ≥ r > 0 and δ(z) ≫ 1/n. As an initial application of this formula, we obtain
+Lemma 11.1. Let
+                                                  C0 log n
+(11.7)                                     σ :=            ,
+                                                     n
+for a large constant C0 > 0. Then
+(11.8)                                 E4 ⊂ D(0, 1 + σ).
+In particular, by the Gauss–Lucas theorem (or the fact that ∂E1 contains the critical points)
+we have
+(11.9)                                      |ζ| ≤ 1 + σ
+for all critical points ζ. Also, we have
+(11.10)                                     |p′ (z)| ≪ n
+for all z ∈ E4 .
+Proof. From (10.4) we already have
+                                       E4 ⊂ D(0, 1 + ε).
+Suppose that z ∈ E4 \D(0, 1) and δ(z) ≥ C/n for a large constant C. Then |p(z)| ≤ 4 and
+|z| ≥ 1, and by (11.6) we conclude that |p′ (z)| ≪ n (if C is large enough). On the other
+                              ′
+hand, from (6.4) we have |p   (z)| ≫ n|z|n−1 (C/n)O(1) . Comparing the bounds we conclude
+that z ∈ D 0, 1 + OC logn n . We conclude from (11.5), (6.1) that E4 is contained in the
+union of D 0, 1 + OC logn n and O(1) disks of radius C/n. Since E4 is connected, the claim
+                            
+(11.8) follows from the triangle inequality (if C0 is large enough).
+   To prove (11.10), we have already treated the cases where z ∈ E4 \D(0, 1) and δ(z) ≥ C/n,
+and from Proposition 6.1 we also handle the case when z ∈ D(0, 1). The remaining case
+is when z ∈ E4 \D(0, 1) and δ(z) < C/n. As discussed before, the restriction δ(z) < C/n
+localizes z to O(1) disks of radius C/n. By the connectedness of E4 (and (10.4)) we thus
+see that z lies within O(C/n) of a point z ′ ∈ E4 with δ(z ′ ) = C/n, so that p′ (z ′ ) ≪ n by the
+previous analysis. From (1.3) we have
+                                      p′ (z)      Y |z − ζ|
+                                                =             .
+                                      p′ (z ′ )   ζ
+                                                    |z ′ − ζ|
+
+
+Since δ(z ′ ) = C/n and |z − z ′ | ≪ C/n, we see that each factor here is O(1), and for
+ζ ∈ D(0, 1/2) the factor is 1 + O(|ζ|n/C) = exp(O(|ζ|)). Multiplying using (11.2), we
+conclude (11.10) in this case also.                                                  □
+  Let 0 < ρ < ε be a small radius. From the above lemma we may split
+(11.11)
+ℓ(∂E1 \D(0, ρ)) = ℓ(∂E1 ∩Ann(0, ρ, ε))+ℓ(∂E1 ∩Ann(0, ε, 1−σ))+ℓ(∂E1 ∩Ann(0, 1−σ, 1+σ)).
+We now estimate the three components separately. We begin with the innermost component:
+                                                  41
+Proposition 11.2 (Inner bound). We have
+                     ℓ(∂E1 ∩ Ann(0, ρ, ε)) ≤ 2εn − Ψ(D(0, ρ)) + O(ε1/2 ).
+Proof. We apply Theorem 1.3 with Ω = D(0, ε) and λ(z) = µn/|z| for a small parameter
+µ > 0 to be chosen later (mollifying λ at the origin as before). We conclude (using (10.4))
+that
+      ℓ(∂E1 ∩ Ann(0, ρ, ε)) ≤ Ψ(D(0, ε)) − Ψ(D(0, ρ)) + O(X1 + X2 + X3 + X4 + X5 )
+where X1 , . . . , X5 are defined as in (1.24)–(1.28). Direct calculation gives
+                                            X4 , X5 ≪ ε
+while from Proposition 6.1 we have
+                                   X1 ≪ nεn−1 eO(1/ε) × πε2 .
+From Lemma 10.3 and (11.2) we have
+                                                 X2 ≪ µ.
+while from Lemma 10.4 and (11.2) one has
+                                                   nε + log n
+                                       X3 ≪                   .
+                                                      µn
+Finally, we apply (1.20), (5.2) to obtain
+                                    Ψ(D(0, ε)) ≤ 2(n − 1)ε.
+Setting µ = ε1/2 and combining all the above bounds, we obtain the claim after a brief
+calculation.                                                                        □
+  To treat the contributions near critical points, we first need
+Lemma 11.2 (Local upper bound on lemniscate length). If z0 ̸= 0 and 0 < r < |z0 |/2, then
+                                                 nr2       r∥p∥1 ∥p∥1 log n
+                     ℓ(∂E1 ∩ D(z0 , r)) ≪              +r+        +         .
+                                                 |z0 |      |z0 |    n
+                                            1/2
+In particular, if |z0 | ≫ ∥p∥1 and r ≫ log n n |z0 |, then we have the simplified bound
+                                                                 nr2
+                                   ℓ(∂E1 ∩ D(z0 , r)) ≪                .
+                                                                 |z0 |
+Proof. From (10.4) we may assume that z0 = O(1), otherwise the set ∂E1 ∩D(z0 , r) is empty.
+  We apply Theorem 1.3 with Ω = D(z0 , r) and λ = n/|z0 |. We conclude that
+              ℓ(∂E1 ∩ D(z0 , r)) ≪ Ψ(D(z0 , r)) + O(X1 + X2 + X3 + X4 + X5 )
+where X1 , . . . , X5 are defined as in (1.24)–(1.28). Direct calculation gives
+                                       nr2
+                                X2 ≪         ;     X4 = 0;      X5 ≪ r
+                                       |z0 |
+From (1.24) and (11.10) we have
+                                                           nr2
+                                       X1 ≪ nr2 ≪                .
+                                                           |z0 |
+                                                    42
+For X3 , we first control a minor contribution when z ∈ ζ D(ζ, n−2 r). From (5.2), (2.22)
+                                                                S
+
+this contribution is bounded by O(n × n × n−2 r) = O(r). The remaining contribution to X3
+is bounded by
+                              |z0 |
+                                    Z
+                                                        |ψ ′ | dA(z).
+                               n D(z0 ,r)\ ζ D(ζ,n−2 r)
+                                          S
+
+By (1.19) and the triangle inequality, this is bounded by
+                           |z0 | X
+                                   Z
+                                                      1
+                                                                     2
+                                                                         dA(z)
+                              n   ζ    D(z0 ,r)\D(ζ,n−2 r) |z − ζ|
+
+Each integral is O(log n), but with the improved bound of O(r2 /|z0 |2 ) if ζ ∈ D(0, |z0 |/4).
+By (1.8), this bound holds for all but O(∥p∥1 /|z0 |) critical points, hence
+                                         |z0 | r2     |z0 | ∥p∥1
+                             X3 ≪ r +         n   2
+                                                    +            log n.
+                                          n |z0 |      n |z0 |
+Finally, from (1.22), (1.20) we have
+                                           X1Z                1
+(11.12)                   Ψ(D(z0 , r)) ≤                           dA(z).
+                                            ζ
+                                                π D(z0 ,r) |z − ζ|
+
+The integral here is O(r) for all ζ (by (5.1)), but the bound can be improved to r2 /|z0 | if
+ζ ∈ D(0, |z0 |/4). By (1.8), this condition ζ ∈ D(0, |z0 |/4) holds for all but O(∥p∥1 /|z0 |)
+critical points, thus
+                                                  r2     ∥p∥1
+                               Ψ(D(z0 , r)) ≪ n        +       r.
+                                                 |z0 |   |z0 |
+Combining all these estimates, we obtain the claim.                                        □
+  Now we handle the intermediate region:
+Proposition 11.3 (Bound in intermediate region). We have
+                                                                                        
+                                                                                 log n
+                  ℓ(∂E1 ∩ Ann(0, ε, 1 − σ)) ≤ 2n(1 − ε − σ) + Oε                             .
+                                                                                   n
+                                                                                  1/2
+Proof. By (11.5), there are O(1/ε) critical points ζ for which D(ζ, 2 log n n ) intersects Ann(0, ε, 1−
+σ); by the triangle inequality, each of these critical points obeys |ζ| ≍ε 1. By Lemma 11.2 and
+                                                                           1/2
+Proposition 11.1, the combined contribution of these disks D(ζ, 2 log n n ) to the lemniscate
+length is Oε (log n/n). It will thus suffice to establish the bound
+                                                                       
+                                                                  log n
+                           ℓ(∂E1 ∩ Ω) ≤ 2n(1 − ε − σ) + Oε
+                                                                    n
+where                         (                                          )
+                                                                log1/2 n
+                        Ω := z ∈ Ann(0, ε, 1 − σ) : δ(z) ≥                 .
+                                                                    n
+We now plan to apply the second arclength formula (3.3) from Lemma 3.1. From Proposition
+6.2, p(z) ̸= −1, and
+                                                          
+                         p(z)          p(z)            1
+                     arg ′     = arg          + Oε            (mod π).
+                        zp (z)       p(z) + 1        nδ(z)
+                                                  43
+Since |p(z)| = 1 and p(z) = −1 + O((1 − σ)n ) = −1 + O(1/n), we have
+                                                                 
+                          1                                 π       1
+    arg(p(z)) = π + O         (mod 2π); arg(p(z) + 1) = ± + O                             (mod 2π);
+                         n                                  2       n
+and thus (by (6.2))
+                                                                   
+                               p(z)     π                     1
+                           arg ′     = ± + Oε                            (mod 2π).
+                              zp (z)    2                   nδ(z)
+We can thus apply (3.3), (3.4) to conclude that
+                             Z 1−σ                                             
+                                         X                                  1
+              ℓ(∂E1 ∩ Ω) =                                     1 + Oε               dr.
+                                   ε                                    n2 δ(z)2
+                                         z∈∂E1 ∩Ω∩∂D(0,r)
+
+By the discussion in Section 2.5, we have
+                                        X
+                                                             1 ≤ 2n
+                                         z∈∂E1 ∩Ω∩∂D(0,r)
+
+which implies that
+                 Z 1−σ            X                    Z 1−σ
+(11.13)                                       1 dr ≤            2n dr = 2n(1 − ε − σ).
+                   ε       z∈∂E1 ∩Ω∩∂D(0,r)             ε
+
+It thus suffices to show that
+                           Z 1−σ           X              1
+(11.14)                                                       dr ≪ε n log n.
+                              ε                         δ(z)2
+                                    z∈∂E1 ∩Ω∩∂D(0,r)
+
+Bounding
+                                     1                      X          1
+                                         ≪ε 1 +
+                                   δ(z)2                            |z − ζ|2
+                                                   ζ ∈D(0,ε/2)
+                                                     /
+
+and recalling from (11.5) that there are only O(1/ε) critical points outside of D(0, ε/2), it
+suffices to show that
+                        Z 1−σ       X           1
+                                                      dr ≪ε n log n
+                          ε                  |z − ζ|2
+                                   z∈∂E1 ∩Ω∩∂D(0,r)
+
+for any such critical point. By dyadic decomposition, it suffices to show that
+                      Z 1−σ
+                            #(∂E1 ∩ Ω ∩ ∂D(0, r) ∩ D(ζ, r1 )) dr ≪ε nr12
+                       ε
+           1/2
+for all log n n ≤ r1 ≤ 1. Using (3.3) again, we can lower bound the left-hand side by
+                                       ≪ε ℓ(∂E1 ∩ Ω ∩ D(ζ, r1 )),
+and the required bound follows from Lemma 11.2 (covering D(ζ, r1 ) by smaller disks if r1 is
+large).                                                                                   □
+  Now we handle the outer region.
+                                                       44
+Proposition 11.4 (Outer bound). We have
+                                                                                   
+                                                                              1
+               ℓ(∂E1 ∩ Ann(0, 1 − σ, 1 + σ)) ≤ 2nσ + 4 log 2 + OC0                      .
+                                                                            log n
+Proof. A technical difficulty here is that the function δ could be very small on some portions
+of the annulus Ann(0, 1 − σ, 1 + σ), due to the presence of nearby critical points. Because of
+this, we will need to remove an exceptional set when δ is too small, and need quite precise
+control on p and p′ outside of this exceptional set to compute the lemniscate length in that
+region to the desired accuracy. As such, the proof here will be among the most complicated
+in the paper.
+   We turn to the details. From (1.3) we have
+(11.15)                                p′ (z) = nz n−1 g(1/z)
+where g is the polynomial                        Y
+                                       g(w) :=        (1 − wζ) .
+                                                 ζ
+
+For w ∈ D(0, 3), we have 1 − wζ ≤ exp(O(|ζ|)), hence by (11.4) we have g = O(1) on this
+disk; by the Cauchy inequality we thus have g ′ = O(1) on D(0, 2). Also, g(0) = 1, and by
+(11.5) there are only O(1) zeroes of g in D(0, 2). From Jensen’s inequality we conclude that
+                                  Z 2π
+                                        log |g(e−iθ )| dθ ≥ 0.
+                                       0
+                                   4
+We subdivide [0, 2π] into ≍ log n intervals I of length ≍ log14 n . If we let cI be the mean
+value of log |g(e−iθ )| on I, we conclude that
+                                          X
+(11.16)                                      cI |I| ≥ 0.
+                                            I
+
+Call an interval I good if δ(e ) ≥ log12 n for at least one θ ∈ I, and bad otherwise. If I is
+                              iθ
+
+good, then we have |1 − eiθ ζ| ≫ log12 n for all θ ∈ I and critical points ζ, while from (11.4)
+              iθ
+we have |1 − e ζ| ≍ 1 for all but O(1) of the ζ. From (11.4) and the triangle inequality we
+have
+                               g ′ (eiθ ) X −ζ
+(11.17)                                  =              ≪ log2 n,
+                               g(eiθ )     ζ
+                                             1 − e iθ ζ
+
+
+and thus log |g(e−iθ )| is O(log2 n)-Lipschitz on I, and thus we have
+                                                               
+                                         −iθ               1
+(11.18)                          log |g(e )| = cI + O
+                                                         log2 n
+For any I, direct calculation shows that
+                                    Z
+                                 1
+                                       log |1 − wζ| dθ ≪ log log n
+                                |I| I
+for any critical point, with an improved bound of O(|ζ|) if ζ ∈ D(0, 1/2). By (11.5) we thus
+have the bound
+(11.19)                                    cI ≪ log log n
+                                                 45
+for all intervals I. Let Ω consist of those z = reiθ with 1−σ ≤ r ≤ 1+σ and θ lying in a good
+interval I. From (11.5) we see that the arcs {eiθ : θ ∈ I} corresponding to bad I are contained
+in O(1) disks of radius O( log12 n ). Hence the portion of ∂E1 ∩ Ann(0, 1 − σ, 1 + σ) lying outside
+of Ω can be covered by O( σ log1 2 n ) disks of radius σ, whose center lies in Ann(0, 1/2, 2) (say),
+and hence by Lemma 11.2 and Proposition 11.1 its contribution to the lemniscate length is
+                                            1                1
+                                    ≪         2 × nσ 2 ≪C0       .
+                                        σ log n            log n
+Thus it will suffice to show that
+                                                                                         
+                                                                                    1
+                           ℓ(∂E1 ∩ Ω) ≤ 2nσ + 4 log 2 + O                                     .
+                                                                                  log n
+From the first arclength formula (3.1) from Lemma 3.1, we can bound
+                                         Z π   X          1
+                           ℓ(∂E1 ∩ Ω) ≤                 ′
+                                                              dα.
+                                          −π       iα
+                                                      |p (z)|
+                                                        z∈Ω:p(z)=e
+
+For z = reiθ contributing to the above integral, we have 1 − σ ≤ r ≤ 1 + σ, θ in a good
+interval I, and by (11.15), (11.18) we have
+                                                             
+                             ′           n−1 cI           1
+(11.20)                    |p (z)| = n|z| e       1+O             .
+                                                        log2 n
+From (11.6) and (11.15), (11.18) we have
+                                                                                                
+                              iα                             n cI                       1
+                       |1 + e | = |1 + p(z)| = |z| e                    1+O
+                                                                                      log2 n
+and hence
+                                                                                        
+                                   −cI /n        iα 1/n                         1
+(11.21)                  |z| = e            |1 + e |            1+O                               .
+                                                                            n log2 n
+Substituting this into (11.20) we have
+                                                                                         
+                          ′                     iα n−1 cI /n                        1
+                        |p (z)| = n|1 + e |         n   e        1+O
+                                                                                  log2 n
+which by (11.19) simplifies to
+                                                                                     
+                              ′                   iα n−1                      1
+                          |p (z)| = n|1 + e |         n       1+O                             .
+                                                                            log2 n
+Hence
+                                               Z π
+                                                                              #{z ∈ Ω : p(z) = eiα }
+                            
+                                       1                                n−1
+          ℓ(∂E1 ∩ Ω) ≤ 1 + O                                |1 + eiα | n                             dα.
+                                     log2 n            −π                              n
+It will thus suffice to show that
+           Z π
+                             #{z ∈ Ω : p(z) = eiα }
+                                                                                  
+                      iα n−1                                                   1
+               |1 + e | n                           dα ≤ 2nσ + 4 log 2 + O           .
+            −π                        n                                      log n
+                                                        46
+We split the left-hand side as
+                                 X Z π                    n−1   m(I, α)
+                                               |1 + eiα | n             dα
+                                 I good   −π                      n
+where
+                 m(I, α) := #{reiθ : 1 − σ ≤ r ≤ 1 + σ, θ ∈ I, p(reiθ ) = eiα }.
+By (11.16), it will suffice to show that
+            Z π                                                             
+                        iα n−1 m(I, α)                                    1
+                 |1 + e |   n          dα ≤ 2nσ − cI + 4 log 2 + O               |I|
+              −π                 n                                      log n
+for each good interval I. (Note from (11.19) that the right-hand side is non-negative for the
+bad intervals I, so one can add them to that side when summing over I.)
+   Fix a good interval I. If there is an reiθ contributing to the quantity m(I, α), then by
+(11.21) one has
+                                                                        
+                             iα 1/n    cI /n                         1
+                       |1 + e | ≥ e (1 − σ) 1 − O
+                                                                 n log2 n
+                                                                    
+                                                 cI            1
+(11.22)                             =1−σ+ −O                           .
+                                                  n        n log2 n
+If we can show that
+                                                                
+                                                             1
+(11.23)                       m(I, α) ≤ n|I| 1 + O
+                                                          log2 n
+for such α, then the claim will follow from Lemma 3.2 and (1.2). Thus it remains to show
+(11.23).
+   Let θ0 be the midpoint of I. Integrating (11.17), we have
+                                                                  
+                                 1           −iθ0                1
+                           g          = g(e       ) 1+O
+                               reiθ                           log2 n
+whenever 1 − 2σ ≤ r ≤ 1 + 2σ and θ = θ0 + O( log14 n ). From (11.6) and (11.15), we conclude
+that
+                                                                   
+                        iθ          n inθ  −iθ0                 1
+(11.24)             p(re ) = −1 + r e g(e        ) 1+O
+                                                              log2 n
+for such r, θ. From (11.18), (11.19) one has log |g(e−iθ0 )| ≪ log log n, thus
+(11.25)                     log−O(1) n ≪ |g(e−iθ0 )| ≪ logO(1) n.
+                                                                                   
+                                                                1               1
+                                                                  
+  One can enclose I in an interval [θ− , θ+ ] of length |I| + O n = |I| 1 + O log2 n    such
+that einθ± g(e−iθ0 ) is a positive real. For z in the sector
+                         Γ := {reiθ : 1 − 2σ ≤ r ≤ 1 + 2σ, θ ∈ [θ− , θ+ ]}
+we see from (11.24), (11.18) that we can split
+                                     p(z) − eiα = f (z) + h(z)
+where
+                                  f (z) := z n g(e−iθ0 ) − (1 + eiα )
+                                                     47
+and
+                                                     |z|n ecI
+                                       |h(z)| ≪               .
+                                                     log2 n
+                                                                     th            iα    −iθ0
+                     that the
+Direct counting shows               of zeroes to f (z) (i.e., the n roots of (1+e )/g(e
+                             number                                                          ))
+                                1
+in Γ is at most n|I| 1 + O log2 n . By Rouche’s theorem, it will now suffice to show the
+pointwise bound |h(z)| < |f (z)| for z on the boundary of Γ. When |z| = 1 + 2σ, we see from
+(11.18) and the definition of σ that
+(11.26)                                 |f (z)| ≫ |z|n ecI
+which gives the claim in this case. if z lies on one of the rays θ = θ± , then z n g(e−iθ0 ) is
+a positive real and so we again obtain (11.26), again giving the claim in this case. Finally,
+when |z| = 1 − 2σ, then from (11.22), (11.25), and (11.19) one has
+                               |f (z)| ≍ |1 + eiα | ≫ (1 − σ)n ecI
+while h(z) ≪ (1 − 2σ)n ecI , giving the claim from the definition of σ.                                       □
+  Inserting Propositions 11.2, 11.3, 11.4 into (11.11), we obtain
+                                                                                                         
+                                                                  1/2                log n              1
+(11.27) ℓ(∂E1 \D(0, ρ)) ≤ 2n + 4 log 2 − Ψ(D(0, ρ)) + O(ε               ) + Oε               + O C0           .
+                                                                                       n              log n
+Sending ρ → 0, and noting that ε can be made arbitrarily small, we obtain Theorem 1.1(iii).
+
+                                   12. The final result
+  We are now ready to establish the last and strongest component of Theorem 1.1, namely
+part (iv). Assume that n is sufficiently large, and that p is a normalized maximizing poly-
+nomial of degree n. As before we abbreviate Er (p) as Er . We will show that ∥p∥ = 0, and
+hence p = p0 .
+  We may assume for sake of contradiction that
+(12.1)                                      ∥p∥ > 0.
+The first step is to obtain the following improvement of (11.2), again in the spirit of Heuristic
+1.1.
+Proposition 12.1. We have
+                                          ∥p∥1 = o(1).
+In particular, we have ζ = o(1) for all critical points ζ.
+Proof. Let ε > 0 be a small constant. It will suffice to show that
+(12.2)                                    ∥p∥1 ≪ ε1/2
+if n is sufficiently large depending on ε.
+   From (10.1) and the hypothesis that p is a maximizing polynomial, one has
+(12.3)                    ℓ(∂E1 ) ≥ ℓ(∂E1 (p0 )) = 2n + 4 log 2 + o(1).
+                                                48
+Comparing the above bound with the analysis in the previous section (particularly Proposi-
+tions 11.2, 11.3, 3.2), we see that for any small absolute constant ε > 0 one must have
+(12.4)                             ℓ(∂E1 ∩ D(0, ε)) = 2nε + O(ε1/2 )
+(12.5)                 ℓ(∂E1 ∩ Ann(0, ε, 1 − σ)) = 2n(1 − ε − σ) + O(ε1/2 )
+(12.6)             ℓ(∂E1 ∩ Ann(0, 1 − σ, 1 + σ)) = 2nσ + 4 log 2 + O(ε1/2 )
+if n is sufficiently large depending on ε. We can use this information to get further control
+on the critical points ζ, improving upon (11.4).
+   Firstly, by comparing (12.4) with the proof of Proposition 11.2 (focusing in particular on
+(11.12)), we see that
+                               Ψ(D(0, ε)) = (n − 1)2ε − O(ε1/2 ),
+and hence by Corollary 7.2 we have
+(12.7)                          Dispℓ1 {ζ : ζ ∈ D(0, 10ε)} ≪ ε1/2 .
+  Next, comparing (12.5) with the proof of Proposition 11.3 (focusing in particular on
+(11.13)), we have
+                  Z 1−σ     X
+                                     1 dr = 2n(1 − ε − σ) − O(ε1/2 )
+                       ε    z∈∂E1 ∩Ω∩∂D(0,r)
+
+or equivalently                                                 
+                           Z 1−σ                    X
+                                   2n −                        1 dr ≪ ε1/2 .
+                            ε                z∈∂E1 ∩Ω∩∂D(0,r)
+
+We will shortly show the lower bound
+                                  X
+(12.8)                  2n −                             1 ≥ #{ζ : |ζ| ≥ r + ε}
+                                   z∈∂E1 ∩Ω∩∂D(0,r)
+
+for any ε ≤ r ≤ 1/2. Assuming this, we conclude that
+                              X Z 1/2
+                                        1|ζ|≥r+ε dr ≪ ε1/2 .
+                                       ζ    ε
+
+Performing the inner integral for ζ ∈
+                                    / D(0, 10ε) (and using (11.9)) we have
+                                       X
+(12.9)                                       |ζ| ≪ ε1/2 .
+                                           ζ ∈D(0,10ε)
+                                             /
+
+Combining (12.7) and (12.9) using Lemma 2.1, we obtain (12.2) as desired.
+   It remains to show (12.8) for a given ε ≤ r ≤ 1/2. Observe that if r + ε/4 ≤ r′ ≤ r + ε/2 is
+such that δ(z) ≤ δ0 for some δ0 > 0 and z ∈ ∂D(0, r′ ), then (by (11.5)) r′ will lie in the union
+of Oε (1) intervals of length Oε (δ0 ). Setting δ0 to be sufficiently small depending on ε, the
+measure of this union is strictly less than the measure of the interval [r + ε/4, r + ε/2]. We
+conclude that we can find a radius r ≤ r′ ≤ r + ε/2 such that δ(z) ≫ε 1 for all z ∈ ∂D(0, r′ ).
+   From Section 2.5, the condition |p(z)| = 1 is equivalent to z n p(z)p̃(r2 /z) − z n = 0. It will
+suffice to show that the polynomial z n p(z)p̃(r2 /z) − z n has at most 2n − k zeroes in D(0, r′ ),
+where k is the number of critical points ζ with |ζ| ≥ r + ε.
+                                                         49
+   For z ∈ ∂D(0, r′ ), we can use (11.6) (to control p(z)) and (6.9) (to control p̃(r2 /z)) to
+write
+                                      z n p(z)p̃(r2 /z) − z n
+as
+                           zp′ (z)
+                                           
+                                               1
+                 n
+                                                        −1 + Oε ((r2 /r′ )n ) − z n .
+                                                                             
+               z −1 +               1 + Oε
+                             n                n
+From (6.1), (11.4) and the hypothesis δ(z) ≫ε 1 we have
+                                  |p′ (z)| ≍ε n|z|n−1 = n(r′ )n
+and hence the Oε ((r2 /r′ )n ) term can be absorbed into the Oε (1/n) term since r′ ≥ r + ε/4.
+Thus we can simplify the previous expression to
+                                          ′
+                                                        
+                                      n zp (z)           1
+                                   −z            1 + Oε      .
+                                          n              n
+By Rouche’s theorem, the number of zeroes of this expression inside D(0, r′ ) is equal to the
+number of zeroes of
+                                                zp′ (z)
+                                           −z n         ,
+                                                  n
+inside the same disk, which by (1.3) is equal to 2n minus the number of critical points outside
+of D(0, r′ ). Since this latter number is at least k, we obtain the claim.                   □
+  Now we can improve Proposition 11.1:
+Proposition 12.2. We have
+                                          ∥p∥ = o(1).
+Proof. Let C > 0 be a large constant, and let ε > 0 be small. By Proposition 12.1 and
+Lemma 6.1, it suffices to show that lemniscate ∂E1 enters D(0, Cε1/2 /n) for n sufficiently
+large depending on C, ε.
+   Suppose this is not the case. Setting ρ = Cε1/2 /n in (11.27), we conclude that
+                                                                                      
+                                        1/2           1/2         log n              1
+     ℓ(∂E1 ) ≤ 2n + 4 log 2 − Ψ(D(0, Cε /n)) + O(ε ) + Oε                 + O C0           ,
+                                                                    n              log n
+which on comparison with (12.3) gives
+                                  Ψ(D(0, Cε1/2 /n)) ≪ ε1/2
+for n large enough. But from Lemma 7.3 and Proposition 12.1 we have
+                                                      Cε1/2
+                          Ψ(D(0, Cε1/2 /n)) ≥ (n − 1)       − o(1),
+                                                        2n
+giving the required contradiction if C is large enough.                                      □
+   Let C0 be a large constant to be chosen later. Inspired by the arguments in [12, §6], and
+in the spirit of Heuristic 1.1, we will now seek to establish the inequality
+                                                                    
+                                                                 ∥p∥
+(12.10)                   ℓ(∂E1 (p)) ≤ ℓ(∂E1 (p0 )) − c∥p∥ + O
+                                                                 C0
+for some absolute constant c > 0 (independent of C0 ), for n large enough; from this, (12.3),
+and Proposition 12.2 we conclude (for C0 large enough) that ∥p∥ = 0, contradicting (12.1).
+                                               50
+  It remains to establish (12.10). Set
+                                               ∥p∥
+                                       r− :=       ;    r+ := C02 ∥p∥.
+                                               C02
+Note from Proposition 12.2, (12.1) that 0 < r− < r+ = o(1). Similarly to (11.11), we split
+(12.11) ℓ(∂E1 ) = ℓ(∂E1 ∩ D(0, r− )) + ℓ(∂E1 ∩ Ann(0, r− , r+ )) + ℓ(∂E1 ∩ Ann(0, r+ , 1 + σ)),
+and estimate the three components separately.
+  We begin with an analogue of Proposition 11.2, which achieves additional gains consistent
+with Heuristic 1.1.
+Proposition 12.3 (Inner bound). We have
+                                                                                                     
+                                                                                                ∥p∥
+(12.12)          ℓ(∂E1 ∩ D(0, r− )) ≤ 2nr− − c Dispℓ1 {ζ : ζ ∈ D(0, 10r− )} + O
+                                                                                                C0
+for an absolute constant c > 0 (independent of C0 ). If furthermore
+(12.13)                                        ∥p∥ ≥ C∥p∥1 ,
+for a large absolute constant C (independent of C0 , c), we can obtain the refinement
+                                                                                       
+                                                                                    ∥p∥
+(12.14)     ℓ(∂E1 ∩ D(0, r− )) ≤ 2nr− − c Dispℓ1 {ζ : ζ ∈ D(0, 10r− )} − c∥p∥ + O
+                                                                                    C0
+Proof. As in the proof of Proposition 11.2, we apply Theorem 1.3 with Ω = D(0, r− ) and9
+λ(z) = µn/|z| for µ := 1/C0 , to conclude
+             ℓ(∂E1 ∩ D(0, r− )) ≤ Ψ(E2 ∩ D(0, r− )) + O(X1 + X2 + X3 + X4 + X5 )
+where X1 , . . . , X5 are defined as in (1.24)–(1.28). Direct calculation gives
+                                                    ∥p∥1
+                                          X4 , X5 ≪ r− ≪
+                                                     C0
+while from Proposition 6.1(ii) and Proposition 12.1 we have
+                                                                             ∥p∥1
+                            X1 ≪ eO(n) n−n ∥p∥n−1
+                                              1
+                                                      2
+                                                  × πr− ≪ r− ≪                    .
+                                                                              C0
+From Lemma 10.3 we have
+                                                             ∥p∥
+                                          X2 ≪ µ∥p∥1 =           .
+                                                             C0
+From Lemma 10.4 we have
+                                            nr− + ∥p0 ∥ log n   ∥p∥
+                                    X3 ≪                      ≪     .
+                                                  µn            C0
+We conclude that                                                                  
+                                                                             ∥p∥
+                           ℓ(∂E1 ∩ D(0, r− )) ≤ Ψ(D(0, r− )) + O                       .
+                                                                             C0
+From Corollary 7.2 we have
+                     Ψ(D(0, r− )) ≤ 2(n − 1)r− − c Dispℓ1 {ζ : ζ ∈ D(0, 10r− )}
+  9Technically, one cannot directly apply Theorem 1.3 here due to the singularity of λ at the origin, but
+this is easily dealt with by replacing Ω with Ann(0, ρ, r− ) and then taking the limit ρ → 0.
+                                                       51
+for an absolute constant c > 0. The claim (12.12) follows.
+   Suppose now that (12.13) holds. From Lemma 6.1 we conclude (for C large enough) that
+the lemniscate ∂E1 does not enter D(0, ∥p∥/4n). We now repeat the above arguments, but
+with Ω set equal to Ann(0, ∥p∥/4n, r− ) rather than D(0, r− ), to obtain
+      ℓ(∂E1 ∩ D(0, r− )) ≤ Ψ(E2 ∩ Ann(0, ∥p∥/4n, r− )) + O(X1 + X2 + X3 + X4 + X5 )
+From Lemma 7.3 we have
+                                    Ψ(D(0, ∥p∥/4n)) ≥ c∥p∥
+for some absolute constant c > 0, and hence
+                    Ψ(E2 ∩ Ann(0, ∥p∥/4n, r− )) ≤ Ψ(E2 ∩ D(0, r− )) − c∥p∥.
+Repeating the previous arguments, we obtain the claim.                                             □
+  Now we obtain an analogue of Proposition 11.3 (with a version of the gain implicit in the
+proof of Proposition 12.1, and suggested by Heuristic 1.1).
+Proposition 12.4 (Bound in intermediate region). We have
+                                                                              
+                                                    X                log n
+       ℓ(∂E1 ∩ Ann(0, r− , r+ )) ≤ 2n(r+ − r− ) − c      |ζ| + OC0         ∥p∥
+                                                                       n
+                                                       ζ ∈D(0,10r
+                                                         /       −)
+
+
+for an absolute constant c > 0 (independent of C0 ).
+                                                                                 1/2
+Proof. By (1.8), there are OC0 (1) critical points ζ for which D(ζ, 2 log n n r+ ) intersects
+Ann(0, r− , r+ ); by the triangle inequality, each of these critical points obeys |ζ| ≍C0 ∥p∥ ≍C0
+                                                                                    1/2
+r− ≍C0 r+ . By Lemma 11.2, the combined contribution of these disks D(ζ, 2 log n n r+ ) to the
+lemniscate length is OC0 (log n∥p∥/n). It will thus suffice to establish the bound
+                                                                         
+                                                                log n
+                          ℓ(∂E1 ∩ Ω) ≤ 2n(r+ − r− ) + OC0             ∥p∥
+                                                                  n
+where                           (                                        )
+                                                              log1/2 n
+                         Ω :=   z ∈ Ann(0, r− , r+ ) : δ(z) ≥                .
+                                                                 n
+We again aim to apply the second estimate (3.3) from Lemma 3.1. Suppose that z ∈ ∂E1 ∩Ω.
+From Proposition 6.2, p(z) ̸= −1, and
+                                                          
+                       p(z)           p(z)             1
+                  arg ′       = arg          + OC0           (mod π).
+                      zp (z)        p(z) + 1         nδ(z)
+                                       n
+Since |p(z)| = 1 and p(z) = −1 + OC0 (r+ ) = −1 + O(1/n), we have
+                                                                 
+                          1                                 π      1
+    arg(p(z)) = π + O         (mod 2π); arg(p(z) + 1) = ± + O                          (mod 2π);
+                         n                                  2      n
+and thus by (6.2)
+                                                            
+                            p(z)     π                 1
+                        arg ′     = ± + OC0                      (mod 2π).
+                           zp (z)    2               nδ(z)
+                                               52
+We can thus apply (3.3), (3.4) to conclude that
+                               Z r+                                                  
+                                         X                                     1
+                ℓ(∂E1 ∩ Ω) =                                 1 + OC0                      dr.
+                                     r−
+                                                                             2
+                                                                            n δ(z)2
+                                          z∈∂E1 ∩Ω∩∂D(0,r)
+
+  Similarly to (11.14), we claim that
+                         Z r+     X                   1
+(12.15)                                                   dr ≪C0 n∥p∥ log n
+                            r−                      δ(z)2
+                                 z∈∂E1 ∩Ω∩∂D(0,r)
+
+Indeed, bounding
+                                   1                      X           ∥p∥2
+                                       ≪C0 1 +
+                                 δ(z)2                              |z − ζ|2
+                                                    ζ ∈D(0,r
+                                                      /     − /2)
+
+for any z contributing to the above expression, and recalling from (1.8) that there are only
+OC0 (1) critical points outside of D(0, r− /2), it suffices to show that
+                          Z r+      X              1              n log n
+                                                       2
+                                                         dr ≪C0
+                           r−                  |z − ζ|             ∥p∥
+                                 z∈∂E1 ∩Ω∩∂D(0,r)
+
+for any such critical point. By dyadic decomposition, it suffices to show that
+                      Z r+
+                                                                      nr12
+                           #(∂E1 ∩ Ω ∩ ∂D(0, r) ∩ D(ζ, r1 )) dr ≪C0
+                       r−                                             ∥p∥
+         1/2
+for all log n n ∥p∥ ≪C0 r1 ≪C0 ∥p∥. Using (3.3) again, we can lower bound the left-hand side
+by
+                                 ≪C0 ℓ(∂E1 ∩ Ω ∩ D(ζ, r1 )),
+and the required bound follows from Lemma 11.2 (covering D(ζ, r1 ) by smaller disks if r1 is
+large).
+   In view of (12.15), it will suffice to show that
+                                                   
+                      Z r+                X                X
+                           2n −                   1 dr ≫        |ζ|.
+                       r−            z∈∂E1 ∩Ω∩∂D(0,r)                  ζ ∈D(0,10r
+                                                                         /       −)
+
+
+Analogously to the proof of Proposition 12.1, it will suffice to establish the lower bound
+                                 X
+                       2n −                1 ≥ #{ζ : |ζ| ≥ r + r− }
+                                 z∈∂E1 ∩Ω∩∂D(0,r)
+
+for all r− ≤ r ≤ r+ (noting that all the critical points ζ have magnitude at most ∥p∥1 ≤ r+ ).
+   Continuing the proof of Proposition 12.1, for any r− ≤ r ≤ r+ , we can find a radius
+r ≤ r′ ≤ r + r− /2 such that δ(z) ≫C0 1 for all z ∈ ∂D(0, r′ ), and it will suffice to show
+that the polynomial z n p(z)p̃(r2 /z) − z n has at most 2n − k zeroes in D(0, r′ ), where k is the
+number of critical points ζ with |ζ| ≥ r + r− . But this follows from Rouche’s theorem by
+repeating the rest of the proof of Proposition 12.1 (with implied constants now depending
+on C0 instead of ε).                                                                            □
+  Now we handle the outer region.
+                                                     53
+Proposition 12.5 (Outer bound). We have
+                                                                                                       
+                                                                                                  ∥p∥
+                ℓ(∂E1 ∩ Ann(0, r+ , 1 + σ)) ≤ ℓ(∂E1 (p0 )) − 2nr+ + O                                       .
+                                                                                                  C0
+Proof. This is similar to Proposition 11.4, but the proof is simpler because the annulus
+Ann(0, r+ , 1 + σ) is known to be free of critical points. Indeed, all the critical points ζ obey
+|ζ| ≤ ∥p∥1 ≤ r+ /C02 , so in particular δ(z) ≍ 1 for all z ∈
+                                                           / D(0, r+ ). By the first formula (3.1)
+of Lemma 3.1, we have
+                                              Z π           X                  1
+               ℓ(∂E1 ∩ Ann(0, r+ , 1 + σ)) ≤                                 ′ (z)|
+                                                                                    dα.
+                                               −π                      iα
+                                                                          |p
+                                                              z∈Ann(0,r+ ,1+σ):p(z)=e
+
+For z in the above sum, we have from Proposition 6.2 that
+                                         zp′ (z)          ∥p∥2
+                                                              
+                        iα
+                       e = p(z) = −1 +            1+O
+                                           n              n|z|2
+and hence
+                                     n|1 + eiα |         ∥p∥2
+                                                             
+                              ′
+                          |p (z)| =               1+O             .
+                                         |z|             n|z|2
+Also, from Proposition 6.1 one has
+                                                        ∥p∥2
+                                                           
+                               ′            n−1
+                             |p (z)| = n|z|       1+O
+                                                        |z|2
+and thus
+                                                         ∥p∥2
+                                                            
+                                        iα           n
+                                  |1 + e | = |z| 1 + O           .
+                                                         |z|2
+This implies that
+                                             |z| ≍ |1 + eiα |1/n
+and in fact we have the more precise
+                                                                        ∥p∥2
+                                                                                       
+                                          iα 1/n
+                          |z| = |1 + e |                 1+O
+                                                                    n|1 + eiα |2/n
+while the condition |z| ≥ r+ implies
+                                                                              
+                                        iα 1/n                            1
+                              |1 + e |           ≥ r+ 1 − O                          .
+                                                                         nC04
+By the fundamental theorem of algebra, there are at most n choices of z associated to each
+α. We thus have
+                                                                     ∥p∥2
+                                      Z                                       
+                                                iα − n−1
+        ℓ(∂E1 ∩ Ann(0, r+ , 1 + σ)) ≤     |1 + e |    n    1+O                     dα
+                                       Ir                        n|1 + eiα |2/n
+where                                                       
+                                         1                  ∥p∥
+                         r := r+ 1 − O          = r0 − O
+                                       nC04                 nC02
+and Ir was defined in Lemma 3.2. From that lemma we have
+                                                                     
+                                                                 ∥p∥
+                    Z
+                              iα − n−1
+                        |1 + e | n dα = ℓ(∂E1 (p0 )) − 2nr + O
+                     Ir                                           C02
+                                                         54
+and so to obtain an acceptable error term, it will suffice to show that
+                              Z
+                                             n+1          n
+                                  |1 + eiα |− n dα ≪           .
+                               Ir                       C0 ∥p∥
+By symmetry it suffices to show that
+                            Z
+                                              n+1                   1
+                                   |1 + eiα |− n dα ≪                    .
+                                   Ir ∩[0,π]                      C0 ∥p∥
+Making the change of variables 2 sin(α/2) = un as in the proof of Lemma 3.2, the left-hand
+side becomes
+                                   Z 21/n
+                                               ndu
+                                             p         ;
+                                    r
+                                           2
+                                          u 1 − u2n /4
+this integrates to O(n/r) = O(n/C02 ∥p∥), giving the claim.                                                       □
+  If (12.13) holds, then from Propositions 12.3, 12.4, 12.5 and (12.11) (and discarding some
+terms with a favorable sign) we have
+                                                                   
+                                                                ∥p∥
+                         ℓ(∂E1 (p)) ≤ ℓ(∂E1 (p0 )) − c∥p∥ + O
+                                                                C0
+giving the claim (12.10). If instead (12.13) fails, we instead have
+                                                                                                             
+                                                                              X                         ∥p∥
+     ℓ(∂E1 (p)) ≤ ℓ(∂E1 (p0 )) − c Dispℓ1 {ζ : ζ ∈ D(0, 10r− )} − c                       |ζ| + O
+                                                                                                        C0
+                                                                           ζ ∈D(0,10r
+                                                                             /       −)
+
+
+and hence by Lemma 2.1
+                                                                                
+                                                                           ∥p∥
+                            ℓ(∂E1 (p)) ≤ ℓ(∂E1 (p0 )) − c∥p∥1 + O
+                                                                           C0
+after adjusting c as necessary. The claim (12.10) now follows from the failure of (12.13).
+Thus (12.10) is proven in all cases, giving Theorem 1.1(iv).
+
+                                               References
+ 1. T. F. Bloom, Erdős Problems, https://www.erdosproblems.com.
+ 2. J. Bochnak, M. Coste, M.-F. Roy, Real Algebraic Geometry, Springer 1998.
+ 3. P. Borwein, The arc length of the lemniscate {|p(z)| = 1}, Proc. Amer. Math. Soc. 123 (1995), 797–799.
+ 4. V. I. Danchenko, The lengths of lemniscates. Variations of rational functions, Mat. Sb. 198 (2007),
+    51–58.
+ 5. E. P. Dolženko, Some estimates concerning algebraic hypersurfaces and derivatives of rational functions,
+    Dokl. Akad. Nauk SSSR 139 (1961), 1287–1290.
+ 6. P. Erdős, F. Herzog, G. Piranian, Metric properties of polynomials, J. Analyse Math. 7 (1958), 125–148.
+ 7. P. Erdős, Some unsolved problems, Magyar Tud. Akad. Mat. Kutató Int. Közl. 6 (1961), 221–254.
+ 8. P. Erdős, Some of my favourite problems which recently have been solved, in: Combinatorial Mathematics
+    (Proc. Third Hungarian Colloq., Keszthely, 1976), Vol. I, North-Holland, Amsterdam-New York, 1982,
+    pp. 59–79.
+ 9. P. Erdős, Some of my favourite unsolved problems, in: A tribute to Paul Erdős (1990), 467–478.
+10. P. Erdős, Some unsolved problems, in: Combinatorics, geometry and probability (Cambridge, 1993)
+    (1997), 1–10.
+11. A. Eremenko, W. Hayman, On the length of lemniscates, Michigan Math. J. 46 (1999), 409–415
+                                                     55
+12. A. Fryntov, F. Nazarov, New estimates for the length of the Erdos-Herzog-Piranian lemniscate, Alexan-
+    drov, Alexei (ed.) et al., Linear and complex analysis. Dedicated to V. P. Havin on the occasion of his
+    75th birthday. Providence, RI: American Mathematical Society (AMS) (ISBN 978-0-8218-4801-2/hbk).
+    Translations. Series 2. American Mathematical Society 226; Advances in the Mathematical Sciences 63,
+    49–60 (2009).
+13. G. E. Hardy, J. E. Littlewood, G. Pólya. Inequalities. First / second edition, Cambridge University
+    Press, London and New York, 1934 / 1952.
+14. O. N. Kosukhin, On estimates of lengths of lemniscates, Translation of Mat. Zametki 92 (2012), no. 6,
+    872–883 Math. Notes 92 (2012), no. 5-6, 779–789.
+15. S. Mayboroda, The effect of disorder and irregularities on solutions to boundary value problems and
+    spectra of differential operators, Sirakov, Boyan (ed.) et al., Proceedings of the International Congress of
+    Mathematicians 2018, ICM 2018, Rio de Janeiro, Brazil, August 1–9, 2018. Volume III. Invited lectures.
+    Hackensack, NJ: World Scientific; Rio de Janeiro: Sociedade Brasileira de Matemática (SBM). 1691-1712
+    (2018).
+16. G. Pólya, Beitrag zur Verallgemeinerung des Verzerrungssatzes auf mehrfach zusammenhängedende Ge-
+    biete, S-B. Akad. Wiss, Berlin (1928), 228–232 & 280–282. Also in volume 1 of Pólya’s Collected Papers,
+    MIT press, (1974).
+17. Ch. Pommerenke, On some problems by Erdős, Herzog and Piranian, Michigan Math. J. 6 (1959), 221–
+    225.
+18. Ch. Pommerenke, On metric properties of complex polynomials, Michigan Math. J. 8 (1961), 97–115.
+19. T. Tao, Sendov’s conjecture for sufficiently-high-degree polynomials, Acta Math. 229 (2022), 347–392.
+
+  Department of Mathematics, UCLA, 405 Hilgard Ave, Los Angeles CA 90024
+  Email address: tao@math.ucla.edu
+
+
+
+
+                                                      56
+

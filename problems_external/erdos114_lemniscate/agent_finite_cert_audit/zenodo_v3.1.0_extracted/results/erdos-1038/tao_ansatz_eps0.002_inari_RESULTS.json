@@ -1,0 +1,45 @@
+{
+  "experiment_id": "EXP-KM-TAO-ANSATZ-001",
+  "problem": "Erdos Problem #1038",
+  "description": "IEEE 1788 interval-arithmetic certification of Tao ansatz",
+  "reference": "Tao (Jan 5, 2026), erdosproblems.com/forum/thread/1038",
+  "method": "Cutting-plane LP + inari IEEE 1788 interval verification",
+  "epsilon": 0.002,
+  "ansatz_parameters": {
+    "x_l": -1.8081074,
+    "x_l_plus_eps": -1.8061074,
+    "x_r": 0.02632305,
+    "a": 0.804462,
+    "one_minus_eps": 0.998,
+    "a_eps": 0.824522
+  },
+  "measure_structure": {
+    "w_xl_eps": 0.33124329450676804,
+    "w_xr": 0.5849658425055241,
+    "continuous_mass": 0.08379086298770692,
+    "total_mass": 0.9999999999999988,
+    "n_active_atoms": 679,
+    "n_support_total": 3002
+  },
+  "lp_certification": {
+    "gamma_optimal": 0.0002803014161922939,
+    "gamma_positive": true
+  },
+  "interval_verification": {
+    "method": "inari IEEE 1788 interval arithmetic",
+    "num_eval_points": 10001,
+    "min_u_lower_bound": 0.0002801233200465242,
+    "min_u_upper_bound": 0.00028012332006141505,
+    "min_location": 0.8782000000000001,
+    "all_nonneg": true,
+    "ieee1788_compliant": true
+  },
+  "verdict": "CERTIFIED",
+  "runtime_seconds": 234.7,
+  "timestamp": "2026-04-01T14:35:50Z",
+  "software": {
+    "inari_version": "2.0",
+    "rust_version": "stable",
+    "lp_solver": "minilp 0.2"
+  }
+}

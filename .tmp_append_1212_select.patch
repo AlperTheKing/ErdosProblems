@@ -1,0 +1,9 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38453,0 +38454,5 @@
++[2026-07-23T17:21:47+03:00] FAIL GATE | DID: audited #307 current work | RESULT: Lean barrier: >=59 primes and min member >2.09e56 | D: #307 DEAD
++[2026-07-23T17:21:48+03:00] OK SELECT | DID: selected #1212 periodic path | RESULT: one finite E/N period would give an infinite exact certificate | D: #1212 selected
++[2026-07-23T17:21:49+03:00] OK GATE | DID: checked live page, thread, web, formal entry | RESULT: open; 0 comments and 0 proof claims; no resolution found | D: gate passed
++[2026-07-23T17:21:50+03:00] OK PLAN | DID: wrote #1212 direct-route registry | RESULT: period certificate, bridge, M<=120 test, and exit fixed | D: PLAN->ATTACK
++[2026-07-23T17:21:51+03:00] > ATTACK | NEXT: exact-DP all periodic monotone certificates for M<=120; independently replay any hit.

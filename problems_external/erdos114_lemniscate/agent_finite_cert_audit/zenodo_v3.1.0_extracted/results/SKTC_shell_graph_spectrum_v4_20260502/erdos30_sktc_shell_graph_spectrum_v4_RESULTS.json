@@ -1,0 +1,7374 @@
+{
+  "claim_ceiling": "finite shell-geometry and eigenvalue-spacing screening only; not asymptotic theorem evidence",
+  "disconnected_shell_count": 34,
+  "nontrivial_shell_count_node_ge_3": 35,
+  "probe": "erdos30_sktc_shell_graph_spectrum_v4",
+  "shell_count": 52,
+  "shell_spectra": [
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 2,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 1,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 0,
+      "shell_diameter": 1,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 2,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 1,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 1,
+      "shell_diameter": 2,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 2,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 1,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 2,
+      "shell_diameter": 3,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 2,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 1,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 3,
+      "shell_diameter": 4,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 2,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 1,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 4,
+      "shell_diameter": 5,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 2,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 1,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 5,
+      "shell_diameter": 6,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 3,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 3,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 0,
+      "shell_diameter": 3,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 3,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 3,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 1,
+      "shell_diameter": 4,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 1,
+        "max": 2.0,
+        "mean": 2.0,
+        "min": 2.0
+      },
+      "algebraic_connectivity_lambda_1": 2.0,
+      "average_degree": 1.0,
+      "component_count": 1,
+      "component_sizes": [
+        2
+      ],
+      "edge_count": 1,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 0,
+      "k": 3,
+      "laplacian_eigenvalues": [
+        0.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 2,
+      "optimal_diameter": 3,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 2,
+      "shell_diameter": 5,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 1,
+        "max": 2.0,
+        "mean": 2.0,
+        "min": 2.0
+      },
+      "algebraic_connectivity_lambda_1": 2.0,
+      "average_degree": 1.0,
+      "component_count": 1,
+      "component_sizes": [
+        2
+      ],
+      "edge_count": 1,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 0,
+      "k": 3,
+      "laplacian_eigenvalues": [
+        0.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 2,
+      "optimal_diameter": 3,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 3,
+      "shell_diameter": 6,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.4142135623730951,
+        -8.109357550611348e-17,
+        1.4142135623730954
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.9999999999999999,
+        "count": 2,
+        "max": 1.4142135623730954,
+        "mean": 1.4142135623730954,
+        "min": 1.4142135623730951
+      },
+      "algebraic_connectivity_lambda_1": 0.9999999999999997,
+      "average_degree": 1.3333333333333333,
+      "component_count": 1,
+      "component_sizes": [
+        3
+      ],
+      "edge_count": 2,
+      "first_positive_laplacian_eigenvalue": 0.9999999999999997,
+      "isolated_node_count": 0,
+      "k": 3,
+      "laplacian_eigenvalues": [
+        3.960290235698816e-17,
+        0.9999999999999997,
+        3.0
+      ],
+      "max_degree": 2,
+      "node_count": 3,
+      "optimal_diameter": 3,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 1,
+        "max": 2.0000000000000004,
+        "mean": 2.0000000000000004,
+        "min": 2.0000000000000004
+      },
+      "shell_delta": 4,
+      "shell_diameter": 7,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.4142135623730951,
+        -8.109357550611348e-17,
+        1.4142135623730954
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.9999999999999999,
+        "count": 2,
+        "max": 1.4142135623730954,
+        "mean": 1.4142135623730954,
+        "min": 1.4142135623730951
+      },
+      "algebraic_connectivity_lambda_1": 0.9999999999999997,
+      "average_degree": 1.3333333333333333,
+      "component_count": 1,
+      "component_sizes": [
+        3
+      ],
+      "edge_count": 2,
+      "first_positive_laplacian_eigenvalue": 0.9999999999999997,
+      "isolated_node_count": 0,
+      "k": 3,
+      "laplacian_eigenvalues": [
+        3.960290235698816e-17,
+        0.9999999999999997,
+        3.0
+      ],
+      "max_degree": 2,
+      "node_count": 3,
+      "optimal_diameter": 3,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 1,
+        "max": 2.0000000000000004,
+        "mean": 2.0000000000000004,
+        "min": 2.0000000000000004
+      },
+      "shell_delta": 5,
+      "shell_diameter": 8,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 4,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 6,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 0,
+      "shell_diameter": 6,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 1.0,
+        "count": 2,
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.6666666666666666,
+      "component_count": 2,
+      "component_sizes": [
+        2,
+        1
+      ],
+      "edge_count": 1,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 1,
+      "k": 4,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 3,
+      "optimal_diameter": 6,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 1,
+      "shell_diameter": 7,
+      "zero_mode_count": 2
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        -1.0,
+        1.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 3,
+        "max": 2.0,
+        "mean": 0.6666666666666666,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 1.0,
+      "component_count": 2,
+      "component_sizes": [
+        2,
+        2
+      ],
+      "edge_count": 2,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 0,
+      "k": 4,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        2.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 4,
+      "optimal_diameter": 6,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "shell_delta": 2,
+      "shell_diameter": 8,
+      "zero_mode_count": 2
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.8019377358048385,
+        -1.4142135623730951,
+        -1.2469796037174672,
+        -0.44504186791262856,
+        0.0,
+        0.44504186791262845,
+        1.2469796037174676,
+        1.4142135623730951,
+        1.8019377358048383
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.48423355680302876,
+        "count": 8,
+        "max": 0.8019377358048392,
+        "mean": 0.4504844339512095,
+        "min": 0.1672339586556275
+      },
+      "algebraic_connectivity_lambda_1": -5.696294837289027e-17,
+      "average_degree": 1.5555555555555556,
+      "component_count": 2,
+      "component_sizes": [
+        6,
+        3
+      ],
+      "edge_count": 7,
+      "first_positive_laplacian_eigenvalue": 0.2679491924311227,
+      "isolated_node_count": 0,
+      "k": 4,
+      "laplacian_eigenvalues": [
+        -4.4203324128594195e-16,
+        -5.696294837289027e-17,
+        0.2679491924311227,
+        1.0,
+        1.0,
+        2.0,
+        3.0,
+        3.0000000000000004,
+        3.7320508075688767
+      ],
+      "max_degree": 2,
+      "node_count": 9,
+      "optimal_diameter": 6,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.20000000000000023,
+        "count": 6,
+        "max": 1.0,
+        "mean": 0.5773502691896256,
+        "min": 0.0
+      },
+      "shell_delta": 3,
+      "shell_diameter": 9,
+      "zero_mode_count": 2
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.7320508075688772,
+        -1.4142135623730951,
+        -5.831544595996734e-17,
+        0.0,
+        0.0,
+        0.0,
+        1.4142135623730951,
+        1.7320508075688772
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.11237243569579444,
+        "count": 7,
+        "max": 1.4142135623730951,
+        "mean": 0.4948716593053935,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 1.25,
+      "component_count": 3,
+      "component_sizes": [
+        4,
+        3,
+        1
+      ],
+      "edge_count": 5,
+      "first_positive_laplacian_eigenvalue": 1.0,
+      "isolated_node_count": 1,
+      "k": 4,
+      "laplacian_eigenvalues": [
+        -4.4203324128594195e-16,
+        0.0,
+        1.1102230246251565e-16,
+        1.0,
+        1.0,
+        1.0,
+        3.0,
+        4.0
+      ],
+      "max_degree": 3,
+      "node_count": 8,
+      "optimal_diameter": 6,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.25,
+        "count": 4,
+        "max": 2.0,
+        "mean": 0.75,
+        "min": 0.0
+      },
+      "shell_delta": 4,
+      "shell_diameter": 10,
+      "zero_mode_count": 3
+    },
+    {
+      "adjacency_eigenvalues": [
+        -2.3228808566711963,
+        -2.0565995767110783,
+        -1.618033988749895,
+        -1.2518445340286515,
+        -0.8549909264027652,
+        -0.6180339887498949,
+        -0.2765835952724377,
+        -4.407780287990153e-17,
+        0.2765835952724373,
+        0.6180339887498942,
+        0.8549909264027649,
+        1.2518445340286513,
+        1.618033988749895,
+        2.056599576711078,
+        2.3228808566711967
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.7639928053272568,
+        "count": 14,
+        "max": 0.4385655879611834,
+        "mean": 0.33184012238159954,
+        "min": 0.2369569376528703
+      },
+      "algebraic_connectivity_lambda_1": 0.09455511865317386,
+      "average_degree": 2.0,
+      "component_count": 1,
+      "component_sizes": [
+        15
+      ],
+      "edge_count": 15,
+      "first_positive_laplacian_eigenvalue": 0.09455511865317386,
+      "isolated_node_count": 0,
+      "k": 4,
+      "laplacian_eigenvalues": [
+        -6.185674645895843e-16,
+        0.09455511865317386,
+        0.14425779069983916,
+        0.5455874600654558,
+        0.7343212675258749,
+        0.9061407544047212,
+        1.4170765286613203,
+        1.9999999999999987,
+        2.087353126634488,
+        2.2616987656887946,
+        3.078671538111394,
+        3.525760346304754,
+        3.6861541846721373,
+        4.6274773239820295,
+        4.890945794596008
+      ],
+      "max_degree": 3,
+      "node_count": 15,
+      "optimal_diameter": 6,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.4114886529185629,
+        "count": 13,
+        "max": 0.9413231393098922,
+        "mean": 0.36895312891867954,
+        "min": 0.0497026720466653
+      },
+      "shell_delta": 5,
+      "shell_diameter": 11,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 2,
+      "component_sizes": [
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 2,
+      "k": 5,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 2,
+      "optimal_diameter": 11,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 0,
+      "shell_diameter": 11,
+      "zero_mode_count": 2
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.4142135623730951,
+        -1.0,
+        -8.109357550611348e-17,
+        0.0,
+        0.0,
+        1.0,
+        1.4142135623730954
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.20710678118654766,
+        "count": 6,
+        "max": 1.0,
+        "mean": 0.47140452079103173,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.8571428571428571,
+      "component_count": 4,
+      "component_sizes": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "edge_count": 3,
+      "first_positive_laplacian_eigenvalue": 0.9999999999999997,
+      "isolated_node_count": 2,
+      "k": 5,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        3.960290235698816e-17,
+        0.9999999999999997,
+        2.0,
+        3.0
+      ],
+      "max_degree": 2,
+      "node_count": 7,
+      "optimal_diameter": 11,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.9999999999999996,
+        "count": 2,
+        "max": 1.0000000000000004,
+        "mean": 1.0000000000000002,
+        "min": 1.0
+      },
+      "shell_delta": 1,
+      "shell_diameter": 12,
+      "zero_mode_count": 4
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 13,
+        "max": 1.0,
+        "mean": 0.15384615384615385,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.5714285714285714,
+      "component_count": 10,
+      "component_sizes": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 4,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 6,
+      "k": 5,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 14,
+      "optimal_diameter": 11,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 3,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "shell_delta": 2,
+      "shell_diameter": 13,
+      "zero_mode_count": 10
+    },
+    {
+      "adjacency_eigenvalues": [
+        -2.135779205069857,
+        -1.4142135623730951,
+        -1.4142135623730951,
+        -1.4142135623730951,
+        -0.6621534468619562,
+        -2.976576960356185e-16,
+        -8.109357550611348e-17,
+        -8.109357550611348e-17,
+        -7.810958457025175e-26,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.6621534468619564,
+        1.4142135623730954,
+        1.4142135623730954,
+        1.4142135623730954,
+        2.1357792050698565
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.22011320411930188,
+        "count": 20,
+        "max": 0.7520601155111389,
+        "mean": 0.21357792050698565,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": -1.8999170656010066e-17,
+      "average_degree": 1.0476190476190477,
+      "component_count": 11,
+      "component_sizes": [
+        5,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 11,
+      "first_positive_laplacian_eigenvalue": 0.8299135133739663,
+      "isolated_node_count": 7,
+      "k": 5,
+      "laplacian_eigenvalues": [
+        -2.3847379288942135e-16,
+        -1.8999170656010066e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.1212889859339878e-17,
+        1.1477484905756825e-17,
+        3.960290235698816e-17,
+        6.786878772882182e-17,
+        1.4063320727416233e-16,
+        0.8299135133739663,
+        0.9999999999999997,
+        1.0000000000000002,
+        1.0000000000000004,
+        1.9999999999999996,
+        2.6888921825340177,
+        3.0,
+        3.0,
+        3.0,
+        4.481194304092015
+      ],
+      "max_degree": 3,
+      "node_count": 21,
+      "optimal_diameter": 11,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.1900830242482999,
+        "count": 9,
+        "max": 1.481194304092015,
+        "mean": 0.4056978656353387,
+        "min": 0.0
+      },
+      "shell_delta": 3,
+      "shell_diameter": 14,
+      "zero_mode_count": 11
+    },
+    {
+      "adjacency_eigenvalues": [
+        -2.175327747161075,
+        -1.7320508075688776,
+        -1.4142135623730951,
+        -1.4142135623730951,
+        -1.1260325006104939,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -6.474354298098086e-16,
+        -3.9633584613270176e-16,
+        -3.3259788198053584e-16,
+        -8.34403922940148e-17,
+        -8.109357550611348e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.984062742058634e-17,
+        1.0589233255190704e-16,
+        1.761251408559115e-16,
+        4.574072998172926e-16,
+        4.878845419434681e-16,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.126032500610494,
+        1.4142135623730954,
+        1.4142135623730954,
+        1.7320508075688776,
+        2.1753277471610737
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.16490788931908443,
+        "count": 37,
+        "max": 0.9999999999999996,
+        "mean": 0.11758528363032836,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": -2.2224195812405833e-16,
+      "average_degree": 0.8947368421052632,
+      "component_count": 22,
+      "component_sizes": [
+        6,
+        4,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 17,
+      "first_positive_laplacian_eigenvalue": 0.4384471871911703,
+      "isolated_node_count": 14,
+      "k": 5,
+      "laplacian_eigenvalues": [
+        -1.209719795894163e-15,
+        -2.2224195812405833e-16,
+        -8.792666969373576e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.960290235698816e-17,
+        2.1656941121671832e-16,
+        4.509877630263907e-16,
+        5.497390804705169e-16,
+        8.699877106002173e-16,
+        0.4384471871911703,
+        0.9999999999999997,
+        1.0000000000000002,
+        1.0000000000000007,
+        1.000000000000001,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.000000000000001,
+        2.999999999999999,
+        3.0,
+        3.0000000000000018,
+        4.000000000000003,
+        4.561552812808832
+      ],
+      "max_degree": 3,
+      "node_count": 38,
+      "optimal_diameter": 11,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.08022183040126193,
+        "count": 15,
+        "max": 1.0000000000000009,
+        "mean": 0.27487370837451075,
+        "min": 0.0
+      },
+      "shell_delta": 4,
+      "shell_diameter": 15,
+      "zero_mode_count": 22
+    },
+    {
+      "adjacency_eigenvalues": [
+        -2.5876084568429474,
+        -2.2638209778523954,
+        -1.9498558243636464,
+        -1.9021130325903068,
+        -1.5636629649360605,
+        -1.4520704319197009,
+        -1.2793247289360565,
+        -1.1755705045849463,
+        -1.0000000000000009,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.9999999999999999,
+        -0.9999999999999997,
+        -0.8677674782351171,
+        -0.8095822893596081,
+        -0.7350853362533093,
+        -0.48830607017331845,
+        -5.166423196038538e-16,
+        -5.006018394288309e-16,
+        -3.340973034801377e-16,
+        -2.888507298007912e-16,
+        -2.5375735417848355e-16,
+        -9.840342142240562e-17,
+        -1.0945321660204191e-17,
+        0.0,
+        0.0,
+        6.362286549757949e-18,
+        3.8652913653375123e-17,
+        2.8281519011712357e-16,
+        5.603263622199316e-16,
+        1.0159111203833317e-15,
+        0.4883060701733184,
+        0.7350853362533095,
+        0.8095822893596075,
+        0.8677674782351151,
+        0.9999999999999988,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0000000000000004,
+        1.1755705045849467,
+        1.279324728936056,
+        1.452070431919701,
+        1.5636629649360605,
+        1.9021130325903077,
+        1.9498558243636461,
+        2.2638209778523994,
+        2.5876084568429496
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.3898851348834768,
+        "count": 49,
+        "max": 0.48830607017331795,
+        "mean": 0.10561667170787546,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": -3.399744625282337e-16,
+      "average_degree": 1.4,
+      "component_count": 18,
+      "component_sizes": [
+        9,
+        8,
+        7,
+        6,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 35,
+      "first_positive_laplacian_eigenvalue": 0.16671700823775643,
+      "isolated_node_count": 8,
+      "k": 5,
+      "laplacian_eigenvalues": [
+        -1.0362498272730473e-15,
+        -3.399744625282337e-16,
+        -2.7230605832332545e-16,
+        -1.936584048012827e-16,
+        -8.472566646225989e-17,
+        -7.069633061734947e-17,
+        -6.184745509765602e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.3869721542236577e-46,
+        2.3839193604982945e-17,
+        2.9097373247428727e-16,
+        4.811579632605446e-16,
+        1.1492676023559517e-15,
+        1.4357323173257991e-15,
+        0.16671700823775643,
+        0.324869129433354,
+        0.32883406545568,
+        0.35881352380670756,
+        0.7276009854000748,
+        0.8515983525064785,
+        0.9999999999999997,
+        0.9999999999999997,
+        1.0000000000000009,
+        1.174502969158711,
+        1.4608111271891107,
+        1.635269203831639,
+        1.999999999999999,
+        1.9999999999999991,
+        1.9999999999999993,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.104180278738779,
+        2.276257877379077,
+        2.6451929409216337,
+        2.672910261867917,
+        3.000000000000001,
+        3.425506776589779,
+        3.5642929976049706,
+        3.5892157430780047,
+        3.7900325679470943,
+        4.2143197433775335,
+        4.233209543057641,
+        4.7757128557362165,
+        5.680152048681837
+      ],
+      "max_degree": 4,
+      "node_count": 50,
+      "optimal_diameter": 11,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.2870952044034785,
+        "count": 31,
+        "max": 0.9044391929456204,
+        "mean": 0.17785274324013162,
+        "min": 0.0
+      },
+      "shell_delta": 5,
+      "shell_diameter": 16,
+      "zero_mode_count": 18
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 3,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 4,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 4,
+      "k": 6,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 4,
+      "optimal_diameter": 17,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 0,
+      "shell_diameter": 17,
+      "zero_mode_count": 4
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 3,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 4,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 4,
+      "k": 6,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 4,
+      "optimal_diameter": 17,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 1,
+      "shell_diameter": 18,
+      "zero_mode_count": 4
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        -1.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 19,
+        "max": 1.0,
+        "mean": 0.10526315789473684,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.3,
+      "component_count": 17,
+      "component_sizes": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 3,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 14,
+      "k": 6,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 20,
+      "optimal_diameter": 17,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 2,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "shell_delta": 2,
+      "shell_diameter": 19,
+      "zero_mode_count": 17
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.4142135623730951,
+        -1.4142135623730951,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -8.109357550611348e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.4142135623730951,
+        1.4142135623730954
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 7.714458402098746e-17,
+        "count": 34,
+        "max": 1.0,
+        "mean": 0.08318903308077029,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.45714285714285713,
+      "component_count": 27,
+      "component_sizes": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 8,
+      "first_positive_laplacian_eigenvalue": 0.9999999999999997,
+      "isolated_node_count": 21,
+      "k": 6,
+      "laplacian_eigenvalues": [
+        -4.4203324128594195e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.960290235698816e-17,
+        0.9999999999999997,
+        1.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        3.0,
+        3.0
+      ],
+      "max_degree": 2,
+      "node_count": 35,
+      "optimal_diameter": 17,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 8.326672684688674e-17,
+        "count": 7,
+        "max": 1.0,
+        "mean": 0.28571428571428575,
+        "min": 0.0
+      },
+      "shell_delta": 3,
+      "shell_diameter": 20,
+      "zero_mode_count": 27
+    },
+    {
+      "adjacency_eigenvalues": [
+        -2.23606797749979,
+        -1.4142135623730954,
+        -1.4142135623730951,
+        -1.414213562373095,
+        -1.414213562373095,
+        -1.0000000000000007,
+        -1.0000000000000004,
+        -1.0000000000000002,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.9999999999999999,
+        -6.974185226007402e-16,
+        -5.810788998178962e-16,
+        -5.429388855278027e-16,
+        -4.514381588499878e-16,
+        -3.31153346968053e-16,
+        -2.8069625009736816e-16,
+        -2.660762267648811e-16,
+        -2.0670785184164652e-16,
+        -1.722583009123901e-16,
+        -1.4763494098522662e-16,
+        -1.438599790970067e-16,
+        -9.9026098457735e-17,
+        -8.339152084202675e-17,
+        -8.109357550611348e-17,
+        -1.5291492007928095e-17,
+        -1.4049765844631394e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.5608119253074284e-17,
+        7.639578226042587e-17,
+        1.2771266198891676e-16,
+        2.1687966255545263e-16,
+        2.1876689941297186e-16,
+        2.34849191658628e-16,
+        2.927044565003814e-16,
+        4.013664738586777e-16,
+        4.616538834117438e-16,
+        4.770187536567927e-16,
+        5.219702654327664e-16,
+        0.9999999999999997,
+        0.9999999999999997,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000004,
+        1.414213562373095,
+        1.414213562373095,
+        1.4142135623730951,
+        1.4142135623730954,
+        2.2360679774997902
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 1.8847898452690477e-16,
+        "count": 85,
+        "max": 0.9999999999999992,
+        "mean": 0.05261336417646563,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": -1.2431571082125506e-15,
+      "average_degree": 0.5813953488372093,
+      "component_count": 62,
+      "component_sizes": [
+        6,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 25,
+      "first_positive_laplacian_eigenvalue": 0.5857864376269047,
+      "isolated_node_count": 46,
+      "k": 6,
+      "laplacian_eigenvalues": [
+        -2.011735279777024e-15,
+        -1.2431571082125506e-15,
+        -1.035086422557198e-15,
+        -6.930875307591247e-16,
+        -6.842890312395687e-16,
+        -5.96503492691602e-16,
+        -5.533624078052855e-16,
+        -5.233345132230274e-16,
+        -4.87084923442001e-16,
+        -4.213730850205306e-16,
+        -3.997207193699949e-16,
+        -2.2188270096377005e-16,
+        -1.777515249086558e-16,
+        -1.2143081903011843e-16,
+        -3.5221475196465194e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        7.006121963828108e-18,
+        2.43414727334431e-17,
+        3.960290235698816e-17,
+        1.6620928945354382e-16,
+        1.8278087563852174e-16,
+        2.1708323848816462e-16,
+        2.4449340279493146e-16,
+        4.737545912349803e-16,
+        5.656187592343549e-16,
+        6.645829783323506e-16,
+        7.87079194020793e-16,
+        8.971040107434923e-16,
+        9.50636696200912e-16,
+        1.3323149309810072e-15,
+        1.4682005013932784e-15,
+        0.5857864376269047,
+        0.9999999999999997,
+        0.9999999999999999,
+        1.0000000000000007,
+        1.0000000000000009,
+        1.2679491924311224,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0000000000000013,
+        2.999999999999999,
+        3.0,
+        3.000000000000001,
+        3.0000000000000018,
+        3.4142135623730945,
+        4.732050807568876
+      ],
+      "max_degree": 3,
+      "node_count": 86,
+      "optimal_diameter": 17,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.0850423179566133,
+        "count": 23,
+        "max": 1.3178372451957814,
+        "mean": 0.18027236391052046,
+        "min": 0.0
+      },
+      "shell_delta": 4,
+      "shell_diameter": 21,
+      "zero_mode_count": 62
+    },
+    {
+      "adjacency_eigenvalues": [
+        -2.135779205069857,
+        -2.0,
+        -1.9021130325903068,
+        -1.618033988749895,
+        -1.4142135623730951,
+        -1.4142135623730951,
+        -1.4142135623730951,
+        -1.414213562373095,
+        -1.1755705045849463,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.6621534468619562,
+        -0.6180339887498949,
+        -3.340973034801377e-16,
+        -2.220446049250313e-16,
+        -9.411466366030463e-17,
+        -8.109357550611348e-17,
+        -8.109357550611348e-17,
+        -1.3419896218693658e-18,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.530739251261798e-18,
+        1.3125105811563237e-16,
+        4.437368777088206e-16,
+        4.45431199471932e-16,
+        0.6180339887498948,
+        0.6621534468619564,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.1755705045849467,
+        1.414213562373095,
+        1.4142135623730951,
+        1.4142135623730954,
+        1.4142135623730954,
+        1.6180339887498951,
+        1.9021130325903077,
+        1.9999999999999996,
+        2.1357792050698565
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.24733293713298288,
+        "count": 100,
+        "max": 0.6180339887498946,
+        "mean": 0.04271558410139713,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": -4.965068306494546e-16,
+      "average_degree": 0.693069306930693,
+      "component_count": 68,
+      "component_sizes": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 35,
+      "first_positive_laplacian_eigenvalue": 0.3248691294333535,
+      "isolated_node_count": 50,
+      "k": 6,
+      "laplacian_eigenvalues": [
+        -1.0911822635190806e-15,
+        -4.965068306494546e-16,
+        -4.4203324128594195e-16,
+        -4.2232089472179614e-16,
+        -3.9627158255435606e-16,
+        -2.3847379288942135e-16,
+        -1.1102230246251565e-16,
+        -7.28227737279435e-17,
+        -9.002020554753823e-32,
+        -7.895271542230773e-32,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.960290235698816e-17,
+        3.960290235698816e-17,
+        6.633732362702724e-17,
+        1.5420697697135573e-16,
+        3.1418617376556613e-16,
+        4.965068306494546e-16,
+        5.178924603901435e-16,
+        0.3248691294333535,
+        0.5857864376269043,
+        0.8299135133739663,
+        0.9999999999999997,
+        0.9999999999999997,
+        1.0,
+        1.0000000000000002,
+        1.0000000000000007,
+        1.4608111271891109,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.6888921825340177,
+        2.9999999999999987,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.414213562373096,
+        3.9999999999999996,
+        4.214319743377537,
+        4.481194304092015
+      ],
+      "max_degree": 3,
+      "node_count": 101,
+      "optimal_diameter": 17,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.3703578619692151,
+        "count": 32,
+        "max": 0.6888921825340177,
+        "mean": 0.12988516170808317,
+        "min": 0.0
+      },
+      "shell_delta": 5,
+      "shell_diameter": 22,
+      "zero_mode_count": 68
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 4,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 5,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 5,
+      "k": 7,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 5,
+      "optimal_diameter": 25,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 0,
+      "shell_diameter": 25,
+      "zero_mode_count": 5
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 6,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 7,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 7,
+      "k": 7,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 7,
+      "optimal_diameter": 25,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 1,
+      "shell_diameter": 26,
+      "zero_mode_count": 7
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 19,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 20,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 20,
+      "k": 7,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 20,
+      "optimal_diameter": 25,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 2,
+      "shell_diameter": 27,
+      "zero_mode_count": 20
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        -1.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 59,
+        "max": 1.0,
+        "mean": 0.03389830508474576,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.1,
+      "component_count": 57,
+      "component_sizes": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 3,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 54,
+      "k": 7,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 60,
+      "optimal_diameter": 25,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 2,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "shell_delta": 3,
+      "shell_diameter": 28,
+      "zero_mode_count": 57
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.4142135623730951,
+        -1.4142135623730951,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -8.109357550611348e-17,
+        -8.109357550611348e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.4142135623730954,
+        1.4142135623730954
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 146,
+        "max": 1.0,
+        "mean": 0.019372788525658838,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.272108843537415,
+      "component_count": 127,
+      "component_sizes": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 20,
+      "first_positive_laplacian_eigenvalue": 0.9999999999999997,
+      "isolated_node_count": 109,
+      "k": 7,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.960290235698816e-17,
+        3.960290235698816e-17,
+        0.9999999999999997,
+        0.9999999999999997,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        3.0,
+        3.0
+      ],
+      "max_degree": 2,
+      "node_count": 147,
+      "optimal_diameter": 25,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 19,
+        "max": 1.0000000000000004,
+        "mean": 0.10526315789473686,
+        "min": 0.0
+      },
+      "shell_delta": 4,
+      "shell_diameter": 29,
+      "zero_mode_count": 127
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 189,
+        "max": 1.0,
+        "mean": 0.010582010582010581,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.16842105263157894,
+      "component_count": 174,
+      "component_sizes": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 16,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 158,
+      "k": 7,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 190,
+      "optimal_diameter": 25,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 15,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "shell_delta": 5,
+      "shell_diameter": 30,
+      "zero_mode_count": 174
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 8,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 34,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 0,
+      "shell_diameter": 34,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 8,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 9,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 9,
+      "k": 8,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 9,
+      "optimal_diameter": 34,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 1,
+      "shell_diameter": 35,
+      "zero_mode_count": 9
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 13,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 14,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 14,
+      "k": 8,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 14,
+      "optimal_diameter": 34,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 2,
+      "shell_diameter": 36,
+      "zero_mode_count": 14
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 47,
+        "max": 1.0,
+        "mean": 0.0425531914893617,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.041666666666666664,
+      "component_count": 47,
+      "component_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 1,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 46,
+      "k": 8,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 48,
+      "optimal_diameter": 34,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 3,
+      "shell_diameter": 37,
+      "zero_mode_count": 47
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        -1.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 90,
+        "max": 1.0,
+        "mean": 0.022222222222222223,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.06593406593406594,
+      "component_count": 88,
+      "component_sizes": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 3,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 85,
+      "k": 8,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 91,
+      "optimal_diameter": 34,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 2,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "shell_delta": 4,
+      "shell_diameter": 38,
+      "zero_mode_count": 88
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 191,
+        "max": 1.0,
+        "mean": 0.010471204188481676,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.052083333333333336,
+      "component_count": 187,
+      "component_sizes": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 5,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 182,
+      "k": 8,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 192,
+      "optimal_diameter": 34,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 4,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "shell_delta": 5,
+      "shell_diameter": 39,
+      "zero_mode_count": 187
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 9,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 44,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 0,
+      "shell_diameter": 44,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 3,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 4,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 4,
+      "k": 9,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 4,
+      "optimal_diameter": 44,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 1,
+      "shell_diameter": 45,
+      "zero_mode_count": 4
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 3,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 4,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 4,
+      "k": 9,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 4,
+      "optimal_diameter": 44,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 2,
+      "shell_diameter": 46,
+      "zero_mode_count": 4
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 20,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 21,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 21,
+      "k": 9,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 21,
+      "optimal_diameter": 44,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 3,
+      "shell_diameter": 47,
+      "zero_mode_count": 21
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 39,
+        "max": 1.0,
+        "mean": 0.05128205128205128,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.05,
+      "component_count": 39,
+      "component_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 1,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 38,
+      "k": 9,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 40,
+      "optimal_diameter": 44,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 4,
+      "shell_diameter": 48,
+      "zero_mode_count": 39
+    },
+    {
+      "adjacency_eigenvalues": [
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": 0.0,
+        "count": 95,
+        "max": 1.0,
+        "mean": 0.021052631578947368,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.020833333333333332,
+      "component_count": 95,
+      "component_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 1,
+      "first_positive_laplacian_eigenvalue": 2.0,
+      "isolated_node_count": 94,
+      "k": 9,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "max_degree": 1,
+      "node_count": 96,
+      "optimal_diameter": 44,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 5,
+      "shell_diameter": 49,
+      "zero_mode_count": 95
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 10,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 55,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 0,
+      "shell_diameter": 55,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "algebraic_connectivity_lambda_1": null,
+      "average_degree": 0.0,
+      "component_count": 1,
+      "component_sizes": [
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 1,
+      "k": 10,
+      "laplacian_eigenvalues": [
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 1,
+      "optimal_diameter": 55,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 3,
+      "shell_diameter": 58,
+      "zero_mode_count": 1
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 2,
+      "component_sizes": [
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 2,
+      "k": 10,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 2,
+      "optimal_diameter": 55,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 4,
+      "shell_diameter": 59,
+      "zero_mode_count": 2
+    },
+    {
+      "adjacency_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "adjacency_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 13,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "algebraic_connectivity_lambda_1": 0.0,
+      "average_degree": 0.0,
+      "component_count": 14,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_count": 0,
+      "first_positive_laplacian_eigenvalue": null,
+      "isolated_node_count": 14,
+      "k": 10,
+      "laplacian_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_degree": 0,
+      "node_count": 14,
+      "optimal_diameter": 55,
+      "positive_laplacian_spacing": {
+        "adjacent_gap_ratio_mean": null,
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null
+      },
+      "shell_delta": 5,
+      "shell_diameter": 60,
+      "zero_mode_count": 14
+    }
+  ],
+  "trends_by_k": {
+    "10": {
+      "adjacent_gap_ratio_mean": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            3,
+            null
+          ],
+          [
+            4,
+            null
+          ],
+          [
+            5,
+            null
+          ]
+        ],
+        "slope_per_delta": null
+      },
+      "average_degree": {
+        "points": [
+          [
+            0,
+            0.0
+          ],
+          [
+            3,
+            0.0
+          ],
+          [
+            4,
+            0.0
+          ],
+          [
+            5,
+            0.0
+          ]
+        ],
+        "slope_per_delta": 0.0
+      },
+      "component_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            3,
+            1.0
+          ],
+          [
+            4,
+            2.0
+          ],
+          [
+            5,
+            14.0
+          ]
+        ],
+        "slope_per_delta": 1.9285714285714286
+      },
+      "first_positive_laplacian_eigenvalue": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            3,
+            null
+          ],
+          [
+            4,
+            null
+          ],
+          [
+            5,
+            null
+          ]
+        ],
+        "slope_per_delta": null
+      },
+      "isolated_node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            3,
+            1.0
+          ],
+          [
+            4,
+            2.0
+          ],
+          [
+            5,
+            14.0
+          ]
+        ],
+        "slope_per_delta": 1.9285714285714286
+      },
+      "node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            3,
+            1.0
+          ],
+          [
+            4,
+            2.0
+          ],
+          [
+            5,
+            14.0
+          ]
+        ],
+        "slope_per_delta": 1.9285714285714286
+      }
+    },
+    "2": {
+      "adjacent_gap_ratio_mean": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            null
+          ],
+          [
+            4,
+            null
+          ],
+          [
+            5,
+            null
+          ]
+        ],
+        "slope_per_delta": null
+      },
+      "average_degree": {
+        "points": [
+          [
+            0,
+            0.0
+          ],
+          [
+            1,
+            0.0
+          ],
+          [
+            2,
+            0.0
+          ],
+          [
+            3,
+            0.0
+          ],
+          [
+            4,
+            0.0
+          ],
+          [
+            5,
+            0.0
+          ]
+        ],
+        "slope_per_delta": 0.0
+      },
+      "component_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            1.0
+          ],
+          [
+            2,
+            1.0
+          ],
+          [
+            3,
+            1.0
+          ],
+          [
+            4,
+            1.0
+          ],
+          [
+            5,
+            1.0
+          ]
+        ],
+        "slope_per_delta": 0.0
+      },
+      "first_positive_laplacian_eigenvalue": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            null
+          ],
+          [
+            4,
+            null
+          ],
+          [
+            5,
+            null
+          ]
+        ],
+        "slope_per_delta": null
+      },
+      "isolated_node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            1.0
+          ],
+          [
+            2,
+            1.0
+          ],
+          [
+            3,
+            1.0
+          ],
+          [
+            4,
+            1.0
+          ],
+          [
+            5,
+            1.0
+          ]
+        ],
+        "slope_per_delta": 0.0
+      },
+      "node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            1.0
+          ],
+          [
+            2,
+            1.0
+          ],
+          [
+            3,
+            1.0
+          ],
+          [
+            4,
+            1.0
+          ],
+          [
+            5,
+            1.0
+          ]
+        ],
+        "slope_per_delta": 0.0
+      }
+    },
+    "3": {
+      "adjacent_gap_ratio_mean": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            null
+          ],
+          [
+            4,
+            null
+          ],
+          [
+            5,
+            null
+          ]
+        ],
+        "slope_per_delta": null
+      },
+      "average_degree": {
+        "points": [
+          [
+            0,
+            0.0
+          ],
+          [
+            1,
+            0.0
+          ],
+          [
+            2,
+            1.0
+          ],
+          [
+            3,
+            1.0
+          ],
+          [
+            4,
+            1.3333333333333333
+          ],
+          [
+            5,
+            1.3333333333333333
+          ]
+        ],
+        "slope_per_delta": 0.30476190476190473
+      },
+      "component_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            1.0
+          ],
+          [
+            2,
+            1.0
+          ],
+          [
+            3,
+            1.0
+          ],
+          [
+            4,
+            1.0
+          ],
+          [
+            5,
+            1.0
+          ]
+        ],
+        "slope_per_delta": 0.0
+      },
+      "first_positive_laplacian_eigenvalue": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            2.0
+          ],
+          [
+            3,
+            2.0
+          ],
+          [
+            4,
+            0.9999999999999997
+          ],
+          [
+            5,
+            0.9999999999999997
+          ]
+        ],
+        "slope_per_delta": -0.4000000000000002
+      },
+      "isolated_node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            1.0
+          ],
+          [
+            2,
+            0.0
+          ],
+          [
+            3,
+            0.0
+          ],
+          [
+            4,
+            0.0
+          ],
+          [
+            5,
+            0.0
+          ]
+        ],
+        "slope_per_delta": -0.22857142857142856
+      },
+      "node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            1.0
+          ],
+          [
+            2,
+            2.0
+          ],
+          [
+            3,
+            2.0
+          ],
+          [
+            4,
+            3.0
+          ],
+          [
+            5,
+            3.0
+          ]
+        ],
+        "slope_per_delta": 0.45714285714285713
+      }
+    },
+    "4": {
+      "adjacent_gap_ratio_mean": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            0.20000000000000023
+          ],
+          [
+            4,
+            0.25
+          ],
+          [
+            5,
+            0.4114886529185629
+          ]
+        ],
+        "slope_per_delta": 0.10574432645928133
+      },
+      "average_degree": {
+        "points": [
+          [
+            0,
+            0.0
+          ],
+          [
+            1,
+            0.6666666666666666
+          ],
+          [
+            2,
+            1.0
+          ],
+          [
+            3,
+            1.5555555555555556
+          ],
+          [
+            4,
+            1.25
+          ],
+          [
+            5,
+            2.0
+          ]
+        ],
+        "slope_per_delta": 0.35158730158730156
+      },
+      "component_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            2.0
+          ],
+          [
+            2,
+            2.0
+          ],
+          [
+            3,
+            2.0
+          ],
+          [
+            4,
+            3.0
+          ],
+          [
+            5,
+            1.0
+          ]
+        ],
+        "slope_per_delta": 0.08571428571428572
+      },
+      "first_positive_laplacian_eigenvalue": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            2.0
+          ],
+          [
+            2,
+            2.0
+          ],
+          [
+            3,
+            0.2679491924311227
+          ],
+          [
+            4,
+            1.0
+          ],
+          [
+            5,
+            0.09455511865317386
+          ]
+        ],
+        "slope_per_delta": -0.48108897626936525
+      },
+      "isolated_node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            1.0
+          ],
+          [
+            2,
+            0.0
+          ],
+          [
+            3,
+            0.0
+          ],
+          [
+            4,
+            1.0
+          ],
+          [
+            5,
+            0.0
+          ]
+        ],
+        "slope_per_delta": -0.14285714285714285
+      },
+      "node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            3.0
+          ],
+          [
+            2,
+            4.0
+          ],
+          [
+            3,
+            9.0
+          ],
+          [
+            4,
+            8.0
+          ],
+          [
+            5,
+            15.0
+          ]
+        ],
+        "slope_per_delta": 2.5714285714285716
+      }
+    },
+    "5": {
+      "adjacent_gap_ratio_mean": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            0.9999999999999996
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            0.1900830242482999
+          ],
+          [
+            4,
+            0.08022183040126193
+          ],
+          [
+            5,
+            0.2870952044034785
+          ]
+        ],
+        "slope_per_delta": -0.198278602920576
+      },
+      "average_degree": {
+        "points": [
+          [
+            0,
+            0.0
+          ],
+          [
+            1,
+            0.8571428571428571
+          ],
+          [
+            2,
+            0.5714285714285714
+          ],
+          [
+            3,
+            1.0476190476190477
+          ],
+          [
+            4,
+            0.8947368421052632
+          ],
+          [
+            5,
+            1.4
+          ]
+        ],
+        "slope_per_delta": 0.216827783745077
+      },
+      "component_count": {
+        "points": [
+          [
+            0,
+            2.0
+          ],
+          [
+            1,
+            4.0
+          ],
+          [
+            2,
+            10.0
+          ],
+          [
+            3,
+            11.0
+          ],
+          [
+            4,
+            22.0
+          ],
+          [
+            5,
+            18.0
+          ]
+        ],
+        "slope_per_delta": 3.857142857142857
+      },
+      "first_positive_laplacian_eigenvalue": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            0.9999999999999997
+          ],
+          [
+            2,
+            2.0
+          ],
+          [
+            3,
+            0.8299135133739663
+          ],
+          [
+            4,
+            0.4384471871911703
+          ],
+          [
+            5,
+            0.16671700823775643
+          ]
+        ],
+        "slope_per_delta": -0.3228118796333316
+      },
+      "isolated_node_count": {
+        "points": [
+          [
+            0,
+            2.0
+          ],
+          [
+            1,
+            2.0
+          ],
+          [
+            2,
+            6.0
+          ],
+          [
+            3,
+            7.0
+          ],
+          [
+            4,
+            14.0
+          ],
+          [
+            5,
+            8.0
+          ]
+        ],
+        "slope_per_delta": 1.9142857142857144
+      },
+      "node_count": {
+        "points": [
+          [
+            0,
+            2.0
+          ],
+          [
+            1,
+            7.0
+          ],
+          [
+            2,
+            14.0
+          ],
+          [
+            3,
+            21.0
+          ],
+          [
+            4,
+            38.0
+          ],
+          [
+            5,
+            50.0
+          ]
+        ],
+        "slope_per_delta": 9.714285714285714
+      }
+    },
+    "6": {
+      "adjacent_gap_ratio_mean": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            8.326672684688674e-17
+          ],
+          [
+            4,
+            0.0850423179566133
+          ],
+          [
+            5,
+            0.3703578619692151
+          ]
+        ],
+        "slope_per_delta": 0.18517893098460753
+      },
+      "average_degree": {
+        "points": [
+          [
+            0,
+            0.0
+          ],
+          [
+            1,
+            0.0
+          ],
+          [
+            2,
+            0.3
+          ],
+          [
+            3,
+            0.45714285714285713
+          ],
+          [
+            4,
+            0.5813953488372093
+          ],
+          [
+            5,
+            0.693069306930693
+          ]
+        ],
+        "slope_per_delta": 0.15333358395165572
+      },
+      "component_count": {
+        "points": [
+          [
+            0,
+            4.0
+          ],
+          [
+            1,
+            4.0
+          ],
+          [
+            2,
+            17.0
+          ],
+          [
+            3,
+            27.0
+          ],
+          [
+            4,
+            62.0
+          ],
+          [
+            5,
+            68.0
+          ]
+        ],
+        "slope_per_delta": 14.4
+      },
+      "first_positive_laplacian_eigenvalue": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            2.0
+          ],
+          [
+            3,
+            0.9999999999999997
+          ],
+          [
+            4,
+            0.5857864376269047
+          ],
+          [
+            5,
+            0.3248691294333535
+          ]
+        ],
+        "slope_per_delta": -0.5439606174073035
+      },
+      "isolated_node_count": {
+        "points": [
+          [
+            0,
+            4.0
+          ],
+          [
+            1,
+            4.0
+          ],
+          [
+            2,
+            14.0
+          ],
+          [
+            3,
+            21.0
+          ],
+          [
+            4,
+            46.0
+          ],
+          [
+            5,
+            50.0
+          ]
+        ],
+        "slope_per_delta": 10.371428571428572
+      },
+      "node_count": {
+        "points": [
+          [
+            0,
+            4.0
+          ],
+          [
+            1,
+            4.0
+          ],
+          [
+            2,
+            20.0
+          ],
+          [
+            3,
+            35.0
+          ],
+          [
+            4,
+            86.0
+          ],
+          [
+            5,
+            101.0
+          ]
+        ],
+        "slope_per_delta": 21.314285714285713
+      }
+    },
+    "7": {
+      "adjacent_gap_ratio_mean": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            null
+          ],
+          [
+            4,
+            0.0
+          ],
+          [
+            5,
+            null
+          ]
+        ],
+        "slope_per_delta": null
+      },
+      "average_degree": {
+        "points": [
+          [
+            0,
+            0.0
+          ],
+          [
+            1,
+            0.0
+          ],
+          [
+            2,
+            0.0
+          ],
+          [
+            3,
+            0.1
+          ],
+          [
+            4,
+            0.272108843537415
+          ],
+          [
+            5,
+            0.16842105263157894
+          ]
+        ],
+        "slope_per_delta": 0.050240908393432565
+      },
+      "component_count": {
+        "points": [
+          [
+            0,
+            5.0
+          ],
+          [
+            1,
+            7.0
+          ],
+          [
+            2,
+            20.0
+          ],
+          [
+            3,
+            57.0
+          ],
+          [
+            4,
+            127.0
+          ],
+          [
+            5,
+            174.0
+          ]
+        ],
+        "slope_per_delta": 35.48571428571429
+      },
+      "first_positive_laplacian_eigenvalue": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            2.0
+          ],
+          [
+            4,
+            0.9999999999999997
+          ],
+          [
+            5,
+            2.0
+          ]
+        ],
+        "slope_per_delta": 0.0
+      },
+      "isolated_node_count": {
+        "points": [
+          [
+            0,
+            5.0
+          ],
+          [
+            1,
+            7.0
+          ],
+          [
+            2,
+            20.0
+          ],
+          [
+            3,
+            54.0
+          ],
+          [
+            4,
+            109.0
+          ],
+          [
+            5,
+            158.0
+          ]
+        ],
+        "slope_per_delta": 31.571428571428573
+      },
+      "node_count": {
+        "points": [
+          [
+            0,
+            5.0
+          ],
+          [
+            1,
+            7.0
+          ],
+          [
+            2,
+            20.0
+          ],
+          [
+            3,
+            60.0
+          ],
+          [
+            4,
+            147.0
+          ],
+          [
+            5,
+            190.0
+          ]
+        ],
+        "slope_per_delta": 39.57142857142857
+      }
+    },
+    "8": {
+      "adjacent_gap_ratio_mean": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            null
+          ],
+          [
+            4,
+            null
+          ],
+          [
+            5,
+            null
+          ]
+        ],
+        "slope_per_delta": null
+      },
+      "average_degree": {
+        "points": [
+          [
+            0,
+            0.0
+          ],
+          [
+            1,
+            0.0
+          ],
+          [
+            2,
+            0.0
+          ],
+          [
+            3,
+            0.041666666666666664
+          ],
+          [
+            4,
+            0.06593406593406594
+          ],
+          [
+            5,
+            0.052083333333333336
+          ]
+        ],
+        "slope_per_delta": 0.014282443746729462
+      },
+      "component_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            9.0
+          ],
+          [
+            2,
+            14.0
+          ],
+          [
+            3,
+            47.0
+          ],
+          [
+            4,
+            88.0
+          ],
+          [
+            5,
+            187.0
+          ]
+        ],
+        "slope_per_delta": 34.285714285714285
+      },
+      "first_positive_laplacian_eigenvalue": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            2.0
+          ],
+          [
+            4,
+            2.0
+          ],
+          [
+            5,
+            2.0
+          ]
+        ],
+        "slope_per_delta": 0.0
+      },
+      "isolated_node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            9.0
+          ],
+          [
+            2,
+            14.0
+          ],
+          [
+            3,
+            46.0
+          ],
+          [
+            4,
+            85.0
+          ],
+          [
+            5,
+            182.0
+          ]
+        ],
+        "slope_per_delta": 33.285714285714285
+      },
+      "node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            9.0
+          ],
+          [
+            2,
+            14.0
+          ],
+          [
+            3,
+            48.0
+          ],
+          [
+            4,
+            91.0
+          ],
+          [
+            5,
+            192.0
+          ]
+        ],
+        "slope_per_delta": 35.285714285714285
+      }
+    },
+    "9": {
+      "adjacent_gap_ratio_mean": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            null
+          ],
+          [
+            4,
+            null
+          ],
+          [
+            5,
+            null
+          ]
+        ],
+        "slope_per_delta": null
+      },
+      "average_degree": {
+        "points": [
+          [
+            0,
+            0.0
+          ],
+          [
+            1,
+            0.0
+          ],
+          [
+            2,
+            0.0
+          ],
+          [
+            3,
+            0.0
+          ],
+          [
+            4,
+            0.05
+          ],
+          [
+            5,
+            0.020833333333333332
+          ]
+        ],
+        "slope_per_delta": 0.007261904761904761
+      },
+      "component_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            4.0
+          ],
+          [
+            2,
+            4.0
+          ],
+          [
+            3,
+            21.0
+          ],
+          [
+            4,
+            39.0
+          ],
+          [
+            5,
+            95.0
+          ]
+        ],
+        "slope_per_delta": 16.914285714285715
+      },
+      "first_positive_laplacian_eigenvalue": {
+        "points": [
+          [
+            0,
+            null
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            null
+          ],
+          [
+            4,
+            2.0
+          ],
+          [
+            5,
+            2.0
+          ]
+        ],
+        "slope_per_delta": 0.0
+      },
+      "isolated_node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            4.0
+          ],
+          [
+            2,
+            4.0
+          ],
+          [
+            3,
+            21.0
+          ],
+          [
+            4,
+            38.0
+          ],
+          [
+            5,
+            94.0
+          ]
+        ],
+        "slope_per_delta": 16.685714285714287
+      },
+      "node_count": {
+        "points": [
+          [
+            0,
+            1.0
+          ],
+          [
+            1,
+            4.0
+          ],
+          [
+            2,
+            4.0
+          ],
+          [
+            3,
+            21.0
+          ],
+          [
+            4,
+            40.0
+          ],
+          [
+            5,
+            96.0
+          ]
+        ],
+        "slope_per_delta": 17.142857142857142
+      }
+    }
+  },
+  "v3_results_source": "results/erdos30_sktc_compression_shell_v3_RESULTS.json"
+}

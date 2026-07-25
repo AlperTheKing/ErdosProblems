@@ -1,0 +1,361 @@
+[
+ {
+  "lam": [
+   6,
+   3
+  ],
+  "mu": [
+   9,
+   5,
+   1,
+   1,
+   1
+  ],
+  "nu": [
+   12,
+   8,
+   4,
+   1,
+   1
+  ],
+  "D": 6,
+  "engineB_profile": [
+   "1",
+   "4",
+   "7",
+   "10",
+   "13",
+   "16",
+   "19",
+   "22",
+   "25"
+  ],
+  "engineA_profile": [
+   "1",
+   "4",
+   "7",
+   "10",
+   "13",
+   "16",
+   "19",
+   "22",
+   "25"
+  ],
+  "screen_profile": [
+   1,
+   4,
+   7,
+   10,
+   13,
+   16,
+   19,
+   22,
+   25
+  ],
+  "engineA_equals_engineB": true,
+  "engineB_equals_screen": true,
+  "lagrange_coeffs": [
+   "1",
+   "3"
+  ],
+  "d_independent": 1,
+  "heldout_independent": [
+   {
+    "n": 7,
+    "engineB": 22,
+    "poly": "22",
+    "match": true
+   },
+   {
+    "n": 8,
+    "engineB": 25,
+    "poly": "25",
+    "match": true
+   }
+  ],
+  "hstar_independent": [
+   1,
+   2
+  ],
+  "hstar_matches_screen": true,
+  "hstar_d_independent": 2,
+  "hstar_1_independent": 2,
+  "reciprocity_interior": "2",
+  "reciprocity_ok": true,
+  "TIER0_independent": false,
+  "JACKPOT_independent": false,
+  "NEG_independent": false,
+  "verdict": "CONFIRMED"
+ },
+ {
+  "lam": [
+   2,
+   1
+  ],
+  "mu": [
+   19,
+   2,
+   1,
+   1
+  ],
+  "nu": [
+   20,
+   2,
+   2,
+   1,
+   1
+  ],
+  "D": 6,
+  "engineB_profile": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9"
+  ],
+  "engineA_profile": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9"
+  ],
+  "screen_profile": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "engineA_equals_engineB": true,
+  "engineB_equals_screen": true,
+  "lagrange_coeffs": [
+   "1",
+   "1"
+  ],
+  "d_independent": 1,
+  "heldout_independent": [
+   {
+    "n": 7,
+    "engineB": 8,
+    "poly": "8",
+    "match": true
+   },
+   {
+    "n": 8,
+    "engineB": 9,
+    "poly": "9",
+    "match": true
+   }
+  ],
+  "hstar_independent": [
+   1,
+   0
+  ],
+  "hstar_matches_screen": true,
+  "hstar_d_independent": 0,
+  "hstar_1_independent": 0,
+  "reciprocity_interior": "0",
+  "reciprocity_ok": true,
+  "TIER0_independent": false,
+  "JACKPOT_independent": false,
+  "NEG_independent": false,
+  "verdict": "CONFIRMED"
+ },
+ {
+  "lam": [
+   3,
+   2,
+   1
+  ],
+  "mu": [
+   15,
+   3,
+   2
+  ],
+  "nu": [
+   16,
+   4,
+   4,
+   1,
+   1
+  ],
+  "D": 6,
+  "engineB_profile": [
+   "1",
+   "3",
+   "6",
+   "10",
+   "15",
+   "21",
+   "28",
+   "36",
+   "45"
+  ],
+  "engineA_profile": [
+   "1",
+   "3",
+   "6",
+   "10",
+   "15",
+   "21",
+   "28",
+   "36",
+   "45"
+  ],
+  "screen_profile": [
+   1,
+   3,
+   6,
+   10,
+   15,
+   21,
+   28,
+   36,
+   45
+  ],
+  "engineA_equals_engineB": true,
+  "engineB_equals_screen": true,
+  "lagrange_coeffs": [
+   "1",
+   "3/2",
+   "1/2"
+  ],
+  "d_independent": 2,
+  "heldout_independent": [
+   {
+    "n": 7,
+    "engineB": 36,
+    "poly": "36",
+    "match": true
+   },
+   {
+    "n": 8,
+    "engineB": 45,
+    "poly": "45",
+    "match": true
+   }
+  ],
+  "hstar_independent": [
+   1,
+   0,
+   0
+  ],
+  "hstar_matches_screen": true,
+  "hstar_d_independent": 0,
+  "hstar_1_independent": 0,
+  "reciprocity_interior": "0",
+  "reciprocity_ok": true,
+  "TIER0_independent": false,
+  "JACKPOT_independent": false,
+  "NEG_independent": false,
+  "verdict": "CONFIRMED"
+ },
+ {
+  "lam": [
+   3,
+   2,
+   1,
+   1
+  ],
+  "mu": [
+   13,
+   3,
+   2,
+   1
+  ],
+  "nu": [
+   15,
+   4,
+   3,
+   2,
+   2
+  ],
+  "D": 6,
+  "engineB_profile": [
+   "1",
+   "5",
+   "15",
+   "35",
+   "70",
+   "126",
+   "210",
+   "330",
+   "495"
+  ],
+  "engineA_profile": [
+   "1",
+   "5",
+   "15",
+   "35",
+   "70",
+   "126",
+   "210",
+   "330",
+   "495"
+  ],
+  "screen_profile": [
+   1,
+   5,
+   15,
+   35,
+   70,
+   126,
+   210,
+   330,
+   495
+  ],
+  "engineA_equals_engineB": true,
+  "engineB_equals_screen": true,
+  "lagrange_coeffs": [
+   "1",
+   "25/12",
+   "35/24",
+   "5/12",
+   "1/24"
+  ],
+  "d_independent": 4,
+  "heldout_independent": [
+   {
+    "n": 7,
+    "engineB": 330,
+    "poly": "330",
+    "match": true
+   },
+   {
+    "n": 8,
+    "engineB": 495,
+    "poly": "495",
+    "match": true
+   }
+  ],
+  "hstar_independent": [
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "hstar_matches_screen": true,
+  "hstar_d_independent": 0,
+  "hstar_1_independent": 0,
+  "reciprocity_interior": "0",
+  "reciprocity_ok": true,
+  "TIER0_independent": false,
+  "JACKPOT_independent": false,
+  "NEG_independent": false,
+  "verdict": "CONFIRMED"
+ }
+]

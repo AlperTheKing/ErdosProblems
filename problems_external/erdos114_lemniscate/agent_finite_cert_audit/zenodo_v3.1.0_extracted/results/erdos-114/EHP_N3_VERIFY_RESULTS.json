@@ -1,0 +1,68 @@
+{
+  "experiment": "EHP_N3_verify",
+  "degree": 3,
+  "reduced_dim": 3,
+  "l_star_bounds": {
+    "lower": 9.174256891921585,
+    "best_estimate": 9.17842660655415,
+    "upper": 9.182596321186717,
+    "width": 0.008339429265131315,
+    "raw_values": [
+      [
+        200,
+        9.141150215267142
+      ],
+      [
+        400,
+        9.161745657589542
+      ],
+      [
+        800,
+        9.171066161553705
+      ],
+      [
+        1600,
+        9.17547457140202
+      ],
+      [
+        3200,
+        9.177619102522241
+      ]
+    ]
+  },
+  "bb_result": {
+    "initial_boxes": 4096,
+    "levels": 5,
+    "total_evals": 69464,
+    "proof_complete": false,
+    "final_survivors_non_ext": 3744
+  },
+  "closest_competitor": {
+    "l_value": 8.479377781459798,
+    "params": [
+      0.9921875,
+      0.078125,
+      -0.046875
+    ],
+    "distance_to_extremizer": 0.09144296805249708
+  },
+  "margin": 0.6948791104617875,
+  "margin_pct": 7.574227740163512,
+  "outer_domain": {
+    "safe": false,
+    "max_face_l": 4.592623425104911,
+    "face_margin": -8.955520085774586,
+    "n_face_evals": 8000
+  },
+  "hessian": {
+    "all_negative": true,
+    "diagonal": [
+      -887759.5144322541,
+      -123836.03620729389,
+      -167221.48659631843
+    ],
+    "min_eigenvalue_approx": -887759.5144322541
+  },
+  "total_time_secs": 390.54293875,
+  "verdict": "EHP_N3_SUPPORTED"
+}

@@ -1,0 +1,26 @@
+diff --git a/problems_external/erdos_475/APPROACH_REGISTRY.md b/problems_external/erdos_475/APPROACH_REGISTRY.md
+--- a/problems_external/erdos_475/APPROACH_REGISTRY.md
++++ b/problems_external/erdos_475/APPROACH_REGISTRY.md
+@@ -13,3 +13,4 @@ pairwise distinct.
+-Known results cover `t <= 12` and `p-3 <= t <= p-1`. The public certificate
+-repository audited on 2026-07-23 exhausts only primes through `p=13`; it
+-does not contain a counterexample or an exhaustive `p=17` result.
++Known results cover `t <= 12` and `p-3 <= t <= p-1`. A second novelty audit
++found the published 2017 computation covering every abelian group of order
++at most `23`; the public 2026 proof-candidate repository itself exhausts only
++primes through `p=13`.
+@@ -54,4 +55,14 @@ by the public
+ - Scalar-multiplication symmetry may reduce enumeration only after its
+ soundness is proved; the final count must still account for all 560 sets.
+ - Search failure, timeout, and unchecked solver `UNSAT` are not
+ counterexample certificates.
++
++## Route status
++
++`R1 DEAD (2026-07-23)`: the proposed `p=17` layer is not novel. Costa,
++Morini, Pasotti, and Pellegrini report exhaustive verification for every
++abelian group of order at most `23` in arXiv:1706.00042. The native engines
++were stopped before this already-published layer was searched. The first
++genuinely uncovered size-13 prime layer is `p=29`, but exhausting that one
++finite layer has no stated bridge to the full conjecture, so it is not opened
++automatically.

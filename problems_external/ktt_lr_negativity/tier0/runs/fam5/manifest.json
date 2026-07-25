@@ -1,0 +1,455 @@
+{
+ "family": "fam5 SHORT-vs-LONG: lam 2-3 parts vs mu 4-7 parts, nu 5-7 parts, r in {5,6,7}",
+ "exhaustive": false,
+ "sampling": "randomised: nu built from lam+mu by random downward unit moves, constrained to nu_i >= max(lam_i,mu_i); three weight strata (wmax 5/12/26, |nu| <= 34/60/80) plus a beam search minimising h*_1 - h*_d seeded on the wave-1 margin-0 d>=2 frontier",
+ "instrument": "../../tier0_screen.py (mandated LP-free exact screen; no LP oracle, no simplex filter)",
+ "engine": "A:lr_hive.exe (batch), cap 1e15",
+ "files": {
+  "w1_small.jsonl": {
+   "lines": 2365,
+   "sha256": "81dd0e3a681d0898da34494f4eb7a2d6c30c9099efb022430735954264a2176b",
+   "bytes": 2318627
+  },
+  "w2_mid.jsonl": {
+   "lines": 896,
+   "sha256": "317a9c745e285a94a9d95fbe9668d05a9c2cafef423ac6c802654cc7ea5ca525",
+   "bytes": 823508
+  },
+  "w3_big.jsonl": {
+   "lines": 1716,
+   "sha256": "fa621b5ad92686d14d231509680ac090ba17baa5c80f2515074439e237f7bf32",
+   "bytes": 1718357
+  },
+  "climb.jsonl": {
+   "lines": 1987,
+   "sha256": "9ced322f9610f3ff9397e3bba501c3f994df187c1c679d5755f12c019e82965e",
+   "bytes": 2093604
+  },
+  "probe.jsonl": {
+   "lines": 60,
+   "sha256": "33af722b80661d9468bb0d37c9a16bbdca61034ae33c210edc90ac034853bb54",
+   "bytes": 60149
+  }
+ },
+ "distinct_triples_screened": 7020,
+ "status_counts": {
+  "OK": 5913,
+  "CAP_EXCEEDED": 1032,
+  "EMPTY": 75
+ },
+ "OK": 5913,
+ "with_hstar1_d_ge_1": 3528,
+ "audit_failures": 0,
+ "d_distribution": {
+  "0": 2385,
+  "1": 1150,
+  "2": 978,
+  "3": 786,
+  "4": 410,
+  "5": 196,
+  "6": 8
+ },
+ "dimension_deficient_d_lt_D": 5913,
+ "min_h1_minus_hd": 0,
+ "min_h1_minus_hd_attained_by": [
+  {
+   "lam": [
+    5,
+    5,
+    4
+   ],
+   "mu": [
+    5,
+    4,
+    4,
+    3,
+    1,
+    1
+   ],
+   "nu": [
+    9,
+    9,
+    8,
+    3,
+    2,
+    1
+   ],
+   "r": 6,
+   "d": 1,
+   "c": 2,
+   "hstar": [
+    1,
+    0
+   ],
+   "hstar_sum": 1,
+   "hstar_1": 0,
+   "hstar_d": 0,
+   "degree_bound": 10,
+   "coeffs_low_to_high": [
+    "1",
+    "1"
+   ]
+  },
+  {
+   "lam": [
+    4,
+    1,
+    1
+   ],
+   "mu": [
+    5,
+    5,
+    4,
+    3,
+    2
+   ],
+   "nu": [
+    7,
+    6,
+    4,
+    4,
+    3,
+    1
+   ],
+   "r": 6,
+   "d": 2,
+   "c": 3,
+   "hstar": [
+    1,
+    0,
+    0
+   ],
+   "hstar_sum": 1,
+   "hstar_1": 0,
+   "hstar_d": 0,
+   "degree_bound": 10,
+   "coeffs_low_to_high": [
+    "1",
+    "3/2",
+    "1/2"
+   ]
+  },
+  {
+   "lam": [
+    4,
+    1
+   ],
+   "mu": [
+    5,
+    3,
+    3,
+    3
+   ],
+   "nu": [
+    6,
+    5,
+    3,
+    3,
+    2
+   ],
+   "r": 5,
+   "d": 1,
+   "c": 2,
+   "hstar": [
+    1,
+    0
+   ],
+   "hstar_sum": 1,
+   "hstar_1": 0,
+   "hstar_d": 0,
+   "degree_bound": 6,
+   "coeffs_low_to_high": [
+    "1",
+    "1"
+   ]
+  }
+ ],
+ "min_h1_minus_hd_count": 2556,
+ "max_hstar_d_all": 6,
+ "max_hstar_d_all_examples": [
+  {
+   "lam": [
+    12,
+    8
+   ],
+   "mu": [
+    26,
+    14,
+    11,
+    5,
+    1
+   ],
+   "nu": [
+    33,
+    19,
+    11,
+    9,
+    5
+   ],
+   "r": 5,
+   "d": 2,
+   "c": 18,
+   "hstar": [
+    1,
+    15,
+    6
+   ],
+   "hstar_sum": 22,
+   "hstar_1": 15,
+   "hstar_d": 6,
+   "degree_bound": 6,
+   "coeffs_low_to_high": [
+    "1",
+    "6",
+    "11"
+   ]
+  }
+ ],
+ "max_hstar_d_d_ge_1": 6,
+ "max_hstar_d_d_ge_1_examples": [
+  {
+   "lam": [
+    12,
+    8
+   ],
+   "mu": [
+    26,
+    14,
+    11,
+    5,
+    1
+   ],
+   "nu": [
+    33,
+    19,
+    11,
+    9,
+    5
+   ],
+   "r": 5,
+   "d": 2,
+   "c": 18,
+   "hstar": [
+    1,
+    15,
+    6
+   ],
+   "hstar_sum": 22,
+   "hstar_1": 15,
+   "hstar_d": 6,
+   "degree_bound": 6,
+   "coeffs_low_to_high": [
+    "1",
+    "6",
+    "11"
+   ]
+  }
+ ],
+ "interior_positive_and_d_ge_2": 29,
+ "min_margin_interior_positive_d_ge_2": 3,
+ "margin_distribution": {
+  "0": 2556,
+  "1": 298,
+  "2": 172,
+  "3": 137,
+  "4": 86,
+  "5": 49,
+  "6": 28,
+  "7": 30,
+  "8": 22,
+  "9": 12,
+  "10": 9,
+  "11": 14,
+  "12": 12,
+  "13": 9,
+  "14": 8,
+  "15": 3,
+  "16": 5,
+  "17": 7,
+  "18": 5,
+  "19": 3,
+  "20": 1,
+  "21": 5,
+  "22": 1,
+  "23": 4,
+  "24": 5,
+  "26": 1,
+  "27": 5,
+  "28": 1,
+  "29": 2,
+  "30": 4,
+  "31": 3,
+  "33": 2,
+  "34": 1,
+  "35": 3,
+  "36": 1,
+  "37": 2,
+  "40": 2,
+  "41": 2,
+  "45": 1,
+  "47": 1,
+  "48": 1,
+  "52": 1,
+  "53": 3,
+  "54": 1,
+  "55": 1,
+  "56": 2,
+  "64": 1,
+  "65": 1,
+  "71": 1,
+  "80": 1,
+  "86": 1,
+  "92": 1,
+  "100": 1
+ },
+ "JACKPOT": 0,
+ "TIER0": 0,
+ "NEG": 0,
+ "hits": [],
+ "margin0_d_ge_2": 1406,
+ "margin0_d_ge_2_d_dist": {
+  "2": 717,
+  "3": 478,
+  "4": 182,
+  "5": 26,
+  "6": 3
+ },
+ "note": "A null census is NOT evidence for the KTT conjecture. CAP_EXCEEDED / EMPTY / ENGINE_ERROR records are SKIPs, never mathematical verdicts.",
+ "engineB_crosscheck": {
+  "triple": {
+   "lam": [
+    5,
+    4,
+    1
+   ],
+   "mu": [
+    5,
+    4,
+    3,
+    2,
+    2,
+    1
+   ],
+   "nu": [
+    7,
+    6,
+    5,
+    4,
+    3,
+    2
+   ]
+  },
+  "profile_n_0_to_8_engineA": [
+   1,
+   7,
+   28,
+   84,
+   210,
+   462,
+   924,
+   1716,
+   3003
+  ],
+  "profile_n_0_to_8_engineB": [
+   1,
+   7,
+   28,
+   84,
+   210,
+   462,
+   924,
+   1716,
+   3003
+  ],
+  "agree": true,
+  "independent_interpolation": "P(n)=binom(n+6,6)",
+  "d": 6,
+  "c": 7,
+  "hstar": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "note": "best TIER0 near-miss: h*_1 = 0 with d = 6 >= 4, but h*_d = 0 (no interior lattice point)"
+ },
+ "best_tier0_near_misses": [
+  {
+   "lam": [
+    5,
+    4,
+    1
+   ],
+   "mu": [
+    5,
+    4,
+    3,
+    2,
+    2,
+    1
+   ],
+   "nu": [
+    7,
+    6,
+    5,
+    4,
+    3,
+    2
+   ],
+   "d": 6,
+   "c": 7
+  },
+  {
+   "lam": [
+    6,
+    4,
+    1
+   ],
+   "mu": [
+    5,
+    4,
+    3,
+    2,
+    2,
+    1
+   ],
+   "nu": [
+    8,
+    6,
+    5,
+    4,
+    3,
+    2
+   ],
+   "d": 6,
+   "c": 7
+  },
+  {
+   "lam": [
+    5,
+    4,
+    1
+   ],
+   "mu": [
+    5,
+    4,
+    3,
+    2,
+    2
+   ],
+   "nu": [
+    7,
+    6,
+    5,
+    4,
+    3,
+    1
+   ],
+   "d": 6,
+   "c": 7
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -187,0 +188 @@
++[2026-07-23T17:04:32+03:00] OK VERIFY | DID: independent C++ replay, 64+1 threads | RESULT: 4,499 parsed; 10,122,750/10,122,750 NO_HIT both | D: R1 independently confirmed

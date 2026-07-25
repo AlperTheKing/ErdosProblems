@@ -1,0 +1,40 @@
+{
+ "tried": 3000,
+ "nonempty": 416,
+ "denominator_occurrence_counts": {
+  "1": 416,
+  "2": 11
+ },
+ "max_lcm_denominator_realized": 2,
+ "witness": {
+  "lam": [
+   13,
+   11,
+   10,
+   4,
+   2
+  ],
+  "mu": [
+   10,
+   10,
+   6,
+   4,
+   0
+  ],
+  "nu": [
+   21,
+   18,
+   12,
+   10,
+   9
+  ],
+  "denoms": [
+   1,
+   2
+  ],
+  "q": 2,
+  "dim": 5,
+  "n_vertices": 27
+ },
+ "seed": 11
+}

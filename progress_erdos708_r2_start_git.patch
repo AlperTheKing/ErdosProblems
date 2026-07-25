@@ -1,0 +1,7 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38607,1 +38607,3 @@
+ [2026-07-23T23:07:31+03:00] FAIL CHECK | DID: replayed raw split graph independently | RESULT: both factors have sole neighbor 6; B={6} preserves #708 | D: route halted
++[2026-07-23T23:13:39+03:00] OK PLAN | DID: registered #708 capacitated two-fragment route | RESULT: APPROACH_REGISTRY.md R2 with exact bridge and exit | D: R2 active
++[2026-07-23T23:13:40+03:00] > ATTACK | NEXT: exhaust R2 for M<=6 and replay the first failure using raw prime valuations.

@@ -12,7 +12,7 @@ import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
+ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 sys.path.insert(0, HERE)
 import union_count as UC  # noqa: E402
 
@@ -74,12 +74,23 @@ def parse(path):
         if m:
             d["climb_best_V_at_c4"] = int(m.group(1))
             d["climb_best_V_at_c4_at"] = {"lam": m.group(3), "mu": m.group(4), "nu": m.group(5), "six_a1": int(m.group(2))}
+        m = re.search(r"HIST\(6a1 over dim-3\): neg=(\d+)((?: \d+:\d+)*) >=(\d+):(\d+)", b)
+        if m:
+            h = {"neg": int(m.group(1)), "ge%s" % m.group(3): int(m.group(4))}
+            for tok in m.group(2).split():
+                k, v = tok.split(":")
+                h[k] = int(v)
+            d["hist_6a1_over_dim3"] = h
+            keys = [int(k) for k in h if k.isdigit()]
+            d["hist_min_6a1"] = min(keys) if keys else None
+            d["hist_max_6a1"] = max(keys) if keys else None
         out.append(d)
     return out
 
 
-LOGS = ["wcone64.final.log", "wcone72.log", "wbox323240.log", "wbox444444.log",
-        "wbox_asym.log", "rand.log", "climb_c6.log", "climb2.log", "aclimb.log"]
+LOGS = ["wcone64.final.log", "wcone72.log", "wbox323240.log", "whist206060.log",
+        "wbox444444.log", "wbox_asym.log", "rand.log", "climb_c6.log", "climb2.log",
+        "climb_c4.log", "aclimb.log"]
 
 # regions whose EXHAUSTIVE coverage we claim (must exist in union_count.REGIONS)
 CLAIMED = ["wcone S=72", "wbox 44/44/44", "wbox 140/8/8", "wbox 8/8/140",
@@ -180,7 +191,7 @@ def main():
     }
     files = {}
     for fn in ["bandscan9.cpp", "bandscan9.exe", "bandscan9b.exe", "bandscan9c.exe",
-               "bandscan9d.cpp", "bandscan9d.exe", "hive4.py"]:
+               "bandscan9d.cpp", "bandscan9d.exe", "bandscan9e.exe", "hive4.py"]:
         p = os.path.join(ROOT, "r4_reeve", fn)
         if os.path.exists(p):
             files["r4_reeve/" + fn] = sha256(p)

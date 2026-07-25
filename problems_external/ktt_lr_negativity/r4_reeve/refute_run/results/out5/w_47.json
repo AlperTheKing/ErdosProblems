@@ -1,0 +1,4 @@
+rows: 18  distinct directions: 15  b linear in g: VERIFIED exactly on 50 random g
+nonsingular triples: 517  cone-multiplicity histogram: {1: 468, 2: 31, 4: 18}
+non-unimodular cones: 49
+{"seed": 47, "subsets_tried": 20000, "rays_evaluated": 4499, "min6a1": "11", "argmin": [2, 1, 1, 1, 2, 2, 3, 2, 1], "secs": 35.2}

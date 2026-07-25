@@ -1,0 +1,17 @@
+diff --git a/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp b/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
+--- a/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
++++ b/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
+@@ -80,6 +80,13 @@ int main(int argc, char** argv) {
+             Graph h = complement_graph(minimal_diam2(n, rng));
+             if (!is_3t_critical(h)) continue;
+             if (!diam2_or_less(h)) continue;  // excludes the solved dominating-edge class
++            int minimum_degree = n;
++            for (int v = 0; v < n; ++v) {
++                minimum_degree = std::min(minimum_degree, degree(h, v));
++            }
++            if (10 * minimum_degree < 3 * n) {
++                continue;  // Fan already handles delta <= 0.3n
++            }
+             ++tested;
+             int degree_sum = 0;
+             for (int v = 0; v < n; ++v) degree_sum += degree(h, v);

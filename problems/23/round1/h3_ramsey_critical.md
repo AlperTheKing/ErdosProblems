@@ -238,6 +238,13 @@ the candidate law `a(N) = floor(N^2/25)`, which would give `a(17) = 11`.
   growth runs 15 → 19.
 * **Result: bip = 12 at N = 18, never 13.**
 
+### Final self-certifying campaign, all orders
+
+With the fixed engine (adaptive bar + hard `certify()`): 0 `FATAL`, 0 violations, over ~60
+processes. Best certified values: N = 16 → 9, N = 18 → 12, N = 24 → 20, N = 26 → 25 — i.e. the
+search never beat the balanced C5 blow-up at 18, 24 or 26, and the one place it did beat it
+(N = 17, `bip = 10`) is still below `floor(N^2/25) = 11`.
+
 ---
 
 ## 5. Baseline table (exact; every maxcut by exhaustive enumeration)

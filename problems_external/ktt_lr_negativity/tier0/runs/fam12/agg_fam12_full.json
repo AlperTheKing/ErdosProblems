@@ -1,0 +1,579 @@
+{
+  "records_total": 109760,
+  "status_counts": {
+    "OK": 68831,
+    "EMPTY": 39777,
+    "CAP_EXCEEDED": 1152
+  },
+  "records_by_r": {
+    "5": 85760,
+    "6": 15000,
+    "7": 9000
+  },
+  "nonempty_OK": 68831,
+  "audit_failures": 0,
+  "audit_failure_examples": [],
+  "d_distribution": {
+    "0": 25228,
+    "1": 8598,
+    "2": 5920,
+    "3": 7192,
+    "4": 6403,
+    "5": 9130,
+    "6": 6011,
+    "7": 240,
+    "8": 87,
+    "9": 21,
+    "10": 1
+  },
+  "count_hstar1_eq_0": 17415,
+  "count_hstar_d_gt_0": 25929,
+  "count_both_hstar1_0_and_hstar_d_gt_0__TIER0": 0,
+  "count_hstar_d_gt_hstar_1__JACKPOT": 0,
+  "count_negative_hstar_entry": 0,
+  "best_hstar_d": 72,
+  "best_hstar_d_triple": {
+    "lam": [
+      26,
+      13,
+      9,
+      7
+    ],
+    "mu": [
+      23,
+      15,
+      12,
+      8,
+      1
+    ],
+    "nu": [
+      41,
+      25,
+      21,
+      16,
+      11
+    ],
+    "r": 5,
+    "d": 6,
+    "c": 2832,
+    "hstar": [
+      1,
+      2825,
+      64721,
+      200736,
+      124924,
+      13403,
+      72
+    ],
+    "hstar_1": 2825,
+    "hstar_d": 72,
+    "hstar_sum": 406682,
+    "src": "out_r5_big.jsonl"
+  },
+  "min_hstar1_minus_hstar_d": 0,
+  "min_gap_triple": {
+    "lam": [
+      6,
+      5,
+      4,
+      2,
+      1
+    ],
+    "mu": [
+      7,
+      5,
+      3,
+      1,
+      1
+    ],
+    "nu": [
+      9,
+      7,
+      7,
+      6,
+      6
+    ],
+    "r": 5,
+    "d": 2,
+    "c": 3,
+    "hstar": [
+      1,
+      0,
+      0
+    ],
+    "hstar_1": 0,
+    "hstar_d": 0,
+    "hstar_sum": 1,
+    "src": "out_r5_domint.jsonl"
+  },
+  "gap_distribution_low20": {
+    "0": 17809,
+    "1": 3303,
+    "2": 2497,
+    "3": 1926,
+    "4": 1288,
+    "5": 1215,
+    "6": 972,
+    "7": 895,
+    "8": 759,
+    "9": 721,
+    "10": 573,
+    "11": 645,
+    "12": 524,
+    "13": 416,
+    "14": 435,
+    "15": 385,
+    "16": 379,
+    "17": 336,
+    "18": 359,
+    "19": 312
+  },
+  "lattice_inequality_violations": 0,
+  "lattice_inequality_violation_examples": [],
+  "hits": [],
+  "per_source": {
+    "out_r5_domint.jsonl": {
+      "total": 23760,
+      "OK": 15659,
+      "EMPTY": 8101,
+      "other": 0
+    },
+    "out_r5_raw.jsonl": {
+      "total": 12000,
+      "OK": 2647,
+      "EMPTY": 9353,
+      "other": 0
+    },
+    "out_r5_big.jsonl": {
+      "total": 20000,
+      "OK": 16840,
+      "EMPTY": 3136,
+      "other": 24
+    },
+    "out_r5_x.jsonl": {
+      "total": 30000,
+      "OK": 21795,
+      "EMPTY": 8204,
+      "other": 1
+    },
+    "out_r6_domint.jsonl": {
+      "total": 6000,
+      "OK": 3519,
+      "EMPTY": 2236,
+      "other": 245
+    },
+    "out_r6_raw.jsonl": {
+      "total": 3000,
+      "OK": 706,
+      "EMPTY": 2169,
+      "other": 125
+    },
+    "out_r6_small.jsonl": {
+      "total": 6000,
+      "OK": 3517,
+      "EMPTY": 2457,
+      "other": 26
+    },
+    "out_r7_domint.jsonl": {
+      "total": 6000,
+      "OK": 3302,
+      "EMPTY": 2389,
+      "other": 309
+    },
+    "out_r7_raw.jsonl": {
+      "total": 3000,
+      "OK": 846,
+      "EMPTY": 1732,
+      "other": 422
+    }
+  },
+  "strata": {
+    "d>=2": {
+      "n": 35005,
+      "count_hstar1_eq_0": 9211,
+      "count_hstar_d_gt_0": 307,
+      "count_TIER0": 0,
+      "count_JACKPOT": 0,
+      "min_gap": 0,
+      "max_hstar_d": 72,
+      "n_hstar_d_pos": 307,
+      "min_gap_given_interior_point": 2,
+      "hstar_shapes_when_hstar1_zero": {
+        "[1, 0, 0]": 4308,
+        "[1, 0, 0, 0]": 3038,
+        "[1, 0, 0, 0, 0]": 999,
+        "[1, 0, 0, 0, 0, 0]": 802,
+        "[1, 0, 0, 0, 0, 0, 0]": 37,
+        "[1, 0, 0, 0, 0, 0, 0, 0]": 15,
+        "[1, 0, 1, 0, 0]": 7,
+        "[1, 0, 0, 0, 0, 0, 0, 0, 0]": 3
+      },
+      "min_gap_triple": {
+        "lam": [
+          6,
+          5,
+          4,
+          2,
+          1
+        ],
+        "mu": [
+          7,
+          5,
+          3,
+          1,
+          1
+        ],
+        "nu": [
+          9,
+          7,
+          7,
+          6,
+          6
+        ],
+        "r": 5,
+        "d": 2,
+        "c": 3,
+        "hstar": [
+          1,
+          0,
+          0
+        ],
+        "hstar_1": 0,
+        "hstar_d": 0,
+        "hstar_sum": 1,
+        "src": "out_r5_domint.jsonl"
+      },
+      "max_hstar_d_triple": {
+        "lam": [
+          26,
+          13,
+          9,
+          7
+        ],
+        "mu": [
+          23,
+          15,
+          12,
+          8,
+          1
+        ],
+        "nu": [
+          41,
+          25,
+          21,
+          16,
+          11
+        ],
+        "r": 5,
+        "d": 6,
+        "c": 2832,
+        "hstar": [
+          1,
+          2825,
+          64721,
+          200736,
+          124924,
+          13403,
+          72
+        ],
+        "hstar_1": 2825,
+        "hstar_d": 72,
+        "hstar_sum": 406682,
+        "src": "out_r5_big.jsonl"
+      },
+      "min_gap_given_interior_triple": {
+        "lam": [
+          18,
+          15,
+          11,
+          7,
+          2
+        ],
+        "mu": [
+          11,
+          11,
+          9,
+          6,
+          6
+        ],
+        "nu": [
+          26,
+          26,
+          19,
+          15,
+          10
+        ],
+        "r": 5,
+        "d": 2,
+        "c": 6,
+        "hstar": [
+          1,
+          3,
+          1
+        ],
+        "hstar_1": 3,
+        "hstar_d": 1,
+        "hstar_sum": 5,
+        "src": "out_r5_x.jsonl"
+      }
+    },
+    "d>=4": {
+      "n": 21893,
+      "count_hstar1_eq_0": 1865,
+      "count_hstar_d_gt_0": 154,
+      "count_TIER0": 0,
+      "count_JACKPOT": 0,
+      "min_gap": 0,
+      "max_hstar_d": 72,
+      "n_hstar_d_pos": 154,
+      "min_gap_given_interior_point": 27,
+      "hstar_shapes_when_hstar1_zero": {
+        "[1, 0, 0, 0, 0]": 999,
+        "[1, 0, 0, 0, 0, 0]": 802,
+        "[1, 0, 0, 0, 0, 0, 0]": 37,
+        "[1, 0, 0, 0, 0, 0, 0, 0]": 15,
+        "[1, 0, 1, 0, 0]": 7,
+        "[1, 0, 0, 0, 0, 0, 0, 0, 0]": 3,
+        "[1, 0, 1, 0, 0, 0]": 2
+      },
+      "min_gap_triple": {
+        "lam": [
+          4,
+          3,
+          2,
+          2
+        ],
+        "mu": [
+          4,
+          3,
+          2,
+          1
+        ],
+        "nu": [
+          7,
+          6,
+          4,
+          3,
+          1
+        ],
+        "r": 5,
+        "d": 5,
+        "c": 6,
+        "hstar": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hstar_1": 0,
+        "hstar_d": 0,
+        "hstar_sum": 1,
+        "src": "out_r5_domint.jsonl"
+      },
+      "max_hstar_d_triple": {
+        "lam": [
+          26,
+          13,
+          9,
+          7
+        ],
+        "mu": [
+          23,
+          15,
+          12,
+          8,
+          1
+        ],
+        "nu": [
+          41,
+          25,
+          21,
+          16,
+          11
+        ],
+        "r": 5,
+        "d": 6,
+        "c": 2832,
+        "hstar": [
+          1,
+          2825,
+          64721,
+          200736,
+          124924,
+          13403,
+          72
+        ],
+        "hstar_1": 2825,
+        "hstar_d": 72,
+        "hstar_sum": 406682,
+        "src": "out_r5_big.jsonl"
+      },
+      "min_gap_given_interior_triple": {
+        "lam": [
+          8,
+          8,
+          5,
+          3
+        ],
+        "mu": [
+          9,
+          7,
+          5,
+          3,
+          1
+        ],
+        "nu": [
+          14,
+          12,
+          9,
+          9,
+          5
+        ],
+        "r": 5,
+        "d": 4,
+        "c": 33,
+        "hstar": [
+          1,
+          28,
+          74,
+          28,
+          1
+        ],
+        "hstar_1": 28,
+        "hstar_d": 1,
+        "hstar_sum": 132,
+        "src": "out_r5_domint.jsonl"
+      }
+    },
+    "d>=5": {
+      "n": 15490,
+      "count_hstar1_eq_0": 859,
+      "count_hstar_d_gt_0": 108,
+      "count_TIER0": 0,
+      "count_JACKPOT": 0,
+      "min_gap": 0,
+      "max_hstar_d": 72,
+      "n_hstar_d_pos": 108,
+      "min_gap_given_interior_point": 82,
+      "hstar_shapes_when_hstar1_zero": {
+        "[1, 0, 0, 0, 0, 0]": 802,
+        "[1, 0, 0, 0, 0, 0, 0]": 37,
+        "[1, 0, 0, 0, 0, 0, 0, 0]": 15,
+        "[1, 0, 0, 0, 0, 0, 0, 0, 0]": 3,
+        "[1, 0, 1, 0, 0, 0]": 2
+      },
+      "min_gap_triple": {
+        "lam": [
+          4,
+          3,
+          2,
+          2
+        ],
+        "mu": [
+          4,
+          3,
+          2,
+          1
+        ],
+        "nu": [
+          7,
+          6,
+          4,
+          3,
+          1
+        ],
+        "r": 5,
+        "d": 5,
+        "c": 6,
+        "hstar": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hstar_1": 0,
+        "hstar_d": 0,
+        "hstar_sum": 1,
+        "src": "out_r5_domint.jsonl"
+      },
+      "max_hstar_d_triple": {
+        "lam": [
+          26,
+          13,
+          9,
+          7
+        ],
+        "mu": [
+          23,
+          15,
+          12,
+          8,
+          1
+        ],
+        "nu": [
+          41,
+          25,
+          21,
+          16,
+          11
+        ],
+        "r": 5,
+        "d": 6,
+        "c": 2832,
+        "hstar": [
+          1,
+          2825,
+          64721,
+          200736,
+          124924,
+          13403,
+          72
+        ],
+        "hstar_1": 2825,
+        "hstar_d": 72,
+        "hstar_sum": 406682,
+        "src": "out_r5_big.jsonl"
+      },
+      "min_gap_given_interior_triple": {
+        "lam": [
+          10,
+          8,
+          4,
+          4
+        ],
+        "mu": [
+          10,
+          8,
+          5,
+          3
+        ],
+        "nu": [
+          15,
+          13,
+          10,
+          8,
+          6
+        ],
+        "r": 5,
+        "d": 5,
+        "c": 89,
+        "hstar": [
+          1,
+          83,
+          547,
+          574,
+          95,
+          1
+        ],
+        "hstar_1": 83,
+        "hstar_d": 1,
+        "hstar_sum": 1301,
+        "src": "out_r5_domint.jsonl"
+      }
+    }
+  }
+}

@@ -1,0 +1,445 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{url}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\vol}{vol}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\lam}{\lambda}
+\newcommand{\hstar}{h^{*}}
+
+\title{Positivity of stretched Littlewood--Richardson\\ coefficients for partitions of length at most four}
+\author{Alper Ferudun}
+\email{alper@mercurycodelab.com}
+\thanks{This is a computer-assisted proof; all finite verifications are
+reproduced by the scripts described in Section~\ref{sec:repro}.}
+\date{\today}
+
+\begin{document}
+\begin{abstract}
+For partitions $\lam,\mu,\nu$ the Littlewood--Richardson coefficient
+$c^{\nu}_{\lam\mu}$ stretches to a function $P(t)=c^{t\nu}_{t\lam,t\mu}$ which,
+by a theorem of Derksen and Weyman, is a polynomial in $t$. King, Tollu and
+Toumazet conjectured that $P$ has no negative coefficient. The conjecture is
+known only for $c^{\nu}_{\lam\mu}\le 2$ and is otherwise open; it is recorded
+as an unsolved problem. We prove it for all triples whose parts number at most
+four. The proof is structural: a period-one dilation transfers the
+Berline--Vergne local Ehrhart formula from an integral dilate back to the
+rational hive polytope, reducing the statement to the positivity of the
+Berline--Vergne weight of every two-dimensional transverse cone spanned by
+rank-four rhombus normals, which we verify exactly (minimum weight $1/9$).
+Vertex integrality and unimodularity of vertex cones are not used, and indeed
+fail already in rank four. The same local method yields two rank-uniform
+consequences: for every full-dimensional hive polytope of any rank the top four
+Ehrhart coefficients are positive, and every full-dimensional five-part hive has
+all coefficients positive except possibly the linear one. We close by reducing
+the general conjecture to a single hive-specific effectivity statement and
+recording the exact obstructions that rule out the standard shortcuts. All
+finite verifications are accompanied by independent replay scripts.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $\lam,\mu,\nu$ be partitions with $|\lam|+|\mu|=|\nu|$ and let
+$c^{\nu}_{\lam\mu}$ be the Littlewood--Richardson (LR) coefficient, the
+multiplicity of the Schur function $s_\nu$ in $s_\lam s_\mu$. For a positive
+integer $t$ write $t\lam=(t\lam_1,t\lam_2,\dots)$. Derksen and Weyman
+\cite{DerksenWeyman} proved that
+\[
+  P^{\nu}_{\lam\mu}(t)\;:=\;c^{t\nu}_{t\lam,t\mu}
+\]
+agrees, for all $t\ge 1$, with a polynomial in $t$; a short proof was later
+given in \cite{ShortPoly}. King, Tollu and Toumazet \cite{KTT2004,KTT2006}
+studied these \emph{stretched} coefficients in detail and conjectured a strong
+positivity property.
+
+\begin{conjecture}[King--Tollu--Toumazet]\label{conj:ktt}
+Every coefficient of $P^{\nu}_{\lam\mu}(t)$, in the monomial basis
+$1,t,t^2,\dots$, is nonnegative.
+\end{conjecture}
+
+Conjecture~\ref{conj:ktt} is proved for $c^{\nu}_{\lam\mu}=1$
+(where $P\equiv 1$, by the Fulton conjecture of Knutson--Tao--Woodward
+\cite{KTW}) and for $c^{\nu}_{\lam\mu}=2$ (where $P(t)=t+1$, by Ikenmeyer
+\cite{Ikenmeyer} and geometrically by Sherman \cite{Sherman}). Beyond these it
+is open, and it is listed as an unsolved problem in the FrontierMath collection
+\cite{FrontierMath}. Coquereaux and Zuber \cite{CoqZuber} record the special
+case of the linear coefficient in the four-part ($SU(4)$) situation and leave
+its nonnegativity as an unproved (``alleged'') assertion. Extensive computation
+has produced no counterexample.
+
+We settle the four-part case.
+
+\begin{theorem}\label{thm:main}
+Let $\lam,\mu,\nu$ be partitions of length at most four with
+$|\lam|+|\mu|=|\nu|$. Then every coefficient of $P^{\nu}_{\lam\mu}(t)$ is
+nonnegative. If $c^{\nu}_{\lam\mu}>0$ and the associated hive polytope is
+three-dimensional, all four coefficients are strictly positive.
+\end{theorem}
+
+The proof is geometric. By the hive theorem of Knutson and Tao \cite{KnutsonTao}
+the coefficient $c^{\nu}_{\lam\mu}$ counts the lattice points of the
+\emph{hive polytope} $H=H(\lam,\mu,\nu)$, a rational polytope in the space of
+interior hive entries; stretching dilates $H$, so $P^{\nu}_{\lam\mu}$ is the
+Ehrhart polynomial of $H$ and its degree is $\dim H$. For length at most four,
+$\dim H\le 3$. Ehrhart positivity is automatic in dimensions $\le 2$, so the
+whole difficulty is the linear coefficient of a three-dimensional hive.
+
+Two features make this delicate. First, hive polytopes for four parts are
+lattice polytopes, but this is a nontrivial input; we avoid it entirely by a
+dilation argument (Section~\ref{sec:dilation}), which also makes the method work
+verbatim in the rational case that occurs for five or more parts. Second,
+Ehrhart positivity is \emph{false} for general lattice polytopes---the Reeve
+tetrahedra have negative linear coefficient---so any proof must use the special
+geometry of hives. Ours uses the Berline--Vergne local Ehrhart formula
+\cite{BerlineVergne,RingSchurmann}: the linear coefficient is a sum, over the
+edges, of the lattice length of the edge times a weight depending only on the
+edge's transverse cone. Because every rank-four rhombus inequality has a
+primitive normal with entries in $\{0,\pm1\}$, there are finitely many
+transverse cones, and we check that every one of their Berline--Vergne weights
+is positive. We emphasise that this is a statement about \emph{edges}: vertex
+cones of four-part hives need not be unimodular (Section~\ref{sec:nonsimple}),
+but this does not affect an edge-local argument.
+
+The same local computation, carried out uniformly in the number of parts, gives
+the following.
+
+\begin{theorem}\label{thm:topfour}
+For every full-dimensional hive polytope of intrinsic dimension $D$ (any number
+of parts), the coefficients of $t^{D},t^{D-1},t^{D-2},t^{D-3}$ in its Ehrhart
+polynomial are positive.
+\end{theorem}
+
+\begin{theorem}\label{thm:sidefive}
+For every full-dimensional five-part hive polytope (necessarily of dimension
+six) all Ehrhart coefficients except possibly the linear one are positive.
+\end{theorem}
+
+Theorem~\ref{thm:topfour} is a statement about \emph{full-dimensional} hives;
+for such a hive of dimension $D\le 4$ it gives all coefficients, but the only
+full-dimensional hives with $D\le 4$ are the four-part ones, so its new content
+is the top four coefficients of full-dimensional hives of dimension $D\ge 5$.
+Together with Theorem~\ref{thm:main} it leaves, for five parts, only the linear
+coefficient of a full-dimensional hive undetermined (Theorem~\ref{thm:sidefive}),
+together with the non-full-dimensional five-part hives of intrinsic dimension at
+least three, whose face transverse cones are projections of $N_5$ and are not
+covered by the atlas.
+
+Finally, in Section~\ref{sec:frontier} we make precise the obstruction to a
+general proof. The local formula reduces Conjecture~\ref{conj:ktt} to a
+hive-specific ``effectivity'' statement (HTE) about Berline--Vergne/Todd weights
+of closed flat-rhombus coarsenings; we prove that termwise (simplex-cone)
+positivity is \emph{false} at codimension four, so a general proof must control
+the closed coarsenings globally, and we record six standard rank-uniform
+shortcuts together with the exact examples that defeat each. These do not
+diminish the four-part theorem, which is complete.
+
+\medskip
+
+The finite verifications underlying Theorems~\ref{thm:main}--\ref{thm:sidefive}
+are exact (integer and rational arithmetic throughout) and are reproduced by
+independent scripts described in Section~\ref{sec:repro}; the Littlewood--%
+Richardson counts were cross-checked against two independent tableau/hive
+enumerators and against published values \cite{lrcalc}.
+
+\section{The hive model and the local Ehrhart formula}\label{sec:prelim}
+
+We recall the hive description of LR coefficients \cite{KnutsonTao} and fix
+coordinates for the four-part case.
+
+A \emph{hive} of size $r$ is a real function on the triangular array
+$\{(i,j):0\le j\le i\le r\}$ that is concave across each of the three families
+of unit rhombi. With border values
+$h(i,0)=\lam_1+\dots+\lam_i$, $h(i,i)=\nu_1+\dots+\nu_i$, and
+$h(r,j)=|\lam|+\mu_1+\dots+\mu_j$, the integer hives are in bijection with the
+LR tableaux counted by $c^{\nu}_{\lam\mu}$. The interior entries are free
+subject to the rhombus inequalities, so the hive polytope
+$H(\lam,\mu,\nu)\subset\R^{D}$, $D=\binom{r-1}{2}$, is cut out by a fixed
+integer matrix $A_r$ (depending only on $r$) applied to the interior entries,
+with a right-hand side that is an integral, homogeneous, linear function of
+$(\lam,\mu,\nu)$. Consequently
+\[
+  H(t\lam,t\mu,t\nu)=t\,H(\lam,\mu,\nu),\qquad
+  L_H(t):=\#\bigl(tH\cap\Z^{D}\bigr)=P^{\nu}_{\lam\mu}(t),
+\]
+so $P^{\nu}_{\lam\mu}$ is the Ehrhart polynomial of $H$ and
+$\deg P^{\nu}_{\lam\mu}=\dim H$. For $r=4$ we have $D=3$ and coordinates
+$(h_{11},h_{12},h_{21})$; eliminating the border, the $18$ rhombus rows reduce
+to $15$ distinct primitive normals, all with entries in $\{0,\pm1\}$
+(Section~\ref{sec:rank4}).
+
+We use the Berline--Vergne local Euler--Maclaurin formula
+\cite{BerlineVergne} (see also \cite{RingSchurmann} for the presentation we
+adopt). For a rational polytope $Q\subset\R^{D}$ and each $k$, the coefficient
+of $t^{k}$ in $L_{Q}(t)$ equals
+\begin{equation}\label{eq:bv}
+  [t^{k}]\,L_{Q}(t)=\sum_{\dim F=k}\alpha\bigl(N(Q,F)\bigr)\,\vol_{\Z}(F),
+\end{equation}
+where the sum runs over the $k$-dimensional faces $F$, $\vol_{\Z}(F)$ is the
+relative lattice volume of $F$, and $\alpha$ is a weight depending only on the
+transverse cone $N(Q,F)$ of $Q$ along $F$, and invariant under lattice
+translation of that cone. The leading term ($k=D$) is the normalized volume and
+the codimension-one term ($k=D-1$) is half the normalized surface area; both are
+manifestly positive.
+
+\section{Period-one dilation}\label{sec:dilation}
+
+The next lemma removes any need to know that a hive polytope is a lattice
+polytope, and lets us apply the lattice formula \eqref{eq:bv} to the rational
+polytopes that occur for five or more parts.
+
+\begin{lemma}\label{lem:dilation}
+Fix $r$ and let $N_r$ be the (finite) set of primitive rhombus normals. Suppose
+that for every \emph{lattice} polytope $P\subset\R^{D}$ whose facet normals lie
+in $N_r$ one has $[t^{k}]L_{P}(t)\ge 0$. Then $[t^{k}]P^{\nu}_{\lam\mu}(t)\ge 0$
+for all partitions of length at most $r$.
+\end{lemma}
+
+\begin{proof}
+Let $H=H(\lam,\mu,\nu)=\{x:A_rx\le b\}$ with $b$ integral, and let $q$ be the
+least common multiple of the denominators of the vertices of $H$. Then
+$qH=\{x:A_rx\le qb\}$ has the same normal fan as $H$---so its facet normals lie
+in $N_r$---and its vertices are $q$ times those of $H$, hence integral; thus $qH$
+is a lattice polytope. Since $L_{qH}(t)=\#(t\,qH\cap\Z^{D})=L_H(qt)$, we have
+$[t^{k}]L_{qH}=q^{k}\,[t^{k}]L_{H}$ with $q>0$, so the two coefficients have the
+same sign. Applying the hypothesis to $qH$ gives $[t^{k}]L_H\ge 0$.
+\end{proof}
+
+By Lemma~\ref{lem:dilation} it suffices, for each fixed $r$, to prove Ehrhart
+coefficient positivity for lattice polytopes with normals in $N_r$; the
+polynomial $P^{\nu}_{\lam\mu}$ inherits it. In particular the four-part theorem
+does not depend on the integrality of four-part hives.
+
+\section{The rank-four normal atlas}\label{sec:rank4}
+
+In coordinates $(h_{11},h_{12},h_{21})$ the primitive rank-four rhombus normals
+are the $15$ vectors
+\[
+  \pm e_1,\ \pm e_2,\ \pm e_3,\ \pm(e_1-e_2),\ \pm(e_1-e_3),\ \pm(e_2-e_3),
+\]
+\[
+  (1,-1,-1),\ (-1,1,-1),\ (-1,-1,1),
+\]
+each with entries in $\{0,\pm1\}$. There are $\binom{15}{2}-6=99$ nonparallel
+pairs. Twelve of the fifteen normals are the type-$A_3$ ``alcoved'' directions;
+the three remaining ``odd'' rows are what make the atlas fail to be totally
+unimodular (over $\binom{15}{3}=455$ triples of rows the determinant multiset is
+$\{|{\det}|{=}0{:}146,\ 1{:}272,\ 2{:}36,\ 4{:}1\}$).
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proofmain}
+
+By Lemma~\ref{lem:dilation} we may assume $H$ is a nonempty lattice polytope in
+$\R^{3}$ with normals in $N_4$; write $L_H(t)=a_3t^3+a_2t^2+a_1t+1$. (If
+$c^{\nu}_{\lam\mu}=0$ then $P\equiv 0$ by saturation \cite{KnutsonTao}, and the
+statement is vacuous.) The leading coefficient $a_3$ is the normalized volume
+and $a_2$ is half the normalized surface area; both are positive, and if
+$\dim H\le 2$ the polynomial is a point, segment, or polygon Ehrhart polynomial,
+which is coefficientwise positive. It remains to bound $a_1$ for
+$\dim H=3$.
+
+Apply \eqref{eq:bv} with $k=1$: since a three-dimensional polytope has each edge
+$E$ as a ridge lying in exactly two facets, the transverse cone $N(H,E)$ is the
+two-dimensional cone spanned by the two facet normals meeting along $E$, both in
+$N_4$. Hence
+\[
+  a_1=\sum_{\text{edges }E}\alpha\bigl(N(H,E)\bigr)\,\ell_{\Z}(E),
+\]
+with $\ell_{\Z}(E)\ge 0$ the lattice length of $E$.
+
+\begin{proposition}\label{prop:codim2}
+For every ordered pair of nonparallel normals in $N_4$, the Berline--Vergne
+weight $\alpha$ of the corresponding pointed two-dimensional transverse cone is
+positive; over the $99$ pairs its minimum value is $1/9$.
+\end{proposition}
+
+Proposition~\ref{prop:codim2} is a finite exact computation
+(Section~\ref{sec:repro}); the weight of a saturated normal basis with Gram
+matrix $\left(\begin{smallmatrix}A&C\\ C&B\end{smallmatrix}\right)$ equals
+$\tfrac14-\tfrac{C}{12}\bigl(\tfrac1A+\tfrac1B\bigr)$, and evaluating this over
+the atlas gives values in $\{1/9,\,5/18,\,1/4\}$, all positive. Granting it,
+\[
+  a_1\ \ge\ \tfrac19\sum_{\text{edges }E}\ell_{\Z}(E)\ >\ 0,
+\]
+so all four coefficients of $L_H$ are positive. Undoing the dilation
+(Lemma~\ref{lem:dilation}) proves Theorem~\ref{thm:main}. \qed
+
+\subsection{Nonsimple vertices do not obstruct the argument}\label{sec:nonsimple}
+The hypotheses use only that $a_1$ is edge-local. For definiteness we note that
+four-part hives really do have nonunimodular vertex cones: at
+$\lam=\mu=(12,8,4)$, $\nu=(18,14,10,6)$ the vertex $(26,32,38)$ is simple with
+primitive tangent rays $(0,1,1),(1,0,1),(1,1,0)$, whose determinant is $2$
+(and the polytope has $c^{\nu}_{\lam\mu}=50$, all vertices integral,
+$L_H(t)=1+7t+18t^2+24t^3$). This has no bearing on \eqref{eq:bv} for $k=1$: each
+edge still lies in exactly two facets, and any further rhombus rows tight along
+an edge are redundant on, or interior to, its two-dimensional transverse cone.
+
+\section{Rank-uniform coefficients and five parts}\label{sec:uniform}
+
+Formula \eqref{eq:bv} localizes each coefficient on faces of a fixed codimension,
+whose transverse cones, for hives of any rank, are generated by the fixed normal
+set $N_r$. Enumerating the possible closed transverse cones and evaluating
+$\alpha$ exactly gives Theorem~\ref{thm:topfour}: the volume and surface terms
+handle codimensions $0,1$, and exact rank-uniform positivity of $\alpha$ on every
+closed codimension-two and codimension-three hive transverse cone handles $t^{D-2}$
+and $t^{D-3}$.
+
+For Theorem~\ref{thm:sidefive} ($r=5$, $D=6$) one further coefficient, the
+quadratic, is controlled at codimension four. Here termwise positivity already
+fails---an individual saturated four-normal cell can have weight $-349/28800$---%
+but the exact slack closure forces such a cell either to raise the normal rank to
+at least five or to embed in one of finitely many pointed rank-preserving closed
+supersets, and every one of those full cones has positive weight (minimum
+$739/86400$). Enumerating all $\binom{27}{4}=17550$ four-normal tuples and their
+closures (903 nonsaturated tuples with minimum weight $1/14400$; 132 negative
+saturated cells, each repaired) yields positivity of $t^{6},\dots,t^{2}$, leaving
+only the linear coefficient. The full enumeration and its independent replay are
+in the codimension-four report.
+
+Theorem~\ref{thm:sidefive} concerns full-dimensional five-part hives. The
+lower-dimensional five-part hives are not reduced to four parts by Horn-facet
+factorization: the triple $\lam=(4,3,3,1)$, $\mu=(4,2,1,1)$, $\nu=(6,5,4,2,2)$
+has $\dim H=3$ while all $142$ essential Horn inequalities are strict.
+
+\section{The general frontier}\label{sec:frontier}
+
+For a period-one hive polytope the local formula writes every Ehrhart coefficient
+as a pairing of nonnegative face volumes with Berline--Vergne/Todd weights on
+transverse cones. Thus Conjecture~\ref{conj:ktt} follows from a single
+hive-specific effectivity statement: for every rank, codimension $q$, and
+$2$-connected primitive-interior closed flat-rhombus coarsening $\Sigma$ with
+weight vector $a_q$ and Minkowski boundary map $\partial_q$,
+\begin{equation}\label{eq:hte}
+  \exists\, y:\quad a_q+\partial_q^{\mathsf T}y\ \ge\ 0. \tag{HTE}
+\end{equation}
+By rational Farkas duality \eqref{eq:hte} is equivalent to
+$\langle a_q,w\rangle\ge 0$ for every nonnegative balanced realizable face weight
+$w$; pairing it with the (positive) face-volume weight of any hive polytope makes
+every coefficient nonnegative. Horn factorization \cite{KTT2006,KTTfactor}
+disposes of separating boundary coarsenings, so the load-bearing case is the
+$2$-connected primitive interior. We have neither a proof of \eqref{eq:hte} nor a
+negative realizable balanced weight refuting it.
+
+On the disproof side, one transfer route deserves record because it is
+\emph{valid} and still fails. Realizing three disjoint horizontal strips as a
+skew shape identifies the lattice points of any $3\times N$ transportation
+polytope with Littlewood--Richardson tableaux of a fixed triple, compatibly
+with dilation: for example, the polytope with row margins $(3,3,3)$ and column
+margins $(2,1^{7})$ has $L_T(n)=c^{\,n\nu}_{n\lam,\,n\mu}$ for
+$\lam=(9,6,3)$, $\mu=(9,9,7,6,5,4,3,2,1)$, $\nu=(15,12,9,7,6,5,4,3,2,1)$
+(both counts equal $1050$ at $n=1$). Hence a $3\times 8$ transportation
+polytope with a negative Ehrhart coefficient would refute
+Conjecture~\ref{conj:ktt} outright. None exists in the relevant regime: over
+the full dimension-$14$, codegree-$3$ margin family the minimum linear
+coefficient is $2157/280>0$ (exhaustive for total margin $\le 19$, with
+saturation in every unbounded direction, and with the closed form
+$\tfrac{3a}{2}\bigl(1+H_{2a-1}-H_a\bigr)>0$ for the symmetric unit-column
+subfamily); moreover codegree $3$ forces $L_T(1)\ge 1050$, so the known
+negative order polytope of Liu and Tsuchiya \cite{LiuTsuchiya}, which has
+$255$ lattice points, is not realizable in this shape. The route evades the
+positivity theorems for skew Gelfand--Tsetlin polytopes (its content
+constraints are global sums, not markings) and dies only on these measured
+facts.
+
+Termwise (simplex-cone) positivity is genuinely false---the $-349/28800$ cell
+above---so a general proof cannot proceed cell by cell; the finite success at
+codimension four does not extend to an unbounded certificate cascade. We record,
+finally, that the standard rank-uniform shortcuts are individually obstructed by
+exact examples: generic type-$A$ Todd/cocircuit balancing (a nonnegative
+$A_4$ Dahmen--Micchelli polynomial maps to $N^4+4N^3+3N^2-2N-\tfrac65$);
+network-flow equivalence (simple hive tangent cones have determinant two);
+generic Cohen--Macaulay/Koszul Hilbert-ring structure (the $Q_{20}$ Hibi ring is
+Gorenstein, Koszul, with negative $a$-invariant, yet its Hilbert polynomial has
+linear coefficient $-168011/330$); matroidal/secondary-fan Todd effectivity
+(a genuine hive face carries a $U_{2,4}$ tight-normal restriction); positive
+tableau/Kostka recursions (they require signs, or stop on primitive triples);
+and rank-by-rank Hurwitz stability (an unbounded hierarchy). Details and the
+supporting computations are in the accompanying reports.
+
+\section{Reproducibility}\label{sec:repro}
+
+Every finite claim above is verified by exact arithmetic and reproduced by
+scripts distributed with this paper.
+\begin{itemize}
+\item Two independent Littlewood--Richardson counters (a hive lattice-point
+enumerator and a lattice-word LR-tableau counter), cross-checked against each
+other on all triples with $|\nu|\le 8$, against $c=1,2$ stretched values, and
+against \cite{lrcalc}.
+\item The rank-four atlas of $15$ normals and $99$ pairs, and
+Proposition~\ref{prop:codim2} (all Berline--Vergne weights, minimum $1/9$).
+\item An independent Ehrhart interpolation that recomputes $L_H(0),\dots,L_H(D+2)$
+and confirms the interpolated polynomial at two held-out points, checked against
+both LR counters; and a verification of $a_1=\sum_E\alpha\,\ell_{\Z}(E)$ against
+lattice-count $a_1$ on more than $10^4$ four-part hives that are not among the
+atlas basis polytopes.
+\item The rank-uniform codimension-two and codimension-three enumerations, and
+the full codimension-four five-part enumeration with the closure repairs.
+\end{itemize}
+The dilation identity of Lemma~\ref{lem:dilation} and the nonunimodular vertex of
+Section~\ref{sec:nonsimple} are likewise reproduced exactly.
+
+The complete reproducibility bundle---the two Littlewood--Richardson counters,
+the rank-four atlas and codimension-two/three enumerations, the five-part
+codimension-four certificate and its independent checker, and the exact replay
+scripts for every displayed value---is available at
+\url{https://github.com/AlperTheKing/ktt-positivity}.
+
+\begin{thebibliography}{99}
+\bibitem{BerlineVergne} N.~Berline and M.~Vergne, \emph{Local Euler--Maclaurin
+formula for polytopes}, Moscow Math.\ J.\ \textbf{7} (2007), 355--386,
+\href{https://arxiv.org/abs/math/0507256}{arXiv:math/0507256}.
+\bibitem{CoqZuber} R.~Coquereaux and J.-B.~Zuber, \emph{From orbital measures to
+Littlewood--Richardson coefficients and hive polytopes}, Ann.\ Inst.\ Henri
+Poincar\'e D \textbf{5} (2018), 339--386,
+\href{https://arxiv.org/abs/1706.02793}{arXiv:1706.02793}.
+\bibitem{DerksenWeyman} H.~Derksen and J.~Weyman, \emph{On the
+Littlewood--Richardson polynomials}, J.\ Algebra \textbf{255} (2002), 247--257.
+\bibitem{FrontierMath} Epoch AI, \emph{FrontierMath open problems: stretched
+Littlewood--Richardson coefficients},
+\href{https://epoch.ai/frontiermath/open-problems/stretched-lr-coefficients}{epoch.ai}
+(accessed 2026-07-22).
+\bibitem{Ikenmeyer} C.~Ikenmeyer, \emph{Small Littlewood--Richardson
+coefficients}, J.\ Algebraic Combin.\ \textbf{44} (2016), 1--29.
+\bibitem{KnutsonTao} A.~Knutson and T.~Tao, \emph{The honeycomb model of
+$GL_n(\mathbb{C})$ tensor products I: proof of the saturation conjecture},
+J.\ Amer.\ Math.\ Soc.\ \textbf{12} (1999), 1055--1090.
+\bibitem{KTW} A.~Knutson, T.~Tao and C.~Woodward, \emph{The honeycomb model II:
+Facets of the Littlewood--Richardson cone}, J.\ Amer.\ Math.\ Soc.\ \textbf{17}
+(2004), 19--48.
+\bibitem{KTT2004} R.~C.~King, C.~Tollu and F.~Toumazet, \emph{Stretched
+Littlewood--Richardson and Kostka coefficients}, in \emph{Symmetry in Physics},
+CRM Proc.\ Lecture Notes \textbf{34} (2004), 99--112.
+\bibitem{KTT2006} R.~C.~King, C.~Tollu and F.~Toumazet, \emph{The hive model and
+the polynomial nature of stretched Littlewood--Richardson coefficients},
+S\'em.\ Lothar.\ Combin.\ \textbf{54A} (2006), B54Ad.
+\bibitem{KTTfactor} R.~C.~King, C.~Tollu and F.~Toumazet, \emph{Factorisation of
+Littlewood--Richardson coefficients}, J.\ Combin.\ Theory Ser.\ A \textbf{116}
+(2009), 314--333.
+\bibitem{LiuTsuchiya} F.~Liu and A.~Tsuchiya, \emph{Stanley's non-Ehrhart-positive
+order polytopes}, Adv.\ in Appl.\ Math.\ \textbf{108} (2019), 1--10,
+\href{https://arxiv.org/abs/1806.08403}{arXiv:1806.08403}.
+\bibitem{lrcalc} P.~Alexandersson, \texttt{lrcalc-rs},
+\href{https://github.com/PerAlexandersson/lrcalc-rs}{github.com/PerAlexandersson/lrcalc-rs}.
+\bibitem{RingSchurmann} M.~H.~Ring and A.~Sch\"urmann, \emph{Local formulas for
+Ehrhart coefficients from lattice tiles}, Beitr.\ Algebra Geom.\ \textbf{61}
+(2020), 157--185, \href{https://arxiv.org/abs/1709.10390}{arXiv:1709.10390}.
+\bibitem{Sherman} C.~Sherman, \emph{Geometric proof of a conjecture of King,
+Tollu and Toumazet}, \href{https://arxiv.org/abs/1505.06551}{arXiv:1505.06551}.
+\bibitem{ShortPoly} \emph{A short proof of the polynomiality of stretched
+Littlewood--Richardson coefficients},
+\href{https://arxiv.org/abs/2211.06810}{arXiv:2211.06810}.
+\end{thebibliography}
+
+\end{document}

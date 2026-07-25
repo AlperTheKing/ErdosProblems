@@ -1,0 +1,49 @@
+[package]
+name = "ehp_n3_poc"
+version = "2.0.0"
+edition = "2021"
+description = "EHP Conjecture n=3 Rigorous Verification — IEEE 1788 Interval Arithmetic"
+authors = ["Kenneth A. Mendoza <kenmendoza@me.com>"]
+
+[dependencies]
+inari = "2.0"
+rayon = "1.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha256 = "1"
+
+[[bin]]
+name = "ehp_n3_poc"
+path = "src/main.rs"
+
+[[bin]]
+name = "ehp_n3_ieee1788"
+path = "src/bin/ehp_n3_ieee1788.rs"
+
+[[bin]]
+name = "ehp_general"
+path = "src/bin/ehp_general.rs"
+
+[[bin]]
+name = "level2"
+path = "src/bin/level2.rs"
+
+[[bin]]
+name = "level3_ia"
+path = "src/bin/level3_ia.rs"
+
+[[bin]]
+name = "hessian_check"
+path = "src/bin/hessian_check.rs"
+
+[[bin]]
+name = "n4_estimate"
+path = "src/bin/n4_estimate.rs"
+
+[[bin]]
+name = "ehp_general_ieee1788"
+path = "src/bin/ehp_general_ieee1788.rs"
+
+[profile.release]
+opt-level = 3
+lto = true

@@ -1,0 +1,24 @@
+[package]
+name = "ktt-kostka-gate"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+build = "build.rs"
+
+[dependencies]
+ehrcalc-kostka-engine = { path = "../vendor/ehrcalc/crates/ehrcalc-kostka-engine" }
+fs2 = "0.4"
+num-bigint = "0.4"
+num-rational = "0.4"
+num-traits = "0.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+
+[profile.release]
+overflow-checks = true
+panic = "unwind"
+
+[dev-dependencies]
+tempfile = "3"

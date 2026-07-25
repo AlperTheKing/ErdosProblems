@@ -1,0 +1,6 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38475,0 +38476,2 @@
++[2026-07-23T18:13:29+03:00] OK VERIFY | DID: audited 75-edge affine family | RESULT: 375-var/16450-clause UNSAT; DRAT verified; Hall proof saved | D: affine lane DEAD
++[2026-07-23T18:13:30+03:00] > ATTACK | NEXT: search unrestricted K26 and audit flexible algebraic constructions; replay any hit with both exact verifiers.

@@ -1,0 +1,28 @@
+diff --git a/problems_external/erdos_1212/APPROACH_REGISTRY.md b/problems_external/erdos_1212/APPROACH_REGISTRY.md
+--- a/problems_external/erdos_1212/APPROACH_REGISTRY.md
++++ b/problems_external/erdos_1212/APPROACH_REGISTRY.md
+@@ -155,0 +156,16 @@
++
++## Final route audit
++
++R2 is `DEAD`: the root and an independent C++ implementation each exhausted
++all 6,162 ordered pairs `2 <= A,B <= 80`, `A != B`, with every start residue
++and every monotone `A by B` path represented by exact dynamic programming.
++Both returned `NO_HIT`. This closes only the registered bounded R2 family.
++
++The horizontal-strip obstruction used for R3 is general within its mechanism:
++horizontal edges cannot lie on an even row, while for any finite collection
++of odd rows a column divisible by every prime occurring in those row values
++contains no visible vertex. Hence no path confined to finitely many fixed
++rows can cross that column.
++
++No registered direct route remains. Erdős #1212 is unresolved; bounded
++`NO_HIT` results are not a proof or disproof.
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38460,0 +38461,4 @@
++[2026-07-23T17:41:18+03:00] FAIL ATTACK | DID: two exact R2 scans over 6,162 period pairs | RESULT: both NO_HIT for all A,B<=80 | D: R2 DEAD
++[2026-07-23T17:41:19+03:00] OK VERIFY | DID: proved finite-row obstruction | RESULT: a common-prime column blocks every fixed finite horizontal strip | D: R3 DEAD
++[2026-07-23T17:41:20+03:00] FAIL CHECK | DID: applied direct-proof guard | RESULT: no registered theorem-closing route remains for #1212 | D: #1212 DEAD
++[2026-07-23T17:41:21+03:00] > SELECT | NEXT: audit all nine DECIDABLE-tagged problems for the smallest exact residual certificate.

@@ -1,0 +1,11 @@
+{
+  "experiment_id": "EXP-MATH-ERDOS20-SUNFLOWER-001",
+  "title": "Sunflower Lattice Gas — Partition Function",
+  "problem": "Erdos #20: Sunflower Conjecture",
+  "parameters": {"w": 4, "k": 3},
+  "data": [
+    {"n": 5, "w": 4, "k": 3, "num_w_subsets": 5, "total_sf_free": 32, "max_family_size": 5, "max_density": 1.00000000, "log2_count": 5.000000, "erdos_bound": 16, "time_s": 0.000, "density_of_states": [1, 5, 10, 10, 5, 1]},
+    {"n": 6, "w": 4, "k": 3, "num_w_subsets": 15, "total_sf_free": 5789, "max_family_size": 9, "max_density": 0.60000000, "log2_count": 12.499098, "erdos_bound": 16, "time_s": 0.000, "density_of_states": [1, 15, 105, 435, 1125, 1773, 1560, 660, 105, 10]},
+    {"n": 7, "w": 4, "k": 3, "num_w_subsets": 35, "total_sf_free": 35333735, "max_family_size": 15, "max_density": 0.42857143, "log2_count": 25.074543, "erdos_bound": 16, "time_s": 3.922, "density_of_states": [1, 35, 595, 6405, 47985, 260337, 1036560, 3017040, 6300840, 9125095, 8691095, 5028835, 1576785, 229215, 12660, 252]}
+  ]
+}

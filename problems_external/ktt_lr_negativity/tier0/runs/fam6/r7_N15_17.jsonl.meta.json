@@ -1,0 +1,18 @@
+{
+ "r": 7,
+ "Nlo": 15,
+ "Nhi": 17,
+ "D": 15,
+ "generated": 127938,
+ "stage1": {
+  "empty": 67623,
+  "rejected_c_gt_D1": 0,
+  "cap_fail": 0
+ },
+ "survivors": 60315,
+ "ok": 60215,
+ "other": 100,
+ "wall_s": 259.7,
+ "out": "runs/fam6/r7_N15_17.jsonl",
+ "exhaustive": true
+}

@@ -1,0 +1,5 @@
+gaps=[53, 64, 60, 64, 64, 56, 63, 63, 52] lam=[177, 124, 60, 0] mu=[184, 120, 56, 0] nu=[272, 209, 146, 94]  dim=3 c=81287 V=463258 h*=[1, 81283, 308641, 73333] P=[1,301/3,3976,231629/3]
+   n=1  P(n)=81287  engineA=81287  engineB=CAP_EXCEEDED  *** MISMATCH ***
+   n=2  P(n)=633783  engineA=633783  engineB=CAP_EXCEEDED  *** MISMATCH ***
+
+ANCHOR: FAIL

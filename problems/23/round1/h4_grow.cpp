@@ -209,7 +209,9 @@ int main(int argc, char** argv) {
     }
     for (auto& x : th) x.join();
     fclose(fout);
-    fprintf(stderr, "[grow] candidates=%llu kept=%llu\n",
-            (unsigned long long)ncand.load(), (unsigned long long)nkeep.load());
+    fprintf(stderr, "[grow] candidates=%llu MTF-children=%llu exact-bip-evals=%llu max_bip=%d\n",
+            (unsigned long long)ncand.load(), (unsigned long long)nkeep.load(),
+            (unsigned long long)nexact.load(), GBEST.load());
+    for (auto& s : BESTG) fprintf(stderr, "  extremal %s\n", s.c_str());
     return 0;
 }

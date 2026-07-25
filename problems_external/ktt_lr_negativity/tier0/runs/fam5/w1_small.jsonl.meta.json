@@ -1,0 +1,7 @@
+{
+ "batch": "w1_small.batch",
+ "stage0": 3000,
+ "stage1_empty": 635,
+ "stage1_nonint": 0,
+ "stage2_screened": 2365
+}

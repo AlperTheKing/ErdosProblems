@@ -1,0 +1,6 @@
+diff --git a/problems_external/erdos_1212/engine/search_unbalanced.cpp b/problems_external/erdos_1212/engine/search_unbalanced.cpp
+--- a/problems_external/erdos_1212/engine/search_unbalanced.cpp
++++ b/problems_external/erdos_1212/engine/search_unbalanced.cpp
+@@ -1,1 +1,2 @@
+ #include <algorithm>
++#include <cstdint>

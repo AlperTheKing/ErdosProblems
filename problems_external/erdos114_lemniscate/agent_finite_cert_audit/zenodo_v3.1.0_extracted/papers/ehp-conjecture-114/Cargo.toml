@@ -1,0 +1,15 @@
+[package]
+name = "ehp_n3_poc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+inari = "2.0.0"
+rayon = "1.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha256 = "1"
+
+[profile.release]
+opt-level = 3
+lto = true

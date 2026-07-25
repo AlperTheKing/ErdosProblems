@@ -1,0 +1,73 @@
+{
+  "branch_and_bound": {
+    "dimensions": 3,
+    "domain": "a in [-4,4]^2 x b in [0,4]",
+    "proof_complete": true
+  },
+  "closest_competitor": {
+    "l_value": 7.77436668944811,
+    "params": {
+      "a_im": 0.40000000000000036,
+      "a_re": -0.1333333333333333,
+      "b": 1.0
+    }
+  },
+  "experiment": "EHP_n3_Level3_SymmetryReduced",
+  "grid_error": {
+    "max_rel_200": 0.0055124549465652645,
+    "max_rel_400": 0.0016561486801506232,
+    "max_rel_800": 0.0006405051367085292
+  },
+  "hessian": {
+    "all_negative": true,
+    "diagonal": [
+      -3815396.2200528467,
+      -5120447.891776081,
+      -41174662.91834582
+    ]
+  },
+  "l_star_bounds": {
+    "best_estimate": 9.178447207012244,
+    "lower": 9.17323529111486,
+    "raw_res3200": 9.177619102522241,
+    "upper": 9.182320093133619,
+    "width": 0.009084802018758609
+  },
+  "margin": 1.3988686016667504,
+  "margin_pct": 15.24945733182802,
+  "note": "Symmetry-reduced 3D B&B. The rotation b->b*e^{it} preserves L, so we fix b>=0 real. Extremizer is the single point (0,0,1). Conservative error bounds with empirical Lipschitz and multi-point sampling.",
+  "outer_domain": {
+    "b0_margin": 0.5367175281604624,
+    "face_margin": 3.434028881663634,
+    "max_face_l_corrected": 5.739206409451226,
+    "max_face_l_raw": 4.592623425104917,
+    "safe": true
+  },
+  "richardson_chain": {
+    "deltas": {
+      "r1": 0.0013899048775218859,
+      "r2": 0.0012978288598226584,
+      "r3": 0.0012773980680638175
+    },
+    "r1": [
+      9.168610805030342,
+      9.174172996208426,
+      9.17694404135146,
+      9.178333946228982
+    ],
+    "r2": [
+      9.174543808953633,
+      9.177128777694328,
+      9.17842660655415
+    ],
+    "r3": [
+      9.17716980894418,
+      9.178447207012244
+    ]
+  },
+  "rigor_level": "conservative floating-point with symmetry reduction (not IEEE 1788)",
+  "symmetry_reduction": "L(a, b) = L(a*e^{-2it/3}, |b|); reduced 4D -> 3D by fixing b >= 0 real",
+  "total_evaluations": 17632,
+  "total_time_secs": 19.166063417,
+  "verdict": "EHP_N3_VERIFIED"
+}

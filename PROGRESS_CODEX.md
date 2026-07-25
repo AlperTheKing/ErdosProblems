@@ -38172,3 +38172,371 @@
 [2026-07-21T21:35:23+03:00] FAIL VERIFY | DID: ran 1-thread 2 s canary under load | RESULT: wrapper 4 s wall deadline expired; CANARY_TIMEOUT; no search | D: fix grace
 [2026-07-21T21:35:24+03:00] > VERIFY | NEXT: raise launcher scheduling grace only, rerun 7 adversarial tests and exact AuditOnly gate; no production.
 [2026-07-21T21:51:20.1163330+03:00] > VERIFY | NEXT: rebuild independent raw auditors and run their 14-test cross-calibration plus adapter 8-test suite.
+[2026-07-21T22:08:38.7613640+03:00] OK VERIFY | DID: dual-compiler black-box gate | RESULT: replay report PASS, 2 checkpoints/38 rows/0 hits; malformed 7/7 rejected | D: none
+[2026-07-21T22:09:57+03:00] OK VERIFY | DID: completed frozen native prelaunch gate | RESULT: exe D0171F7E; launcher 238824EF; 7/7 suite; black-box PASS | D: ATTACK
+[2026-07-21T22:09:58+03:00] > ATTACK | NEXT: launch one unrestricted n19 C++ run, 64 threads, seed 2026072101, 28800 s; stop on raw hit for two-verifier replay.
+[2026-07-21T22:10:31+03:00] OK ATTACK | DID: started audited native wrapper | RESULT: unrestricted19-64t-seed2026072101-20260721T191030079; self-test PID34672; stderr0 | D: gate
+[2026-07-21T22:11:36+03:00] OK ATTACK | DID: launched unrestricted n19 C++ search | RESULT: PID76040; 64 workers; deadline 2026-07-22T06:11:36+03; stderr0 | D: monitor
+[2026-07-21T22:21:39+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 454138880 evals; best objective13; hit absent; stderr0 | D: continue
+[2026-07-21T22:21:40+03:00] > PLAN | NEXT: attack frozen q5 checkpoint and tournament-completion lemma with independent non-compute agents during the 64T run.
+[2026-07-21T22:22:53+03:00] > ATTACK | NEXT: hand-prove completion lemma or give smallest canonical exhaustive obstruction; launch no computation.
+[2026-07-21T22:24:40+03:00] > ATTACK | NEXT: derive exact witness dependencies and explicit fixed-q edits from frozen q5 checkpoint; launch no worker or verifier.
+[2026-07-21T22:29:19+03:00] FAIL ATTACK | DID: exhausted all 4 directed-C4 completions | RESULT: TOURNAMENT_COMPLETION_C4_OBSTRUCTION.md; lemma false | D: DEAD
+[2026-07-21T22:32:56+03:00] > ATTACK | NEXT: prove deletion signature and test its safe-arc double count for a degree-7 collapse; launch no computation.
+[2026-07-21T22:40:30+03:00] FAIL ATTACK | DID: exact q5 surgery | RESULT: 9 reversals keep obj13; 4 relocations force d7 at 8,9,11,13 | D: DEAD: reformulation maze - no explicit adjacency bridge
+[2026-07-21T22:41:21+03:00] FAIL ATTACK | DID: audited deletion safe-arc count | RESULT: MINIMAL_COUNTEREXAMPLE_DELETION_SIGNATURE.md | D: DEAD: reformulation maze - no degree-collapse inequality
+[2026-07-21T22:47:20+03:00] > VERIFY | NEXT: reconstruct objective-11 raw ledger, then derive one explicit relocation without worker, solver, verifier, or enumeration.
+[2026-07-21T22:47:37+03:00] > ATTACK | NEXT: hand-test loss-accounting completion inequality on all directed-C4 completions with two independent agents; launch no computation.
+[2026-07-21T22:48:05+03:00] OK VERIFY | DID: replayed q5 two-reversal candidate | RESULT: scalar+bitset agree valid nonhit; objective11; 9 failing vertices | D: archive
+[2026-07-21T22:49:21+03:00] FAIL ATTACK | DID: exhausted all 4 directed-C4 loss tables | RESULT: LOSS_ACCOUNTING_C4_OBSTRUCTION.md; |L|=1>0 | D: DEAD
+[2026-07-21T22:51:27+03:00] > SELECT | NEXT: extract exact degree-7 and 2026 strengthening frontiers from primary papers before choosing another global proof route.
+[2026-07-21T22:53:29+03:00] OK CHECK | DID: compared native scores | RESULT: source smooth/literal 14/13; two-reversal 16/11; HEURISTIC_DIVERGENCE.md CD59070F | D: post-run
+[2026-07-21T22:53:30+03:00] OK ATTACK | DID: reversed 7->11,18->2; relocated 12-0 to 14-7 | RESULT: raw SHA 62241FCC; q5; min8; obj10 | D: VERIFY
+[2026-07-21T22:56:00+03:00] > VERIFY | NEXT: preserve dual-verifier objective10 ledger, then derive explicit star-broken edits without search or live-run mutation.
+[2026-07-21T22:56:35+03:00] OK VERIFY | DID: replayed q5 star-breaking relocation | RESULT: scalar+bitset agree valid nonhit; obj10; 10 failing; SHA 62241FCC | D: continue
+[2026-07-21T22:57:49+03:00] OK PLAN | DID: registered star-broken q5 surgery frontier | RESULT: SHA 62241FCC; obj10; exact adjacency bridge | D: ATTACK
+[2026-07-21T23:02:02+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 15131712611 evals; best obj13; hit absent; stderr0; PID76040 alive | D: continue
+[2026-07-21T23:02:02+03:00] FAIL SELECT | DID: audited 2026 proof frontiers | RESULT: delta8 loses Lemma2.5 equality; p>1/2 route has no closing lemma | D: no proof route
+[2026-07-21T23:02:34+03:00] > GATE | NEXT: preserve the exact Lemma 2.5 delta7-to-delta8 obstruction with primary citations; open no proof route.
+[2026-07-21T23:02:20+03:00] FAIL ATTACK | DID: exact obj10 block surgery | RESULT: BLOCK_OBSTRUCTION.md 40DF1D74; forced cycle gives obj18 | D: DEAD: reformulation maze - no explicit adjacency bridge
+[2026-07-21T23:06:14+03:00] OK VERIFY | DID: replayed q5 twin-fill raw graph | RESULT: scalar+bitset agree valid nonhit; obj9; 9 failing; SHA 32CAB562 | D: ALIVE
+[2026-07-21T23:06:14+03:00] OK CHECK | DID: compared independent obj10 attacks | RESULT: explicit obj9 relocation falsifies premature local DEAD | D: ATTACK
+[2026-07-21T23:07:50+03:00] OK GATE | DID: preserved delta7-to8 source audit | RESULT: DEGREE7_TO_8_EXTENSION_AUDIT.md SHA 5D4D3214; four-defect obstruction | D: no proof route
+[2026-07-21T23:08:10+03:00] > ATTACK | NEXT: derive one explicit star-breaking q5 edit below objective9 from frozen twin-block adjacency; launch no search or worker.
+[2026-07-21T23:09:49+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 18079906451 evals; best obj13; hit absent; stderr0; PID76040 alive | D: continue
+[2026-07-21T23:12:22+03:00] OK CHECK | DID: audited fill 9->12 star-hole family | RESULT: every such relocation has objective>=17 by 9-row N2 gain | D: reject family
+[2026-07-21T23:12:35+03:00] FAIL ATTACK | DID: proved obj9 single-relocation obstruction | RESULT: E8EDFF61; every nonhub row has witnesses 2,2,4,4,6,6,8,8 | D: coupled edits open
+[2026-07-21T23:16:22+03:00] OK CHECK | DID: proved all one-hole relocations from obj9 nonimproving | RESULT: SINGLE_RELOCATION_OBSTRUCTION.md SHA E8EDFF61 | D: coupled edits only
+[2026-07-21T23:13:38+03:00] > PLAN | NEXT: register the direct r=4 positivity route and draft the exact Buch-McMullen-B/mu proof with a replayed 72-witness certificate.
+[2026-07-21T23:18:30+03:00] FAIL VERIFY | DID: refereed one-relocation note | RESULT: inward penalties are >=+1, not exactly +1; scope corrected; SHA 6D1E1CF5 | D: theorem retained
+[2026-07-21T23:19:00+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 21510071944 evals; best obj13; hit absent; stderr0; 65 threads alive | D: continue
+[2026-07-21T23:18:48+03:00] > VERIFY | NEXT: replay the r=4 edge certificate independently and bind its normals to the canonical hive matrix.
+[2026-07-21T23:18:54+03:00] OK VERIFY | DID: replayed r=4 certificate | RESULT: PASS; SHA C13F8F47; ranks B=27,M=72; min_mu=0 | D: proof draft
+[2026-07-21T23:18:55+03:00] > CHECK | NEXT: hostile-referee the Buch size bridge, McMullen locality, balance-span inference, and novelty claim.
+[2026-07-21T23:24:02+03:00] OK VERIFY | DID: two agents proved q5 star-incidence lower bound | RESULT: min objective9 if core fixed and d+(12)>=8; SHA 50591ADE | D: core edit required
+[2026-07-21T23:24:02+03:00] OK PLAN | DID: preserved future C++ lex-v2 design only | RESULT: stride457; seed/warmup caveat; SHA B7A28F46; live v1 unchanged | D: audit
+[2026-07-21T23:23:30+03:00] OK CHECK | DID: hostile-refereed r=4 KTT proof | RESULT: R4_KTT_THEOREM.md DC52FCA9; cert PASS; Buch integrality cited | D: theorem
+[2026-07-21T23:25:59+03:00] OK VERIFY | DID: refereed future lex-v2 design | RESULT: bounds/rank/seed caveat accepted; Tmin corrected to .050059; SHA 3DC80CA4 | D: design only
+[2026-07-21T23:26:51+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 24506037432 evals; best obj13; hit absent; stderr0; 65 threads alive | D: continue
+[2026-07-21T23:35:00+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 27835712465 evals; best obj13; hit absent; stderr0; 65 threads alive | D: continue
+[2026-07-21T23:35:00+03:00] OK CHECK | DID: proved block-cycle plus one-relocation bound | RESULT: objective>=9; BLOCK_UNIFORM_CYCLE_OBSTRUCTION.md SHA A067498F | D: nonuniform only
+[2026-07-21T23:39:43+03:00] OK CHECK | DID: closed q5 minimal chain families | RESULT: vertex-cycle SHA A1F390DE; two-witness SHA A12D3C40; no obj<9 | D: exit
+[2026-07-21T23:39:43+03:00] FAIL ATTACK | DID: ended q5 objective9 surgery | RESULT: longer nonuniform quotient chain is missing bridge | D: DEAD: reformulation maze - no explicit adjacency bridge
+[2026-07-21T23:40:35+03:00] > PLAN | NEXT: specify separate lex-v2 C++ seed/parser/rank patch and adversarial tests; do not edit or launch while live v1 runs.
+[2026-07-21T23:42:30+03:00] > VERIFY | NEXT: Rebuild det-2 hive and audit universal edge-local bridge without trusting existing checkers.
+[2026-07-21T23:45:24+03:00] FAIL VERIFY | DID: audited lex-v2 checkpoint interleaving | RESULT: inherited CAS/mutex can expose stale snapshot; C6 blocks patch | D: revise mutex protocol
+[2026-07-21T23:47:52+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 32540280128 evals; best obj13; hit absent; stderr0; 65 threads alive | D: continue
+[2026-07-21T23:46:54+03:00] OK VERIFY | DID: rebuilt stated hive without q2 | RESULT: c=50; ray det=2; vcheck skips ntd=6 | D: refutes 589M smoothness claim
+[2026-07-21T23:55:00+03:00] OK CHECK | DID: audited BV bridge and Buch convention | RESULT: bridge VALID; Buch n=4=3 variables; finite cert replay remains | D: proof conditional on cert
+[2026-07-21T23:52:05+03:00] FAIL VERIFY | DID: audited v2 seed/warmup contract | RESULT: v1 lacks option-presence bit; omitted vs explicit5000 ambiguous | D: add warmup_steps_given
+[2026-07-21T23:52:32+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 35647439844 evals; best obj13; hit absent; stderr0; 65 threads alive | D: continue
+[2026-07-21T23:54:49+03:00] > GATE | NEXT: audit primary CM, quiver, hive-semigroup and chamber results for a rank-uniform monomial-positivity bridge.
+[2026-07-22T00:01:13+03:00] OK VERIFY | DID: refereed integrated lex-v2 contract | RESULT: fixed seed, mutex best, warmup/counters/provenance accepted; SHA FF9FE448 | D: spec ready
+[2026-07-22T00:01:28+03:00] > PLAN | NEXT: falsify a rank-uniform tableau/order-map decomposition on the stated r=5 half-integral hive family.
+[2026-07-22T00:03:39+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 40622037416 evals; best obj13; hit absent; stderr0; 65 threads alive | D: continue
+[2026-07-22T00:11:07+03:00] FAIL VERIFY | DID: audited v2 integration | RESULT: v1 launcher lacks preartifact seed gate and --seed-file | D: require separate v2 launcher
+[2026-07-22T00:11:07+03:00] > ATTACK | NEXT: implement separate v2 C++ source and launcher only; do not compile or run while live v1 remains active.
+[2026-07-22T00:10:55+03:00] OK VERIFY | DID: replayed v2 seed in 4 independent binaries | RESULT: bytes471;q5;arcs166;obj9;smooth18;mask0x6E252 agree | D: seed gate frozen
+[2026-07-22T00:11:12+03:00] OK CHECK | DID: read live native checkpoint | RESULT: 43890961506 evals; best obj13; hit absent; stderr0; 65 threads alive | D: continue
+[2026-07-22T00:28:38+03:00] FAIL ATTACK | DID: stopped SSNC v1 at user request | RESULT: 49467133965 evals; no hit; PIDs 76040/79764 gone | D: CANCELLED/INCONCLUSIVE
+[2026-07-22T06:45:53+03:00] > SELECT | NEXT: pursue full KTT via exact complete-fan GHTE, with certified counterexample as the only alternative.
+[2026-07-22T06:45:53+03:00] OK GATE | DID: registered GHTE direct route V3 | RESULT: APPROACH_REGISTRY_GENERAL_KTT_V3.md; canonical ear deletion DEAD | D: Route A active
+[2026-07-22T06:45:53+03:00] > VERIFY | NEXT: replay r4 complete-fan contract and independently audit quotient balance, BV pairing, and Farkas data.
+[2026-07-22T06:48:53+03:00] OK VERIFY | DID: replayed r4 complete-fan checker | RESULT: SHA 3e4f0b26; f=(1,12,21,11); q2 rank20/pair7; q3 rank10/pair1 | D: audit pending
+[2026-07-22T06:48:53+03:00] > ATTACK | NEXT: test GHTE on intrinsic-dim3 r5 Horn-gap fan and derive an exact complete-fan wall-crossing transport or obstruction.
+[2026-07-22T06:57:54+03:00] OK PLAN | DID: isolated Frontier r5 exhaustive gap | RESULT: |nu|=27..30 absent; resume-safe per-N launcher created | D: finite CE gate ready
+[2026-07-22T06:57:54+03:00] > ATTACK | NEXT: queue r5 |nu|=27..30 exact census after current lr_hive workers exit; use 56 workers, held-out checks, no pruning.
+[2026-07-22T06:58:09+03:00] OK ATTACK | DID: launched hidden r5 frontier census queue | RESULT: PID83104; waiting for 5 prior lr_hive jobs; stdout frontier_r5_27_30.stdout.log | D: queued
+[2026-07-22T07:03:05+03:00] OK ATTACK | DID: proved one-way GHTE refinement descent | RESULT: GHTE_REFINEMENT_DESCENT_NOTE.md; effective fine fan implies effective coarsening | D: bridge narrowed
+[2026-07-22T07:03:05+03:00] FAIL PLAN | DID: tested unconditional upward fan lift | RESULT: Castillo-Liu braid fan non-effective for d>=24 despite effective simplex coarsening | D: hive-specific lift required
+[2026-07-22T06:47:02+03:00] > ATTACK | NEXT: build the exact intrinsic r5 Horn-gap complete fan and test q=2 GHTE with a replayable Farkas certificate.
+[2026-07-22T06:49:06+03:00] > VERIFY | NEXT: independently rebuild the r4 complete fan and replay q2/q3 balance, BV, Ehrhart, and Farkas identities.
+[2026-07-22T06:51:20+03:00] > ATTACK | NEXT: enumerate exact side-5 intrinsic-dim5 fan chambers and isolate one adjacent support-number bistellar flip.
+[2026-07-22T07:04:16+03:00] > ATTACK | NEXT: scan exact side-5 dim-3 corpus for a non-tetrahedral fan and build its q2/q3 GHTE contract.
+[2026-07-22T07:10:07+03:00] OK ATTACK | DID: rebuilt 87 r5 dim-3 fans | RESULT: R5_LOWERDIM_GHTE_COMPLETE_FAN_AUDIT.md; 866 q2 cones, min 1/10, 0 negative | D: GHTE survives
+[2026-07-22T07:12:20+03:00] > VERIFY | NEXT: independently reconstruct the hard r5 dim-3 fan and audit exact q2/q3 GHTE data plus the 87-case corpus.
+[2026-07-22T07:12:19+03:00] OK VERIFY | DID: independently replayed final r5 GHTE contract | RESULT: SHA d5fcb31c; PASS; hard q2 pair3/min1/8, q3 pair1/shift1/7 | D: audit2 pending
+[2026-07-22T07:12:19+03:00] > VERIFY | NEXT: zero-trust rebuild the hard r5 fan, BV data, balances, pairings, and Farkas certificates without trusting the checker.
+[2026-07-22T07:15:39+03:00] OK VERIFY | DID: completed zero-trust r4 fan audit | RESULT: SHA731ab7d6; counts0..5 match LR; q2 pair7; direct q3 pair1; det2 alpha1/4 | D: r4 gate closed
+[2026-07-22T07:16:14+03:00] > PLAN | NEXT: prove the dilation-compatible skew-Kostka-to-LR embedding, then run one bounded exact negativity falsification gate.
+[2026-07-22T07:18:13+03:00] OK PLAN | DID: proved homogeneous skew-Kostka-to-LR embedding | RESULT: KOSTKA_TO_LR_HOMOGENEOUS_BRIDGE.md, equation (1) for every n | D: CE route live
+[2026-07-22T07:18:13+03:00] > ATTACK | NEXT: pin and build the public exact Kostka engine, then falsify its degree/interpolation contract before any census.
+[2026-07-22T07:16:55+03:00] OK VERIFY | DID: finalized independent r4 fan audit | RESULT: fileSHA100ac64a; payload9a01b8c3; exact q2/q3 match | D: none
+[2026-07-22T07:19:03+03:00] OK VERIFY | DID: audited r5 q2 metric/subdivision | RESULT: sanitySHA94501986; mismatches0; pairings11/6,3 | D: none
+[2026-07-22T07:20:59+03:00] OK VERIFY | DID: zero-trust r5 dim-3 GHTE audit | RESULT: SHA cba5ad66; 87 fans, 866 q2 cones, 0 mismatches; q2/q3 rowspaces match | D: gate confirmed
+[2026-07-22T07:24:19+03:00] OK VERIFY | DID: built legacy Kostka and maintained Ehrcalc | RESULT: math tests 29+120+33+6+5 pass; one docs-only CRLF drift fails | D: bridge audit pending
+[2026-07-22T07:24:19+03:00] > VERIFY | NEXT: independently test the homogeneous Kostka-to-LR map on 100 small instances before launching the bounded gate.
+[2026-07-22T07:28:15+03:00] > ATTACK | NEXT: build a resume-safe exact Rust scanner for the one authorized skew-Kostka gate; do not launch it.
+[2026-07-22T07:34:48+03:00] OK VERIFY | DID: completed zero-trust Kostka-to-LR bridge audit | RESULT: 387/387 count matches; 128/128 heldouts; SHA4f6ac191 | D: gate authorized
+[2026-07-22T07:34:48+03:00] > VERIFY | NEXT: independently replay the bridge audit and confirm exact hashes before launching the bounded counterexample gate.
+[2026-07-22T07:36:36+03:00] OK VERIFY | DID: replayed zero-trust bridge audit | RESULT: PASS; records1ed4128d; Ehrhart839d611f; reportSHA4f6ac191 | D: scanner audit next
+[2026-07-22T07:39:30+03:00] > VERIFY | NEXT: run the frozen Kostka-gate release tests, full schedule audit, and independent tableau scope checker before launch.
+[2026-07-22T07:39:50+03:00] FAIL VERIFY | DID: ran ignored full-schedule test during referee build | RESULT: LNK1104 target exe locked by concurrent cargo PID80408 | D: none
+[2026-07-22T07:33:39+03:00] OK VERIFY | DID: zero-trust audited Kostka-LR bridge | RESULT: audit SHA4f6ac191; core384/384; heldouts128/128; U bound | D: bridge confirmed
+[2026-07-22T07:35:58+03:00] > VERIFY | NEXT: run the bounded Kostka gate unit tests and independently audit its exact schedule and resume contract; do not launch the gate.
+[2026-07-22T07:44:41+03:00] OK VERIFY | DID: refereed frozen Kostka gate | RESULT: tests8/8; scope69218 SHA1ac5f598; adversarial50000; audit168/168 | D: launch authorized
+[2026-07-22T07:44:41+03:00] > ATTACK | NEXT: launch the single bounded exact Kostka gate and stop immediately on a negative row for independent LR certification.
+[2026-07-22T07:45:13+03:00] FAIL ATTACK | DID: launched gate binary PID78648 | RESULT: 0 rows; Windows main stack overflow before manifest; stderr gate-v1.stderr.log | D: fix runner
+[2026-07-22T07:45:13+03:00] > VERIFY | NEXT: move scanner run onto a fixed 64MiB stack, rebuild, rerun all audits, then relaunch from empty state.
+[2026-07-22T07:48:55+03:00] OK VERIFY | DID: rebuilt gate on fixed 64MiB stack | RESULT: tests8/8; schedule50000 PASS; binarySHA43ae6290 | D: runner fixed
+[2026-07-22T07:48:55+03:00] OK ATTACK | DID: launched exact Kostka gate v2 | RESULT: PID74112; config c1136b46; 2700 rows; 0 errors; 0 negatives | D: running
+[2026-07-22T07:54:22+03:00] OK VERIFY | DID: audited refinement descent valuation step | RESULT: PT Cor1(iii)/BV Def23 Cor24 prove exact normal-cone additivity | D: descent retained
+[2026-07-22T07:54:22+03:00] OK ATTACK | DID: found an actual r4 2-to-2 hive wall | RESULT: circuit (1,-1,-1,1), exact wall scale2; script PASS | D: unit-flip route live
+[2026-07-22T08:00:34+03:00] > ATTACK | NEXT: test the reachable r5 nonunit circuit (1,-2,-1,2) on the exact 1022-fan dim6 corpus and verify an interpolated wall.
+[2026-07-22T07:52:59+03:00] > PLAN | NEXT: derive the Todd q-cycle wall law for a unit-circuit 2<->2 fan flip and test bidirectional effectivity transport.
+[2026-07-22T07:52:45+03:00] > ATTACK | NEXT: run exact r=4 and r=5 hive wall gates to falsify the unit balanced 2<->2 circuit claim.
+[2026-07-22T07:55:15+03:00] > ATTACK | NEXT: derive the intrinsic Ehrhart wall-jump law for one hive 2<->2 flip and test its coefficient signs on exact r4/r5 pairs.
+[2026-07-22T08:03:03+03:00] > VERIFY | NEXT: replay the actual r4 wall jump with an independent exact cone-triangulation Ehrhart engine and audit every q sign.
+[2026-07-22T07:54:05+03:00] OK PLAN | DID: fixed frontier to the local Todd-cycle flip law | RESULT: unit circuit plus common link; all q; bidirectional transport | D: ATTACK
+[2026-07-22T07:54:05+03:00] > ATTACK | NEXT: replay the exact r4 wall gate and extract a concrete unit-circuit fan for the Todd-cycle test.
+[2026-07-22T07:58:10+03:00] > ATTACK | NEXT: run a bounded exact r=4 gate for a nonunit or non-2<->2 actual hive wall.
+[2026-07-22T08:03:04+03:00] FAIL ATTACK | DID: tested 100000 r4 triples | RESULT: 501 simple hives; no actual nonunit/non-2<->2 wall | D: r5 target
+[2026-07-22T08:03:04+03:00] > ATTACK | NEXT: realize r5 circuit (1,-2,-1,2) by finite exact closure search over transverse 3-row links.
+[2026-07-22T08:03:15+03:00] OK ATTACK | DID: replayed exact r4 wall gate | RESULT: PASS; circuit (1,-1,-1,1); smooth 5-ray complete fans | D: VERIFY
+[2026-07-22T08:03:15+03:00] > VERIFY | NEXT: compute the graph action and Todd q=2 correction exactly in the minimal smooth complete fan.
+[2026-07-22T08:04:27+03:00] FAIL ATTACK | DID: derived actual r4 wall jump | RESULT: ACTUAL_HIVE_WALL_EHRHART_OBSTRUCTION.md; jump=C((-Omega)n+1,3), q2=-r/6 | D: DEAD local lift
+[2026-07-22T08:04:28+03:00] OK VERIFY | DID: replayed cdd plus two exact Ehrhart engines | RESULT: actual_hive_wall_ehrhart_obstruction.py PASS; heldouts m=5,6 | D: confirmed
+[2026-07-22T08:07:31+03:00] FAIL ATTACK | DID: tested two r5 nonunit 4-circuits | RESULT: each has 680 links and 0 strict closure-feasible links | D: test longer circuits
+[2026-07-22T08:07:31+03:00] > ATTACK | NEXT: sample 20000 exact r5 seven-row circuits and certify the first actual non-2<->2 wall.
+[2026-07-22T08:08:58+03:00] FAIL ATTACK | DID: searched r5 dim5 2-to-2 fan pairs | RESULT: 30616 candidates; 100 exact fans; 57 groups; no pair | D: corpus route exhausted
+[2026-07-22T08:11:02+03:00] > ATTACK | NEXT: test exact GHTE in every q on one smooth full-dim r5 hive fan via its Chow ring and an independent nonnegative-cycle LP.
+[2026-07-22T08:08:48+03:00] > ATTACK | NEXT: test a canonical common-refinement lift against the exact unit hive flip and derive its theorem-closing map or obstruction.
+[2026-07-22T08:10:10+03:00] FAIL ATTACK | DID: sampled 20000 r5 seven-row sets | RESULT: 531 circuits; 0 strict closed faces | D: test size3/4 circuits
+[2026-07-22T08:10:10+03:00] > ATTACK | NEXT: exhaust exact r5 size-3/4 circuits for a closed nonunit or non-2<->2 wall face.
+[2026-07-22T08:10:10+03:00] OK VERIFY | DID: checked the unit-flip graph map and BV classes | RESULT: audit PASS SHA04df198f; [bc]->-[ad]; Todd correction 1/6[ad] | D: graph lift dead
+[2026-07-22T08:10:10+03:00] > VERIFY | NEXT: replay the independent actual-hive Ehrhart wall audit and match its q2 sign to the 1/6 graph correction.
+[2026-07-22T08:10:59+03:00] OK VERIFY | DID: replayed actual-hive wall audit | RESULT: PASS; q2 jump=-z/3=-(1/6)(2z), matching graph sign | D: obstruction confirmed
+[2026-07-22T08:14:10+03:00] FAIL ATTACK | DID: exhausted r5 size3/4 circuits | RESULT: 441 circuits; 234 candidates; 120 strict faces; no certified pair | D: test r4 facet births
+[2026-07-22T08:14:10+03:00] > ATTACK | NEXT: exhaust A4 circuits including facet-birth walls and certify the smallest non-2<->2 pair.
+[2026-07-22T08:14:01+03:00] OK VERIFY | DID: added direct common-refinement Todd check | RESULT: PASS SHA131dd30f; tdW-pL*tdL=-xz/6; tdW-pR*tdR=-yz/6 | D: ascent dead
+[2026-07-22T08:15:56+03:00] OK VERIFY | DID: extended flip audit to every q | RESULT: PASS SHA3a0aaa1d; q0,q1,q3 fixed; q2 correction 1/6 | D: artifact final
+[2026-07-22T08:16:44+03:00] FAIL ATTACK | DID: derived canonical master lift | RESULT: tdW-pL*tdL=-[ae]/6 and tdW-pR*tdR=-[be]/6 | D: DEAD pullback transport
+[2026-07-22T08:16:44+03:00] > VERIFY | NEXT: replay the standalone master checker and independently compare its Chow and balanced-weight identities.
+[2026-07-22T08:18:59+03:00] OK VERIFY | DID: replayed two exact Chow/BV checkers | RESULT: SHA102b0ce9 and SHA3a0aaa1d agree on both -1/6 corrections | D: confirmed
+[2026-07-22T08:20:03+03:00] OK ATTACK | DID: found smallest actual hive counterwall | RESULT: rank4; primitive (1,1,-1); HIVE_WALL_CIRCUIT_CLASSIFICATION.md | D: claim false
+[2026-07-22T08:20:03+03:00] > VERIFY | NEXT: replay the frozen cdd quotient checker and audit all new scripts and protocol-line lengths.
+[2026-07-22T08:21:04+03:00] OK CHECK | DID: hostile-refereed master obstruction | RESULT: CONFIRM; GRR and projection formula preserve the -1/6 separator | D: DEAD transport
+[2026-07-22T08:21:38+03:00] OK ATTACK | DID: ran smooth full-dim r5 Chow GHTE gate | RESULT: PASS SHA4e1cf7db; q0..q6 effective; A-dims 1,2,3,4,3,2,1 | D: one fan only
+[2026-07-22T08:21:38+03:00] > VERIFY | NEXT: independently rebuild q5 balance/BV data and cross-check the Chow certificate on the same r5 fan.
+[2026-07-22T08:23:08+03:00] > VERIFY | NEXT: replay GPT Pro's rank7 candidate with current lrcalc-rs h-vector code and the independent hive engine at held-out dilations.
+[2026-07-22T08:22:31+03:00] > VERIFY | NEXT: Rebuild the stated r5 complete fan and audit q=5 GHTE independently from exact hive inequalities.
+[2026-07-22T08:29:05+03:00] OK VERIFY | DID: audited actual r4 star ascent | RESULT: PASS SHA97a25d46; Delta=(0,-z/2,-5yz/6,0) | D: DEAD canonical lift
+[2026-07-22T08:29:05+03:00] OK CHECK | DID: tested balanced separators | RESULT: q1=-1/2; q2=-5/6; both endpoint fans GHTE-effective | D: transport only
+[2026-07-22T08:29:50+03:00] > PLAN | NEXT: test an exact dilation-compatible transfer of O(P7,7) to LR/skew-Kostka and stop on a structural invariant.
+[2026-07-22T08:40:01+03:00] > ATTACK | NEXT: reconstruct O(P7,7) exactly and test the homogeneous two-row contingency-to-Kostka transfer.
+[2026-07-22T08:41:43+03:00] OK ATTACK | DID: tested O(P7,7) transfer | RESULT: PASS; codegree3, L(1)=255, 2x15 Kostka lower bound3003 | D: route DEAD
+[2026-07-22T08:42:59+03:00] > VERIFY | NEXT: independently referee the exact table-fibre obstruction and audit the no-overclaim scope.
+[2026-07-22T08:31:39+03:00] FAIL VERIFY | DID: first current lrcalc-rs build | RESULT: Cargo invoked outside cloned manifest, then Windows optind link failed | D: portable patch
+[2026-07-22T08:31:39+03:00] OK VERIFY | DID: rebuilt lrcalc-rs 17efa931 with Windows-only ABI patch | RESULT: release lrcalc.exe built; math sources unchanged | D: replay running
+[2026-07-22T08:38:06+03:00] OK VERIFY | DID: zero-trust audited smooth r5 GHTE | RESULT: B5 136x48 rank46; td5 support2; a1=287/60; all q PASS | D: finite gate closed
+[2026-07-22T08:38:06+03:00] FAIL CHECK | DID: assessed canonical GHTE transports | RESULT: four exact negative corrections; no rank-uniform lift | D: DEAD wall transport
+[2026-07-22T08:40:03+03:00] OK VERIFY | DID: replayed GPT Pro rank7 candidate | RESULT: h* exact; hive n1..5; lrcalc heldouts n8,n9 match; SHA9fd6ae6 | D: not a CE
+[2026-07-22T08:42:00+03:00] FAIL VERIFY | DID: ran older tableau stretch2 inversion | RESULT: unfinished after 15m; process stopped; no value used | D: none
+[2026-07-22T08:34:38+03:00] OK VERIFY | DID: Zero-trust smooth r5 GHTE replay | RESULT: q0..6 effective; B5 136x48 rank46; [n]=287/60; audit report written | D: finite gate passed
+[2026-07-22T08:47:11+03:00] OK VERIFY | DID: refereed order-to-LR obstruction | RESULT: PASS; a1=-3041/1430, codeg3, 3003>255; SHA 4B79741B | D: DEAD direct route
+[2026-07-22T08:49:10+03:00] > PLAN | NEXT: test the finite codegree3 3x8 transportation family and transfer any negative polynomial homogeneously to LR.
+[2026-07-22T08:48:00+03:00] > ATTACK | NEXT: Enumerate capped unordered 3x8 row margins exactly and filter by L_T(1)=255.
+[2026-07-22T08:52:14+03:00] > VERIFY | NEXT: derive and hostile-audit the exact 3x8 transportation-to-LR partitions and codegree-three certificate.
+[2026-07-22T08:56:02+03:00] FAIL VERIFY | DID: replayed six explicit LR counts | RESULT: five hive jobs hit node cap; no mismatch returned | D: reduce to one exact replay
+[2026-07-22T09:00:31+03:00] OK VERIFY | DID: audited 3x8 transport-to-LR bridge | RESULT: bridge/codegree PASS; checker SHA DA210DFF; exact min L(1)=1050 | D: none
+[2026-07-22T09:00:32+03:00] FAIL CHECK | DID: tested V4 L(1)=255 gate | RESULT: L(1)>=1050 for all ri>=3; zero survivors | D: DEAD invariant gate
+[2026-07-22T08:52:25+03:00] OK ATTACK | DID: Enumerated all 35 capped row-margin orbits twice | RESULT: min L_T(1)=1050; target 255 has 0 survivors | D: route DEAD
+[2026-07-22T08:52:26+03:00] > VERIFY | NEXT: Replay the standalone exact gate checker and validate its fixed payload hash.
+[2026-07-22T08:52:40+03:00] OK VERIFY | DID: Replayed exact dual-enumeration checker | RESULT: PASS; payload 3907934da5f593179491c267b4fca629967dd442273afd520070040b10e6c0fb | D: none
+[2026-07-22T08:56:30+03:00] OK ATTACK | DID: Reconstructed 35 exact degree-14 transport polynomials | RESULT: 0 negative; min 128114573/29059430400 | D: DEAD finite family
+[2026-07-22T08:56:31+03:00] > VERIFY | NEXT: Replay raw DP, exact interpolation, 70 held-out checks, and the frozen full-payload hash.
+[2026-07-22T08:56:45+03:00] OK VERIFY | DID: Replayed 35 polynomials and n=15,16 held-outs | RESULT: PASS; full payload 3799958aaee2183d00beb97b793fa1a1d41ea0533 | D: none
+[2026-07-22T08:59:13+03:00] FAIL ATTACK | DID: exhausted codegree3 3x8 transfer gate | RESULT: 35 classes; L1>=1050>255; 0 negative; heldouts pass | D: route DEAD
+[2026-07-22T08:59:13+03:00] > PLAN | NEXT: derive the exact linear coefficient for symmetric unit-column tables and transfer any negative value to LR.
+[2026-07-22T09:01:06+03:00] > ATTACK | NEXT: derive the finite binomial formula for A(a), then calibrate only a=3..12 exactly.
+[2026-07-22T09:05:10+03:00] OK ATTACK | DID: collapsed the symmetric transport sum | RESULT: A(a)=3a(1+H_(2a-1)-H_a)/2>0 | D: family route DEAD
+[2026-07-22T09:05:10+03:00] OK VERIFY | DID: replayed 2D DP, binomial sum, interpolation for a=3,4,5 | RESULT: PASS; payload b4f28c6e7d76f38e | D: none
+[2026-07-22T09:05:36+03:00] OK VERIFY | DID: ran independent 2D/cap DPs at a=3,4 with 4 heldouts | RESULT: PASS; payload fabd84d1efc1c8b4 | D: none
+[2026-07-22T09:07:45+03:00] OK CHECK | DID: proved V5 linear sign | RESULT: A(a)=3a/2(1+H(2a-1)-H(a))>0; 2 independent checkers PASS | D: route DEAD
+[2026-07-22T09:07:45+03:00] > PLAN | NEXT: derive the double-cap term for the full symmetric unit-column family and decide its linear sign exactly.
+[2026-07-22T09:12:10+03:00] > ATTACK | NEXT: derive [n]C2 for 2a<k<3a and calibrate only (2,5),(3,7),(3,8) by exact DP and heldouts.
+[2026-07-22T09:35:50+03:00] OK ATTACK | DID: collapsed the double-cap cone sum | RESULT: [n]C2=-1/2 sum(r/(2a+r),r=1..k-2a) | D: family sign decided
+[2026-07-22T09:35:51+03:00] > VERIFY | NEXT: replay raw DP, numerator expansion, interpolation, heldouts, and 66 bounded chamber identities.
+[2026-07-22T09:12:00+03:00] > VERIFY | NEXT: independently derive V6 double-cap linear term and replay minimal open cases exactly.
+[2026-07-22T09:35:03+03:00] > PLAN | NEXT: prove the arbitrary-row unit-column linear formula and its homogeneous LR bridge without a margin census.
+[2026-07-22T09:40:00+03:00] OK ATTACK | DID: derived V6 double-cap term | RESULT: [n]C2=-1/2 sum q/(2a+q); [n]L>=3(3a-k)/2>0 | D: V6 DEAD
+[2026-07-22T09:40:01+03:00] OK VERIFY | DID: replayed two exact V6 checkers | RESULT: DP heldouts and partial fractions PASS; payload 2cf9b20044eff0c0 | D: none
+[2026-07-22T09:40:02+03:00] > ATTACK | NEXT: prove V7 arbitrary-row pair correction, strict sign, and homogeneous LR identity exactly.
+[2026-07-22T10:04:05+03:00] OK ATTACK | DID: proved V7 arbitrary-row formula | RESULT: [n]L=3k/2-sum F(ri)-sum F(ri+rj)>=3/2 | D: V7 DEAD
+[2026-07-22T10:04:06+03:00] OK VERIFY | DID: replayed 3 V7 audits | RESULT: 185 polynomials, 370 heldouts, 3 chambers, all-n LR bridge PASS | D: none
+[2026-07-22T10:04:30+03:00] > PLAN | NEXT: resolve the eight archived LR degree anomalies with exact polynomials and ambient heldouts.
+[2026-07-22T10:04:31+03:00] > ATTACK | NEXT: run pinned lrcalc-rs and independent LR replays on the eight named triples; stop on any negative coefficient.
+[2026-07-22T09:35:39+03:00] OK VERIFY | DID: independently proved and replayed full 3-row unit-column a1 formula | RESULT: 5 asym cases+10 heldouts PASS; SHA E37FE409 | D: V6 DEAD
+[2026-07-23T11:36:30+03:00] > SELECT | NEXT: audit Wang's six prompts/proofs and score still-open neighbors by exact direct-route and novelty gates.
+[2026-07-23T12:00:20+03:00] OK SELECT | DID: audited live candidates | RESULT: selected #1132 first question; Tao leaves fixed-defect gap | D: SELECT->GATE
+[2026-07-23T12:00:21+03:00] > GATE | NEXT: verify current status, claims, workers, and the exact quantifiers of #1132.
+[2026-07-23T12:00:22+03:00] OK GATE | DID: checked official page and arXiv:2603.21453v3 | RESULT: OPEN; no claim or listed worker | D: GATE->PLAN
+[2026-07-23T12:00:23+03:00] > PLAN | NEXT: register fixed-defect recurrence and diagonal-counterexample routes with explicit exits.
+[2026-07-23T12:00:24+03:00] OK PLAN | DID: wrote registry and CDC-style prompt | RESULT: problems_external/erdos_1132/{APPROACH_REGISTRY,PROMPT}.md | D: PLAN->ATTACK
+[2026-07-23T12:00:25+03:00] > ATTACK | NEXT: run three independent first-round attacks on recurrence, construction, and Tao-dependence frontiers.
+[2026-07-23T12:08:20+03:00] FAIL ATTACK | DID: tested Route B interval-extension lemma | RESULT: Tao Thm 1.10 forbids budget B>K_I on fixed I | D: Route B DEAD
+[2026-07-23T12:08:21+03:00] OK VERIFY | DID: audited target quantifiers | RESULT: corrected weak point-dependent-C reading; proof does not imply uniform C | D: none
+[2026-07-23T12:19:10+03:00] OK ATTACK | DID: derived exact prefix updates and reset family | RESULT: arbitrarily large L_n(t) can fall below 1+eps in one insertion | D: recurrence DEAD
+[2026-07-23T12:19:11+03:00] OK ATTACK | DID: tested fixed-window high-set persistence | RESULT: nested Lobatto pair has two-prefix fixed-defect union measure tending to 0 | D: route DEAD
+[2026-07-23T12:19:12+03:00] OK ATTACK | DID: tested clustered Route C blocks | RESULT: m-node eps-cluster forces L>=C_K eps^{-(m-1)} off cluster | D: clustered blocks DEAD
+[2026-07-23T12:19:13+03:00] > VERIFY | NEXT: independently referee the Lobatto asymptotic, reset lemma, and clustered-block blow-up.
+[2026-07-23T12:29:40+03:00] OK VERIFY | DID: independently refereed Lobatto equations 16-22 | RESULT: uniform interior asymptotic and two-prefix measure limit PASS | D: none
+[2026-07-23T12:34:10+03:00] > VERIFY | NEXT: replay the 4-thread dyadic HP calibration at n=4097 and compare direct-product values.
+[2026-07-23T12:35:00+03:00] OK VERIFY | DID: replayed dyadic HP scan, 4 threads, n=4097 | RESULT: 72 rows; direct-product max log error 0 | D: calibration only
+[2026-07-23T12:34:29+03:00] FAIL ATTACK | DID: tested rank-one/Remez resource | RESULT: exponential rate closes; Re-Leja has D_k<=(k+1)^2 | D: universal route DEAD
+[2026-07-23T12:36:45+03:00] FAIL ATTACK | DID: exhausted #1132 direct routes | RESULT: no fixed-point second-order bridge; no proof/disproof | D: #1132 DEAD
+[2026-07-23T12:36:46+03:00] > SELECT | NEXT: score #1192 and backups by exact theorem-closing bridges and live collision gates.
+[2026-07-23T12:44:00+03:00] OK SELECT | DID: rejected #1192; selected #156 | RESULT: Ruzsa's sole log loss is a finite lift-saturation frontier | D: SELECT->GATE
+[2026-07-23T12:44:01+03:00] > GATE | NEXT: verify #156 live status, comments, workers, and later log-removal literature.
+[2026-07-23T12:44:02+03:00] OK GATE | DID: checked live page and literature | RESULT: OPEN; 0 comments; no worker; no O(N^(1/3)) result found | D: GATE->PLAN
+[2026-07-23T12:44:03+03:00] > PLAN | NEXT: register Ruzsa log-removal and exact-design routes with hard exits.
+[2026-07-23T12:44:04+03:00] OK PLAN | DID: wrote registry and prompt | RESULT: problems_external/erdos_156/{APPROACH_REGISTRY,PROMPT}.md | D: PLAN->ATTACK
+[2026-07-23T12:44:05+03:00] > ATTACK | NEXT: reconstruct Ruzsa bad-event dependencies and falsify or prove a log-removal mechanism.
+[2026-07-23T12:55:17+03:00] > ATTACK | NEXT: compile C++ and exhaust N=42,43 at k=5 with 4 threads to extract/falsify the small-order pattern.
+[2026-07-23T12:56:19+03:00] > ATTACK | NEXT: exhaust N=10,k=3 and N=22,k=4 with the pinned 4-thread C++ engine to extract witness structure.
+[2026-07-23T12:56:58+03:00] OK ATTACK | DID: exhausted N=42,43 at k=5, 4 threads | RESULT: HIT {10,18,19,25,30}; N=43 NO_HIT | D: calibration only
+[2026-07-23T12:56:58+03:00] > ATTACK | NEXT: test N=72,k=6 with the same 4-thread C++ engine for an algebraic-pattern witness.
+[2026-07-23T12:58:52+03:00] FAIL ATTACK | DID: audited #156 LLL and resampling routes | RESULT: bad-event cliques force p/M>>log M | D: Route A DEAD
+[2026-07-23T13:03:05+03:00] > VERIFY | NEXT: replay all bounded #156 hits with an independent C++ pair-sum verifier.
+[2026-07-23T13:03:19+03:00] OK VERIFY | DID: pair-sum replayed N=10,22,42 witnesses | RESULT: all VERIFIED by independent C++ verifier | D: bounded only
+[2026-07-23T13:38:22+03:00] FAIL ATTACK | DID: exhausted #156 routes | RESULT: log retained; radix collision; Singer saturation has no invariant | D: #156 DEAD
+[2026-07-23T13:38:23+03:00] > SELECT | NEXT: apply the Wang scaffold-frontier gate and live collision audit to choose a theorem-closing target.
+[2026-07-23T13:54:39+03:00] OK SELECT | DID: live-gated Erdős #273 | RESULT: OPEN; 0 claims/comments/workers; Selfridge p=3 scaffold | D: #273 selected
+[2026-07-23T13:54:40+03:00] > PLAN | NEXT: calibrate an exact native cover engine on Selfridge's 360 family, then audit one fixed p>=5 family.
+[2026-07-23T14:00:46+03:00] OK PLAN | DID: fixed #273 certificate route and Selfridge calibration | RESULT: 12 congruences; p<=877 excluded externally | D: frontier exact cover
+[2026-07-23T14:00:46+03:00] > ATTACK | NEXT: verify Selfridge's period-360 cover and select one reciprocal-feasible p>877 period by native C++.
+[2026-07-23T14:06:14+03:00] FAIL ATTACK | DID: replayed #273 fixed L=55440 sieve | RESULT: exact eta=0.833943<1; family UNSAT | D: Route A DEAD
+[2026-07-23T14:06:14+03:00] > SELECT | NEXT: choose the next live-gated candidate with a theorem-closing scaffold and no existing certificate collision.
+[2026-07-23T14:12:31+03:00] FAIL GATE | DID: audited #265 against Kovač-Tao v4 | RESULT: target alpha>=4, method requires alpha<6/5 | D: #265 rejected
+[2026-07-23T14:58:30+03:00] > SELECT | NEXT: choose #197 for a direct finite-state construction of two monotone-3AP-free enumerations.
+[2026-07-23T14:58:31+03:00] OK SELECT | DID: checked live #197 | RESULT: OPEN; 0 comments, 0 claims, no worker | D: #197 selected
+[2026-07-23T14:58:32+03:00] > GATE | NEXT: verify current literature, exact statement, and absence of a published resolution.
+[2026-07-23T14:58:33+03:00] OK GATE | DID: checked official thread, papers, and fc_lean/197.lean | RESULT: no current resolution found; statement preserved | D: gate passed
+[2026-07-23T14:58:34+03:00] > PLAN | NEXT: run R1 finite-state, R2 uniform-extension, and A1 adversarial audit as independent routes.
+[2026-07-23T14:58:35+03:00] OK PLAN | DID: created #197 registry and neutral prompt | RESULT: R1, R2, A1 each has deliverable, frontier, bridge, action, exit | D: PLAN->ATTACK
+[2026-07-23T14:59:10+03:00] > ATTACK | NEXT: calibrate two exact checkers, then falsify small finite-state block templates before any 64-worker run.
+[2026-07-23T15:05:40+03:00] FAIL ATTACK | DID: replayed all 12 insertions of 11 into a valid [10] prefix | RESULT: both C++ verifiers reject all | D: R2 DEAD
+[2026-07-23T15:10:10+03:00] > ATTACK | NEXT: calibrate 2,483,712 automatic templates at N=63 using 1 C++ thread and replay the best certificate twice.
+[2026-07-23T15:10:20+03:00] FAIL ATTACK | DID: corrected template count and ran N=63 calibration | RESULT: 2,342,592 tested; none valid at N=31 | D: logged count corrected
+[2026-07-23T15:10:21+03:00] OK VERIFY | DID: replayed best automatic certificate at N=15 | RESULT: both independent C++ verifiers return VALID | D: bounded only
+[2026-07-23T15:22:04+03:00] FAIL ATTACK | DID: Closed #197 R1/R2 after exact audits | RESULT: R2 obstruction at 11; R1 no closing invariant, see erdos_197 registry | D: DEAD
+[2026-07-23T15:30:49+03:00] FAIL GATE | DID: checked #1131 live forum | RESULT: 2026-04-26 prior disproof claim; 2026-04-27 standard-check comment | D: #1131 DEAD
+[2026-07-23T15:32:53+03:00] OK SELECT | DID: selected #1152 | RESULT: vanishing-excess interpolation has one robust-resonance frontier | D: #1152 selected
+[2026-07-23T15:32:54+03:00] OK GATE | DID: checked live page and literature search | RESULT: OPEN; 0 comments, claims, workers; no resolution found | D: gate passed
+[2026-07-23T15:32:55+03:00] OK PLAN | DID: wrote registry and neutral prompt | RESULT: erdos_1152 registry gives deliverable, frontier, bridge, test, exit | D: PLAN->ATTACK
+[2026-07-23T15:32:56+03:00] > ATTACK | NEXT: reconstruct 1980 resonance blocks and falsify or prove uniform resistance to degree-o(n) corrections.
+[2026-07-23T15:40:02+03:00] FAIL ATTACK | DID: proved normalized sign-block bound | RESULT: degree-s q can cancel ceil(M/2)+O(s) blocks, not O(s) | D: sign-only bridge DEAD
+[2026-07-23T15:44:35+03:00] FAIL ATTACK | DID: audited #1152 EV transfer | RESULT: constant q cancels a fixed positive-measure large-error test exactly | D: R1 DEAD
+[2026-07-23T15:44:36+03:00] FAIL CHECK | DID: applied direct-proof guard | RESULT: missing weighted anti-approximation lemma equals unresolved frontier | D: #1152 DEAD
+[2026-07-23T15:44:37+03:00] > SELECT | NEXT: scan live open problems for a mature reduction with one strictly smaller theorem-closing gap.
+[2026-07-23T16:21:10+03:00] FAIL SELECT | DID: audited #1206 | RESULT: Tait/LLL stops at N^(8/9); linear bridge needs new bounded coloring | D: #1206 DEAD
+[2026-07-23T16:23:00+03:00] FAIL SELECT | DID: audited #602 | RESULT: one-flip proof fails at a cofinality-omega limit | D: #602 DEAD
+[2026-07-23T16:32:41+03:00] OK SELECT | DID: selected #993 forest route | RESULT: 9,881,235 exact products from 4,445 public non-LC trees | D: #993 selected
+[2026-07-23T16:32:42+03:00] OK GATE | DID: checked live page, forum, repository | RESULT: open; public forest run used only 80 catalog members | D: gate passed
+[2026-07-23T16:32:43+03:00] OK PLAN | DID: wrote direct-route registry | RESULT: erdos_993 registry fixes certificate, bridge, test, and exit | D: PLAN->ATTACK
+[2026-07-23T16:32:44+03:00] > ATTACK | NEXT: acquire/hash 4,445-tree catalog and reproduce published calibration before exact pair scan.
+[2026-07-23T16:35:06+03:00] > ATTACK | NEXT: run upstream search_993_v2.py over 112,916 bushes and 253,695 published forest objects for calibration.
+[2026-07-23T16:38:27+03:00] > ATTACK | NEXT: compile native C++ catalog and all-pairs engine, then run single-thread catalog calibration.
+[2026-07-23T16:40:05+03:00] OK ATTACK | DID: reran upstream #993 calibration | RESULT: 112,916 trees; 4,445 non-LC; 253,695 forests; NO_HIT | D: R1 alive
+[2026-07-23T16:41:02+03:00] FAIL ATTACK | DID: ran native catalog calibration | RESULT: 1 vs expected 4,445; moved-key insertion bug isolated | D: engine blocked
+[2026-07-23T16:41:20+03:00] > ATTACK | NEXT: rebuild after moved-key fix and require exact 112,916/4,445/0 catalog counts.
+[2026-07-23T16:42:10+03:00] OK ATTACK | DID: rebuilt and reran native catalog | RESULT: exact 112,916 scanned; 4,445 non-LC; 0 tree hits | D: engine unblocked
+[2026-07-23T16:43:15+03:00] FAIL VERIFY | DID: audited v2 family claim | RESULT: T*_3,3,4 absent; v2 star arm adds 1 vertex vs published 2 | D: input freeze blocked
+[2026-07-23T16:53:45+03:00] OK VERIFY | DID: audited full published families | RESULT: 54 v2 omissions; frozen union 4,499; 10,122,750 pairs | D: R1 scope corrected
+[2026-07-23T16:53:46+03:00] > ATTACK | NEXT: rebuild fail-closed 4,499-entry engine and compare its full dump to frozen Python union.
+[2026-07-23T16:58:00+03:00] > VERIFY | NEXT: run forced-valley C++ tests and adversarially compare all 4,499 native records to the frozen union.
+[2026-07-23T16:58:40+03:00] OK VERIFY | DID: ran forced-valley tests and set comparison | RESULT: scanner PASS; 4,499/4,499 label/order/poly match | D: production gate passed
+[2026-07-23T16:58:41+03:00] > ATTACK | NEXT: scan exactly 10,122,750 frozen-union pairs with fail-closed native C++ engine, 64 threads.
+[2026-07-23T16:59:05+03:00] FAIL ATTACK | DID: scanned 10,122,750 frozen-union pairs, 64 threads | RESULT: exact NO_HIT; tested=expected | D: R1 DEAD
+[2026-07-23T16:59:06+03:00] > SELECT | NEXT: audit another live open problem with a mature reduction and strictly theorem-closing finite or local gap.
+[2026-07-23T17:01:50+03:00] > VERIFY | NEXT: independently parse frozen 4,499 JSONL and rescan 10,122,750 pairs with separate C++ verifier, 64 threads.
+[2026-07-23T17:04:32+03:00] OK VERIFY | DID: independent C++ replay, 64+1 threads | RESULT: 4,499 parsed; 10,122,750/10,122,750 NO_HIT both | D: R1 independently confirmed
+[2026-07-23T17:21:47+03:00] FAIL GATE | DID: audited #307 current work | RESULT: Lean barrier: >=59 primes and min member >2.09e56 | D: #307 DEAD
+[2026-07-23T17:21:48+03:00] OK SELECT | DID: selected #1212 periodic path | RESULT: one finite E/N period would give an infinite exact certificate | D: #1212 selected
+[2026-07-23T17:21:49+03:00] OK GATE | DID: checked live page, thread, web, formal entry | RESULT: open; 0 comments and 0 proof claims; no resolution found | D: gate passed
+[2026-07-23T17:21:50+03:00] OK PLAN | DID: wrote #1212 direct-route registry | RESULT: period certificate, bridge, M<=120 test, and exit fixed | D: PLAN->ATTACK
+[2026-07-23T17:21:51+03:00] > ATTACK | NEXT: exact-DP all periodic monotone certificates for M<=120; independently replay any hit.
+[2026-07-23T17:28:44+03:00] FAIL ATTACK | DID: two exact balanced-period DPs through M=120 | RESULT: 0 certificates; fixed protection hits prime-pair phase | D: R1 DEAD
+[2026-07-23T17:28:45+03:00] > ATTACK | NEXT: exact-DP unbalanced periods 2<=A,B<=80 using determinant and composite-residue certificates.
+[2026-07-23T17:41:18+03:00] FAIL ATTACK | DID: two exact R2 scans over 6,162 period pairs | RESULT: both NO_HIT for all A,B<=80 | D: R2 DEAD
+[2026-07-23T17:41:19+03:00] OK VERIFY | DID: proved finite-row obstruction | RESULT: a common-prime column blocks every fixed finite horizontal strip | D: R3 DEAD
+[2026-07-23T17:41:20+03:00] FAIL CHECK | DID: applied direct-proof guard | RESULT: no registered theorem-closing route remains for #1212 | D: #1212 DEAD
+[2026-07-23T17:41:21+03:00] > SELECT | NEXT: audit all nine DECIDABLE-tagged problems for the smallest exact residual certificate.
+[2026-07-23T17:51:31+03:00] FAIL SELECT | DID: audited 9 DECIDABLE targets | RESULT: all lack executable finite cutoff or have crowded claims | D: pool rejected
+[2026-07-23T17:51:32+03:00] OK SELECT | DID: selected #475 refutation layer | RESULT: first uncovered layer p=17,t=13 has 560 subsets | D: #475 selected
+[2026-07-23T17:51:33+03:00] OK GATE | DID: checked live page, forum, papers, public certificates | RESULT: no counterexample; public backtest ends at p=13 | D: passed
+[2026-07-23T17:51:34+03:00] OK PLAN | DID: wrote #475 registry and neutral prompt | RESULT: exact certificate, bridge, test, and exit fixed | D: PLAN->ATTACK
+[2026-07-23T17:51:35+03:00] > ATTACK | NEXT: compile 2 independent C++ engines, calibrate p<=13, and exhaust all 560 p=17,t=13 subsets.
+[2026-07-23T17:59:24+03:00] FAIL GATE | DID: checked the 2017 computation | RESULT: all abelian groups of order <=23 verified; p=17 is published | D: #475 R1 DEAD
+[2026-07-23T17:59:25+03:00] > SELECT | NEXT: audit uncrowded falsifiable problems for a theorem-closing direct route before computation.
+[2026-07-23T18:04:39+03:00] OK SELECT | DID: ranked audited candidates | RESULT: #617 first open case r=5 and one K26 colouring refutes all | D: #617 selected
+[2026-07-23T18:04:40+03:00] OK GATE | DID: checked live page, forum, 1999 paper, and literature search | RESULT: open; no claim or active worker found | D: passed
+[2026-07-23T18:04:41+03:00] OK PLAN | DID: wrote #617 registry and prompt | RESULT: exact certificate, bridge, falsifier, and exit fixed | D: PLAN->ATTACK
+[2026-07-23T18:04:42+03:00] > ATTACK | NEXT: calibrate two exact verifiers; attack K26 via affine construction, SAT, native local search, and structure.
+[2026-07-23T18:13:29+03:00] OK VERIFY | DID: audited 75-edge affine family | RESULT: 375-var/16450-clause UNSAT; DRAT verified; Hall proof saved | D: affine lane DEAD
+[2026-07-23T18:13:30+03:00] > ATTACK | NEXT: search unrestricted K26 and audit flexible algebraic constructions; replay any hit with both exact verifiers.
+[2026-07-23T18:22:52+03:00] OK VERIFY | DID: audited 12-offset covariant family | RESULT: 60-var/192736-clause UNSAT; DRAT and 3-column core verified | D: lane DEAD
+[2026-07-23T18:22:53+03:00] FAIL ATTACK | DID: applied direct-proof guard | RESULT: DEAD: reformulation maze — restricted families lack global bridge | D: variants stopped
+[2026-07-23T18:22:54+03:00] > ATTACK | NEXT: run unrestricted K26 search and prove or falsify the all-r Ramsey--Turan edge lemma R2.
+[2026-07-23T18:29:29+03:00] FAIL ATTACK | DID: tested R2 at r=5 | RESULT: comp(Grotzsch)+3K5 has n=26,e=65,alpha=omega=5 | D: R2 DEAD
+[2026-07-23T18:29:30+03:00] OK VERIFY | DID: replayed R2 witness | RESULT: structure/verify_r2_counterexample.cpp checks 230230 six-sets | D: none
+[2026-07-23T18:29:31+03:00] OK PLAN | DID: registered R3 | RESULT: 5 edge-disjoint copies of the 65-edge graph partition K26 and refute #617 | D: R3 active
+[2026-07-23T18:29:32+03:00] > ATTACK | NEXT: run audited unrestricted exact SAT on 1625 vars and 1154726 clauses; one solver thread with DRAT.
+[2026-07-23T18:29:33+03:00] > ATTACK | NEXT: run audited unrestricted native search for 3600 s; 63 workers, seed 6172026072303; replay any hit twice.
+[2026-07-23T18:36:23+03:00] OK VERIFY | DID: refereed R3 counting proof | RESULT: 5-copy G65 decomposition impossible; C++ audit passes | D: none
+[2026-07-23T18:36:24+03:00] FAIL ATTACK | DID: closed R3 | RESULT: four-block disjointness needs 4 but role cases allow at most 1,3,2 | D: R3 DEAD
+[2026-07-23T18:36:25+03:00] OK CHECK | DID: strengthened R2 falsifier | RESULT: G61 has n=26,e=61,alpha=omega=5; exhaustive verifier passes | D: none
+[2026-07-23T18:36:26+03:00] OK PLAN | DID: registered R4 | RESULT: 5 edge-disjoint G61 copies plus 20 leftover edges directly refute #617 | D: R4 active
+[2026-07-23T18:36:27+03:00] > ATTACK | NEXT: prepare two audited permutation-packing engines; preserve the running 63+1 unrestricted worker cap.
+[2026-07-23T18:41:33+03:00] OK VERIFY | DID: audited natural affine R4 skeleton | RESULT: forced M intersections 15 exceed linear K5 capacity 10 | D: subfamily DEAD
+[2026-07-23T18:41:34+03:00] > ATTACK | NEXT: stop stagnant 63-worker unrestricted B2 and reallocate exactly 63 workers to audited general G61 packing R4.
+[2026-07-23T18:49:19+03:00] OK VERIFY | DID: proved general R4 obstruction | RESULT: each H11 forces 59 distinct edges into capacity 55; C++ audit passes | D: none
+[2026-07-23T18:49:20+03:00] FAIL ATTACK | DID: closed R4 | RESULT: no five edge-disjoint G61 copies exist | D: R4 DEAD
+[2026-07-23T18:49:21+03:00] FAIL ATTACK | DID: stopped #617 searches | RESULT: native best842/219602944 moves; SAT no verdict; all PIDs absent | D: none
+[2026-07-23T18:49:22+03:00] FAIL CHECK | DID: applied dead-end protocol | RESULT: #617 neither proved nor disproved; exact artifacts preserved | D: target halted
+[2026-07-23T18:49:23+03:00] > SELECT | NEXT: run three independent live-gated candidate scans for a single theorem-closing lemma or finite certificate.
+[2026-07-23T19:00:02+03:00] OK SELECT | DID: audited three independent candidate scans | RESULT: #742 has a direct 25-vertex positive certificate route | D: #742 selected
+[2026-07-23T19:00:03+03:00] OK GATE | DID: checked current metadata and 2025 literature | RESULT: #742 remains decidable; Fan covers n<=24 and n=26 | D: none
+[2026-07-23T19:00:04+03:00] OK PLAN | DID: registered R1 and R2 | RESULT: problems_external/erdos_742/APPROACH_REGISTRY.md | D: R1,R2 active
+[2026-07-23T19:00:05+03:00] > ATTACK | NEXT: calibrate two independent D2C verifiers, then launch independent SAT, native, and structural routes.
+[2026-07-23T19:18:17+03:00] OK VERIFY | DID: replayed verifier A calibration | RESULT: 14 cases pass; K12,13 accepted at 156 and rejected at target 157 | D: none
+[2026-07-23T19:18:18+03:00] OK VERIFY | DID: replayed SAT and verifier B audits | RESULT: 536032 queries agree for all graphs n=3..6; target CNF hash 69268EE4 | D: none
+[2026-07-23T19:18:19+03:00] OK VERIFY | DID: replayed native C++ audit | RESULT: 32768 graphs n=6 and 200 flips agree with BFS; 16t check exited | D: lane qualified
+[2026-07-23T19:18:20+03:00] > ATTACK | NEXT: run 64-thread C++ minimalization for 600 seconds, seed 7422026072401, stopping on a raw 157-edge D2C hit.
+[2026-07-23T19:30:09+03:00] FAIL ATTACK | DID: ran 64t C++ minimalization for 600s | RESULT: 3600239 restarts; best156=K12,13; no raw 157-edge hit | D: none
+[2026-07-23T19:30:10+03:00] > ATTACK | NEXT: audit the SMS and structural outputs; do not extend the same bounded stochastic lane without a new bridge.
+[2026-07-23T19:39:14+03:00] OK VERIFY | DID: replayed construction audit | RESULT: 186971232 twin substitutions through base order 7 have max156 | D: family DEAD
+[2026-07-23T19:39:15+03:00] FAIL ATTACK | DID: refereed R2 | RESULT: charging fails at n=8; cloneability bridge fails at n=12 | D: R2 DEAD
+[2026-07-23T19:39:16+03:00] FAIL ATTACK | DID: audited exact SMS route | RESULT: n25 needs 3836501 degree cases and lacks an audited driver | D: R1 halted
+[2026-07-23T19:39:17+03:00] FAIL CHECK | DID: applied guard | RESULT: DEAD: reformulation maze — no bridge from bounded families to global bound | D: #742 halted
+[2026-07-23T19:39:18+03:00] > SELECT | NEXT: run three independent live-gated scans for a full-problem certificate or theorem-closing lemma.
+[2026-07-23T20:57:37+03:00] FAIL CHECK | DID: audited #243 tail-error route | RESULT: DEAD: reformulation maze — no invariant beyond known LCM obstruction | D: #243 halted
+[2026-07-23T20:57:38+03:00] > SELECT | NEXT: rank live-open problems by an explicit one-lemma closure, using Wang's prompts and adversarial gates.
+[2026-07-23T21:23:00+03:00] OK SELECT | DID: ran three independent live-open scans | RESULT: #114 has high-degree theorem plus certificates n<=14 | D: target=#114
+[2026-07-23T21:23:01+03:00] OK GATE | DID: checked official page, thread, and arXiv | RESULT: open; no all-degree proof found; arXiv:2512.12455 is high-degree only | D: none
+[2026-07-23T21:23:02+03:00] OK PLAN | DID: wrote DIRECT ROUTE | RESULT: erdos114_lemniscate/APPROACH_REGISTRY.md | D: frontier=explicit N0
+[2026-07-23T21:23:03+03:00] > ATTACK | NEXT: independently extract every quantitative dependency and the first ineffective constant from Tao's proof.
+[2026-07-23T21:12:00+03:00] FAIL VERIFY | DID: audited prior log clock | RESULT: four #114 entries mistakenly use future 21:23 timestamps; preserved append-only | D: corrected here
+[2026-07-23T21:12:01+03:00] FAIL ATTACK | DID: audited n<=14 certificate domain | RESULT: README says not global over all monic polynomials | D: finite bridge false
+[2026-07-23T21:12:02+03:00] FAIL CHECK | DID: applied registry exit | RESULT: FINITE_BRIDGE_AUDIT.md; DEAD: no all-polynomial finite certificate | D: #114 halted
+[2026-07-23T21:12:03+03:00] > SELECT | NEXT: choose a live-open target whose present frontier itself closes the universal statement.
+[2026-07-23T21:25:44+03:00] OK SELECT | DID: audited #517 source lead | RESULT: Murai §5 contains a candidate global finite-zero bound | D: target=#517
+[2026-07-23T21:25:45+03:00] OK GATE | DID: checked live page and comments | RESULT: #517 OPEN; no solution claim; source is Murai 1983 | D: none
+[2026-07-23T21:25:46+03:00] OK PLAN | DID: wrote two DIRECT ROUTES | RESULT: erdos517_fabry/APPROACH_REGISTRY.md | D: frontier=Murai finite-zero lemma
+[2026-07-23T21:25:47+03:00] > ATTACK | NEXT: audit Murai equations (28)-(35) for a disk-independent zero bound and Fabry support.
+[2026-07-23T21:31:12+03:00] > VERIFY | NEXT: formalize the #602 omega-limit counterexample and test protected witnesses against primary literature.
+[2026-07-23T21:42:04+03:00] FAIL VERIFY | DID: peer-checked #602 limit repair | RESULT: problems_external/erdos_602/LIMIT_STAGE_AUDIT.md; legal omega run ends mono | D: R1 DEAD
+[2026-07-23T22:42:20+03:00] FAIL ATTACK | DID: audited Murai (28)-(35) | RESULT: zero bound is annulus-dependent d_m; limit has infinitely many zeros | D: A DEAD
+[2026-07-23T22:42:21+03:00] FAIL CHECK | DID: applied #517 exit condition | RESULT: DEAD: no finite-zero construction or smaller replacement lemma | D: #517 halted
+[2026-07-23T22:42:22+03:00] > SELECT | NEXT: scan all live-open rejected artifacts for a genuinely smaller theorem-closing lemma.
+[2026-07-23T22:59:57+03:00] OK SELECT | DID: audited live #276 route | RESULT: #276 OPEN; no claimed solution; Ismailescu-Son fixed sequence | D: target=#276 audit
+[2026-07-23T22:59:58+03:00] OK PLAN | DID: wrote five-field DIRECT ROUTE | RESULT: problems_external/erdos_276/APPROACH_REGISTRY.md | D: frontier=rank-density
+[2026-07-23T22:59:59+03:00] > ATTACK | NEXT: derive odd-term gcd periods and falsify the rank-density lemma for primes r<=100000.
+[2026-07-23T23:04:00+03:00] FAIL ATTACK | DID: tested #276 rank-density frontier | RESULT: r=2,3,5 give h=3,2,5 and sum 31/30 | D: R1 DEAD
+[2026-07-23T23:04:01+03:00] FAIL CHECK | DID: applied #276 exit | RESULT: DEAD: primitive divisors do not exclude an old finite cover | D: #276 halted
+[2026-07-23T23:04:02+03:00] > SELECT | NEXT: audit #708 two-split lemma and independently search its smallest counterexample.
+[2026-07-23T23:06:05+03:00] > ATTACK | NEXT: exhaustively test #708 R1 for M<=3 and replay the first failure from raw divisibility sets.
+[2026-07-23T23:07:30+03:00] FAIL ATTACK | DID: exhaustively tested #708 R1 through first failure | RESULT: M=3,A={2,3},I={5,6,7}; Hall 1<2 | D: R1 DEAD
+[2026-07-23T23:07:31+03:00] FAIL CHECK | DID: replayed raw split graph independently | RESULT: both factors have sole neighbor 6; B={6} preserves #708 | D: route halted
+[2026-07-23T23:13:39+03:00] OK PLAN | DID: registered #708 capacitated two-fragment route | RESULT: APPROACH_REGISTRY.md R2 with exact bridge and exit | D: R2 active
+[2026-07-23T23:13:40+03:00] > ATTACK | NEXT: exhaust R2 for M<=6 and replay the first failure using raw prime valuations.

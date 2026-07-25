@@ -1,0 +1,127 @@
+{
+ "r": 5,
+ "rows": 30,
+ "distinct_normals": 27,
+ "dim": 6,
+ "bases_total": 593775,
+ "bases_nonsingular": 192658,
+ "max_abs_det": 7,
+ "det_histogram": {
+  "1": 146656,
+  "2": 40320,
+  "3": 2892,
+  "4": 2502,
+  "5": 18,
+  "6": 252,
+  "7": 18
+ },
+ "max_denominator_unrestricted_rhs": 7,
+ "denominator_histogram_unrestricted": {
+  "1": 146656,
+  "2": 41814,
+  "3": 2892,
+  "4": 1008,
+  "5": 18,
+  "6": 252,
+  "7": 18
+ },
+ "max_denominator_hive_rhs_lattice": 7,
+ "denominator_histogram_hive_lattice": {
+  "1": 146656,
+  "2": 41814,
+  "3": 2892,
+  "4": 1008,
+  "5": 18,
+  "6": 252,
+  "7": 18
+ },
+ "argmax_hive_lattice": {
+  "rows": [
+   1,
+   12,
+   13,
+   16,
+   18,
+   21
+  ],
+  "normals": [
+   [
+    -1,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    -1,
+    -1,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    -1,
+    0,
+    -1,
+    0
+   ],
+   [
+    0,
+    0,
+    -1,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    -1,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    -1,
+    1,
+    -1
+   ]
+  ],
+  "det_exact": 7,
+  "smith_A_S": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   7
+  ]
+ },
+ "argmax_unrestricted": {
+  "rows": [
+   1,
+   12,
+   13,
+   16,
+   18,
+   21
+  ],
+  "det_exact": 7,
+  "smith_A_S": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   7
+  ]
+ },
+ "max_largest_invariant_factor_exact_recheck": 7
+}

@@ -1,0 +1,6 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38469,0 +38470,2 @@
++[2026-07-23T17:59:24+03:00] FAIL GATE | DID: checked the 2017 computation | RESULT: all abelian groups of order <=23 verified; p=17 is published | D: #475 R1 DEAD
++[2026-07-23T17:59:25+03:00] > SELECT | NEXT: audit uncrowded falsifiable problems for a theorem-closing direct route before computation.

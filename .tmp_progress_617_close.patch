@@ -1,0 +1,9 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38559,0 +38560,5 @@
++[2026-07-23T18:49:19+03:00] OK VERIFY | DID: proved general R4 obstruction | RESULT: each H11 forces 59 distinct edges into capacity 55; C++ audit passes | D: none
++[2026-07-23T18:49:20+03:00] FAIL ATTACK | DID: closed R4 | RESULT: no five edge-disjoint G61 copies exist | D: R4 DEAD
++[2026-07-23T18:49:21+03:00] FAIL ATTACK | DID: stopped #617 searches | RESULT: native best842/219602944 moves; SAT no verdict; all PIDs absent | D: none
++[2026-07-23T18:49:22+03:00] FAIL CHECK | DID: applied dead-end protocol | RESULT: #617 neither proved nor disproved; exact artifacts preserved | D: target halted
++[2026-07-23T18:49:23+03:00] > SELECT | NEXT: run three independent live-gated candidate scans for a single theorem-closing lemma or finite certificate.

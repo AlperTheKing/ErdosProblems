@@ -1,0 +1,11 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38583,3 +38583,7 @@
+ [2026-07-23T21:23:01+03:00] OK GATE | DID: checked official page, thread, and arXiv | RESULT: open; no all-degree proof found; arXiv:2512.12455 is high-degree only | D: none
+ [2026-07-23T21:23:02+03:00] OK PLAN | DID: wrote DIRECT ROUTE | RESULT: erdos114_lemniscate/APPROACH_REGISTRY.md | D: frontier=explicit N0
+ [2026-07-23T21:23:03+03:00] > ATTACK | NEXT: independently extract every quantitative dependency and the first ineffective constant from Tao's proof.
++[2026-07-23T21:12:00+03:00] FAIL VERIFY | DID: audited prior log clock | RESULT: four #114 entries mistakenly use future 21:23 timestamps; preserved append-only | D: corrected here
++[2026-07-23T21:12:01+03:00] FAIL ATTACK | DID: audited n<=14 certificate domain | RESULT: README says not global over all monic polynomials | D: finite bridge false
++[2026-07-23T21:12:02+03:00] FAIL CHECK | DID: applied registry exit | RESULT: FINITE_BRIDGE_AUDIT.md; DEAD: no all-polynomial finite certificate | D: #114 halted
++[2026-07-23T21:12:03+03:00] > SELECT | NEXT: choose a live-open target whose present frontier itself closes the universal statement.

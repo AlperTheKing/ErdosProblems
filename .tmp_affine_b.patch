@@ -1,0 +1,183 @@
+diff --git a/problems_external/erdos_617/native/erdos617_native_b.cpp b/problems_external/erdos_617/native/erdos617_native_b.cpp
+--- a/problems_external/erdos_617/native/erdos617_native_b.cpp
++++ b/problems_external/erdos_617/native/erdos617_native_b.cpp
+@@ -311,6 +311,33 @@ static std::vector<uint8_t> seed_affine26(const Instance &g, std::mt19937_64 &r
+     return colors;
+ }
+ 
++static std::vector<uint8_t> affine_family26(const Instance &g, std::mt19937_64 &rng,
++                                            std::vector<uint8_t> *mutable_edge = nullptr) {
++    if (g.n != 26) throw std::runtime_error("affine_family26 requires n=26");
++    std::vector<uint8_t> colors(g.edge_count, 0);
++    if (mutable_edge) mutable_edge->assign(g.edge_count, 0);
++    for (int e = 0; e < g.edge_count; ++e) {
++        auto [u0, v0] = g.endpoints[e];
++        int u = u0, v = v0;
++        if (v == 25) {
++            colors[e] = static_cast<uint8_t>(rng() % 5);
++            if (mutable_edge) (*mutable_edge)[e] = 1;
++            continue;
++        }
++        int x1 = u % 5, y1 = u / 5, x2 = v % 5, y2 = v / 5;
++        int dx = (x2 - x1 + 5) % 5, dy = (y2 - y1 + 5) % 5;
++        if (dx == 0) {
++            colors[e] = static_cast<uint8_t>(rng() % 5);
++            if (mutable_edge) (*mutable_edge)[e] = 1;
++        } else {
++            colors[e] = static_cast<uint8_t>((dy * inv5(dx)) % 5);
++        }
++    }
++    return colors;
++}
++
+ struct SearchShared {
+     std::atomic<bool> stop{false};
+     std::atomic<int> global_best{std::numeric_limits<int>::max()};
+@@ -320,6 +347,7 @@ struct SearchShared {
+     std::vector<uint8_t> best_colors;
+     fs::path out_dir;
+     std::chrono::steady_clock::time_point deadline;
++    bool affine_family = false;
+ };
+ 
+ static void publish_best(const Instance &g, SearchShared &sh, int worker, uint64_t moves,
+@@ -341,12 +369,15 @@ static void search_worker(const Instance &g, SearchShared &sh, int worker, uint
+     std::mt19937_64 rng(base_seed + 0x9e3779b97f4a7c15ULL * static_cast<uint64_t>(worker + 1));
+     State st;
++    std::vector<uint8_t> mutable_edge(g.edge_count, 1);
+     uint64_t moves = 0;
+     int restart = 0;
+     while (!sh.stop.load(std::memory_order_relaxed) &&
+            std::chrono::steady_clock::now() < sh.deadline) {
+-        if ((restart % 5) == 4) {
++        if (sh.affine_family) {
++            st.colors = affine_family26(g, rng, &mutable_edge);
++        } else if ((restart % 5) == 4) {
+             st.colors.resize(g.edge_count);
+             for (uint8_t &c : st.colors) c = static_cast<uint8_t>(rng() % 5);
+         } else {
+@@ -389,6 +420,7 @@ static void search_worker(const Instance &g, SearchShared &sh, int worker, uint
+             int best_delta = std::numeric_limits<int>::max();
+             int candidates[15], nc = 0;
+             for (uint16_t e : g.six_edges[s]) {
++                if (!mutable_edge[e]) continue;
+                 if (st.colors[e] == target) continue;
+                 int d = delta_recolor(g, st, e, target);
+                 bool tabu = tabu_until[e] > moves;
+@@ -404,7 +436,12 @@ static void search_worker(const Instance &g, SearchShared &sh, int worker, uint
+             }
+             int chosen;
+             if (nc == 0 || (rng() % 100) < 7) {
+-                do { chosen = g.six_edges[s][rng() % 15]; } while (st.colors[chosen] == target);
++                int eligible[15], ne = 0;
++                for (uint16_t e : g.six_edges[s]) {
++                    if (mutable_edge[e] && st.colors[e] != target) eligible[ne++] = e;
++                }
++                if (ne == 0) throw std::runtime_error("violated six-set has no eligible repair edge");
++                chosen = eligible[rng() % ne];
+             } else {
+                 chosen = candidates[rng() % nc];
+             }
+@@ -429,7 +466,8 @@ static void search_worker(const Instance &g, SearchShared &sh, int worker, uint
+             }
+             if (moves - last_improvement > 6000 && (moves % 256) == 0) {
+                 for (int k = 0; k < 3; ++k) {
+-                    int e = static_cast<int>(rng() % g.edge_count);
++                    int e;
++                    do { e = static_cast<int>(rng() % g.edge_count); } while (!mutable_edge[e]);
+                     uint8_t c = static_cast<uint8_t>(rng() % 5);
+                     if (c != st.colors[e]) apply_recolor(g, st, e, c);
+                 }
+@@ -475,6 +513,42 @@ static bool objective_audit(const Instance &g, std::string &why) {
+     return true;
+ }
+ 
++static bool affine_family_audit(const Instance &g, std::string &why) {
++    std::mt19937_64 rng(617751ULL);
++    std::vector<uint8_t> mutable_edge;
++    auto colors = affine_family26(g, rng, &mutable_edge);
++    if (std::count(mutable_edge.begin(), mutable_edge.end(), static_cast<uint8_t>(1)) != 75) {
++        why = "affine family mutable edge count is not 75";
++        return false;
++    }
++    for (size_t s = 0; s < g.six_edges.size(); ++s) {
++        bool has_infinity = false;
++        for (uint8_t v : g.six_vertices[s]) if (v == 25) has_infinity = true;
++        if (has_infinity) continue;
++        uint8_t present = 0;
++        for (uint16_t e : g.six_edges[s]) present |= static_cast<uint8_t>(1u << colors[e]);
++        if (present != 31) {
++            why = "old-only six-set failed finite-slope invariant";
++            return false;
++        }
++    }
++    State st;
++    st.colors = colors;
++    rebuild(g, st);
++    for (int k = 0; k < 150; ++k) {
++        int e;
++        do { e = static_cast<int>(rng() % g.edge_count); } while (!mutable_edge[e]);
++        uint8_t c;
++        do { c = static_cast<uint8_t>(rng() % 5); } while (c == st.colors[e]);
++        int before = st.score;
++        int predicted = delta_recolor(g, st, e, c);
++        apply_recolor(g, st, e, c);
++        int exact = score_full(g, st.colors);
++        if (st.score != exact || exact - before != predicted) {
++            why = "affine-family delta mismatch at move " + std::to_string(k);
++            return false;
++        }
++    }
++    return true;
++}
++
+ static int selftest(const fs::path &fixture_dir) {
+     fs::create_directories(fixture_dir);
+     Instance g25(25);
+@@ -572,6 +646,10 @@ static int selftest(const fs::path &fixture_dir) {
+         std::cerr << "FAIL objective audit: " << why << "\n";
+         return 1;
+     }
++    if (!affine_family_audit(g26, why)) {
++        std::cerr << "FAIL affine family audit: " << why << "\n";
++        return 1;
++    }
+     std::cout << "SELFTEST PASS\n"
+               << "affine_k25_edges " << g25.edge_count << "\n"
+               << "affine_k25_sixsets " << v.subsets_checked << "\n"
+@@ -579,6 +657,8 @@ static int selftest(const fs::path &fixture_dir) {
+               << "parser_corruptions_rejected 3\n"
+               << "semantic_corruptions_rejected 2\n"
+               << "objective_delta_audit_moves 300\n"
++              << "affine_family_mutable_edges 75\n"
++              << "affine_family_delta_audit_moves 150\n"
+               << "k26_sixsets " << g26.six_edges.size() << "\n";
+     return 0;
+ }
+@@ -588,7 +668,8 @@ static void usage() {
+     std::cerr << "Usage:\n"
+               << "  erdos617_native_b --selftest FIXTURE_DIR\n"
+               << "  erdos617_native_b --verify N FILE\n"
+-              << "  erdos617_native_b --search THREADS SECONDS SEED OUT_DIR\n";
++              << "  erdos617_native_b --search THREADS SECONDS SEED OUT_DIR\n"
++              << "  erdos617_native_b --search-affine THREADS SECONDS SEED OUT_DIR\n";
+ }
+ 
+ int main(int argc, char **argv) {
+@@ -625,7 +706,8 @@ int main(int argc, char **argv) {
+             }
+             return v.property_ok ? 0 : 1;
+         }
+-        if (argc >= 2 && std::string(argv[1]) == "--search") {
++        if (argc >= 2 && (std::string(argv[1]) == "--search" ||
++                          std::string(argv[1]) == "--search-affine")) {
+             if (argc != 6) { usage(); return 2; }
+             int threads = std::stoi(argv[2]);
+             int seconds = std::stoi(argv[3]);
+@@ -641,6 +723,7 @@ int main(int argc, char **argv) {
+             if (!objective_audit(g, why)) throw std::runtime_error("pre-search audit failed: " + why);
+             SearchShared sh;
+             sh.out_dir = out_dir;
++            sh.affine_family = std::string(argv[1]) == "--search-affine";
+             sh.deadline = std::chrono::steady_clock::now() + std::chrono::seconds(seconds);
+             std::vector<std::thread> pool;

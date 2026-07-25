@@ -1,0 +1,15 @@
+p d2c-ledger-a 4 2
+original connected 0 diameter INF
+deleted 0 1 connected 0 diameter INF witness_count 5
+w 0 1 distance INF
+w 0 2 distance INF
+w 0 3 distance INF
+w 1 2 distance INF
+w 1 3 distance INF
+deleted 2 3 connected 0 diameter INF witness_count 5
+w 0 2 distance INF
+w 0 3 distance INF
+w 1 2 distance INF
+w 1 3 distance INF
+w 2 3 distance INF
+end critical_edges 2 total_edges 2

@@ -1,0 +1,214 @@
+diff --git a/problems_external/erdos_243/APPROACH_REGISTRY.md b/problems_external/erdos_243/APPROACH_REGISTRY.md
+new file mode 100644
+index 0000000..1111111
+--- /dev/null
++++ b/problems_external/erdos_243/APPROACH_REGISTRY.md
+@@ -0,0 +1,134 @@
++# Erdős Problem 243 — Approach Registry
++
++## Problem
++
++Let \((a_n)_{n\ge 0}\) be a strictly increasing sequence of positive integers such that
++
++\[
++\frac{a_{n+1}}{a_n^2}\longrightarrow 1
++\qquad\text{and}\qquad
++\sum_{n\ge 0}\frac1{a_n}\in\mathbb Q.
++\]
++
++Determine whether necessarily
++
++\[
++a_{n+1}=a_n^2-a_n+1
++\]
++
++for all sufficiently large \(n\).
++
++The official problem page was live-gated as OPEN on 2026-07-23. The local formal
++statement is `fc_lean/243.lean`. This registry records routes only; it makes no
++claim that the problem has been resolved.
++
++## Exact tail dynamics
++
++Put
++
++\[
++T_n=\sum_{j\ge n}\frac1{a_j}=\frac{P_n}{Q_n}
++\]
++
++in lowest positive terms, and define
++
++\[
++\Delta_n=P_n(a_n-1)-Q_n.
++\]
++
++The growth assumption gives
++
++\[
++T_n=\frac1{a_n}+\frac1{a_{n+1}}+o(a_n^{-2}),
++\qquad
++\frac1{T_n}=a_n-1+o(1),
++\qquad
++\frac{\Delta_n}{P_n}\to0.
++\]
++
++Moreover,
++
++\[
++T_{n+1}=\frac{P_n+\Delta_n}{a_nQ_n}.
++\]
++
++Writing
++
++\[
++g_n=\gcd(P_n+\Delta_n,a_nQ_n),
++\]
++
++the reduced update is
++
++\[
++P_{n+1}=\frac{P_n+\Delta_n}{g_n},\qquad
++Q_{n+1}=\frac{a_nQ_n}{g_n},
++\]
++
++and hence
++
++\[
++\Delta_{n+1}=
++\frac{(P_n+\Delta_n)(a_{n+1}-1)
++-a_n\bigl(P_n(a_n-1)-\Delta_n\bigr)}{g_n}.
++\]
++
++## DIRECT ROUTE R1 — Tail-error rigidity
++
++1. **Exact final deliverable.** Prove the stated conclusion for every admissible
++   sequence by proving that \(\Delta_n=0\) for all sufficiently large \(n\).
++2. **Current frontier lemma or certificate.** Prove: every integral orbit of the
++   exact reduced tail update above with \(a_{n+1}/a_n^2\to1\) and
++   \(\Delta_n/P_n\to0\), arising from positive rational tails, has
++   \(\Delta_n=0\) eventually.
++3. **Logical bridge.** If \(\Delta_n=0\), reducedness forces \(P_n=1\) and
++   \(T_n=1/(a_n-1)\). Consecutive zero errors then give
++   \(1/(a_{n+1}-1)=T_{n+1}=T_n-1/a_n=1/[a_n(a_n-1)]\), so
++   \(a_{n+1}=a_n^2-a_n+1\).
++4. **Next falsifiable action.** Derive a sign, divisibility, or monotone-height
++   invariant from the displayed \(\Delta\)-update; in parallel, search exact
++   small states for a nonzero orbit that violates every proposed invariant.
++5. **Exit condition.** Close the route if the rigidity lemma is proved. Mark it
++   `DEAD: reformulation maze` if the update analysis merely restates the known
++   LCM obstruction and yields neither a strictly stronger invariant nor an
++   explicit nonzero orbit.
++
++## DIRECT ROUTE R2 — Construct a nonzero rational-tail orbit
++
++1. **Exact final deliverable.** Give an explicit infinite strictly increasing
++   integer sequence with rational reciprocal sum, square-growth ratio tending
++   to one, and infinitely many failures of the Sylvester recurrence.
++2. **Current frontier lemma or certificate.** Construct an infinite reduced
++   integral orbit \((a_n,P_n,Q_n,\Delta_n,g_n)\) satisfying the exact tail update,
++   \(T_n=P_n/Q_n>0\), \(T_n\to0\), \(a_{n+1}/a_n^2\to1\), and
++   \(\Delta_n\ne0\) infinitely often.
++3. **Logical bridge.** The update gives
++   \(T_n-T_{n+1}=1/a_n\). Thus \(T_0=\sum_n1/a_n\in\mathbb Q\); the remaining
++   orbit conditions give every hypothesis while persistent nonzero error
++   refutes the eventual recurrence.
++4. **Next falsifiable action.** Analyze the exact family \(\Delta_n=-1\):
++   when \(Q_n=P_n(a_n-1)+1\), a no-cancellation step requires
++   \(P_n+1\mid a_n^2-1\) and gives
++   \(a_{n+1}=a_n^2-a_n+1-(a_n^2-1)/(P_n+1)\). Determine whether the congruence
++   can persist while \(P_n\to\infty\), or produce a finite obstruction.
++5. **Exit condition.** Close on an explicit infinite certified construction.
++   Kill this family on a proved unavoidable finite obstruction; do not replace
++   it with an unbounded cascade of finite searches.
++
++## ADVERSARIAL ROUTE A1 — Statement and bridge audit
++
++1. **Exact final deliverable.** An independent referee report accepting or
++   rejecting every load-bearing implication used by R1 or R2.
++2. **Current frontier lemma or certificate.** Independently rederive the tail
++   asymptotic, the reduced fraction update, and both logical bridges.
++3. **Logical bridge.** Acceptance prevents an indexing, reduction, sign,
++   convergence, or converse-reconstruction error from being promoted to a
++   solution.
++4. **Next falsifiable action.** Attempt to construct finite raw states that
++   satisfy the displayed equations but fail positivity, reducedness, strict
++   increase, or tail convergence.
++5. **Exit condition.** Accept only after every implication replays from the
++   original hypotheses; otherwise return the smallest exact failing state.
++
++## Non-results
++
++The following do not resolve the problem: bounded verification, numerical
++agreement, a solver timeout, a rational-tail reformulation without a closing
++invariant, the known LCM obstruction alone, or a theorem under the stronger
++assumption that the deviations themselves are summable.
+diff --git a/problems_external/erdos_243/PROMPT.md b/problems_external/erdos_243/PROMPT.md
+new file mode 100644
+index 0000000..2222222
+--- /dev/null
++++ b/problems_external/erdos_243/PROMPT.md
+@@ -0,0 +1,63 @@
++# Research Prompt — Erdős Problem 243
++
++Resolve the following statement.
++
++Let \((a_n)_{n\ge0}\) be a strictly increasing sequence of positive integers.
++Assume
++
++\[
++\frac{a_{n+1}}{a_n^2}\to1
++\quad\text{and}\quad
++\sum_{n\ge0}\frac1{a_n}\in\mathbb Q.
++\]
++
++Prove that \(a_{n+1}=a_n^2-a_n+1\) for all sufficiently large \(n\), or give an
++explicit counterexample satisfying every hypothesis and failing that recurrence
++infinitely often.
++
++A complete proof must cover every admissible sequence. A complete disproof must
++give an explicit infinite integer sequence, prove strict increase and the
++square-growth limit, evaluate its reciprocal sum as a rational number, and
++prove infinitely many recurrence failures.
++
++Use the exact rational tails
++
++\[
++T_n=P_n/Q_n,\qquad
++\Delta_n=P_n(a_n-1)-Q_n
++\]
++
++in lowest positive terms as one direct route, but preserve independent
++approaches. The exact identities and route contracts are recorded in
++`APPROACH_REGISTRY.md`.
++
++Return concrete lemmas, equations, divisibility statements, constructions,
++counterexamples to proposed lemmas, or exact failure certificates. Do not count
++as a resolution: a bounded computation, an asymptotic surrogate, a numerical
++experiment, an unchecked solver result, a theorem with a stronger hypothesis,
++or a reformulation that leaves an equally strong unproved assertion.
++
++Audit independently:
++
++- indexing of \(a_n\) and \(T_n\);
++- the estimate for the tail after \(1/a_{n+1}\);
++- reduction by the exact gcd;
++- signs and strict versus non-strict inequalities;
++- positivity and strict increase in any constructed orbit;
++- the implication from an orbit to an actual infinite reciprocal series;
++- the implication from eventual zero tail error to the stated recurrence;
++- consistency with the known Erdős–Straus and Duverney partial results.
++
++Maintain incompatible proof and disproof routes until one is rigorously killed.
++Search aggressively for counterexamples to each proposed intermediate lemma.
++Stop a route if it only reproduces the known denominator/LCM obstruction with
++no theorem-closing invariant. Make no discovery claim before an independent
++referee pass and a fresh literature check.
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -0,0 +1,5 @@
++[2026-07-23T20:40:55+03:00] OK SELECT | DID: selected Erdős #243 | RESULT: official page OPEN; exact statement in fc_lean/243.lean | D: SELECT->GATE
++[2026-07-23T20:40:56+03:00] OK GATE | DID: checked live page, local history, and recent adjacent papers | RESULT: no claimed #243 solution found | D: GATE->PLAN
++[2026-07-23T20:40:57+03:00] > PLAN | NEXT: formalize rational-tail dynamics and two direct routes with explicit closure and exit conditions.
++[2026-07-23T20:40:58+03:00] OK PLAN | DID: registered R1 rigidity, R2 construction, and A1 audit | RESULT: problems_external/erdos_243/APPROACH_REGISTRY.md | D: PLAN->ATTACK
++[2026-07-23T20:40:59+03:00] > ATTACK | NEXT: run independent Sol Ultra lanes on rigidity, nonzero orbits, and bridge auditing.

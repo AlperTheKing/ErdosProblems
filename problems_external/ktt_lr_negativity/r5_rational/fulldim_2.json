@@ -1,0 +1,60 @@
+{
+ "target_denominator": 2,
+ "bases": 41814,
+ "full_dim_bases_found": 1,
+ "realized": true,
+ "hits": [
+  {
+   "basis": [
+    0,
+    1,
+    8,
+    13,
+    14,
+    20
+   ],
+   "det": 2,
+   "full_dimensional_cone": true,
+   "witness": {
+    "lam": [
+     12,
+     8,
+     6,
+     5,
+     1
+    ],
+    "mu": [
+     15,
+     10,
+     7,
+     4,
+     1
+    ],
+    "nu": [
+     17,
+     17,
+     14,
+     12,
+     9
+    ],
+    "vertex": [
+     "29",
+     "37",
+     "85/2",
+     "46",
+     "103/2",
+     "117/2"
+    ],
+    "det": 2,
+    "basis_rows": [
+     0,
+     1,
+     8,
+     13,
+     14,
+     20
+    ]
+   }
+  }
+ ]
+}

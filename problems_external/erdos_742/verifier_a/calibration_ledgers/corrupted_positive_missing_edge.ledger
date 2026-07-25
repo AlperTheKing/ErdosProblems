@@ -1,0 +1,468 @@
+p d2c-ledger-a 25 155
+original connected 1 diameter 3
+deleted 0 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 13 distance 3
+deleted 0 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 14 distance 3
+deleted 0 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 15 distance 3
+deleted 0 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 16 distance 3
+deleted 0 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 17 distance 3
+deleted 0 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 18 distance 3
+deleted 0 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 19 distance 3
+deleted 0 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 20 distance 3
+deleted 0 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 21 distance 3
+deleted 0 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 22 distance 3
+deleted 0 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 23 distance 3
+deleted 0 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 0 24 distance 3
+deleted 1 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 12 distance 3
+deleted 1 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 13 distance 3
+deleted 1 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 14 distance 3
+deleted 1 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 15 distance 3
+deleted 1 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 16 distance 3
+deleted 1 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 17 distance 3
+deleted 1 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 18 distance 3
+deleted 1 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 19 distance 3
+deleted 1 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 20 distance 3
+deleted 1 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 21 distance 3
+deleted 1 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 22 distance 3
+deleted 1 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 23 distance 3
+deleted 1 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 1 24 distance 3
+deleted 2 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 12 distance 3
+deleted 2 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 13 distance 3
+deleted 2 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 14 distance 3
+deleted 2 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 15 distance 3
+deleted 2 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 16 distance 3
+deleted 2 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 17 distance 3
+deleted 2 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 18 distance 3
+deleted 2 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 19 distance 3
+deleted 2 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 20 distance 3
+deleted 2 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 21 distance 3
+deleted 2 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 22 distance 3
+deleted 2 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 23 distance 3
+deleted 2 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 2 24 distance 3
+deleted 3 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 12 distance 3
+deleted 3 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 13 distance 3
+deleted 3 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 14 distance 3
+deleted 3 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 15 distance 3
+deleted 3 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 16 distance 3
+deleted 3 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 17 distance 3
+deleted 3 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 18 distance 3
+deleted 3 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 19 distance 3
+deleted 3 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 20 distance 3
+deleted 3 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 21 distance 3
+deleted 3 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 22 distance 3
+deleted 3 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 23 distance 3
+deleted 3 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 3 24 distance 3
+deleted 4 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 12 distance 3
+deleted 4 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 13 distance 3
+deleted 4 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 14 distance 3
+deleted 4 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 15 distance 3
+deleted 4 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 16 distance 3
+deleted 4 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 17 distance 3
+deleted 4 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 18 distance 3
+deleted 4 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 19 distance 3
+deleted 4 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 20 distance 3
+deleted 4 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 21 distance 3
+deleted 4 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 22 distance 3
+deleted 4 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 23 distance 3
+deleted 4 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 4 24 distance 3
+deleted 5 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 12 distance 3
+deleted 5 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 13 distance 3
+deleted 5 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 14 distance 3
+deleted 5 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 15 distance 3
+deleted 5 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 16 distance 3
+deleted 5 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 17 distance 3
+deleted 5 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 18 distance 3
+deleted 5 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 19 distance 3
+deleted 5 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 20 distance 3
+deleted 5 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 21 distance 3
+deleted 5 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 22 distance 3
+deleted 5 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 23 distance 3
+deleted 5 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 5 24 distance 3
+deleted 6 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 12 distance 3
+deleted 6 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 13 distance 3
+deleted 6 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 14 distance 3
+deleted 6 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 15 distance 3
+deleted 6 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 16 distance 3
+deleted 6 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 17 distance 3
+deleted 6 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 18 distance 3
+deleted 6 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 19 distance 3
+deleted 6 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 20 distance 3
+deleted 6 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 21 distance 3
+deleted 6 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 22 distance 3
+deleted 6 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 23 distance 3
+deleted 6 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 6 24 distance 3
+deleted 7 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 12 distance 3
+deleted 7 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 13 distance 3
+deleted 7 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 14 distance 3
+deleted 7 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 15 distance 3
+deleted 7 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 16 distance 3
+deleted 7 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 17 distance 3
+deleted 7 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 18 distance 3
+deleted 7 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 19 distance 3
+deleted 7 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 20 distance 3
+deleted 7 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 21 distance 3
+deleted 7 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 22 distance 3
+deleted 7 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 23 distance 3
+deleted 7 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 7 24 distance 3
+deleted 8 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 12 distance 3
+deleted 8 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 13 distance 3
+deleted 8 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 14 distance 3
+deleted 8 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 15 distance 3
+deleted 8 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 16 distance 3
+deleted 8 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 17 distance 3
+deleted 8 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 18 distance 3
+deleted 8 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 19 distance 3
+deleted 8 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 20 distance 3
+deleted 8 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 21 distance 3
+deleted 8 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 22 distance 3
+deleted 8 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 23 distance 3
+deleted 8 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 8 24 distance 3
+deleted 9 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 12 distance 3
+deleted 9 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 13 distance 3
+deleted 9 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 14 distance 3
+deleted 9 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 15 distance 3
+deleted 9 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 16 distance 3
+deleted 9 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 17 distance 3
+deleted 9 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 18 distance 3
+deleted 9 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 19 distance 3
+deleted 9 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 20 distance 3
+deleted 9 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 21 distance 3
+deleted 9 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 22 distance 3
+deleted 9 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 23 distance 3
+deleted 9 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 9 24 distance 3
+deleted 10 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 12 distance 3
+deleted 10 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 13 distance 3
+deleted 10 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 14 distance 3
+deleted 10 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 15 distance 3
+deleted 10 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 16 distance 3
+deleted 10 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 17 distance 3
+deleted 10 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 18 distance 3
+deleted 10 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 19 distance 3
+deleted 10 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 20 distance 3
+deleted 10 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 21 distance 3
+deleted 10 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 22 distance 3
+deleted 10 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 23 distance 3
+deleted 10 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 10 24 distance 3
+deleted 11 12 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 12 distance 3
+deleted 11 13 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 13 distance 3
+deleted 11 14 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 14 distance 3
+deleted 11 15 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 15 distance 3
+deleted 11 16 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 16 distance 3
+deleted 11 17 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 17 distance 3
+deleted 11 18 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 18 distance 3
+deleted 11 19 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 19 distance 3
+deleted 11 20 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 20 distance 3
+deleted 11 21 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 21 distance 3
+deleted 11 22 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 22 distance 3
+deleted 11 23 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 23 distance 3
+deleted 11 24 connected 1 diameter 3 witness_count 2
+w 0 12 distance 3
+w 11 24 distance 3
+end critical_edges 155 total_edges 155

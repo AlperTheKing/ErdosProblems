@@ -1,0 +1,33 @@
+diff --git a/problems_external/erdos_708/APPROACH_REGISTRY.md b/problems_external/erdos_708/APPROACH_REGISTRY.md
+--- a/problems_external/erdos_708/APPROACH_REGISTRY.md
++++ b/problems_external/erdos_708/APPROACH_REGISTRY.md
+@@ -68,1 +68,29 @@
+ - DEAD: two-split divisor matching is false at A={2,3}, I={5,6,7}.
++
++## DIRECT ROUTE R2 — Two-fragment capacitated packing
++
++1. **Exact final deliverable.** A proof of \(g(n)\le 2n\) for every \(n\).
++
++2. **Current frontier lemma / finite certificate.** For every
++   \(A\subseteq[2,M]\) and every interval \(I\) of \(M\) consecutive positive
++   integers, factor each \(a\in A\) as \(a=u_av_a\), allowing \(1\), and
++   assign every labeled nonunit factor to a member of \(I\). Assignments may
++   share a member \(b\), but the product of all factors assigned to \(b\)
++   must divide \(b\).
++
++3. **Explicit bridge to the final deliverable.** Let \(B\) be the set of used
++   interval members. Every \(a\) creates at most two assigned fragments, so
++   \(|B|\le2|A|=2n\). Multiplying the capacity constraints gives
++   \(\prod_{a\in A}a\mid\prod_{b\in B}b\).
++
++4. **Next falsifiable action.** Exhaust every \(M\le6\), nonempty
++   \(A\subseteq[2,M]\), and interval start modulo \(\prod_{a\in A}a\).
++   Enumerate all two-factor splits and all capacity-respecting assignments;
++   independently replay the first failure from raw prime valuations.
++
++5. **Exit condition.** A verified finite failure kills R2. Survival through
++   \(M=6\) authorizes only an attempt to prove a concrete capacitated Hall or
++   flow inequality; it does not authorize a larger bounded-search cascade.
++
++R2 is strictly stronger than aggregate product divisibility because it
++restricts each \(a\)'s prime-power demand to at most two interval members.

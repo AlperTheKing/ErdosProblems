@@ -1,0 +1,7 @@
+{"idx": 2, "lam": [8, 6, 4], "mu": [8, 6, 4], "nu": [12, 10, 7, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 22, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 0, "lam": [6, 4], "mu": [8, 6, 4, 2], "nu": [10, 7, 7, 4, 2], "d_true": 2, "dim_lo": 2, "nverts": 5, "maxden": 1, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 3, "lam": [8, 6, 4, 2], "mu": [8, 6, 4, 1, 1], "nu": [12, 10, 8, 6, 4], "d_true": 5, "dim_lo": 5, "nverts": 37, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 1, "lam": [8, 5, 5], "mu": [8, 6, 4], "nu": [12, 10, 8, 4, 2], "d_true": 3, "dim_lo": 3, "nverts": 12, "maxden": 1, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 5, "lam": [8, 4], "mu": [8, 4, 3, 1], "nu": [12, 8, 4, 2, 2], "d_true": 2, "dim_lo": 2, "nverts": 3, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 4, "lam": [9, 6, 4, 2], "mu": [8, 6, 4, 2], "nu": [13, 10, 8, 6, 4], "d_true": 6, "dim_lo": 6, "nverts": 31, "maxden": 1, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 6, "lam": [6, 6, 3], "mu": [12, 9, 6, 3], "nu": [15, 12, 9, 6, 3], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}

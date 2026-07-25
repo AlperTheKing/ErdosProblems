@@ -140,3 +140,16 @@ problems_external/ktt_lr_negativity/r4_reeve/types_G6.txt
 # Bulk purged-region run output (800MB+, regeneratable). Narrow on purpose: the r4_reeve/runs
 # band lane is already tracked and stays versioned.
 problems_external/*/purged_region/runs/
+
+# Rust build output dirs in external-problem engines (build junk, like .lake)
+problems_external/**/target/
+problems_external/**/target-v2/
+# >50MB run/proof outputs, local-only per repo size policy (regeneratable bulk)
+problems_external/erdos_617/sat/full_unrestricted/logs/
+problems_external/erdos_617/sat/full_unrestricted/unrestricted_k26.cnf
+problems_external/ktt_lr_negativity/tier0/runs/fam1/fam1b.jsonl
+problems_external/ktt_lr_negativity/tier0/runs/fam1/fam1d.jsonl
+problems_external/ktt_lr_negativity/tier0/runs/fam6/r5_N21.jsonl
+problems_external/ktt_lr_negativity/tier0/runs/fam6/r6_N19.jsonl
+problems_external/ktt_lr_negativity/tier0/runs/fam6/r6_N19_20.jsonl
+problems_external/ktt_lr_negativity/tier0/runs/fam6/r7_N15_17.jsonl

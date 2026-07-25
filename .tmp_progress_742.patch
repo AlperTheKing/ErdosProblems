@@ -1,0 +1,8 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38564,0 +38565,4 @@
++[2026-07-23T19:00:02+03:00] OK SELECT | DID: audited three independent candidate scans | RESULT: #742 has a direct 25-vertex positive certificate route | D: #742 selected
++[2026-07-23T19:00:03+03:00] OK GATE | DID: checked current metadata and 2025 literature | RESULT: #742 remains decidable; Fan covers n<=24 and n=26 | D: none
++[2026-07-23T19:00:04+03:00] OK PLAN | DID: registered R1 and R2 | RESULT: problems_external/erdos_742/APPROACH_REGISTRY.md | D: R1,R2 active
++[2026-07-23T19:00:05+03:00] > ATTACK | NEXT: calibrate two independent D2C verifiers, then launch independent SAT, native, and structural routes.

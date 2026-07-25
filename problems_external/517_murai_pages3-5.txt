@@ -1,0 +1,145 @@
+40                                  T. MURAI
+
+
+answer this question in the negative. Clunie [3] constructed a se-
+                                     00
+
+
+quence     S = (n^)^^        with    ^ l/n^ = oo such that any entire
+                                    k=l
+function /(z) with S(/) C S has no finite Borel exceptional value.
+Hence it seems difficult to investigate the value-distribution of entire
+                                            00
+
+
+                lim00 k/n^ = 0 and ^ 1 /n^ = oo.
+functions with fc-
+                   '                fc=i
+     For the deficiency of entire functions of finite lower order
+with gaps, various results are known. It is interesting to compare
+our theorem with the following result [6,11]: An entire function
+f(z) satisfies A(/) < Cp(/) D(/), where A(/) denotes the sum
+of deficiencies for complex values, C an absolute constant, p(f)
+the lower order and D(/) the infimum over all D > 0 such that
+(^"^escn ls incomplete in the space of square integrable functions
+in an interval (— D, D). Let us note that an entire function f(z)
+with Fejer gaps satisfies D(/) = 0. Hence this inequality gives the
+assertion of our theorem under the additional condition p (•) < °°.
+This remark was first given by Fuchs [6]. Our theorem gives a new
+information about A(Q in the case ?(•) = °° and D(.) = 0.
+
+
+                            2. Notation and lemmas.
+
+     2.1. Throughout the paper, we use C, C\ C", CQ for absolute
+constants. The value of C, C' or C" differs in general from one
+occasion to another. We denote by Dy, Sy (r > 0) the open disk
+with center 0 and radius r, and its boundary, respectively. Let C
+denote the complex plane.
+     For an entire function               g(z) = ^ ^n^>       the maximum
+                                                 «==0
+modulus and the maximum term associated with r > 0 are
+defined by
+                 M(^)=max{|g(z)|;zGS,}.
+^(r » g ) = max {\c^rn\\n > 1}, respectively. The characteristic
+function    is   defined     m(r,g) = (l/27r) /
+                             by                     log^ {g^re^^dt
+                        4
+                                               ^o
+(r > 0),    where log ^ x = max {log x , 0} (x > 0). The counting
+                                                        f*r
+function at f l E C is defined by N ( r , ^ , ^ ) = / n ( x , a , g ) / x dx
+                                                    ^o
+                       THE DEFICIENCY OF ENTIRE FUNCTIONS                          41
+
+
+( r > 0 ) , where n ( x , a , g ) denotes the number of roots (counted ac-
+cording to the multiplicity) of g ( z ) = a in D^ — {0} . The deficiency
+at a EC is defined by 8 (a , g ) = 1 — lim sup N ( r , f l , g ) / m ( r , g ) .
+                                                          y—*.oo
+
+
+     We say that a set E in (0,o°) is of finite logarithmic measure
+if / 1/(1 + r) dr < °°. For two real-valued functions A(r), B(r)
+   "E
+in (0,°°), we say that A(r) < B(r) holds log-finely (l.f.) if this
+inequality holds outside a set of finite logarithmic measure.
+     For a function                P(t)    in an interval          [0,27r),   we put
+                           w
+m(P) = (1/27T) f               log"" \P(t)\dt.      The   conjugate     function   of
+P(0 is defined by
+      P(0 = lim (- 1/27T) r {P(r + s) - P(r - .?)} cot^/2) ^
+               c-*-0                  ^e
+([16] p. 131).
+     For a sequence S = (^)^°^ of positive integers, we denote
+by Cxj(r,S) (r > 0) the number of all integers k with n^<r and
+put ?2(r, S) = f (^(x , S)/x ri^ (r > 0). We easily see that S
+                       0                     /»oo
+
+is a Fejer gap series if and only if / cj(x , S)/^2 dx < oo.
+                                     -'0
+     2.2. Here are some lemmas necessary for the proof of our
+theorem.
+
+     LEMMA 1 ([7] p. 1). —Let g(z) be an entire function with
+g(0) ^ 0. Then
+          N ( / - , 0 ^ ) = ( l / 2 7 r ) f^ \og\g{reit)\dt-\og\gW\
+                                          ^o                                       (1)
+                           = m(r,g) - m(r, l/g) - log \g(0)\ (r > 0).
+
+        LEMMA 2 ([7] p. 22). — Let g ( z ) be the same as above and
+b ^ , . . . , by^ all its zeros (counted according to the multiplicity) in
+DR . Then, for any 0 < r < R,
+
+—logjgOOl = Re$(z;R,^)
+61
+            + ^ {Re<^(z;&fc) + R e V / ( z ; R , 6 f c ) } (z = re'^ ,             (2)
+             k 1
+where         =
+42                                               T. MURAI
+
+
+
+     < S > ( z , R , g ) = OZ/27T) f v log |g(Re")| {2Rels/(Rel5 - z)2} ds
+                                       Jo
+                                                                _                          (3)
+     0 ( z ; a ) = zz/(z - a ) ,             V / ( z ; R , f l ) = ;za/(R 2 - oz) .
+
+        LEMMA 3 ([15]). - For an entire function g ( z ) and e>0,
+                         log^(r,g) > (1 - 6)logM(r,g)                      (l.f.) .        (4)
+
+    LEMMA 4. — £^ A(r) 6^ a non-decreasing function in (0,°°)
+with A(r) > 1 (r > 0) and let p(r) be a positive function in
+(0, oo)           such     that        17f      p(r)dr < oo         ^rf      p(r + /z) < Cp(r)
+                                         o
+(r > 0, 0 < h < 1)                /or ^om^            00.           Then, for any        q >1,
+                          A { r + rp(log A(r))} < qA(r)                   (l.f.).           (5)
+     This lemma is analogous to Lemma 3 in [10] and hence we omit
+the proof.
+
+        LEMMA 5. — Let A(r) be the same as above and let 7(r) (=^ 0)
+be a non-negative non-decreasing function in (0, oo) such that
+        ( r ) / r 2 2dr<^.
+JJIr - y7(r)/r                    F(r) = f
+                     ^<oo. We put r(r)   F\(x)/x dx (r > 0) and,
+   o                                    "o
+for every r > 0 , define Vy by F(Vy) = A(r). Then, for any q > l ,
+                           A{r + rrd;,)/^} < <7A(r)                   (l.f.).              (6)
+        Since F(r) is continuous and increasing in (ro , oo) (r(ro) = 1)
+and       lim r ( A - ) = o o , Uy. is well-defined. We define a(r) by
+          r->oo
+F(a(r))=r and put p(r) = ^/a(^). We have
+
+             r ? ( r ) d r = r\/a(r)dr= F                           -y(x)/x2 dx < oo .
+           ^O                     ^1                        ^a(l)
+
+Since a(r) is increasing, we have p (r + /z) < ep (r) (r > 0,0 < h < 1).
+Hence p ( r ) satisfies the conditions in Lemma 4. Since
+                         p(logA(r)) = A(r)/a(A(r)) = F(^)/^ ,
+Lemma 4 gives (6).
+
+     LEMMA 6 ([16] p. 134). -For an integrable function P(t) in
+[0,27r) and x > 0 ,
+            measO ^ [0,27r); |P(r)| > x) < (C/x) f 27 " |P(5) | ^ ,                        (7)
+                                                 ^o
+

@@ -1,0 +1,570 @@
+{
+  "family": "fam10 -- FRACTIONAL-VERTEX sweep (largest fraction of non-lattice vertices at d >= 4), r = 5,6,7",
+  "exhaustive_or_sampled": {
+    "r5_N8_16": "EXHAUSTIVE over all (lam,mu,nu) with |nu|=N, nu exactly 5 parts, lam<=nu, mu<=nu, lam<=mu (c symmetric), N=8..16",
+    "r6_N12_17": "EXHAUSTIVE, same shape, N=12..17",
+    "r5_N17_34": "SAMPLED (25000 random draws)",
+    "r7_N16_26": "SAMPLED (30000 random draws)",
+    "staircase_probe": "TARGETED: nu = stair(k+1), near-staircase partner, k=3..6 (r=4..7)"
+  },
+  "instrument": "tier0/tier0_screen.py (mandated LP-free exact screen); vertices by exact Fraction re-solve + full feasibility check",
+  "vertex_measurement_note": "MEASUREMENT ONLY: vertex data ordered the pool, it never discarded a triple from the exact screen. Vertex counts are rigorous LOWER bounds (random-objective sampling, K=120..200; K=1500 re-checks reproduced the same counts on the champions).",
+  "dbound_note": "The staircase screen at r=7 used a reduced degree bound dbound = dim_hi + 2 instead of the ambient (r-1)(r-2)/2 = 15. This is safe: the screen still verifies two HELD-OUT points n = dbound+1, dbound+2 against the interpolant, so an underestimate shows up as HELDOUT_MISMATCH (a SKIP, never a verdict). 0 HELDOUT_MISMATCH occurred; the losses were CAP_EXCEEDED (also SKIPs).",
+  "counts": {
+    "triples_reached_by_an_exact_engine_call": 200953,
+    "triples_vertex_measured": 25578,
+    "triples_exactly_screened_OK": 11435,
+    "screen_status": {
+      "OK": 11438,
+      "CAP_EXCEEDED": 86
+    },
+    "non_lattice_triples_certified": 686,
+    "non_lattice_and_exactly_screened": 265
+  },
+  "results": {
+    "TIER0_hits": 0,
+    "JACKPOT_hits": 0,
+    "NEGATIVE_coefficient_hits": 0,
+    "negative_hstar_j": 0,
+    "audit_failures": 0,
+    "max_hstar_d_overall": 2,
+    "max_hstar_d_overall_at": [
+      [
+        10,
+        6,
+        5,
+        2,
+        1
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        13,
+        10,
+        5,
+        5,
+        1
+      ],
+      "d=1",
+      [
+        1,
+        2
+      ]
+    ],
+    "max_hstar_d_for_d_ge_2": 0,
+    "min_h1_minus_hd_overall": 0,
+    "min_h1_minus_hd_overall_at": [
+      [
+        3,
+        1,
+        1
+      ],
+      [
+        4,
+        3,
+        1,
+        1
+      ],
+      [
+        6,
+        4,
+        2,
+        1,
+        1
+      ],
+      "d=2",
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "min_h1_minus_hd_d_ge_2": 0,
+    "min_h1_minus_hd_d_ge_4": 0,
+    "min_h1_minus_hd_d_ge_4_at": [
+      [
+        3,
+        2,
+        2,
+        1
+      ],
+      [
+        4,
+        2,
+        1
+      ],
+      [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "min_h1_minus_hd_among_non_lattice": 0,
+    "min_h1_minus_hd_among_non_lattice_at": [
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        4,
+        3,
+        2,
+        1
+      ],
+      [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "d=4",
+      [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  "fractional_vertex_frontier": [
+    {
+      "lam": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "mu": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 35,
+      "nfrac": 21,
+      "fracratio": 0.6,
+      "maxden": 3,
+      "dim_lo": 9,
+      "dim_hi": 9,
+      "screened": false,
+      "hstar": null
+    },
+    {
+      "lam": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "mu": [
+        6,
+        5,
+        4,
+        3,
+        3,
+        1
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 19,
+      "nfrac": 10,
+      "fracratio": 0.5263,
+      "maxden": 3,
+      "dim_lo": 7,
+      "dim_hi": 7,
+      "screened": true,
+      "hstar": [
+        1,
+        1,
+        6,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "lam": [
+        3,
+        3,
+        2
+      ],
+      "mu": [
+        6,
+        5,
+        4,
+        2,
+        2,
+        1
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 33,
+      "nfrac": 17,
+      "fracratio": 0.5152,
+      "maxden": 4,
+      "dim_lo": 7,
+      "dim_hi": 7,
+      "screened": false,
+      "hstar": null
+    },
+    {
+      "lam": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "mu": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        2
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 18,
+      "nfrac": 9,
+      "fracratio": 0.5,
+      "maxden": 3,
+      "dim_lo": 7,
+      "dim_hi": 7,
+      "screened": true,
+      "hstar": [
+        1,
+        1,
+        6,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "lam": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "mu": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 27,
+      "nfrac": 13,
+      "fracratio": 0.4815,
+      "maxden": 3,
+      "dim_lo": 10,
+      "dim_hi": 10,
+      "screened": false,
+      "hstar": null
+    },
+    {
+      "lam": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "mu": [
+        6,
+        5,
+        4,
+        4,
+        2,
+        1
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 17,
+      "nfrac": 8,
+      "fracratio": 0.4706,
+      "maxden": 3,
+      "dim_lo": 7,
+      "dim_hi": 7,
+      "screened": false,
+      "hstar": null
+    },
+    {
+      "lam": [
+        3,
+        2,
+        2
+      ],
+      "mu": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 39,
+      "nfrac": 18,
+      "fracratio": 0.4615,
+      "maxden": 3,
+      "dim_lo": 8,
+      "dim_hi": 8,
+      "screened": false,
+      "hstar": null
+    },
+    {
+      "lam": [
+        3,
+        2,
+        2,
+        1
+      ],
+      "mu": [
+        6,
+        5,
+        3,
+        3,
+        2,
+        1
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 46,
+      "nfrac": 21,
+      "fracratio": 0.4565,
+      "maxden": 4,
+      "dim_lo": 10,
+      "dim_hi": 10,
+      "screened": false,
+      "hstar": null
+    },
+    {
+      "lam": [
+        3,
+        2,
+        1
+      ],
+      "mu": [
+        7,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 29,
+      "nfrac": 13,
+      "fracratio": 0.4483,
+      "maxden": 3,
+      "dim_lo": 7,
+      "dim_hi": 7,
+      "screened": false,
+      "hstar": null
+    },
+    {
+      "lam": [
+        3,
+        2,
+        1
+      ],
+      "mu": [
+        6,
+        5,
+        4,
+        4,
+        2,
+        1
+      ],
+      "nu": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "nverts": 27,
+      "nfrac": 12,
+      "fracratio": 0.4444,
+      "maxden": 3,
+      "dim_lo": 7,
+      "dim_hi": 7,
+      "screened": false,
+      "hstar": null
+    }
+  ],
+  "hits": [],
+  "interior_point_probe": {
+    "purpose": "the only records in the whole family with h*_d > 0 at d >= 2 -- obtained by deliberately fattening the polytope",
+    "records": [
+      {
+        "lam": [
+          12,
+          8,
+          4,
+          2
+        ],
+        "mu": [
+          12,
+          8,
+          4,
+          2
+        ],
+        "nu": [
+          18,
+          14,
+          10,
+          6,
+          4
+        ],
+        "d": 6,
+        "c": 394,
+        "hstar": [
+          1,
+          387,
+          5907,
+          14392,
+          7337,
+          645,
+          3
+        ],
+        "hstar_d": 3,
+        "margin": 384,
+        "nfrac_vertices": 0
+      },
+      {
+        "lam": [
+          11,
+          8,
+          5,
+          2
+        ],
+        "mu": [
+          11,
+          8,
+          5,
+          2
+        ],
+        "nu": [
+          15,
+          13,
+          11,
+          8,
+          5
+        ],
+        "d": 6,
+        "c": 286,
+        "hstar": [
+          1,
+          279,
+          4111,
+          9933,
+          5054,
+          444,
+          2
+        ],
+        "hstar_d": 2,
+        "margin": 277,
+        "nfrac_vertices": 2,
+        "nverts": 49,
+        "maxden": 2
+      }
+    ],
+    "reading": "as soon as an interior lattice point exists, h*_1 explodes; the two ends of the target (h*_1 = 0 and h*_d > 0) never met anywhere in this family"
+  },
+  "verdict": "No TIER0, no JACKPOT, no negative monomial coefficient and no negative h*_j in 11435 exactly screened hive polytopes selected FOR maximal vertex fractionality (up to 60% non-lattice vertices, denominators up to 4). h*_d = 0 in EVERY screened record with d >= 2: fractionality of the vertices is anti-correlated with having an interior lattice point. A null census is NOT evidence for the KTT conjecture."
+}

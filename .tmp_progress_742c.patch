@@ -1,0 +1,6 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38572,0 +38573,2 @@
++[2026-07-23T19:30:09+03:00] FAIL ATTACK | DID: ran 64t C++ minimalization for 600s | RESULT: 3600239 restarts; best156=K12,13; no raw 157-edge hit | D: none
++[2026-07-23T19:30:10+03:00] > ATTACK | NEXT: audit the SMS and structural outputs; do not extend the same bounded stochastic lane without a new bridge.

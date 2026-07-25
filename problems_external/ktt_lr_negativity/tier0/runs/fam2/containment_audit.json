@@ -1,0 +1,13 @@
+{
+ "exhaustive_nmax": 13,
+ "exhaustive_violating": 29294,
+ "exhaustive_status": {
+  "EMPTY": 29294
+ },
+ "exhaustive_nonempty": 0,
+ "random_status": {
+  "EMPTY": 60000
+ },
+ "random_nonempty": 0,
+ "counterexamples": []
+}

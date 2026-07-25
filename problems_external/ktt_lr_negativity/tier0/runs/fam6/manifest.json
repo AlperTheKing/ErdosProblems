@@ -1,0 +1,361 @@
+{
+ "family": "fam6 -- MINIMAL-LATTICE-POINT hunt (c = d+1 exactly): stage 1 keeps every triple with 1 <= c <= D+1 (necessary for h*_1 = 0 since h*_1 = c-(d+1), d <= D); stage 2 = the mandated LP-free exact screen on every survivor.  No LP dimension oracle, no simplex filter.",
+ "generated_utc": "2026-07-21T22:15:22Z",
+ "instrument": "tier0/tier0_screen.py (screen_profile), engine A engine/lr_hive.exe, cross-check engine B engine/engineB_lrrule.py",
+ "drivers": [
+  "tier0/fam6_scan.py",
+  "tier0/fam6_control.py",
+  "tier0/fam6_beam.py",
+  "tier0/fam6_carriers.py",
+  "tier0/fam6_retry.py",
+  "tier0/fam6_final.py",
+  "tier0/fam6_analyze.py",
+  "tier0/fam6_mine_pos.py"
+ ],
+ "regions_exhaustive": [
+  {
+   "r": 10,
+   "Nlo": 10,
+   "Nhi": 16,
+   "D": 36,
+   "generated": 13082,
+   "stage1": {
+    "empty": 6749,
+    "rejected_c_gt_D1": 0,
+    "cap_fail": 0
+   },
+   "survivors": 6333,
+   "ok": 6093,
+   "other": 240,
+   "wall_s": 262.4,
+   "out": "runs/fam6/r10_N10_16.jsonl",
+   "exhaustive": true
+  },
+  {
+   "r": 5,
+   "Nlo": 21,
+   "Nhi": 21,
+   "D": 6,
+   "generated": 556704,
+   "stage1": {
+    "empty": 300832,
+    "rejected_c_gt_D1": 1014,
+    "cap_fail": 0
+   },
+   "survivors": 254858,
+   "ok": 254858,
+   "other": 0,
+   "wall_s": 632.2,
+   "out": "runs/fam6/r5_N21.jsonl",
+   "exhaustive": true
+  },
+  {
+   "r": 6,
+   "Nlo": 19,
+   "Nhi": 19,
+   "D": 10,
+   "generated": 267970,
+   "stage1": {
+    "empty": 143972,
+    "rejected_c_gt_D1": 2,
+    "cap_fail": 0
+   },
+   "survivors": 123996,
+   "ok": 123996,
+   "other": 0,
+   "wall_s": 662.0,
+   "out": "runs/fam6/r6_N19.jsonl",
+   "exhaustive": true
+  },
+  {
+   "r": 7,
+   "Nlo": 15,
+   "Nhi": 17,
+   "D": 15,
+   "generated": 127938,
+   "stage1": {
+    "empty": 67623,
+    "rejected_c_gt_D1": 0,
+    "cap_fail": 0
+   },
+   "survivors": 60315,
+   "ok": 60215,
+   "other": 100,
+   "wall_s": 259.7,
+   "out": "runs/fam6/r7_N15_17.jsonl",
+   "exhaustive": true
+  },
+  {
+   "r": 8,
+   "Nlo": 13,
+   "Nhi": 16,
+   "D": 21,
+   "generated": 43983,
+   "stage1": {
+    "empty": 22980,
+    "rejected_c_gt_D1": 0,
+    "cap_fail": 0
+   },
+   "survivors": 21003,
+   "ok": 20203,
+   "other": 800,
+   "wall_s": 304.6,
+   "out": "runs/fam6/r8_N13_16.jsonl",
+   "exhaustive": true
+  },
+  {
+   "r": 8,
+   "Nlo": 8,
+   "Nhi": 12,
+   "D": 21,
+   "generated": 1441,
+   "stage1": {
+    "empty": 598,
+    "rejected_c_gt_D1": 0,
+    "cap_fail": 0
+   },
+   "survivors": 843,
+   "ok": 843,
+   "other": 0,
+   "wall_s": 1.2,
+   "out": "runs/fam6/r8_N8_12.jsonl",
+   "exhaustive": true
+  },
+  {
+   "r": 9,
+   "Nlo": 9,
+   "Nhi": 15,
+   "D": 28,
+   "generated": 11045,
+   "stage1": {
+    "empty": 5529,
+    "rejected_c_gt_D1": 0,
+    "cap_fail": 0
+   },
+   "survivors": 5516,
+   "ok": 5516,
+   "other": 0,
+   "wall_s": 101.6,
+   "out": "runs/fam6/r9_N9_15.jsonl",
+   "exhaustive": true
+  }
+ ],
+ "aggregate": {
+  "distinct_triples": 490649,
+  "ok": 480178,
+  "status": {
+   "OK": 480178,
+   "EMPTY": 10471
+  },
+  "deg_hist": {
+   "0": 331514,
+   "1": 89620,
+   "2": 36944,
+   "3": 15229,
+   "4": 5605,
+   "5": 1132,
+   "6": 134
+  },
+  "max_hstar_d_all": 1,
+  "max_hstar_d_all_at": {
+   "lam": [
+    5,
+    2
+   ],
+   "mu": [
+    8,
+    3,
+    1,
+    1,
+    1
+   ],
+   "nu": [
+    11,
+    5,
+    3,
+    1,
+    1
+   ],
+   "r": 5,
+   "d": 1,
+   "c": 3,
+   "hstar": [
+    1,
+    1
+   ],
+   "hstar_sum": 2
+  },
+  "max_hstar_d_d_ge_2": 0,
+  "max_hstar_d_d_ge_2_at": {
+   "lam": [
+    4,
+    1
+   ],
+   "mu": [
+    3,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "nu": [
+    5,
+    3,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "r": 8,
+   "d": 2,
+   "c": 3,
+   "hstar": [
+    1,
+    0,
+    0
+   ],
+   "hstar_sum": 1
+  },
+  "min_h1_minus_hd_all": 0,
+  "min_h1_minus_hd_all_at": {
+   "lam": [
+    4,
+    2
+   ],
+   "mu": [
+    3,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "nu": [
+    5,
+    3,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "r": 8,
+   "d": 1,
+   "c": 2,
+   "hstar": [
+    1,
+    0
+   ],
+   "hstar_sum": 1
+  },
+  "min_h1_minus_hd_d_ge_2": 0,
+  "min_h1_minus_hd_d_ge_2_at": {
+   "lam": [
+    4,
+    1
+   ],
+   "mu": [
+    3,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "nu": [
+    5,
+    3,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "r": 8,
+   "d": 2,
+   "c": 3,
+   "hstar": [
+    1,
+    0,
+    0
+   ],
+   "hstar_sum": 1
+  },
+  "h1_minus_hd_hist": {
+   "0": 139856,
+   "1": 6439,
+   "2": 2046,
+   "3": 289,
+   "4": 27,
+   "5": 5,
+   "6": 2
+  },
+  "h1_zero_(d,hstar_degree_s)": {
+   "1,0": 89187,
+   "2,0": 34356,
+   "3,0": 11839,
+   "4,0": 2894,
+   "4,2": 352,
+   "5,0": 436,
+   "5,2": 306,
+   "6,0": 26,
+   "6,2": 27
+  },
+  "h1_zero_(d,Sum_hstar)": {
+   "1,1": 89187,
+   "2,1": 34356,
+   "3,1": 11839,
+   "4,1": 2894,
+   "4,2": 352,
+   "5,1": 436,
+   "5,2": 306,
+   "6,1": 26,
+   "6,2": 27
+  },
+  "minimal_c_nonunimodular": 685,
+  "hits_counts": {
+   "TIER0": 0,
+   "JACKPOT": 0,
+   "NEG": 0
+  },
+  "audit_failure_count": 0
+ },
+ "carriers": {
+  "definition": "h*_1 = 0 (c = d+1) AND Sum h* >= 2 -- the only non-unimodular members of the family",
+  "count": 718,
+  "hstar_shapes_observed": [
+   "[1, 0, 1, 0, 0, 0, 0]@d=6",
+   "[1, 0, 1, 0, 0, 0]@d=5",
+   "[1, 0, 1, 0, 0]@d=4"
+  ],
+  "vertex_denominator_hist": {
+   "2": 698,
+   "3": 17,
+   "1": 3
+  },
+  "vstatus_all": [
+   "PROVABLY_NOT_SIMPLEX",
+   "SIMPLEX_CONSISTENT"
+  ],
+  "non_lattice_count": 715,
+  "file": "runs/fam6/carriers_all.json"
+ },
+ "engineB_crosscheck": {
+  "triples": 6,
+  "all_match": true,
+  "file": "runs/fam6/engineB_crosscheck.json"
+ },
+ "hits": {
+  "TIER0": [],
+  "JACKPOT": [],
+  "NEG": []
+ },
+ "verdict": "0 TIER0, 0 JACKPOT, 0 NEGATIVE.  Every family-6 record with h*_1 = 0 has h*-degree s = max{j : h*_j > 0} in {0, 2}: either Sum h* = 1 (unimodular simplex, s = 0) or h* = (1,0,1,0,...,0) (s = 2), and s = 2 occurs only at d >= 4.  h*_d = 0 on every record with d >= 2, so min(h*_1 - h*_d) = 0 throughout and no lattice-polytope inequality is violated.  A null census is NOT evidence for the KTT conjecture."
+}

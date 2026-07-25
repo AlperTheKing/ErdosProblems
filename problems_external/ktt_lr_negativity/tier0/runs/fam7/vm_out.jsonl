@@ -1,0 +1,10 @@
+{"idx": 3, "lam": [18, 12, 6, 4], "mu": [12, 10, 4], "nu": [22, 16, 14, 8, 6], "d_true": 5, "dim_lo": 5, "nverts": 23, "maxden": 1, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 4, "lam": [8, 6, 4, 2], "mu": [8, 6, 4, 2], "nu": [12, 10, 8, 6, 4], "d_true": 6, "dim_lo": 6, "nverts": 20, "maxden": 1, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 1, "lam": [6, 4], "mu": [8, 6, 4, 2], "nu": [10, 8, 6, 4, 2], "d_true": 3, "dim_lo": 3, "nverts": 6, "maxden": 1, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 0, "lam": [8, 4], "mu": [8, 4, 2, 2], "nu": [12, 8, 4, 2, 2], "d_true": 2, "dim_lo": 2, "nverts": 3, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 2, "lam": [8, 6, 4], "mu": [8, 6, 4], "nu": [12, 10, 8, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 8, "maxden": 1, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 5, "lam": [2, 2, 1], "mu": [4, 3, 2, 1], "nu": [5, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 7, "lam": [3, 2], "mu": [4, 3, 2, 1], "nu": [5, 4, 3, 2, 1], "d_true": 3, "dim_lo": 3, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 8, "lam": [4, 3, 2], "mu": [4, 3, 2], "nu": [6, 5, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 8, "maxden": 1, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 6, "lam": [4, 2], "mu": [4, 2, 1, 1], "nu": [6, 4, 2, 1, 1], "d_true": 2, "dim_lo": 2, "nverts": 3, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 9, "lam": [4, 3, 2, 1], "mu": [4, 3, 2, 1], "nu": [6, 5, 4, 3, 2], "d_true": 6, "dim_lo": 6, "nverts": 20, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}

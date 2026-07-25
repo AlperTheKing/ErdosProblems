@@ -1,0 +1,53 @@
+diff --git a/problems_external/erdos_742/native/d2c_prune.cpp b/problems_external/erdos_742/native/d2c_prune.cpp
+--- a/problems_external/erdos_742/native/d2c_prune.cpp
++++ b/problems_external/erdos_742/native/d2c_prune.cpp
+@@ -93,6 +93,34 @@ struct PruneShared {
+     std::atomic<std::uint64_t> restarts{0};
+ };
+ 
++bool is_complete_bipartite_12_13(const Graph& g) {
++    if (g.n != 25) return false;
++    std::vector<int> color(g.n, -1);
++    std::queue<int> pending;
++    color[0] = 0;
++    pending.push(0);
++    while (!pending.empty()) {
++        const int u = pending.front();
++        pending.pop();
++        for (int v = 0; v < g.n; ++v) {
++            if (!g.edge(u, v)) continue;
++            if (color[v] < 0) {
++                color[v] = 1 - color[u];
++                pending.push(v);
++            } else if (color[v] == color[u]) {
++                return false;
++            }
++        }
++    }
++    if (std::find(color.begin(), color.end(), -1) != color.end()) {
++        return false;
++    }
++    const int part0 = std::count(color.begin(), color.end(), 0);
++    if (part0 != 12 && part0 != 13) return false;
++    for (int u = 0; u < g.n; ++u) {
++        for (int v = u + 1; v < g.n; ++v) {
++            if (g.edge(u, v) != (color[u] != color[v])) return false;
++        }
++    }
++    return true;
++}
++
+ void emit_prune_best(int lane, std::uint64_t restart, const Graph& g,
+                      const Metrics& m) {
+     std::cout << "{\"strategy\":\"minimalize\",\"lane\":" << lane
+@@ -99,7 +127,9 @@ void emit_prune_best(int lane, std::uint64_t restart, const Graph& g,
+               << ",\"restart\":" << restart << ",\"edges\":" << m.edges
+               << ",\"uncovered\":" << m.uncovered_nonedges
+               << ",\"noncritical\":" << m.noncritical_edges
+-              << ",\"d2c\":" << (m.d2c ? "true" : "false");
++              << ",\"d2c\":" << (m.d2c ? "true" : "false")
++              << ",\"is_K12_13\":"
++              << (is_complete_bipartite_12_13(g) ? "true" : "false");
+     if (m.edges >= 157 && m.d2c) {
+         std::cout << ",\"adjacency\":" << edge_list_json(g);
+     }

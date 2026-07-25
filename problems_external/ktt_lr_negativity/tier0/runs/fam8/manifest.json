@@ -1,0 +1,205 @@
+{
+ "family": "fam8 = beam search maximising h*_d - h*_1, plus an exhaustive small-box companion sweep",
+ "instrument": "tier0_screen.py (LP-free; engine A profile, exact Newton interpolation, 2 held-out points, exact h*)",
+ "exhaustive": false,
+ "sampled": true,
+ "beam": {
+  "records": 2353,
+  "state": {
+   "gen": 11,
+   "tested": 2353,
+   "best_fit": 0,
+   "best_hd": 0,
+   "min_margin": 0,
+   "hits": 0,
+   "seen": 2489
+  }
+ },
+ "exhaustive_companion": {
+  "enumerated": 32400,
+  "stage1": 32400,
+  "empty": 23044,
+  "tier0_possible": 9356,
+  "full_screened": 9356,
+  "hits": 0,
+  "min_margin": 0,
+  "best_hd": 0,
+  "completed_box": false,
+  "NMAX": 15,
+  "min_margin_triple": [
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    1,
+    1,
+    1
+   ],
+   [
+    3,
+    2,
+    1,
+    1,
+    1
+   ],
+   [
+    1,
+    0
+   ]
+  ],
+  "best_hd_triple": [
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    1,
+    1,
+    1
+   ],
+   [
+    3,
+    2,
+    1,
+    1,
+    1
+   ],
+   [
+    1,
+    0
+   ]
+  ]
+ },
+ "records_total": 11709,
+ "distinct_triples": 11674,
+ "status_histogram": {
+  "OK": 11706,
+  "CAP_EXCEEDED": 3
+ },
+ "d_histogram": {
+  "0": 8414,
+  "1": 1808,
+  "2": 706,
+  "3": 349,
+  "4": 243,
+  "5": 120,
+  "6": 46,
+  "7": 18,
+  "8": 2
+ },
+ "best_hstar_d": {
+  "lam": [
+   2,
+   2,
+   1
+  ],
+  "mu": [
+   5,
+   4,
+   2,
+   1
+  ],
+  "nu": [
+   6,
+   5,
+   3,
+   1,
+   1,
+   1
+  ],
+  "r": 6,
+  "degree_bound": 10,
+  "d": 2,
+  "c": 3,
+  "hstar": [
+   1,
+   0,
+   0
+  ],
+  "hstar_sum": 1,
+  "hstar_1": 0,
+  "hstar_d": 0,
+  "INTERIOR": 0,
+  "TIER0": false,
+  "JACKPOT": false,
+  "NEG": false,
+  "coeffs_low_to_high": [
+   "1",
+   "3/2",
+   "1/2"
+  ],
+  "u_mean": "-3",
+  "u2_mean": "9"
+ },
+ "min_h1_minus_hd": 0,
+ "min_h1_minus_hd_triple": {
+  "lam": [
+   2,
+   2,
+   1
+  ],
+  "mu": [
+   5,
+   4,
+   2,
+   1
+  ],
+  "nu": [
+   6,
+   5,
+   3,
+   1,
+   1,
+   1
+  ],
+  "r": 6,
+  "degree_bound": 10,
+  "d": 2,
+  "c": 3,
+  "hstar": [
+   1,
+   0,
+   0
+  ],
+  "hstar_sum": 1,
+  "hstar_1": 0,
+  "hstar_d": 0,
+  "INTERIOR": 0,
+  "TIER0": false,
+  "JACKPOT": false,
+  "NEG": false,
+  "coeffs_low_to_high": [
+   "1",
+   "3/2",
+   "1/2"
+  ],
+  "u_mean": "-3",
+  "u2_mean": "9"
+ },
+ "hits": [],
+ "audit_failures": [],
+ "observations": {
+  "stanley_neg_hstar": 0,
+  "hd_gt_h1": 0
+ },
+ "note": "A null census is NOT evidence for the KTT conjecture.",
+ "nonlattice_measurement": {
+  "pool": "400 random h*_1==0, d>=2 records",
+  "method": "exact re-solved vertices (simplex_vol.sample_vertices, K=200), measurement only never a filter",
+  "proven_nonlattice_maxden_gt_1": 22,
+  "note": "lower bound: random objectives can miss non-integral vertices"
+ },
+ "exhaustive_companion_coverage": {
+  "complete_strata": "r=5, |nu| <= 14, all (lam,mu) with <=5 parts, up to lam<->mu symmetry (26108 triples)",
+  "partial_stratum": "r=5, |nu|=15 (6292 of 23932 enumerated)",
+  "r6_reached": false,
+  "stage1_decides_TIER0_exhaustively": true,
+  "stage1_does_NOT_decide_JACKPOT": true,
+  "jackpot_coverage_in_box": "stage-1 survivors (c<=D+1) fully screened + 3% random sample of c>D+1"
+ },
+ "max_hstar_d_over_d_ge_1": 0,
+ "hstar_d_histogram_note": "h*_d=1 occurs only on the 8414 degenerate d=0 records (h*_0=h*_d=1); every record with d>=1 has INTERIOR=0"
+}

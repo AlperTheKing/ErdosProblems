@@ -1,0 +1,13 @@
+{
+  "status": "RUNNING",
+  "run_dir": "E:\\Projects\\ErdosProblems\\problems_external\\erdos_617\\native\\logs\\b2-unrestricted-63t-seed6172026072303-20260723T182442115",
+  "pid": 81212,
+  "threads": 63,
+  "seconds": 3600,
+  "seed": "6172026072303",
+  "source_sha256": "0E34B9273009C876997CC516EE86CD45D54F7DEBAF9DD35AD95A40F7F7E0A508",
+  "exe_sha256": "6B9CC4E7468034236B90E29AD29298188420D94ECEC942148895B68FE6701AFB",
+  "started": "2026-07-23T18:24:42.1578569+03:00",
+  "stdout": "E:\\Projects\\ErdosProblems\\problems_external\\erdos_617\\native\\logs\\b2-unrestricted-63t-seed6172026072303-20260723T182442115\\stdout.txt",
+  "stderr": "E:\\Projects\\ErdosProblems\\problems_external\\erdos_617\\native\\logs\\b2-unrestricted-63t-seed6172026072303-20260723T182442115\\stderr.txt"
+}

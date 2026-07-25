@@ -1,0 +1,51 @@
+diff --git a/problems_external/erdos_1212/APPROACH_REGISTRY.md b/problems_external/erdos_1212/APPROACH_REGISTRY.md
+--- a/problems_external/erdos_1212/APPROACH_REGISTRY.md
++++ b/problems_external/erdos_1212/APPROACH_REGISTRY.md
+@@ -108,0 +109,46 @@
++
++## DIRECT ROUTE R3: fixed composite strip
++
++### 1. Exact final deliverable
++
++Give one finite path from `(a,25)` to `(a+390,25)` contained in the three
++rows `y=25,26,27`, using unit horizontal or vertical edges, such that every
++vertex `(x,y)` has `gcd(x,y)=1`. Its translates by `(390,0)` must concatenate
++to a simple path.
++
++### 2. Current frontier certificate
++
++Find the finite path in the declared `390 by 3` strip. Horizontal moves are
++allowed only when both endpoints are coprime to the row value. A switch
++between rows 25 and 27 uses both vertical edges through row 26 and is allowed
++only at a column coprime to all three row values.
++
++### 3. Logical bridge
++
++The three row values are composite and exceed `1`, so every path vertex has
++a composite coordinate and both coordinates exceed `1` once `a>1`.
++Moreover
++
++`rad(25*26*27) = 2*3*5*13 = 390`.
++
++Thus, if `gcd(x,y)=1` for a phase vertex, then
++`gcd(x+390k,y)=1` for every `k>=0`. Repeating the finite path therefore
++preserves every required property; a path whose internal x-coordinates lie
++strictly between its endpoints repeats without overlap and goes to infinity.
++
++### 4. Next falsifiable action
++
++Run exact breadth-first search on precisely this `390 by 3` strip, require
++the endpoint and no boundary overlap, and independently replay any word for
++at least 10,000 periods before replacing replay by the radical argument.
++
++### 5. Exit condition
++
++If this single declared strip has no path, mark R3 `DEAD`; do not try other
++row triples or larger moduli. If a path is found but either independent
++replay or the symbolic radical proof fails, mark R3 `DEAD`. A verified path
++is a complete affirmative resolution of #1212 and triggers a fresh novelty
++gate.
++
++## Status update
++
++R3 is `CALIBRATION_PENDING`. It supersedes R2 for the next computation.

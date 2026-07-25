@@ -1,0 +1,544 @@
+{
+  "upstream_url": "https://github.com/willblair0708/verified-combinatorics",
+  "upstream_commit": "3f84ebc061123ec29a5147204b269ab83162af34",
+  "upstream_files": {
+    "README.md": {
+      "bytes": 3541,
+      "sha256": "9827ECE78C333419A2736327F1314623554E422FAC6E8501E235867B9D43726E"
+    },
+    "search_993.py": {
+      "bytes": 9450,
+      "sha256": "FF2CBFE9018272183550EEAB3D8BA2EB950C0FA31E3F2DD263E7229785CFE04A"
+    },
+    "search_993_v2.py": {
+      "bytes": 7817,
+      "sha256": "1FE04FE4E6ED90C29B34DEE9A19DFD88650C67DD42BBD9A624295E6C5E1DE752"
+    },
+    "verify_993_kernel.py": {
+      "bytes": 8234,
+      "sha256": "84102B32CFC5EA87C4DB13312917F60591EA6DB6CB56BFBA5A7F14AF7FB8EF7B"
+    },
+    "verify_993_result.py": {
+      "bytes": 3782,
+      "sha256": "8F04A68D84753E7E54700EA05D661D6647DC78682BBAB9AA8848E699790666AC"
+    },
+    "results.json": {
+      "bytes": 18292,
+      "sha256": "889AADFDA302B1A80EB76135D3DB8CCB63C2ECA5D2829DE28D94BFDDAD9F8662"
+    },
+    "seed_T_3_4_4.json": {
+      "bytes": 852,
+      "sha256": "61247EEE40E37899C6D2D76BDDC674E992622EA2801EE539AC39FFE757D3B160"
+    },
+    "seed_Tstar_3_3_4.json": {
+      "bytes": 857,
+      "sha256": "9CF297BB7B67C328A77250CDAB03A0F6C1A430BBACFD1E35BD5F207E7EF93B86"
+    }
+  },
+  "fast_verifier": {
+    "command": "python verify_993_result.py",
+    "exit_code": 0,
+    "result": "ALL PASS"
+  },
+  "published_calibration": {
+    "command": "python search_993_v2.py",
+    "exit_code": 0,
+    "bushes_scanned": 112916,
+    "distinct_non_log_concave": 4445,
+    "single_tree_hits": 0,
+    "worst_lc_severity": -12.2157,
+    "top80_pairs_cumulative": 3240,
+    "top80_triples_cumulative": 91800,
+    "powers_cumulative": 176255,
+    "forest_objects_total": 253695,
+    "forest_hits": 0
+  },
+  "independent_seed_deletion_recurrence": {
+    "seed_T_3_4_4": {
+      "states": 6651,
+      "polynomial_match": true,
+      "unimodal": true,
+      "log_concave": false
+    },
+    "seed_Tstar_3_3_4": {
+      "states": 5823,
+      "polynomial_match": true,
+      "unimodal": true,
+      "log_concave": false
+    }
+  },
+  "v2_catalog": {
+    "records": 4445,
+    "path": "audit/upstream_catalog_4445.jsonl",
+    "bytes": 3807714,
+    "sha256": "7C80058B3B89B7121F0D84BAD232B7E5C93A33CB6D666D3BAA3216775734B328"
+  },
+  "native_catalog_crosscheck": {
+    "records": 4445,
+    "path": "audit/cpp_catalog_4445.tsv",
+    "bytes": 1438595,
+    "sha256": "24B002B9F1EDF97C2BF8491400B27E36F018E1673B0DAB5BB722E1F0110FF8A4",
+    "exact_records_equal_to_v2_jsonl": true
+  },
+  "full_family_audit": {
+    "scope": "m,n>=0, m<=n, order<=60; retain exact non-log-concave polynomials (same non-LC set for lower bound m,n>=1 or >=2)",
+    "T": {
+      "instances_scanned": 182,
+      "non_lc_unique": 26,
+      "missing_from_v2": 20
+    },
+    "Tstar": {
+      "instances_scanned": 169,
+      "non_lc_unique": 34,
+      "missing_from_v2": 34
+    },
+    "combined": {
+      "instances_scanned": 351,
+      "non_lc_unique": 60,
+      "present_in_v2": 6,
+      "missing_from_v2": 54,
+      "nonunimodal": 0
+    },
+    "missing_representatives": [
+      {
+        "id": 4445,
+        "source": "published_T",
+        "m": 5,
+        "n": 7,
+        "order": 34,
+        "label": "T_3_5_7|n=34"
+      },
+      {
+        "id": 4446,
+        "source": "published_T",
+        "m": 6,
+        "n": 7,
+        "order": 36,
+        "label": "T_3_6_7|n=36"
+      },
+      {
+        "id": 4447,
+        "source": "published_T",
+        "m": 6,
+        "n": 8,
+        "order": 38,
+        "label": "T_3_6_8|n=38"
+      },
+      {
+        "id": 4448,
+        "source": "published_T",
+        "m": 7,
+        "n": 7,
+        "order": 38,
+        "label": "T_3_7_7|n=38"
+      },
+      {
+        "id": 4449,
+        "source": "published_T",
+        "m": 7,
+        "n": 8,
+        "order": 40,
+        "label": "T_3_7_8|n=40"
+      },
+      {
+        "id": 4450,
+        "source": "published_T",
+        "m": 7,
+        "n": 9,
+        "order": 42,
+        "label": "T_3_7_9|n=42"
+      },
+      {
+        "id": 4451,
+        "source": "published_T",
+        "m": 8,
+        "n": 8,
+        "order": 42,
+        "label": "T_3_8_8|n=42"
+      },
+      {
+        "id": 4452,
+        "source": "published_T",
+        "m": 8,
+        "n": 9,
+        "order": 44,
+        "label": "T_3_8_9|n=44"
+      },
+      {
+        "id": 4453,
+        "source": "published_T",
+        "m": 8,
+        "n": 10,
+        "order": 46,
+        "label": "T_3_8_10|n=46"
+      },
+      {
+        "id": 4454,
+        "source": "published_T",
+        "m": 9,
+        "n": 9,
+        "order": 46,
+        "label": "T_3_9_9|n=46"
+      },
+      {
+        "id": 4455,
+        "source": "published_T",
+        "m": 9,
+        "n": 10,
+        "order": 48,
+        "label": "T_3_9_10|n=48"
+      },
+      {
+        "id": 4456,
+        "source": "published_T",
+        "m": 9,
+        "n": 11,
+        "order": 50,
+        "label": "T_3_9_11|n=50"
+      },
+      {
+        "id": 4457,
+        "source": "published_T",
+        "m": 10,
+        "n": 10,
+        "order": 50,
+        "label": "T_3_10_10|n=50"
+      },
+      {
+        "id": 4458,
+        "source": "published_T",
+        "m": 10,
+        "n": 11,
+        "order": 52,
+        "label": "T_3_10_11|n=52"
+      },
+      {
+        "id": 4459,
+        "source": "published_T",
+        "m": 10,
+        "n": 12,
+        "order": 54,
+        "label": "T_3_10_12|n=54"
+      },
+      {
+        "id": 4460,
+        "source": "published_T",
+        "m": 11,
+        "n": 11,
+        "order": 54,
+        "label": "T_3_11_11|n=54"
+      },
+      {
+        "id": 4461,
+        "source": "published_T",
+        "m": 11,
+        "n": 12,
+        "order": 56,
+        "label": "T_3_11_12|n=56"
+      },
+      {
+        "id": 4462,
+        "source": "published_T",
+        "m": 11,
+        "n": 13,
+        "order": 58,
+        "label": "T_3_11_13|n=58"
+      },
+      {
+        "id": 4463,
+        "source": "published_T",
+        "m": 12,
+        "n": 12,
+        "order": 58,
+        "label": "T_3_12_12|n=58"
+      },
+      {
+        "id": 4464,
+        "source": "published_T",
+        "m": 12,
+        "n": 13,
+        "order": 60,
+        "label": "T_3_12_13|n=60"
+      },
+      {
+        "id": 4465,
+        "source": "published_Tstar",
+        "m": 3,
+        "n": 4,
+        "order": 26,
+        "label": "Tstar_3_3_4|n=26"
+      },
+      {
+        "id": 4466,
+        "source": "published_Tstar",
+        "m": 3,
+        "n": 5,
+        "order": 28,
+        "label": "Tstar_3_3_5|n=28"
+      },
+      {
+        "id": 4467,
+        "source": "published_Tstar",
+        "m": 4,
+        "n": 4,
+        "order": 28,
+        "label": "Tstar_3_4_4|n=28"
+      },
+      {
+        "id": 4468,
+        "source": "published_Tstar",
+        "m": 4,
+        "n": 5,
+        "order": 30,
+        "label": "Tstar_3_4_5|n=30"
+      },
+      {
+        "id": 4469,
+        "source": "published_Tstar",
+        "m": 4,
+        "n": 6,
+        "order": 32,
+        "label": "Tstar_3_4_6|n=32"
+      },
+      {
+        "id": 4470,
+        "source": "published_Tstar",
+        "m": 4,
+        "n": 7,
+        "order": 34,
+        "label": "Tstar_3_4_7|n=34"
+      },
+      {
+        "id": 4471,
+        "source": "published_Tstar",
+        "m": 5,
+        "n": 5,
+        "order": 32,
+        "label": "Tstar_3_5_5|n=32"
+      },
+      {
+        "id": 4472,
+        "source": "published_Tstar",
+        "m": 5,
+        "n": 6,
+        "order": 34,
+        "label": "Tstar_3_5_6|n=34"
+      },
+      {
+        "id": 4473,
+        "source": "published_Tstar",
+        "m": 5,
+        "n": 7,
+        "order": 36,
+        "label": "Tstar_3_5_7|n=36"
+      },
+      {
+        "id": 4474,
+        "source": "published_Tstar",
+        "m": 5,
+        "n": 8,
+        "order": 38,
+        "label": "Tstar_3_5_8|n=38"
+      },
+      {
+        "id": 4475,
+        "source": "published_Tstar",
+        "m": 6,
+        "n": 6,
+        "order": 36,
+        "label": "Tstar_3_6_6|n=36"
+      },
+      {
+        "id": 4476,
+        "source": "published_Tstar",
+        "m": 6,
+        "n": 7,
+        "order": 38,
+        "label": "Tstar_3_6_7|n=38"
+      },
+      {
+        "id": 4477,
+        "source": "published_Tstar",
+        "m": 6,
+        "n": 8,
+        "order": 40,
+        "label": "Tstar_3_6_8|n=40"
+      },
+      {
+        "id": 4478,
+        "source": "published_Tstar",
+        "m": 6,
+        "n": 9,
+        "order": 42,
+        "label": "Tstar_3_6_9|n=42"
+      },
+      {
+        "id": 4479,
+        "source": "published_Tstar",
+        "m": 7,
+        "n": 7,
+        "order": 40,
+        "label": "Tstar_3_7_7|n=40"
+      },
+      {
+        "id": 4480,
+        "source": "published_Tstar",
+        "m": 7,
+        "n": 8,
+        "order": 42,
+        "label": "Tstar_3_7_8|n=42"
+      },
+      {
+        "id": 4481,
+        "source": "published_Tstar",
+        "m": 7,
+        "n": 9,
+        "order": 44,
+        "label": "Tstar_3_7_9|n=44"
+      },
+      {
+        "id": 4482,
+        "source": "published_Tstar",
+        "m": 7,
+        "n": 10,
+        "order": 46,
+        "label": "Tstar_3_7_10|n=46"
+      },
+      {
+        "id": 4483,
+        "source": "published_Tstar",
+        "m": 8,
+        "n": 8,
+        "order": 44,
+        "label": "Tstar_3_8_8|n=44"
+      },
+      {
+        "id": 4484,
+        "source": "published_Tstar",
+        "m": 8,
+        "n": 9,
+        "order": 46,
+        "label": "Tstar_3_8_9|n=46"
+      },
+      {
+        "id": 4485,
+        "source": "published_Tstar",
+        "m": 8,
+        "n": 10,
+        "order": 48,
+        "label": "Tstar_3_8_10|n=48"
+      },
+      {
+        "id": 4486,
+        "source": "published_Tstar",
+        "m": 8,
+        "n": 11,
+        "order": 50,
+        "label": "Tstar_3_8_11|n=50"
+      },
+      {
+        "id": 4487,
+        "source": "published_Tstar",
+        "m": 9,
+        "n": 9,
+        "order": 48,
+        "label": "Tstar_3_9_9|n=48"
+      },
+      {
+        "id": 4488,
+        "source": "published_Tstar",
+        "m": 9,
+        "n": 10,
+        "order": 50,
+        "label": "Tstar_3_9_10|n=50"
+      },
+      {
+        "id": 4489,
+        "source": "published_Tstar",
+        "m": 9,
+        "n": 11,
+        "order": 52,
+        "label": "Tstar_3_9_11|n=52"
+      },
+      {
+        "id": 4490,
+        "source": "published_Tstar",
+        "m": 9,
+        "n": 12,
+        "order": 54,
+        "label": "Tstar_3_9_12|n=54"
+      },
+      {
+        "id": 4491,
+        "source": "published_Tstar",
+        "m": 10,
+        "n": 10,
+        "order": 52,
+        "label": "Tstar_3_10_10|n=52"
+      },
+      {
+        "id": 4492,
+        "source": "published_Tstar",
+        "m": 10,
+        "n": 11,
+        "order": 54,
+        "label": "Tstar_3_10_11|n=54"
+      },
+      {
+        "id": 4493,
+        "source": "published_Tstar",
+        "m": 10,
+        "n": 12,
+        "order": 56,
+        "label": "Tstar_3_10_12|n=56"
+      },
+      {
+        "id": 4494,
+        "source": "published_Tstar",
+        "m": 10,
+        "n": 13,
+        "order": 58,
+        "label": "Tstar_3_10_13|n=58"
+      },
+      {
+        "id": 4495,
+        "source": "published_Tstar",
+        "m": 11,
+        "n": 11,
+        "order": 56,
+        "label": "Tstar_3_11_11|n=56"
+      },
+      {
+        "id": 4496,
+        "source": "published_Tstar",
+        "m": 11,
+        "n": 12,
+        "order": 58,
+        "label": "Tstar_3_11_12|n=58"
+      },
+      {
+        "id": 4497,
+        "source": "published_Tstar",
+        "m": 11,
+        "n": 13,
+        "order": 60,
+        "label": "Tstar_3_11_13|n=60"
+      },
+      {
+        "id": 4498,
+        "source": "published_Tstar",
+        "m": 12,
+        "n": 12,
+        "order": 60,
+        "label": "Tstar_3_12_12|n=60"
+      }
+    ]
+  },
+  "frozen_union_catalog": {
+    "records": 4499,
+    "pair_count_with_repetition": 10122750,
+    "path": "audit/frozen_union_catalog_4499.jsonl",
+    "bytes": 4004051,
+    "sha256": "8F9145476AE8E776340C383E505462D6AC49680CE55EF0EE1EDFCF97ACD4743C"
+  }
+}

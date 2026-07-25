@@ -1,0 +1,131 @@
+ 52                                 T. MURAI
+
+
+
+       = 1 I t {(1/2) / ( t - ^ ^ ( t ) d t
+          ae^ n=i     "l^               -,
+                                               -(II^/SK^)-.^))}!
+                                2
+       < Z       S (11J/2) /         |^(/)|d/
+          ae^y. ^ = l            ^
+
+
+       <^ i r \^)\dt
+             a ea^      "
+       <0
+            ? 1:        f^
+                        0
+                           ^iW-a^dt
+             aG(!i
+
+     < Cn(r) a?/o, < CN(7) a?/{^ log(7/r)} < Cm(r) (a,/^)2 .
+                                                          (26)
+We have analogously as in (26)
+                            143|<Cm(r)(a,/^) 2 .                       (27)
+
+By^(24), (25), (26) and (27), we have, with a constant C " > 0 ,
+w(7\ l/^)/m(r) < C"a^/o^ . Letting r —^ oo (r ^ G), we have
+(21). This completes the proof of our theorem.
+
+
+      5. An entire function with Fabry gaps such that 6 (0, •) = 1 .
+     5.1. In this section, we shall show that the assertion of our
+theorem is not valid when the Fejer gap condition is replaced by
+the Fabry gap condition. We construct an entire function g^(z)
+with Fabry gaps such that 6(0,g^) == 1 .
+                                               00
+
+
+      For an entire function g ( z ) = ^ c^z" and a non-negative
+                                           n==0
+                                           d
+integer d, we put p r ( g , d ) ( z ) = ^ c^z". The outline of our
+                                          n=0
+construction is as follows. An entire function e^ (p > 1) does
+not take zero and S(^) = {pn , n > 1} . When d > 0 is suffi-
+ciently large, g(z) = p r ( e z p , d ) (z) behaves like e^ in a given
+disk         D^ .        Let      g*(z) = g ( z ) expd/r^ (q > d ) . Then
+p r ( g * , d ) ( z ) = g ( z ) . We choose q sufficiently large. Then
+g * ( z ) behaves like e^ in D^ since lim {exp^/^ - 1} = 0
+( r < r o ) , and ^*(z) behaves like expdz/r^ in (D, Y in the
+sense of the deficiency since lim exp^/r^ = oo ( r > r o ) . Re-
+                   THE DEFICIENCY OF ENTIRE FUNCTIONS                        53
+
+
+peating this discussion, we construct an entire function which
+locally behaves like exp(l7z)p for some 17 > 0 and some integer
+p > 1 in the sense of the deficiency.
+     To express this argument concretely, we inductively define two
+sequences r^ < r^ < r^ < r\ • ' ' , q^ < q^ < • • • and two sequences
+(g^(z))^Q, (/2^(z))^Q of entire functions such that, for every
+k>0, h^z)^0 ( z € S ^ U . . . U S ^ U D ^ ) . Let ^ = 1 , ^ = 2 ,
+q^ = 1, ^ ( z ) = 0 , Vz) = ^ .
+Suppose that          ^ < r^ < • • • < r^_ ^ < r^_ i , ^ < • • • < ^m-1 >
+(^(z))^^ , (A^(z))^^ are defined so that, for any 0 < k < m - 1,
+A^(z) satisfies the above condition. Then r^, r^, ^(z), ^^(z) are
+defined in the following manner. Let r^ = r^_^ 4- 1 . We choose a
+positive integer d^ so that, with g^(z) = pr(h^_ i, rf^) (z):
+
+                            ^> ^-1+^-1                                     (28)
+                                               m
+                  \g^z)-h^z)\<2-                   (zCD^)                  (29)
+
+^(re,0,/2^i) = n(r^0,g^) = Urn ^(r, O.gj (0 < i < w ) . (30)
+                                     y 4. rg
+
+
+Such a choice is possible, since p y ( . ^ y n - i ' ^) ( z ) converges uniformly
+to ^ _ i ( z ) in D^ when d tends to infinity. Let r^ (r^ > r^)
+be a number such that ^(z) ^= 0 in D^ . We choose a positive
+integer q^ so that, with A^(z) = ^(z) exp(z/^_l) qm :
+                            ^/^< (1/10) 2-^                                 (31)
+             M(^_, ,^) {exp(r^,/^_,)^ - 1} < 2-                             (32)
+{ ^ G [ 0 , 2 7 r ) ; |A^(r^)|>exp(2^r)} contains [qj(\0d^)}
+                            intervals of length 7r/(2^) (r > r^).           (33)
+To see that such a choice is possible, we show that (33) holds as
+long as q^ is sufficiently large. Put A^(z) = l^(z) exp(z/r^_^|
+(^ > 1). Given r > r^ , we choose ^ € [0,27r) so that
+                      M ( ^ , ^ ) = 1^(^)1 01).
+Since g^(z) is a polynomial of degree d^ ,
+         1^(^)1 > 1/2 ( r E [ ^ - l/(2dj, ^ + 1/(2^)]).
+ 54                            T.MURAI
+
+
+Let q^ = 100^. Then
+          {t e [t, - 1/(2^), t, + l/(2^)]; cos^r > ly?}
+contains [ql^d^)} - 1 (> [<7/(10^)]) intervals of length 7r/(2^)
+0?><,). Hence { r e [0,27r); h^re^) > (1/2) exp{(r/^_^V?}}
+contains [ql(\0d^)} intervals of length 7r/(2^) (q>q^). Let
+^ (> ^m) be an integer such that
+      (1/2) exp{(^_^V2} > exp(2rf^) (^ > r^, ^ > ^).
+Then /^(z) satisfies the property in (33) for all q > q^. Hence
+the above choice of q^ is possible. Thus we define the above four
+sequences.
+
+      5.2. Now we show that g^(z) = lim00 g^(z) exists and satisfies
+                                         w-»-
+the required conditions. First we prove that g^(z) is an entire func-
+tion. Given k > 1 , we have, for any z G D^ , m > k + 1 ,
+l ^ i ^ ) - ^ ( z ) l < l g ^ ( z ) - ^ ( z ) | 4- |^(z)-^(z)|
+       < 2—— 1 + M(^_, ,^) {exp^^/r;^)^ - 1} < 2-"'1,
+
+according to (29) and (32). Hence ^(z) = § {^^(z) -^(z)}
+                                                w==0
+converges uniformly in D^. Since k > 1 is arbitrary, ^(z) is
+an entire function. Next we prove that gjz) has Fabry gaps, that
+is
+  ' J",".^)/^ 0, where c^(r) = a>(r, S(gJ) ( r > 0 ) . By (28)
+and (31), we have
+ pr(g^,d^) (z) = g^ (z) = pr(^ , rf^i) (z)
+                                                                 (34)
+ S(^)={^ + " ; » > 0 , M £ S ( ^ ) } U { £ ^ ; e > l } (^>1).
+Let r be a number such that d^<r<d^ for some w > 2 and
+let £ be a positive integer such that d +(S.— 1 )qm < r < d + £o
+If £ > 1 , then                                           »•   "• •
+        u>(r)/r= o?(r,S(^))/r<£(^ + ! ) / { ( £ - 1 ) ^}< 2-"'-1,
+according to (31).^ Since d^ > d^ + q^ , we have, in particular,
+u( cl
+  • m-^l)ldm-n < 2 m ' . This inequality is valid with m replaced
+by any positive integer. If £ = 1 , then
+              u(r)lr = u>(dj/r < (o(^)/^ < 2-'" .
+

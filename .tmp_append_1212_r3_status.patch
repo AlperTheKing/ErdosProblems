@@ -1,0 +1,5 @@
+diff --git a/problems_external/erdos_1212/APPROACH_REGISTRY.md b/problems_external/erdos_1212/APPROACH_REGISTRY.md
+--- a/problems_external/erdos_1212/APPROACH_REGISTRY.md
++++ b/problems_external/erdos_1212/APPROACH_REGISTRY.md
+@@ -154,0 +155 @@
++R3 is `CALIBRATION_PENDING`. It supersedes R2 for the next computation.

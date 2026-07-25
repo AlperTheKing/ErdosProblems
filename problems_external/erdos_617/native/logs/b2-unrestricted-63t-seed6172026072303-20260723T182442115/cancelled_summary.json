@@ -1,0 +1,12 @@
+{
+  "status": "CANCELLED_BY_REALLOCATION",
+  "pid": 81212,
+  "exited": true,
+  "stopped": "2026-07-23T18:42:53.5218342+03:00",
+  "best_checkpoint_score": 842,
+  "minimum_reported_best": 842.0,
+  "maximum_reported_moves": 219602944.0,
+  "stderr_bytes": 0,
+  "raw_hit": false,
+  "note": "Bounded stochastic run only; cancellation is not a proof result."
+}

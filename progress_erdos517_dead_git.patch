@@ -1,0 +1,7 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38595,0 +38596,3 @@
++[2026-07-23T22:42:20+03:00] FAIL ATTACK | DID: audited Murai (28)-(35) | RESULT: zero bound is annulus-dependent d_m; limit has infinitely many zeros | D: A DEAD
++[2026-07-23T22:42:21+03:00] FAIL CHECK | DID: applied #517 exit condition | RESULT: DEAD: no finite-zero construction or smaller replacement lemma | D: #517 halted
++[2026-07-23T22:42:22+03:00] > SELECT | NEXT: scan all live-open rejected artifacts for a genuinely smaller theorem-closing lemma.

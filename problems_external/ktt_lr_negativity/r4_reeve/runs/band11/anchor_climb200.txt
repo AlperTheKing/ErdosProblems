@@ -1,0 +1,6 @@
+gaps=[149, 18, 40, 113, 122, 165, 152, 54, 39] lam=[207, 58, 40, 0] mu=[400, 287, 165, 0] nu=[440, 288, 234, 195]  dim=3 c=4 V=1 h*=[1, 0, 0, 0] P=[1,11/6,1,1/6]
+   n=1  P(n)=4  engineA=4  engineB=4  OK
+   n=2  P(n)=10  engineA=10  engineB=CAP_EXCEEDED  *** MISMATCH ***
+   n=3  P(n)=20  engineA=20  engineB=CAP_EXCEEDED  *** MISMATCH ***
+
+ANCHOR: FAIL

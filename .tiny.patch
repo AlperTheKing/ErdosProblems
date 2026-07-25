@@ -1,0 +1,15 @@
+--- a/problems_external/ktt_lr_negativity/r4_reeve/R4_KTT_THEOREM.md
++++ b/problems_external/ktt_lr_negativity/r4_reeve/R4_KTT_THEOREM.md
+@@ -12,10 +12,11 @@
+ 
+ has no negative coefficient.
+ 
+ This is a computer-assisted proof.  Its only imported structural results are
+-the hive rule, Buch's integrality statement for size at most four, Ehrhart's
+-theorem and reciprocity, and the McMullen/Berline--Vergne local formula.
++the hive rule and saturation, Derksen--Weyman polynomiality of stretched
++Littlewood--Richardson coefficients, Ehrhart's theorem and reciprocity for
++lattice polytopes, and the McMullen/Berline--Vergne local formula.
+ 
+ ## 1. Reduction to one Ehrhart coefficient
+ 

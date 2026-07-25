@@ -1,0 +1,18 @@
+{
+ "r": 9,
+ "Nlo": 9,
+ "Nhi": 15,
+ "D": 28,
+ "generated": 11045,
+ "stage1": {
+  "empty": 5529,
+  "rejected_c_gt_D1": 0,
+  "cap_fail": 0
+ },
+ "survivors": 5516,
+ "ok": 5516,
+ "other": 0,
+ "wall_s": 101.6,
+ "out": "runs/fam6/r9_N9_15.jsonl",
+ "exhaustive": true
+}

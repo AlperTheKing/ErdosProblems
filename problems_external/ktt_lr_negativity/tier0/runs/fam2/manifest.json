@@ -1,0 +1,142 @@
+{
+  "run": "fam2",
+  "hunter": "tier-0 hunter 2 of 12",
+  "date_utc": "2026-07-21/22",
+  "target": "KTT positivity conjecture LR(iv): a stretched LR polynomial P(n)=c(n*nu;n*lam,n*mu) with a strictly negative monomial coefficient. Tier-0 route: a hive polytope Q with h*_d > h*_1 (JACKPOT), in particular c = d+1 with an interior lattice point (TIER0).",
+
+  "family": "EXHAUSTIVE census, r = #parts(nu) = 5 exactly, |nu| <= 26, ALL triples (lam,mu,nu) with |lam|+|mu|=|nu|",
+  "exhaustive": true,
+  "sampled": false,
+
+  "enumeration": {
+    "nu": "every partition of N into EXACTLY 5 positive parts, N = 5..26 -> 1346 partitions nu",
+    "lam_mu": "every pair of partitions with |lam|+|mu|=|nu| and lam subset nu, mu subset nu",
+    "symmetry_folded": "lam <-> mu (c(nu;lam,mu) = c(nu;mu,lam) => identical P, d, h*, so the mirror triple carries an identical record)",
+    "triples_screened_unordered": 6305958,
+    "triples_including_mirror_images": 11631603,
+    "containment_restriction": {
+      "statement": "c(nu;lam,mu) != 0  =>  lam subset nu and mu subset nu (exact LR theorem); the excluded triples have Q empty and contribute only to the EMPTY bucket",
+      "audit": "fam2_audit_containment.py -- UNRESTRICTED exhaustive re-enumeration for |nu| <= 13 gave 29294 containment-violating triples, ALL screened by the full LP-free instrument: 29294/29294 status EMPTY, 0 nonempty, 0 SATURATION_ANOMALY; plus 60000 random violating triples at |nu| in {18,22,26}: 60000/60000 EMPTY. VERDICT PASS.",
+      "artifact": "containment_audit.json"
+    }
+  },
+
+  "instrument": {
+    "screen": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/tier0/tier0_screen.py  (screen_triples -> screen_profile), unmodified",
+    "engine_A": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/engine/lr_hive.exe",
+    "engine_B": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/engine/engineB_lrrule.py",
+    "no_LP_oracle": true,
+    "no_simplex_filter": true,
+    "arithmetic": "exact int / Fraction only; no float decides anything",
+    "per_triple_cost": "D+3 = 9 exact engine-A evaluations at n = 0..8 (D = (r-1)(r-2)/2 = 6), exact Newton interpolation through n=0..6, two held-out points n=7,8, exact h*",
+    "cap": 1000000000000,
+    "workers": 30
+  },
+
+  "results": {
+    "triples_screened": 6305958,
+    "status": { "OK": 2815927, "EMPTY": 3490031 },
+    "cap_exceeded": 0,
+    "saturation_anomaly": 0,
+    "heldout_mismatch": 0,
+    "size_mismatch": 0,
+    "audit_failures": 0,
+    "moment_criteria_inconsistent": 0,
+
+    "TIER0_hits": 0,
+    "JACKPOT_hits": 0,
+    "NEGATIVE_coefficient_hits": 0,
+    "negative_hstar_j": 0,
+    "lattice_inequality_violations": 0,
+    "nonLatticeCount_certified_from_Ehrhart_data": 0,
+
+    "degree_distribution": { "0": 1654145, "1": 591969, "2": 308392, "3": 159877, "4": 79704, "5": 20848, "6": 992 },
+
+    "min_hstar1_minus_hstar_d": {
+      "value": 0,
+      "note": "EXACT integer; the exhaustive frontier. Never negative anywhere in the census.",
+      "attained_overall_example": { "lam": [2,1], "mu": [19,2,1,1], "nu": [20,2,2,1,1], "d": 1, "c": 2, "hstar": [1,0] },
+      "attained_d_ge_2_example": { "lam": [3,2,1], "mu": [15,3,2], "nu": [16,4,4,1,1], "d": 2, "c": 3, "hstar": [1,0,0] },
+      "attained_d_ge_4_example": { "lam": [3,2,1,1], "mu": [13,3,2,1], "nu": [15,4,3,2,2], "d": 4, "c": 5, "hstar": [1,0,0,0,0] },
+      "count_with_hstar1_eq_0": 975039,
+      "count_with_hstar1_eq_0_by_d": { "1": 581565, "2": 261700, "3": 99604, "4": 27354, "5": 4816, "6": 0 }
+    },
+
+    "max_hstar_d": {
+      "value": 2,
+      "triple": { "lam": [6,3], "mu": [9,5,1,1,1], "nu": [12,8,4,1,1] },
+      "record": { "d": 1, "c": 4, "hstar": [1,2], "hstar_1": 2, "hstar_d": 2, "margin": 0 },
+      "note": "d = 1, where h*_1 = h*_d identically, so margin 0 is forced and no JACKPOT is possible."
+    },
+
+    "interior_lattice_points_joint_distribution_d_by_hstar_d": {
+      "d=1": { "0": 581565, "1": 10340, "2": 64 },
+      "d=2": { "0": 308321, "1": 71 },
+      "d=3": { "0": 159877 },
+      "d=4": { "0": 79704 },
+      "d=5": { "0": 20848 },
+      "d=6": { "0": 992 }
+    },
+    "max_hstar_d_for_d_ge_3": 0,
+    "max_hstar_d_for_d_ge_4": 0,
+    "max_hstar_d_given_hstar_1_eq_0": 0
+  },
+
+  "structural_findings": [
+    "THE BLOCKING MECHANISM AT r=5, |nu|<=26 IS NOT BOUNDARY-POINT COUNT, IT IS EMPTINESS OF THE INTERIOR. Every one of the 261,421 records with d >= 3 has h*_d = 0, i.e. the hive polytope has NO relative-interior lattice point at all. TIER0 requires h*_d > 0, so it is unreachable in this range for the trivial reason that the interior is lattice-point-free.",
+    "Interior lattice points exist only at d <= 2 in this range: 10,404 records at d=1 (h*_d in {1,2}) and 71 records at d=2 (h*_d = 1). At d = 1, h*_1 = h*_d identically, so the margin is 0 by force and JACKPOT is impossible; at d = 2 every such record has h*_1 >= 1.",
+    "975,039 records realise h*_1 = 0 (c = d+1, the exact left half of the TIER0 condition), including 27,354 at d = 4 and 4,816 at d = 5. All 975,039 have h*_d = 0. So the c = d+1 population is abundant and is killed entirely by the second half of the condition.",
+    "All 992 full-dimensional records (d = D = 6) have h*_d = 0 -- consistent with, and locally stronger than, Theorem 1 (full-dimensional + interior lattice point => B >= 2d).",
+    "At d = 6, h*_1 >= 1 always (minimum c = 8 = d+2), and the observed h*_1 values are 1,3,5,6,7,... -- h*_1 = 2 and h*_1 = 4 never occur.",
+    "0 violations of h*_d <= h*_1, Stanley monotonicity, Hibi lower bound, or Stanley nonnegativity, over all 2,815,927 nonempty records. No record in this family certifies non-latticeness from its Ehrhart data."
+  ],
+
+  "verification": {
+    "policy": "any TIER0 / JACKPOT / NEGATIVE record is re-verified with engine B over the full profile plus an INDEPENDENT (Lagrange, not Newton) interpolation and an independent h* recomputation, then reciprocity-checked",
+    "hits_requiring_verification": 0,
+    "frontier_witnesses_verified_anyway": 4,
+    "frontier_verification_result": "4/4 CONFIRMED -- engine A profile == engine B profile == screen profile; Lagrange coefficients reproduce both held-out points; independent h* equals the screen h*; (-1)^d P(-1) equals h*_d",
+    "artifacts": ["frontier_records.jsonl", "frontier_verified_engineB.json"]
+  },
+
+  "artifacts": {
+    "census_full_nu26.json": "complete aggregated census (joint distributions of d, c, h*_1, h*_d, Sum h*, margins; hits and anomalies arrays, both empty)",
+    "census_report_nu26.txt": "human-readable rendering of the above",
+    "containment_audit.json": "audit of the one enumeration restriction",
+    "fam2_enum.py": "exhaustive triple enumerator",
+    "fam2_census.py": "parallel driver -- decision path is tier0_screen.screen_triples only",
+    "fam2_verify_hit.py": "engine-B + independent-interpolation verifier",
+    "fam2_audit_containment.py": "containment audit",
+    "fam2_report.py": "reporting"
+  },
+
+  "extension_nu_eq_27": {
+    "status": "COMPLETE, exhaustive, same enumeration and same instrument",
+    "triples_screened": 3009912,
+    "OK": 1310124, "EMPTY": 1699788,
+    "TIER0_hits": 0, "JACKPOT_hits": 0, "NEGATIVE_hits": 0,
+    "lattice_inequality_violations": 0, "anomalies": 0, "audit_failures": 0,
+    "min_hstar1_minus_hstar_d": 0,
+    "max_hstar_d": 2,
+    "max_hstar_d_triple": { "lam": [6,3], "mu": [11,4,1,1,1], "nu": [14,7,4,1,1], "d": 1 },
+    "degree_distribution": { "0": 693360, "1": 285705, "2": 165169, "3": 94678, "4": 53251, "5": 16934, "6": 1027 },
+    "interior_lattice_points_joint_d_by_hstar_d": {
+      "d=1": { "0": 277937, "1": 7680, "2": 88 },
+      "d=2": { "0": 165073, "1": 96 },
+      "d=3": { "0": 94678 }, "d=4": { "0": 53251 }, "d=5": { "0": 16934 }, "d=6": { "0": 1027 }
+    },
+    "note": "reproduces the |nu|<=26 picture exactly: h*_d = 0 for every record with d >= 3, so the interior is lattice-point-free wherever the tier-0 target lives",
+    "artifacts": ["census_ext_nu27.json", "census_report_nu27.txt"]
+  },
+
+  "combined_totals": {
+    "triples_screened": 9315870,
+    "nonempty_records": 4126051,
+    "TIER0": 0, "JACKPOT": 0, "NEGATIVE": 0,
+    "min_hstar1_minus_hstar_d": 0,
+    "max_hstar_d": 2,
+    "max_hstar_d_for_d_ge_3": 0
+  },
+
+  "honesty": "A null census is NOT evidence for the King-Tollu-Toumazet conjecture and is not described as such here. This run exhausts one finite family; it decides nothing about the conjecture."
+}

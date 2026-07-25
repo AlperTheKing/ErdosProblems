@@ -1,0 +1,140 @@
+{
+  "claim_ceiling": "hypothesis-screening only; not asymptotic theorem evidence",
+  "max_k": 8,
+  "probe": "erdos30_sktc_exact_small_k",
+  "rows": [
+    {
+      "compression_delta_k2_minus_diameter": 3,
+      "diameter": 1,
+      "k": 2,
+      "marks": [
+        0,
+        1
+      ],
+      "max_difference_fourier_mod_diameter_plus_one": 1.0,
+      "max_interval_discrepancy": 0.0,
+      "max_mark_fourier_mod_diameter_plus_one": 6.123233995736766e-17,
+      "max_residue_discrepancy_q_le_32": 0.0,
+      "pair_count": 1,
+      "pair_load": 1.0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "compression_delta_k2_minus_diameter": 6,
+      "diameter": 3,
+      "k": 3,
+      "marks": [
+        0,
+        1,
+        3
+      ],
+      "max_difference_fourier_mod_diameter_plus_one": 0.3333333333333334,
+      "max_interval_discrepancy": 0.25,
+      "max_mark_fourier_mod_diameter_plus_one": 0.3333333333333334,
+      "max_residue_discrepancy_q_le_32": 0.3333333333333333,
+      "pair_count": 3,
+      "pair_load": 1.0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "compression_delta_k2_minus_diameter": 10,
+      "diameter": 6,
+      "k": 4,
+      "marks": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "max_difference_fourier_mod_diameter_plus_one": 0.1666666666666667,
+      "max_interval_discrepancy": 0.2857142857142857,
+      "max_mark_fourier_mod_diameter_plus_one": 0.35355339059327445,
+      "max_residue_discrepancy_q_le_32": 0.33333333333333337,
+      "pair_count": 6,
+      "pair_load": 1.0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "compression_delta_k2_minus_diameter": 14,
+      "diameter": 11,
+      "k": 5,
+      "marks": [
+        0,
+        1,
+        4,
+        9,
+        11
+      ],
+      "max_difference_fourier_mod_diameter_plus_one": 0.20000000000000062,
+      "max_interval_discrepancy": 0.3,
+      "max_mark_fourier_mod_diameter_plus_one": 0.44721359549995954,
+      "max_residue_discrepancy_q_le_32": 0.3090909090909091,
+      "pair_count": 10,
+      "pair_load": 0.9090909090909091,
+      "slack_after_pigeonhole": 1
+    },
+    {
+      "compression_delta_k2_minus_diameter": 19,
+      "diameter": 17,
+      "k": 6,
+      "marks": [
+        0,
+        1,
+        4,
+        10,
+        12,
+        17
+      ],
+      "max_difference_fourier_mod_diameter_plus_one": 0.16635546408426752,
+      "max_interval_discrepancy": 0.22222222222222224,
+      "max_mark_fourier_mod_diameter_plus_one": 0.4409585518440984,
+      "max_residue_discrepancy_q_le_32": 0.2745098039215686,
+      "pair_count": 15,
+      "pair_load": 0.8823529411764706,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "compression_delta_k2_minus_diameter": 24,
+      "diameter": 25,
+      "k": 7,
+      "marks": [
+        0,
+        1,
+        4,
+        10,
+        18,
+        23,
+        25
+      ],
+      "max_difference_fourier_mod_diameter_plus_one": 0.14788866623257235,
+      "max_interval_discrepancy": 0.35714285714285715,
+      "max_mark_fourier_mod_diameter_plus_one": 0.4510473938170862,
+      "max_residue_discrepancy_q_le_32": 0.2857142857142857,
+      "pair_count": 21,
+      "pair_load": 0.84,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "compression_delta_k2_minus_diameter": 30,
+      "diameter": 34,
+      "k": 8,
+      "marks": [
+        0,
+        1,
+        4,
+        9,
+        15,
+        22,
+        32,
+        34
+      ],
+      "max_difference_fourier_mod_diameter_plus_one": 0.1435150517096687,
+      "max_interval_discrepancy": 0.2357142857142857,
+      "max_mark_fourier_mod_diameter_plus_one": 0.3923905493544046,
+      "max_residue_discrepancy_q_le_32": 0.23214285714285715,
+      "pair_count": 28,
+      "pair_load": 0.8235294117647058,
+      "slack_after_pigeonhole": 6
+    }
+  ]
+}

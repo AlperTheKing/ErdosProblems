@@ -1,0 +1,14 @@
+diff --git a/problems_external/erdos_617/native/erdos617_covariant_b.cpp b/problems_external/erdos_617/native/erdos617_covariant_b.cpp
+--- a/problems_external/erdos_617/native/erdos617_covariant_b.cpp
++++ b/problems_external/erdos_617/native/erdos617_covariant_b.cpp
+@@ -121,6 +121,9 @@
+ static int delta(const Model&m,const State&s,int d,uint8_t target){
+     uint8_t old=s.h[d];if(old==target)return 0;int change=0;
+-    for(uint32_t q:m.incidence[d][old])if(s.count[q]==1)++change;
++    for(uint32_t q:m.incidence[d][old]){
++        bool target_also=m.clauses[q].mask[d]&(1u<<target);
++        if(!target_also&&s.count[q]==1)++change;
++    }
+     for(uint32_t q:m.incidence[d][target]){
+         bool old_also=m.clauses[q].mask[d]&(1u<<old);
+         if(!old_also&&s.count[q]==0)--change;

@@ -1,0 +1,54 @@
+{
+  "experiment": "EXP-MM-EHP-004",
+  "title": "EHP n=3 Rigorous Verification via Interval Arithmetic",
+  "author": "Kenneth A. Mendoza",
+  "date": "2026-03-23T00:04:40Z",
+  "verdict": "EHP_N3_VERIFIED_RIGOROUS",
+  "rigor_level": "ieee_1788_interval_arithmetic",
+  "l_star": {
+    "lower": 9.179724222343149,
+    "upper": 9.179724222343166,
+    "width": 1.7763568394002505e-14,
+    "formula": "2^(1/3)*sqrt(pi)*Gamma(1/6)/Gamma(2/3)"
+  },
+  "branch_and_bound": {
+    "complete": true,
+    "evals": 13608,
+    "time_secs": 12.508692502975464,
+    "levels": [
+      {
+        "level": 0,
+        "boxes": 512,
+        "hw": 0.5,
+        "res": 200,
+        "eliminated": 504,
+        "ext": 8,
+        "nonext": 0,
+        "max_ub_nonext": 8.724810474546677,
+        "time": 12.50840425491333
+      }
+    ],
+    "best_competitor_l": 7.6552,
+    "best_competitor_params": [
+      -0.158,
+      0.474,
+      1.016
+    ],
+    "margin_pct": 16.53,
+    "max_upper_bound_nonext": 8.7248,
+    "note": "All 504 non-extremizer boxes eliminated at level 0. Max UB of any non-ext box: 8.725 (5.0% below L*). Nearest competitor polynomial (from 8K-point sweep): L=7.655 at a=(-0.158+0.474i), b=1.016."
+  },
+  "outer_domain": {
+    "verified": true,
+    "max_boundary_l": 4.607687290240979
+  },
+  "hessian": {
+    "all_negative": true,
+    "values": {
+      "a_re": -3550024.929362827,
+      "a_im": -4575291.129188131,
+      "b": -40737298.760144114
+    }
+  },
+  "total_time_secs": 15.07289433479309
+}

@@ -1,0 +1,18 @@
+{
+ "r": 6,
+ "Nlo": 19,
+ "Nhi": 19,
+ "D": 10,
+ "generated": 267970,
+ "stage1": {
+  "empty": 143972,
+  "rejected_c_gt_D1": 2,
+  "cap_fail": 0
+ },
+ "survivors": 123996,
+ "ok": 123996,
+ "other": 0,
+ "wall_s": 662.0,
+ "out": "runs/fam6/r6_N19.jsonl",
+ "exhaustive": true
+}

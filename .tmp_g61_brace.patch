@@ -1,0 +1,9 @@
+diff --git a/problems_external/erdos_617/native/erdos617_g61_pack_b.cpp b/problems_external/erdos_617/native/erdos617_g61_pack_b.cpp
+--- a/problems_external/erdos_617/native/erdos617_g61_pack_b.cpp
++++ b/problems_external/erdos_617/native/erdos617_g61_pack_b.cpp
+@@ -211,2 +211,4 @@
+         std::ofstream meta(sh.out/"best_checkpoint.txt");
+         meta<<"worker "<<worker<<"\nmoves "<<moves<<"\noverlap "<<s.overlap<<"\n";
++    }
++}
+ static void worker(const Model&m,Shared&sh,int id,uint64_t seed){

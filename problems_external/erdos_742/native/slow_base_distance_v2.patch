@@ -1,0 +1,31 @@
+diff --git a/problems_external/erdos_742/native/d2c_search.cpp b/problems_external/erdos_742/native/d2c_search.cpp
+--- a/problems_external/erdos_742/native/d2c_search.cpp
++++ b/problems_external/erdos_742/native/d2c_search.cpp
+@@ -153,6 +153,8 @@ Metrics analyze_slow(const Graph& g, bool keep_witnesses) {
+     const int total_pairs = g.n * (g.n - 1) / 2;
+     if (keep_witnesses) out.witness.assign(total_pairs, {-1, -1});
+     int edge_index = 0;
++    std::vector<std::vector<int>> base_distance(
++        g.n, std::vector<int>(g.n, -1));
+ 
+     int diameter = 0;
+     bool connected = true;
+@@ -159,6 +161,7 @@ Metrics analyze_slow(const Graph& g, bool keep_witnesses) {
+     for (int u = 0; u < g.n; ++u) {
+         for (int v = u + 1; v < g.n; ++v) {
+             const int d = distance_ignoring_edge(g, u, v, -1, -1);
++            base_distance[u][v] = base_distance[v][u] = d;
+             if (d < 0) {
+                 connected = false;
+             } else {
+@@ -177,6 +180,10 @@ Metrics analyze_slow(const Graph& g, bool keep_witnesses) {
+             std::pair<int, int> witness{-1, -1};
+             for (int a = 0; a < g.n && witness.first < 0; ++a) {
+                 for (int b = a + 1; b < g.n; ++b) {
++                    if (base_distance[a][b] < 0 ||
++                        base_distance[a][b] > 2) {
++                        continue;
++                    }
+                     const int d =
+                         distance_ignoring_edge(g, a, b, u, v);
+                     if (d < 0 || d > 2) {

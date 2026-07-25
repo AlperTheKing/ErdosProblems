@@ -1,0 +1,54 @@
+diff --git a/problems_external/erdos_617/APPROACH_REGISTRY.md b/problems_external/erdos_617/APPROACH_REGISTRY.md
+--- a/problems_external/erdos_617/APPROACH_REGISTRY.md
++++ b/problems_external/erdos_617/APPROACH_REGISTRY.md
+@@ -149,0 +150,49 @@
++
++### Route status
++
++`R3 DEAD (2026-07-23)`: the five-copy decomposition is impossible.
++The degree-role and block-intersection proof is in
++`structure/R3_DECOMPOSITION_OBSTRUCTION.md`; its independent arithmetic and
++graph audit is `structure/audit_r3_decomposition_obstruction.cpp`.
++
++## DIRECT ROUTE R4: pack five 61-edge Ramsey graphs
++
++### 1. Exact final deliverable
++
++Five vertex permutations of a fixed 61-edge spanning graph `G_61` whose
++images in `K_26` are pairwise edge-disjoint. The remaining 20 edges are then
++assigned arbitrary colours, and the resulting canonical 325-edge colouring
++must pass both unrestricted exhaustive verifiers.
++
++Here `G_61 = complement(F) disjoint_union 3K_5`, where `F` is the complete
++`C_5` blow-up with cyclic part sizes `(3,2,2,2,2)`.
++
++### 2. Current frontier certificate
++
++Construct five pairwise edge-disjoint labelled copies of `G_61` in `K_26`.
++This is a finite permutation-packing certificate with no auxiliary
++asymptotic parameter.
++
++### 3. Explicit logical bridge
++
++The blow-up `F` is triangle-free and has independence number five, hence
++`complement(F)` has independence number two and clique number five.
++Consequently `G_61` has independence number five. Give the five packed
++copies distinct colours and colour each of the 20 uncovered edges
++arbitrarily. Every colour graph contains its spanning `G_61`; adding edges
++cannot increase independence number. Thus each colour has independence
++number at most five, every six-set contains all five colours, and the
++resulting colouring refutes Problem 617.
++
++### 4. Next falsifiable action
++
++Generate and independently verify the canonical `G_61`. Build two
++independent permutation-packing encodings, calibrate their edge-overlap
++objectives adversarially, and search for overlap zero. Replay any raw packing
++as a full colouring through both unrestricted verifiers.
++
++### 5. Exit condition
++
++A packing accepted by both full verifiers resolves the conjecture
++negatively. A checked `UNSAT` for the complete permutation formulation kills
++R4; a bounded `NO_HIT` kills only the specific search schedule. Do not open
++another restricted family without a new direct bridge.

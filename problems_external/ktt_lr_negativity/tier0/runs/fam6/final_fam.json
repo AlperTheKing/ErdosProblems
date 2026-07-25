@@ -1,0 +1,208 @@
+{
+ "files": [
+  "runs/fam6/beam.jsonl",
+  "runs/fam6/beam_pilot.jsonl",
+  "runs/fam6/ctrl_r5.jsonl",
+  "runs/fam6/r10_N10_16.jsonl",
+  "runs/fam6/r5_N21.jsonl",
+  "runs/fam6/r6_N19.jsonl",
+  "runs/fam6/r6_N19_20.jsonl",
+  "runs/fam6/r7_N15_17.jsonl",
+  "runs/fam6/r8_N13_16.jsonl",
+  "runs/fam6/r8_N8_12.jsonl",
+  "runs/fam6/r9_N9_15.jsonl",
+  "runs/fam6/retry1.jsonl"
+ ],
+ "distinct_triples": 490649,
+ "duplicates": 89476,
+ "ok": 480178,
+ "status": {
+  "OK": 480178,
+  "EMPTY": 10471
+ },
+ "deg_hist": {
+  "0": 331514,
+  "1": 89620,
+  "2": 36944,
+  "3": 15229,
+  "4": 5605,
+  "5": 1132,
+  "6": 134
+ },
+ "max_hstar_d_all": 1,
+ "max_hstar_d_all_at": {
+  "lam": [
+   5,
+   2
+  ],
+  "mu": [
+   8,
+   3,
+   1,
+   1,
+   1
+  ],
+  "nu": [
+   11,
+   5,
+   3,
+   1,
+   1
+  ],
+  "r": 5,
+  "d": 1,
+  "c": 3,
+  "hstar": [
+   1,
+   1
+  ],
+  "hstar_sum": 2
+ },
+ "max_hstar_d_d_ge_2": 0,
+ "max_hstar_d_d_ge_2_at": {
+  "lam": [
+   4,
+   1
+  ],
+  "mu": [
+   3,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "nu": [
+   5,
+   3,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "r": 8,
+  "d": 2,
+  "c": 3,
+  "hstar": [
+   1,
+   0,
+   0
+  ],
+  "hstar_sum": 1
+ },
+ "min_h1_minus_hd_all": 0,
+ "min_h1_minus_hd_all_at": {
+  "lam": [
+   4,
+   2
+  ],
+  "mu": [
+   3,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  "nu": [
+   5,
+   3,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "r": 8,
+  "d": 1,
+  "c": 2,
+  "hstar": [
+   1,
+   0
+  ],
+  "hstar_sum": 1
+ },
+ "min_h1_minus_hd_d_ge_2": 0,
+ "min_h1_minus_hd_d_ge_2_at": {
+  "lam": [
+   4,
+   1
+  ],
+  "mu": [
+   3,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "nu": [
+   5,
+   3,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "r": 8,
+  "d": 2,
+  "c": 3,
+  "hstar": [
+   1,
+   0,
+   0
+  ],
+  "hstar_sum": 1
+ },
+ "h1_minus_hd_hist": {
+  "0": 139856,
+  "1": 6439,
+  "2": 2046,
+  "3": 289,
+  "4": 27,
+  "5": 5,
+  "6": 2
+ },
+ "h1_zero_(d,hstar_degree_s)": {
+  "1,0": 89187,
+  "2,0": 34356,
+  "3,0": 11839,
+  "4,0": 2894,
+  "4,2": 352,
+  "5,0": 436,
+  "5,2": 306,
+  "6,0": 26,
+  "6,2": 27
+ },
+ "h1_zero_(d,Sum_hstar)": {
+  "1,1": 89187,
+  "2,1": 34356,
+  "3,1": 11839,
+  "4,1": 2894,
+  "4,2": 352,
+  "5,1": 436,
+  "5,2": 306,
+  "6,1": 26,
+  "6,2": 27
+ },
+ "minimal_c_nonunimodular": 685,
+ "hits_counts": {
+  "TIER0": 0,
+  "JACKPOT": 0,
+  "NEG": 0
+ },
+ "hits": {
+  "TIER0": [],
+  "JACKPOT": [],
+  "NEG": []
+ },
+ "audit_failure_count": 0,
+ "audit_failures": []
+}

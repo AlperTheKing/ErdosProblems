@@ -1,0 +1,233 @@
+{
+  "experiment": "exp9_v2_chiral_rmt_bipartite_gaussian",
+  "date": "2026-04-19",
+  "preregistration_ref": "TRACK_A_PREREGISTRATION.json :: exp9_v2",
+  "hypothesis": "\u03c3_min of genuinely chiral (bipartite Gaussian) random matrix lands in chiral-RMT universality: (C1) microscopic universality of \u03c3_min\u00b7W after floor-filtering, (C2) soft-edge kink dominates bulk at every W, (C3) flavor-oscillation range stable or growing in W (\u03b2_lower_2\u03c3 \u2265 -0.1).",
+  "operator_used": "bipartite_gaussian",
+  "fallback_used": false,
+  "Ws": [
+    20,
+    40,
+    80,
+    160,
+    320
+  ],
+  "n_realizations_per_W": 100,
+  "random_seed_base": 20260419,
+  "numerical_floor": 1e-10,
+  "by_W": {
+    "20": {
+      "W": 20,
+      "n_realizations_used": 100,
+      "n_excluded_floor": 0,
+      "exclusion_fraction": 0.0,
+      "sigma_min_stats": {
+        "mean": 0.4798656375708506,
+        "median": 0.48311741748553066,
+        "min": 0.26414006130754347,
+        "max": 0.6115226576783779,
+        "std": 0.06433823059256288
+      },
+      "sigma_min_times_W_stats": {
+        "mean": 9.597312751417013,
+        "median": 9.662348349710612,
+        "p5": 7.553950665879461,
+        "p95": 11.469211766408414,
+        "range_p95_minus_p5": 3.9152611005289524,
+        "std": 1.2867646118512577
+      },
+      "soft_kink_strength_mean": 0.06833857439738651,
+      "bulk_kink_strength_mean": 0.10031872482747783,
+      "soft_over_bulk": 0.6812145440934494
+    },
+    "40": {
+      "W": 40,
+      "n_realizations_used": 100,
+      "n_excluded_floor": 0,
+      "exclusion_fraction": 0.0,
+      "sigma_min_stats": {
+        "mean": 0.4559184593930461,
+        "median": 0.4570134735996008,
+        "min": 0.36418094625730274,
+        "max": 0.5323382501714002,
+        "std": 0.03549941436152337
+      },
+      "sigma_min_times_W_stats": {
+        "mean": 18.236738375721846,
+        "median": 18.280538943984034,
+        "p5": 15.916599843863025,
+        "p95": 20.587447574512037,
+        "range_p95_minus_p5": 4.670847730649012,
+        "std": 1.4199765744609345
+      },
+      "soft_kink_strength_mean": 0.04173284754569066,
+      "bulk_kink_strength_mean": 0.05795303633596896,
+      "soft_over_bulk": 0.7201149445173916
+    },
+    "80": {
+      "W": 80,
+      "n_realizations_used": 100,
+      "n_excluded_floor": 0,
+      "exclusion_fraction": 0.0,
+      "sigma_min_stats": {
+        "mean": 0.43776894115650833,
+        "median": 0.4409316023076194,
+        "min": 0.35038427460894866,
+        "max": 0.48814081632183975,
+        "std": 0.024278570774219282
+      },
+      "sigma_min_times_W_stats": {
+        "mean": 35.02151529252066,
+        "median": 35.27452818460955,
+        "p5": 32.15383955734614,
+        "p95": 38.02938619332024,
+        "range_p95_minus_p5": 5.8755466359741035,
+        "std": 1.9422856619375426
+      },
+      "soft_kink_strength_mean": 0.03280058110806367,
+      "bulk_kink_strength_mean": 0.03649822685675219,
+      "soft_over_bulk": 0.8986897154428626
+    },
+    "160": {
+      "W": 160,
+      "n_realizations_used": 100,
+      "n_excluded_floor": 0,
+      "exclusion_fraction": 0.0,
+      "sigma_min_stats": {
+        "mean": 0.4319005137544181,
+        "median": 0.4305152863821784,
+        "min": 0.3989721185949576,
+        "max": 0.47107015128747376,
+        "std": 0.014752735292565253
+      },
+      "sigma_min_times_W_stats": {
+        "mean": 69.1040822007069,
+        "median": 68.88244582114854,
+        "p5": 65.49371062159953,
+        "p95": 72.95685312799574,
+        "range_p95_minus_p5": 7.46314250639621,
+        "std": 2.3604376468104413
+      },
+      "soft_kink_strength_mean": 0.02312686319349923,
+      "bulk_kink_strength_mean": 0.02000316877445429,
+      "soft_over_bulk": 1.156159979164609
+    },
+    "320": {
+      "W": 320,
+      "n_realizations_used": 100,
+      "n_excluded_floor": 0,
+      "exclusion_fraction": 0.0,
+      "sigma_min_stats": {
+        "mean": 0.4233324108324614,
+        "median": 0.42523912738343944,
+        "min": 0.39713318955290405,
+        "max": 0.4432049453985375,
+        "std": 0.009631010768891758
+      },
+      "sigma_min_times_W_stats": {
+        "mean": 135.46637146638767,
+        "median": 136.07652076270062,
+        "p5": 129.54007731427225,
+        "p95": 139.43651553282362,
+        "range_p95_minus_p5": 9.896438218551367,
+        "std": 3.081923446045363
+      },
+      "soft_kink_strength_mean": 0.015220783729386044,
+      "bulk_kink_strength_mean": 0.010860915487062878,
+      "soft_over_bulk": 1.4014273241990034
+    }
+  },
+  "criterion_1_KS_distances": {
+    "pairs": [
+      {
+        "pair": [
+          20,
+          40
+        ],
+        "ks": 1.0
+      },
+      {
+        "pair": [
+          40,
+          80
+        ],
+        "ks": 1.0
+      },
+      {
+        "pair": [
+          80,
+          160
+        ],
+        "ks": 1.0
+      },
+      {
+        "pair": [
+          160,
+          320
+        ],
+        "ks": 1.0
+      }
+    ],
+    "max_KS": 1.0,
+    "threshold": 0.1,
+    "pass": false
+  },
+  "criterion_2_soft_over_bulk_by_W": {
+    "ratios": {
+      "20": 0.6812145440934494,
+      "40": 0.7201149445173916,
+      "80": 0.8986897154428626,
+      "160": 1.156159979164609,
+      "320": 1.4014273241990034
+    },
+    "per_W_pass": {
+      "20": false,
+      "40": false,
+      "80": false,
+      "160": true,
+      "320": true
+    },
+    "threshold": 1.0,
+    "apply_to_all_W": true,
+    "pass": false
+  },
+  "criterion_3_beta_fit": {
+    "statistic": "range = P95(sigma_min*W) - P5(sigma_min*W) per W",
+    "fit": "log(range) = alpha + beta * log(W), OLS, 5 points",
+    "alpha": 0.327110531075085,
+    "beta": 0.33517005477963,
+    "beta_se": 0.015779013266045257,
+    "beta_lower_2sigma": 0.3036120282475395,
+    "threshold_beta_lower_2sigma": -0.1,
+    "pass": true,
+    "note": "OLS on log(range_p95_p5) vs log(W); 5 points, dof=3"
+  },
+  "criteria_results": {
+    "C1_microscopic_universal": {
+      "pass": false,
+      "max_KS": 1.0,
+      "threshold": 0.1
+    },
+    "C2_soft_kink_dominates_bulk": {
+      "pass": false,
+      "ratios_by_W": {
+        "20": 0.6812145440934494,
+        "40": 0.7201149445173916,
+        "80": 0.8986897154428626,
+        "160": 1.156159979164609,
+        "320": 1.4014273241990034
+      },
+      "threshold": 1.0
+    },
+    "C3_stable_flavor_oscillation": {
+      "pass": true,
+      "beta_lower_2sigma": 0.3036120282475395,
+      "threshold": -0.1
+    }
+  },
+  "methodology_flag_exclusion_above_5pct": false,
+  "max_exclusion_fraction": 0.0,
+  "verdict": "CHIRAL_CLASS_REJECTED",
+  "wall_time_sec": 1.870055913925171,
+  "implementation_notes": "Primary operator (bipartite Gaussian M=2W, N=W, entries N(0,1/sqrt(W))) used per pre-reg rule \u2014 no implementation blocker encountered. SVD via numpy.linalg.svd(full_matrices=False). Soft and bulk kink strengths operationalized as the pre-reg 'Simpler reproducible version': max |second difference| of the ascending-sorted spectrum restricted to the bottom 5% (soft) and the middle 40-60% band (bulk), averaged across realizations. C3 range operationalized as the canonical P95\u2212P5 of the filtered \u03c3_min\u00b7W distribution per W (documented in output)."
+}

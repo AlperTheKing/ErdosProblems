@@ -1,0 +1,56 @@
+{
+  "experiment": "EHP_N7_feasibility",
+  "degree": 7,
+  "reduced_dim": 11,
+  "l_star_bounds": {
+    "lower": 16.708236986186346,
+    "best_estimate": 16.88286433259678,
+    "upper": 17.057491679007217,
+    "width": 0.34925469282087107,
+    "raw_values": [
+      [
+        200,
+        16.55692140714596
+      ],
+      [
+        400,
+        16.75481130885796
+      ],
+      [
+        800,
+        16.84794062088857
+      ]
+    ]
+  },
+  "random_sample": {
+    "n_samples": 10000,
+    "counterexamples": 0,
+    "closest_competitor_l": 6.341181869005653,
+    "closest_competitor_params": [
+      0.8879729509353638,
+      -1.446235440671444,
+      0.3273896910250187,
+      -0.7658161781728268,
+      2.8946923725306988,
+      -1.204148057848215,
+      0.21070600673556328,
+      -1.4878995679318905,
+      2.1457347869873047,
+      0.025572214275598526,
+      -0.5972255878150463
+    ],
+    "margin": 10.215739538140308,
+    "margin_pct": 61.70071891342794
+  },
+  "lipschitz_estimate": 618.5258612155919,
+  "bb_prediction": {
+    "initial_grid_per_axis": 4,
+    "initial_boxes": 4194304,
+    "estimated_survival_rate": 0.0,
+    "estimated_levels": 1,
+    "estimated_total_evals": 4194304.0,
+    "estimated_time_secs": 825.1458977792,
+    "feasible": true
+  },
+  "total_time_secs": 2.200930583
+}

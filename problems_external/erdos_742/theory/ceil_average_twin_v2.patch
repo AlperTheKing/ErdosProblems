@@ -1,0 +1,43 @@
+diff --git a/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp b/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
+--- a/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
++++ b/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
+@@ -73,6 +73,6 @@ int main(int argc, char** argv) {
+     std::mt19937_64 rng(742260723ULL);
+     std::uint64_t tested = 0;
+-    std::uint64_t no_cloneable_low_average = 0;
++    std::uint64_t no_cloneable_low_ceiling_average = 0;
+     bool printed_average = false;
+     for (int n = 8; n <= 20; ++n) {
+         for (int s = 0; s < samples; ++s) {
+@@ -84,9 +84,9 @@ int main(int argc, char** argv) {
+             for (int v = 0; v < n; ++v) degree_sum += degree(h, v);
+             bool any = false;
+-            bool any_at_most_average = false;
++            bool any_at_most_ceiling_average = false;
+             for (int v = 0; v < n; ++v) {
+                 if (!is_3t_critical(add_true_twin(h, v))) continue;
+                 any = true;
+-                any_at_most_average |= degree(h, v) * n <= degree_sum;
++                any_at_most_ceiling_average |= degree(h, v) * n <= degree_sum + n - 1;
+             }
+             if (!any) {
+@@ -94,9 +94,9 @@ int main(int argc, char** argv) {
+                 print_graph(h);
+                 return 1;
+             }
+-            if (!any_at_most_average) {
+-                ++no_cloneable_low_average;
++            if (!any_at_most_ceiling_average) {
++                ++no_cloneable_low_ceiling_average;
+                 if (!printed_average) {
+-                    std::cout << "NO_CLONEABLE_AT_MOST_AVERAGE ";
++                    std::cout << "NO_CLONEABLE_AT_MOST_CEILING_AVERAGE ";
+                     print_graph(h);
+                     printed_average = true;
+@@ -105,5 +105,5 @@ int main(int argc, char** argv) {
+         std::cout << "n=" << n << " tested_so_far=" << tested << "\n";
+     }
+     std::cout << "NO_NO_CLONEABLE tested=" << tested
+-              << " no_cloneable_at_most_average=" << no_cloneable_low_average << "\n";
++              << " no_cloneable_at_most_ceiling_average=" << no_cloneable_low_ceiling_average << "\n";
+ }

@@ -1,0 +1,39 @@
+diff --git a/problems_external/erdos_617/APPROACH_REGISTRY.md b/problems_external/erdos_617/APPROACH_REGISTRY.md
+--- a/problems_external/erdos_617/APPROACH_REGISTRY.md
++++ b/problems_external/erdos_617/APPROACH_REGISTRY.md
+@@ -73,0 +74,32 @@
++## DIRECT ROUTE R2: Ramsey--Turán edge lemma
++
++### 1. Exact final deliverable
++
++A proof, for every integer `r >= 3`, that every graph on `r^2+1` vertices
++with both clique number and independence number at most `r` has strictly
++more than `r(r^2+1)/2` edges.
++
++### 2. Current frontier lemma
++
++Prove the stated strict edge lower bound. The equality analogue is false for
++`r=2`, where `C_5` has five edges, clique number two, and independence number
++two; the route must use `r >= 3`.
++
++### 3. Explicit logical bridge
++
++In a counterexample colouring, every colour graph has independence number at
++most `r`. It also has clique number at most `r`, since a monochromatic
++`K_(r+1)` omits every other colour. The `r` colour graphs partition
++`C(r^2+1,2)` edges, so one has at most `r(r^2+1)/2` edges, contradicting the
++frontier lemma. Thus the lemma proves the full conjecture for every `r >= 3`.
++
++### 4. Next falsifiable action
++
++Test the bound exactly for the proved cases `r=3,4`, search for graph-level
++counterexamples at `r=5`, and attempt a proof using critical subgraphs,
++Brooks-type colouring, and Ramsey--Turán stability. Every proposed inequality
++must be checked against `C_5`, joins, blow-ups, and small Ramsey graphs.
++
++### 5. Exit condition
++
++Exit R2 immediately if an explicit graph violates the frontier lemma, or if
++the proof reduces to an open Ramsey--Turán statement of comparable strength
++without an additional closing argument. A finite check for fixed `r` alone
++does not complete R2.

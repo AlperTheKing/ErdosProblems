@@ -1,0 +1,8 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38568,0 +38569,4 @@
++[2026-07-23T19:18:17+03:00] OK VERIFY | DID: replayed verifier A calibration | RESULT: 14 cases pass; K12,13 accepted at 156 and rejected at target 157 | D: none
++[2026-07-23T19:18:18+03:00] OK VERIFY | DID: replayed SAT and verifier B audits | RESULT: 536032 queries agree for all graphs n=3..6; target CNF hash 69268EE4 | D: none
++[2026-07-23T19:18:19+03:00] OK VERIFY | DID: replayed native C++ audit | RESULT: 32768 graphs n=6 and 200 flips agree with BFS; 16t check exited | D: lane qualified
++[2026-07-23T19:18:20+03:00] > ATTACK | NEXT: run 64-thread C++ minimalization for 600 seconds, seed 7422026072401, stopping on a raw 157-edge D2C hit.

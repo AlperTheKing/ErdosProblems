@@ -1,0 +1,18 @@
+r5d: 24000 triples -> 200 shards, 28 workers
+  20/200 shards done
+  40/200 shards done
+  60/200 shards done
+  80/200 shards done
+  100/200 shards done
+  120/200 shards done
+  140/200 shards done
+  160/200 shards done
+  180/200 shards done
+  200/200 shards done
+SHARD FAIL rc=1 E:\Projects\ErdosProblems\problems_external\ktt_lr_negativity\tier0\runs\fam12\shards\r5d_196.jsonl xec_fn, close_fds,
+  File "C:\Users\a\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied
+
+r5d: wrote out_r5_domint.jsonl ; failed/timeout shards = 1

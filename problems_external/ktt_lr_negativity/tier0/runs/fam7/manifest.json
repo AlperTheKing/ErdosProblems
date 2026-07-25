@@ -1,0 +1,75 @@
+{
+  "family": "fam7 -- INTERIOR-POINT hunt (h*_d > 0 first, then minimise c)",
+  "hunter": "tier-0 hunter 7 of 12",
+  "date_utc": "2026-07-22",
+  "instrument": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/tier0/tier0_screen.py (batch mode; exact profile via engine A, exact Newton interpolation, two held-out points, exact h*). No LP dimension oracle, no simplex filter, no float decides anything.",
+  "cross_checkers": [
+    "A = E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/engine/lr_hive.exe",
+    "B = python E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/engine/engineB_lrrule.py",
+    "vertex denominators (measurement only, never a filter) = purged_region/vertex_measure.py"
+  ],
+  "exhaustive_or_sampled": {
+    "r=5, |nu| <= 20": "EXHAUSTIVE over all (lam,mu,nu) with nu of exactly 5 positive parts, |lam|+|mu|=|nu|, lam,mu <= nu componentwise, |lam| <= |mu| (488485 triples, 227350 nonempty)",
+    "r=6, |nu| <= 15": "EXHAUSTIVE in the same sense (26595 triples, 13555 nonempty)",
+    "r=5, 19 <= |nu| <= 34": "SAMPLED, 40000 uniform random triples (seed 7)",
+    "dilation rays": "EXACT extension: for every screened seed with d >= 2, the triples (n*lam,n*mu,n*nu), n = 1..30 (r=5 first wave) / 1..8 (second wave), decided exactly from the seed's Ehrhart polynomial via c(nQ)=P(n), interior(nQ)=(-1)^d P(-n)",
+    "local descent": "SAMPLED greedy neighbourhood search (unit box moves preserving |lam|+|mu|=|nu|) from the interior-positive record holders, 2 x 3 rounds, 11854 triples engine-screened"
+  },
+  "counts": {
+    "engine_screened_triples": 566942,
+    "nonempty_OK_records": 253431,
+    "distinct_seeds_with_d>=2": 25461,
+    "dilation_ray_points_decided_exactly": 362220,
+    "total_hive_polytopes_decided": 929162,
+    "interior_positive_found_by_direct_exhaustive_scan": 0,
+    "interior_positive_found_overall": 105243
+  },
+  "headline_findings": [
+    "NO r=5 hive polytope with |nu| <= 20 and NO r=6 hive polytope with |nu| <= 15 has a relative-interior lattice point: 0 of 227350 + 13555 nonempty exact records have h*_d > 0. Interior lattice points first appear only at dilation factor n >= 2 (or at |nu| ~ 28+).",
+    "Record smallest c among triples WITH an interior lattice point, per d (all engine-screened and h*-audited): d=2 c=6, d=3 c=12, d=4 c=27, d=5 c=57, d=6 c=126.",
+    "Minimum of h*_1 - h*_d = B - (d+1) (B = relative-boundary lattice points) over everything seen: 0, attained by a large population of c = d+1 polytopes that all have h*_d = 0 (empty rational simplices). Restricted to interior-positive polytopes the minimum is 2 (d=2, c=6, h*=(1,3,1), B=5).",
+    "STRUCTURAL TENSION observed from the interior side: every interior-positive polytope reached by dilation of a half-integral seed by an EVEN factor is itself a LATTICE polytope (vertex denominators die), where h*_1 >= h*_d is a theorem (Hibi). Certified counterexamples to that pattern exist -- (8,6,4)|(8,6,4)|(12,10,7,5,2) at d=4 and (8,6,4,2)|(8,6,4,1,1)|(12,10,8,6,4) at d=5 both have a verified half-integral vertex (maxden = 2) AND h*_d = 1 -- so the population 'non-lattice AND interior-positive' is non-empty; its smallest observed margin is 21 (d=4).",
+    "0 TIER0, 0 JACKPOT, 0 NEG over the whole run. Every audit flag (heldout_ok, hstar_roundtrip_ok, interior_check_ok, hstar_1_identity_ok, moment_criteria_consistent, hstar_nonneg) was true on every OK record; 0 audit failures."
+  ],
+  "records_min_c_with_interior_point": [
+    {"d": 2, "c": 6, "lam": [6, 4], "mu": [8, 6, 4, 2], "nu": [10, 7, 7, 4, 2],
+     "hstar": [1, 3, 1], "hstar_1": 3, "hstar_d": 1, "B": 5, "margin": 2,
+     "engineB_profile_n0_to_5": [1, 6, 16, 31, 51, 76],
+     "vertex_maxden": 1, "nverts_lower_bound": 5},
+    {"d": 3, "c": 12, "lam": [8, 6, 4, 1, 1], "mu": [8, 6, 4, 1, 1], "nu": [11, 11, 8, 6, 4],
+     "hstar": [1, 8, 8, 1], "hstar_1": 8, "hstar_d": 1, "B": 11, "margin": 7},
+    {"d": 4, "c": 27, "lam": [8, 6, 4, 2], "mu": [7, 7, 4, 1, 1], "nu": [12, 10, 8, 6, 4],
+     "hstar": [1, 22, 56, 22, 1], "hstar_1": 22, "hstar_d": 1, "B": 26, "margin": 21},
+    {"d": 5, "c": 57, "lam": [8, 6, 4, 2], "mu": [8, 6, 4, 1, 1], "nu": [12, 10, 8, 6, 4],
+     "hstar": [1, 51, 296, 296, 51, 1], "hstar_1": 51, "hstar_d": 1, "B": 56, "margin": 50,
+     "vertex_maxden": 2, "note": "PROVABLY NON-LATTICE and interior-positive"},
+    {"d": 6, "c": 126, "lam": [8, 6, 4, 2], "mu": [8, 6, 4, 2], "nu": [12, 10, 8, 6, 4],
+     "hstar": [1, 119, 1339, 2842, 1339, 119, 1], "hstar_1": 119, "hstar_d": 1, "B": 125, "margin": 118}
+  ],
+  "best_hstar_d": {
+    "directly_engine_screened": {"value": 126, "lam": [16, 12, 8, 4], "mu": [16, 12, 8, 4],
+      "nu": [24, 20, 16, 12, 8], "d": 6, "c": 2200, "hstar_1": 2193, "margin": 2067},
+    "ray_extrapolated_exact": {"value": 15631, "lam": [32, 24, 16, 8], "mu": [32, 24, 16, 8],
+      "nu": [48, 40, 32, 24, 16], "d": 6,
+      "note": "h*_d is unbounded along any dilation ray with d >= 1, so this is a budget artefact, not a structural record"}
+  },
+  "min_h1_minus_hd": {
+    "overall": 0,
+    "example": {"lam": [3, 1], "mu": [3, 2, 1, 1], "nu": [4, 3, 2, 1, 1], "d": 2, "c": 3,
+                "hstar": [1, 0, 0], "hstar_1": 0, "hstar_d": 0,
+                "note": "h*_1 = 0 (c = d+1) but NO interior lattice point, so B = d+1 exactly and margin = 0; this is the near-miss class, one interior point away from TIER0"},
+    "restricted_to_interior_positive": 2
+  },
+  "hits": [],
+  "dead_verdict": "",
+  "artifacts": {
+    "scratch_dir": "C:/Users/a/AppData/Local/Temp/claude/E--Projects-ErdosProblems/f1987d98-c6e4-47b0-90c4-e402adf2c40c/scratchpad/fam7",
+    "scripts": ["gen7.py (exhaustive generator)", "samp7.py (random sampler)",
+                "an7.py (record aggregator)", "ray7.py (exact dilation-ray analyzer)",
+                "climb7.py (exact local descent)"],
+    "screen_outputs": ["r5a.jsonl", "r5b.jsonl", "r5c.jsonl", "r5d.jsonl", "r6a.jsonl",
+                       "r6b.jsonl", "s_r5_big.jsonl", "rec.jsonl", "big.jsonl",
+                       "_cl7.jsonl", "_cl8.jsonl"]
+  },
+  "honesty_note": "A null census is NOT evidence for the King-Tollu-Toumazet conjecture. This run found no negative coefficient, no JACKPOT and no TIER0; it also proves nothing about their non-existence."
+}

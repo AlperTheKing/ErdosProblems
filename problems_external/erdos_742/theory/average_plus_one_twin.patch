@@ -1,0 +1,15 @@
+diff --git a/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp b/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
+--- a/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
++++ b/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
+@@ -96,5 +96,5 @@ int main(int argc, char** argv) {
+                 if (!is_3t_critical(add_true_twin(h, v))) continue;
+                 any = true;
+-                any_at_most_ceiling_average |= degree(h, v) * n <= degree_sum + n - 1;
++                any_at_most_ceiling_average |= degree(h, v) * n <= degree_sum + n;
+             }
+             if (!any) {
+@@ -106,3 +106,3 @@ int main(int argc, char** argv) {
+                 ++no_cloneable_low_ceiling_average;
+                 if (!printed_average) {
+-                    std::cout << "NO_CLONEABLE_AT_MOST_CEILING_AVERAGE ";
++                    std::cout << "NO_CLONEABLE_AT_MOST_AVERAGE_PLUS_ONE ";

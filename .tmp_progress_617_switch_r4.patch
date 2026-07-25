@@ -1,0 +1,6 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38557,0 +38558,2 @@
++[2026-07-23T18:41:33+03:00] OK VERIFY | DID: audited natural affine R4 skeleton | RESULT: forced M intersections 15 exceed linear K5 capacity 10 | D: subfamily DEAD
++[2026-07-23T18:41:34+03:00] > ATTACK | NEXT: stop stagnant 63-worker unrestricted B2 and reallocate exactly 63 workers to audited general G61 packing R4.

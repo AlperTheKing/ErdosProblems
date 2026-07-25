@@ -1,0 +1,18 @@
+{
+ "r": 8,
+ "Nlo": 8,
+ "Nhi": 12,
+ "D": 21,
+ "generated": 1441,
+ "stage1": {
+  "empty": 598,
+  "rejected_c_gt_D1": 0,
+  "cap_fail": 0
+ },
+ "survivors": 843,
+ "ok": 843,
+ "other": 0,
+ "wall_s": 1.2,
+ "out": "runs/fam6/r8_N8_12.jsonl",
+ "exhaustive": true
+}

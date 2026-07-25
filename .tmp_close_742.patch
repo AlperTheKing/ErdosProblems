@@ -1,0 +1,22 @@
+*** Begin Patch
+*** Update File: problems_external/erdos_742/APPROACH_REGISTRY.md
+@@
+ - A solver objective, approximate graph, or bounded NO_HIT is not a result.
++
++## Route status — 2026-07-23
++
++- **R1 halted.** The calibrated 64-thread native search completed
++  3,600,239 restarts without a 157-edge certificate; the exact SMS route is
++  not production-ready at order 25 because its audited degree-sequence driver
++  is missing; and 186,971,232 audited one-level twin substitutions through
++  order-7 D2C bases attained at most 156 edges. These are bounded negative
++  results, not a proof of the conjecture.
++- **R2 dead.** The proposed maximum-cut charging rule has a verified
++  order-8 D2C counterexample. The valid true-twin transfer lemma does not
++  bridge to the global bound because the required density-sensitive
++  cloneability statement is unproved, while its unrestricted low-degree
++  version has a verified order-12 counterexample.
++- **Dead-end record.** `DEAD: reformulation maze — no proven bridge from
++  bounded family exclusions or density-sensitive cloneability to the
++  universal edge bound.`
+*** End Patch

@@ -22,10 +22,10 @@ def main(argv):
     print("retrying %d" % len(todo), flush=True)
     from concurrent.futures import ProcessPoolExecutor, as_completed
     jobs = [(i, tuple(r["lam"]), tuple(r["mu"]), tuple(r["nu"]),
-             8 * 10 ** 9, 420) for i, r in enumerate(todo)]
+             8 * 10 ** 9, 300) for i, r in enumerate(todo)]
     n = 0
     with open(dst, "w", encoding="utf-8") as f:
-        with ProcessPoolExecutor(max_workers=32) as ex:
+        with ProcessPoolExecutor(max_workers=14) as ex:
             futs = [ex.submit(_profile_job, j) for j in jobs]
             for fut in as_completed(futs):
                 rec = fut.result()

@@ -1,0 +1,231 @@
+{
+ "run": "tier0 fam1 (hunter 1/12)",
+ "date": "2026-07-22T01:17:20+03:00",
+ "family": "verified non-lattice refuter cell lam=(2,2,1), mu=(k,3,2,1), nu=(k+1,4,3,2,1), k=4..60, plus ALL single- and two-box perturbations (exhaustive), plus exhaustive L1<=4 perturbations, plus L1<=8/support<=3 and L1<=6/support<=5 perturbations, plus the thickened cell lam=(2t,2t,t), mu=(k,3t,2t,t), nu=(k+t,4t,3t,2t,t), t=1..4, k=4..14 with all two-box perturbations",
+ "exhaustiveness": {
+  "single_and_two_box_over_k_4_60": "EXHAUSTIVE (single-box moves cannot balance |lam|+|mu|=|nu|, so the two-box layer is complete)",
+  "L1_le_4_over_k_4_60": "EXHAUSTIVE",
+  "L1_le_8_support_le_3": "EXHAUSTIVE within that support cap",
+  "L1_le_6_support_le_5": "EXHAUSTIVE within that support cap",
+  "L1_le_6_support_6_to_15": "NOT covered (combinatorially out of budget)",
+  "thickened_cell": "EXHAUSTIVE two-box layer for t=1..4, k=4..14"
+ },
+ "instrument": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/tier0/tier0_screen.py (mandated LP-free screen; no LP dimension oracle, no simplex filter)",
+ "cross_check": "engine B (engineB_lrrule.py) independently reproduced the full profile P(0..8), d and h* on 6 family members incl. the base refuter",
+ "triples_generated": 595672,
+ "status_counts": {
+  "OK": 329202,
+  "EMPTY": 266356,
+  "CAP_EXCEEDED": 114
+ },
+ "screened_OK": 329202,
+ "audit_failures": 0,
+ "d_histogram": {
+  "0": 150848,
+  "1": 81073,
+  "2": 49133,
+  "3": 24315,
+  "4": 16812,
+  "5": 6377,
+  "6": 636,
+  "7": 8
+ },
+ "TIER0_hits": 0,
+ "JACKPOT_hits": 0,
+ "NEG_hits": 0,
+ "lattice_inequality_violations": "NONE (h*_d<=h*_1, Hibi, Stanley with s=deg h*, all d>=2 records)",
+ "best_hstar_d": {
+  "value": 5,
+  "triple": {
+   "lam": [
+    8,
+    8,
+    4
+   ],
+   "mu": [
+    15,
+    12,
+    8,
+    4
+   ],
+   "nu": [
+    19,
+    16,
+    12,
+    8,
+    4
+   ]
+  },
+  "d": 4,
+  "hstar": [
+   1,
+   75,
+   275,
+   130,
+   5
+  ]
+ },
+ "min_h1_minus_hd_all_d_ge_2": {
+  "value": 0,
+  "triple": {
+   "lam": [
+    2,
+    2,
+    1
+   ],
+   "mu": [
+    4,
+    3,
+    2,
+    1
+   ],
+   "nu": [
+    5,
+    4,
+    3,
+    2,
+    1
+   ]
+  },
+  "d": 4,
+  "hstar": [
+   1,
+   0,
+   1,
+   0,
+   0
+  ],
+  "c": 5
+ },
+ "min_h1_minus_hd_d_ge_4": {
+  "value": 0,
+  "triple": {
+   "lam": [
+    2,
+    2,
+    1
+   ],
+   "mu": [
+    4,
+    3,
+    2,
+    1
+   ],
+   "nu": [
+    5,
+    4,
+    3,
+    2,
+    1
+   ]
+  },
+  "d": 4,
+  "hstar": [
+   1,
+   0,
+   1,
+   0,
+   0
+  ],
+  "c": 5
+ },
+ "records_with_interior_lattice_point": {
+  "d>=2": 161,
+  "d>=4": 106
+ },
+ "best_margin_among_interior_bearing_d_ge_4": {
+  "margin": 26,
+  "triple": {
+   "lam": [
+    6,
+    6,
+    3
+   ],
+   "mu": [
+    11,
+    9,
+    7,
+    3
+   ],
+   "nu": [
+    14,
+    12,
+    10,
+    6,
+    3
+   ]
+  },
+  "d": 4,
+  "hstar": [
+   1,
+   27,
+   70,
+   27,
+   1
+  ]
+ },
+ "hstar_1_eq_0_count": {
+  "d>=2": 74283,
+  "d>=4": 8353
+ },
+ "nonlattice_census": {
+  "triples_vertex_certified": 8229,
+  "NON_LATTICE_CERTIFIED": 1416,
+  "method": "exact Fraction re-solve + exact feasibility check of every sampled vertex; a non-integer coordinate is a proof of non-latticeness; absence is inconclusive (K=30 random objectives)",
+  "denominators_observed": [
+   1,
+   2
+  ]
+ },
+ "files": {
+  "fam1.jsonl": {
+   "lines": 6576,
+   "bytes": 7069439
+  },
+  "fam1b.jsonl": {
+   "lines": 130685,
+   "bytes": 123520043
+  },
+  "fam1c.jsonl": {
+   "lines": 14190,
+   "bytes": 11924243
+  },
+  "fam1d.jsonl": {
+   "lines": 440757,
+   "bytes": 332045461
+  },
+  "thick2.jsonl": {
+   "lines": 3464,
+   "bytes": 3950252
+  },
+  "fam1.batch": {
+   "lines": 6576,
+   "bytes": 176496
+  },
+  "fam1b.batch": {
+   "lines": 130685,
+   "bytes": 3523687
+  },
+  "fam1c.batch": {
+   "lines": 14190,
+   "bytes": 380422
+  },
+  "fam1d.batch": {
+   "lines": 440757,
+   "bytes": 11826467
+  },
+  "thick2.batch": {
+   "lines": 3464,
+   "bytes": 94616
+  },
+  "nonlattice_margin0d4.jsonl": {
+   "lines": 6000,
+   "bytes": 1516336
+  },
+  "nonlattice_d2_sample.jsonl": {
+   "lines": 2400,
+   "bytes": 572147
+  }
+ },
+ "verdict": "No TIER0, no JACKPOT, no negative monomial coefficient anywhere in this cell. Structural finding: every screened hive polytope in the exhaustive two-box/four-box neighbourhood of the verified non-lattice refuter cell has h*_d = 0, i.e. NO relative-interior lattice point at all; the minimum of h*_1 - h*_d is 0 and is attained only with h*_1 = h*_d = 0. A null census is not evidence for the KTT conjecture."
+}

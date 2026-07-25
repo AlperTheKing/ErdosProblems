@@ -1,0 +1,15 @@
+{
+  "experiment": "EXP-MM-EHP-007-n16-inari",
+  "degree": 16,
+  "reduced_dim": 29,
+  "verdict": "EHP_N16_PROVEN",
+  "rigor": "ieee_1788_interval_arithmetic_inari",
+  "l_star_lower": 34.84267228433201,
+  "l_star_upper": 34.84267228433204,
+  "bb_proof_complete": true,
+  "bb_total_evals": 0,
+  "bb_levels": [],
+  "outer_domain_safe": true,
+  "hessian_negative": true,
+  "total_time_secs": 45.817095833
+}

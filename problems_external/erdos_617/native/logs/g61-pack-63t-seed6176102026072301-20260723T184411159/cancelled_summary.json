@@ -1,0 +1,14 @@
+{
+  "status": "CANCELLED_R4_PROVED_IMPOSSIBLE",
+  "pid": 85396,
+  "exited": true,
+  "stopped": "2026-07-23T18:47:05.1905348+03:00",
+  "best_checkpoint_overlap": 28,
+  "checkpoint_worker": 56,
+  "checkpoint_worker_moves": 1588377,
+  "stderr_bytes": 0,
+  "raw_hit": false,
+  "source_sha256": "E29184683B641DA63E7BED0F3B03D722AD49E16FBBDF8E408A273B899A1D9080",
+  "exe_sha256": "87525883B980CF140D60CE2C79F70772F73F84526E43845DA9E29364EBE75FA5",
+  "note": "Stopped because R4 was proved impossible; bounded search itself is not the proof."
+}

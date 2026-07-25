@@ -1,0 +1,31 @@
+{
+  "closest_competitor_l": 7.578650120603081,
+  "counterexamples": 0,
+  "evals_per_sec": 13719.84441796917,
+  "experiment": "EHP_n4_feasibility",
+  "global_max": {
+    "dist_to_extremizer": 1.224744871391589,
+    "l_value": 7.578650120603081,
+    "params": [
+      0.5,
+      0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5
+    ]
+  },
+  "margin": 3.402605556076148,
+  "reference_l_star": 10.981255676679229,
+  "reference_l_star_richardson": 11.056656947794925,
+  "reference_resolution": 200,
+  "runtime_estimates": {
+    "grid_10_6_secs": 72.88712390136719,
+    "grid_15_6_secs": 830.2298956890107,
+    "grid_20_6_secs": 4664.7759296875
+  },
+  "sample_grid": "8^6",
+  "sample_time_secs": 19.106922208,
+  "sample_total": 262144,
+  "survival_rate_80pct": 0.0
+}

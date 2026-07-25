@@ -1,0 +1,5 @@
+worker 0
+moves 9
+missing_sixsets_color0 384
+full_missing_pairs 1920
+offsets 0 0 0 1 4 1 4 0 3 2 3 2

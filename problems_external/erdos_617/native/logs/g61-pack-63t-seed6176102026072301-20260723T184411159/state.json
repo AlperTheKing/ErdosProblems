@@ -1,0 +1,14 @@
+{
+  "status": "RUNNING",
+  "run_dir": "E:\\Projects\\ErdosProblems\\problems_external\\erdos_617\\native\\logs\\g61-pack-63t-seed6176102026072301-20260723T184411159",
+  "pid": 85396,
+  "threads": 63,
+  "seconds": 3600,
+  "seed": "6176102026072301",
+  "source_sha256": "E29184683B641DA63E7BED0F3B03D722AD49E16FBBDF8E408A273B899A1D9080",
+  "exe_sha256": "87525883B980CF140D60CE2C79F70772F73F84526E43845DA9E29364EBE75FA5",
+  "started": "2026-07-23T18:44:11.2024584+03:00",
+  "stdout": "E:\\Projects\\ErdosProblems\\problems_external\\erdos_617\\native\\logs\\g61-pack-63t-seed6176102026072301-20260723T184411159\\stdout.txt",
+  "stderr": "E:\\Projects\\ErdosProblems\\problems_external\\erdos_617\\native\\logs\\g61-pack-63t-seed6176102026072301-20260723T184411159\\stderr.txt",
+  "exact_sat_pid_untouched": 85708
+}

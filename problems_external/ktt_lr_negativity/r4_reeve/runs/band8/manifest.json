@@ -1,0 +1,784 @@
+{
+ "run": "band8",
+ "hunter": "8 of 12 (Reeve-dimension sweep, r = 4)",
+ "date": "2026-07-21",
+ "target": "King-Tollu-Toumazet (2004) positivity conjecture: a triple (lam,mu,nu) with |lam|+|mu|=|nu| whose stretched Littlewood-Richardson polynomial P(n) = c(n nu; n lam, n mu) has a strictly NEGATIVE coefficient. Also a FrontierMath open problem.",
+ "band": "W = |nu| in [61,90]",
+ "cell": "r = 4, so the hive polytope Q(lam,mu,nu) lives in dimension (r-1)(r-2)/2 = 3, the Reeve dimension -- the smallest dimension in which an Ehrhart polynomial can have a negative coefficient.",
+ "band_total_ordered_triples": 1877911502602,
+ "exhaustive_over_band": true,
+ "exhaustiveness_argument": [
+  "P(n) = c(n nu; n lam, n mu) is invariant under (lam,nu) -> (lam+1^4, nu+1^4) and (mu,nu) -> (mu+1^4, nu+1^4), so every statistic below depends on (lam,mu,nu) only through the 9 gaps a_i = lam_i - lam_{i+1}, b_i, c_i (i=1,2,3).",
+  "With Aw = a1+2a2+3a3 = |lam| - 4 lam_4 (and Bw, Cw likewise), a gap class is realised by a triple of weight W iff Cw <= W, 4 | (W-Cw), Aw+Bw <= W, 4 | (W-Aw-Bw); the realising triples of weight W are then exactly the (W-Aw-Bw)/4 + 1 choices of (lam_4, mu_4) with nu_4 = (W-Cw)/4 forced.",
+  "The scanned region is the union over W in [61,90] of those classes. Summing the multiplicities over the region gives EXACTLY the number of ordered triples in the band (gate below), which certifies that the region is neither short nor over-counted.",
+  "Within the region the scan is a complete enumeration of gap classes, using only the exact symmetry c(nu;lam,mu) = c(nu;mu,lam) to visit the pair {(a,Aw),(b,Bw)} once with weight 2 (weight 1 on the diagonal)."
+ ],
+ "region_gate": {
+  "gap_classes_in_region": 176528678464,
+  "ordered_band_triples_covered": 1877911502602,
+  "band_total_from_band_size_json": 1877911502602,
+  "match": true
+ },
+ "census": {
+  "gap_classes_scanned": 176528678464,
+  "ordered_band_triples_represented": 1877911502602,
+  "Q_nonempty_classes": 28310270874,
+  "dim3_classes": 10646803051,
+  "negative_a1_hits": 0,
+  "negative_a2_hits": 0,
+  "min_6a1": 11,
+  "min_a1_exact": "11/6",
+  "argmin_a1": [
+   [
+    36,
+    2,
+    1,
+    0
+   ],
+   [
+    28,
+    12,
+    11,
+    0
+   ],
+   [
+    51,
+    14,
+    13,
+    12
+   ]
+  ],
+  "max_normalized_volume": 1063,
+  "argmax_V": [
+   [
+    24,
+    14,
+    6,
+    0
+   ],
+   [
+    24,
+    15,
+    7,
+    0
+   ],
+   [
+    36,
+    26,
+    18,
+    10
+   ]
+  ],
+  "max_normalized_volume_at_hstar1_zero": 1,
+  "argmax_V_hstar1_zero": [
+   [
+    36,
+    2,
+    1,
+    0
+   ],
+   [
+    28,
+    12,
+    11,
+    0
+   ],
+   [
+    51,
+    14,
+    13,
+    12
+   ]
+  ],
+  "max_hstar2": 685,
+  "argmax_hstar2": [
+   [
+    24,
+    14,
+    6,
+    0
+   ],
+   [
+    24,
+    15,
+    7,
+    0
+   ],
+   [
+    36,
+    26,
+    18,
+    10
+   ]
+  ],
+  "max_V_over_L1_plus_hstar3": "1063/381",
+  "argmax_ratio": [
+   [
+    24,
+    14,
+    6,
+    0
+   ],
+   [
+    24,
+    15,
+    7,
+    0
+   ],
+   [
+    36,
+    26,
+    18,
+    10
+   ]
+  ],
+  "min_2a2": 2,
+  "min_6a1_restricted_to_V_ge_100": 36,
+  "maxV_by_lattice_point_count_c": {
+   "4": [
+    1,
+    [
+     [
+      36,
+      2,
+      1,
+      0
+     ],
+     [
+      28,
+      12,
+      11,
+      0
+     ],
+     [
+      51,
+      14,
+      13,
+      12
+     ]
+    ]
+   ],
+   "5": [
+    3,
+    [
+     [
+      19,
+      18,
+      1,
+      0
+     ],
+     [
+      21,
+      20,
+      1,
+      0
+     ],
+     [
+      29,
+      28,
+      12,
+      11
+     ]
+    ]
+   ],
+   "6": [
+    4,
+    [
+     [
+      25,
+      13,
+      1,
+      0
+     ],
+     [
+      31,
+      19,
+      1,
+      0
+     ],
+     [
+      33,
+      32,
+      13,
+      12
+     ]
+    ]
+   ],
+   "7": [
+    6,
+    [
+     [
+      20,
+      9,
+      2,
+      0
+     ],
+     [
+      20,
+      18,
+      11,
+      0
+     ],
+     [
+      22,
+      21,
+      19,
+      18
+     ]
+    ]
+   ],
+   "8": [
+    7,
+    [
+     [
+      31,
+      6,
+      2,
+      0
+     ],
+     [
+      31,
+      12,
+      8,
+      0
+     ],
+     [
+      33,
+      32,
+      13,
+      12
+     ]
+    ]
+   ],
+   "9": [
+    9,
+    [
+     [
+      24,
+      13,
+      2,
+      0
+     ],
+     [
+      27,
+      13,
+      11,
+      0
+     ],
+     [
+      49,
+      15,
+      14,
+      12
+     ]
+    ]
+   ],
+   "10": [
+    11,
+    [
+     [
+      19,
+      18,
+      2,
+      0
+     ],
+     [
+      27,
+      13,
+      11,
+      0
+     ],
+     [
+      44,
+      20,
+      14,
+      12
+     ]
+    ]
+   ],
+   "11": [
+    13,
+    [
+     [
+      23,
+      14,
+      2,
+      0
+     ],
+     [
+      27,
+      13,
+      11,
+      0
+     ],
+     [
+      48,
+      16,
+      14,
+      12
+     ]
+    ]
+   ],
+   "12": [
+    18,
+    [
+     [
+      16,
+      14,
+      12,
+      10
+     ],
+     [
+      6,
+      4,
+      2,
+      0
+     ],
+     [
+      19,
+      17,
+      15,
+      13
+     ]
+    ]
+   ],
+   "13": [
+    20,
+    [
+     [
+      11,
+      9,
+      7,
+      5
+     ],
+     [
+      23,
+      4,
+      2,
+      0
+     ],
+     [
+      31,
+      12,
+      10,
+      8
+     ]
+    ]
+   ],
+   "14": [
+    22,
+    [
+     [
+      15,
+      13,
+      11,
+      0
+     ],
+     [
+      45,
+      4,
+      2,
+      0
+     ],
+     [
+      48,
+      16,
+      14,
+      12
+     ]
+    ]
+   ],
+   "15": [
+    25,
+    [
+     [
+      16,
+      14,
+      11,
+      9
+     ],
+     [
+      7,
+      5,
+      2,
+      0
+     ],
+     [
+      20,
+      17,
+      15,
+      12
+     ]
+    ]
+   ],
+   "16": [
+    27,
+    [
+     [
+      22,
+      5,
+      3,
+      0
+     ],
+     [
+      21,
+      19,
+      16,
+      0
+     ],
+     [
+      25,
+      23,
+      20,
+      18
+     ]
+    ]
+   ],
+   "17": [
+    29,
+    [
+     [
+      14,
+      11,
+      2,
+      0
+     ],
+     [
+      29,
+      26,
+      2,
+      0
+     ],
+     [
+      32,
+      30,
+      12,
+      10
+     ]
+    ]
+   ],
+   "18": [
+    31,
+    [
+     [
+      20,
+      17,
+      2,
+      0
+     ],
+     [
+      26,
+      23,
+      2,
+      0
+     ],
+     [
+      33,
+      31,
+      14,
+      12
+     ]
+    ]
+   ],
+   "19": [
+    36,
+    [
+     [
+      15,
+      12,
+      10,
+      7
+     ],
+     [
+      8,
+      6,
+      3,
+      0
+     ],
+     [
+      19,
+      17,
+      14,
+      11
+     ]
+    ]
+   ],
+   "20": [
+    39,
+    [
+     [
+      15,
+      12,
+      9,
+      7
+     ],
+     [
+      9,
+      6,
+      3,
+      0
+     ],
+     [
+      19,
+      17,
+      14,
+      11
+     ]
+    ]
+   ],
+   "21": [
+    42,
+    [
+     [
+      15,
+      13,
+      9,
+      7
+     ],
+     [
+      9,
+      6,
+      3,
+      0
+     ],
+     [
+      20,
+      17,
+      14,
+      11
+     ]
+    ]
+   ],
+   "22": [
+    44,
+    [
+     [
+      16,
+      12,
+      9,
+      6
+     ],
+     [
+      10,
+      7,
+      4,
+      0
+     ],
+     [
+      20,
+      18,
+      14,
+      12
+     ]
+    ]
+   ],
+   "23": [
+    48,
+    [
+     [
+      15,
+      12,
+      10,
+      7
+     ],
+     [
+      9,
+      6,
+      3,
+      0
+     ],
+     [
+      20,
+      17,
+      14,
+      11
+     ]
+    ]
+   ]
+  },
+  "hist_6a1": {
+   "11": 828482406,
+   "12": 5130,
+   "13": 335189077,
+   "14": 586456,
+   "15": 564957090,
+   "16": 15185988,
+   "17": 460930405,
+   "18": 171485622,
+   "19": 361375705,
+   "20": 251253419,
+   "21": 404783233,
+   "22": 377967762,
+   "23": 281480165,
+   "24": 426464402,
+   "25": 229117199,
+   "26": 237242799,
+   "27": 383149843,
+   "28": 319287506,
+   "29": 283574505,
+   "30": 323699311,
+   "31": 270993576,
+   "32": 184848818,
+   "33": 395711019,
+   "34": 219134623,
+   "35": 221393368,
+   "36": 264715792,
+   "37": 211550147,
+   "38": 161114981,
+   "39": 263418731,
+   "40": 187204519,
+   "41": 151778774,
+   "42": 209097795,
+   "43": 134538357,
+   "44": 125218689,
+   "45": 170742409,
+   "46": 127415019,
+   "47": 101312101,
+   "48": 128232108,
+   "49": 90815058,
+   "50": 77675461,
+   "51": 103090565,
+   "52": 71151670,
+   "53": 61616978,
+   "54": 70755957,
+   "55": 51867749,
+   "56": 42309181,
+   "57": 51122582,
+   "58": 36997897,
+   "59": 30041076,
+   "60": 33629583,
+   "61": 23448200,
+   "62": 19568812,
+   "63": 20859952
+  },
+  "exact_runtime_seconds_total_chunks": 3336,
+  "dim_le_2_classes": 17663467823
+ },
+ "negativity_criterion": "6 a1 = -11 + 18 L1 - 9 L2 + 2 L3 = 11 + 2h*_1 - h*_2 + 2h*_3 = 3(L1 + h*_3) - V ; a0 = 1 and a3 = V/6 > 0 always, so a1 is the only coefficient that can go negative, and it does iff V / (L1 + h*_3) > 3, i.e. h*_2 > 11 + 2h*_1 + 2h*_3.",
+ "reeve_reference": "Reeve tetrahedron T_q: h* = (1,0,q-1,0), c = 4 = dim+1, V = q, a1 = 2 - q/6 < 0 for q >= 13. The band-8 analogue of q is max_normalized_volume_at_hstar1_zero.",
+ "independent_raw_triple_scans": {
+  "61": {
+   "triples_tested": 6116312180,
+   "pruned_containment": 4253954988,
+   "Q_nonempty": 741472032,
+   "dim3": 161177174,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "maxV": 326,
+   "maxV_hstar1_zero": 1,
+   "max_hstar2": 202,
+   "max_V_over_L1_plus_hstar3": "324/126"
+  },
+  "62": {
+   "triples_tested": 7074560601,
+   "pruned_containment": 4920345653,
+   "Q_nonempty": 855362123,
+   "dim3": 190508775,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "maxV": 340,
+   "maxV_hstar1_zero": 1,
+   "max_hstar2": 211,
+   "max_V_over_L1_plus_hstar3": "338/131"
+  },
+  "63": {
+   "triples_tested": 8135156700,
+   "pruned_containment": 5656294636,
+   "Q_nonempty": 983553450,
+   "dim3": 223977424,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "maxV": 352,
+   "maxV_hstar1_zero": 1,
+   "max_hstar2": 219,
+   "max_V_over_L1_plus_hstar3": "347/134"
+  },
+  "64": {
+   "triples_tested": 9371873880,
+   "pruned_containment": 6516213654,
+   "Q_nonempty": 1130131399,
+   "dim3": 263298094,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "maxV": 375,
+   "maxV_hstar1_zero": 1,
+   "max_hstar2": 234,
+   "max_V_over_L1_plus_hstar3": "375/144"
+  },
+  "65": {
+   "triples_tested": 10733190336,
+   "pruned_containment": 7459901442,
+   "Q_nonempty": 1294574126,
+   "dim3": 307981270,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "maxV": 398,
+   "maxV_hstar1_zero": 1,
+   "max_hstar2": 249,
+   "max_V_over_L1_plus_hstar3": "398/152"
+  },
+  "66": {
+   "triples_tested": 12317008392,
+   "pruned_containment": 8561027788,
+   "Q_nonempty": 1481927113,
+   "dim3": 360205709,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "maxV": 412,
+   "maxV_hstar1_zero": 1,
+   "max_hstar2": 258,
+   "max_V_over_L1_plus_hstar3": "399/152"
+  },
+  "67": {
+   "triples_tested": 14057030520,
+   "pruned_containment": 9767221058,
+   "Q_nonempty": 1691462094,
+   "dim3": 419324552,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "maxV": 435,
+   "maxV_hstar1_zero": 1,
+   "max_hstar2": 273,
+   "max_V_over_L1_plus_hstar3": "435/165"
+  }
+ },
+ "engine_gates": {
+  "gap_scanner_vs_hive4_exact_Fractions": "PASS",
+  "gap_scanner_vs_hive4_tested": 300,
+  "stretched_LR_engines_A_and_B": "PASS",
+  "stretched_LR_triples_tested": 8,
+  "bandscan_vs_hive4": "PASS",
+  "fast_lattice_count_vs_reference": "PASS (750101 random classes, 0 mismatches)",
+  "W61_gapclass_vs_W61_raw_triple_scan": "identical on every extremal statistic (min6a1=11, maxV=326, maxV_hstar1_zero=1, max_hstar2=202, max ratio 324/126, all maxV_at_c)",
+  "extremal_records_vs_engines_A_and_B": "PASS (argmin a1, argmin a1 at V>=100, argmax V; n=1,2,3 both engines; xengine_extremals.json)"
+ },
+ "hits": [],
+ "honesty": "No triple in this band has a negative coefficient. This closes the enumerated window and is NOT evidence for the King-Tollu-Toumazet conjecture: absence of a counterexample in a finite window proves nothing about the conjecture.",
+ "files": {
+  "scanner": "band8_gapscan2.cpp / band8_gapscan3.exe",
+  "chunk_logs": [
+   "chunk_Cw00_00.log",
+   "chunk_Cw01_45.log",
+   "chunk_Cw46_50.log",
+   "chunk_Cw51_55.log",
+   "chunk_Cw56_60.log",
+   "chunk_Cw61_63.log",
+   "chunk_Cw64_66.log",
+   "chunk_Cw67_69.log",
+   "chunk_Cw70_72.log",
+   "chunk_Cw73_75.log",
+   "chunk_Cw76_78.log",
+   "chunk_Cw79_81.log",
+   "chunk_Cw82_84.log",
+   "chunk_Cw85_86.log",
+   "chunk_Cw87_88.log",
+   "chunk_Cw89_89.log",
+   "chunk_Cw90_90.log"
+  ],
+  "aggregate": "band_aggregate.json",
+  "region_count": "count_region.log",
+  "raw_triple_scans": "wexh_61..67.log (independent, whole-weight exhaustive)",
+  "validators": "validate_gapscan.py, xengine_band8.py, validate_band8.py"
+ },
+ "notes_on_the_criterion_statistic": "6a1 = 3(L1+h*_3) - V is an identity, so V/(L1+h*_3) -> 3 automatically as the polytope grows; the ratio approaching 3 is NOT evidence of approaching negativity. The absolute statistic is the one that matters and it does not move: min 6a1 = 11 over the whole band, attained exactly on the unimodular stratum L1 = 4, h* = (1,0,0,0), V = 1."
+}

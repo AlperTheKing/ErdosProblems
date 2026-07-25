@@ -93,6 +93,14 @@ def main(tags):
         "max_mean_centered_index_u": str(bestu[0]),
         "max_u_rec": slim(bestu[1]),
         "n_hits": len(hits), "hits": [slim(h) for h in hits],
+        "instrument": "purged_region/lpfree_screen.py screen_profile "
+                      "(exact profile P(0..D+2), exact Newton interpolation "
+                      "over Q, two held-out points, h* by the alternating "
+                      "binomial sum); NO LP dimension oracle, NO simplex "
+                      "filter, nothing discarded for 'not a simplex'",
+        "negative_census_disclaimer":
+            "A census with no negative coefficient is NOT evidence for the "
+            "King-Tollu-Toumazet positivity conjecture.",
     }
     with open(os.path.join(OUT, "manifest.json"), "w", encoding="utf-8") as f:
         json.dump(man, f, indent=1)

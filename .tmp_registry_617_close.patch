@@ -1,0 +1,20 @@
+diff --git a/problems_external/erdos_617/APPROACH_REGISTRY.md b/problems_external/erdos_617/APPROACH_REGISTRY.md
+--- a/problems_external/erdos_617/APPROACH_REGISTRY.md
++++ b/problems_external/erdos_617/APPROACH_REGISTRY.md
+@@ -199,0 +200,16 @@
++
++### Route status
++
++`R4 DEAD (2026-07-23)`: five arbitrary copies of `G_61` cannot be
++pairwise edge-disjoint. The general proof in
++`structure/R4_GENERAL_PACKING_OBSTRUCTION.md` forces at least 59 distinct
++edges inside a fixed 11-vertex set of capacity 55. The independent auditor
++is `structure/audit_r4_general_packing_obstruction.cpp`.
++
++## Target status
++
++`HALTED INCONCLUSIVE (2026-07-23)`. R1 unrestricted native search was
++cancelled after 219602944 reported moves with best score 842; unrestricted
++exact SAT was cancelled without SAT or checked UNSAT. R2, R3, and R4 were
++killed by exact counterexamples or proofs. None of these outcomes proves or
++disproves Problem 617, and no computation is left running.

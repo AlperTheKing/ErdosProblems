@@ -1,0 +1,9 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38464,0 +38465,5 @@
++[2026-07-23T17:51:31+03:00] FAIL SELECT | DID: audited 9 DECIDABLE targets | RESULT: all lack executable finite cutoff or have crowded claims | D: pool rejected
++[2026-07-23T17:51:32+03:00] OK SELECT | DID: selected #475 refutation layer | RESULT: first uncovered layer p=17,t=13 has 560 subsets | D: #475 selected
++[2026-07-23T17:51:33+03:00] OK GATE | DID: checked live page, forum, papers, public certificates | RESULT: no counterexample; public backtest ends at p=13 | D: passed
++[2026-07-23T17:51:34+03:00] OK PLAN | DID: wrote #475 registry and neutral prompt | RESULT: exact certificate, bridge, test, and exit fixed | D: PLAN->ATTACK
++[2026-07-23T17:51:35+03:00] > ATTACK | NEXT: compile 2 independent C++ engines, calibrate p<=13, and exhaust all 560 p=17,t=13 subsets.

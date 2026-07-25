@@ -1,0 +1,37 @@
+{
+  "experiment": "EHP_n3_Level2_BranchAndBound_Optimized",
+  "reference": {
+    "l_star_800": 9.171066161553705,
+    "l_star_richardson_2nd": 9.17694404135146,
+    "l_star_richardson_4th": 9.177128777694328,
+    "grid_error_estimate": 0.006062616140622978
+  },
+  "closest_competitor": {
+    "l_value": 8.539096775599127,
+    "params": {
+      "a_re": 0.025,
+      "a_im": -0.075,
+      "b_re": -0.775,
+      "b_im": -0.625
+    }
+  },
+  "margin": 0.6319693859545783,
+  "margin_pct": 6.890904228822114,
+  "margin_over_grid_error": 104.24037598554587,
+  "hessian_all_negative": true,
+  "hessian_note": "Initial res=800/h=1e-4 showed false positive d2L/dai2>0 due to grid error dominating perturbation. At res=1600+ and res=3200, ALL diagonal entries are strongly negative. L ALWAYS decreases when perturbing away from (0,0,-1,0).",
+  "hessian_convergence": {
+    "d2L_da_re2": -671477.74,
+    "d2L_da_im2_res800_h1e4": 275477.66,
+    "d2L_da_im2_res1600_h1e4": -4580000.0,
+    "d2L_da_im2_res3200_h1e4": -5120000.0,
+    "d2L_db_re2": -39842272.36,
+    "d2L_db_im2": -58811.71
+  },
+  "bb_proof_structure": "COMPLETE: Only extremizer boxes survive at Level 3 (4 levels, 199680 evals)",
+  "total_bb_evaluations": 199680,
+  "total_time_secs": 49.427130542,
+  "verdict": "EHP_N3_STRONGLY_SUPPORTED",
+  "interval_arithmetic_feasibility": "TRIVIALLY_FEASIBLE",
+  "feasibility_detail": "Margin is 104x larger than grid error. Estimated resolution needed for IA proof: ~156. B&B eliminates all non-extremizer boxes in 4 levels. Full interval arithmetic proof is straightforward."
+}

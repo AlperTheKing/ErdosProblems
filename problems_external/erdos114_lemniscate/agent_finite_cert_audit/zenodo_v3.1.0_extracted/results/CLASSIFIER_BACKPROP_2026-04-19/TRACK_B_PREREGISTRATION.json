@@ -1,0 +1,133 @@
+{
+  "preregistration_date": "2026-04-20",
+  "protocol": "GSP Track B pilot preregistration - QC<->#30 generic control and QC<->#20 scoped positive control",
+  "authority": "TRACK_A_RESULTS_SYNTHESIS.md item 3 plus TRACK_A_REDESIGN.md handoff",
+  "binding_rule": "This pilot inherits the Track A v2 methodology. No post-hoc tuning of thresholds, null definitions, observable choice, size ranges, or verdict language is allowed after the first run script is frozen. Any such change requires a dated amendment JSON with user approval.",
+  "template_inheritance": {
+    "source": "TRACK_A_PREREGISTRATION.json",
+    "frozen_upgrades": [
+      "geometry-killed nulls instead of cross-geometry comparisons",
+      "fixed-knot model selection at M_L instead of peak-picking",
+      "pre-registered thresholds with PASS or FAIL semantics"
+    ]
+  },
+  "pilot_scope": {
+    "purpose": "Validate the Track A v2 Leg-4 template on one expected generic control and one expected scoped positive control before any wider QC-edge rollout.",
+    "edges": [
+      "PHYS-QC-001<->#30",
+      "PHYS-QC-001<->#20"
+    ]
+  },
+  "exp10_qc_sidon_generic_control": {
+    "title": "QC<->#30 Sidon generic-control Leg-4 pilot",
+    "edge_ref": "QC-morphism edge PHYS-QC-001<->#30",
+    "expected_class": "generic",
+    "classifier_backprop_ref": {
+      "verdict_field": "similarity=0.821",
+      "class_verdict": "structural_only",
+      "notes": "Sidon - proven PMF lattice-gas, geometry-dominated per #30 COLLIDER_SYNTHESIS"
+    },
+    "hypothesis": "#30 Sidon is the generic negative control for the QC pilot. A fixed-knot M_L model must NOT separate the chosen Sidon observable from geometry-killed nulls strongly enough to promote the edge into the scoped bucket.",
+    "observable_selection_rule": {
+      "rule": "Before any run, freeze exactly one mathematical-side observable already attested in local #30 artifacts as PMF or geometry-dominated. The run script may compute only that observable for verdict purposes.",
+      "allowed_families": [
+        "close-packing-density proxy from the #30 PMF/lattice-gas reading",
+        "transfer-operator or spectral proxy already used in #30 collider artifacts",
+        "another pre-existing #30 observable explicitly cited in checked-in synthesis"
+      ],
+      "forbidden": [
+        "inventing a new order parameter after seeing pilot data",
+        "running multiple observables and selecting the most favorable one for the final verdict"
+      ]
+    },
+    "null_policy": {
+      "rule": "Register geometry-killed nulls that preserve coarse combinatorial bulk statistics of the chosen observable while destroying the Sidon/QC geometric structure.",
+      "minimum_null_count": 3,
+      "required_controls": [
+        "one randomization that kills the QC/Sidon geometry directly",
+        "one nuisance-parameter null that preserves bulk counts only",
+        "one structure-preserving but geometry-scrambling null"
+      ]
+    },
+    "criteria_template": [
+      {
+        "id": "C1_strength_ratio",
+        "description": "Reuse the Track A separation test against every registered null with the same threshold logic as the scoped template.",
+        "expected_for_control": "FAIL on at least one null"
+      },
+      {
+        "id": "C2_scaling",
+        "description": "Reuse the Track A scaling test on the frozen observable over the registered size range.",
+        "expected_for_control": "FAIL or remain null-compatible rather than produce a scoped-only scaling law"
+      },
+      {
+        "id": "C3_model_selection",
+        "description": "Reuse the fixed-knot DeltaBIC discrimination test at M_L.",
+        "expected_for_control": "FAIL or remain non-discriminating because at least one null also supports the same model"
+      }
+    ],
+    "verdict_rules": {
+      "GENERIC_CONTROL_CONFIRMED": "At least one of C1, C2, or C3 fails, and no amendment or post-hoc observable swap occurs.",
+      "SCOPED_COUNTEREXAMPLE": "C1 AND C2 AND C3 all pass against all registered nulls. Halt the wider Track B rollout and audit the #30 class assignment before any atlas update.",
+      "AMBIGUOUS": "Implementation defect, missing observable freeze, or mixed evidence that satisfies neither rule above. No promotion and no wider rollout."
+    }
+  },
+  "exp11_qc_sunflower_scoped_positive_control": {
+    "title": "QC<->#20 sunflower scoped-positive-control Leg-4 pilot",
+    "edge_ref": "QC-morphism edge PHYS-QC-001<->#20",
+    "expected_class": "geometry_exhausted",
+    "classifier_backprop_ref": {
+      "verdict_field": "similarity=0.64",
+      "class_verdict": "structural_only",
+      "notes": "Sunflower closure - SCOPED BUCKET per GSP (displacement-current cost, no geometric handle)"
+    },
+    "hypothesis": "#20 sunflower is the scoped positive control for the QC pilot. Once the observable is frozen and matched geometry-killed nulls are registered, a fixed-knot M_L model should separate the sunflower channel from the nulls strongly enough to survive the Track A v2 criteria.",
+    "observable_selection_rule": {
+      "rule": "Freeze one mathematical-side observable from existing #20 artifacts before code. Preferred order is growth-rate profile g_n(m), then jamming point m*, then max family size M(n).",
+      "registered_domain": "The pilot must include the current exact data regime n in {4,5,6,7,8}. Any extension beyond that range requires an amendment.",
+      "forbidden": [
+        "switching from one sunflower observable to another after seeing the first pilot result",
+        "claiming a scoped verdict from narrative interpretation alone"
+      ]
+    },
+    "null_policy": {
+      "rule": "Register geometry-killed nulls that preserve the coarse occupancy burden of the sunflower channel while destroying core-closure geometry.",
+      "minimum_null_count": 3,
+      "required_controls": [
+        "one random family/null preserving total occupancy scale only",
+        "one local-rule null preserving low-order marginals but breaking sunflower core structure",
+        "one nuisance-parameter null matched on ambient state-space size"
+      ]
+    },
+    "criteria_template": [
+      {
+        "id": "C1_strength_ratio",
+        "description": "Positive-control observable beats each null by the Track A separation threshold over the registered range."
+      },
+      {
+        "id": "C2_scaling",
+        "description": "Positive-control observable follows the pre-registered scoped scaling behavior rather than the generic geometric class."
+      },
+      {
+        "id": "C3_model_selection",
+        "description": "Fixed-knot M_L model is strongly preferred on the sunflower channel and not equally preferred on at least one null."
+      }
+    ],
+    "verdict_rules": {
+      "LEG4_PASS": "C1 AND C2 AND C3 pass",
+      "LEG4_FAIL": "Any of C1, C2, or C3 fails",
+      "LEG4_AMBIGUOUS_NOT_ALLOWED": "No partial or near-pass verdict is allowed under this template"
+    }
+  },
+  "pilot_rollout_gate": {
+    "rule": "No wider QC-edge Leg-4 campaign begins until exp10 and exp11 are both executed under this preregistration and reviewed by the user.",
+    "success_condition": "exp10 returns GENERIC_CONTROL_CONFIRMED and exp11 returns either LEG4_PASS or LEG4_FAIL with no post-hoc tuning.",
+    "rationale": "The pilot is meant to validate both sides of the reused template: a generic negative control and a scoped positive control."
+  },
+  "post_pilot_decision": {
+    "rule": "After the pilot verdicts are reviewed, return to TRACK_A_RESULTS_SYNTHESIS.md item 2 and resolve the neutrino scoped-slot decision. The pilot does not itself settle that slot."
+  },
+  "amendments": {
+    "rule": "Any change after commit must be recorded as TRACK_B_PREREGISTRATION_AMENDMENT_<date>.json in this directory, naming the changed field and the reason. The original file remains authoritative."
+  }
+}

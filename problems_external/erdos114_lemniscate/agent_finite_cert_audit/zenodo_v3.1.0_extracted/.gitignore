@@ -1,0 +1,27 @@
+scripts/erdos-114/target/
+*.DS_Store
+*.pdf
+*.aux
+*.log
+*.out
+
+# Unreleased experiments — local only until fully verified and ready for disclosure
+scripts/erdos-*/
+results/erdos-*/
+results/EXP-ERDOS*/
+scripts/channel-experiments/
+results/channel-experiments/
+scripts/zenodo/
+scripts/zenodo_publish.py
+
+# Allow #114 (the one published experiment) through the above rules
+!scripts/erdos-114/
+!scripts/erdos-114/**
+!results/erdos-114/
+!results/erdos-114/**
+
+# Allow #1038 (Tao ansatz interval-arithmetic certification)
+!scripts/erdos-1038-tao-ansatz/
+!scripts/erdos-1038-tao-ansatz/**
+!results/erdos-1038/
+!results/erdos-1038/**

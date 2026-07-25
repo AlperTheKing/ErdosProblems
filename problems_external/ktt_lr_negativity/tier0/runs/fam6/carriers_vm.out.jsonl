@@ -1,0 +1,105 @@
+{"idx": 0, "lam": [2, 2, 1], "mu": [7, 3, 2, 1, 1], "nu": [8, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 1, "lam": [7, 3, 2, 1, 1], "mu": [2, 2, 1], "nu": [8, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 2, "lam": [2, 2, 1], "mu": [6, 4, 2, 1, 1], "nu": [7, 5, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 3, "lam": [6, 4, 2, 1, 1], "mu": [2, 2, 1], "nu": [7, 5, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 4, "lam": [2, 2, 1], "mu": [6, 3, 2, 2, 1], "nu": [7, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 5, "lam": [6, 3, 2, 2, 1], "mu": [2, 2, 1], "nu": [7, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 6, "lam": [6, 3, 2, 1], "mu": [2, 2, 2, 1], "nu": [7, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 7, "lam": [2, 2, 2, 1], "mu": [6, 3, 2, 1], "nu": [7, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 8, "lam": [5, 4, 3, 1, 1], "mu": [2, 2, 1], "nu": [6, 5, 4, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 13, "lam": [2, 2, 1], "mu": [4, 3, 2, 1], "nu": [5, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 14, "lam": [4, 3, 2, 1], "mu": [2, 2, 1], "nu": [5, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 16, "lam": [2, 2, 1], "mu": [5, 3, 2, 1], "nu": [6, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 17, "lam": [2, 2, 1], "mu": [6, 3, 2, 1], "nu": [7, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 18, "lam": [6, 3, 2, 1], "mu": [2, 2, 1], "nu": [7, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 19, "lam": [2, 2, 1], "mu": [5, 4, 2, 1], "nu": [6, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 20, "lam": [5, 4, 2, 1], "mu": [2, 2, 1], "nu": [6, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 21, "lam": [2, 2, 1], "mu": [7, 3, 2, 1], "nu": [8, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 15, "lam": [5, 3, 2, 1], "mu": [2, 2, 1], "nu": [6, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 22, "lam": [7, 3, 2, 1], "mu": [2, 2, 1], "nu": [8, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 24, "lam": [6, 4, 2, 1], "mu": [2, 2, 1], "nu": [7, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 25, "lam": [2, 2, 1], "mu": [5, 4, 3, 1], "nu": [6, 5, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 26, "lam": [5, 4, 3, 1], "mu": [2, 2, 1], "nu": [6, 5, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 27, "lam": [2, 2, 1], "mu": [8, 3, 2, 1], "nu": [9, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 28, "lam": [8, 3, 2, 1], "mu": [2, 2, 1], "nu": [9, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 23, "lam": [2, 2, 1], "mu": [6, 4, 2, 1], "nu": [7, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 10, "lam": [2, 2, 1], "mu": [5, 4, 2, 2, 1], "nu": [6, 5, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 29, "lam": [2, 2, 1], "mu": [7, 4, 2, 1], "nu": [8, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 32, "lam": [6, 5, 2, 1], "mu": [2, 2, 1], "nu": [7, 6, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 33, "lam": [2, 2, 1], "mu": [6, 4, 3, 1], "nu": [7, 5, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 11, "lam": [4, 3, 2, 1, 1, 1], "mu": [2, 2, 1], "nu": [5, 4, 3, 2, 1, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 34, "lam": [6, 4, 3, 1], "mu": [2, 2, 1], "nu": [7, 5, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 35, "lam": [2, 2, 1], "mu": [5, 4, 3, 2], "nu": [6, 5, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 36, "lam": [5, 4, 3, 2], "mu": [2, 2, 1], "nu": [6, 5, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 37, "lam": [2, 2, 1], "mu": [9, 3, 2, 1], "nu": [10, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 38, "lam": [9, 3, 2, 1], "mu": [2, 2, 1], "nu": [10, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 39, "lam": [8, 4, 2, 1], "mu": [2, 2, 1], "nu": [9, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 40, "lam": [2, 2, 1], "mu": [8, 4, 2, 1], "nu": [9, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 41, "lam": [7, 5, 2, 1], "mu": [2, 2, 1], "nu": [8, 6, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 43, "lam": [2, 2, 1], "mu": [7, 4, 3, 1], "nu": [8, 5, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 42, "lam": [2, 2, 1], "mu": [7, 5, 2, 1], "nu": [8, 6, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 44, "lam": [7, 4, 3, 1], "mu": [2, 2, 1], "nu": [8, 5, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 45, "lam": [6, 5, 3, 1], "mu": [2, 2, 1], "nu": [7, 6, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 46, "lam": [2, 2, 1], "mu": [6, 5, 3, 1], "nu": [7, 6, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 30, "lam": [7, 4, 2, 1], "mu": [2, 2, 1], "nu": [8, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 47, "lam": [2, 2, 1], "mu": [6, 4, 3, 2], "nu": [7, 5, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 48, "lam": [6, 4, 3, 2], "mu": [2, 2, 1], "nu": [7, 5, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 51, "lam": [5, 4, 3, 2, 1], "mu": [2, 2, 1], "nu": [6, 5, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 50, "lam": [3, 3, 2, 1, 1], "mu": [4, 3, 2, 1], "nu": [6, 5, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 52, "lam": [2, 2, 1], "mu": [5, 4, 3, 2, 1], "nu": [6, 5, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 31, "lam": [2, 2, 1], "mu": [6, 5, 2, 1], "nu": [7, 6, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 53, "lam": [4, 3, 2, 1], "mu": [4, 3, 2, 1], "nu": [5, 5, 4, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 54, "lam": [4, 3, 2, 1, 1], "mu": [2, 2, 1], "nu": [5, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 56, "lam": [3, 2, 2, 1], "mu": [3, 2, 2, 1], "nu": [4, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 3, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 9, "lam": [2, 2, 1], "mu": [5, 4, 3, 1, 1], "nu": [6, 5, 4, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 57, "lam": [5, 3, 2, 1, 1], "mu": [2, 2, 1], "nu": [6, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 49, "lam": [4, 3, 2, 1], "mu": [3, 3, 2, 1, 1], "nu": [6, 5, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 58, "lam": [2, 2, 1], "mu": [5, 3, 2, 1, 1], "nu": [6, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 60, "lam": [2, 2, 2, 1], "mu": [4, 3, 2, 1], "nu": [5, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 62, "lam": [2, 2, 1], "mu": [4, 3, 2, 2, 1], "nu": [5, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 55, "lam": [2, 2, 1], "mu": [4, 3, 2, 1, 1], "nu": [5, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 63, "lam": [6, 3, 2, 1, 1], "mu": [2, 2, 1], "nu": [7, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 64, "lam": [5, 4, 2, 1, 1], "mu": [2, 2, 1], "nu": [6, 5, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 65, "lam": [5, 3, 2, 2, 1], "mu": [2, 2, 1], "nu": [6, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 66, "lam": [5, 3, 2, 1], "mu": [2, 2, 2, 1], "nu": [6, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 67, "lam": [4, 2, 2, 1], "mu": [4, 2, 2, 1], "nu": [5, 5, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 3, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 68, "lam": [3, 3, 2, 1], "mu": [3, 3, 2, 1], "nu": [5, 4, 4, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 69, "lam": [4, 3, 3, 2, 1], "mu": [2, 2, 1], "nu": [5, 4, 3, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 71, "lam": [2, 2, 2, 1], "mu": [4, 3, 2, 1, 1], "nu": [5, 4, 3, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 70, "lam": [4, 3, 2, 1, 1], "mu": [2, 2, 2, 1], "nu": [5, 4, 3, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 72, "lam": [2, 2, 1], "mu": [5, 3, 2, 2, 1], "nu": [6, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 73, "lam": [2, 2, 1], "mu": [6, 3, 2, 1, 1], "nu": [7, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 75, "lam": [2, 2, 1], "mu": [5, 4, 2, 1, 1], "nu": [6, 5, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 74, "lam": [2, 2, 1], "mu": [4, 3, 3, 2, 1], "nu": [5, 4, 3, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 76, "lam": [2, 2, 2, 1], "mu": [5, 3, 2, 1], "nu": [6, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 78, "lam": [2, 2, 1, 1], "mu": [7, 3, 2, 1], "nu": [8, 4, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 77, "lam": [7, 3, 2, 1], "mu": [2, 2, 1, 1], "nu": [8, 4, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 79, "lam": [6, 4, 2, 1], "mu": [2, 2, 1, 1], "nu": [7, 5, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 80, "lam": [2, 2, 1, 1], "mu": [6, 4, 2, 1], "nu": [7, 5, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 81, "lam": [6, 3, 2, 1, 1], "mu": [2, 2, 1, 1], "nu": [7, 4, 3, 2, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 82, "lam": [2, 2, 1, 1], "mu": [6, 3, 2, 1, 1], "nu": [7, 4, 3, 2, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 61, "lam": [4, 3, 2, 1], "mu": [2, 2, 2, 1], "nu": [5, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 12, "lam": [2, 2, 1], "mu": [4, 3, 2, 1, 1, 1], "nu": [5, 4, 3, 2, 1, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 59, "lam": [4, 3, 2, 2, 1], "mu": [2, 2, 1], "nu": [5, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 83, "lam": [5, 4, 3, 1], "mu": [2, 2, 1, 1], "nu": [6, 5, 4, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 84, "lam": [2, 2, 1, 1], "mu": [5, 4, 3, 1], "nu": [6, 5, 4, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 87, "lam": [2, 2, 1, 1, 1], "mu": [4, 3, 2, 1], "nu": [5, 4, 3, 2, 1, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 90, "lam": [2, 2, 1, 1], "mu": [4, 3, 2, 1, 1], "nu": [5, 4, 3, 2, 1, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 85, "lam": [4, 3, 2, 1, 1], "mu": [2, 2, 1, 1], "nu": [5, 4, 3, 2, 1, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 89, "lam": [3, 2, 2, 1], "mu": [3, 2, 2, 1, 1], "nu": [4, 4, 3, 2, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 3, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 92, "lam": [2, 2, 1, 1], "mu": [4, 3, 2, 1], "nu": [5, 4, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 93, "lam": [5, 3, 2, 1], "mu": [2, 2, 1, 1], "nu": [6, 4, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 94, "lam": [2, 2, 1, 1], "mu": [5, 3, 2, 1], "nu": [6, 4, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 95, "lam": [4, 3, 2, 1, 1], "mu": [2, 2, 1, 1], "nu": [5, 4, 3, 2, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 96, "lam": [2, 2, 1, 1], "mu": [4, 3, 2, 1, 1], "nu": [5, 4, 3, 2, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 91, "lam": [4, 3, 2, 1], "mu": [2, 2, 1, 1], "nu": [5, 4, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 97, "lam": [6, 3, 2, 1], "mu": [2, 2, 1, 1], "nu": [7, 4, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 98, "lam": [5, 4, 2, 1], "mu": [2, 2, 1, 1], "nu": [6, 5, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 99, "lam": [5, 3, 2, 1, 1], "mu": [2, 2, 1, 1], "nu": [6, 4, 3, 2, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 101, "lam": [2, 2, 1, 1], "mu": [5, 3, 2, 1, 1], "nu": [6, 4, 3, 2, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 88, "lam": [3, 2, 2, 1, 1], "mu": [3, 2, 2, 1], "nu": [4, 4, 3, 2, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 3, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 102, "lam": [2, 2, 1, 1], "mu": [4, 3, 2, 2, 1], "nu": [5, 4, 3, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 103, "lam": [2, 2, 1, 1], "mu": [5, 4, 2, 1], "nu": [6, 5, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 104, "lam": [2, 2, 1, 1], "mu": [6, 3, 2, 1], "nu": [7, 4, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 100, "lam": [4, 3, 2, 2, 1], "mu": [2, 2, 1, 1], "nu": [5, 4, 3, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 86, "lam": [4, 3, 2, 1], "mu": [2, 2, 1, 1, 1], "nu": [5, 4, 3, 2, 1, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}

@@ -1,0 +1,4 @@
+worker 0
+moves 19499
+seed_type 2
+score 916

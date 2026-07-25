@@ -1,0 +1,9 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38547,0 +38548,5 @@
++[2026-07-23T18:29:29+03:00] FAIL ATTACK | DID: tested R2 at r=5 | RESULT: comp(Grotzsch)+3K5 has n=26,e=65,alpha=omega=5 | D: R2 DEAD
++[2026-07-23T18:29:30+03:00] OK VERIFY | DID: replayed R2 witness | RESULT: structure/verify_r2_counterexample.cpp checks 230230 six-sets | D: none
++[2026-07-23T18:29:31+03:00] OK PLAN | DID: registered R3 | RESULT: 5 edge-disjoint copies of the 65-edge graph partition K26 and refute #617 | D: R3 active
++[2026-07-23T18:29:32+03:00] > ATTACK | NEXT: run audited unrestricted exact SAT on 1625 vars and 1154726 clauses; one solver thread with DRAT.
++[2026-07-23T18:29:33+03:00] > ATTACK | NEXT: run audited unrestricted native search for 3600 s; 63 workers, seed 6172026072303; replay any hit twice.

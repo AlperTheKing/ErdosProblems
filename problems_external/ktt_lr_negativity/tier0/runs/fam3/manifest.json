@@ -1,0 +1,213 @@
+{
+ "family": "fam3 = EXHAUSTIVE census, r = 6 (six parts), |nu| <= 22",
+ "hunter": "tier-0 hunter 3 of 12",
+ "date": "2026-07-22T01:54:00+03:00",
+ "exhaustive": true,
+ "exhaustive_note": "EXHAUSTIVE. Every triple (lam,mu,nu) with nu a partition of exactly 6 positive parts and |nu| <= 22, |lam|+|mu| = |nu|, was generated. Empty (c=0) triples are excluded by the Littlewood-Richardson containment necessary condition (control below). Symmetric duplicates lam<->mu are collapsed (identical polytope). Every one of the 697,963 non-empty triples received the full mandated LP-free screen; all 84 engine-A node-cap skips were resolved exactly with engine B (see cap_resolution). Zero unresolved skips remain.",
+ "family_size": {
+  "nu_with_6_parts_upto_22": 634,
+  "triples_generated_after_symmetry_and_containment": 1542127,
+  "empty_c0": 844164,
+  "nonempty_screened": 697963
+ },
+ "D_ambient": 10,
+ "instrument": {
+  "stage1": "engine A lr_hive.exe at n=1 (c only); logic == tier0_screen.prefilter stage 1",
+  "stage2": "tier0_screen.screen_triples() imported UNMODIFIED: exact P(0..12), exact Newton interpolation, held-out n=11,12, exact h*, exact monomial coeffs. No LP oracle, no simplex filter. No float decided anything.",
+  "cross_checkers": "engine B (LR rule) used to resolve every skip and to re-verify extremal records; independent Lagrange interpolation re-derived the extremal h*-vectors from scratch"
+ },
+ "controls": {
+  "containment_necessary": "3000 random containment-violating triples -> engine A returned c=0 on all 3000 (empty), confirming the containment pre-reduction drops only empty polytopes",
+  "stage1_agreement": "500 triples re-run through tier0_screen.py --prefilter --stage1-only: 500/500 identical verdicts",
+  "sample_full_screen_vs_instrument": "400-triple random sample screened directly by tier0_screen.py --batch: identical to the imported-module path"
+ },
+ "stage1_counts": {
+  "EMPTY": 844164,
+  "REJECT_HSTAR1_POSITIVE": 523,
+  "SURVIVOR": 697440,
+  "CAP": 0
+ },
+ "stage2_status": {
+  "OK": 697879,
+  "CAP_EXCEEDED": 84
+ },
+ "cap_resolution": {
+  "count": 84,
+  "cause": "engine-A DFS exceeded its documented 2e8 node-visit SAFETY cap at n=12 (fat triples: boundary values ~250). This is a documented SKIP, never a math verdict; the true counts are tiny (<= ~1.6e5).",
+  "method": "71 resolved by engine B (LR rule) directly; the 13 fattest also hit engine B's default 2e7 DP-state cap and were resolved by engine B lr_count with max_states raised to 4e8. All 84 give a full exact profile P(0..12) and pass every audit.",
+  "resolved_verdict": {
+   "TIER0": 0,
+   "JACKPOT": 0,
+   "NEG": 0,
+   "d_hist": {
+    "0": 7,
+    "1": 14,
+    "2": 10,
+    "3": 1,
+    "4": 28,
+    "5": 7,
+    "6": 14,
+    "7": 3
+   },
+   "min_h1_minus_hd": 0,
+   "max_hstar_d": 1,
+   "audit_failures": 0,
+   "negative_hstar": 0
+  }
+ },
+ "combined_results": {
+  "TIER0_hits": 0,
+  "JACKPOT_hits": 0,
+  "NEGATIVE_monomial_hits": 0,
+  "negative_hstar_j": 0,
+  "audit_failures": 0,
+  "degree_histogram": {
+   "0": 448697,
+   "1": 135030,
+   "2": 62223,
+   "3": 29856,
+   "4": 14279,
+   "5": 5836,
+   "6": 1786,
+   "7": 246,
+   "8": 10
+  },
+  "max_hstar_d_over_family": 1,
+  "max_hstar_d_triple": [
+   [
+    4,
+    2
+   ],
+   [
+    4,
+    2,
+    2,
+    2,
+    2
+   ],
+   [
+    6,
+    4,
+    2,
+    2,
+    2,
+    2
+   ],
+   1,
+   3,
+   [
+    1,
+    1
+   ]
+  ],
+  "max_hstar_d_note": "attained only at d=1, where h*_d = h*_1 identically (a segment); for EVERY dim>=2 hive polytope in the family h*_d = 0 (no interior lattice point).",
+  "max_hstar_d_dim_ge_2": 0,
+  "min_h1_minus_hd_over_family": 0,
+  "min_h1_minus_hd_triple": [
+   [
+    2,
+    1
+   ],
+   [
+    5,
+    3,
+    3,
+    2,
+    1
+   ],
+   [
+    6,
+    3,
+    3,
+    2,
+    2,
+    1
+   ],
+   1,
+   2,
+   [
+    1,
+    0
+   ]
+  ],
+  "min_h1_minus_hd_note": "the minimum distance to a JACKPOT. It is 0, attained by c=d+1 empty-interior simplices; it is NEVER negative, exactly as every lattice-polytope inequality (h*_d <= h*_1) would demand -- but here PROVED by exact count, not assumed.",
+  "margin_zero_count": 230617
+ },
+ "non_lattice_diagnostic": {
+  "sampled": 2023,
+  "certified_non_lattice": 203,
+  "denominator_hist": {
+   "1": 1820,
+   "2": 195,
+   "3": 8
+  },
+  "note": "hive_poly.py exact vertices (Fraction, each verified against every rhombus inequality); maxden>=2 is a RIGOROUS non-lattice certificate. 203/2023 sampled hive polytopes are certified non-lattice (half- and third-integral vertices) yet ALL obey h*_d <= h*_1. The population is genuinely rational; it simply does not (in this range) escape the lattice inequality. maxden==1 on a sampled vertex is not a proof of integrality, so 203 is a one-sided LOWER bound. Diagnostic only; never a filter."
+ },
+ "extremal_records_independent_check": {
+  "max_hstar_d": {
+   "triple": "lam=(4,2) mu=(4,2,2,2,2) nu=(6,4,2,2,2,2)",
+   "engineB_profile_0_to_12": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25
+   ],
+   "d": 1,
+   "coeffs_low_high": [
+    "1",
+    "2"
+   ],
+   "hstar": [
+    1,
+    1
+   ],
+   "held_out_n11_n12": "23,25 both match",
+   "note": "d=1 segment; h*_1=h*_d=1, not a jackpot"
+  },
+  "min_margin_dim_ge_2": {
+   "triple": "lam=(3,1) mu=(5,3,2,2,1) nu=(6,3,3,2,2,1)",
+   "engineB_profile_0_to_12": [
+    1,
+    3,
+    6,
+    10,
+    15,
+    21,
+    28,
+    36,
+    45,
+    55,
+    66,
+    78,
+    91
+   ],
+   "d": 2,
+   "coeffs_low_high": [
+    "1",
+    "3/2",
+    "1/2"
+   ],
+   "hstar": [
+    1,
+    0,
+    0
+   ],
+   "held_out_n11_n12": "78,91 both match",
+   "note": "c=3=d+1 so h*_1=0, but no interior lattice point so h*_d=0: a NEAR-MISS of the same shape as the known refuter, margin 0"
+  }
+ },
+ "dead_verdict": "Family exhausted: all 697,963 non-empty r=6 |nu|<=22 hive polytopes screened exactly (84 node-cap skips resolved, 0 remaining), giving 0 TIER0, 0 JACKPOT, 0 negative monomial, and h*_1 - h*_d >= 0 on every one -- with h*_d = 0 for every dimension >= 2 -- so no counterexample of the sought shape exists in this family, though 203+ members are certified genuinely non-lattice.",
+ "rigor": {
+  "arithmetic": "int / Fraction only; floats searched, never decided.",
+  "null_disclaimer": "A null census is NOT evidence for the King-Tollu-Toumazet conjecture. It only certifies where a counterexample of this shape is absent."
+ }
+}

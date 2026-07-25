@@ -1,0 +1,9 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38574,0 +38575,5 @@
++[2026-07-23T19:39:14+03:00] OK VERIFY | DID: replayed construction audit | RESULT: 186971232 twin substitutions through base order 7 have max156 | D: family DEAD
++[2026-07-23T19:39:15+03:00] FAIL ATTACK | DID: refereed R2 | RESULT: charging fails at n=8; cloneability bridge fails at n=12 | D: R2 DEAD
++[2026-07-23T19:39:16+03:00] FAIL ATTACK | DID: audited exact SMS route | RESULT: n25 needs 3836501 degree cases and lacks an audited driver | D: R1 halted
++[2026-07-23T19:39:17+03:00] FAIL CHECK | DID: applied guard | RESULT: DEAD: reformulation maze — no bridge from bounded families to global bound | D: #742 halted
++[2026-07-23T19:39:18+03:00] > SELECT | NEXT: run three independent live-gated scans for a full-problem certificate or theorem-closing lemma.

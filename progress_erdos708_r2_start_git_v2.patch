@@ -1,0 +1,6 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38608,0 +38608,2 @@
++[2026-07-23T23:13:39+03:00] OK PLAN | DID: registered #708 capacitated two-fragment route | RESULT: APPROACH_REGISTRY.md R2 with exact bridge and exit | D: R2 active
++[2026-07-23T23:13:40+03:00] > ATTACK | NEXT: exhaust R2 for M<=6 and replay the first failure using raw prime valuations.

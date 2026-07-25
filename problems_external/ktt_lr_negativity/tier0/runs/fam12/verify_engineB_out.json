@@ -1,0 +1,420 @@
+[
+ {
+  "lam": [
+   26,
+   13,
+   9,
+   7
+  ],
+  "mu": [
+   23,
+   15,
+   12,
+   8,
+   1
+  ],
+  "nu": [
+   41,
+   25,
+   21,
+   16,
+   11
+  ],
+  "engineB_profile": [
+   1,
+   2832,
+   84524,
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED"
+  ],
+  "verdict": "ENGINE_B_CAP_OR_ERROR"
+ },
+ {
+  "lam": [
+   8,
+   8,
+   6,
+   5,
+   3
+  ],
+  "mu": [
+   8,
+   5,
+   3
+  ],
+  "nu": [
+   14,
+   13,
+   9,
+   5,
+   5
+  ],
+  "engineB_profile": [
+   1,
+   3,
+   5,
+   7,
+   9,
+   11,
+   13,
+   15,
+   17
+  ],
+  "profile_matches_engineA": true,
+  "d_engineB": 1,
+  "d_matches": true,
+  "heldout_ok": true,
+  "hstar_engineB": [
+   "1",
+   "1"
+  ],
+  "hstar_matches": true,
+  "hstar_roundtrip_ok": true,
+  "hstar_1": "1",
+  "hstar_d": "1",
+  "JACKPOT_engineB": false,
+  "TIER0_engineB": false,
+  "NEG_engineB": false,
+  "verdict": "CONFIRMS_A"
+ },
+ {
+  "lam": [
+   8,
+   8,
+   5,
+   3
+  ],
+  "mu": [
+   9,
+   7,
+   5,
+   3,
+   1
+  ],
+  "nu": [
+   14,
+   12,
+   9,
+   9,
+   5
+  ],
+  "engineB_profile": [
+   1,
+   33,
+   229,
+   853,
+   2301,
+   5101,
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED"
+  ],
+  "verdict": "ENGINE_B_CAP_OR_ERROR"
+ },
+ {
+  "lam": [
+   4,
+   3,
+   2,
+   2
+  ],
+  "mu": [
+   4,
+   3,
+   2,
+   1
+  ],
+  "nu": [
+   7,
+   6,
+   4,
+   3,
+   1
+  ],
+  "engineB_profile": [
+   1,
+   6,
+   21,
+   56,
+   126,
+   252,
+   462,
+   792,
+   1287
+  ],
+  "profile_matches_engineA": true,
+  "d_engineB": 5,
+  "d_matches": true,
+  "heldout_ok": true,
+  "hstar_engineB": [
+   "1",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  "hstar_matches": true,
+  "hstar_roundtrip_ok": true,
+  "hstar_1": "0",
+  "hstar_d": "0",
+  "JACKPOT_engineB": false,
+  "TIER0_engineB": false,
+  "NEG_engineB": false,
+  "verdict": "CONFIRMS_A"
+ },
+ {
+  "lam": [
+   8,
+   5,
+   5,
+   4
+  ],
+  "mu": [
+   6,
+   3,
+   2,
+   1
+  ],
+  "nu": [
+   13,
+   7,
+   6,
+   5,
+   3
+  ],
+  "engineB_profile": [
+   1,
+   6,
+   21,
+   56,
+   126,
+   252,
+   462,
+   792,
+   1287
+  ],
+  "profile_matches_engineA": true,
+  "d_engineB": 5,
+  "d_matches": true,
+  "heldout_ok": true,
+  "hstar_engineB": [
+   "1",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  "hstar_matches": true,
+  "hstar_roundtrip_ok": true,
+  "hstar_1": "0",
+  "hstar_d": "0",
+  "JACKPOT_engineB": false,
+  "TIER0_engineB": false,
+  "NEG_engineB": false,
+  "verdict": "CONFIRMS_A"
+ },
+ {
+  "lam": [
+   4,
+   2,
+   2,
+   1
+  ],
+  "mu": [
+   9,
+   6,
+   4,
+   2,
+   2
+  ],
+  "nu": [
+   12,
+   7,
+   6,
+   4,
+   3
+  ],
+  "engineB_profile": [
+   1,
+   5,
+   15,
+   35,
+   70,
+   126,
+   210,
+   330,
+   495
+  ],
+  "profile_matches_engineA": true,
+  "d_engineB": 4,
+  "d_matches": true,
+  "heldout_ok": true,
+  "hstar_engineB": [
+   "1",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  "hstar_matches": true,
+  "hstar_roundtrip_ok": true,
+  "hstar_1": "0",
+  "hstar_d": "0",
+  "JACKPOT_engineB": false,
+  "TIER0_engineB": false,
+  "NEG_engineB": false,
+  "verdict": "CONFIRMS_A"
+ },
+ {
+  "lam": [
+   14,
+   7,
+   6
+  ],
+  "mu": [
+   8,
+   6,
+   5,
+   3,
+   1
+  ],
+  "nu": [
+   16,
+   11,
+   11,
+   7,
+   5
+  ],
+  "engineB_profile": [
+   1,
+   5,
+   15,
+   35,
+   70,
+   126,
+   210,
+   330,
+   495
+  ],
+  "profile_matches_engineA": true,
+  "d_engineB": 4,
+  "d_matches": true,
+  "heldout_ok": true,
+  "hstar_engineB": [
+   "1",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  "hstar_matches": true,
+  "hstar_roundtrip_ok": true,
+  "hstar_1": "0",
+  "hstar_d": "0",
+  "JACKPOT_engineB": false,
+  "TIER0_engineB": false,
+  "NEG_engineB": false,
+  "verdict": "CONFIRMS_A"
+ },
+ {
+  "lam": [
+   11,
+   8,
+   6,
+   6,
+   4
+  ],
+  "mu": [
+   11,
+   9,
+   6,
+   4,
+   1
+  ],
+  "nu": [
+   16,
+   15,
+   13,
+   13,
+   9
+  ],
+  "engineB_profile": [
+   1,
+   5,
+   15,
+   35,
+   70,
+   126,
+   210,
+   330,
+   495
+  ],
+  "profile_matches_engineA": true,
+  "d_engineB": 4,
+  "d_matches": true,
+  "heldout_ok": true,
+  "hstar_engineB": [
+   "1",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  "hstar_matches": true,
+  "hstar_roundtrip_ok": true,
+  "hstar_1": "0",
+  "hstar_d": "0",
+  "JACKPOT_engineB": false,
+  "TIER0_engineB": false,
+  "NEG_engineB": false,
+  "verdict": "CONFIRMS_A"
+ },
+ {
+  "lam": [
+   9,
+   7,
+   6,
+   4,
+   2,
+   1
+  ],
+  "mu": [
+   8,
+   7,
+   6,
+   5,
+   4,
+   3
+  ],
+  "nu": [
+   16,
+   12,
+   10,
+   9,
+   8,
+   7
+  ],
+  "engineB_profile": [
+   1,
+   43,
+   728,
+   6639,
+   40434,
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED",
+   "CAP_EXCEEDED"
+  ],
+  "verdict": "ENGINE_B_CAP_OR_ERROR"
+ }
+]

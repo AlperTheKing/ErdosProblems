@@ -1,0 +1,59 @@
+{
+ "family": "fam11 = LARGE-WEIGHT probe at the best (margin-0) hive shapes",
+ "hunter": "tier-0 hunter 11 of 12",
+ "date_utc": "2026-07-22",
+ "target": "TIER0 (h*_1 = 0 and h*_d > 0) / JACKPOT (h*_d > h*_1) / NEG (negative monomial coefficient of the stretched LR polynomial)",
+ "statistic": "margin := h*_1 - h*_d = B - (d+1), B = #lattice points on the relative boundary of Q; JACKPOT <=> margin < 0",
+ "exhaustive": false,
+ "sampling": "structured weight ladders (exhaustive within each ladder's parameter list) + a sampled random large-weight pool",
+ "instrument": {
+  "screen": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/tier0/tier0_screen.py",
+  "engineA": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/engine/lr_hive.exe",
+  "vertex_denominators": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/r5_rational/vertices5.py (exact, integer feasibility test)",
+  "cap": "1e6 on the sharded runs (CAP_EXCEEDED = SKIP, never a verdict); struct_small.jsonl ran at the default 1e12",
+  "no_lp_oracle": true,
+  "arithmetic": "int / Fraction only"
+ },
+ "arms": {
+  "A_dilation": "(lam,mu,nu) -> k*(lam,mu,nu), k=1..8, on 8 seed shapes",
+  "B_toprow": "mu_1 += t, nu_1 += t (resp. lam_1 += t, nu_1 += t), t = 0..400 and, in deep.batch, t = 300,600,1200,2500,5000",
+  "C_coladd": "lam += (t^r), nu += (t^r): skew shape translated, so P must be IDENTICAL -- instrument audit at large weight",
+  "D_stretch": "staircase nu with step s = 1..55 at r = 5,6,7",
+  "F_plateau": "repeated parts / spike+flat-tail nu, engineered to force implicit equalities (the only regime not closed by Theorem 1)",
+  "E_random": "sampled random triples, r in {5,6}, |nu| in {40,60,90,130,190,280,400}; 3640 triples launched in 10 shards, INCOMPLETE at report time (E_*.jsonl absent)"
+ },
+ "results": {
+  "records_screened": 1127,
+  "status_OK": 625,
+  "status_CAP_EXCEEDED": 244,
+  "status_EMPTY": 258,
+  "TIER0_hits": 0,
+  "JACKPOT_hits": 0,
+  "NEG_hits": 0,
+  "min_margin_over_all_records": 0,
+  "min_margin_attained_by": ["2,2,1;4,3,2,1;5,4,3,2,1 (d=4,c=5)", "8,6,4,2;3,2,2,2,1;10,8,6,4,2 (d=3,c=4)", "6,5,4,3,2,1;2,1,1,1,1,1;7,6,5,4,3,2,1 (d=5,c=6)", "2,2,1;5004,3,2,1;5005,4,3,2,1 (d=4,c=5,|nu|=5015)"],
+  "max_hstar_d": {"value": 161, "triple": "16,16,8;32,24,16,8;40,32,24,16,8", "d": 4, "c": 705},
+  "nonlattice_certified": {"checked_r5_records": 120, "vertex_denominator_lcm_gt_1": 70, "max_denominator": 2}
+ },
+ "weight_trend": {
+  "dilation": "margin(k) = B_Q(k) - (d+1) with B_Q(k) = P(k) - (-1)^d P(-k), a degree-(d-1) polynomial with positive leading coefficient. For the refuter margin(k) = k^3 + 4k - 5, measured exactly as 0, 11, 34, 75, 140, 235, 366 for k = 1..7. DIVERGES: dilation strictly worsens the margin for every hive polytope of dim >= 2.",
+  "toprow_inflation": "margin EXACTLY 0 and (d,c,h*) = (4,5,(1,0,1,0,0)) unchanged for every t up to |nu| = 5015. SATURATES: never improves, never worsens.",
+  "coladd_control": "P identical for all t (instrument audit passed at |nu| = 215).",
+  "staircase_stretch": "margin exactly 0 with c = d+1 at d = 3 (r=5), d = 4 (r=6), d = 5 (r=7) for every step measured.",
+  "verdict": "no weight axis moves the margin below 0; the best shapes sit pinned at B = d+1, one lattice point above the tier-0 requirement B = d."
+ },
+ "caveats": [
+  "A null census is NOT evidence for the KTT conjecture.",
+  "CAP_EXCEEDED records (244) are skips: fat large-weight polytopes were not decided.",
+  "Arm E (3640 sampled large-weight triples) was still running when this manifest was written; its shards are E_*.batch / E_*.jsonl in this directory.",
+  "nonlattice certification was run only on r=5 records (exact vertex enumeration); r=6/7 non-latticeness was not certified here."
+ ],
+ "files": {
+  "generator": "gen_fam11.py",
+  "pool": "pool_stage1.py",
+  "aggregator": "aggregate.py",
+  "records": ["S_0..S_5.jsonl", "struct_small.jsonl", "structC.jsonl", "deep.jsonl", "E_*.jsonl (pending)"],
+  "summary": "aggregate.json",
+  "hits": "hits.jsonl (empty)"
+ }
+}

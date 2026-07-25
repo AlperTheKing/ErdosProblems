@@ -1,0 +1,173 @@
+                                                                                              MODULO SMALL PRIMES                                                                                           53
+
+
+Corollary 1. For every nonnegative integer n                                                  Since C ( l , 1 2 N - 8(l) - l k ) = 0 (mod l ) , and B ( l , k) = 0 (mod l ) if k $ 0 (mod l ) , we
+                                                        \
+                                                                                              find that
+                                p(5n + 4) = 0
+                                p(7n + 5) = 0 (mod
+                              p(lln+6) = 0
+                                                                                              However, by (6) we obtain the Ramanujan congruences mod 25,49, and 121.                                        0
+                                                                               +
+                                                                                   -
+Proof: The congruences modulo 5 and 7 follow from the observation that (n 1) 1 n5(n)
+and (n + 2) 1 a7(n). The congruence modulo 11 follows from the fact that a11 (n) A(n
+5) ( m o d n + 5 ) a n d A ( n ) = O ( m o d l l ) i f o r d l l ( n ) > 1.
+                                                                                         +    Concluding remarks
+
+                                                                                              There are analogs of these results where l-affine partitions replace l-square affine partitions.
+                                                                                              I chose to use the l-square affine partitions because the weighted sums involve fewer
+   It also turns out that the Ramanujan congruences modulo 25,49, and 121 follow easily
+                                                                                              terms, and the formulae for 3 5 l ( 11 only involve divisor sums rather than values of
+from the proofs of Theorems 3 , 4 and 5.                                                      Hecke Grossencharacters. Nevertheless, there is some interest in working out formulae for
+                                                                                              p ( N ) (mod l ) via l-affine partitions.
+Theorem 6. For every nonnegative integer n                                                       Recently, there has been a lot of interest in the method of weighted words as developed
+
+
+                                            --
+                                                                                              by Alladi and Gordon. These works, some joint with Andrews, lead to combinatorial
+                              p(25n  + 24) = 0 (mod 25),                                      explanations of identities where two seemingly unrelated partition functions are shown to
+                              p (49n + 47) 0 (mod 49),                                        be equal (see [I]). Here we exhibited p(N) (mod l ) as a weighted sum over l-square affine
+                            p(121n + 116) 0 (mod 121).                                        partitions of N where the weights are products of values of the l-core partition function.
+                                                                                              Perhaps this resonates with the Alladi-Gordon method and can be viewed as an example of
+                                                                                              a mod l theory.
+                                        %,
+Proof: If l = 5 , 7 , or 11, and 6 (l) :=   then it is easy to verify using the information
+from the proofs of Theorems 3,4, and 5 that
+                                                                                              References
+
+                                                                                               1. K. Alladi, "The method of weighted words and applications to partitions," Number Theoiy, Paris, 1992-1993,
+                                                                                                  London Math. Soc. Lecture Notes, vol. 215, 1995, pp. 1-36.
+for every positive integer N. Moreover, it is easy to see that the above Ramanujan congru-     2. P. Fong and B. Srinivasan, "The blocks of finite general linear groups and unitary groups," Invent. Math.
+ences are equivalent to the assertion that                                                        69 (1982), 109-153.
+                                                                                               3. F. Garvan, D. Kim, and D. Stanton, "Cranks and t-cores,"Invent. Math. 101 (1990), 1-17.
+                                                                                               4. A. Granville and K. Ono, "Defect zero p-blocks for finite simple groups," Trans. Amer Math. Soc.
+                                                                                                  348(1) (1996), 331-347.
+                                                                                               5. M. Hirschhom, "On the residue mod 2 and mod 4 of p(n)," Acta Arith. 38 (1980), 105-109.
+for every positive integer N. Define integers B(l, N) by                                       6. M. Hirschhom, "On the parity of p(n) 11," J. Combin. Theory ( A ) 62 (1993), 128-138.
+                                                                                               7. M. Hirschhorn and M. Subbarao, "On the parity of p(n),"ActaArith. 50(4) (1988), 355-356.
+                                                                                               8. G. James and A. Kerber, The Representation Theory of the Symmetric Group, Addison-Wesley, Reading,
+                                                                                                  1979.
+                                                                                               9. A. Klyachko, "Modular forms and representations of symmetric groups, integral lattices and finite linear
+                                                                                                  groups," Zap. Nauchn. Sem. Leningrad Otdel. Mat. Inst. Steklov 116 (1982).
+Since                                                                                         10. 0 . Kolberg, "Note on the parity of the partition function," Math. Scand. 7 (1959), 377-378.
+                                                                                              11. H. Nakamura, "On some generating functions for McKay numbers-Prime power divisibilities of the hook
+                                                                                                  products of Young diagrams," J. Math. Sci., U. Tokyo 1(1994), 321-337.
+                                                                                              12. J. Olsson, "Remarks on symbols, hooks and degrees of unipotent characters," J. Comb. Th. ( A ) 42 (1986), 223-
+                                                                                                  238.
+                                                                                              13. J. Olsson, "Combinatorics and representations of finite groups," University Essen Lecture Notes, vol. 20,1993.
+we find that                                                                                  14. K. Ono, "On the positivity of the number of partitions that are t-cores," Acta Arith. 66(3) (1994), 221-228.
+                                                                                              15. K. Ono, "Parity of the partition function in arithmetic progressions," J. Reine Angew. Math. 472 (1996), 1-15.
+                                                                                              16. K. Ono, "Odd values of the partition function," Disc. Math. 169 (1997), 263-268.
+                                                                                              17. K. Ono and L. Sze, "4-core partitions and class numbers," Acta Arith. 65 (1997). 249-272.
+                                                                                                                                                                             THE RAMANUJAN JOURNAL 2,5S-58 (1998)
+                                                                                                                                                    @ 1998 Kluwer Academic Publishers. Manufactured in The Netherlands.
+
+
+18. T.R. Parkin and D. Shanks, "On the distribution of parity in the partition function," Math. Comp.
+    21 (1967), 466480.
+19. J. Sturm, "On the congruence of modular forms," Springer Lecture Notes, vol. 1240, Springer-Verlag, 1984.
+20. M. Subbarao, "Some remarks on the partition function," Amer Math. Monthly 73 (1966), 851-854.
+21. H.P.F. Swinnerton-Dyer. "On L-adic Galois representations and congruences for coefficients of modular       A Small Maximal Sidon Set
+    forms," Springer Lecture Notes, vol. 350, 1973.
+                                                                                                                IMRE Z. RUZSA                                                                         ruzsa@math-inst.hu
+                                                                                                                Mathematical Institute ofthe Hungarian Academy of Sciences, Budapest, P$ 127, H-1364 Hungary
+
+
+                                                                                                                To the memory of Paul ErdGs, my master and mentor
+
+                                                                                                                Received February 5, 1997; Accepted March 19, 1997
+
+
+                                                                                                                Abstract. We construct a Sidon set A C [ I , N ] which has log^)'/^ elements and which is maximal in
+                                                                                                                the sense that the inclusion of any other integer from [ I , N1 destroys the Sidon property.
+
+                                                                                                                Key words: Sidon set
+
+                                                                                                                1991 Mathematics Subject Classification:   Primary-1   1875, Secondary-OSB10,   11B13, 11B34
+
+
+
+                                                                                                                                                                             +
+                                                                                                                A set A of integers is a Sidon set, if all the sums a a', a , a' E A are distinct. We say that
+                                                                                                                a finite Sidon set A c [I, N] is maximal (for this N ) if there is no Sidon set A' such that
+
+
+
+                                                                                                                   An easy counting argument shows that for a maximal Sidon set we have always IAl >>
+                                                                                                                       ~ . Sirkozy, and S6s [2] asked whether this can be improved. We show that this
+                                                                                                                ~ ' 1 Erdiis,
+                                                                                                                is not far from optimal.
+
+                                                                                                                Theorem. There is a maximal Sidon set in [ I , N ] such that
+
+
+
+                                                                                                                Proof: Select a prime p (it will be around (N log N ) ' I 3 ) and put q = 1           + p + p2. There
+                                                                                                                                            +
+                                                                                                                is a Sidon set of size p 1 modulo q, that is, there is a set
+
+
+
+                                                                                                                                        +
+                                                                                                                such that the sums b, b, all have distinct residues modulo q . (See, for instance, Halberstam-
+                                                                                                                Roth [3].)
+                                                                                                                  If we take such a set B, then for arbitrary integers do, . . . , d , the numbers in
+
+
+
+                                                                                                                Supported by Hungarian National Foundation for Scientific Research, Grant No. T 017433.
+                                                                                       RUZSA       A SMALL MAXIMAL SIDON SET                                                                  57
+
+
+form a Sidon set. This set satisfies A. c [ I , N] if                                                                                                              +
+                                                                                                   where S denotes the number of triplets (x, y, z) such that x y - z = m', 0 -    < x, y, <
+                                                                                                   M - 1. If u = v, then this probability is s'/M~, where S' is the number of pairs (x, z)
+                                                                                                   that 2x - z =rnl,O ( x , z 5 M - 1.
+                                                                                                     Routine calculations show that (for M > Mo) uniformly in the range - 1 5 rn' 5 M + 1
+                                                                                                   we have S 1 C M and~ S' > c M with a positive absolute constant c, thus
+
+  Any such set can be extended to a maximal Sidon set A. We can include a number m to
+A. and still have a Sidon set if and'onmf none of the equations
+                                                                                                   If we apply this for the selected disjoint triplets (ui, vi, wi), then we have a collection of
+                                         rn = d + a , - a,,                                        independent events and we obtain
+                                        2m = a, 4- a,
+                                                                                                                 p(dUz+ d,, - dW2# rn' for all 1 5 i 5 I) 5
+has a solution. We will achieve that (I) is solvable for most integers 1 < m 5 N and this
+will keep the size of A down.                                                                      We have
+  Equation (1) can certainly hold only if
+
+                                m=b,+b,-b,                   (modq).                        (2)
+                                                                                                   Thus, if we take p so that p > ( C N log N ) ' / ~with C = 8/c, then this probability will be
+                                                                                                   < l / N . By Chebyshev's theorem, we can achieve this with p << ( N log N)1/3. Conse-
+Lemma. Suppose that m $ bi (mod q ) for all i. Then there is a sequence (ui , vi , wi) of          quently, for any rn such that m f b, (mod q ) we have
+triplets of integers, 1 < i 5 I, such that each u = u,, v = vi, w = wi is a solution of
+congruence (2), for i # j the sets {ui,vi, wi) and (u,, vj, w;) are disjoint and I 1 p/8.                                         P((1) is not solvable) < 1 / N
+                                                                                                   and hence
+Proof: Since the numbers bi - b,, i # j are all incongruent modulo q and their number is
+q - 1, they represent each nonzero residue exactly once. Thus for each u there is exactly one                             P((1) is solvable for all rn f b, (mod q)) > 0.
+pair (v, w) such that (2) holds. This shows that there are altogether p solutions. Similarly,      The set A. corresponding to such a choice will be a Sidon set; it may not be maximal, but
+for a fixed v there is exactly one (u, w), and for a given w there are at most two pairs (u, v).   it has the following property. Any Sidon set
+   Now let (ui, vi, wi), 1 5 i 5 1 be a maximal selection of pairwise disjoint triplets of
+solutions. Each triplet (u, v, w) excludes the following triplets: itself; (v, u, w); at most
+two with u in the third position; at most two with v in the third position; one with w in the
+                                                                                                   is of the form A = Ao U A 1 , where each element a E A satisfies a = b, (mod q ) for some u.
+first position and one with w in the second. These are 8 excluded triplets altogether (with
+                                                                                                      Now extend this Ao to a maximal Sidon set A. We estimate the size of A I .For each a E A 1,
+the selected triplets included), thus 8 1 > p.                                                     consider the unique u such that a = b, (mod q). For this u, the number a -a, = a -b, -qd,
+                                                                                                   is a multiple of q . These numbers are all distinct by the Sidon property of A, and they are
+   NOWwe construct Ao. For each i we select di randomly from the numbers 0, . . . , M - 1,         in the interval (1 - N, N - 1). Their number is (A21,thus we have
+SO that all MP+' possibilities are equally probable.
+  We estimate the probability that (1) holds for a number rn such that m f bi (mod q).
+Equation (1) is equivalent to (2) and
+                                                                                                   thus
+
+                        d,   + d,   -   d, =
+                                               m - (b,   + b,   -   b,)
+                                                                          = m'.             (3)
+                                                         4
+                                                                                                   as claimed.                                                                                0
+Since2-2q 5 rn-(b,+b,-b,)             5 N+q-2,theintegerm1satisfies-1 5 m' 5 M + 1 .
+   In (2) and (3), w must be different from u and v, but u and v may coincide. If they are         Remark. Let g ( N ) denote the minimal cardinality of a maximal Sidon set in [ I , N]. Thus
+all distinct, then the probability that (3) holds is                                               we know that
+

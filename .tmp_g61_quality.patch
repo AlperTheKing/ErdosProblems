@@ -1,0 +1,28 @@
+diff --git a/problems_external/erdos_617/native/erdos617_g61_pack_b.cpp b/problems_external/erdos_617/native/erdos617_g61_pack_b.cpp
+--- a/problems_external/erdos_617/native/erdos617_g61_pack_b.cpp
++++ b/problems_external/erdos_617/native/erdos617_g61_pack_b.cpp
+@@ -119,12 +119,1 @@
+-static int max_independent_or_clique(const Model&m,bool want_edge){
+-    int best=0;
+-    for(uint32_t mask=1;mask<(1u<<N);++mask){
+-        int k=std::popcount(mask);if(k<=best)continue;if(k>6)continue;
+-        bool ok=true;
+-        for(int u=0;u<N&&ok;++u)if(mask&(1u<<u))for(int v=u+1;v<N;++v)if(mask&(1u<<v)){
+-            if(m.base_adjacent(u,v)!=want_edge){ok=false;break;}}
+-        if(ok)best=k;
+-        if(best==6)return best;
+-    }return best;
+-}
+ static int sixset_alpha_violations(const Model&m){
+@@ -216,4 +205,8 @@
+ static void publish(const Packing&s,Shared&sh,int worker,uint64_t moves){
+     int old=sh.best.load();while(s.overlap<old&&!sh.best.compare_exchange_weak(old,s.overlap)){}
+-    if(s.overlap<=sh.best.load()){std::lock_guard<std::mutex>lock(sh.mutex);write_pack(s,sh.out/"best_checkpoint.pack");
+-        std::ofstream meta(sh.out/"best_checkpoint.txt");meta<<"worker "<<worker<<"\nmoves "<<moves<<"\noverlap "<<s.overlap<<"\n";}}
++    if(s.overlap<=sh.best.load()){
++        std::lock_guard<std::mutex>lock(sh.mutex);
++        if(s.overlap!=sh.best.load())return;
++        write_pack(s,sh.out/"best_checkpoint.pack");
++        std::ofstream meta(sh.out/"best_checkpoint.txt");
++        meta<<"worker "<<worker<<"\nmoves "<<moves<<"\noverlap "<<s.overlap<<"\n";
++    }}

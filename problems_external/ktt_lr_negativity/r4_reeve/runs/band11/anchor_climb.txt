@@ -1,0 +1,8 @@
+gaps=[33, 45, 16, 11, 2, 12, 15, 45, 23] lam=[94, 61, 16, 0] mu=[25, 14, 12, 0] nu=[95, 80, 35, 12]  dim=3 c=4 V=1 h*=[1, 0, 0, 0] P=[1,11/6,1,1/6]
+   n=1  P(n)=4  engineA=4  engineB=4  OK
+   n=2  P(n)=10  engineA=10  engineB=10  OK
+   n=3  P(n)=20  engineA=20  engineB=20  OK
+   n=4  P(n)=35  engineA=35  engineB=35  OK
+   n=5  P(n)=56  engineA=56  engineB=56  OK
+
+ANCHOR: PASS

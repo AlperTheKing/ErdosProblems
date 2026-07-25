@@ -1,0 +1,16 @@
+{
+  "experiment_id": "EXP-MATH-ERDOS20-SUNFLOWER-001",
+  "title": "Sunflower Lattice Gas — Partition Function",
+  "problem": "Erdos #20: Sunflower Conjecture",
+  "parameters": {"w": 2, "k": 3},
+  "data": [
+    {"n": 3, "w": 2, "k": 3, "num_w_subsets": 3, "total_sf_free": 8, "max_family_size": 3, "max_density": 1.00000000, "log2_count": 3.000000, "erdos_bound": 4, "time_s": 0.000, "density_of_states": [1, 3, 3, 1]},
+    {"n": 4, "w": 2, "k": 3, "num_w_subsets": 6, "total_sf_free": 41, "max_family_size": 4, "max_density": 0.66666667, "log2_count": 5.357552, "erdos_bound": 4, "time_s": 0.000, "density_of_states": [1, 6, 15, 16, 3]},
+    {"n": 5, "w": 2, "k": 3, "num_w_subsets": 10, "total_sf_free": 253, "max_family_size": 5, "max_density": 0.50000000, "log2_count": 7.982994, "erdos_bound": 4, "time_s": 0.000, "density_of_states": [1, 10, 45, 100, 85, 12]},
+    {"n": 6, "w": 2, "k": 3, "num_w_subsets": 15, "total_sf_free": 1198, "max_family_size": 6, "max_density": 0.40000000, "log2_count": 10.226412, "erdos_bound": 4, "time_s": 0.000, "density_of_states": [1, 15, 105, 380, 555, 132, 10]},
+    {"n": 7, "w": 2, "k": 3, "num_w_subsets": 21, "total_sf_free": 4264, "max_family_size": 6, "max_density": 0.28571429, "log2_count": 12.057992, "erdos_bound": 4, "time_s": 0.000, "density_of_states": [1, 21, 210, 1085, 2205, 672, 70]},
+    {"n": 8, "w": 2, "k": 3, "num_w_subsets": 28, "total_sf_free": 12265, "max_family_size": 6, "max_density": 0.21428571, "log2_count": 13.582260, "erdos_bound": 4, "time_s": 0.001, "density_of_states": [1, 28, 378, 2576, 6650, 2352, 280]},
+    {"n": 9, "w": 2, "k": 3, "num_w_subsets": 36, "total_sf_free": 30193, "max_family_size": 6, "max_density": 0.16666667, "log2_count": 14.881926, "erdos_bound": 4, "time_s": 0.002, "density_of_states": [1, 36, 630, 5376, 16758, 6552, 840]},
+    {"n": 10, "w": 2, "k": 3, "num_w_subsets": 45, "total_sf_free": 66130, "max_family_size": 6, "max_density": 0.13333333, "log2_count": 16.013017, "erdos_bound": 4, "time_s": 0.005, "density_of_states": [1, 45, 990, 10200, 37170, 15624, 2100]}
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp b/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
+--- a/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
++++ b/problems_external/erdos_742/theory/search_true_twin_counterexample.cpp
+@@ -77,7 +77,8 @@ int main(int argc, char** argv) {
+     for (int n = 8; n <= 20; ++n) {
+         for (int s = 0; s < samples; ++s) {
+             Graph h = complement_graph(minimal_diam2(n, rng));
+-            if (!is_3t_critical(h)) continue;  // skips complete bipartite complements
++            if (!is_3t_critical(h)) continue;
++            if (!diam2_or_less(h)) continue;  // excludes the solved dominating-edge class
+             ++tested;
+             int degree_sum = 0;
+             for (int v = 0; v < n; ++v) degree_sum += degree(h, v);

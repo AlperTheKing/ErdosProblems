@@ -1,0 +1,8 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38471,0 +38472,4 @@
++[2026-07-23T18:04:39+03:00] OK SELECT | DID: ranked audited candidates | RESULT: #617 first open case r=5 and one K26 colouring refutes all | D: #617 selected
++[2026-07-23T18:04:40+03:00] OK GATE | DID: checked live page, forum, 1999 paper, and literature search | RESULT: open; no claim or active worker found | D: passed
++[2026-07-23T18:04:41+03:00] OK PLAN | DID: wrote #617 registry and prompt | RESULT: exact certificate, bridge, falsifier, and exit fixed | D: PLAN->ATTACK
++[2026-07-23T18:04:42+03:00] > ATTACK | NEXT: calibrate two exact verifiers; attack K26 via affine construction, SAT, native local search, and structure.

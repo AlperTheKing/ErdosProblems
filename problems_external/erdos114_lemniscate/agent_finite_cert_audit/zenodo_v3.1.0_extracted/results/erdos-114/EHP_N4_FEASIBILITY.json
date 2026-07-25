@@ -1,0 +1,50 @@
+{
+  "experiment": "EHP_N4_feasibility",
+  "degree": 4,
+  "reduced_dim": 5,
+  "l_star_bounds": {
+    "lower": 11.018015144354283,
+    "best_estimate": 11.057535170600396,
+    "upper": 11.097055196846508,
+    "width": 0.07904005249222479,
+    "raw_values": [
+      [
+        200,
+        10.981255676679229
+      ],
+      [
+        400,
+        11.027926623454475
+      ],
+      [
+        800,
+        11.049474366709813
+      ]
+    ]
+  },
+  "random_sample": {
+    "n_samples": 100000,
+    "counterexamples": 0,
+    "closest_competitor_l": 8.18149670214705,
+    "closest_competitor_params": [
+      0.713056780397892,
+      -0.25112178549170494,
+      -1.1139375120401382,
+      1.2960539944469929,
+      -0.306146714836359
+    ],
+    "margin": 2.7997589745321783,
+    "margin_pct": 25.495799906362215
+  },
+  "lipschitz_estimate": 201.18495473669054,
+  "bb_prediction": {
+    "initial_grid_per_axis": 16,
+    "initial_boxes": 1048576,
+    "estimated_survival_rate": 0.0,
+    "estimated_levels": 1,
+    "estimated_total_evals": 1048576.0,
+    "estimated_time_secs": 102.66004509687808,
+    "feasible": true
+  },
+  "total_time_secs": 9.89461525
+}

@@ -1,0 +1,193 @@
+{
+ "files": [
+  "runs/fam6/r10_N10_16.jsonl",
+  "runs/fam6/r7_N15_17.jsonl",
+  "runs/fam6/r8_N13_16.jsonl",
+  "runs/fam6/r8_N8_12.jsonl",
+  "runs/fam6/r9_N9_15.jsonl",
+  "runs/fam6/retry1.jsonl"
+ ],
+ "distinct_triples": 94010,
+ "duplicates": 840,
+ "ok": 92870,
+ "status": {
+  "OK": 92870,
+  "UNRESOLVED_ENGINE_EXIT_1": 1140
+ },
+ "deg_hist": {
+  "0": 74306,
+  "1": 13911,
+  "2": 3487,
+  "3": 944,
+  "4": 179,
+  "5": 43
+ },
+ "max_hstar_d_all": 0,
+ "max_hstar_d_all_at": {
+  "lam": [
+   3,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "mu": [
+   5,
+   2
+  ],
+  "nu": [
+   6,
+   4,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "r": 7,
+  "d": 1,
+  "c": 2,
+  "hstar": [
+   1,
+   0
+  ],
+  "hstar_sum": 1
+ },
+ "max_hstar_d_d_ge_2": 0,
+ "max_hstar_d_d_ge_2_at": {
+  "lam": [
+   3,
+   2,
+   1,
+   1,
+   1
+  ],
+  "mu": [
+   4,
+   2,
+   1
+  ],
+  "nu": [
+   6,
+   3,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "r": 7,
+  "d": 3,
+  "c": 4,
+  "hstar": [
+   1,
+   0,
+   0,
+   0
+  ],
+  "hstar_sum": 1
+ },
+ "min_h1_minus_hd_all": 0,
+ "min_h1_minus_hd_all_at": {
+  "lam": [
+   3,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "mu": [
+   5,
+   2
+  ],
+  "nu": [
+   6,
+   4,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "r": 7,
+  "d": 1,
+  "c": 2,
+  "hstar": [
+   1,
+   0
+  ],
+  "hstar_sum": 1
+ },
+ "min_h1_minus_hd_d_ge_2": 0,
+ "min_h1_minus_hd_d_ge_2_at": {
+  "lam": [
+   3,
+   2,
+   1,
+   1,
+   1
+  ],
+  "mu": [
+   4,
+   2,
+   1
+  ],
+  "nu": [
+   6,
+   3,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "r": 7,
+  "d": 3,
+  "c": 4,
+  "hstar": [
+   1,
+   0,
+   0,
+   0
+  ],
+  "hstar_sum": 1
+ },
+ "h1_minus_hd_hist": {
+  "0": 18498,
+  "1": 63,
+  "2": 3
+ },
+ "h1_zero_(d,hstar_degree_s)": {
+  "1,0": 13911,
+  "2,0": 3475,
+  "3,0": 917,
+  "4,0": 165,
+  "4,2": 2,
+  "5,0": 22,
+  "5,2": 6
+ },
+ "h1_zero_(d,Sum_hstar)": {
+  "1,1": 13911,
+  "2,1": 3475,
+  "3,1": 917,
+  "4,1": 165,
+  "4,2": 2,
+  "5,1": 22,
+  "5,2": 6
+ },
+ "minimal_c_nonunimodular": 8,
+ "hits_counts": {
+  "TIER0": 0,
+  "JACKPOT": 0,
+  "NEG": 0
+ },
+ "hits": {
+  "TIER0": [],
+  "JACKPOT": [],
+  "NEG": []
+ },
+ "audit_failure_count": 0,
+ "audit_failures": []
+}

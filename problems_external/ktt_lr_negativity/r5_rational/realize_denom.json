@@ -1,0 +1,38 @@
+{
+ "7": {
+  "bases_with_denominator": 18,
+  "bases_tested": 18,
+  "bases_cone_nonempty": 18,
+  "denominator_realized": false
+ },
+ "6": {
+  "bases_with_denominator": 252,
+  "bases_tested": 252,
+  "bases_cone_nonempty": 252,
+  "denominator_realized": false
+ },
+ "5": {
+  "bases_with_denominator": 18,
+  "bases_tested": 18,
+  "bases_cone_nonempty": 18,
+  "denominator_realized": false
+ },
+ "4": {
+  "bases_with_denominator": 1008,
+  "bases_tested": 1008,
+  "bases_cone_nonempty": 1008,
+  "denominator_realized": false
+ },
+ "3": {
+  "bases_with_denominator": 2892,
+  "bases_tested": 1500,
+  "bases_cone_nonempty": 1500,
+  "denominator_realized": false
+ },
+ "2": {
+  "bases_with_denominator": 41814,
+  "bases_tested": 1500,
+  "bases_cone_nonempty": 1500,
+  "denominator_realized": false
+ }
+}

@@ -1,0 +1,600 @@
+{"idx": 19, "lam": [4, 3, 2, 1], "mu": [7, 5, 5, 2], "nu": [10, 7, 6, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 8, "lam": [5, 3, 2], "mu": [10, 7, 3, 2], "nu": [11, 8, 7, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 3, "lam": [5, 2, 2], "mu": [10, 8, 4, 1], "nu": [11, 9, 7, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 18, "lam": [7, 3, 1], "mu": [12, 5, 3, 2], "nu": [18, 6, 4, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 1, "lam": [4, 2, 1, 1], "mu": [7, 5, 4, 1, 1], "nu": [8, 7, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 0, "lam": [4, 2, 2, 1], "mu": [7, 6, 5, 3], "nu": [9, 7, 6, 6, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 9, "lam": [7, 2, 1], "mu": [10, 5, 3, 2, 1], "nu": [12, 7, 5, 4, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 20, "lam": [6, 3, 2, 1], "mu": [13, 7, 2, 1], "nu": [16, 12, 3, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 13, "lam": [7, 2, 1], "mu": [9, 8, 3, 2, 2], "nu": [10, 9, 8, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 14, "lam": [4, 4, 2, 2, 1, 1], "mu": [7, 7, 3, 1], "nu": [10, 9, 6, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 23, "lam": [3, 3, 1, 1], "mu": [11, 7, 4, 3, 1], "nu": [13, 8, 6, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 22, "lam": [3, 3, 1, 1], "mu": [9, 8, 3, 1], "nu": [11, 10, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 12, "lam": [7, 2, 2, 1], "mu": [12, 7, 2, 2], "nu": [16, 8, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 7, "lam": [6, 2, 2, 1], "mu": [12, 5, 4, 1], "nu": [16, 8, 5, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 16, "lam": [4, 2, 1], "mu": [7, 4, 2, 1, 1], "nu": [8, 5, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 17, "lam": [4, 2, 1], "mu": [6, 5, 3, 1], "nu": [7, 6, 3, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 10, "lam": [3, 3, 2], "mu": [6, 5, 3, 1], "nu": [8, 6, 4, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 6, "lam": [3, 2, 1, 1], "mu": [9, 6, 3, 1, 1], "nu": [11, 7, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 11, "lam": [7, 2, 1], "mu": [8, 6, 4, 3], "nu": [10, 8, 7, 5, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 5, "lam": [4, 3, 3, 1], "mu": [10, 9, 2, 1], "nu": [13, 12, 4, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 4, "lam": [2, 2, 1], "mu": [21, 4, 3, 2, 1], "nu": [22, 5, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 2, "lam": [7, 6, 3, 2, 2], "mu": [7, 6, 6, 2, 1], "nu": [13, 11, 9, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 15, "lam": [3, 2, 2, 1], "mu": [9, 5, 4, 2], "nu": [10, 7, 5, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 25, "lam": [4, 3, 2, 1], "mu": [8, 5, 4, 3, 3], "nu": [9, 7, 6, 6, 5], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 26, "lam": [7, 3, 3, 1, 1], "mu": [8, 6, 5, 3, 1], "nu": [14, 8, 7, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 24, "lam": [4, 2, 1, 1], "mu": [10, 9, 6, 4, 3], "nu": [13, 10, 8, 5, 4], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 27, "lam": [4, 3, 1, 1], "mu": [8, 7, 7, 1], "nu": [11, 10, 8, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 21, "lam": [3, 2, 1, 1, 1], "mu": [6, 5, 2, 2, 1, 1], "nu": [8, 6, 4, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 31, "lam": [4, 2, 2], "mu": [9, 7, 6, 3, 1], "nu": [10, 8, 7, 6, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 32, "lam": [3, 2, 2], "mu": [16, 5, 4, 2, 1], "nu": [17, 6, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 33, "lam": [5, 2, 1], "mu": [8, 7, 6, 5, 4], "nu": [10, 9, 7, 6, 6], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 34, "lam": [3, 2, 1, 1], "mu": [7, 5, 3, 1], "nu": [8, 6, 4, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 35, "lam": [5, 3, 2, 2, 1], "mu": [9, 7, 5, 2, 1], "nu": [13, 9, 7, 4, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 30, "lam": [3, 3, 2], "mu": [6, 5, 3, 1], "nu": [7, 6, 5, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 28, "lam": [4, 2, 1, 1], "mu": [8, 5, 3, 1, 1], "nu": [9, 6, 6, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 36, "lam": [5, 3, 1, 1], "mu": [8, 6, 5, 3], "nu": [9, 8, 8, 6, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 29, "lam": [3, 3, 1, 1], "mu": [6, 5, 3, 2, 1], "nu": [8, 7, 5, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 38, "lam": [9, 2, 1], "mu": [11, 5, 3, 3, 1], "nu": [13, 9, 6, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 37, "lam": [5, 2, 1], "mu": [10, 5, 4, 3], "nu": [11, 6, 6, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 40, "lam": [3, 3, 1, 1], "mu": [12, 6, 4, 3, 1], "nu": [13, 8, 6, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 39, "lam": [4, 3, 1, 1], "mu": [7, 6, 3, 2], "nu": [10, 9, 4, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 41, "lam": [3, 2, 1, 1], "mu": [5, 4, 3, 2, 1], "nu": [7, 5, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 45, "lam": [4, 4, 1, 1], "mu": [10, 5, 3, 2, 1], "nu": [13, 8, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 46, "lam": [6, 4, 1], "mu": [12, 5, 3, 2, 2], "nu": [13, 8, 6, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 44, "lam": [3, 2, 1, 1], "mu": [11, 10, 3, 1], "nu": [12, 11, 4, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 47, "lam": [4, 2, 2, 1], "mu": [11, 7, 3, 1], "nu": [13, 8, 4, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 48, "lam": [6, 2, 1, 1], "mu": [10, 8, 3], "nu": [11, 9, 8, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 49, "lam": [3, 2, 2, 1], "mu": [10, 8, 4, 1], "nu": [12, 10, 5, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 51, "lam": [3, 2, 2, 1], "mu": [6, 5, 3, 1], "nu": [8, 7, 4, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 52, "lam": [5, 3, 2, 1], "mu": [7, 7, 5, 3], "nu": [9, 8, 8, 7, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 53, "lam": [4, 4, 2, 1], "mu": [20, 2, 1], "nu": [21, 5, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 54, "lam": [7, 2, 1], "mu": [45, 14, 2], "nu": [46, 17, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 42, "lam": [4, 2, 1, 1], "mu": [6, 6, 3, 1, 1], "nu": [9, 6, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 55, "lam": [4, 2, 1, 1], "mu": [12, 5, 5, 2, 1], "nu": [13, 8, 6, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 56, "lam": [4, 3, 2, 2], "mu": [9, 6, 4, 4, 1], "nu": [12, 8, 7, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 57, "lam": [5, 2, 1, 1], "mu": [13, 5, 4, 1], "nu": [16, 6, 5, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 43, "lam": [4, 2, 1, 1], "mu": [4, 4, 4, 3, 1], "nu": [7, 5, 4, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 58, "lam": [6, 2, 1, 1], "mu": [8, 7, 5], "nu": [10, 8, 6, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 59, "lam": [3, 2, 2, 1], "mu": [6, 5, 2, 2, 1], "nu": [8, 7, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 50, "lam": [3, 2, 2, 1], "mu": [8, 5, 3, 1], "nu": [9, 7, 5, 2, 1, 1], "d_true": 6, "dim_lo": 6, "nverts": 7, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 61, "lam": [4, 2, 1, 1], "mu": [10, 6, 4, 3, 1], "nu": [13, 8, 5, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 62, "lam": [4, 3, 1], "mu": [10, 7, 4, 1], "nu": [11, 8, 7, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 64, "lam": [4, 3, 1], "mu": [8, 6, 4, 4, 1], "nu": [9, 7, 6, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 63, "lam": [7, 2, 2], "mu": [11, 7, 3, 2], "nu": [16, 8, 6, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 65, "lam": [5, 3, 2, 1], "mu": [13, 6, 4], "nu": [14, 10, 7, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 66, "lam": [4, 3, 2, 2], "mu": [8, 7, 4, 2], "nu": [11, 9, 5, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 67, "lam": [6, 2, 2, 1], "mu": [8, 7, 4, 3], "nu": [12, 8, 6, 4, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 68, "lam": [3, 3, 1, 1], "mu": [13, 6, 5, 2], "nu": [15, 7, 6, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 70, "lam": [5, 2, 2], "mu": [10, 7, 4, 1], "nu": [11, 8, 7, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 69, "lam": [4, 3, 1, 1], "mu": [16, 2, 2, 1], "nu": [19, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 72, "lam": [3, 3, 1, 1], "mu": [11, 7, 4, 2, 1], "nu": [12, 9, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 73, "lam": [4, 3, 2, 1], "mu": [14, 3, 3, 2, 1], "nu": [17, 5, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 75, "lam": [6, 2, 1], "mu": [14, 5, 4, 4, 2], "nu": [16, 8, 6, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 76, "lam": [5, 2, 1], "mu": [12, 4, 2, 2], "nu": [13, 6, 5, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 60, "lam": [3, 2, 1, 1, 1], "mu": [6, 5, 3, 2, 1, 1], "nu": [7, 7, 5, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 77, "lam": [4, 3, 2, 1], "mu": [7, 4, 3, 3, 2], "nu": [10, 6, 5, 4, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 78, "lam": [3, 2, 2, 1], "mu": [9, 7, 5, 1, 1], "nu": [10, 9, 7, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 80, "lam": [4, 2, 2], "mu": [14, 7, 3, 1], "nu": [17, 9, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 81, "lam": [5, 2, 2, 1], "mu": [8, 7, 4, 3], "nu": [9, 8, 6, 5, 4], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 83, "lam": [4, 2, 2, 1], "mu": [12, 5, 2, 1], "nu": [13, 7, 5, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 82, "lam": [4, 3, 2, 2, 1], "mu": [15, 5, 2, 1], "nu": [18, 7, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 84, "lam": [5, 3, 2, 1], "mu": [7, 6, 6, 4], "nu": [9, 9, 8, 7, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 85, "lam": [5, 3, 1], "mu": [8, 6, 4, 1, 1], "nu": [12, 7, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 86, "lam": [4, 3, 1], "mu": [8, 5, 4, 2, 1], "nu": [9, 8, 5, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 87, "lam": [6, 2, 2, 1], "mu": [13, 5, 3, 2], "nu": [16, 8, 6, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 74, "lam": [4, 2, 1, 1, 1], "mu": [12, 4, 2, 2], "nu": [13, 6, 5, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 88, "lam": [5, 4, 3, 2, 1], "mu": [13, 4, 2, 1, 1], "nu": [17, 6, 5, 4, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 71, "lam": [3, 2, 2, 1, 1], "mu": [6, 5, 2, 2, 1, 1], "nu": [8, 7, 4, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 89, "lam": [4, 2, 2, 1], "mu": [7, 6, 4, 3, 1], "nu": [9, 7, 7, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 91, "lam": [4, 2, 2, 1], "mu": [10, 3, 2, 2], "nu": [13, 5, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 79, "lam": [5, 2, 1], "mu": [9, 7, 1, 1], "nu": [10, 9, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 92, "lam": [5, 2, 2, 1], "mu": [10, 5, 4, 3, 1], "nu": [12, 9, 6, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 94, "lam": [4, 3, 1, 1], "mu": [14, 7, 2, 1], "nu": [16, 8, 4, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 93, "lam": [3, 2, 1, 1], "mu": [7, 4, 3, 1], "nu": [8, 6, 5, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 98, "lam": [6, 2, 2], "mu": [15, 6, 3, 1], "nu": [16, 11, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 97, "lam": [6, 4, 2, 2, 1], "mu": [12, 8, 2, 1], "nu": [16, 13, 4, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 95, "lam": [4, 3, 1, 1], "mu": [8, 8, 3, 1], "nu": [11, 10, 5, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 96, "lam": [3, 2, 1, 1], "mu": [6, 5, 4, 2, 1], "nu": [8, 7, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 99, "lam": [4, 2, 2, 1], "mu": [9, 5, 3, 2, 1], "nu": [11, 7, 6, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 101, "lam": [3, 2, 2, 1], "mu": [20, 6, 1], "nu": [21, 8, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 102, "lam": [5, 2, 2, 1], "mu": [8, 6, 5, 1, 1], "nu": [11, 8, 6, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 103, "lam": [4, 3, 1], "mu": [16, 4, 3, 2, 1], "nu": [19, 5, 4, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 104, "lam": [6, 3, 1], "mu": [16, 3, 2, 1, 1], "nu": [17, 7, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 105, "lam": [5, 3, 1], "mu": [8, 5, 4, 2, 1], "nu": [12, 6, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 106, "lam": [6, 2, 1], "mu": [8, 4, 3, 2, 1], "nu": [9, 7, 5, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 107, "lam": [6, 2, 2], "mu": [13, 6, 3, 1], "nu": [17, 7, 6, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 108, "lam": [5, 3, 2, 1], "mu": [11, 5, 5, 1], "nu": [12, 8, 7, 5, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 90, "lam": [3, 2, 2, 1], "mu": [9, 4, 2, 2, 1], "nu": [11, 5, 3, 3, 2, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 110, "lam": [4, 2, 2], "mu": [11, 7, 4, 2], "nu": [13, 10, 5, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 109, "lam": [6, 4, 2, 2, 1], "mu": [10, 6, 6, 2], "nu": [14, 10, 9, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 112, "lam": [4, 3, 1, 1], "mu": [10, 4, 3, 2, 1], "nu": [11, 7, 4, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 111, "lam": [3, 2, 1, 1], "mu": [5, 4, 3, 2], "nu": [7, 5, 4, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 113, "lam": [5, 2, 1, 1], "mu": [9, 4, 3, 2, 1], "nu": [10, 8, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 117, "lam": [6, 2, 1, 1], "mu": [17, 5, 2, 1], "nu": [19, 10, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 100, "lam": [3, 2, 1, 1], "mu": [7, 5, 4, 3, 1, 1], "nu": [8, 7, 4, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 118, "lam": [7, 2, 1], "mu": [9, 5, 4, 3, 1], "nu": [11, 7, 6, 5, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 121, "lam": [4, 3, 1, 1], "mu": [16, 7, 4, 4, 3], "nu": [18, 8, 7, 6, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 122, "lam": [5, 2, 2, 1], "mu": [7, 6, 5, 2], "nu": [9, 7, 6, 6, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 123, "lam": [4, 2, 2], "mu": [8, 7, 5, 3, 1], "nu": [11, 8, 6, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 124, "lam": [6, 2, 1, 1], "mu": [10, 7, 4, 1], "nu": [14, 8, 5, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 127, "lam": [6, 3, 2, 1], "mu": [12, 9, 5], "nu": [13, 12, 6, 5, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 128, "lam": [4, 3, 2, 2], "mu": [10, 6, 4, 4], "nu": [13, 8, 7, 6, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 131, "lam": [4, 2, 2, 1], "mu": [8, 6, 6, 3, 1], "nu": [9, 8, 7, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 130, "lam": [3, 2, 2, 1], "mu": [10, 4, 2, 1], "nu": [12, 6, 3, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 132, "lam": [3, 2, 2], "mu": [10, 4, 2, 1], "nu": [12, 6, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 133, "lam": [4, 2, 2, 1], "mu": [10, 7, 6, 3, 2], "nu": [13, 8, 8, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 134, "lam": [3, 2, 2, 1], "mu": [9, 6, 4], "nu": [10, 8, 6, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 135, "lam": [7, 2, 2], "mu": [14, 6, 2, 1], "nu": [19, 7, 5, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 136, "lam": [6, 2, 1, 1], "mu": [12, 8, 2, 1], "nu": [15, 12, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 137, "lam": [7, 2, 1, 1], "mu": [10, 8, 2, 1], "nu": [11, 9, 8, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 114, "lam": [6, 5, 3, 2, 2, 2], "mu": [7, 5, 3, 2, 1], "nu": [12, 7, 6, 6, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 116, "lam": [3, 2, 2], "mu": [10, 3, 2, 1], "nu": [12, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 142, "lam": [5, 4, 1, 1], "mu": [8, 5, 4, 3, 2], "nu": [11, 7, 7, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 138, "lam": [3, 2, 1, 1], "mu": [9, 9, 6, 2, 1], "nu": [11, 10, 7, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 141, "lam": [6, 2, 1, 1], "mu": [10, 6, 4, 2], "nu": [14, 7, 7, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 140, "lam": [4, 2, 1, 1], "mu": [8, 8, 6, 1], "nu": [11, 9, 8, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 115, "lam": [3, 2, 1, 1, 1], "mu": [6, 4, 4, 3, 1], "nu": [7, 6, 5, 4, 3, 1], "d_true": 6, "dim_lo": 6, "nverts": 7, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 119, "lam": [4, 3, 3, 2, 1, 1], "mu": [7, 4, 4, 2], "nu": [9, 7, 5, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 143, "lam": [4, 2, 2, 1], "mu": [19, 4, 2, 1], "nu": [21, 6, 5, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 145, "lam": [3, 2, 2], "mu": [12, 8, 6, 2], "nu": [13, 9, 8, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 144, "lam": [3, 2, 2, 1], "mu": [9, 7, 4, 2, 1], "nu": [11, 8, 5, 4, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 147, "lam": [6, 5, 3, 3, 2], "mu": [14, 5, 2, 2, 1], "nu": [18, 8, 7, 6, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 146, "lam": [5, 2, 2], "mu": [14, 7, 5, 2, 1], "nu": [17, 8, 6, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 151, "lam": [6, 3, 2], "mu": [11, 6, 3, 1], "nu": [15, 10, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 150, "lam": [7, 3, 3, 2, 1], "mu": [8, 6, 6, 2], "nu": [12, 9, 8, 7, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 148, "lam": [4, 3, 1], "mu": [20, 3, 2, 1], "nu": [23, 4, 3, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 120, "lam": [3, 3, 1], "mu": [6, 5, 4, 4, 1], "nu": [8, 6, 5, 5, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 152, "lam": [4, 2, 2, 1], "mu": [7, 6, 4, 2], "nu": [10, 7, 6, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 149, "lam": [8, 2, 1], "mu": [11, 11, 5, 4, 2], "nu": [15, 12, 8, 6, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 157, "lam": [5, 2, 1], "mu": [8, 4, 3, 2, 1], "nu": [9, 6, 4, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 154, "lam": [3, 2, 2, 1], "mu": [9, 4, 1, 1], "nu": [11, 6, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 155, "lam": [5, 2, 2, 1], "mu": [8, 7, 4, 3], "nu": [12, 8, 6, 5, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 125, "lam": [4, 3, 3, 2, 1, 1], "mu": [6, 4, 3, 3, 2], "nu": [9, 6, 5, 5, 4, 3], "d_true": 6, "dim_lo": 6, "nverts": 7, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 156, "lam": [4, 2, 1, 1], "mu": [8, 6, 4, 2, 1], "nu": [9, 7, 7, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 159, "lam": [4, 3, 2, 2], "mu": [11, 6, 5, 4, 1], "nu": [13, 8, 8, 7, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 165, "lam": [5, 2, 2, 1], "mu": [10, 5, 4, 3, 1], "nu": [12, 9, 5, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 160, "lam": [4, 2, 1, 1], "mu": [14, 7, 6, 3, 3], "nu": [15, 10, 7, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 164, "lam": [4, 2, 1, 1], "mu": [12, 5, 4, 1, 1], "nu": [13, 8, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 162, "lam": [3, 2, 1, 1], "mu": [14, 5, 2], "nu": [15, 6, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 171, "lam": [7, 2, 1], "mu": [7, 6, 3, 3], "nu": [10, 8, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 161, "lam": [6, 2, 2, 1], "mu": [11, 7, 5], "nu": [12, 10, 7, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 168, "lam": [3, 2, 1, 1], "mu": [14, 5, 4, 2], "nu": [15, 6, 6, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 170, "lam": [5, 3, 2, 1], "mu": [17, 4, 1], "nu": [21, 5, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 126, "lam": [4, 2, 1, 1, 1], "mu": [8, 5, 4, 1], "nu": [11, 7, 5, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 182, "lam": [7, 4, 3, 3], "mu": [24, 20, 14, 2], "nu": [27, 22, 20, 4, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 163, "lam": [3, 2, 1, 1], "mu": [12, 4, 1, 1], "nu": [14, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 176, "lam": [5, 2, 1, 1], "mu": [10, 7, 4, 4], "nu": [14, 8, 6, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 183, "lam": [5, 3, 3], "mu": [7, 5, 4, 3, 1], "nu": [10, 9, 6, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 180, "lam": [4, 2, 1, 1], "mu": [7, 4, 3, 3, 1], "nu": [8, 7, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 129, "lam": [4, 2, 1], "mu": [7, 3, 3, 2], "nu": [8, 5, 4, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 179, "lam": [6, 2, 1], "mu": [8, 7, 4, 3, 2], "nu": [9, 9, 7, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 172, "lam": [6, 2, 1], "mu": [7, 6, 4, 3], "nu": [9, 8, 5, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 185, "lam": [4, 3, 3], "mu": [10, 6, 5, 4], "nu": [13, 9, 7, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 178, "lam": [3, 2, 1, 1], "mu": [10, 9, 4, 3], "nu": [12, 10, 5, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 175, "lam": [6, 4, 1], "mu": [11, 4, 3, 2], "nu": [12, 6, 6, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 173, "lam": [5, 2, 2, 1], "mu": [8, 7, 4, 1], "nu": [9, 9, 7, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 174, "lam": [5, 2, 2, 1], "mu": [7, 7, 4, 3, 2], "nu": [10, 8, 7, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 186, "lam": [6, 3, 2], "mu": [16, 4, 3, 1], "nu": [19, 9, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 189, "lam": [4, 3, 1, 1], "mu": [8, 5, 3, 2, 1], "nu": [10, 6, 5, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 184, "lam": [4, 3, 2, 1], "mu": [8, 7, 3, 3, 1], "nu": [10, 10, 6, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 139, "lam": [5, 3, 2, 2, 1, 1], "mu": [5, 4, 3, 2, 1, 1], "nu": [7, 7, 6, 4, 3, 3], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 188, "lam": [6, 2, 1], "mu": [8, 7, 4, 3], "nu": [10, 9, 6, 5, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 190, "lam": [3, 3, 1, 1], "mu": [9, 7, 5, 4, 2], "nu": [11, 8, 7, 6, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 191, "lam": [6, 2, 2, 1], "mu": [9, 7, 5, 1], "nu": [14, 9, 7, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 199, "lam": [7, 3, 1, 1], "mu": [11, 6, 5], "nu": [12, 10, 6, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 192, "lam": [5, 4, 1], "mu": [9, 9, 7, 3, 1], "nu": [12, 10, 8, 7, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 197, "lam": [5, 2, 2], "mu": [12, 9, 5, 3, 2], "nu": [16, 10, 7, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 198, "lam": [6, 2, 2, 1], "mu": [10, 7, 4, 1], "nu": [14, 8, 6, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 194, "lam": [4, 2, 1, 1], "mu": [9, 7, 4, 3, 2], "nu": [12, 9, 5, 4, 3], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 181, "lam": [3, 2, 2, 1], "mu": [5, 4, 3, 2], "nu": [6, 6, 5, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 195, "lam": [6, 4, 4, 3, 2], "mu": [14, 6, 4, 1], "nu": [17, 9, 9, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 196, "lam": [4, 3, 2, 1], "mu": [13, 6, 5, 4, 2], "nu": [14, 9, 6, 6, 5], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 202, "lam": [3, 2, 2], "mu": [12, 8, 4, 2, 1], "nu": [13, 9, 6, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 200, "lam": [5, 2, 2, 1], "mu": [19, 3, 1, 1], "nu": [23, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 205, "lam": [4, 3, 3, 2, 1], "mu": [8, 6, 4], "nu": [10, 9, 7, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 203, "lam": [3, 2, 2, 1], "mu": [10, 6, 5], "nu": [11, 8, 7, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 208, "lam": [3, 2, 1, 1], "mu": [14, 10, 2, 1], "nu": [15, 11, 4, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 211, "lam": [7, 2, 2, 1], "mu": [11, 9, 2, 1], "nu": [14, 11, 7, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 219, "lam": [7, 3, 1], "mu": [16, 6, 2, 2, 1], "nu": [17, 12, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 218, "lam": [6, 3, 1], "mu": [13, 5, 4, 2], "nu": [14, 7, 7, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 212, "lam": [6, 2, 2, 1], "mu": [16, 6, 1, 1], "nu": [21, 8, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 216, "lam": [3, 2, 2], "mu": [13, 8, 4, 3], "nu": [15, 9, 6, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 214, "lam": [4, 2, 1, 1], "mu": [10, 6, 3, 2], "nu": [13, 8, 4, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 204, "lam": [4, 3, 3, 2, 1], "mu": [13, 5, 5, 2], "nu": [16, 8, 7, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 210, "lam": [6, 2, 1, 1], "mu": [9, 8, 3, 2], "nu": [11, 9, 8, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 153, "lam": [3, 3, 1], "mu": [6, 5, 3, 1], "nu": [7, 6, 4, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 220, "lam": [5, 3, 1, 1], "mu": [8, 8, 2, 1], "nu": [11, 10, 5, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 215, "lam": [4, 2, 1, 1], "mu": [7, 6, 3, 2], "nu": [10, 7, 4, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 222, "lam": [3, 3, 1, 1], "mu": [11, 7, 5, 3], "nu": [12, 8, 7, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 223, "lam": [4, 3, 3, 1, 1], "mu": [12, 6, 3, 2], "nu": [15, 8, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 221, "lam": [4, 2, 1, 1], "mu": [7, 6, 3, 2], "nu": [8, 8, 6, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 224, "lam": [3, 2, 2, 1], "mu": [20, 5, 2, 1], "nu": [21, 7, 3, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 231, "lam": [4, 3, 2], "mu": [8, 7, 3, 1], "nu": [11, 8, 4, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 225, "lam": [3, 2, 1, 1], "mu": [14, 4, 3, 2, 1], "nu": [15, 6, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 230, "lam": [5, 4, 2], "mu": [7, 6, 6, 2, 1], "nu": [11, 9, 8, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 232, "lam": [5, 3, 3, 2, 1], "mu": [9, 5, 3, 2, 1], "nu": [12, 9, 6, 4, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 227, "lam": [3, 2, 1, 1], "mu": [7, 6, 3, 2], "nu": [8, 7, 4, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 233, "lam": [5, 2, 2, 1], "mu": [10, 5, 3, 2, 1], "nu": [11, 9, 5, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 234, "lam": [5, 3, 1], "mu": [14, 8, 6, 2, 2], "nu": [18, 9, 7, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 236, "lam": [6, 4, 3, 1, 1], "mu": [10, 6, 3, 1], "nu": [12, 8, 8, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 235, "lam": [4, 2, 2, 1], "mu": [11, 9, 3, 1], "nu": [13, 10, 5, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 239, "lam": [3, 2, 2], "mu": [9, 7, 3, 1], "nu": [10, 8, 5, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 237, "lam": [4, 3, 2, 2], "mu": [10, 5, 4, 4], "nu": [12, 8, 7, 6, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 169, "lam": [3, 3, 1, 1], "mu": [6, 5, 4, 2, 1], "nu": [8, 7, 5, 4, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 177, "lam": [3, 2, 2, 1], "mu": [6, 5, 3, 2, 1], "nu": [8, 5, 4, 3, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 238, "lam": [5, 4, 1], "mu": [8, 8, 7, 2], "nu": [11, 9, 8, 6, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 246, "lam": [5, 3, 1, 1], "mu": [10, 7, 5, 2], "nu": [11, 11, 8, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 166, "lam": [3, 2, 1, 1, 1], "mu": [6, 5, 4, 2, 2], "nu": [8, 6, 5, 4, 3, 1], "d_true": 6, "dim_lo": 6, "nverts": 7, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 243, "lam": [6, 3, 2, 1], "mu": [18, 3, 2], "nu": [23, 4, 3, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 245, "lam": [5, 4, 1], "mu": [10, 7, 5, 3, 1], "nu": [11, 8, 6, 6, 5], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 244, "lam": [4, 2, 1, 1], "mu": [11, 5, 5, 2, 1], "nu": [13, 8, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 240, "lam": [6, 2, 1, 1], "mu": [12, 5, 4, 1], "nu": [15, 6, 5, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 247, "lam": [7, 4, 4, 3, 2], "mu": [19, 2, 1, 1], "nu": [25, 6, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 167, "lam": [4, 2, 1], "mu": [5, 4, 3, 2, 1], "nu": [5, 5, 4, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 249, "lam": [7, 2, 1], "mu": [8, 7, 4, 3, 1], "nu": [9, 9, 7, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 187, "lam": [4, 2, 1], "mu": [10, 7, 2, 1], "nu": [11, 8, 3, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 250, "lam": [5, 2, 2, 1], "mu": [9, 7, 5, 4], "nu": [10, 9, 8, 5, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 254, "lam": [6, 2, 1], "mu": [8, 6, 5, 4, 2], "nu": [9, 8, 7, 6, 4], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 253, "lam": [4, 2, 1, 1], "mu": [8, 5, 3, 2], "nu": [9, 8, 5, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 256, "lam": [5, 3, 1, 1], "mu": [10, 7, 6, 2, 1], "nu": [11, 11, 9, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 252, "lam": [7, 3, 1], "mu": [10, 6, 3, 2, 1], "nu": [11, 8, 7, 5, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 255, "lam": [3, 2, 2, 1], "mu": [10, 8, 4, 1], "nu": [11, 10, 6, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 257, "lam": [6, 5, 1], "mu": [13, 7, 2, 1], "nu": [15, 12, 4, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 258, "lam": [5, 2, 2], "mu": [10, 7, 4, 1], "nu": [14, 8, 5, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 259, "lam": [6, 3, 2, 1, 1], "mu": [8, 4, 3, 2, 1], "nu": [10, 7, 6, 5, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 260, "lam": [3, 3, 1, 1], "mu": [11, 7, 5, 2, 1], "nu": [12, 9, 6, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 261, "lam": [3, 2, 2, 1], "mu": [7, 5, 4, 3, 1], "nu": [8, 7, 6, 5, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 206, "lam": [4, 2, 1], "mu": [8, 4, 2, 2, 1], "nu": [9, 5, 3, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 262, "lam": [5, 5, 4, 3, 3], "mu": [9, 5, 4, 3], "nu": [13, 9, 8, 7, 4], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 263, "lam": [6, 2, 1, 1], "mu": [16, 6, 2, 1], "nu": [17, 7, 7, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 266, "lam": [3, 2, 1, 1], "mu": [7, 4, 2, 2], "nu": [8, 5, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 193, "lam": [3, 2, 1, 1], "mu": [12, 2, 2, 1], "nu": [14, 3, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 268, "lam": [5, 2, 1], "mu": [18, 4, 3, 3, 1], "nu": [19, 7, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 265, "lam": [3, 2, 1, 1], "mu": [7, 6, 3, 1], "nu": [9, 7, 4, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 264, "lam": [4, 3, 2, 2, 1], "mu": [10, 6, 4, 3], "nu": [13, 8, 6, 6, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 213, "lam": [3, 2, 2], "mu": [5, 4, 3, 1], "nu": [6, 5, 4, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 269, "lam": [6, 2, 2], "mu": [13, 6, 4, 1], "nu": [17, 7, 5, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 270, "lam": [4, 3, 3, 2, 1], "mu": [11, 8, 2, 1], "nu": [13, 11, 4, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 272, "lam": [3, 2, 2, 1], "mu": [11, 6, 4, 2, 1], "nu": [12, 8, 6, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 275, "lam": [4, 3, 3], "mu": [12, 6, 3, 2, 1], "nu": [15, 9, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 277, "lam": [5, 2, 2, 1], "mu": [10, 6, 5, 3, 1], "nu": [11, 10, 7, 4, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 276, "lam": [4, 3, 2, 1], "mu": [15, 8, 1], "nu": [16, 11, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 217, "lam": [3, 2, 1, 1], "mu": [6, 6, 4, 2, 2], "nu": [8, 6, 5, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 273, "lam": [5, 2, 1, 1], "mu": [12, 7, 4], "nu": [14, 8, 5, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 279, "lam": [6, 2, 2, 1], "mu": [9, 7, 4, 3], "nu": [14, 8, 5, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 284, "lam": [4, 2, 1, 1], "mu": [12, 6, 4, 3, 2], "nu": [13, 9, 5, 4, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 283, "lam": [5, 2, 2, 1], "mu": [11, 9, 3, 1], "nu": [12, 10, 6, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 280, "lam": [5, 2, 2, 1], "mu": [9, 7, 6], "nu": [10, 9, 8, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 281, "lam": [3, 2, 1, 1], "mu": [15, 5, 2, 2], "nu": [17, 6, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 282, "lam": [5, 5, 1], "mu": [9, 6, 5, 3], "nu": [13, 8, 7, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 285, "lam": [4, 2, 2, 1], "mu": [6, 5, 4, 2, 1], "nu": [8, 6, 5, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 288, "lam": [4, 3, 3], "mu": [11, 6, 5, 2], "nu": [13, 9, 6, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 278, "lam": [4, 2, 2, 1], "mu": [11, 5, 3, 2, 1], "nu": [12, 8, 5, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 287, "lam": [6, 2, 1, 1], "mu": [20, 4, 2, 2, 1], "nu": [21, 9, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 286, "lam": [5, 2, 1, 1], "mu": [9, 6, 5, 2, 1], "nu": [13, 8, 6, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 229, "lam": [4, 3, 1], "mu": [7, 4, 3, 2, 1, 1], "nu": [8, 5, 5, 4, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 207, "lam": [3, 2, 1, 1], "mu": [5, 4, 4, 2, 1], "nu": [6, 5, 4, 4, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 289, "lam": [4, 2, 2, 1], "mu": [12, 8, 4, 1], "nu": [13, 11, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 290, "lam": [4, 2, 1, 1], "mu": [9, 7, 4, 1], "nu": [10, 10, 6, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 228, "lam": [4, 2, 1, 1], "mu": [12, 3, 1, 1], "nu": [15, 4, 2, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 209, "lam": [3, 2, 1, 1, 1], "mu": [6, 5, 4, 2, 1], "nu": [7, 7, 6, 3, 2, 1], "d_true": 6, "dim_lo": 6, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 291, "lam": [4, 3, 2, 2], "mu": [11, 6, 4, 3], "nu": [13, 7, 7, 6, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 293, "lam": [5, 3, 1, 1], "mu": [10, 3, 2, 2, 1], "nu": [11, 7, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 292, "lam": [3, 2, 2, 1], "mu": [10, 8, 5, 1], "nu": [12, 10, 7, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 295, "lam": [3, 2, 2, 1], "mu": [11, 7, 5, 4, 2], "nu": [12, 9, 6, 6, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 298, "lam": [8, 2, 1], "mu": [10, 8, 3, 1], "nu": [11, 10, 6, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 294, "lam": [6, 4, 1], "mu": [7, 6, 5, 4, 2], "nu": [9, 9, 7, 6, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 226, "lam": [5, 4, 4, 3, 2, 2], "mu": [7, 4, 4, 3], "nu": [10, 8, 7, 7, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 296, "lam": [6, 2, 2, 1], "mu": [18, 4, 1], "nu": [22, 5, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 297, "lam": [7, 3, 1, 1], "mu": [8, 7, 4, 2, 1], "nu": [10, 9, 6, 5, 4], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 242, "lam": [4, 2, 1], "mu": [7, 4, 3, 2, 1, 1], "nu": [8, 5, 4, 4, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 300, "lam": [4, 3, 1, 1], "mu": [8, 5, 4, 4, 1], "nu": [9, 7, 6, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 251, "lam": [4, 2, 2, 1], "mu": [6, 4, 3, 3, 2], "nu": [8, 5, 4, 4, 3, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 304, "lam": [4, 3, 2], "mu": [11, 8, 4, 4, 3], "nu": [14, 9, 7, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 302, "lam": [3, 3, 1, 1], "mu": [11, 8, 6, 4, 1], "nu": [12, 9, 8, 6, 3], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 299, "lam": [5, 2, 1, 1], "mu": [9, 8, 4, 1], "nu": [13, 10, 5, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 308, "lam": [7, 2, 2, 1], "mu": [12, 5, 3, 2], "nu": [17, 8, 5, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 248, "lam": [3, 1, 1, 1, 1], "mu": [9, 4, 3, 2, 1], "nu": [10, 6, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 303, "lam": [5, 2, 2], "mu": [9, 8, 5, 2], "nu": [13, 9, 6, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 306, "lam": [3, 2, 1, 1], "mu": [11, 7, 4, 3, 2], "nu": [13, 8, 5, 4, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 314, "lam": [4, 3, 2, 1], "mu": [16, 5, 3, 3, 1], "nu": [17, 8, 6, 5, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 310, "lam": [4, 3, 2], "mu": [8, 7, 4, 1], "nu": [9, 8, 7, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 241, "lam": [3, 2, 1, 1], "mu": [6, 2, 2, 2, 1], "nu": [8, 4, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 316, "lam": [5, 3, 2, 1], "mu": [9, 6, 3, 2, 2], "nu": [13, 7, 5, 4, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 317, "lam": [4, 2, 2, 1], "mu": [11, 4, 2], "nu": [13, 7, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 319, "lam": [7, 2, 1, 1], "mu": [12, 6, 1, 1], "nu": [13, 12, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 318, "lam": [3, 2, 1, 1], "mu": [16, 4, 2, 1], "nu": [17, 6, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 320, "lam": [6, 2, 2, 1], "mu": [16, 9, 8, 1], "nu": [17, 14, 9, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 313, "lam": [3, 2, 1, 1], "mu": [6, 5, 4, 3, 1], "nu": [7, 7, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 321, "lam": [3, 2, 2, 1], "mu": [10, 9, 5], "nu": [12, 10, 7, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 327, "lam": [4, 3, 1], "mu": [11, 5, 4, 4, 3], "nu": [12, 8, 6, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 323, "lam": [5, 3, 1, 1], "mu": [7, 7, 4, 2, 1], "nu": [10, 9, 7, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 328, "lam": [7, 2, 2], "mu": [12, 10, 3, 2, 1], "nu": [15, 11, 8, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 326, "lam": [3, 2, 2, 1], "mu": [17, 5, 3], "nu": [19, 6, 5, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 330, "lam": [5, 3, 1], "mu": [11, 7, 3, 1, 1], "nu": [12, 11, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 331, "lam": [4, 3, 2], "mu": [10, 7, 4, 1], "nu": [11, 8, 7, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 325, "lam": [5, 3, 2, 1], "mu": [7, 6, 6, 1], "nu": [11, 9, 8, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 333, "lam": [4, 3, 1], "mu": [11, 6, 5, 1, 1], "nu": [12, 9, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 337, "lam": [6, 3, 2], "mu": [12, 5, 4, 2, 1], "nu": [16, 9, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 332, "lam": [3, 2, 2, 1], "mu": [17, 6, 4, 3, 1], "nu": [18, 8, 6, 5, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 336, "lam": [4, 3, 1], "mu": [18, 3, 2, 2, 1], "nu": [19, 6, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 339, "lam": [4, 4, 1], "mu": [9, 7, 6, 3], "nu": [10, 9, 8, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 334, "lam": [4, 3, 2, 1], "mu": [17, 3, 1, 1], "nu": [20, 6, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 271, "lam": [3, 3, 1, 1], "mu": [6, 5, 4, 2, 1], "nu": [8, 7, 6, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 340, "lam": [6, 3, 2, 1], "mu": [9, 5, 4, 3, 1], "nu": [10, 7, 6, 6, 5], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 338, "lam": [3, 2, 2], "mu": [9, 7, 3, 1], "nu": [10, 9, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 341, "lam": [5, 2, 2, 1], "mu": [9, 6, 4, 1], "nu": [10, 10, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 344, "lam": [5, 3, 2], "mu": [11, 6, 3, 1], "nu": [12, 7, 7, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 342, "lam": [3, 2, 2, 1], "mu": [6, 5, 5, 4], "nu": [8, 7, 6, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 345, "lam": [3, 2, 2, 1], "mu": [7, 5, 4, 3, 1], "nu": [8, 7, 5, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 267, "lam": [4, 2, 1], "mu": [5, 4, 4, 3, 1], "nu": [6, 6, 5, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 347, "lam": [5, 2, 2], "mu": [8, 6, 3, 2], "nu": [9, 8, 7, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 348, "lam": [5, 2, 2, 1], "mu": [8, 7, 5, 3], "nu": [12, 8, 7, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 346, "lam": [7, 3, 1], "mu": [7, 7, 4, 3, 1], "nu": [10, 9, 6, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 350, "lam": [5, 4, 2], "mu": [12, 6, 2], "nu": [13, 7, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 349, "lam": [3, 2, 1, 1], "mu": [6, 5, 3], "nu": [8, 6, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 274, "lam": [4, 2, 1], "mu": [7, 7, 4, 2], "nu": [8, 8, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 351, "lam": [6, 2, 1], "mu": [8, 6, 4, 4], "nu": [10, 9, 6, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 352, "lam": [4, 3, 2, 1], "mu": [10, 8, 5, 1], "nu": [13, 9, 6, 3, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 353, "lam": [6, 2, 1, 1], "mu": [11, 7, 4, 1], "nu": [15, 10, 5, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 355, "lam": [5, 4, 3, 2, 1], "mu": [8, 7, 3, 2, 1], "nu": [11, 11, 7, 4, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 301, "lam": [3, 2, 2, 1], "mu": [6, 5, 3, 2, 2, 1], "nu": [8, 6, 5, 4, 2, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 358, "lam": [4, 3, 1], "mu": [17, 4, 1], "nu": [18, 5, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 356, "lam": [5, 3, 1, 1], "mu": [11, 5, 5, 3], "nu": [15, 8, 6, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 357, "lam": [5, 2, 1], "mu": [9, 8, 5, 1], "nu": [10, 10, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 362, "lam": [6, 3, 1, 1], "mu": [10, 8, 4, 1], "nu": [12, 12, 7, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 311, "lam": [3, 2, 1, 1], "mu": [7, 5, 2, 2, 1], "nu": [9, 6, 3, 2, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 360, "lam": [3, 2, 1, 1], "mu": [8, 5, 3, 3, 1], "nu": [9, 7, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 307, "lam": [3, 2, 2, 1], "mu": [6, 5, 3, 2, 1, 1], "nu": [8, 6, 5, 3, 2, 2], "d_true": 6, "dim_lo": 6, "nverts": 7, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 359, "lam": [3, 2, 1, 1], "mu": [13, 4, 3, 1], "nu": [15, 5, 5, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 364, "lam": [4, 2, 1, 1], "mu": [8, 6, 3, 2], "nu": [11, 7, 4, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 365, "lam": [4, 3, 1, 1], "mu": [10, 5, 4, 2, 1], "nu": [11, 8, 7, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 363, "lam": [3, 2, 1, 1], "mu": [6, 6, 3, 1], "nu": [8, 7, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 322, "lam": [4, 4, 3, 1, 1, 1], "mu": [7, 6, 2, 1], "nu": [10, 8, 5, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 368, "lam": [4, 3, 2, 1], "mu": [14, 5, 4, 2], "nu": [15, 7, 7, 5, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 367, "lam": [6, 3, 2], "mu": [7, 6, 5, 4, 2], "nu": [9, 8, 8, 6, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 371, "lam": [6, 3, 2], "mu": [15, 4, 2, 1, 1], "nu": [20, 5, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 315, "lam": [4, 2, 1, 1, 1], "mu": [8, 5, 3, 1, 1], "nu": [9, 6, 6, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 366, "lam": [4, 4, 3, 2, 2], "mu": [16, 8, 3, 2], "nu": [19, 11, 6, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 372, "lam": [5, 2, 2, 1], "mu": [16, 5, 1], "nu": [17, 9, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 374, "lam": [6, 2, 1], "mu": [16, 5, 4], "nu": [18, 7, 6, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 312, "lam": [7, 1], "mu": [7, 5, 3, 2, 1], "nu": [10, 6, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 369, "lam": [5, 2, 1, 1], "mu": [9, 8, 3, 1], "nu": [13, 9, 5, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 373, "lam": [5, 2, 2, 1], "mu": [14, 7, 2], "nu": [18, 8, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 370, "lam": [5, 3, 3, 2, 1], "mu": [11, 7, 3], "nu": [14, 10, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 305, "lam": [3, 3, 1], "mu": [6, 4, 3, 2, 1, 1], "nu": [8, 5, 4, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 375, "lam": [4, 3, 1], "mu": [17, 5, 3, 1], "nu": [20, 6, 4, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 377, "lam": [3, 3, 1, 1], "mu": [13, 5, 4, 3], "nu": [15, 7, 6, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 376, "lam": [3, 2, 2, 1], "mu": [11, 5, 3, 3], "nu": [13, 6, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 329, "lam": [4, 2, 1], "mu": [7, 6, 4, 3], "nu": [8, 8, 5, 4, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 382, "lam": [3, 3, 1, 1], "mu": [11, 7, 4, 2], "nu": [13, 9, 5, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 380, "lam": [4, 3, 1], "mu": [11, 4, 2], "nu": [14, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 309, "lam": [5, 2, 1], "mu": [7, 6, 4, 1], "nu": [9, 7, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 379, "lam": [4, 2, 2, 1], "mu": [7, 5, 4, 4, 1], "nu": [8, 7, 6, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 388, "lam": [4, 4, 1, 1], "mu": [11, 7, 4, 2], "nu": [13, 8, 7, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 378, "lam": [3, 2, 2, 1], "mu": [7, 5, 4, 1, 1], "nu": [8, 7, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 385, "lam": [8, 2, 1], "mu": [11, 5, 3, 3, 1], "nu": [12, 9, 6, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 335, "lam": [3, 2, 1, 1], "mu": [8, 5, 4, 1, 1], "nu": [9, 7, 6, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 386, "lam": [7, 2, 1, 1], "mu": [7, 7, 3, 2, 1], "nu": [11, 8, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 391, "lam": [9, 5, 3, 2, 2], "mu": [15, 5, 1, 1], "nu": [18, 13, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 389, "lam": [5, 3, 1], "mu": [9, 8, 4], "nu": [13, 9, 5, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 387, "lam": [4, 2, 2, 1], "mu": [8, 8, 5, 4, 3], "nu": [10, 9, 8, 6, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 390, "lam": [4, 2, 1, 1], "mu": [9, 5, 3, 2, 1], "nu": [12, 7, 4, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 392, "lam": [5, 2, 1, 1], "mu": [10, 6, 5, 3, 2], "nu": [11, 7, 7, 6, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 393, "lam": [5, 2, 2, 1], "mu": [10, 4, 3, 3], "nu": [12, 8, 5, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 394, "lam": [3, 2, 2], "mu": [12, 6, 4, 2], "nu": [14, 7, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 398, "lam": [4, 2, 2], "mu": [10, 5, 3, 1], "nu": [11, 6, 5, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 396, "lam": [5, 3, 2, 1], "mu": [9, 6, 6, 1], "nu": [10, 10, 8, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 395, "lam": [4, 2, 1, 1], "mu": [9, 7, 5, 3, 1], "nu": [10, 8, 6, 5, 4], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 400, "lam": [5, 2, 1, 1], "mu": [11, 6, 3, 3, 1], "nu": [14, 7, 6, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 403, "lam": [5, 3, 1], "mu": [13, 6, 2, 2], "nu": [17, 7, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 397, "lam": [4, 2, 2, 1], "mu": [8, 7, 4, 2, 1], "nu": [11, 8, 6, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 405, "lam": [4, 2, 1], "mu": [11, 8, 2, 1, 1], "nu": [12, 9, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 399, "lam": [6, 2, 2, 1], "mu": [13, 4, 4, 2], "nu": [14, 9, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 407, "lam": [5, 2, 1], "mu": [8, 7, 3, 2, 1], "nu": [10, 9, 4, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 404, "lam": [5, 4, 1, 1], "mu": [17, 3, 2, 1], "nu": [21, 5, 4, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 401, "lam": [4, 2, 1, 1], "mu": [12, 11, 4, 2, 2], "nu": [13, 12, 7, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 402, "lam": [3, 2, 1, 1], "mu": [7, 5, 4, 3, 1], "nu": [8, 7, 6, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 408, "lam": [4, 3, 1, 1], "mu": [8, 5, 2, 1, 1], "nu": [9, 8, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 409, "lam": [4, 2, 2], "mu": [7, 4, 3, 2], "nu": [8, 7, 5, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 406, "lam": [4, 3, 3], "mu": [8, 5, 3, 2], "nu": [10, 8, 6, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 411, "lam": [4, 2, 2], "mu": [9, 6, 3, 2, 1], "nu": [10, 8, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 414, "lam": [6, 2, 2, 1], "mu": [8, 7, 5], "nu": [10, 8, 7, 5, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 410, "lam": [3, 2, 2], "mu": [6, 5, 3, 2, 1], "nu": [7, 6, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 415, "lam": [5, 3, 2, 2, 1], "mu": [9, 5, 2], "nu": [13, 7, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 354, "lam": [3, 3, 1], "mu": [6, 5, 4, 3, 2, 2], "nu": [8, 6, 5, 4, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 420, "lam": [6, 2, 2], "mu": [8, 7, 5, 3, 1], "nu": [13, 8, 6, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 412, "lam": [5, 2, 2, 1], "mu": [9, 8, 4, 2], "nu": [12, 9, 7, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 418, "lam": [7, 3, 1], "mu": [8, 7, 4, 3, 1], "nu": [14, 8, 5, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 417, "lam": [4, 2, 2, 1], "mu": [7, 4, 4, 2, 1], "nu": [8, 7, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 421, "lam": [4, 3, 1], "mu": [12, 5, 2], "nu": [15, 6, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 343, "lam": [4, 2, 1, 1], "mu": [6, 4, 4, 2, 2], "nu": [9, 5, 5, 3, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 422, "lam": [5, 2, 1], "mu": [8, 4, 3, 3, 1], "nu": [9, 7, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 429, "lam": [14, 5, 2], "mu": [33, 22, 10, 7], "nu": [34, 34, 11, 8, 6], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 424, "lam": [3, 2, 2], "mu": [8, 7, 5, 2], "nu": [10, 8, 7, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 430, "lam": [4, 2, 2], "mu": [10, 7, 4, 3], "nu": [11, 10, 6, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 426, "lam": [6, 2, 1], "mu": [8, 7, 5, 3, 1], "nu": [9, 9, 8, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 432, "lam": [4, 2, 2, 1], "mu": [14, 9, 2, 1], "nu": [16, 12, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 427, "lam": [2, 2, 1], "mu": [8, 3, 2, 1], "nu": [9, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 433, "lam": [3, 2, 1, 1], "mu": [8, 5, 2, 2], "nu": [9, 6, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 434, "lam": [4, 3, 1], "mu": [6, 4, 3, 2, 1], "nu": [9, 5, 4, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 431, "lam": [3, 2, 1, 1], "mu": [18, 4, 4, 2], "nu": [19, 6, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 425, "lam": [3, 2, 1, 1], "mu": [12, 12, 2, 1], "nu": [14, 13, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 437, "lam": [4, 2, 1, 1], "mu": [8, 5, 3, 1, 1], "nu": [9, 8, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 384, "lam": [2, 2, 2], "mu": [8, 7, 4, 2, 1], "nu": [9, 8, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 361, "lam": [4, 2, 1, 1], "mu": [6, 5, 4, 2, 1], "nu": [9, 5, 5, 3, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 381, "lam": [3, 2, 2, 1], "mu": [6, 5, 3, 3, 1, 1], "nu": [8, 6, 5, 3, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 438, "lam": [5, 2, 1], "mu": [18, 4, 2, 1], "nu": [19, 5, 4, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 383, "lam": [3, 3, 1], "mu": [8, 4, 2, 2, 1], "nu": [9, 6, 3, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 439, "lam": [3, 2, 2, 1], "mu": [6, 5, 3, 2], "nu": [7, 7, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 440, "lam": [4, 2, 2, 1], "mu": [8, 7, 5, 4], "nu": [10, 9, 6, 5, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 445, "lam": [5, 3, 2, 1], "mu": [15, 4, 2, 2], "nu": [16, 7, 6, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 451, "lam": [4, 2, 2], "mu": [7, 5, 4, 2], "nu": [10, 6, 5, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 158, "lam": [4, 2, 1, 1], "mu": [8, 6, 3, 2, 1, 1], "nu": [9, 6, 4, 3, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 450, "lam": [4, 2, 1, 1], "mu": [9, 4, 2, 1], "nu": [12, 5, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 444, "lam": [8, 3, 2, 1, 1], "mu": [7, 7, 4, 2, 1], "nu": [11, 9, 7, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 452, "lam": [3, 2, 2, 1], "mu": [14, 8, 3, 2], "nu": [15, 10, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 449, "lam": [6, 2, 1], "mu": [8, 7, 4, 3, 2], "nu": [9, 9, 8, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 448, "lam": [6, 2, 1, 1], "mu": [7, 6, 4, 3, 1], "nu": [8, 7, 7, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 456, "lam": [17, 3, 3, 2], "mu": [41, 13, 9, 7], "nu": [56, 15, 13, 10, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 462, "lam": [5, 4, 3, 1, 1], "mu": [10, 6, 4, 2], "nu": [12, 10, 6, 6, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 461, "lam": [6, 2, 1, 1], "mu": [14, 6, 3, 2], "nu": [18, 9, 4, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 457, "lam": [3, 2, 2, 1], "mu": [10, 6, 6, 3, 1], "nu": [12, 8, 7, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 455, "lam": [4, 2, 2], "mu": [8, 6, 3, 2], "nu": [9, 8, 6, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 458, "lam": [6, 2, 1], "mu": [8, 7, 4, 4, 1], "nu": [10, 9, 7, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 460, "lam": [5, 3, 1], "mu": [11, 6, 4], "nu": [15, 7, 5, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 463, "lam": [4, 3, 1], "mu": [9, 8, 4, 2, 2], "nu": [12, 9, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 464, "lam": [7, 2, 1, 1], "mu": [10, 7, 4, 1], "nu": [15, 8, 5, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 465, "lam": [5, 2, 1, 1], "mu": [18, 4, 2, 1], "nu": [22, 5, 3, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 467, "lam": [3, 2, 1, 1], "mu": [8, 6, 4, 1], "nu": [9, 7, 6, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 469, "lam": [4, 2, 2, 1], "mu": [11, 8, 3, 2], "nu": [13, 10, 6, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 468, "lam": [3, 2, 2, 1], "mu": [8, 6, 6, 3, 1], "nu": [9, 8, 7, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 471, "lam": [6, 3, 2, 1, 1], "mu": [9, 8, 5, 1], "nu": [12, 11, 7, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 470, "lam": [3, 2, 2, 1], "mu": [11, 6, 5, 4], "nu": [13, 7, 7, 6, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 472, "lam": [6, 3, 2], "mu": [11, 7, 3, 2], "nu": [15, 8, 7, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 475, "lam": [5, 3, 1], "mu": [12, 5, 1], "nu": [13, 6, 5, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 473, "lam": [4, 2, 1, 1], "mu": [14, 8, 5], "nu": [15, 10, 6, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 476, "lam": [3, 3, 1, 1], "mu": [15, 8, 6, 4, 2], "nu": [16, 9, 8, 6, 4], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 413, "lam": [3, 2, 2, 1], "mu": [5, 5, 3, 2, 2, 1], "nu": [7, 6, 5, 4, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 477, "lam": [3, 2, 2, 1], "mu": [9, 6, 2], "nu": [10, 8, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 416, "lam": [2, 2, 1, 1], "mu": [7, 6, 2, 1, 1], "nu": [8, 7, 3, 2, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 474, "lam": [3, 2, 1, 1], "mu": [7, 6, 5, 3, 3], "nu": [9, 7, 6, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 419, "lam": [3, 3, 1], "mu": [7, 4, 3, 2, 2, 1], "nu": [9, 5, 4, 3, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 478, "lam": [3, 2, 1, 1], "mu": [16, 6, 3, 2, 1], "nu": [18, 7, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 480, "lam": [5, 2, 2], "mu": [11, 5, 4, 1], "nu": [14, 6, 5, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 482, "lam": [8, 2, 1], "mu": [9, 5, 3, 2, 1], "nu": [12, 7, 5, 4, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 481, "lam": [4, 3, 2], "mu": [10, 6, 2, 2, 1], "nu": [13, 7, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 486, "lam": [6, 4, 2], "mu": [13, 7, 2, 1], "nu": [17, 12, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 483, "lam": [4, 2, 1, 1], "mu": [9, 6, 2, 1], "nu": [12, 8, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 479, "lam": [5, 2, 1, 1], "mu": [10, 8, 6, 2, 2], "nu": [14, 9, 7, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 443, "lam": [3, 3, 1], "mu": [11, 7, 3, 2, 1, 1], "nu": [12, 9, 4, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 485, "lam": [5, 2, 2, 1], "mu": [15, 5, 2, 2], "nu": [19, 7, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 442, "lam": [3, 2, 2, 2], "mu": [8, 5, 4, 1], "nu": [9, 7, 5, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 201, "lam": [2, 2, 2, 1], "mu": [7, 3, 3, 2, 1], "nu": [8, 4, 3, 3, 2, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 488, "lam": [3, 2, 2, 1], "mu": [7, 5, 4, 3, 2], "nu": [9, 7, 5, 4, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 423, "lam": [3, 2, 1, 1, 1], "mu": [11, 3, 2], "nu": [13, 4, 3, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 491, "lam": [5, 2, 2, 1], "mu": [11, 6, 3, 1], "nu": [12, 9, 6, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 489, "lam": [4, 3, 1, 1], "mu": [10, 6, 4, 3, 1], "nu": [11, 7, 6, 6, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 490, "lam": [5, 3, 2], "mu": [7, 5, 5, 2, 1], "nu": [10, 9, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 446, "lam": [4, 3, 2, 2, 1, 1], "mu": [12, 3, 2, 2], "nu": [15, 5, 4, 3, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 492, "lam": [3, 2, 1, 1], "mu": [9, 7, 4, 2], "nu": [10, 8, 6, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 428, "lam": [3, 2, 1, 1], "mu": [7, 5, 4, 1, 1], "nu": [9, 7, 5, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 441, "lam": [4, 2, 1, 1], "mu": [10, 3, 2, 2, 1, 1], "nu": [11, 6, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 495, "lam": [8, 3, 2, 2, 1], "mu": [11, 7, 3, 1], "nu": [13, 11, 9, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 436, "lam": [3, 3, 2, 2], "mu": [7, 7, 3, 2, 1], "nu": [9, 9, 5, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 454, "lam": [3, 2, 2], "mu": [7, 5, 3, 3, 1], "nu": [8, 7, 4, 3, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 496, "lam": [4, 2, 2, 1], "mu": [11, 9, 3, 2, 1], "nu": [14, 11, 4, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 453, "lam": [3, 2, 2], "mu": [8, 5, 3, 2], "nu": [9, 6, 5, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 435, "lam": [3, 2, 2, 1], "mu": [6, 5, 3, 3, 1], "nu": [7, 5, 5, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 499, "lam": [5, 2, 2, 1], "mu": [11, 7, 2, 1], "nu": [12, 8, 6, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 501, "lam": [4, 2, 2, 1], "mu": [10, 5, 3, 2, 1], "nu": [12, 8, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 497, "lam": [3, 2, 1, 1], "mu": [8, 6, 3, 2], "nu": [9, 7, 5, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 498, "lam": [4, 2, 1, 1], "mu": [12, 4, 2], "nu": [13, 7, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 503, "lam": [4, 2, 2, 1], "mu": [11, 7, 3, 1], "nu": [12, 9, 4, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 500, "lam": [4, 2, 1, 1], "mu": [14, 7, 3, 1], "nu": [17, 9, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 504, "lam": [4, 2, 2, 1], "mu": [10, 9, 4, 1], "nu": [12, 10, 5, 4, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 502, "lam": [4, 2, 2, 1], "mu": [12, 7, 3], "nu": [14, 9, 4, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 505, "lam": [4, 2, 1, 1], "mu": [11, 4, 2, 1], "nu": [13, 7, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 506, "lam": [7, 3, 2], "mu": [13, 7, 2, 1], "nu": [17, 12, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 509, "lam": [7, 2, 2, 1], "mu": [10, 6, 6, 1], "nu": [11, 9, 7, 6, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 508, "lam": [4, 3, 1], "mu": [11, 6, 3, 2], "nu": [14, 7, 4, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 510, "lam": [6, 3, 2], "mu": [10, 7, 6, 5, 3], "nu": [15, 10, 7, 6, 4], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 512, "lam": [8, 3, 2, 1, 1], "mu": [15, 7, 1], "nu": [19, 10, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 515, "lam": [5, 4, 1], "mu": [11, 6, 3, 2], "nu": [12, 7, 5, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 511, "lam": [3, 2, 2, 1], "mu": [12, 6, 4, 3, 2], "nu": [13, 8, 6, 4, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 516, "lam": [6, 3, 2, 1], "mu": [18, 4, 1], "nu": [23, 5, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 514, "lam": [7, 2, 2], "mu": [9, 5, 4, 2, 1], "nu": [15, 6, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 513, "lam": [5, 2, 1], "mu": [10, 9, 4, 1], "nu": [11, 11, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 466, "lam": [4, 3, 1], "mu": [8, 5, 3, 2, 1], "nu": [11, 5, 4, 3, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 521, "lam": [5, 4, 2], "mu": [10, 5, 3, 3, 1], "nu": [11, 9, 6, 5, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 520, "lam": [7, 2, 2], "mu": [11, 7, 3, 2, 1], "nu": [12, 11, 7, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 517, "lam": [5, 4, 1], "mu": [8, 5, 4, 1, 1], "nu": [12, 7, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 459, "lam": [3, 2, 1, 1], "mu": [6, 3, 2, 2, 2, 1], "nu": [7, 5, 4, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 522, "lam": [5, 2, 2, 1], "mu": [11, 5, 3, 1], "nu": [13, 8, 6, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 447, "lam": [3, 3, 1], "mu": [7, 4, 3, 2, 2, 1], "nu": [8, 5, 4, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 523, "lam": [4, 2, 2, 1], "mu": [10, 5, 3, 3, 1], "nu": [11, 8, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 519, "lam": [4, 2, 1, 1], "mu": [9, 5, 2, 2, 1], "nu": [12, 6, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 524, "lam": [3, 2, 2, 1], "mu": [7, 6, 2, 1], "nu": [9, 7, 4, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 526, "lam": [4, 2, 2, 1], "mu": [17, 5, 3, 1], "nu": [19, 6, 4, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 527, "lam": [3, 2, 2, 1], "mu": [16, 3, 2, 1], "nu": [18, 5, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 534, "lam": [9, 2, 1], "mu": [10, 8, 3, 2], "nu": [12, 11, 6, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 533, "lam": [4, 2, 1, 1], "mu": [10, 8, 6, 4, 2], "nu": [11, 11, 8, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 531, "lam": [5, 3, 1, 1], "mu": [8, 6, 4, 1, 1], "nu": [9, 7, 6, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 529, "lam": [4, 2, 1, 1], "mu": [10, 10, 3, 2, 1], "nu": [12, 11, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 537, "lam": [6, 2, 1, 1], "mu": [12, 11, 4, 3, 2], "nu": [14, 13, 6, 5, 4], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 538, "lam": [5, 2, 2, 1], "mu": [15, 8, 6, 3, 2], "nu": [17, 12, 7, 5, 3], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 532, "lam": [5, 3, 2, 1], "mu": [8, 8, 3, 3], "nu": [12, 10, 6, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 535, "lam": [6, 2, 2, 1], "mu": [13, 6, 2, 1], "nu": [16, 7, 6, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 541, "lam": [4, 2, 2, 1], "mu": [9, 9, 6, 4, 2], "nu": [11, 10, 8, 7, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 539, "lam": [4, 2, 2, 1], "mu": [8, 5, 4, 1], "nu": [10, 8, 5, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 542, "lam": [4, 4, 3, 2, 2], "mu": [20, 3, 2, 1], "nu": [23, 6, 5, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 544, "lam": [7, 2, 1], "mu": [11, 7, 2, 1], "nu": [12, 8, 6, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 546, "lam": [7, 3, 1], "mu": [15, 3, 2, 1], "nu": [16, 7, 5, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 543, "lam": [3, 2, 2, 1], "mu": [14, 7, 3, 2], "nu": [15, 9, 5, 4, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 484, "lam": [3, 3, 1, 1], "mu": [8, 5, 4, 1], "nu": [9, 7, 5, 2, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 545, "lam": [7, 3, 3, 1, 1], "mu": [10, 7, 4, 2], "nu": [12, 11, 9, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 540, "lam": [5, 2, 1, 1], "mu": [7, 6, 5, 2], "nu": [11, 7, 7, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 550, "lam": [5, 4, 1, 1], "mu": [14, 5, 2, 1], "nu": [17, 6, 4, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 547, "lam": [5, 2, 1, 1], "mu": [10, 8, 3, 1], "nu": [11, 11, 6, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 548, "lam": [4, 2, 1, 1], "mu": [9, 7, 6, 3, 1], "nu": [10, 8, 7, 5, 4], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 552, "lam": [3, 2, 2], "mu": [9, 6, 3, 2], "nu": [10, 8, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 551, "lam": [3, 2, 2, 1], "mu": [8, 6, 3, 1], "nu": [10, 7, 4, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 549, "lam": [6, 5, 4, 3, 2], "mu": [17, 4, 2, 1], "nu": [22, 9, 5, 4, 4], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 556, "lam": [5, 3, 2, 1], "mu": [12, 8, 2, 1], "nu": [15, 12, 3, 2, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 553, "lam": [5, 3, 1, 1], "mu": [12, 6, 4], "nu": [16, 7, 5, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 554, "lam": [6, 2, 2, 1], "mu": [13, 6, 4, 1], "nu": [15, 11, 5, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 557, "lam": [7, 2, 1], "mu": [8, 5, 4, 3, 1], "nu": [11, 7, 6, 5, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 555, "lam": [3, 2, 1, 1], "mu": [12, 5, 2], "nu": [14, 6, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 493, "lam": [3, 3, 1], "mu": [5, 4, 3, 1], "nu": [6, 5, 4, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 494, "lam": [3, 2, 2, 1], "mu": [6, 5, 4, 2, 2], "nu": [8, 6, 5, 4, 2, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 560, "lam": [6, 3, 2], "mu": [14, 6, 3, 1], "nu": [19, 9, 4, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 561, "lam": [6, 3, 2], "mu": [14, 6, 2, 2], "nu": [19, 7, 5, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 559, "lam": [8, 2, 1], "mu": [9, 7, 5, 2], "nu": [11, 10, 7, 3, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 562, "lam": [4, 2, 2, 1], "mu": [10, 5, 5, 2], "nu": [11, 8, 6, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 567, "lam": [3, 3, 1, 1], "mu": [11, 9, 4, 2], "nu": [13, 10, 6, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 569, "lam": [6, 2, 2, 1], "mu": [8, 6, 6, 2], "nu": [10, 9, 7, 6, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 563, "lam": [7, 3, 2, 2, 1], "mu": [13, 5, 4], "nu": [15, 11, 6, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 487, "lam": [4, 2, 1], "mu": [5, 3, 3, 2, 2], "nu": [6, 5, 4, 3, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 571, "lam": [7, 3, 1], "mu": [10, 9, 2, 1, 1], "nu": [11, 10, 8, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 573, "lam": [3, 3, 1, 1], "mu": [11, 7, 4, 2], "nu": [13, 8, 5, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 575, "lam": [4, 2, 2, 1], "mu": [9, 6, 6, 3, 1], "nu": [11, 9, 7, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 568, "lam": [5, 4, 1], "mu": [10, 10, 8, 4, 2], "nu": [13, 11, 9, 8, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 564, "lam": [4, 3, 2, 2], "mu": [7, 6, 4, 3, 1], "nu": [9, 8, 7, 6, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 507, "lam": [3, 2, 2], "mu": [7, 5, 4, 1, 1], "nu": [9, 6, 5, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 574, "lam": [4, 2, 2], "mu": [10, 7, 4, 1], "nu": [12, 8, 5, 4, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 576, "lam": [3, 2, 2], "mu": [10, 7, 4, 2], "nu": [11, 9, 5, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 570, "lam": [4, 2, 1, 1], "mu": [9, 7, 5, 2, 1], "nu": [12, 9, 6, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 577, "lam": [3, 2, 2, 1], "mu": [8, 7, 5, 1], "nu": [10, 8, 6, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 579, "lam": [5, 2, 2, 1], "mu": [10, 4, 3, 2, 1], "nu": [11, 8, 4, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 582, "lam": [4, 2, 2, 1], "mu": [11, 5, 4, 2, 2], "nu": [12, 7, 6, 5, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 580, "lam": [6, 5, 3, 3, 2], "mu": [8, 7, 6, 1], "nu": [12, 12, 10, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 583, "lam": [4, 3, 1], "mu": [20, 3, 2, 1], "nu": [23, 4, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 528, "lam": [3, 3, 1, 1], "mu": [6, 4, 3, 1, 1], "nu": [8, 6, 5, 2, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 581, "lam": [4, 2, 1, 1], "mu": [11, 10, 4, 1, 1], "nu": [12, 11, 7, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 584, "lam": [5, 4, 1], "mu": [8, 8, 6, 2, 1], "nu": [11, 9, 7, 6, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 588, "lam": [5, 3, 2, 1], "mu": [19, 3, 2], "nu": [23, 4, 3, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 585, "lam": [3, 2, 2, 1], "mu": [19, 4, 3, 1], "nu": [21, 6, 5, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 518, "lam": [5, 3, 1], "mu": [7, 5, 3, 2, 1], "nu": [11, 5, 4, 4, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 589, "lam": [4, 3, 1], "mu": [14, 3, 2, 1], "nu": [15, 4, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 525, "lam": [3, 2, 1, 1], "mu": [6, 5, 3, 1, 1], "nu": [6, 6, 5, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 591, "lam": [5, 2, 1, 1], "mu": [12, 6, 3, 2], "nu": [15, 9, 4, 3, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 590, "lam": [4, 2, 2, 1], "mu": [13, 5, 4, 2, 1], "nu": [16, 7, 6, 3, 2], "d_true": 5, "dim_lo": 5, "nverts": 6, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 593, "lam": [6, 3, 2], "mu": [16, 5, 3, 2, 1], "nu": [21, 6, 4, 4, 3], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 594, "lam": [5, 4, 1], "mu": [9, 8, 4, 1], "nu": [10, 10, 8, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 592, "lam": [4, 2, 1, 1], "mu": [9, 6, 3, 1, 1], "nu": [12, 7, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 596, "lam": [6, 2, 2], "mu": [14, 6, 2, 1], "nu": [17, 7, 6, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 597, "lam": [4, 2, 1], "mu": [13, 5, 2, 1, 1], "nu": [14, 6, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 598, "lam": [4, 3, 3], "mu": [9, 7, 4, 1], "nu": [12, 9, 7, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 595, "lam": [5, 3, 1, 1], "mu": [9, 6, 2, 1], "nu": [13, 9, 3, 2, 1], "d_true": 5, "dim_lo": 5, "nverts": 7, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 599, "lam": [3, 2, 2, 1], "mu": [13, 10, 4, 3, 2], "nu": [14, 12, 5, 5, 4], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 530, "lam": [3, 2, 1, 1], "mu": [12, 3, 2, 2], "nu": [14, 4, 3, 3, 1, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 558, "lam": [3, 3, 1, 1], "mu": [8, 4, 2, 2, 1], "nu": [10, 5, 3, 3, 2, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 324, "lam": [2, 2, 1, 1, 1], "mu": [4, 4, 3, 2, 1, 1], "nu": [5, 5, 4, 3, 2, 2, 1], "d_true": 6, "dim_lo": 6, "nverts": 9, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 536, "lam": [4, 2, 1], "mu": [6, 6, 3, 2, 2], "nu": [8, 7, 4, 3, 3, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 578, "lam": [3, 2, 2, 1], "mu": [7, 4, 3, 3, 2], "nu": [8, 5, 4, 4, 4, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 566, "lam": [3, 3, 1], "mu": [5, 4, 3, 2, 2, 1], "nu": [6, 5, 4, 4, 3, 2], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 572, "lam": [3, 2, 2, 1], "mu": [5, 4, 3, 3, 1], "nu": [7, 6, 4, 4, 2, 1], "d_true": 6, "dim_lo": 6, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 586, "lam": [4, 2, 1, 1], "mu": [8, 3, 2, 2, 1], "nu": [8, 6, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 6, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}
+{"idx": 565, "lam": [6, 2, 1], "mu": [7, 7, 3, 1], "nu": [10, 7, 4, 3, 2, 1], "d_true": 4, "dim_lo": 4, "nverts": 5, "maxden": 1, "vstatus": "SIMPLEX_CONSISTENT"}
+{"idx": 587, "lam": [2, 2, 1, 1], "mu": [5, 4, 3, 2, 1], "nu": [5, 5, 4, 3, 2, 1, 1], "d_true": 5, "dim_lo": 5, "nverts": 8, "maxden": 2, "vstatus": "PROVABLY_NOT_SIMPLEX"}

@@ -237,14 +237,18 @@ struct Worker {
     }
     void dfs(size_t ci, int sz) {
         if (!homs.empty() && subtree_all_bipartite(ci)) return;
-        if (sz > 0) evaluate();
+        bool anychild = false;
         for (size_t i = ci; i < classes.size(); i++) {
             int add = (int)classes[i].size();
             if (sz + add > dmax) continue;
             for (int s : classes[i]) { curS.push_back(s); inS[s] = 1; }
-            if (triangle_free()) { n_sets++; dfs(i + 1, sz + add); }
+            if (triangle_free()) { anychild = true; n_sets++; dfs(i + 1, sz + add); }
             for (int s : classes[i]) { inS[s] = 0; curS.pop_back(); }
         }
+        // some class with index >= ci is addable  =>  curS is not maximal  =>  by monotonicity
+        // of bip it cannot be optimal; only leaves of the search tree are candidates, and
+        // evaluate() re-verifies full maximality (classes with index < ci included).
+        if (sz > 0 && !anychild) evaluate();
     }
 };
 

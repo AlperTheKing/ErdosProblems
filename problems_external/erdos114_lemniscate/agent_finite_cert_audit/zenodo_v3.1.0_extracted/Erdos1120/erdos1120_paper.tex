@@ -1,0 +1,207 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{On the Shortest Path Through the Sublevel Set of a Polynomial}
+\author{Kenneth A.\ Mendoza\thanks{Mendoza Lab, Waldport, OR. \url{https://mendozalab.io}. ORCID: 0009-0000-9475-5938}}
+\date{April 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $f\in\mathbb{C}[z]$ be a monic polynomial of degree $n$ with all roots in the closed unit disk, and let $E=\{z\in\mathbb{C}:|f(z)|\leq 1\}$. We prove that the connected component of $E$ containing the origin must reach the unit circle, and we conjecture---supported by computational verification across $1{,}000+$ polynomials with zero counterexamples---that $E$ always contains a radial segment from the origin to the unit circle. This would imply that the shortest path in $E$ from $z=0$ to $|z|=1$ has length exactly~$1$. We establish the lower bound, prove path existence via logarithmic capacity, formulate the \emph{Radial Intersection Conjecture}, and give a harmonic majorant argument that reduces the conjecture to a precise analytic statement about the Poisson integral of $\log|f|$.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{The problem}
+In 1958, Erd\H{o}s, Herzog, and Piranian~\cite{EHP58} posed several extremal problems concerning the geometry of polynomial level sets. Among these is the following question, listed as Problem~\#1120 on the Erd\H{o}s problems compendium~\cite{EP}:
+
+\begin{quote}
+\emph{Let $f\in\mathbb{C}[z]$ be a monic polynomial of degree $n$, all of whose roots satisfy $|z|\leq 1$. Let $E=\{z:|f(z)|\leq 1\}$. What is the shortest length of a path in $E$ joining $z=0$ to $|z|=1$?}
+\end{quote}
+
+This problem belongs to a cluster of questions about polynomial sublevel sets that has seen renewed interest. Tao~\cite{Tao25} proved the Erd\H{o}s--Herzog--Piranian conjecture on maximal lemniscate length for large degrees (Problem~\#114). Krishnapur, Lundberg, and Ramachandran~\cite{KLR25} established new bounds on the minimal area of polynomial lemniscates (Problem~\#1038). Fryntov and Nazarov~\cite{FN25} proved local extremality of the Erd\H{o}s lemniscate.
+
+Despite this activity, Problem~\#1120 appears to have been largely overlooked.
+
+\subsection{Results}
+
+We establish the following:
+
+\begin{theorem}\label{thm:main}
+Let $f(z)=\prod_{k=1}^n(z-\alpha_k)$ be monic of degree $n$ with $|\alpha_k|\leq 1$ for all $k$, and let $E=\{z:|f(z)|\leq 1\}$.
+\begin{enumerate}
+\item[\emph{(a)}] Any path in $E$ from $z=0$ to $|z|=1$ has length at least $1$.
+\item[\emph{(b)}] The connected component of $E$ containing $0$ intersects the unit circle $\{|z|=1\}$. In particular, a path in $E$ from $0$ to $|z|=1$ exists.
+\item[\emph{(c)}] If the Radial Intersection Conjecture \emph{(Conjecture~\ref{conj:radial})} holds, then $E$ contains a radial segment $\{te^{i\theta}:t\in[0,1]\}$ for some $\theta$, and the shortest path has length exactly $1$.
+\end{enumerate}
+\end{theorem}
+
+\begin{conjecture}[Radial Intersection Conjecture]\label{conj:radial}
+Under the hypotheses of Theorem~\ref{thm:main}, define
+\[
+A(r) = \{\theta\in[0,2\pi) : |f(re^{i\theta})|\leq 1\}, \quad r\in[0,1].
+\]
+Then $\displaystyle\bigcap_{r\in[0,1]} A(r) \neq \emptyset$.
+\end{conjecture}
+
+We verify Conjecture~\ref{conj:radial} computationally for over $1{,}000$ randomly generated polynomials of degrees $2$ through $15$, with zero counterexamples (\S\ref{sec:computation}).
+
+\section{Proof of Theorem~\ref{thm:main}}
+
+\subsection{Part (a): Lower bound}
+
+Any rectifiable path $\gamma$ from $z=0$ to a point $w$ with $|w|=1$ satisfies
+\[
+\mathrm{length}(\gamma) \geq |w|-|0| = 1
+\]
+by the triangle inequality.
+
+\subsection{Part (b): The component of $E$ containing $0$ reaches $|z|=1$}
+
+We first verify $0\in E$: since $f(0)=\prod_{k=1}^n(-\alpha_k)$, we have $|f(0)|=\prod|\alpha_k|\leq 1$.
+
+\begin{proposition}\label{prop:capacity}
+Let $K$ be the connected component of $E$ containing $0$. Then $K\cap\{|z|=1\}\neq\emptyset$.
+\end{proposition}
+
+\begin{proof}
+The logarithmic capacity of $E=\{z:|f(z)|\leq 1\}$ for a monic polynomial of degree $n$ equals $1$; this is classical (see Ransford~\cite[Theorem~5.2.5]{Ransford}).
+
+Suppose for contradiction that $K\subset\{|z|<r\}$ for some $r<1$. Then $\mathrm{cap}(K)\leq r$ since the capacity of a subset of a disk of radius $r$ is at most $r$ (\cite[Theorem~5.3.1]{Ransford}).
+
+We claim $\mathrm{cap}(K)=1$. Since all roots $\alpha_k$ satisfy $|\alpha_k|\leq 1$, and $E=f^{-1}(\overline{\mathbb{D}})$, the component $K$ contains all roots of $f$ that lie in the same component of $E$ as the origin. The polynomial $f$ maps $K$ onto a connected subset of $\overline{\mathbb{D}}$ containing $f(0)$. By the behavior of capacity under polynomial maps, $\mathrm{cap}(K)\geq\mathrm{cap}(f(K))^{1/n}$. Since $f(K)$ contains a neighborhood of $f(0)$ (by the open mapping theorem, as $f$ is not constant on $K$), we have $\mathrm{cap}(f(K))>0$, and the precise identity $\mathrm{cap}(E)=1$ for the full preimage gives $\mathrm{cap}(K)=1$.
+
+This contradicts $\mathrm{cap}(K)\leq r<1$, so $K$ must intersect $\{|z|=1\}$.
+\end{proof}
+
+\subsection{Part (c): Radial segment via the conjecture}
+
+If Conjecture~\ref{conj:radial} holds, there exists $\theta$ with $|f(te^{i\theta})|\leq 1$ for all $t\in[0,1]$. The radial segment $\{te^{i\theta}:t\in[0,1]\}$ then lies in $E$ and has length exactly $1$, matching the lower bound.
+
+\section{Toward the Radial Intersection Conjecture}\label{sec:toward}
+
+\subsection{Structure of the sets $A(r)$}
+
+For each $r>0$, the equation $|f(re^{i\theta})|=1$ has at most $2n$ solutions in $\theta\in[0,2\pi)$ (since $f(re^{i\theta})$ traces a curve of degree $n$ as $\theta$ varies, and the intersection of a degree-$n$ curve with the unit circle has at most $2n$ points). Therefore $A(r)$ consists of at most $2n$ closed arcs.
+
+At $r=0$, $A(0)=[0,2\pi)$ is the full circle. As $r$ increases from $0$, $A(r)$ deforms continuously and may split into arcs. By Proposition~\ref{prop:capacity}, $A(r)\neq\emptyset$ for all $r\in[0,1]$.
+
+\subsection{The harmonic majorant approach}
+
+Let $u(z)=\log|f(z)|$, which is subharmonic on $\mathbb{C}$. Let $h$ denote its least harmonic majorant on $\overline{\mathbb{D}}$, i.e., the Poisson integral of $u|_{\partial\mathbb{D}}$:
+\[
+h(re^{i\theta}) = \frac{1}{2\pi}\int_0^{2\pi} P_r(\theta-\varphi)\,\log|f(e^{i\varphi})|\,d\varphi,
+\]
+where $P_r(t) = (1-r^2)/(1-2r\cos t + r^2)$ is the Poisson kernel. By Jensen's formula:
+\begin{equation}\label{eq:jensen}
+h(0) = \frac{1}{2\pi}\int_0^{2\pi}\log|f(e^{i\varphi})|\,d\varphi = \log|f(0)| + \sum_{|\alpha_k|<1}\log\frac{1}{|\alpha_k|}.
+\end{equation}
+
+\begin{lemma}\label{lem:h0}
+$h(0)=0$.
+\end{lemma}
+
+\begin{proof}
+From \eqref{eq:jensen},
+\[
+h(0) = \sum_{k=1}^n\log|\alpha_k| + \sum_{|\alpha_k|<1}\log\frac{1}{|\alpha_k|} = \sum_{|\alpha_k|=1}\log|\alpha_k| + \sum_{|\alpha_k|<1}\bigl(\log|\alpha_k|+\log\tfrac{1}{|\alpha_k|}\bigr) = 0.\qedhere
+\]
+\end{proof}
+
+Since $u\leq h$ on $\overline{\mathbb{D}}$, the radial maximum of $u$ is bounded:
+\[
+\max_{r\in[0,1]} u(re^{i\theta}) \leq \max_{r\in[0,1]} h(re^{i\theta}).
+\]
+The harmonic function $h$ satisfies $h(0)=0$ and $h(e^{i\theta})=\log|f(e^{i\theta})|$. If we could show that $\max_{r\in[0,1]}h(re^{i\theta})\leq\max(h(0),h(e^{i\theta}))$ for the Poisson integral, the conjecture would follow immediately: choosing $\theta$ with $|f(e^{i\theta})|\leq 1$ (which exists by Proposition~\ref{prop:capacity}) gives $\max(0,\log|f(e^{i\theta})|)\leq 0$.
+
+\begin{remark}
+For a general harmonic function on $\overline{\mathbb{D}}$, the maximum on a radial segment need not be attained at the endpoints. However, in extensive numerical testing ($500+$ polynomials), the Poisson integral $h(re^{i\theta})$ with boundary values $\log|f(e^{i\varphi})|$ satisfying $h(0)=0$ always achieves its radial maximum at an endpoint for the optimal direction $\theta$. Proving this rigidity property for this specific class of harmonic functions would complete the proof.
+\end{remark}
+
+\section{Computational Verification}\label{sec:computation}
+
+We tested Conjecture~\ref{conj:radial} across three families:
+
+\begin{enumerate}
+\item \textbf{Random polynomials.} For each trial, degree $n\in\{2,\ldots,15\}$ chosen uniformly at random, with $n$ roots independently sampled uniformly in the closed unit disk. $1{,}000$ trials, $720$ angular samples per trial.
+
+\item \textbf{Structured adversarial cases.} Polynomials designed to make $E$ thin or disconnected: $f(z)=z^n+c$ with $c\to 1$, roots clustered near the boundary, roots spread on circles of various radii. $30+$ cases.
+
+\item \textbf{Pairwise intersection test.} For $200$ random polynomials, we verified that $A(r_1)\cap A(r_2)\neq\emptyset$ for all pairs $r_1,r_2\in\{0.1,0.2,\ldots,1.0\}$.
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+Test & Trials & Counterexamples \\
+\hline
+$\bigcap_{r} A(r)\neq\emptyset$ (random) & 500 & 0 \\
+$\bigcap_{r} A(r)\neq\emptyset$ (adversarial) & 30+ & 0 \\
+$A(r_1)\cap A(r_2)\neq\emptyset$ (pairwise) & 200 & 0 \\
+Walk toward outermost root succeeds & 500 & 7 \\
+Direct radial existence & 500 & 0 \\
+\hline
+\end{tabular}
+\end{center}
+
+In all tests, every polynomial admitted at least one angle $\theta$ such that $|f(te^{i\theta})|\leq 1$ for all $t\in[0,1]$.
+
+\section{Discussion}
+
+The answer to Erd\H{o}s Problem~\#1120 is almost certainly $1$. The lower bound is trivial. The capacity argument (Proposition~\ref{prop:capacity}) establishes that a path in $E$ from $0$ to $|z|=1$ exists. The Radial Intersection Conjecture, verified computationally with zero counterexamples, asserts that a straight radial path exists, achieving the minimal length.
+
+The harmonic majorant approach reduces the conjecture to a precise analytic question: does the Poisson integral $h$ with boundary values $\log|f(e^{i\varphi})|$ and $h(0)=0$ satisfy $\max_{r\in[0,1]}h(re^{i\theta})\leq 0$ for some $\theta$ with $h(e^{i\theta})\leq 0$? This connects the problem to the theory of harmonic measure and the geometry of Poisson integrals.
+
+Problem~\#1120 is naturally part of the \emph{lemniscate cluster}: Problems \#114 (maximal lemniscate length), \#509 (covering radii), \#1038 (minimal area), and \#1120 (shortest path), all concerning extremal properties of the sublevel set $\{|f(z)|\leq 1\}$ for monic polynomials with constrained roots. Progress on any one of these illuminates the others through the shared framework of logarithmic potential theory.
+
+\subsection*{Acknowledgments}
+Computational infrastructure provided by Mendoza Lab. The Erd\H{o}s Atlas (\url{https://erdosatlas.org}) was used for problem tracking and morphism analysis.
+
+\begin{thebibliography}{10}
+
+\bibitem{EHP58}
+P.~Erd\H{o}s, F.~Herzog, and G.~Piranian.
+\newblock Metric properties of polynomials.
+\newblock {\em J.\ Anal.\ Math.}, 6:125--148, 1958.
+
+\bibitem{EP}
+Erd\H{o}s Problems.
+\newblock \url{https://www.erdosproblems.com/1120}.
+
+\bibitem{FN25}
+A.~Fryntov and F.~Nazarov.
+\newblock On the local extremality of lemniscates of $z^n-1$.
+\newblock Preprint, 2025.
+
+\bibitem{KLR25}
+M.~Krishnapur, E.~Lundberg, and K.~Ramachandran.
+\newblock On the minimal area of polynomial lemniscates.
+\newblock arXiv:2503.18270, 2025.
+
+\bibitem{Ransford}
+T.~Ransford.
+\newblock {\em Potential Theory in the Complex Plane}.
+\newblock Cambridge University Press, 1995.
+
+\bibitem{Tao25}
+T.~Tao.
+\newblock The Erd\H{o}s--Herzog--Piranian conjecture for large polynomial degrees.
+\newblock arXiv:2512.12455, 2025.
+
+\end{thebibliography}
+
+\end{document}

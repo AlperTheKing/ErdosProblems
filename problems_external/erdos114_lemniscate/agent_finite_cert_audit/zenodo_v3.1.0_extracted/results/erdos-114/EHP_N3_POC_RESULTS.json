@@ -1,0 +1,31 @@
+{
+  "reference_length": 9.171066161553705,
+  "reference_known": 9.1743,
+  "grid_resolution": 800,
+  "relative_error_pct": 0.03524888488816937,
+  "sweep_2d_resolution": 200,
+  "sweep_2d_max_length": 9.02804780228281,
+  "sweep_2d_max_at": [
+    4.194026192542374,
+    2.0891591146372126
+  ],
+  "sweep_2d_all_below_ref": true,
+  "sweep_2d_time_secs": 24.237091208,
+  "sweep_2d_evals": 40000,
+  "sweep_4d_resolution": 20,
+  "sweep_4d_radius": 4.0,
+  "sweep_4d_max_length": 7.930363157184445,
+  "sweep_4d_max_at": [
+    0.20000000000000018,
+    0.20000000000000018,
+    -0.19999999999999973,
+    -1.0
+  ],
+  "sweep_4d_all_below_ref": true,
+  "sweep_4d_total_boxes": 160000,
+  "sweep_4d_time_secs": 127.808100208,
+  "sweep_4d_time_per_box_us": 798.8006263000001,
+  "extrap_boxes_fine": 160096,
+  "extrap_time_fine_hours": 0.03552355140781245,
+  "extrap_note": "Branch-and-bound with 6 levels, survival rate 0.0000, 10 cores. Interval arithmetic adds ~10x overhead."
+}

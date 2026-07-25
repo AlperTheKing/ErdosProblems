@@ -1,0 +1,144 @@
+{
+  "preregistration_date": "2026-04-19",
+  "protocol": "GSP Track A pre-registration — exp8_v2 (hypercube Leg-4) and exp9_v2 (chiral Leg-4) redesigns",
+  "authority": "TRACK_A_REDESIGN.md in this directory; user-approved 2026-04-19",
+  "binding_rule": "These criteria, thresholds, and operator selections are FROZEN. Any post-hoc tuning of thresholds, criteria definitions, or operator choice invalidates the pre-registration and must be documented as a new preregistration with user approval.",
+
+  "exp8_v2": {
+    "title": "Hypercube Leg-4 M_L kink test, three-null version",
+    "supersedes": "erdos-experiments/results/COLLIDER_SALVO2_2026-04-18/exp8_ML_hypercube_leg4/",
+    "hypothesis": "Δ(ε)/√n on a signed hypercube has a kink at ε = M_L that is absent on all three geometry-killed nulls.",
+    "parameters": {
+      "M_L": 0.4804530139182014,
+      "n_values": [10, 11, 12, 13],
+      "n_realizations_per_n": 20,
+      "eps_grid": {"min": 0.1, "max": 1.0, "step": 0.005},
+      "random_seed_base": 20260419
+    },
+    "nulls": [
+      {
+        "id": "ER_Gnp",
+        "description": "Erdős–Rényi G(2^n, p) with p = n / 2^n matching hypercube average degree",
+        "destroys": "cube connectivity, coordination structure, Huang signature",
+        "keeps": "node count, average degree"
+      },
+      {
+        "id": "sign_randomized_cube",
+        "description": "Hypercube graph with Huang signs replaced by i.i.d. ±1 per edge",
+        "destroys": "Huang sign pattern (source of λ_max = √n bound)",
+        "keeps": "hypercube adjacency, coordination n"
+      },
+      {
+        "id": "degree_shuffle",
+        "description": "Configuration-model random graph with same degree sequence as hypercube",
+        "destroys": "specific adjacency",
+        "keeps": "degree sequence"
+      }
+    ],
+    "kink_detection": {
+      "method": "piecewise_linear_model_selection",
+      "M0_description": "Single-slope linear regression on Δ(ε)/√n vs ε across full eps_grid",
+      "M1_description": "Two-slope piecewise linear with knot FIXED at ε = M_L (knot is NOT data-determined)",
+      "selection_metric": "delta_BIC = BIC(M0) - BIC(M1)",
+      "strength_metric": "slope_change = |slope_right - slope_left| at the fixed knot in M1"
+    },
+    "pass_criteria_ALL_REQUIRED": [
+      {
+        "id": "C1_strength_ratio",
+        "description": "Kink slope_change ratio (cube / null) ≥ 3 at n ≥ 11 for all three nulls independently",
+        "threshold": 3.0,
+        "n_min": 11,
+        "applies_to": ["ER_Gnp", "sign_randomized_cube", "degree_shuffle"]
+      },
+      {
+        "id": "C2_scaling_monotonic",
+        "description": "Cube kink slope_change is strictly monotonically increasing across n ∈ {10,11,12,13}. On each null the slope_change is consistent with zero-slope in n (Spearman |ρ| ≤ 0.3).",
+        "cube_rule": "strictly_increasing_in_n",
+        "null_rule": "spearman_abs_rho_leq_0.3",
+        "rationale": "Pre-registration avoids committing to an exact predicted exponent for the M_L signature; a strict monotone increase on cube versus flat on all nulls is a weaker but fully testable claim. If Track B requires an exponent, add it in a separate preregistration amendment."
+      },
+      {
+        "id": "C3_model_selection",
+        "description": "Cube ΔBIC ≥ 10 AND at least one null has ΔBIC ≤ 2",
+        "cube_threshold": 10.0,
+        "null_threshold": 2.0,
+        "any_null_rule": "at_least_one_null"
+      }
+    ],
+    "verdict_rules": {
+      "LEG4_PASS": "C1 AND C2 AND C3 pass",
+      "LEG4_FAIL": "any of C1, C2, C3 fails",
+      "LEG4_AMBIGUOUS_NOT_ALLOWED": "no 'partial' verdict in v2 — every recipe returns PASS or FAIL"
+    },
+    "output_schema": {
+      "file": "exp8_v2_results.json",
+      "required_keys": ["experiment", "date", "preregistration_ref", "hypothesis", "M_L", "by_n_cube", "by_n_ER_Gnp", "by_n_sign_randomized_cube", "by_n_degree_shuffle", "model_selection", "criteria_results", "verdict"]
+    },
+    "consequence_if_fail": "Hypercube is REMOVED from the GSP scoped-exhausted roster. GSP doc and CLAUDE.md updated to reflect removal. No public claim may cite hypercube as a scoped example until a future pre-registered test passes."
+  },
+
+  "exp9_v2": {
+    "title": "Chiral-RMT soft-edge test — Path B: genuinely chiral operator",
+    "supersedes": "erdos-experiments/results/COLLIDER_SALVO2_2026-04-18/exp9_neutrino_chiral/",
+    "hypothesis": "σ_min of a genuinely chiral random matrix lands in chiral-RMT universality: (1) microscopic universality of σ_min · W after numerical floor-filtering, (2) soft-edge kink strength ≥ bulk kink strength at every W, (3) flavor-oscillation range is stable or growing in W.",
+    "operator_selection": {
+      "primary": {
+        "id": "bipartite_gaussian",
+        "description": "M × N bipartite Gaussian random matrix, M = 2W, N = W, entries ~ N(0, 1/√W). Compute σ_min via SVD.",
+        "rationale": "Standard chiral-RMT ensemble with known soft-edge behavior."
+      },
+      "fallback": {
+        "id": "dirac_block",
+        "description": "[[0, X], [X^dagger, 0]] block operator, X a W × W Gaussian matrix with entries ~ N(0, 1/√W). Compute σ_min = min positive eigenvalue.",
+        "rationale": "Physical Dirac-operator form; equivalent universality class but different discretization. Used only if bipartite_gaussian fails due to implementation issue, not if physics disagrees."
+      },
+      "rule": "Run primary. Only fall back if the primary has an implementation blocker documented in the rerun log."
+    },
+    "parameters": {
+      "Ws": [20, 40, 80, 160, 320],
+      "n_realizations_per_W": 100,
+      "random_seed_base": 20260419
+    },
+    "numerical_guards": {
+      "sigma_min_floor": 1e-10,
+      "rule": "Realizations with σ_min < floor are EXCLUDED from criterion 1 universality check. Log exclusion count per W. If > 5% excluded at any W, flag as methodology issue and report separately before verdict."
+    },
+    "criteria_ALL_REQUIRED_FOR_CONFIRMATION": [
+      {
+        "id": "C1_microscopic_universal",
+        "description": "CDF of σ_min · W (after floor-filtering) converges across W. Test: Kolmogorov-Smirnov distance between empirical CDFs at consecutive Ws.",
+        "threshold": "max KS distance across consecutive W pairs ≤ 0.1",
+        "rationale_for_0.1": "Typical threshold for CDF-convergence in RMT universality tests at n=100 realizations."
+      },
+      {
+        "id": "C2_soft_kink_dominates_bulk",
+        "description": "At each W, sigma_kink_at_soft strength / sigma_kink_at_bulk strength ≥ 1.",
+        "threshold": 1.0,
+        "apply_to_all_W": true,
+        "note": "This is the SAME criterion that cleanly rejected the Ulam-Galerkin doubling-map in exp9_v1. It is the real discriminator for chiral-soft-edge class."
+      },
+      {
+        "id": "C3_stable_flavor_oscillation",
+        "description": "Flavor oscillation range should not monotonically shrink with W. Test: fit range ~ W^β via log-log regression; require β ≥ -0.1 at 2σ.",
+        "threshold_beta": -0.1,
+        "rationale": "v1 criterion passed on monotonically-decaying range (0.53→0.33) which is consistent with noise averaging. v2 requires stable or growing range as true oscillation signature."
+      }
+    ],
+    "verdict_rules": {
+      "CHIRAL_CLASS_CONFIRMED": "C1 AND C2 AND C3 pass",
+      "CHIRAL_CLASS_REJECTED": "C2 fails",
+      "CHIRAL_CLASS_WEAK": "C2 passes but C1 or C3 fails — operator has the discriminating property but does not fully converge in the tested W range"
+    },
+    "consequence_if_reject": "Neutrino slot remains empty in GSP scoped roster. If no chiral operator in the atlas produces CONFIRMED, the scoped-slot is formally DELETED from the GSP roster and the principle doc updated.",
+    "consequence_if_weak": "Report as 'chiral-class signature observed, universality not demonstrated at tested W range' — not sufficient to cite in any public claim about the scoped roster."
+  },
+
+  "track_B_gate": {
+    "rule": "Track B pilot (QC ↔ #30 Sidon and QC ↔ #20 sunflower Leg-4 tests) MAY NOT BEGIN until exp8_v2 and exp9_v2 have been executed per this preregistration and results have been reviewed by the user.",
+    "rationale": "The Leg-4 template for the 10 QC edges must inherit the three methodological upgrades proven in Track A: (a) geometry-killed null (not a different geometric system), (b) pre-registered thresholds with no post-hoc tuning, (c) model-selection kink test (no peak-finding artifacts). Running Track B before Track A lands risks contaminating 10 artifacts with the same flaws that produced exp8 and exp9 v1 failures."
+  },
+
+  "amendments": {
+    "rule": "Any change to thresholds, criteria, operators, or n/W ranges after this file is committed must be recorded as a new JSON in this directory named TRACK_A_PREREGISTRATION_AMENDMENT_<date>.json, citing the specific change and the reason. The original file remains authoritative."
+  }
+}

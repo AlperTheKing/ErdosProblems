@@ -1,0 +1,11 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38601,1 +38601,7 @@
+ [2026-07-23T22:59:59+03:00] > ATTACK | NEXT: derive odd-term gcd periods and falsify the rank-density lemma for primes r<=100000.
++[2026-07-23T23:04:50+03:00] FAIL ATTACK | DID: derived exact #276 zero periods | RESULT: finite cover equals anchored residue cover; rank sum fails at 2,3,5 | D: R1 DEAD
++[2026-07-23T23:04:51+03:00] FAIL CHECK | DID: applied #276 exit condition | RESULT: DEAD: no smaller lemma beyond constrained covering system | D: #276 halted
++[2026-07-23T23:04:52+03:00] OK SELECT | DID: selected #708 two-split route | RESULT: live OPEN, no claims or current worker | D: target=#708
++[2026-07-23T23:04:53+03:00] OK GATE | DID: checked official page and forum | RESULT: one wording comment; no solution claim | D: pass
++[2026-07-23T23:04:54+03:00] OK PLAN | DID: wrote five-field DIRECT ROUTE R1 | RESULT: problems_external/erdos_708/APPROACH_REGISTRY.md | D: frontier=two-split
++[2026-07-23T23:04:55+03:00] > ATTACK | NEXT: exhaust M<=10 intervals, subsets, divisor splits and matching; replay first failure independently.

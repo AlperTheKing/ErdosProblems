@@ -1,0 +1,6 @@
+ "target_denominator": 3,
+ "bases": 2892,
+ "full_dim_bases_found": 0,
+ "realized": false,
+ "hits": []
+}

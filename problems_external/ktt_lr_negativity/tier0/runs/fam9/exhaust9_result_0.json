@@ -1,0 +1,84 @@
+{
+ "window": "r=5, |nu| in [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], exhaustive over all (lam,mu,nu) with lam,mu subset nu, |lam|+|mu|=|nu|, nu with exactly 5 positive parts; lam<->mu quotiented",
+ "fully_completed_N": [
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18
+ ],
+ "triplesTested": 10249,
+ "status_counts": {
+  "OK": 5071,
+  "EMPTY": 5178
+ },
+ "bestHstarD": {
+  "value": 1,
+  "triple": [
+   [
+    1,
+    1,
+    1,
+    1
+   ],
+   [
+    1,
+    1,
+    1,
+    1
+   ],
+   [
+    2,
+    2,
+    2,
+    1,
+    1
+   ]
+  ]
+ },
+ "minH1MinusHD": {
+  "value": 0,
+  "triple": [
+   [
+    3,
+    2,
+    2,
+    1
+   ],
+   [
+    2,
+    1,
+    1
+   ],
+   [
+    4,
+    3,
+    2,
+    2,
+    1
+   ]
+  ],
+  "hstar": [
+   1,
+   0,
+   0
+  ],
+  "d": 2,
+  "c": 3
+ },
+ "margin_histogram": {
+  "0": 345,
+  "1": 22,
+  "2": 7,
+  "5": 1
+ },
+ "nonFullDimCount": 5071,
+ "interior_d_ge_4": [],
+ "hits": []
+}

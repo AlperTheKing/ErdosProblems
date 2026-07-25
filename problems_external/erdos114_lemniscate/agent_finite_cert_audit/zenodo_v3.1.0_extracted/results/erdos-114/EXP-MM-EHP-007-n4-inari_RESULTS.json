@@ -1,0 +1,27 @@
+{
+  "experiment": "EXP-MM-EHP-007-n4-inari",
+  "degree": 4,
+  "reduced_dim": 5,
+  "verdict": "EHP_N4_PROVEN",
+  "rigor": "ieee_1788_interval_arithmetic_inari",
+  "l_star_lower": 11.070020517256605,
+  "l_star_upper": 11.070020517256618,
+  "bb_proof_complete": true,
+  "bb_total_evals": 42656,
+  "bb_levels": [
+    {
+      "level": 0,
+      "boxes": 1024,
+      "half_width": 1.0,
+      "resolution": 200,
+      "eliminated": 992,
+      "ext_survivors": 32,
+      "nonext_survivors": 0,
+      "max_ub_nonext": 10.093943491964927,
+      "time_secs": 4.639583
+    }
+  ],
+  "outer_domain_safe": true,
+  "hessian_negative": true,
+  "total_time_secs": 19.676640541
+}

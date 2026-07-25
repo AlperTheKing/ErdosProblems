@@ -1,0 +1,48 @@
+diff --git a/problems_external/erdos_617/APPROACH_REGISTRY.md b/problems_external/erdos_617/APPROACH_REGISTRY.md
+--- a/problems_external/erdos_617/APPROACH_REGISTRY.md
++++ b/problems_external/erdos_617/APPROACH_REGISTRY.md
+@@ -105,0 +106,45 @@
++the proof reduces to an open Ramsey--Turán statement of comparable strength
++without an additional closing argument. A finite check for fixed `r` alone
++does not complete R2.
++
++### Route status
++
++`R2 DEAD (2026-07-23)`: the frontier inequality is false at `r=5`.
++Let `F=M(C_5)` be the 11-vertex Grötzsch graph, with 20 edges,
++`alpha(F)=5`, and clique number two. Its complement `H` has 35 edges,
++`alpha(H)=2`, and clique number five. Then `H disjoint_union 3K_5` has
++26 vertices, 65 edges, and both independence and clique numbers five.
++
++## DIRECT ROUTE R3: decompose K26 into five equality graphs
++
++### 1. Exact final deliverable
++
++A canonical decomposition of all 325 edges of `K_26` into five copies of the
++65-edge graph `H disjoint_union 3K_5`, specified by five vertex permutations.
++The five colour classes must be pairwise disjoint, cover every edge, and pass
++both exhaustive `K_26` colour verifiers.
++
++### 2. Current frontier certificate
++
++Find five permutations of the equality graph whose edge sets are pairwise
++disjoint. Since their total size is 325, disjointness implies exact coverage.
++
++### 3. Explicit logical bridge
++
++Each copy has independence number five. Therefore all five resulting colour
++graphs have independence number at most five, equivalently every six-set
++contains every colour. The decomposition is thus a complete `r=5`
++counterexample and refutes the universal conjecture.
++
++### 4. Next falsifiable action
++
++Encode the exact graph-decomposition problem independently as permutation
++search and exact-cover/SAT, calibrate on smaller decompositions, and replay
++any output as a raw 325-edge colouring through both unrestricted verifiers.
++
++### 5. Exit condition
++
++A verified decomposition resolves the conjecture negatively. A checked
++`UNSAT` or exhaustive `NO_HIT` kills only this equality-graph decomposition
++route; unrestricted R1 remains the only direct refutation lane.

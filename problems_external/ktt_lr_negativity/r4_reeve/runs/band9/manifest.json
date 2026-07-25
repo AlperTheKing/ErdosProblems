@@ -9,21 +9,22 @@
  "band_gap_region": "{(a,b,c) in Z_{>=0}^9 : Aw+Bw <= 140, Cw <= 140, 4 | (Cw-Aw-Bw)} -- proved EXACTLY equal to the set of gap classes realised by a triple with |nu| in [91,140]",
  "exhaustive_over_band": false,
  "exhaustive_sub_regions": [
-  "wcone S=64 (EXHAUSTIVE)",
-  "wbox Aw<=44 Bw<=44 Cw<=44 (EXHAUSTIVE)",
-  "wbox Aw<=140 Bw<=8 Cw<=8 (EXHAUSTIVE)",
-  "wbox Aw<=8 Bw<=8 Cw<=140 (EXHAUSTIVE)",
-  "wbox Aw<=8 Bw<=140 Cw<=8 (EXHAUSTIVE)",
-  "wbox Aw<=20 Bw<=20 Cw<=140 (EXHAUSTIVE)"
+  "wcone S=72",
+  "wbox 44/44/44",
+  "wbox 140/8/8",
+  "wbox 8/8/140",
+  "wbox 8/140/8",
+  "wbox 20/20/140",
+  "wbox 32/32/140"
  ],
- "gap_classes_tested_total": 19973388048,
- "dim3_polytopes_seen": 1536631260,
+ "gap_classes_tested_total": 78935116996,
+ "dim3_polytopes_seen": 3159405761,
  "negative_coefficient_hits": 0,
  "min_a1_dim3": "11/6",
- "min_a1_all_strata": "0 (attained only where dim Q = 0, i.e. P is the constant 1)",
- "max_normalized_volume": 2817,
+ "min_a1_all_strata": "0/6 (attained only where dim Q = 0, i.e. P is the constant 1)",
+ "max_normalized_volume": 2850,
  "max_normalized_volume_at_hstar1_zero": 1,
- "max_hstar2": 1843,
+ "max_hstar2": 1865,
  "negativity_criterion": "6*a1 = -11 + 18 L1 - 9 L2 + 2 L3 < 0, equivalently h*_2 > 11 + 2 h*_1 + 2 h*_3 ; a3 = V/6 > 0 and a0 = 1 always",
  "scans": [
   {
@@ -68,6 +69,230 @@
    "max_hstar2": 234,
    "max_hstar2_6a1": 57,
    "log": "wcone64.final.log",
+   "exhaustive": true
+  },
+  {
+   "mode": "wcone S=72 (EXHAUSTIVE)",
+   "gap_classes_tested": 26908223405,
+   "Q_nonempty": 4326631435,
+   "dim3": 1274602651,
+   "negative_a1": 0,
+   "band_triples_covered": 4912171172063,
+   "min_6a1_all": 0,
+   "min_6a1_all_at": {
+    "a": "1,0,0",
+    "b": "60,0,1",
+    "c": "60,0,0",
+    "V": 0,
+    "L1": 1
+   },
+   "min_6a1_dim3": 11,
+   "min_6a1_dim3_at": {
+    "a": "1,1,1",
+    "b": "18,1,1",
+    "c": "18,2,1",
+    "V": 1,
+    "L1": 4
+   },
+   "maxV_at_c4": 1,
+   "maxV_at_c5": 3,
+   "maxV_at_c6": 4,
+   "maxV": 539,
+   "maxV_at": {
+    "a": "8,6,5",
+    "b": "7,6,6",
+    "c": "8,7,6",
+    "L1": 147
+   },
+   "maxV_hstar1_zero": 1,
+   "maxV_hstar1_zero_at": {
+    "a": "1,1,1",
+    "b": "18,1,1",
+    "c": "18,2,1"
+   },
+   "max_hstar2": 341,
+   "max_hstar2_6a1": 64,
+   "log": "wcone72.log",
+   "exhaustive": true
+  },
+  {
+   "mode": "whist Aw<=32 Bw<=32 Cw<=140 (EXHAUSTIVE)",
+   "gap_classes_tested": 31499271576,
+   "Q_nonempty": 516693093,
+   "dim3": 131182996,
+   "negative_a1": 0,
+   "band_triples_covered": 4693735006992,
+   "min_6a1_all": 0,
+   "min_6a1_all_at": {
+    "a": "3,0,0",
+    "b": "21,0,1",
+    "c": "23,0,0",
+    "V": 0,
+    "L1": 1
+   },
+   "min_6a1_dim3": 11,
+   "min_6a1_dim3_at": {
+    "a": "4,1,1",
+    "b": "21,1,1",
+    "c": "22,1,1",
+    "V": 1,
+    "L1": 4
+   },
+   "maxV_at_c4": 1,
+   "maxV_at_c5": 3,
+   "maxV_at_c6": 4,
+   "maxV": 372,
+   "maxV_at": {
+    "a": "7,5,5",
+    "b": "7,5,5",
+    "c": "6,6,6",
+    "L1": 108
+   },
+   "maxV_hstar1_zero": 1,
+   "maxV_hstar1_zero_at": {
+    "a": "4,1,1",
+    "b": "21,1,1",
+    "c": "22,1,1"
+   },
+   "max_hstar2": 232,
+   "max_hstar2_6a1": 57,
+   "hist_6a1_over_dim3": {
+    "neg": 0,
+    "ge200": 0,
+    "11": 15752928,
+    "12": 819,
+    "13": 7467156,
+    "14": 48730,
+    "15": 11250006,
+    "16": 763328,
+    "17": 8418006,
+    "18": 4191567,
+    "19": 6381486,
+    "20": 4678833,
+    "21": 6890009,
+    "22": 6065887,
+    "23": 4094976,
+    "24": 6762300,
+    "25": 3731331,
+    "26": 3716037,
+    "27": 5083813,
+    "28": 4458393,
+    "29": 3266853,
+    "30": 3789891,
+    "31": 3310902,
+    "32": 2047679,
+    "33": 3366959,
+    "34": 2285345,
+    "35": 1931663,
+    "36": 1944419,
+    "37": 1716989,
+    "38": 1149512,
+    "39": 1363852,
+    "40": 1118386,
+    "41": 768326,
+    "42": 795800,
+    "43": 587057,
+    "44": 448760,
+    "45": 411150,
+    "46": 326797,
+    "47": 218749,
+    "48": 184193,
+    "49": 132936,
+    "50": 87608,
+    "51": 69212,
+    "52": 44243,
+    "53": 26079,
+    "54": 16756,
+    "55": 9386,
+    "56": 4340,
+    "57": 2263,
+    "58": 910,
+    "59": 263,
+    "60": 85,
+    "61": 27,
+    "62": 1
+   },
+   "hist_min_6a1": 11,
+   "hist_max_6a1": 62,
+   "log": "wbox323240.log",
+   "exhaustive": true
+  },
+  {
+   "mode": "whist Aw<=20 Bw<=20 Cw<=60 (EXHAUSTIVE)",
+   "gap_classes_tested": 227808076,
+   "Q_nonempty": 11976471,
+   "dim3": 1343705,
+   "negative_a1": 0,
+   "band_triples_covered": 64355214188,
+   "min_6a1_all": 0,
+   "min_6a1_all_at": {
+    "a": "0,0,0",
+    "b": "2,0,0",
+    "c": "2,0,0",
+    "V": 0,
+    "L1": 1
+   },
+   "min_6a1_dim3": 11,
+   "min_6a1_dim3_at": {
+    "a": "1,1,1",
+    "b": "2,2,1",
+    "c": "2,1,1",
+    "V": 1,
+    "L1": 4
+   },
+   "maxV_at_c4": 1,
+   "maxV_at_c5": 3,
+   "maxV_at_c6": 4,
+   "maxV": 84,
+   "maxV_at": {
+    "a": "5,3,3",
+    "b": "5,3,3",
+    "c": "4,4,4",
+    "L1": 35
+   },
+   "maxV_hstar1_zero": 1,
+   "maxV_hstar1_zero_at": {
+    "a": "1,1,1",
+    "b": "2,2,1",
+    "c": "2,1,1"
+   },
+   "max_hstar2": 47,
+   "max_hstar2_6a1": 36,
+   "hist_6a1_over_dim3": {
+    "neg": 0,
+    "ge200": 0,
+    "11": 296384,
+    "12": 140,
+    "13": 171639,
+    "14": 3984,
+    "15": 202213,
+    "16": 30276,
+    "17": 118383,
+    "18": 76691,
+    "19": 84026,
+    "20": 54930,
+    "21": 69082,
+    "22": 60179,
+    "23": 30954,
+    "24": 44779,
+    "25": 26365,
+    "26": 19187,
+    "27": 18271,
+    "28": 14453,
+    "29": 7396,
+    "30": 5889,
+    "31": 4266,
+    "32": 1833,
+    "33": 1391,
+    "34": 656,
+    "35": 226,
+    "36": 84,
+    "37": 27,
+    "38": 1
+   },
+   "hist_min_6a1": 11,
+   "hist_max_6a1": 38,
+   "log": "whist206060.log",
    "exhaustive": true
   },
   {
@@ -375,31 +600,232 @@
    },
    "max_hstar2": 1843,
    "max_hstar2_6a1": 114,
+   "climb_best_V_at_c4": 1,
+   "climb_best_V_at_c4_at": {
+    "lam": "20,18,16,13",
+    "mu": "11,8,5,0",
+    "nu": "29,23,20,19",
+    "six_a1": 11
+   },
    "log": "climb_c6.log",
+   "exhaustive": false
+  },
+  {
+   "mode": "climb (volume-steered, single-box, band 91..140)",
+   "gap_classes_tested": 77267272,
+   "Q_nonempty": 68715835,
+   "dim3": 54231316,
+   "negative_a1": 0,
+   "band_triples_covered": 0,
+   "min_6a1_all": 0,
+   "min_6a1_all_at": {
+    "a": "8,12,5",
+    "b": "4,1,5",
+    "c": "1,10,9",
+    "V": 0,
+    "L1": 1
+   },
+   "min_6a1_dim3": 11,
+   "min_6a1_dim3_at": {
+    "a": "9,11,4",
+    "b": "2,3,7",
+    "c": "1,10,9",
+    "V": 1,
+    "L1": 4
+   },
+   "maxV_at_c4": 1,
+   "maxV_at_c5": 3,
+   "maxV_at_c6": 4,
+   "maxV": 2850,
+   "maxV_at": {
+    "a": "14,11,9",
+    "b": "12,14,12",
+    "c": "12,12,9",
+    "L1": 638
+   },
+   "maxV_hstar1_zero": 1,
+   "maxV_hstar1_zero_at": {
+    "a": "9,11,4",
+    "b": "2,3,7",
+    "c": "1,10,9"
+   },
+   "max_hstar2": 1865,
+   "max_hstar2_6a1": 114,
+   "climb_best_V_at_c4": 1,
+   "climb_best_V_at_c4_at": {
+    "lam": "18,16,14,2",
+    "mu": "23,11,10,0",
+    "nu": "29,27,21,17",
+    "six_a1": 11
+   },
+   "log": "climb2.log",
+   "exhaustive": false
+  },
+  {
+   "mode": "climb (volume-steered, single-box, band 91..140)",
+   "gap_classes_tested": 147752132,
+   "Q_nonempty": 122082306,
+   "dim3": 95721021,
+   "negative_a1": 0,
+   "band_triples_covered": 0,
+   "min_6a1_all": 0,
+   "min_6a1_all_at": {
+    "a": "3,4,6",
+    "b": "2,5,2",
+    "c": "5,11,4",
+    "V": 0,
+    "L1": 1
+   },
+   "min_6a1_dim3": 11,
+   "min_6a1_dim3_at": {
+    "a": "2,4,6",
+    "b": "4,5,3",
+    "c": "5,11,4",
+    "V": 1,
+    "L1": 4
+   },
+   "maxV_at_c4": 1,
+   "maxV_at_c5": 3,
+   "maxV_at_c6": 4,
+   "maxV": 2837,
+   "maxV_at": {
+    "a": "13,11,12",
+    "b": "12,11,10",
+    "c": "12,9,11",
+    "L1": 629
+   },
+   "maxV_hstar1_zero": 1,
+   "maxV_hstar1_zero_at": {
+    "a": "2,4,6",
+    "b": "4,5,3",
+    "c": "5,11,4"
+   },
+   "max_hstar2": 1857,
+   "max_hstar2_6a1": 112,
+   "climb_best_V_at_c4": 1,
+   "climb_best_V_at_c4_at": {
+    "lam": "22,20,16,10",
+    "mu": "12,8,3,0",
+    "nu": "33,28,17,13",
+    "six_a1": 11
+   },
+   "log": "climb_c4.log",
+   "exhaustive": false
+  },
+  {
+   "mode": "aclimb (a1-steered descent, single-box, band 91..140)",
+   "gap_classes_tested": 101406487,
+   "Q_nonempty": 83644771,
+   "dim3": 65692812,
+   "negative_a1": 0,
+   "band_triples_covered": 0,
+   "min_6a1_all": 0,
+   "min_6a1_all_at": {
+    "a": "2,12,1",
+    "b": "3,6,4",
+    "c": "13,3,3",
+    "V": 0,
+    "L1": 1
+   },
+   "min_6a1_dim3": 11,
+   "min_6a1_dim3_at": {
+    "a": "2,11,2",
+    "b": "3,6,4",
+    "c": "10,8,1",
+    "V": 1,
+    "L1": 4
+   },
+   "maxV_at_c4": 1,
+   "maxV_at_c5": 3,
+   "maxV_at_c6": 4,
+   "maxV": 368,
+   "maxV_at": {
+    "a": "7,4,8",
+    "b": "11,8,6",
+    "c": "14,4,6",
+    "L1": 112
+   },
+   "maxV_hstar1_zero": 1,
+   "maxV_hstar1_zero_at": {
+    "a": "2,11,2",
+    "b": "3,6,4",
+    "c": "10,8,1"
+   },
+   "max_hstar2": 228,
+   "max_hstar2_6a1": 61,
+   "aclimb_best_6a1": 11,
+   "aclimb_best_at": {
+    "lam": "23,21,10,8",
+    "mu": "14,11,5,1",
+    "nu": "35,25,17,16",
+    "V": 1,
+    "L1": 4
+   },
+   "log": "aclimb.log",
    "exhaustive": false
   }
  ],
+ "union_of_exhaustive_regions_gap_classes": 56043104209,
+ "union_of_exhaustive_regions_band_triples": 8846458835872,
+ "union_fraction_of_band_gap_classes": "0.7166%",
+ "union_fraction_of_band_triples": "5.1584%",
+ "union_per_region": {
+  "wcone S=72": {
+   "gap_classes": 26908223405,
+   "band_triples": 4912171172063
+  },
+  "wbox 44/44/44": {
+   "gap_classes": 6563857152,
+   "band_triples": 1115329664832
+  },
+  "wbox 140/8/8": {
+   "gap_classes": 30808696,
+   "band_triples": 1883620354
+  },
+  "wbox 8/8/140": {
+   "gap_classes": 34530120,
+   "band_triples": 7546854100
+  },
+  "wbox 8/140/8": {
+   "gap_classes": 30808696,
+   "band_triples": 1883620354
+  },
+  "wbox 20/20/140": {
+   "gap_classes": 2630178432,
+   "band_triples": 483244514936
+  },
+  "wbox 32/32/140": {
+   "gap_classes": 31499271576,
+   "band_triples": 4693735006992
+  }
+ },
+ "union_independently_recomputed_by": "runs/band9/union_count.py (pure integer, reproduces the scanner's own bandTriplesCovered counter for every region and the band totals 7820553811824 / 171496406264085)",
  "engines": {
   "polytope_engine_exact": "r4_reeve/hive4.py (exact Fraction/int Ehrhart)",
-  "fast_band_scanner": "r4_reeve/bandscan9.cpp -> bandscan9.exe / bandscan9b.exe (integer only)",
+  "fast_band_scanner": "r4_reeve/bandscan9.cpp -> bandscan9.exe/9b/9c ; r4_reeve/bandscan9d.cpp -> bandscan9d.exe (adds --aclimb, a1-steered descent)",
   "LR_engine_A": "engine/lr_hive.exe",
   "LR_engine_B": "engine/engineB_lrrule.py"
  },
- "cross_validation": "40/40 exact agreement between hive4.py and the fast scanner on random dim-3 triples with |nu| in [91,140]; 5 explicit band triples verified at stretch n=1,2,3 against BOTH LR engines A and B; both extremal records of the S=64 exhaustive scan re-derived exactly by hive4.py (held-out P(4),P(5) checks passed, max vertex denominator 1, 6*lead(P)=V).",
- "honesty": "NO counterexample was found. Absence of a counterexample proves nothing whatsoever about the King-Tollu-Toumazet conjecture and must NEVER be reported as evidence for it. The only claim made here is that the enumerated windows are closed.",
+ "cross_validation": {
+  "round1": "40/40 exact agreement between hive4.py and the fast scanner on random dim-3 triples with |nu| in [91,140]; 5 explicit band triples at stretch n=1,2,3 against BOTH LR engines; both S=64 extremal records re-derived by hive4.py.",
+  "round2_xcheck2": {
+   "n": 8,
+   "mismatches": 0
+  },
+  "round2_detail": "runs/band9/xcheck2.py: fresh random dim-3 gap classes -> scanner (--one) vs hive4.py exact Ehrhart (with held-out P(4),P(5)) vs LR engine A vs LR engine B at stretch n=1 and n=2; L3 and V also compared scanner-vs-hive4.",
+  "detector_unit_test": "reeve_detector_check.log -- on T_q, q=1..40, the integer criterion returns 6a1 = 12-q and V = q, firing NEGATIVE exactly for q >= 13."
+ },
+ "honesty": "NO counterexample was found. Absence of a counterexample proves nothing whatsoever about the King-Tollu-Toumazet conjecture and must NEVER be reported as evidence for it. The only claim made here is that the enumerated windows are closed. The band as a whole is NOT exhausted.",
  "sha256": {
   "r4_reeve/bandscan9.cpp": "830c7d3f87c46685ab305af682693f9fffeec6b3e28dffb8e3dffb20b683ab4c",
   "r4_reeve/bandscan9.exe": "ed2a14ebce83c34d49e432a3fab5eb7aff8ebb90116b678da181a463400e55b3",
   "r4_reeve/bandscan9b.exe": "9f74cf86b05f0f1822616ebe91e6fb6c027fe047ed031c97b32a37d946c12ff9",
   "r4_reeve/bandscan9c.exe": "2fefe7b4a6400fa437eb528ade387dbe888e2681db55c09fe98091abbdd93ed0",
+  "r4_reeve/bandscan9d.cpp": "3a3fc754135440141e524530cce0d41194a470c012d7860795cf406cb9fc26be",
+  "r4_reeve/bandscan9d.exe": "05206992f763b3aed1fe7a3041e61bd03500697f35d4d51af23da18dcc3a1be1",
+  "r4_reeve/bandscan9e.exe": "3c9f75afd031c4edeac27fd6e8aab354ad78c192500430a2b386b5108adee8d4",
   "r4_reeve/hive4.py": "be35d6a792aaaaeddef093f369f381190bc6f5b59278e281bfd8c7095e577efd",
   "engine/lr_hive.exe": "95d1fea3716756ffc48e662cfca117f04cc354ed598a638134163e50585b8cfc",
   "engine/engineB_lrrule.py": "c7677d041ed184910a4290116b320000e529d70192c7f0cc91ccbfcc924b706c"
- },
- "band_triples_covered_sum_over_scans_may_double_count": 3668620506698,
- "union_of_exhaustive_regions_gap_classes": 16204103249,
- "union_of_exhaustive_regions_band_triples": 2986675964834,
- "union_fraction_of_band_triples": "1.74%",
- "union_fraction_of_band_gap_classes": "0.207%",
- "direct_engine_evaluations": 19973388048
+ }
 }

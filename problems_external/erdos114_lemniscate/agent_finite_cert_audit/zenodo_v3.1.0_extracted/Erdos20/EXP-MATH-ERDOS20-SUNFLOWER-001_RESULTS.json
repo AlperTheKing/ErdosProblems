@@ -1,0 +1,90 @@
+{
+  "experiment_id": "EXP-MATH-ERDOS20-SUNFLOWER-001",
+  "title": "Sunflower Lattice Gas — Partition Function and Growth Rates",
+  "problem": "Erdos #20: Sunflower Conjecture",
+  "framework": "Prima Materia Framework (PMF) — Layer 2: Arithmetic Phase (Boolean lattice gas)",
+  "run_date": "2026-04-17",
+  "parameters": {"w": 3, "k": 3, "n_range": "4..8"},
+  "notes": "Partition function computed by exhaustive backtracking enumeration of sunflower-free families of w-subsets of [n]. Growth rates (count_extensions / count_families per family size m) capped at n<=7 (C(7,3)=35 subsets) — n=8 growth-rate computation was not tractable in budget and is omitted; the n=8 partition function alone is sufficient to observe the jamming transition. Incremental sunflower check only; k=3 path used (see sunflower_transfer_matrix.cpp has_sunflower / creates_sunflower).",
+  "data": [
+    {
+      "n": 4, "w": 3, "k": 3,
+      "num_w_subsets": 4,
+      "total_sf_free": 16,
+      "max_family_size": 4,
+      "max_density": 1.00000000,
+      "log2_count": 4.000000,
+      "erdos_bound_1960": 8,
+      "time_s": 0.000,
+      "density_of_states": [1, 4, 6, 4, 1],
+      "growth_rates": [4.000000, 1.500000, 0.666667, 0.250000, 0.000000]
+    },
+    {
+      "n": 5, "w": 3, "k": 3,
+      "num_w_subsets": 10,
+      "total_sf_free": 388,
+      "max_family_size": 6,
+      "max_density": 0.60000000,
+      "log2_count": 8.599913,
+      "erdos_bound_1960": 8,
+      "time_s": 0.000,
+      "density_of_states": [1, 10, 45, 110, 140, 72, 10],
+      "growth_rates": [10.000000, 4.500000, 2.444444, 1.272727, 0.514286, 0.138889, 0.000000]
+    },
+    {
+      "n": 6, "w": 3, "k": 3,
+      "num_w_subsets": 20,
+      "total_sf_free": 33652,
+      "max_family_size": 10,
+      "max_density": 0.50000000,
+      "log2_count": 15.038405,
+      "erdos_bound_1960": 8,
+      "time_s": 0.001,
+      "density_of_states": [1, 20, 190, 1080, 3870, 8604, 11070, 7020, 1665, 120, 12],
+      "growth_rates": [20.000000, 9.500000, 5.684211, 3.583333, 2.223256, 1.286611, 0.634146, 0.237179, 0.072072, 0.100000, 0.000000]
+    },
+    {
+      "n": 7, "w": 3, "k": 3,
+      "num_w_subsets": 35,
+      "total_sf_free": 2485795,
+      "max_family_size": 12,
+      "max_density": 0.34285714,
+      "log2_count": 21.245276,
+      "erdos_bound_1960": 8,
+      "time_s": 0.197,
+      "density_of_states": [1, 35, 595, 6230, 42595, 188741, 516250, 801440, 637840, 242340, 44268, 5040, 420],
+      "growth_rates": [35.000000, 17.000000, 10.470588, 6.837079, 4.431060, 2.735230, 1.552426, 0.795867, 0.379939, 0.182669, 0.113852, 0.083333, 0.000000]
+    },
+    {
+      "n": 8, "w": 3, "k": 3,
+      "num_w_subsets": 56,
+      "total_sf_free": 148790380,
+      "max_family_size": 12,
+      "max_density": 0.21428571,
+      "log2_count": 27.148706,
+      "erdos_bound_1960": 8,
+      "time_s": 19.070,
+      "density_of_states": [1, 56, 1540, 26320, 296870, 2207968, 10482612, 30073480, 48389005, 39622240, 15011248, 2483040, 196000],
+      "growth_rates": null
+    }
+  ],
+  "derived": {
+    "jamming_transition_m_star": {
+      "n=4": 2, "n=5": 3, "n=6": 5, "n=7": 6,
+      "definition": "smallest m such that growth_rate(m) < 1 (mean extensions per SF-free family drops below unity)"
+    },
+    "max_family_size_sequence": {
+      "n=4": 4, "n=5": 6, "n=6": 10, "n=7": 12, "n=8": 12,
+      "observation": "saturates at 12 across n=7 and n=8; consistent with conjectured w-dependent bound c_3^w with c_3 small, but two data points do not establish saturation"
+    },
+    "partition_function_scaling": {
+      "log2_counts": [4.000, 8.600, 15.038, 21.245, 27.149],
+      "first_differences_log2": [4.600, 6.438, 6.207, 5.904],
+      "interpretation": "log2(Z_n) grows sub-linearly in num_w_subsets (4,10,20,35,56 → 4.0,8.6,15.0,21.2,27.1). Cameron-Erdos-style half-of-powerset would predict log2 ~ C(n,3)/2 = 2,5,10,17.5,28 — observed values exceed this for n<=7 and approach it at n=8."
+    }
+  },
+  "verbs_allowed": ["formalize", "encode", "compute", "measure", "observe"],
+  "verbs_forbidden_at_this_score": ["prove", "solve", "advance", "improve", "resolve", "establish"],
+  "source_code": "sunflower_transfer_matrix.cpp",
+  "build": "g++ -O3 -march=native -o sunflower_tm sunflower_transfer_matrix.cpp"
+}

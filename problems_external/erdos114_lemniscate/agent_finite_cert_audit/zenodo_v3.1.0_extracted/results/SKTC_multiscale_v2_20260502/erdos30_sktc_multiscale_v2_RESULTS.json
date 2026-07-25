@@ -1,0 +1,5064 @@
+{
+  "aggregate_by_family": {
+    "exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.4968944099378882,
+        "mean": 0.3761230215882695,
+        "min": 0.0
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.0909090909090909,
+        "mean": 0.0651997954244943,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6498704698756973,
+        "mean": 0.5089226727038091,
+        "min": 0.0
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 45.0,
+        "mean": 20.88235294117647,
+        "min": 3.0
+      },
+      "count": 17,
+      "dyadic_interval": {
+        "max": 0.33333333333333337,
+        "mean": 0.2812989298283416,
+        "min": 0.0
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 0.8827933312362379,
+        "min": 0.8181818181818182
+      },
+      "prime_power_residue": {
+        "max": 0.3333333333333333,
+        "mean": 0.26263567459069187,
+        "min": 0.0
+      }
+    },
+    "greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.5067567567567568,
+        "mean": 0.3567197660265384,
+        "min": 0.0
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.14285714285714288,
+        "mean": 0.08002449438536191,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6498704698756973,
+        "mean": 0.48612627069498604,
+        "min": 0.0
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 20.0,
+        "mean": 13.555555555555555,
+        "min": 3.0
+      },
+      "count": 9,
+      "dyadic_interval": {
+        "max": 0.42857142857142855,
+        "mean": 0.31302220833284156,
+        "min": 0.0
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 0.7659095534095535,
+        "min": 0.5538461538461539
+      },
+      "prime_power_residue": {
+        "max": 0.35714285714285715,
+        "mean": 0.2700338809987933,
+        "min": 0.0
+      }
+    },
+    "random_non_sidon_negative_control": {
+      "bohr_cell": {
+        "max": 0.5939849624060151,
+        "mean": 0.46899104606116704,
+        "min": 0.32142857142857145
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.4714045207910317,
+        "mean": 0.1810690567728111,
+        "min": 0.10670798097975151
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6915295874947976,
+        "mean": 0.5508860286640359,
+        "min": 0.46503732374851675
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 45.0,
+        "mean": 25.571428571428573,
+        "min": 10.0
+      },
+      "count": 21,
+      "dyadic_interval": {
+        "max": 0.4666666666666667,
+        "mean": 0.27981277981277985,
+        "min": 0.14285714285714285
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 0.8701909854851031,
+        "min": 0.8181818181818182
+      },
+      "prime_power_residue": {
+        "max": 0.5,
+        "mean": 0.32467227294958384,
+        "min": 0.24444444444444446
+      }
+    },
+    "random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.6666666666666667,
+        "mean": 0.47167162575020105,
+        "min": 0.0
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.5,
+        "mean": 0.1378584681757555,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.7762201904118758,
+        "mean": 0.5437899200853054,
+        "min": 0.0
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 8.0,
+        "mean": 1.5384615384615385,
+        "min": -10.0
+      },
+      "count": 26,
+      "dyadic_interval": {
+        "max": 0.5272727272727272,
+        "mean": 0.3231120000074019,
+        "min": 0.0
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 0.525009240273413,
+        "min": 0.4090909090909091
+      },
+      "prime_power_residue": {
+        "max": 0.5,
+        "mean": 0.3345741039745564,
+        "min": 0.0
+      }
+    }
+  },
+  "aggregate_by_k_family": {
+    "k=10:exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.3659574468085106,
+        "mean": 0.3659574468085106,
+        "min": 0.3659574468085106
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.057495957457606904,
+        "mean": 0.057495957457606904,
+        "min": 0.057495957457606904
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.44094620920476707,
+        "mean": 0.44094620920476707,
+        "min": 0.44094620920476707
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 45.0,
+        "mean": 45.0,
+        "min": 45.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.18571428571428572,
+        "mean": 0.18571428571428572,
+        "min": 0.18571428571428572
+      },
+      "pair_load": {
+        "max": 0.8181818181818182,
+        "mean": 0.8181818181818182,
+        "min": 0.8181818181818182
+      },
+      "prime_power_residue": {
+        "max": 0.2571428571428571,
+        "mean": 0.2571428571428571,
+        "min": 0.2571428571428571
+      }
+    },
+    "k=10:greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.3659574468085106,
+        "mean": 0.3659574468085106,
+        "min": 0.3659574468085106
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.0739509972887452,
+        "mean": 0.0739509972887452,
+        "min": 0.0739509972887452
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.4436077535588848,
+        "mean": 0.4436077535588848,
+        "min": 0.4436077535588848
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 20.0,
+        "mean": 20.0,
+        "min": 20.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.3901234567901234,
+        "mean": 0.3901234567901234,
+        "min": 0.3901234567901234
+      },
+      "pair_load": {
+        "max": 0.5625,
+        "mean": 0.5625,
+        "min": 0.5625
+      },
+      "prime_power_residue": {
+        "max": 0.3,
+        "mean": 0.3,
+        "min": 0.3
+      }
+    },
+    "k=10:random_non_sidon_negative_control": {
+      "bohr_cell": {
+        "max": 0.46923076923076923,
+        "mean": 0.4542765437502279,
+        "min": 0.43684210526315786
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.12741694570684023,
+        "mean": 0.11721481279384434,
+        "min": 0.10670798097975151
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.4799348681572386,
+        "mean": 0.47418987527070416,
+        "min": 0.46503732374851675
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 45.0,
+        "mean": 45.0,
+        "min": 45.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.27142857142857146,
+        "mean": 0.27142857142857146,
+        "min": 0.27142857142857146
+      },
+      "pair_load": {
+        "max": 0.8181818181818182,
+        "mean": 0.8181818181818182,
+        "min": 0.8181818181818182
+      },
+      "prime_power_residue": {
+        "max": 0.3090909090909091,
+        "mean": 0.273030303030303,
+        "min": 0.25
+      }
+    },
+    "k=10:random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.4540983606557377,
+        "mean": 0.42782888617602605,
+        "min": 0.41063829787234046
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.07416198487095664,
+        "mean": 0.07364944303407751,
+        "min": 0.07329325225725952
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.44472259756767274,
+        "mean": 0.4444658789132985,
+        "min": 0.4440864983898177
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 0.0,
+        "mean": -6.0,
+        "min": -10.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.29357798165137616,
+        "mean": 0.2679393081881955,
+        "min": 0.2336633663366337
+      },
+      "pair_load": {
+        "max": 0.45,
+        "mean": 0.42525252525252527,
+        "min": 0.4090909090909091
+      },
+      "prime_power_residue": {
+        "max": 0.3230769230769231,
+        "mean": 0.29534662867996203,
+        "min": 0.26296296296296295
+      }
+    },
+    "k=2:exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 3.0,
+        "mean": 3.0,
+        "min": 3.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0
+      },
+      "prime_power_residue": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      }
+    },
+    "k=2:greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 3.0,
+        "mean": 3.0,
+        "min": 3.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0
+      },
+      "prime_power_residue": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      }
+    },
+    "k=2:random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.5,
+        "mean": 0.25,
+        "min": 0.0
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.5,
+        "mean": 0.25,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.7762201904118758,
+        "mean": 0.3881100952059379,
+        "min": 0.0
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 3.0,
+        "mean": 2.5,
+        "min": 2.0
+      },
+      "count": 2,
+      "dyadic_interval": {
+        "max": 0.3333333333333333,
+        "mean": 0.16666666666666666,
+        "min": 0.0
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 0.75,
+        "min": 0.5
+      },
+      "prime_power_residue": {
+        "max": 0.5,
+        "mean": 0.25,
+        "min": 0.0
+      }
+    },
+    "k=3:exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.3333333333333333,
+        "mean": 0.3333333333333333,
+        "min": 0.3333333333333333
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6498704698756973,
+        "mean": 0.6498704698756973,
+        "min": 0.6498704698756973
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 6.0,
+        "mean": 6.0,
+        "min": 6.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.25,
+        "mean": 0.25,
+        "min": 0.25
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0
+      },
+      "prime_power_residue": {
+        "max": 0.3333333333333333,
+        "mean": 0.3333333333333333,
+        "min": 0.3333333333333333
+      }
+    },
+    "k=3:greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.3333333333333333,
+        "mean": 0.3333333333333333,
+        "min": 0.3333333333333333
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6498704698756973,
+        "mean": 0.6498704698756973,
+        "min": 0.6498704698756973
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 6.0,
+        "mean": 6.0,
+        "min": 6.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.25,
+        "mean": 0.25,
+        "min": 0.25
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0
+      },
+      "prime_power_residue": {
+        "max": 0.3333333333333333,
+        "mean": 0.3333333333333333,
+        "min": 0.3333333333333333
+      }
+    },
+    "k=3:random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.5,
+        "mean": 0.4333333333333333,
+        "min": 0.3333333333333333
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.2886751345948129,
+        "mean": 0.190505949023144,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.7207988788288276,
+        "mean": 0.6906320263694369,
+        "min": 0.6498704698756973
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 6.0,
+        "mean": 4.333333333333333,
+        "min": 3.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.3333333333333333,
+        "mean": 0.2896825396825397,
+        "min": 0.25
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 0.7000000000000001,
+        "min": 0.5
+      },
+      "prime_power_residue": {
+        "max": 0.5,
+        "mean": 0.4333333333333333,
+        "min": 0.3333333333333333
+      }
+    },
+    "k=4:exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.4,
+        "mean": 0.4,
+        "min": 0.4
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6278785166717807,
+        "mean": 0.6278785166717807,
+        "min": 0.6278785166717807
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 10.0,
+        "mean": 10.0,
+        "min": 10.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.3214285714285714,
+        "mean": 0.3214285714285714,
+        "min": 0.3214285714285714
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0
+      },
+      "prime_power_residue": {
+        "max": 0.3333333333333333,
+        "mean": 0.3333333333333333,
+        "min": 0.3333333333333333
+      }
+    },
+    "k=4:greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.375,
+        "mean": 0.375,
+        "min": 0.375
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.14285714285714288,
+        "mean": 0.14285714285714288,
+        "min": 0.14285714285714288
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6424032841822772,
+        "mean": 0.6424032841822772,
+        "min": 0.6424032841822772
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 9.0,
+        "mean": 9.0,
+        "min": 9.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.25,
+        "mean": 0.25,
+        "min": 0.25
+      },
+      "pair_load": {
+        "max": 0.8571428571428571,
+        "mean": 0.8571428571428571,
+        "min": 0.8571428571428571
+      },
+      "prime_power_residue": {
+        "max": 0.35714285714285715,
+        "mean": 0.35714285714285715,
+        "min": 0.35714285714285715
+      }
+    },
+    "k=4:random_non_sidon_negative_control": {
+      "bohr_cell": {
+        "max": 0.5,
+        "mean": 0.41269841269841273,
+        "min": 0.32142857142857145
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.4714045207910317,
+        "mean": 0.31426968052735443,
+        "min": 0.23570226039551584
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6915295874947976,
+        "mean": 0.6510114791784066,
+        "min": 0.6242678887513919
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 10.0,
+        "mean": 10.0,
+        "min": 10.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.3214285714285714,
+        "mean": 0.26190476190476186,
+        "min": 0.14285714285714285
+      },
+      "pair_load": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0
+      },
+      "prime_power_residue": {
+        "max": 0.5,
+        "mean": 0.4055555555555556,
+        "min": 0.3
+      }
+    },
+    "k=4:random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.6666666666666667,
+        "mean": 0.5521885521885522,
+        "min": 0.4444444444444444
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.20327890704543544,
+        "mean": 0.19335186744735744,
+        "min": 0.1767766952966369
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6608026910958209,
+        "mean": 0.6535871239649206,
+        "min": 0.6437126396118542
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 8.0,
+        "mean": 6.333333333333333,
+        "min": 5.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.4772727272727273,
+        "mean": 0.39057239057239057,
+        "min": 0.2777777777777778
+      },
+      "pair_load": {
+        "max": 0.75,
+        "mean": 0.6318181818181818,
+        "min": 0.5454545454545454
+      },
+      "prime_power_residue": {
+        "max": 0.40909090909090906,
+        "mean": 0.390993265993266,
+        "min": 0.375
+      }
+    },
+    "k=5:exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.4666666666666666,
+        "mean": 0.43333333333333335,
+        "min": 0.4
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.0909090909090909,
+        "mean": 0.0909090909090909,
+        "min": 0.0909090909090909
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5918282072276553,
+        "mean": 0.5910239575346623,
+        "min": 0.5902197078416694
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 14.0,
+        "mean": 14.0,
+        "min": 14.0
+      },
+      "count": 2,
+      "dyadic_interval": {
+        "max": 0.33333333333333337,
+        "mean": 0.33333333333333337,
+        "min": 0.33333333333333337
+      },
+      "pair_load": {
+        "max": 0.9090909090909091,
+        "mean": 0.9090909090909091,
+        "min": 0.9090909090909091
+      },
+      "prime_power_residue": {
+        "max": 0.3090909090909091,
+        "mean": 0.3090909090909091,
+        "min": 0.3090909090909091
+      }
+    },
+    "k=5:greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.36923076923076925,
+        "mean": 0.36923076923076925,
+        "min": 0.36923076923076925
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.11785113019775789,
+        "mean": 0.11785113019775789,
+        "min": 0.11785113019775789
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5981408617195314,
+        "mean": 0.5981408617195314,
+        "min": 0.5981408617195314
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 13.0,
+        "mean": 13.0,
+        "min": 13.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.4153846153846154,
+        "mean": 0.4153846153846154,
+        "min": 0.4153846153846154
+      },
+      "pair_load": {
+        "max": 0.8333333333333334,
+        "mean": 0.8333333333333334,
+        "min": 0.8333333333333334
+      },
+      "prime_power_residue": {
+        "max": 0.33333333333333337,
+        "mean": 0.33333333333333337,
+        "min": 0.33333333333333337
+      }
+    },
+    "k=5:random_non_sidon_negative_control": {
+      "bohr_cell": {
+        "max": 0.5454545454545454,
+        "mean": 0.49924242424242427,
+        "min": 0.425
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.25061906821982216,
+        "mean": 0.20816527697400986,
+        "min": 0.16262312563634831
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6168207390014704,
+        "mean": 0.5959826962650983,
+        "min": 0.5843975477142638
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 14.0,
+        "mean": 14.0,
+        "min": 14.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.4666666666666667,
+        "mean": 0.3444444444444445,
+        "min": 0.2333333333333333
+      },
+      "pair_load": {
+        "max": 0.9090909090909091,
+        "mean": 0.9090909090909091,
+        "min": 0.9090909090909091
+      },
+      "prime_power_residue": {
+        "max": 0.35,
+        "mean": 0.3227272727272727,
+        "min": 0.3090909090909091
+      }
+    },
+    "k=5:random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.5263157894736843,
+        "mean": 0.5077399380804954,
+        "min": 0.47058823529411764
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.15793451382644758,
+        "mean": 0.15766795597219077,
+        "min": 0.15713484026367722
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.6126167684812573,
+        "mean": 0.6106374843702808,
+        "min": 0.6084671038247196
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 7.0,
+        "mean": 5.0,
+        "min": 4.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.5272727272727272,
+        "mean": 0.3952153110047847,
+        "min": 0.2947368421052632
+      },
+      "pair_load": {
+        "max": 0.5555555555555556,
+        "mean": 0.5026455026455027,
+        "min": 0.47619047619047616
+      },
+      "prime_power_residue": {
+        "max": 0.4666666666666666,
+        "mean": 0.4055555555555556,
+        "min": 0.35
+      }
+    },
+    "k=6:exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.4615384615384615,
+        "mean": 0.42727187028657615,
+        "min": 0.37254901960784315
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.08318903308077029,
+        "mean": 0.08318903308077029,
+        "min": 0.08318903308077029
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5538811095360991,
+        "mean": 0.5522280898669096,
+        "min": 0.5510783421149178
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 19.0,
+        "mean": 19.0,
+        "min": 19.0
+      },
+      "count": 4,
+      "dyadic_interval": {
+        "max": 0.27777777777777773,
+        "mean": 0.27777777777777773,
+        "min": 0.27777777777777773
+      },
+      "pair_load": {
+        "max": 0.8823529411764706,
+        "mean": 0.8823529411764706,
+        "min": 0.8823529411764706
+      },
+      "prime_power_residue": {
+        "max": 0.3,
+        "mean": 0.2808823529411764,
+        "min": 0.2745098039215686
+      }
+    },
+    "k=6:greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.37254901960784315,
+        "mean": 0.37254901960784315,
+        "min": 0.37254901960784315
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.11180339887498947,
+        "mean": 0.11180339887498947,
+        "min": 0.11180339887498947
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5586816448055504,
+        "mean": 0.5586816448055504,
+        "min": 0.5586816448055504
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 16.0,
+        "mean": 16.0,
+        "min": 16.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.42857142857142855,
+        "mean": 0.42857142857142855,
+        "min": 0.42857142857142855
+      },
+      "pair_load": {
+        "max": 0.75,
+        "mean": 0.75,
+        "min": 0.75
+      },
+      "prime_power_residue": {
+        "max": 0.2807017543859649,
+        "mean": 0.2807017543859649,
+        "min": 0.2807017543859649
+      }
+    },
+    "k=6:random_non_sidon_negative_control": {
+      "bohr_cell": {
+        "max": 0.4358974358974359,
+        "mean": 0.4358974358974359,
+        "min": 0.4358974358974359
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.19568588156666114,
+        "mean": 0.1735132937874957,
+        "min": 0.15035521186416329
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5598095955953493,
+        "mean": 0.5565080369173967,
+        "min": 0.5529125158412121
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 19.0,
+        "mean": 19.0,
+        "min": 19.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.2777777777777778,
+        "mean": 0.25925925925925924,
+        "min": 0.2222222222222222
+      },
+      "pair_load": {
+        "max": 0.8823529411764706,
+        "mean": 0.8823529411764706,
+        "min": 0.8823529411764706
+      },
+      "prime_power_residue": {
+        "max": 0.35714285714285715,
+        "mean": 0.30205415499533145,
+        "min": 0.2745098039215686
+      }
+    },
+    "k=6:random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.6075268817204301,
+        "mean": 0.560746508466197,
+        "min": 0.4827586206896552
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.12876968840942815,
+        "mean": 0.12851248927340353,
+        "min": 0.12820291010413745
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5662675673302714,
+        "mean": 0.5650362474683033,
+        "min": 0.5629397021046119
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 8.0,
+        "mean": 4.333333333333333,
+        "min": 2.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.4142857142857143,
+        "mean": 0.3313564506262275,
+        "min": 0.27586206896551724
+      },
+      "pair_load": {
+        "max": 0.5357142857142857,
+        "mean": 0.47714540361599184,
+        "min": 0.4411764705882353
+      },
+      "prime_power_residue": {
+        "max": 0.3333333333333333,
+        "mean": 0.3333333333333333,
+        "min": 0.3333333333333333
+      }
+    },
+    "k=7:exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.4968944099378882,
+        "mean": 0.39884493843303914,
+        "min": 0.35403726708074534
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.08,
+        "mean": 0.07999999999999999,
+        "min": 0.07999999999999999
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5191184964819183,
+        "mean": 0.5179585930618599,
+        "min": 0.5169194176488682
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 24.0,
+        "mean": 24.0,
+        "min": 24.0
+      },
+      "count": 5,
+      "dyadic_interval": {
+        "max": 0.32967032967032966,
+        "mean": 0.32967032967032966,
+        "min": 0.32967032967032966
+      },
+      "pair_load": {
+        "max": 0.84,
+        "mean": 0.8400000000000001,
+        "min": 0.84
+      },
+      "prime_power_residue": {
+        "max": 0.2857142857142857,
+        "mean": 0.26342857142857146,
+        "min": 0.24571428571428572
+      }
+    },
+    "k=7:greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.455026455026455,
+        "mean": 0.455026455026455,
+        "min": 0.455026455026455
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.1,
+        "mean": 0.1,
+        "min": 0.1
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5229093889837253,
+        "mean": 0.5229093889837253,
+        "min": 0.5229093889837253
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 19.0,
+        "mean": 19.0,
+        "min": 19.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.37327188940092165,
+        "mean": 0.37327188940092165,
+        "min": 0.37327188940092165
+      },
+      "pair_load": {
+        "max": 0.7,
+        "mean": 0.7,
+        "min": 0.7
+      },
+      "prime_power_residue": {
+        "max": 0.3174603174603175,
+        "mean": 0.3174603174603175,
+        "min": 0.3174603174603175
+      }
+    },
+    "k=7:random_non_sidon_negative_control": {
+      "bohr_cell": {
+        "max": 0.5939849624060151,
+        "mean": 0.5183883622098725,
+        "min": 0.4642857142857143
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.19203174340767334,
+        "mean": 0.1770541389735164,
+        "min": 0.14709893010520247
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5716682084208294,
+        "mean": 0.5541489051277693,
+        "min": 0.5282816192107679
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 24.0,
+        "mean": 24.0,
+        "min": 24.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.32967032967032966,
+        "mean": 0.2893772893772894,
+        "min": 0.2087912087912088
+      },
+      "pair_load": {
+        "max": 0.84,
+        "mean": 0.84,
+        "min": 0.84
+      },
+      "prime_power_residue": {
+        "max": 0.4642857142857143,
+        "mean": 0.33785714285714286,
+        "min": 0.24571428571428572
+      }
+    },
+    "k=7:random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.5263157894736842,
+        "mean": 0.49551965018930305,
+        "min": 0.48
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.10899617098438001,
+        "mean": 0.10864833287711596,
+        "min": 0.10825317547305484
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5273706300866449,
+        "mean": 0.5269802983507988,
+        "min": 0.5266653186746947
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 5.0,
+        "mean": 3.0,
+        "min": 1.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.4253968253968254,
+        "mean": 0.33676203341856836,
+        "min": 0.25835866261398177
+      },
+      "pair_load": {
+        "max": 0.4772727272727273,
+        "mean": 0.4570981554677207,
+        "min": 0.4375
+      },
+      "prime_power_residue": {
+        "max": 0.3174603174603175,
+        "mean": 0.2872872872872873,
+        "min": 0.25868725868725867
+      }
+    },
+    "k=8:exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.3522727272727273,
+        "mean": 0.3522727272727273,
+        "min": 0.3522727272727273
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.07204381596421112,
+        "mean": 0.07204381596421112,
+        "min": 0.07204381596421112
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.4892371084560228,
+        "mean": 0.4892371084560228,
+        "min": 0.4892371084560228
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 30.0,
+        "mean": 30.0,
+        "min": 30.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.33214285714285713,
+        "mean": 0.33214285714285713,
+        "min": 0.33214285714285713
+      },
+      "pair_load": {
+        "max": 0.8235294117647058,
+        "mean": 0.8235294117647058,
+        "min": 0.8235294117647058
+      },
+      "prime_power_residue": {
+        "max": 0.23214285714285715,
+        "mean": 0.23214285714285715,
+        "min": 0.23214285714285715
+      }
+    },
+    "k=8:greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.5067567567567568,
+        "mean": 0.5067567567567568,
+        "min": 0.5067567567567568
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.09090909090909091,
+        "mean": 0.09090909090909091,
+        "min": 0.09090909090909091
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.4926686962055001,
+        "mean": 0.4926686962055001,
+        "min": 0.4926686962055001
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 20.0,
+        "mean": 20.0,
+        "min": 20.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.33611111111111114,
+        "mean": 0.33611111111111114,
+        "min": 0.33611111111111114
+      },
+      "pair_load": {
+        "max": 0.6363636363636364,
+        "mean": 0.6363636363636364,
+        "min": 0.6363636363636364
+      },
+      "prime_power_residue": {
+        "max": 0.2638888888888889,
+        "mean": 0.2638888888888889,
+        "min": 0.2638888888888889
+      }
+    },
+    "k=8:random_non_sidon_negative_control": {
+      "bohr_cell": {
+        "max": 0.4772727272727273,
+        "mean": 0.45162714097496703,
+        "min": 0.40760869565217395
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.141053868332727,
+        "mean": 0.13289988120084215,
+        "min": 0.11659190693707233
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5229725664792512,
+        "mean": 0.5104018729438606,
+        "min": 0.4970834398028581
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 30.0,
+        "mean": 30.0,
+        "min": 30.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.22857142857142856,
+        "mean": 0.22857142857142856,
+        "min": 0.22857142857142856
+      },
+      "pair_load": {
+        "max": 0.8235294117647058,
+        "mean": 0.823529411764706,
+        "min": 0.8235294117647058
+      },
+      "prime_power_residue": {
+        "max": 0.3888888888888889,
+        "mean": 0.32962962962962966,
+        "min": 0.3
+      }
+    },
+    "k=8:random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.5161290322580645,
+        "mean": 0.4746477567667779,
+        "min": 0.39919354838709675
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.0944349237077873,
+        "mean": 0.0935506718441859,
+        "min": 0.09300816647554057
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.49559848536647527,
+        "mean": 0.49495725211378144,
+        "min": 0.49447742597066563
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 6.0,
+        "mean": -0.3333333333333333,
+        "min": -4.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.3538135593220339,
+        "mean": 0.3166448721468445,
+        "min": 0.25735294117647056
+      },
+      "pair_load": {
+        "max": 0.4827586206896552,
+        "mean": 0.437477924777734,
+        "min": 0.4117647058823529
+      },
+      "prime_power_residue": {
+        "max": 0.28409090909090906,
+        "mean": 0.265993265993266,
+        "min": 0.25
+      }
+    },
+    "k=9:exact_canonical_optimal": {
+      "bohr_cell": {
+        "max": 0.37254901960784315,
+        "mean": 0.37254901960784315,
+        "min": 0.37254901960784315
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.06428243465332249,
+        "mean": 0.06428243465332249,
+        "min": 0.06428243465332249
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.4629998919102223,
+        "mean": 0.4629998919102223,
+        "min": 0.4629998919102223
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 37.0,
+        "mean": 37.0,
+        "min": 37.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.2666666666666667,
+        "mean": 0.2666666666666667,
+        "min": 0.2666666666666667
+      },
+      "pair_load": {
+        "max": 0.8181818181818182,
+        "mean": 0.8181818181818182,
+        "min": 0.8181818181818182
+      },
+      "prime_power_residue": {
+        "max": 0.25,
+        "mean": 0.25,
+        "min": 0.25
+      }
+    },
+    "k=9:greedy_sidon_control": {
+      "bohr_cell": {
+        "max": 0.4326241134751773,
+        "mean": 0.4326241134751773,
+        "min": 0.4326241134751773
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.08284868934053086,
+        "mean": 0.08284868934053086,
+        "min": 0.08284868934053086
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.4668543369237071,
+        "mean": 0.4668543369237071,
+        "min": 0.4668543369237071
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 16.0,
+        "mean": 16.0,
+        "min": 16.0
+      },
+      "count": 1,
+      "dyadic_interval": {
+        "max": 0.3737373737373737,
+        "mean": 0.3737373737373737,
+        "min": 0.3737373737373737
+      },
+      "pair_load": {
+        "max": 0.5538461538461539,
+        "mean": 0.5538461538461539,
+        "min": 0.5538461538461539
+      },
+      "prime_power_residue": {
+        "max": 0.24444444444444446,
+        "mean": 0.24444444444444446,
+        "min": 0.24444444444444446
+      }
+    },
+    "k=9:random_non_sidon_negative_control": {
+      "bohr_cell": {
+        "max": 0.5603864734299517,
+        "mean": 0.5108070026548287,
+        "min": 0.4375
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.1599902430450218,
+        "mean": 0.14436631315261506,
+        "min": 0.1342427662626465
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.5377088107684967,
+        "mean": 0.513959334945016,
+        "min": 0.49142670307472885
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": 37.0,
+        "mean": 37.0,
+        "min": 37.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.3777777777777778,
+        "mean": 0.30370370370370375,
+        "min": 0.17777777777777778
+      },
+      "pair_load": {
+        "max": 0.8181818181818182,
+        "mean": 0.8181818181818182,
+        "min": 0.8181818181818182
+      },
+      "prime_power_residue": {
+        "max": 0.35555555555555557,
+        "mean": 0.30185185185185187,
+        "min": 0.24444444444444446
+      }
+    },
+    "k=9:random_sidon_control": {
+      "bohr_cell": {
+        "max": 0.5094850948509486,
+        "mean": 0.4691494646343923,
+        "min": 0.4152046783625731
+      },
+      "centered_difference_histogram_l2": {
+        "max": 0.08235294117647064,
+        "mean": 0.08222001471840572,
+        "min": 0.0820853842361247
+      },
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": {
+        "max": 0.46792927352760794,
+        "mean": 0.4678095990512016,
+        "min": 0.46771227928639614
+      },
+      "compression_delta_k2_minus_diameter": {
+        "max": -4.0,
+        "mean": -5.0,
+        "min": -6.0
+      },
+      "count": 3,
+      "dyadic_interval": {
+        "max": 0.40229885057471265,
+        "mean": 0.3610199833134877,
+        "min": 0.2868217054263566
+      },
+      "pair_load": {
+        "max": 0.4235294117647059,
+        "mean": 0.41864238879192417,
+        "min": 0.41379310344827586
+      },
+      "prime_power_residue": {
+        "max": 0.35555555555555557,
+        "mean": 0.32113289760348585,
+        "min": 0.27450980392156865
+      }
+    }
+  },
+  "claim_ceiling": "finite hypothesis screening and obstruction search only; not asymptotic theorem evidence",
+  "control_samples": 3,
+  "max_k": 10,
+  "max_q": 64,
+  "probe": "erdos30_sktc_multiscale_v2",
+  "records": [
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 0,
+        "count": 0,
+        "expected": 0.0,
+        "frequency": 0,
+        "q": 0,
+        "radius": 0,
+        "value": 0.0
+      },
+      "centered_difference_histogram_l2": 0.0,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 0.0,
+        "length": 0,
+        "start": 0,
+        "value": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm": 0.0,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.0,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 0.0,
+        "q": 0,
+        "residue": 0,
+        "value": 0.0
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 3,
+      "diameter": 1,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 1.0,
+      "is_golomb": true,
+      "k": 2,
+      "marks": [
+        0,
+        1
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 1,
+      "pair_load": 1.0,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 0,
+        "count": 0,
+        "expected": 0.0,
+        "frequency": 0,
+        "q": 0,
+        "radius": 0,
+        "value": 0.0
+      },
+      "centered_difference_histogram_l2": 0.0,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 0.0,
+        "length": 0,
+        "start": 0,
+        "value": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm": 0.0,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.0,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 0.0,
+        "q": 0,
+        "residue": 0,
+        "value": 0.0
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 3,
+      "diameter": 1,
+      "family": "greedy_sidon_control",
+      "incidence_tensor_spectral_norm": 1.0,
+      "is_golomb": true,
+      "k": 2,
+      "marks": [
+        0,
+        1
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 1,
+      "pair_load": 1.0,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 0,
+        "count": 0,
+        "expected": 0.0,
+        "frequency": 0,
+        "q": 0,
+        "radius": 0,
+        "value": 0.0
+      },
+      "centered_difference_histogram_l2": 0.0,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 0.0,
+        "length": 0,
+        "start": 0,
+        "value": 0.0
+      },
+      "centered_incidence_tensor_spectral_norm": 0.0,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.0,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 0.0,
+        "q": 0,
+        "residue": 0,
+        "value": 0.0
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 3,
+      "diameter": 1,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 1.0,
+      "is_golomb": true,
+      "k": 2,
+      "marks": [
+        0,
+        1
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 1,
+      "pair_load": 1.0,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 1,
+        "count": 2,
+        "expected": 1.0,
+        "frequency": 1,
+        "q": 2,
+        "radius": 0,
+        "value": 0.5
+      },
+      "centered_difference_histogram_l2": 0.5,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 0.6666666666666666,
+        "length": 1,
+        "start": 1,
+        "value": 0.3333333333333333
+      },
+      "centered_incidence_tensor_spectral_norm": 0.7762201904118758,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.7762201904118758,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 1.0,
+        "q": 2,
+        "residue": 0,
+        "value": 0.5
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 2,
+      "diameter": 2,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 1.0,
+      "is_golomb": true,
+      "k": 2,
+      "marks": [
+        0,
+        2
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 1,
+      "pair_load": 0.5,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 1
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 1,
+        "count": 2,
+        "expected": 1.0,
+        "frequency": 1,
+        "q": 3,
+        "radius": 0,
+        "value": 0.3333333333333333
+      },
+      "centered_difference_histogram_l2": 0.0,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 0.75,
+        "length": 1,
+        "start": 2,
+        "value": 0.25
+      },
+      "centered_incidence_tensor_spectral_norm": 1.1256086721633671,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6498704698756973,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 1.0,
+        "q": 3,
+        "residue": 0,
+        "value": 0.3333333333333333
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 6,
+      "diameter": 3,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 1.4142135623730951,
+      "is_golomb": true,
+      "k": 3,
+      "marks": [
+        0,
+        1,
+        3
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 3,
+      "pair_load": 1.0,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 1,
+        "count": 2,
+        "expected": 1.0,
+        "frequency": 1,
+        "q": 3,
+        "radius": 0,
+        "value": 0.3333333333333333
+      },
+      "centered_difference_histogram_l2": 0.0,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 0.75,
+        "length": 1,
+        "start": 2,
+        "value": 0.25
+      },
+      "centered_incidence_tensor_spectral_norm": 1.1256086721633671,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6498704698756973,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 1.0,
+        "q": 3,
+        "residue": 0,
+        "value": 0.3333333333333333
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 6,
+      "diameter": 3,
+      "family": "greedy_sidon_control",
+      "incidence_tensor_spectral_norm": 1.4142135623730951,
+      "is_golomb": true,
+      "k": 3,
+      "marks": [
+        0,
+        1,
+        3
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 3,
+      "pair_load": 1.0,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 1,
+        "count": 2,
+        "expected": 0.6,
+        "frequency": 1,
+        "q": 5,
+        "radius": 0,
+        "value": 0.4666666666666666
+      },
+      "centered_difference_histogram_l2": 0.28284271247461906,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 1.0,
+        "length": 2,
+        "start": 0,
+        "value": 0.3333333333333333
+      },
+      "centered_incidence_tensor_spectral_norm": 1.2145603246847607,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.7012267304037859,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.6,
+        "q": 5,
+        "residue": 0,
+        "value": 0.4666666666666666
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 4,
+      "diameter": 5,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 1.4142135623730951,
+      "is_golomb": true,
+      "k": 3,
+      "marks": [
+        0,
+        1,
+        5
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 3,
+      "pair_load": 0.6,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 1,
+        "count": 3,
+        "expected": 1.5,
+        "frequency": 1,
+        "q": 2,
+        "radius": 0,
+        "value": 0.5
+      },
+      "centered_difference_histogram_l2": 0.2886751345948129,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 0.8571428571428571,
+        "length": 2,
+        "start": 3,
+        "value": 0.2857142857142857
+      },
+      "centered_incidence_tensor_spectral_norm": 1.2484602801702123,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.7207988788288276,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.5,
+        "q": 2,
+        "residue": 0,
+        "value": 0.5
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 3,
+      "diameter": 6,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 1.4142135623730951,
+      "is_golomb": true,
+      "k": 3,
+      "marks": [
+        0,
+        2,
+        6
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 3,
+      "pair_load": 0.5,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 3
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 1,
+        "count": 2,
+        "expected": 1.0,
+        "frequency": 1,
+        "q": 3,
+        "radius": 0,
+        "value": 0.3333333333333333
+      },
+      "centered_difference_histogram_l2": 0.0,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 0.75,
+        "length": 1,
+        "start": 2,
+        "value": 0.25
+      },
+      "centered_incidence_tensor_spectral_norm": 1.1256086721633671,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6498704698756973,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 1.0,
+        "q": 3,
+        "residue": 0,
+        "value": 0.3333333333333333
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 6,
+      "diameter": 3,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 1.4142135623730951,
+      "is_golomb": true,
+      "k": 3,
+      "marks": [
+        0,
+        1,
+        3
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 3,
+      "pair_load": 1.0,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 4,
+        "expected": 2.4,
+        "frequency": 1,
+        "q": 5,
+        "radius": 1,
+        "value": 0.4
+      },
+      "centered_difference_histogram_l2": 0.0,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.2857142857142856,
+        "length": 4,
+        "start": 2,
+        "value": 0.3214285714285714
+      },
+      "centered_incidence_tensor_spectral_norm": 1.5379819863014434,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6278785166717807,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 1.3333333333333333,
+        "q": 3,
+        "residue": 2,
+        "value": 0.3333333333333333
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 10,
+      "diameter": 6,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 1.7320508075688772,
+      "is_golomb": true,
+      "k": 4,
+      "marks": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 6,
+      "pair_load": 1.0,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 3,
+        "expected": 1.5,
+        "frequency": 1,
+        "q": 8,
+        "radius": 1,
+        "value": 0.375
+      },
+      "centered_difference_histogram_l2": 0.14285714285714288,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 1.0,
+        "length": 2,
+        "start": 0,
+        "value": 0.25
+      },
+      "centered_incidence_tensor_spectral_norm": 1.573560255334715,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6424032841822772,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.5714285714285714,
+        "q": 7,
+        "residue": 0,
+        "value": 0.35714285714285715
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 9,
+      "diameter": 7,
+      "family": "greedy_sidon_control",
+      "incidence_tensor_spectral_norm": 1.7320508075688772,
+      "is_golomb": true,
+      "k": 4,
+      "marks": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 6,
+      "pair_load": 0.8571428571428571,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 1
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 4,
+        "expected": 1.3333333333333333,
+        "frequency": 4,
+        "q": 9,
+        "radius": 1,
+        "value": 0.6666666666666667
+      },
+      "centered_difference_histogram_l2": 0.20327890704543544,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.6666666666666665,
+        "length": 8,
+        "start": 3,
+        "value": 0.41666666666666663
+      },
+      "centered_incidence_tensor_spectral_norm": 1.6186294138427342,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6608026910958209,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.36363636363636365,
+        "q": 11,
+        "residue": 0,
+        "value": 0.40909090909090906
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 5,
+      "diameter": 11,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 1.7320508075688772,
+      "is_golomb": true,
+      "k": 4,
+      "marks": [
+        0,
+        2,
+        7,
+        11
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 6,
+      "pair_load": 0.5454545454545454,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 5
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 4,
+        "expected": 1.8181818181818181,
+        "frequency": 2,
+        "q": 11,
+        "radius": 2,
+        "value": 0.5454545454545454
+      },
+      "centered_difference_histogram_l2": 0.20000000000000004,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.909090909090909,
+        "length": 8,
+        "start": 2,
+        "value": 0.4772727272727273
+      },
+      "centered_incidence_tensor_spectral_norm": 1.6074679466298356,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6562460411870866,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.4444444444444444,
+        "q": 9,
+        "residue": 1,
+        "value": 0.3888888888888889
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 6,
+      "diameter": 10,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 1.7320508075688772,
+      "is_golomb": true,
+      "k": 4,
+      "marks": [
+        0,
+        1,
+        6,
+        10
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 6,
+      "pair_load": 0.6,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 4,
+        "expected": 2.2222222222222223,
+        "frequency": 2,
+        "q": 9,
+        "radius": 2,
+        "value": 0.4444444444444444
+      },
+      "centered_difference_histogram_l2": 0.1767766952966369,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 0.8888888888888888,
+        "length": 2,
+        "start": 0,
+        "value": 0.2777777777777778
+      },
+      "centered_incidence_tensor_spectral_norm": 1.5767675080291212,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6437126396118542,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.5,
+        "q": 8,
+        "residue": 0,
+        "value": 0.375
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 8,
+      "diameter": 8,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 1.7320508075688772,
+      "is_golomb": true,
+      "k": 4,
+      "marks": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 6,
+      "pair_load": 0.75,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 1,
+        "count": 3,
+        "expected": 1.3333333333333333,
+        "frequency": 1,
+        "q": 3,
+        "radius": 0,
+        "value": 0.4166666666666667
+      },
+      "centered_difference_histogram_l2": 0.23570226039551584,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.2857142857142856,
+        "length": 4,
+        "start": 2,
+        "value": 0.3214285714285714
+      },
+      "centered_incidence_tensor_spectral_norm": 1.5609054003998006,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6372369612890303,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.3333333333333333,
+        "q": 3,
+        "residue": 0,
+        "value": 0.4166666666666667
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 10,
+      "diameter": 6,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 1.8477590650225735,
+      "is_golomb": false,
+      "k": 4,
+      "marks": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 6,
+      "pair_load": 1.0,
+      "repeated_difference_count": 1,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 3,
+        "expected": 1.7142857142857142,
+        "frequency": 1,
+        "q": 7,
+        "radius": 1,
+        "value": 0.32142857142857145
+      },
+      "centered_difference_histogram_l2": 0.23570226039551584,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.2857142857142856,
+        "length": 4,
+        "start": 2,
+        "value": 0.3214285714285714
+      },
+      "centered_incidence_tensor_spectral_norm": 1.5291377902454446,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6242678887513919,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.8,
+        "q": 5,
+        "residue": 1,
+        "value": 0.3
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 10,
+      "diameter": 6,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 1.9021130325903068,
+      "is_golomb": false,
+      "k": 4,
+      "marks": [
+        0,
+        1,
+        2,
+        6
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 6,
+      "pair_load": 1.0,
+      "repeated_difference_count": 1,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 1,
+        "count": 4,
+        "expected": 2.0,
+        "frequency": 1,
+        "q": 2,
+        "radius": 0,
+        "value": 0.5
+      },
+      "centered_difference_histogram_l2": 0.4714045207910317,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 0.5714285714285714,
+        "length": 1,
+        "start": 1,
+        "value": 0.14285714285714285
+      },
+      "centered_incidence_tensor_spectral_norm": 1.693894631399589,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6915295874947976,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 2.0,
+        "q": 2,
+        "residue": 0,
+        "value": 0.5
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 10,
+      "diameter": 6,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.246979603717467,
+      "is_golomb": false,
+      "k": 4,
+      "marks": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 6,
+      "pair_load": 1.0,
+      "repeated_difference_count": 3,
+      "slack_after_pigeonhole": 0
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 5,
+        "expected": 3.0,
+        "frequency": 1,
+        "q": 5,
+        "radius": 1,
+        "value": 0.4
+      },
+      "centered_difference_histogram_l2": 0.0909090909090909,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.6666666666666667,
+        "length": 4,
+        "start": 5,
+        "value": 0.33333333333333337
+      },
+      "centered_incidence_tensor_spectral_norm": 1.8715251183735164,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5918282072276553,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.45454545454545453,
+        "q": 11,
+        "residue": 0,
+        "value": 0.3090909090909091
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 14,
+      "diameter": 11,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.0,
+      "is_golomb": true,
+      "k": 5,
+      "marks": [
+        0,
+        1,
+        4,
+        9,
+        11
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 10,
+      "pair_load": 0.9090909090909091,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 1
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 4,
+        "expected": 1.6666666666666667,
+        "frequency": 4,
+        "q": 9,
+        "radius": 1,
+        "value": 0.4666666666666666
+      },
+      "centered_difference_histogram_l2": 0.0909090909090909,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.6666666666666667,
+        "length": 4,
+        "start": 3,
+        "value": 0.33333333333333337
+      },
+      "centered_incidence_tensor_spectral_norm": 1.866438596698819,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5902197078416694,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.45454545454545453,
+        "q": 11,
+        "residue": 0,
+        "value": 0.3090909090909091
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 14,
+      "diameter": 11,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.0,
+      "is_golomb": true,
+      "k": 5,
+      "marks": [
+        0,
+        2,
+        7,
+        8,
+        11
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 10,
+      "pair_load": 0.9090909090909091,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 1
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 3,
+        "expected": 1.1538461538461537,
+        "frequency": 1,
+        "q": 13,
+        "radius": 1,
+        "value": 0.36923076923076925
+      },
+      "centered_difference_histogram_l2": 0.11785113019775789,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 3.076923076923077,
+        "length": 8,
+        "start": 4,
+        "value": 0.4153846153846154
+      },
+      "centered_incidence_tensor_spectral_norm": 1.891487484649538,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5981408617195314,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 1.6666666666666667,
+        "q": 3,
+        "residue": 2,
+        "value": 0.33333333333333337
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 13,
+      "diameter": 12,
+      "family": "greedy_sidon_control",
+      "incidence_tensor_spectral_norm": 2.0,
+      "is_golomb": true,
+      "k": 5,
+      "marks": [
+        0,
+        1,
+        3,
+        7,
+        12
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 10,
+      "pair_load": 0.8333333333333334,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 5,
+        "expected": 2.3684210526315788,
+        "frequency": 1,
+        "q": 19,
+        "radius": 4,
+        "value": 0.5263157894736843
+      },
+      "centered_difference_histogram_l2": 0.15793451382644758,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.8181818181818181,
+        "length": 8,
+        "start": 4,
+        "value": 0.36363636363636365
+      },
+      "centered_incidence_tensor_spectral_norm": 1.9316095752715814,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6108285808048654,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 1.6666666666666667,
+        "q": 3,
+        "residue": 0,
+        "value": 0.4666666666666666
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 4,
+      "diameter": 21,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.0,
+      "is_golomb": true,
+      "k": 5,
+      "marks": [
+        0,
+        3,
+        15,
+        16,
+        21
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 10,
+      "pair_load": 0.47619047619047616,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 11
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 5,
+        "expected": 2.3684210526315788,
+        "frequency": 1,
+        "q": 19,
+        "radius": 4,
+        "value": 0.5263157894736843
+      },
+      "centered_difference_histogram_l2": 0.15793451382644758,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 3.6363636363636362,
+        "length": 16,
+        "start": 5,
+        "value": 0.5272727272727272
+      },
+      "centered_incidence_tensor_spectral_norm": 1.9372643212128242,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6126167684812573,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.0,
+        "q": 5,
+        "residue": 1,
+        "value": 0.4
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 4,
+      "diameter": 21,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.0,
+      "is_golomb": true,
+      "k": 5,
+      "marks": [
+        0,
+        1,
+        4,
+        16,
+        21
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 10,
+      "pair_load": 0.47619047619047616,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 11
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 5,
+        "expected": 2.6470588235294117,
+        "frequency": 3,
+        "q": 17,
+        "radius": 4,
+        "value": 0.47058823529411764
+      },
+      "centered_difference_histogram_l2": 0.15713484026367722,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 0.5263157894736842,
+        "length": 2,
+        "start": 6,
+        "value": 0.2947368421052632
+      },
+      "centered_incidence_tensor_spectral_norm": 1.9241419293722648,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6084671038247196,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.25,
+        "q": 4,
+        "residue": 2,
+        "value": 0.35
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 7,
+      "diameter": 18,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.0,
+      "is_golomb": true,
+      "k": 5,
+      "marks": [
+        0,
+        6,
+        7,
+        10,
+        18
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 10,
+      "pair_load": 0.5555555555555556,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 8
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 4,
+        "expected": 1.3636363636363635,
+        "frequency": 1,
+        "q": 11,
+        "radius": 1,
+        "value": 0.5272727272727273
+      },
+      "centered_difference_histogram_l2": 0.2112536370658591,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 3.3333333333333335,
+        "length": 8,
+        "start": 2,
+        "value": 0.4666666666666667
+      },
+      "centered_incidence_tensor_spectral_norm": 1.8554025456712095,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5867298020795607,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.45454545454545453,
+        "q": 11,
+        "residue": 0,
+        "value": 0.3090909090909091
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 14,
+      "diameter": 11,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.193993277712657,
+      "is_golomb": false,
+      "k": 5,
+      "marks": [
+        0,
+        1,
+        4,
+        10,
+        11
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 10,
+      "pair_load": 0.9090909090909091,
+      "repeated_difference_count": 2,
+      "slack_after_pigeonhole": 1
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 1,
+        "expected": 3.125,
+        "frequency": 1,
+        "q": 8,
+        "radius": 2,
+        "value": 0.425
+      },
+      "centered_difference_histogram_l2": 0.16262312563634831,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.6666666666666667,
+        "length": 4,
+        "start": 6,
+        "value": 0.33333333333333337
+      },
+      "centered_incidence_tensor_spectral_norm": 1.9505584432729006,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.6168207390014704,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.45454545454545453,
+        "q": 11,
+        "residue": 0,
+        "value": 0.3090909090909091
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 14,
+      "diameter": 11,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.0000000000000004,
+      "is_golomb": false,
+      "k": 5,
+      "marks": [
+        0,
+        3,
+        4,
+        5,
+        11
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 10,
+      "pair_load": 0.9090909090909091,
+      "repeated_difference_count": 1,
+      "slack_after_pigeonhole": 1
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 5,
+        "expected": 2.272727272727273,
+        "frequency": 3,
+        "q": 11,
+        "radius": 2,
+        "value": 0.5454545454545454
+      },
+      "centered_difference_histogram_l2": 0.25061906821982216,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 0.8333333333333334,
+        "length": 2,
+        "start": 3,
+        "value": 0.2333333333333333
+      },
+      "centered_incidence_tensor_spectral_norm": 1.848027309794001,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5843975477142638,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.25,
+        "q": 4,
+        "residue": 0,
+        "value": 0.35
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 14,
+      "diameter": 11,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.2492130550467695,
+      "is_golomb": false,
+      "k": 5,
+      "marks": [
+        0,
+        3,
+        4,
+        8,
+        11
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 10,
+      "pair_load": 0.9090909090909091,
+      "repeated_difference_count": 3,
+      "slack_after_pigeonhole": 1
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 6,
+        "expected": 3.375,
+        "frequency": 3,
+        "q": 16,
+        "radius": 4,
+        "value": 0.4375
+      },
+      "centered_difference_histogram_l2": 0.08318903308077029,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.6666666666666665,
+        "length": 8,
+        "start": 2,
+        "value": 0.27777777777777773
+      },
+      "centered_incidence_tensor_spectral_norm": 2.145172313012198,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5538811095360991,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.35294117647058826,
+        "q": 17,
+        "residue": 0,
+        "value": 0.2745098039215686
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 19,
+      "diameter": 17,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.23606797749979,
+      "is_golomb": true,
+      "k": 6,
+      "marks": [
+        0,
+        1,
+        4,
+        10,
+        12,
+        17
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 15,
+      "pair_load": 0.8823529411764706,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 6,
+        "expected": 3.375,
+        "frequency": 3,
+        "q": 16,
+        "radius": 4,
+        "value": 0.4375
+      },
+      "centered_difference_histogram_l2": 0.08318903308077029,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.6666666666666665,
+        "length": 8,
+        "start": 2,
+        "value": 0.27777777777777773
+      },
+      "centered_incidence_tensor_spectral_norm": 2.1402418305229736,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5526080644314635,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.2,
+        "q": 5,
+        "residue": 0,
+        "value": 0.3
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 19,
+      "diameter": 17,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.23606797749979,
+      "is_golomb": true,
+      "k": 6,
+      "marks": [
+        0,
+        1,
+        4,
+        10,
+        15,
+        17
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 15,
+      "pair_load": 0.8823529411764706,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 4,
+        "expected": 1.7647058823529411,
+        "frequency": 2,
+        "q": 17,
+        "radius": 2,
+        "value": 0.37254901960784315
+      },
+      "centered_difference_histogram_l2": 0.08318903308077029,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.6666666666666665,
+        "length": 8,
+        "start": 2,
+        "value": 0.27777777777777773
+      },
+      "centered_incidence_tensor_spectral_norm": 2.135349396448054,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5513448433851581,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.35294117647058826,
+        "q": 17,
+        "residue": 0,
+        "value": 0.2745098039215686
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 19,
+      "diameter": 17,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.23606797749979,
+      "is_golomb": true,
+      "k": 6,
+      "marks": [
+        0,
+        1,
+        8,
+        11,
+        13,
+        17
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 15,
+      "pair_load": 0.8823529411764706,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 7,
+        "count": 6,
+        "expected": 3.230769230769231,
+        "frequency": 3,
+        "q": 13,
+        "radius": 3,
+        "value": 0.4615384615384615
+      },
+      "centered_difference_histogram_l2": 0.08318903308077029,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.6666666666666665,
+        "length": 8,
+        "start": 2,
+        "value": 0.27777777777777773
+      },
+      "centered_incidence_tensor_spectral_norm": 2.13431724146667,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5510783421149178,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.35294117647058826,
+        "q": 17,
+        "residue": 0,
+        "value": 0.2745098039215686
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 19,
+      "diameter": 17,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.23606797749979,
+      "is_golomb": true,
+      "k": 6,
+      "marks": [
+        0,
+        1,
+        8,
+        12,
+        14,
+        17
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 15,
+      "pair_load": 0.8823529411764706,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 4,
+        "expected": 1.7647058823529411,
+        "frequency": 5,
+        "q": 17,
+        "radius": 2,
+        "value": 0.37254901960784315
+      },
+      "centered_difference_histogram_l2": 0.11180339887498947,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 4.571428571428571,
+        "length": 16,
+        "start": 4,
+        "value": 0.42857142857142855
+      },
+      "centered_incidence_tensor_spectral_norm": 2.163764706163664,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5586816448055504,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.3157894736842105,
+        "q": 19,
+        "residue": 1,
+        "value": 0.2807017543859649
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 16,
+      "diameter": 20,
+      "family": "greedy_sidon_control",
+      "incidence_tensor_spectral_norm": 2.23606797749979,
+      "is_golomb": true,
+      "k": 6,
+      "marks": [
+        0,
+        1,
+        3,
+        7,
+        12,
+        20
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 15,
+      "pair_load": 0.75,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 5
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 7,
+        "count": 5,
+        "expected": 1.4482758620689655,
+        "frequency": 7,
+        "q": 29,
+        "radius": 3,
+        "value": 0.5919540229885057
+      },
+      "centered_difference_histogram_l2": 0.12856486930664499,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.823529411764706,
+        "length": 16,
+        "start": 15,
+        "value": 0.303921568627451
+      },
+      "centered_incidence_tensor_spectral_norm": 2.1931448577675283,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5662675673302714,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 2.0,
+        "q": 3,
+        "residue": 1,
+        "value": 0.3333333333333333
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 3,
+      "diameter": 33,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.23606797749979,
+      "is_golomb": true,
+      "k": 6,
+      "marks": [
+        0,
+        8,
+        12,
+        14,
+        17,
+        33
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 15,
+      "pair_load": 0.45454545454545453,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 18
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 15,
+        "count": 6,
+        "expected": 3.103448275862069,
+        "frequency": 2,
+        "q": 29,
+        "radius": 7,
+        "value": 0.4827586206896552
+      },
+      "centered_difference_histogram_l2": 0.12876968840942815,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.6551724137931034,
+        "length": 8,
+        "start": 19,
+        "value": 0.27586206896551724
+      },
+      "centered_incidence_tensor_spectral_norm": 2.180256091170126,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5629397021046119,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 2.0,
+        "q": 3,
+        "residue": 0,
+        "value": 0.3333333333333333
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 8,
+      "diameter": 28,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.23606797749979,
+      "is_golomb": true,
+      "k": 6,
+      "marks": [
+        0,
+        3,
+        11,
+        12,
+        18,
+        28
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 15,
+      "pair_load": 0.5357142857142857,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 13
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 7,
+        "count": 5,
+        "expected": 1.3548387096774193,
+        "frequency": 10,
+        "q": 31,
+        "radius": 3,
+        "value": 0.6075268817204301
+      },
+      "centered_difference_histogram_l2": 0.12820291010413745,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 5.485714285714286,
+        "length": 32,
+        "start": 2,
+        "value": 0.4142857142857143
+      },
+      "centered_incidence_tensor_spectral_norm": 2.191726980407159,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5659014729700265,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 2.0,
+        "q": 3,
+        "residue": 1,
+        "value": 0.3333333333333333
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 2,
+      "diameter": 34,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.23606797749979,
+      "is_golomb": true,
+      "k": 6,
+      "marks": [
+        0,
+        1,
+        6,
+        22,
+        31,
+        34
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 15,
+      "pair_load": 0.4411764705882353,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 19
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 4,
+        "expected": 1.3846153846153846,
+        "frequency": 4,
+        "q": 13,
+        "radius": 1,
+        "value": 0.4358974358974359
+      },
+      "centered_difference_histogram_l2": 0.19568588156666114,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.3333333333333333,
+        "length": 4,
+        "start": 4,
+        "value": 0.2222222222222222
+      },
+      "centered_incidence_tensor_spectral_norm": 2.168133240787897,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5598095955953493,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.8571428571428571,
+        "q": 7,
+        "residue": 3,
+        "value": 0.35714285714285715
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 19,
+      "diameter": 17,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.486351410410925,
+      "is_golomb": false,
+      "k": 6,
+      "marks": [
+        0,
+        3,
+        8,
+        10,
+        13,
+        17
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 15,
+      "pair_load": 0.8823529411764706,
+      "repeated_difference_count": 4,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 4,
+        "expected": 1.3846153846153846,
+        "frequency": 3,
+        "q": 13,
+        "radius": 1,
+        "value": 0.4358974358974359
+      },
+      "centered_difference_histogram_l2": 0.17449878793166268,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 1.3333333333333333,
+        "length": 4,
+        "start": 3,
+        "value": 0.2777777777777778
+      },
+      "centered_incidence_tensor_spectral_norm": 2.156484870484423,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5568019993156286,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.35294117647058826,
+        "q": 17,
+        "residue": 0,
+        "value": 0.2745098039215686
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 19,
+      "diameter": 17,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.4218029087856636,
+      "is_golomb": false,
+      "k": 6,
+      "marks": [
+        0,
+        4,
+        5,
+        6,
+        13,
+        17
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 15,
+      "pair_load": 0.8823529411764706,
+      "repeated_difference_count": 3,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 4,
+        "expected": 1.3846153846153846,
+        "frequency": 1,
+        "q": 13,
+        "radius": 1,
+        "value": 0.4358974358974359
+      },
+      "centered_difference_histogram_l2": 0.15035521186416329,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.6666666666666665,
+        "length": 8,
+        "start": 2,
+        "value": 0.27777777777777773
+      },
+      "centered_incidence_tensor_spectral_norm": 2.1414209657626593,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5529125158412121,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.35294117647058826,
+        "q": 17,
+        "residue": 0,
+        "value": 0.2745098039215686
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 19,
+      "diameter": 17,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.411142157287357,
+      "is_golomb": false,
+      "k": 6,
+      "marks": [
+        0,
+        1,
+        6,
+        13,
+        14,
+        17
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 15,
+      "pair_load": 0.8823529411764706,
+      "repeated_difference_count": 2,
+      "slack_after_pigeonhole": 2
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 6,
+        "expected": 3.3157894736842106,
+        "frequency": 4,
+        "q": 19,
+        "radius": 4,
+        "value": 0.38345864661654133
+      },
+      "centered_difference_histogram_l2": 0.07999999999999999,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 4.3076923076923075,
+        "length": 16,
+        "start": 2,
+        "value": 0.32967032967032966
+      },
+      "centered_incidence_tensor_spectral_norm": 2.376249797022878,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5185402173800375,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.0,
+        "q": 7,
+        "residue": 4,
+        "value": 0.2857142857142857
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 24,
+      "diameter": 25,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.449489742783178,
+      "is_golomb": true,
+      "k": 7,
+      "marks": [
+        0,
+        1,
+        4,
+        10,
+        18,
+        23,
+        25
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 21,
+      "pair_load": 0.84,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 5,
+        "expected": 2.3333333333333335,
+        "frequency": 4,
+        "q": 9,
+        "radius": 1,
+        "value": 0.38095238095238093
+      },
+      "centered_difference_histogram_l2": 0.07999999999999999,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 4.3076923076923075,
+        "length": 16,
+        "start": 2,
+        "value": 0.32967032967032966
+      },
+      "centered_incidence_tensor_spectral_norm": 2.372751496998767,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5177768257293636,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 1.75,
+        "q": 4,
+        "residue": 2,
+        "value": 0.25
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 24,
+      "diameter": 25,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.449489742783178,
+      "is_golomb": true,
+      "k": 7,
+      "marks": [
+        0,
+        1,
+        7,
+        11,
+        20,
+        23,
+        25
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 21,
+      "pair_load": 0.84,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 4,
+        "expected": 1.5217391304347827,
+        "frequency": 1,
+        "q": 23,
+        "radius": 2,
+        "value": 0.35403726708074534
+      },
+      "centered_difference_histogram_l2": 0.07999999999999999,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 4.3076923076923075,
+        "length": 16,
+        "start": 2,
+        "value": 0.32967032967032966
+      },
+      "centered_incidence_tensor_spectral_norm": 2.36882235956843,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5169194176488682,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 1.75,
+        "q": 4,
+        "residue": 2,
+        "value": 0.25
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 24,
+      "diameter": 25,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.449489742783178,
+      "is_golomb": true,
+      "k": 7,
+      "marks": [
+        0,
+        1,
+        11,
+        16,
+        19,
+        23,
+        25
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 21,
+      "pair_load": 0.84,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 11,
+        "count": 6,
+        "expected": 3.347826086956522,
+        "frequency": 9,
+        "q": 23,
+        "radius": 5,
+        "value": 0.37888198757763975
+      },
+      "centered_difference_histogram_l2": 0.08,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 4.3076923076923075,
+        "length": 16,
+        "start": 4,
+        "value": 0.32967032967032966
+      },
+      "centered_incidence_tensor_spectral_norm": 2.3788998047800574,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5191184964819183,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.28,
+        "q": 25,
+        "residue": 0,
+        "value": 0.24571428571428572
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 24,
+      "diameter": 25,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.449489742783178,
+      "is_golomb": true,
+      "k": 7,
+      "marks": [
+        0,
+        2,
+        3,
+        10,
+        16,
+        21,
+        25
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 21,
+      "pair_load": 0.84,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 5,
+        "expected": 1.5217391304347827,
+        "frequency": 1,
+        "q": 23,
+        "radius": 2,
+        "value": 0.4968944099378882
+      },
+      "centered_difference_histogram_l2": 0.07999999999999999,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 4.3076923076923075,
+        "length": 16,
+        "start": 3,
+        "value": 0.32967032967032966
+      },
+      "centered_incidence_tensor_spectral_norm": 2.3711988394238745,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5174380080691116,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.0,
+        "q": 7,
+        "residue": 0,
+        "value": 0.2857142857142857
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 24,
+      "diameter": 25,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.449489742783178,
+      "is_golomb": true,
+      "k": 7,
+      "marks": [
+        0,
+        2,
+        7,
+        13,
+        21,
+        22,
+        25
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 21,
+      "pair_load": 0.84,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 7,
+        "count": 5,
+        "expected": 1.8148148148148149,
+        "frequency": 8,
+        "q": 27,
+        "radius": 3,
+        "value": 0.455026455026455
+      },
+      "centered_difference_histogram_l2": 0.1,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 3.6129032258064515,
+        "length": 16,
+        "start": 13,
+        "value": 0.37327188940092165
+      },
+      "centered_incidence_tensor_spectral_norm": 2.3962718566210284,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5229093889837253,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.7777777777777778,
+        "q": 9,
+        "residue": 3,
+        "value": 0.3174603174603175
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 19,
+      "diameter": 30,
+      "family": "greedy_sidon_control",
+      "incidence_tensor_spectral_norm": 2.449489742783178,
+      "is_golomb": true,
+      "k": 7,
+      "marks": [
+        0,
+        1,
+        3,
+        7,
+        12,
+        20,
+        30
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 21,
+      "pair_load": 0.7,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 9
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 11,
+        "count": 5,
+        "expected": 1.6382978723404256,
+        "frequency": 5,
+        "q": 47,
+        "radius": 5,
+        "value": 0.48024316109422494
+      },
+      "centered_difference_histogram_l2": 0.10825317547305484,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 2.2857142857142856,
+        "length": 16,
+        "start": 19,
+        "value": 0.32653061224489793
+      },
+      "centered_incidence_tensor_spectral_norm": 2.416715831668606,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5273706300866449,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.1891891891891892,
+        "q": 37,
+        "residue": 0,
+        "value": 0.25868725868725867
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 1,
+      "diameter": 48,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.449489742783178,
+      "is_golomb": true,
+      "k": 7,
+      "marks": [
+        0,
+        10,
+        13,
+        17,
+        18,
+        37,
+        48
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 21,
+      "pair_load": 0.4375,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 27
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 7,
+        "expected": 3.3157894736842106,
+        "frequency": 2,
+        "q": 19,
+        "radius": 4,
+        "value": 0.5263157894736842
+      },
+      "centered_difference_histogram_l2": 0.10869565217391307,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 1.1914893617021276,
+        "length": 8,
+        "start": 11,
+        "value": 0.25835866261398177
+      },
+      "centered_incidence_tensor_spectral_norm": 2.414581800425411,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5269049462910572,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.0,
+        "q": 7,
+        "residue": 4,
+        "value": 0.2857142857142857
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 3,
+      "diameter": 46,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.449489742783178,
+      "is_golomb": true,
+      "k": 7,
+      "marks": [
+        0,
+        11,
+        17,
+        18,
+        21,
+        30,
+        46
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 21,
+      "pair_load": 0.45652173913043476,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 25
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 13,
+        "count": 7,
+        "expected": 3.64,
+        "frequency": 9,
+        "q": 25,
+        "radius": 6,
+        "value": 0.48
+      },
+      "centered_difference_histogram_l2": 0.10899617098438001,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 4.977777777777778,
+        "length": 32,
+        "start": 10,
+        "value": 0.4253968253968254
+      },
+      "centered_incidence_tensor_spectral_norm": 2.4134836887348277,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5266653186746947,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.7777777777777778,
+        "q": 9,
+        "residue": 0,
+        "value": 0.3174603174603175
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 5,
+      "diameter": 44,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.449489742783178,
+      "is_golomb": true,
+      "k": 7,
+      "marks": [
+        0,
+        5,
+        6,
+        9,
+        19,
+        36,
+        44
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 21,
+      "pair_load": 0.4772727272727273,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 23
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 5,
+        "expected": 1.5217391304347827,
+        "frequency": 11,
+        "q": 23,
+        "radius": 2,
+        "value": 0.4968944099378882
+      },
+      "centered_difference_histogram_l2": 0.14709893010520247,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 4.3076923076923075,
+        "length": 16,
+        "start": 5,
+        "value": 0.32967032967032966
+      },
+      "centered_incidence_tensor_spectral_norm": 2.420890508287181,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5282816192107679,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 2,
+        "expected": 0.28,
+        "q": 25,
+        "residue": 0,
+        "value": 0.24571428571428572
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 24,
+      "diameter": 25,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.645751311064591,
+      "is_golomb": false,
+      "k": 7,
+      "marks": [
+        0,
+        2,
+        4,
+        9,
+        15,
+        21,
+        25
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 21,
+      "pair_load": 0.84,
+      "repeated_difference_count": 4,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 1,
+        "count": 5,
+        "expected": 1.75,
+        "frequency": 1,
+        "q": 4,
+        "radius": 0,
+        "value": 0.4642857142857143
+      },
+      "centered_difference_histogram_l2": 0.19203174340767334,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 0.5384615384615384,
+        "length": 2,
+        "start": 3,
+        "value": 0.2087912087912088
+      },
+      "centered_incidence_tensor_spectral_norm": 2.577684566299292,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5624968877517106,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 5,
+        "expected": 1.75,
+        "q": 4,
+        "residue": 0,
+        "value": 0.4642857142857143
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 24,
+      "diameter": 25,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.8190415991817597,
+      "is_golomb": false,
+      "k": 7,
+      "marks": [
+        0,
+        3,
+        4,
+        12,
+        16,
+        20,
+        25
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 21,
+      "pair_load": 0.84,
+      "repeated_difference_count": 7,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 6,
+        "expected": 1.8421052631578947,
+        "frequency": 6,
+        "q": 19,
+        "radius": 2,
+        "value": 0.5939849624060151
+      },
+      "centered_difference_histogram_l2": 0.19203174340767334,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 2,
+        "expected": 4.3076923076923075,
+        "length": 16,
+        "start": 9,
+        "value": 0.32967032967032966
+      },
+      "centered_incidence_tensor_spectral_norm": 2.619712837488242,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5716682084208294,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.875,
+        "q": 8,
+        "residue": 0,
+        "value": 0.30357142857142855
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 24,
+      "diameter": 25,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.9153338371476014,
+      "is_golomb": false,
+      "k": 7,
+      "marks": [
+        0,
+        3,
+        6,
+        8,
+        16,
+        19,
+        25
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 21,
+      "pair_load": 0.84,
+      "repeated_difference_count": 7,
+      "slack_after_pigeonhole": 4
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 5,
+        "expected": 2.1818181818181817,
+        "frequency": 1,
+        "q": 11,
+        "radius": 1,
+        "value": 0.3522727272727273
+      },
+      "centered_difference_histogram_l2": 0.07204381596421112,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 3.657142857142857,
+        "length": 16,
+        "start": 16,
+        "value": 0.33214285714285713
+      },
+      "centered_incidence_tensor_spectral_norm": 2.5887994422379434,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4892371084560228,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 1.1428571428571428,
+        "q": 7,
+        "residue": 1,
+        "value": 0.23214285714285715
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 30,
+      "diameter": 34,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.6457513110645907,
+      "is_golomb": true,
+      "k": 8,
+      "marks": [
+        0,
+        1,
+        4,
+        9,
+        15,
+        22,
+        32,
+        34
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 28,
+      "pair_load": 0.8235294117647058,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 6
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 6,
+        "expected": 1.945945945945946,
+        "frequency": 11,
+        "q": 37,
+        "radius": 4,
+        "value": 0.5067567567567568
+      },
+      "centered_difference_histogram_l2": 0.09090909090909091,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 5.688888888888889,
+        "length": 32,
+        "start": 8,
+        "value": 0.33611111111111114
+      },
+      "centered_incidence_tensor_spectral_norm": 2.6069576978123687,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4926686962055001,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.8888888888888888,
+        "q": 9,
+        "residue": 3,
+        "value": 0.2638888888888889
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 20,
+      "diameter": 44,
+      "family": "greedy_sidon_control",
+      "incidence_tensor_spectral_norm": 2.64575131106459,
+      "is_golomb": true,
+      "k": 8,
+      "marks": [
+        0,
+        1,
+        3,
+        7,
+        12,
+        20,
+        30,
+        44
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 28,
+      "pair_load": 0.6363636363636364,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 16
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 7,
+        "count": 6,
+        "expected": 1.9310344827586208,
+        "frequency": 6,
+        "q": 29,
+        "radius": 3,
+        "value": 0.5086206896551724
+      },
+      "centered_difference_histogram_l2": 0.0944349237077873,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 5,
+        "expected": 2.169491525423729,
+        "length": 16,
+        "start": 0,
+        "value": 0.3538135593220339
+      },
+      "centered_incidence_tensor_spectral_norm": 2.6165285961074654,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.49447742597066563,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 2.0,
+        "q": 4,
+        "residue": 2,
+        "value": 0.25
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 6,
+      "diameter": 58,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.6457513110645907,
+      "is_golomb": true,
+      "k": 8,
+      "marks": [
+        0,
+        5,
+        11,
+        14,
+        15,
+        34,
+        42,
+        58
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 28,
+      "pair_load": 0.4827586206896552,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 30
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 7,
+        "count": 5,
+        "expected": 1.8064516129032258,
+        "frequency": 7,
+        "q": 31,
+        "radius": 3,
+        "value": 0.39919354838709675
+      },
+      "centered_difference_histogram_l2": 0.09300816647554057,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 3.710144927536232,
+        "length": 32,
+        "start": 17,
+        "value": 0.338768115942029
+      },
+      "centered_incidence_tensor_spectral_norm": 2.6224606848399548,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.49559848536647527,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.7272727272727273,
+        "q": 11,
+        "residue": 2,
+        "value": 0.28409090909090906
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": -4,
+      "diameter": 68,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.6457513110645907,
+      "is_golomb": true,
+      "k": 8,
+      "marks": [
+        0,
+        4,
+        6,
+        13,
+        16,
+        35,
+        53,
+        68
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 28,
+      "pair_load": 0.4117647058823529,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 40
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 15,
+        "count": 8,
+        "expected": 3.870967741935484,
+        "frequency": 6,
+        "q": 31,
+        "radius": 7,
+        "value": 0.5161290322580645
+      },
+      "centered_difference_histogram_l2": 0.09320892534922981,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 0.9411764705882353,
+        "length": 8,
+        "start": 60,
+        "value": 0.25735294117647056
+      },
+      "centered_incidence_tensor_spectral_norm": 2.6182135112583658,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4947958450042033,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.8888888888888888,
+        "q": 9,
+        "residue": 0,
+        "value": 0.2638888888888889
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": -3,
+      "diameter": 67,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.6457513110645907,
+      "is_golomb": true,
+      "k": 8,
+      "marks": [
+        0,
+        4,
+        27,
+        36,
+        51,
+        61,
+        62,
+        67
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 28,
+      "pair_load": 0.417910447761194,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 39
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 7,
+        "count": 6,
+        "expected": 2.24,
+        "frequency": 11,
+        "q": 25,
+        "radius": 3,
+        "value": 0.47
+      },
+      "centered_difference_histogram_l2": 0.141053868332727,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.8285714285714285,
+        "length": 8,
+        "start": 26,
+        "value": 0.22857142857142856
+      },
+      "centered_incidence_tensor_spectral_norm": 2.7047495151058496,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5111496125494727,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 0.8888888888888888,
+        "q": 9,
+        "residue": 7,
+        "value": 0.3888888888888889
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 30,
+      "diameter": 34,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.868470458887906,
+      "is_golomb": false,
+      "k": 8,
+      "marks": [
+        0,
+        3,
+        7,
+        15,
+        16,
+        23,
+        25,
+        34
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 28,
+      "pair_load": 0.8235294117647058,
+      "repeated_difference_count": 6,
+      "slack_after_pigeonhole": 6
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 5,
+        "expected": 1.7391304347826086,
+        "frequency": 3,
+        "q": 23,
+        "radius": 2,
+        "value": 0.40760869565217395
+      },
+      "centered_difference_histogram_l2": 0.11659190693707233,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.8285714285714285,
+        "length": 8,
+        "start": 6,
+        "value": 0.22857142857142856
+      },
+      "centered_incidence_tensor_spectral_norm": 2.6303183251338167,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4970834398028581,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 1.6,
+        "q": 5,
+        "residue": 0,
+        "value": 0.3
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 30,
+      "diameter": 34,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.7023648232116986,
+      "is_golomb": false,
+      "k": 8,
+      "marks": [
+        0,
+        3,
+        5,
+        15,
+        16,
+        23,
+        30,
+        34
+      ],
+      "max_collision_multiplicity": 2,
+      "pair_count": 28,
+      "pair_load": 0.8235294117647058,
+      "repeated_difference_count": 4,
+      "slack_after_pigeonhole": 6
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 6,
+        "expected": 2.1818181818181817,
+        "frequency": 1,
+        "q": 11,
+        "radius": 1,
+        "value": 0.4772727272727273
+      },
+      "centered_difference_histogram_l2": 0.141053868332727,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.8285714285714285,
+        "length": 8,
+        "start": 12,
+        "value": 0.22857142857142856
+      },
+      "centered_incidence_tensor_spectral_norm": 2.7673107068265854,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5229725664792512,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 1.6,
+        "q": 5,
+        "residue": 2,
+        "value": 0.3
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 30,
+      "diameter": 34,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 2.9561770851788585,
+      "is_golomb": false,
+      "k": 8,
+      "marks": [
+        0,
+        2,
+        7,
+        11,
+        21,
+        22,
+        32,
+        34
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 28,
+      "pair_load": 0.8235294117647058,
+      "repeated_difference_count": 6,
+      "slack_after_pigeonhole": 6
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 6,
+        "expected": 2.6470588235294117,
+        "frequency": 7,
+        "q": 17,
+        "radius": 2,
+        "value": 0.37254901960784315
+      },
+      "centered_difference_histogram_l2": 0.06428243465332249,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 4,
+        "expected": 6.4,
+        "length": 32,
+        "start": 2,
+        "value": 0.2666666666666667
+      },
+      "centered_incidence_tensor_spectral_norm": 2.7779993514613337,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4629998919102223,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 2.25,
+        "q": 4,
+        "residue": 2,
+        "value": 0.25
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 37,
+      "diameter": 44,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 2.8284271247461903,
+      "is_golomb": true,
+      "k": 9,
+      "marks": [
+        0,
+        1,
+        5,
+        12,
+        25,
+        27,
+        35,
+        41,
+        44
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 36,
+      "pair_load": 0.8181818181818182,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 8
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 11,
+        "count": 6,
+        "expected": 2.106382978723404,
+        "frequency": 14,
+        "q": 47,
+        "radius": 5,
+        "value": 0.4326241134751773
+      },
+      "centered_difference_histogram_l2": 0.08284868934053086,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 4.363636363636363,
+        "length": 32,
+        "start": 31,
+        "value": 0.3737373737373737
+      },
+      "centered_incidence_tensor_spectral_norm": 2.8011260215422427,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4668543369237071,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 1.8,
+        "q": 5,
+        "residue": 0,
+        "value": 0.24444444444444446
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 16,
+      "diameter": 65,
+      "family": "greedy_sidon_control",
+      "incidence_tensor_spectral_norm": 2.8284271247461903,
+      "is_golomb": true,
+      "k": 9,
+      "marks": [
+        0,
+        1,
+        3,
+        7,
+        12,
+        20,
+        30,
+        44,
+        65
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 36,
+      "pair_load": 0.5538461538461539,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 29
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 15,
+        "count": 9,
+        "expected": 4.655172413793103,
+        "frequency": 13,
+        "q": 29,
+        "radius": 7,
+        "value": 0.4827586206896552
+      },
+      "centered_difference_histogram_l2": 0.0820853842361247,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 6.545454545454546,
+        "length": 64,
+        "start": 14,
+        "value": 0.393939393939394
+      },
+      "centered_incidence_tensor_spectral_norm": 2.8075756411656476,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.46792927352760794,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 5,
+        "expected": 1.8,
+        "q": 5,
+        "residue": 0,
+        "value": 0.35555555555555557
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": -6,
+      "diameter": 87,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.8284271247461903,
+      "is_golomb": true,
+      "k": 9,
+      "marks": [
+        0,
+        4,
+        5,
+        13,
+        45,
+        60,
+        63,
+        80,
+        87
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 36,
+      "pair_load": 0.41379310344827586,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 51
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 8,
+        "expected": 4.2631578947368425,
+        "frequency": 6,
+        "q": 19,
+        "radius": 4,
+        "value": 0.4152046783625731
+      },
+      "centered_difference_histogram_l2": 0.08235294117647064,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 0.4186046511627907,
+        "length": 4,
+        "start": 48,
+        "value": 0.2868217054263566
+      },
+      "centered_incidence_tensor_spectral_norm": 2.806273675718377,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.46771227928639614,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 0,
+        "expected": 3.0,
+        "q": 3,
+        "residue": 2,
+        "value": 0.3333333333333333
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": -4,
+      "diameter": 85,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.8284271247461903,
+      "is_golomb": true,
+      "k": 9,
+      "marks": [
+        0,
+        10,
+        22,
+        48,
+        49,
+        51,
+        57,
+        64,
+        85
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 36,
+      "pair_load": 0.4235294117647059,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 49
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 11,
+        "count": 7,
+        "expected": 2.4146341463414633,
+        "frequency": 1,
+        "q": 41,
+        "radius": 5,
+        "value": 0.5094850948509486
+      },
+      "centered_difference_histogram_l2": 0.08222171874262178,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 6.620689655172414,
+        "length": 64,
+        "start": 6,
+        "value": 0.40229885057471265
+      },
+      "centered_incidence_tensor_spectral_norm": 2.806723466037605,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4677872443396008,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.5294117647058824,
+        "q": 17,
+        "residue": 1,
+        "value": 0.27450980392156865
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": -5,
+      "diameter": 86,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 2.8284271247461903,
+      "is_golomb": true,
+      "k": 9,
+      "marks": [
+        0,
+        1,
+        5,
+        18,
+        38,
+        61,
+        77,
+        83,
+        86
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 36,
+      "pair_load": 0.4186046511627907,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 50
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 7,
+        "expected": 1.9565217391304348,
+        "frequency": 11,
+        "q": 23,
+        "radius": 2,
+        "value": 0.5603864734299517
+      },
+      "centered_difference_histogram_l2": 0.1599902430450218,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 6.4,
+        "length": 32,
+        "start": 5,
+        "value": 0.3777777777777778
+      },
+      "centered_incidence_tensor_spectral_norm": 3.2262528646109807,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5377088107684967,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 1.8,
+        "q": 5,
+        "residue": 2,
+        "value": 0.24444444444444446
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 37,
+      "diameter": 44,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 3.456094884363894,
+      "is_golomb": false,
+      "k": 9,
+      "marks": [
+        0,
+        1,
+        2,
+        4,
+        21,
+        22,
+        27,
+        42,
+        44
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 36,
+      "pair_load": 0.8181818181818182,
+      "repeated_difference_count": 13,
+      "slack_after_pigeonhole": 8
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 9,
+        "expected": 5.0625,
+        "frequency": 7,
+        "q": 16,
+        "radius": 4,
+        "value": 0.4375
+      },
+      "centered_difference_histogram_l2": 0.1342427662626465,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 1.6,
+        "length": 8,
+        "start": 17,
+        "value": 0.17777777777777778
+      },
+      "centered_incidence_tensor_spectral_norm": 2.9485602184483732,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.49142670307472885,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 5,
+        "expected": 2.25,
+        "q": 4,
+        "residue": 0,
+        "value": 0.3055555555555556
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 37,
+      "diameter": 44,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 3.1450565891743656,
+      "is_golomb": false,
+      "k": 9,
+      "marks": [
+        0,
+        4,
+        11,
+        14,
+        16,
+        25,
+        28,
+        34,
+        44
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 36,
+      "pair_load": 0.8181818181818182,
+      "repeated_difference_count": 10,
+      "slack_after_pigeonhole": 8
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 7,
+        "expected": 2.189189189189189,
+        "frequency": 11,
+        "q": 37,
+        "radius": 4,
+        "value": 0.5345345345345345
+      },
+      "centered_difference_histogram_l2": 0.1388659301501769,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 3.2,
+        "length": 16,
+        "start": 14,
+        "value": 0.35555555555555557
+      },
+      "centered_incidence_tensor_spectral_norm": 3.076454945950933,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.5127424909918222,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 5,
+        "expected": 1.8,
+        "q": 5,
+        "residue": 0,
+        "value": 0.35555555555555557
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 37,
+      "diameter": 44,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 3.3046160683101666,
+      "is_golomb": false,
+      "k": 9,
+      "marks": [
+        0,
+        3,
+        7,
+        10,
+        13,
+        30,
+        35,
+        40,
+        44
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 36,
+      "pair_load": 0.8181818181818182,
+      "repeated_difference_count": 10,
+      "slack_after_pigeonhole": 8
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 11,
+        "count": 6,
+        "expected": 2.3404255319148937,
+        "frequency": 23,
+        "q": 47,
+        "radius": 5,
+        "value": 0.3659574468085106
+      },
+      "centered_difference_histogram_l2": 0.057495957457606904,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 1,
+        "expected": 2.857142857142857,
+        "length": 16,
+        "start": 7,
+        "value": 0.18571428571428572
+      },
+      "centered_incidence_tensor_spectral_norm": 2.957957094608108,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.44094620920476707,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 1.4285714285714286,
+        "q": 7,
+        "residue": 6,
+        "value": 0.2571428571428571
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 45,
+      "diameter": 55,
+      "family": "exact_canonical_optimal",
+      "incidence_tensor_spectral_norm": 3.0,
+      "is_golomb": true,
+      "k": 10,
+      "marks": [
+        0,
+        1,
+        6,
+        10,
+        23,
+        26,
+        34,
+        41,
+        53,
+        55
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 45,
+      "pair_load": 0.8181818181818182,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 10
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 11,
+        "count": 6,
+        "expected": 2.3404255319148937,
+        "frequency": 14,
+        "q": 47,
+        "radius": 5,
+        "value": 0.3659574468085106
+      },
+      "centered_difference_histogram_l2": 0.0739509972887452,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 4,
+        "expected": 7.901234567901234,
+        "length": 64,
+        "start": 13,
+        "value": 0.3901234567901234
+      },
+      "centered_incidence_tensor_spectral_norm": 2.9758112769109224,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4436077535588848,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 5,
+        "expected": 2.0,
+        "q": 5,
+        "residue": 0,
+        "value": 0.3
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 20,
+      "diameter": 80,
+      "family": "greedy_sidon_control",
+      "incidence_tensor_spectral_norm": 3.0,
+      "is_golomb": true,
+      "k": 10,
+      "marks": [
+        0,
+        1,
+        3,
+        7,
+        12,
+        20,
+        30,
+        44,
+        65,
+        80
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 45,
+      "pair_load": 0.5625,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 35
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 23,
+        "count": 9,
+        "expected": 4.8936170212765955,
+        "frequency": 19,
+        "q": 47,
+        "radius": 11,
+        "value": 0.41063829787234046
+      },
+      "centered_difference_histogram_l2": 0.07416198487095664,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 4,
+        "expected": 6.336633663366337,
+        "length": 64,
+        "start": 6,
+        "value": 0.2336633663366337
+      },
+      "centered_incidence_tensor_spectral_norm": 2.97902279486845,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4440864983898177,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 0.7692307692307693,
+        "q": 13,
+        "residue": 9,
+        "value": 0.3230769230769231
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": 0,
+      "diameter": 100,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 3.0,
+      "is_golomb": true,
+      "k": 10,
+      "marks": [
+        0,
+        5,
+        22,
+        35,
+        55,
+        59,
+        74,
+        82,
+        84,
+        100
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 45,
+      "pair_load": 0.45,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 55
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 15,
+        "count": 7,
+        "expected": 2.459016393442623,
+        "frequency": 25,
+        "q": 61,
+        "radius": 7,
+        "value": 0.4540983606557377
+      },
+      "centered_difference_histogram_l2": 0.07329325225725952,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 5.7657657657657655,
+        "length": 64,
+        "start": 11,
+        "value": 0.2765765765765765
+      },
+      "centered_incidence_tensor_spectral_norm": 2.982390597620685,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.44458854078240495,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.37037037037037035,
+        "q": 27,
+        "residue": 2,
+        "value": 0.26296296296296295
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": -10,
+      "diameter": 110,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 3.0,
+      "is_golomb": true,
+      "k": 10,
+      "marks": [
+        0,
+        9,
+        10,
+        29,
+        44,
+        61,
+        83,
+        86,
+        94,
+        110
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 45,
+      "pair_load": 0.4090909090909091,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 65
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 7,
+        "expected": 2.8125,
+        "frequency": 11,
+        "q": 32,
+        "radius": 4,
+        "value": 0.41875
+      },
+      "centered_difference_histogram_l2": 0.07349309197401639,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 0,
+        "expected": 2.9357798165137616,
+        "length": 32,
+        "start": 74,
+        "value": 0.29357798165137616
+      },
+      "centered_incidence_tensor_spectral_norm": 2.983289877874797,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.44472259756767274,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 5,
+        "expected": 2.0,
+        "q": 5,
+        "residue": 3,
+        "value": 0.3
+      },
+      "collision_certificate_accepts": true,
+      "compression_delta_k2_minus_diameter": -8,
+      "diameter": 108,
+      "family": "random_sidon_control",
+      "incidence_tensor_spectral_norm": 3.0,
+      "is_golomb": true,
+      "k": 10,
+      "marks": [
+        0,
+        6,
+        13,
+        23,
+        28,
+        32,
+        61,
+        62,
+        73,
+        108
+      ],
+      "max_collision_multiplicity": 1,
+      "pair_count": 45,
+      "pair_load": 0.4166666666666667,
+      "repeated_difference_count": 0,
+      "slack_after_pigeonhole": 63
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 3,
+        "count": 7,
+        "expected": 2.3076923076923075,
+        "frequency": 3,
+        "q": 13,
+        "radius": 1,
+        "value": 0.46923076923076923
+      },
+      "centered_difference_histogram_l2": 0.12741694570684023,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 5.714285714285714,
+        "length": 32,
+        "start": 23,
+        "value": 0.27142857142857146
+      },
+      "centered_incidence_tensor_spectral_norm": 3.2195009699159547,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.4799348681572386,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 4,
+        "expected": 0.9090909090909091,
+        "q": 11,
+        "residue": 0,
+        "value": 0.3090909090909091
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 45,
+      "diameter": 55,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 3.4490506786326884,
+      "is_golomb": false,
+      "k": 10,
+      "marks": [
+        0,
+        4,
+        9,
+        11,
+        17,
+        22,
+        26,
+        38,
+        48,
+        55
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 45,
+      "pair_load": 0.8181818181818182,
+      "repeated_difference_count": 14,
+      "slack_after_pigeonhole": 10
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 5,
+        "count": 7,
+        "expected": 2.6315789473684212,
+        "frequency": 7,
+        "q": 19,
+        "radius": 2,
+        "value": 0.43684210526315786
+      },
+      "centered_difference_histogram_l2": 0.11751951169494126,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 5.714285714285714,
+        "length": 32,
+        "start": 3,
+        "value": 0.27142857142857146
+      },
+      "centered_incidence_tensor_spectral_norm": 3.1195652039287824,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.46503732374851675,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 5,
+        "expected": 2.5,
+        "q": 4,
+        "residue": 2,
+        "value": 0.25
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 45,
+      "diameter": 55,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 3.277912915227873,
+      "is_golomb": false,
+      "k": 10,
+      "marks": [
+        0,
+        2,
+        8,
+        18,
+        30,
+        35,
+        38,
+        46,
+        49,
+        55
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 45,
+      "pair_load": 0.8181818181818182,
+      "repeated_difference_count": 12,
+      "slack_after_pigeonhole": 10
+    },
+    {
+      "centered_bohr_cell_discrepancy": {
+        "cell_size": 9,
+        "count": 7,
+        "expected": 2.4324324324324325,
+        "frequency": 6,
+        "q": 37,
+        "radius": 4,
+        "value": 0.45675675675675675
+      },
+      "centered_difference_histogram_l2": 0.10670798097975151,
+      "centered_dyadic_interval_discrepancy": {
+        "count": 3,
+        "expected": 5.714285714285714,
+        "length": 32,
+        "start": 4,
+        "value": 0.27142857142857146
+      },
+      "centered_incidence_tensor_spectral_norm": 3.2038209842822316,
+      "centered_incidence_tensor_spectral_norm_over_sqrt_pairs": 0.477597433906357,
+      "centered_prime_power_residue_discrepancy": {
+        "count": 3,
+        "expected": 0.4,
+        "q": 25,
+        "residue": 0,
+        "value": 0.26
+      },
+      "collision_certificate_accepts": false,
+      "compression_delta_k2_minus_diameter": 45,
+      "diameter": 55,
+      "family": "random_non_sidon_negative_control",
+      "incidence_tensor_spectral_norm": 3.3938461657905887,
+      "is_golomb": false,
+      "k": 10,
+      "marks": [
+        0,
+        3,
+        6,
+        22,
+        25,
+        37,
+        48,
+        49,
+        50,
+        55
+      ],
+      "max_collision_multiplicity": 3,
+      "pair_count": 45,
+      "pair_load": 0.8181818181818182,
+      "repeated_difference_count": 9,
+      "slack_after_pigeonhole": 10
+    }
+  ],
+  "search_receipts": [
+    {
+      "canonical_optimal_ruler_count": 1,
+      "diameter": 1,
+      "k": 2,
+      "optimality_verified_by_exhausting_smaller_diameters": true,
+      "search_nodes": 2,
+      "seconds": 7.791999451001175e-06
+    },
+    {
+      "canonical_optimal_ruler_count": 1,
+      "diameter": 3,
+      "k": 3,
+      "optimality_verified_by_exhausting_smaller_diameters": true,
+      "search_nodes": 5,
+      "seconds": 1.5333000192185864e-05
+    },
+    {
+      "canonical_optimal_ruler_count": 1,
+      "diameter": 6,
+      "k": 4,
+      "optimality_verified_by_exhausting_smaller_diameters": true,
+      "search_nodes": 17,
+      "seconds": 2.9040998924756423e-05
+    },
+    {
+      "canonical_optimal_ruler_count": 2,
+      "diameter": 11,
+      "k": 5,
+      "optimality_verified_by_exhausting_smaller_diameters": true,
+      "search_nodes": 167,
+      "seconds": 0.00020833300004596822
+    },
+    {
+      "canonical_optimal_ruler_count": 4,
+      "diameter": 17,
+      "k": 6,
+      "optimality_verified_by_exhausting_smaller_diameters": true,
+      "search_nodes": 1463,
+      "seconds": 0.0018694579994189553
+    },
+    {
+      "canonical_optimal_ruler_count": 5,
+      "diameter": 25,
+      "k": 7,
+      "optimality_verified_by_exhausting_smaller_diameters": true,
+      "search_nodes": 17389,
+      "seconds": 0.035431249998509884
+    },
+    {
+      "canonical_optimal_ruler_count": 1,
+      "diameter": 34,
+      "k": 8,
+      "optimality_verified_by_exhausting_smaller_diameters": true,
+      "search_nodes": 173630,
+      "seconds": 0.31931375000021944
+    },
+    {
+      "canonical_optimal_ruler_count": 1,
+      "diameter": 44,
+      "k": 9,
+      "optimality_verified_by_exhausting_smaller_diameters": true,
+      "search_nodes": 1601873,
+      "seconds": 3.544135500000266
+    },
+    {
+      "canonical_optimal_ruler_count": 1,
+      "diameter": 55,
+      "k": 10,
+      "optimality_verified_by_exhausting_smaller_diameters": true,
+      "search_nodes": 13971019,
+      "seconds": 36.32959870800005
+    }
+  ],
+  "seed": 20260502
+}

@@ -110,7 +110,22 @@ def main():
                            "V = q >= 13) cannot fire at r = 4"),
         },
         "censuses": {
-            "exhaustive_box_G14": census("scan_G14.log", "exhaustive box [0,14]^9"),
+            "exhaustive_box_G14": {
+                "log": "scan_G14.log",
+                "kind": "exhaustive box [0,14]^9",
+                "vectors": 38443359375,
+                "status": "IN FLIGHT at the time this manifest was written -- "
+                          "NOT complete, NOT used in any conclusion below. Its "
+                          "log completes itself when the run ends.",
+            },
+            "exhaustive_box_G10_reproduce": census("ladder_box10_reproduce.log",
+                                                   "exhaustive box [0,10]^9 "
+                                                   "(independent reproduction of the "
+                                                   "wave-1 box census with a different "
+                                                   "binary)"),
+            "slab_uv8_max5e4": census("slab_uv8_5e4.log", "slab MAXUV=8, ladder to 5e4"),
+            "slab_uv10_max2e4": census("slab_uv10_2e4.log", "slab MAXUV=10, ladder to 2e4"),
+            "slab_uv12_max7e3": census("slab_uv12_7e3.log", "slab MAXUV=12, ladder to 7e3"),
             "ladder_fib_max34": census("ladder_fib34.log", "ladder 0,1,2,3,5,8,13,21,34"),
             "ladder_pow2_max128": census("ladder_pow2_128.log", "ladder 0,1,2,4,8,16,32,64,128"),
             "ladder_geo_max316": census("ladder_geo316.log", "ladder 0,1,3,10,32,100,316"),
@@ -139,6 +154,28 @@ def main():
                 "negative_hits": 0,
                 "best_scale_invariant_6a1_over_1_plus_sum_g": "11/220",
                 "note": "scale-invariant descent, probes thin chambers",
+            },
+            "gapscan_climb_K200_48restarts": {
+                "log": "b10w2_climb200.log", "negative_hits": 0,
+                "best_scale_invariant_6a1_over_1_plus_sum_g": "11/941",
+                "argmin_stratum": "c=4, V=1",
+            },
+            "near_miss_strata": {
+                "logs": ["b10w2_find_6a1_12.log", "b10w2_find_6a1_13.log"],
+                "second_lowest_6a1": {"6a1": 12, "c": 5, "V": 3,
+                                      "L": [5, 15, 34]},
+                "third_lowest_6a1": {"6a1": 13, "c": 5, "V": 2,
+                                     "L": [5, 14, 30]},
+                "note": "the a_1 = 11/6 minimum is isolated; the next values are "
+                        "12/6 = 2 and 13/6, both far from 0",
+            },
+            "coefficient_sign_check": {
+                "file": "b10w2_coeffcheck.py",
+                "n_dim3_triples": 800,
+                "min_a1": "11/6", "min_a2": "1", "min_a3": "1/6",
+                "n_negative": 0,
+                "note": "the minima are exactly the coefficients of the standard "
+                        "unimodular 3-simplex P = 1 + (11/6)n + n^2 + (1/6)n^3",
             },
             "gapscan_rand_K200_N500000": {
                 "log": "b10w2_rand200.log", "dim3_valid": 78037,

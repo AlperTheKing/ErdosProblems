@@ -1,0 +1,8 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -0,0 +1,4 @@
++[2026-07-23T21:25:44+03:00] OK SELECT | DID: audited #517 source lead | RESULT: Murai §5 contains a candidate global finite-zero bound | D: target=#517
++[2026-07-23T21:25:45+03:00] OK GATE | DID: checked live page and comments | RESULT: #517 OPEN; no solution claim; source is Murai 1983 | D: none
++[2026-07-23T21:25:46+03:00] OK PLAN | DID: wrote two DIRECT ROUTES | RESULT: erdos517_fabry/APPROACH_REGISTRY.md | D: frontier=Murai finite-zero lemma
++[2026-07-23T21:25:47+03:00] > ATTACK | NEXT: audit Murai equations (28)-(35) for a disk-independent zero bound and Fabry support.

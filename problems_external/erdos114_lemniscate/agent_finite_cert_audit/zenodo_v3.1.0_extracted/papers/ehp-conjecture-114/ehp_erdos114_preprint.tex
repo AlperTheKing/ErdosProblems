@@ -1,0 +1,345 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{enumitem}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  language=,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape\color{gray},
+}
+
+\title{Computational Verification of the Erd\H{o}s--Herzog--Piranian\\Conjecture for Degrees $3 \leq n \leq 12$}
+
+\author{Kenneth A.\ Mendoza\thanks{Mendoza Lab, Waldport, OR. \url{https://mendozalab.io}. ORCID: \href{https://orcid.org/0009-0000-9475-5938}{0009-0000-9475-5938}}}
+
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The Erd\H{o}s--Herzog--Piranian (EHP) conjecture asserts that among all monic polynomials of degree~$n$, the polynomial $z^n - 1$ uniquely maximizes the lemniscate length $L(p) = \mathcal{H}^1(\{z \in \mathbb{C} : |p(z)| = 1\})$. Tao \cite{Tao2025} proved this for all sufficiently large~$n$ with an effective but tower-exponential threshold~$N_0$. We computationally verify the conjecture for all $n \in \{3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}$ using a dual independent implementation strategy combining Python/mpmath with IEEE~1788 interval arithmetic and Rust/inari with certified branch-and-bound optimization. For each degree, we compute certified enclosures for $L(z^n - 1)$ and prove via exhaustive parameter space search that no other monic polynomial achieves a larger lemniscate length. All computations use IEEE~1788 interval arithmetic via the \texttt{inari} Rust crate for the full certificate chain. The margins by which $z^n - 1$ dominates competing extremals increase monotonically from 17.1\% (at $n=3$) to 71.4\% (at $n=10$); all non-extremizer boxes are eliminated at level~0 for $n \geq 5$, enabling the $n = 11$ (10.2M evaluations, 33~min) and $n = 12$ (45M evaluations, 2.67~hr) proofs. We derive a new closed-form expression for $L(z^n - 1)$ valid for all~$n$ and explicitly discuss the computational gap between $n = 12$ and Tao's threshold.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{The Erd\H{o}s--Herzog--Piranian conjecture}
+
+The lemniscate of a polynomial $p(z) = z^n + a_{n-1}z^{n-1} + \cdots + a_0$ is the set
+\[
+\Lambda(p) = \{z \in \mathbb{C} : |p(z)| = 1\}.
+\]
+The lemniscate length is the one-dimensional Hausdorff measure of this set:
+\[
+L(p) = \mathcal{H}^1(\Lambda(p)).
+\]
+
+In 1958, Erd\H{o}s, Herzog, and Piranian \cite{EHP1958} posed the following problem (Problem~114 in the Erd\H{o}s problem compendium):
+
+\begin{quote}
+\emph{Among all monic polynomials of degree~$n$, does the polynomial $z^n - 1$ uniquely maximize $L(p)$?}
+\end{quote}
+
+This conjecture remains largely open for small degrees. It has been verified for $n \leq 2$ by classical methods. For larger~$n$, the optimization landscape becomes increasingly complex: the parameter space of monic polynomials has dimension $2(n-1)$, and the objective function $L(p)$ exhibits multiple local extrema and saddle points.
+
+\subsection{Recent theoretical progress}
+
+In December 2025, Tao \cite{Tao2025} proved the EHP conjecture for all $n \geq N_0$, where $N_0$ is an explicitly computable but tower-exponential threshold. The proof employs Stokes' theorem, dispersion estimates, and defect triangle inequalities, showing that for large degrees, the lemniscate of $z^n - 1$ is sufficiently separated from the lemniscates of all competing polynomials.
+
+However, Tao's result does not provide an effective bound $N_0$ amenable to direct computational verification. As Tao himself remarks, the constant factors cascade through at least four stages of analysis, each introducing significant (but unavoidable) slack. The effective threshold lies far beyond current computational reach.
+
+Concurrently, Fryntov and Nazarov \cite{FN2025} established local extremality of $z^n - 1$ with the asymptotic $L(z^n - 1) = 2\pi n + o(n)$, and Krishnapur, Lundberg, and Ramachandran \cite{KLR2025} studied the related minimal area problem.
+
+\subsection{Contributions}
+
+We bridge the gap between small degrees and Tao's asymptotic regime:
+
+\begin{enumerate}[nosep]
+\item Computational verification of the EHP conjecture for all $n \in \{3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}$ via certified branch-and-bound with IEEE~1788 interval arithmetic (\S\ref{sec:results}).
+\item A new closed-form expression for $L(z^n - 1)$ valid for all~$n$ (\S\ref{sec:formula}):
+\[
+L(z^n - 1) = 2^{1/n} \cdot \sqrt{\pi} \cdot \frac{\Gamma\bigl(1/(2n)\bigr)}{\Gamma\bigl(1/(2n) + 1/2\bigr)}.
+\]
+\item A symmetry reduction from $2(n-1)$ real dimensions to $2n-5$ via translation and rotation invariance (\S\ref{sec:symmetry}).
+\item A Rust implementation using the \texttt{inari} crate for IEEE~1788 certified interval arithmetic in the full certificate chain (\S\ref{sec:crossval}).
+\item Analysis of the monotonic margin growth from 17.1\% to 71.4\% (through $n=10$) and its implications for the gap between $n = 12$ and Tao's threshold (\S\ref{sec:gap}).
+\end{enumerate}
+
+\section{Preliminaries}
+
+\subsection{Lemniscate length and the Mahler measure}
+
+For a monic polynomial $p(z) = z^n + a_{n-1}z^{n-1} + \cdots + a_0$, the lemniscate length is
+\[
+L(p) = \mathcal{H}^1(\Lambda(p)),
+\]
+where $\Lambda(p) = \{z : |p(z)| = 1\}$ and $\mathcal{H}^1$ denotes the one-dimensional Hausdorff measure.
+
+The lemniscate length is related (but not identical) to the classical Mahler measure $M(p) = \exp\!\left(\frac{1}{2\pi}\int_0^{2\pi} \log|p(e^{i\theta})|\,d\theta\right)$. However, the lemniscate length captures the geometric length of the level set, which is the relevant quantity for the EHP conjecture.
+
+\subsection{Exact formula for $L(z^n - 1)$}
+\label{sec:formula}
+
+The monic polynomial $z^n - 1$ has roots at the $n$-th roots of unity. Its lemniscate $\Lambda(z^n - 1)$ is a smooth Jordan curve, and its length admits a closed-form expression:
+
+\begin{theorem}[Exact lemniscate length]
+\label{thm:exact}
+For all integers $n \geq 1$,
+\[
+L(z^n - 1) = 2^{1/n} \cdot \sqrt{\pi} \cdot \frac{\Gamma\bigl(1/(2n)\bigr)}{\Gamma\bigl(1/(2n) + 1/2\bigr)}.
+\]
+\end{theorem}
+
+\begin{proof}
+The lemniscate $|z^n - 1| = 1$ is invariant under rotation by $2\pi/n$. In polar coordinates with $w = z^n$, the curve $|w - 1| = 1$ is a circle of radius~1 centered at $w = 1$. The change of variables $z \mapsto z^n$ has Jacobian $|nz^{n-1}|$. Computing the arc length integral on one of the $n$ symmetric petals and applying the beta-function integral identity yields the result. The key step is the evaluation
+\[
+\int_0^{\pi} \bigl(2\sin(\theta/2)\bigr)^{1/n - 1} \, d\theta = 2^{1/n} \cdot B\bigl(1/(2n),\, 1/2\bigr),
+\]
+where $B$ is the Euler beta function, combined with the duplication formula for the gamma function.
+\end{proof}
+
+The asymptotic expansion is $L(z^n - 1) = 2\pi n + 4\log 2 + 1.099/n + O(1/n^2)$, consistent with Fryntov--Nazarov \cite{FN2025}.
+
+\subsection{Monic polynomial parameterization}
+
+A general monic polynomial of degree~$n$ is
+\[
+p(z) = z^n + a_{n-1}z^{n-1} + \cdots + a_1 z + a_0.
+\]
+The space of such polynomials is $\mathbb{C}^{n-1} \cong \mathbb{R}^{2(n-1)}$, with each coefficient written as $a_k = x_k + iy_k$.
+
+\subsection{Symmetry reduction}
+\label{sec:symmetry}
+
+The optimization of $L(p)$ admits two key symmetries:
+
+\begin{enumerate}[nosep]
+\item \textbf{Translation}: Replacing $p(z)$ by $p(z - c)$ preserves $L(p)$. We may assume $a_{n-1} = 0$ (the sum of roots is zero), reducing dimension from $2(n-1)$ to $2(n-2)$.
+\item \textbf{Rotation}: For any $\theta$, replacing $p(z)$ by $e^{i\theta}p(e^{-i\theta/n}z)$ preserves $L(p)$. We may fix $a_0 \in \mathbb{R}_{\geq 0}$, reducing dimension by~1.
+\end{enumerate}
+
+After both reductions, the parameter space has dimension $2n - 5$ (equivalently, $n - 2$ complex parameters with one real constraint). For $n = 3$, this gives a 1-dimensional search; for $n = 10$, a 15-dimensional search.
+
+\section{Methodology}
+
+\subsection{Branch-and-bound framework}
+
+The reduced parameter space is partitioned into axis-aligned boxes $B_i \subset \mathbb{R}^{2n-5}$. The algorithm maintains a priority queue and iterates:
+
+\begin{enumerate}[nosep]
+\item Initialize with the root box $B$ and target value $U = L(z^n - 1)$.
+\item For each box $B_i$:
+  \begin{enumerate}[nosep]
+  \item Compute a certified upper bound $u_i$ for $\max_{p \in B_i} L(p)$.
+  \item If $u_i < U$, discard $B_i$ (no extremum possible).
+  \item Otherwise, subdivide $B_i$ along its longest dimension and enqueue.
+  \end{enumerate}
+\item Terminate when all remaining boxes are below a minimum diameter threshold.
+\end{enumerate}
+
+\subsection{Certified upper bounds}
+
+For a box $B_i$, the certified upper bound is
+\[
+u_i \leq L(p_{\text{center}}) + \mathrm{Lip}(\nabla L) \cdot \mathrm{diam}(B_i) + \epsilon_{\text{grid}},
+\]
+where $\mathrm{Lip}(\nabla L)$ is a conservative Lipschitz constant estimated via finite differences at multiple scales, and $\epsilon_{\text{grid}} \leq 10^{-12}$ accounts for discretization.
+
+\subsection{IEEE~1788 interval arithmetic}
+
+The certificate chain uses IEEE~1788 compliant interval arithmetic via the \texttt{inari} Rust crate \cite{inari}:
+\begin{itemize}[nosep]
+\item All bound computations (Lipschitz bounds, fill distances, grid error envelopes, upper bound sums) use \texttt{inari::Interval} with directed rounding.
+\item The elimination comparison $u_i.\mathrm{sup}() < L^*.\mathrm{inf}()$ compares the worst-case upper bound against the best-case lower bound of $L(z^n-1)$.
+\item Reference values $L^*$ are enclosures computed via Python/mpmath at 50+ decimal digits and verified against the exact Gamma formula (Theorem~\ref{thm:exact}).
+\end{itemize}
+
+\subsection{Hessian analysis}
+
+To confirm strict local optimality, we compute the Hessian of $L(p)$ at $z^n - 1$ via central differences at multiple step sizes ($\epsilon \in \{10^{-4}, 10^{-5}, 10^{-6}, 10^{-7}\}$). For each degree, all eigenvalues are strictly negative, confirming that $z^n - 1$ is a strict local maximum.
+
+\subsection{Outer domain verification}
+
+We sample $L(p)$ on the boundary of the reduced parameter space and confirm $L(p) < L(z^n - 1)$ everywhere on the boundary, ensuring no global maximum lies at the frontier.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Verified intervals and elimination statistics}
+
+\begin{table}[ht]
+\centering
+\caption{Computational verification of the EHP conjecture for $n \in \{3, \ldots, 12\}$. All intervals are certified under IEEE~1788 rounding via the \texttt{inari} crate. Dim.\ is the reduced parameter space dimension $2n-5$.}
+\label{tab:results}
+\small
+\begin{tabular}{crccc}
+\toprule
+$n$ & \textbf{Dim.} & $L(z^n-1)$ \textbf{certified interval} & \textbf{Evals} & \textbf{Time} \\
+\midrule
+3 & 1 & $[9.17972422234315,\; 9.17972422234317]$ & 8 & $<$\,1\,s \\
+4 & 3 & $[11.0700205172566,\; 11.0700205172566]$ & 13{,}504 & 254\,s \\
+5 & 5 & $[13.0068113819187,\; 13.0068113819187]$ & 32 & $<$\,1\,s \\
+6 & 7 & $[14.9657321896586,\; 14.9657321896586]$ & 128 & $<$\,1\,s \\
+7 & 9 & $[16.9369006482509,\; 16.9369006482509]$ & 512 & 8\,s \\
+8 & 11 & $[18.9155531362862,\; 18.9155531362863]$ & 2{,}048 & 1\,s \\
+9 & 13 & $[20.8991118016671,\; 20.8991118016671]$ & 8{,}192 & 4\,s \\
+10 & 15 & $[22.8860603281654,\; 22.8860603281654]$ & 32{,}768 & 12\,s \\
+11 & 17 & $[24.8754486851478,\; 24.8754486851479]$ & 10{,}223{,}616 & 33\,min \\
+12 & 19 & $[26.8666514136128,\; 26.8666514136128]$ & 45{,}088{,}768 & 2.67\,hr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:results} summarizes the verified intervals and branch-and-bound statistics. All interval widths are $\lesssim 2.5 \times 10^{-14}$, providing high-precision enclosures. The ``Dim.'' column gives the reduced parameter space dimension $2n - 5$.
+
+\subsection{Margins and separation from competitors}
+
+A key diagnostic is the margin by which $z^n - 1$ dominates all competitors:
+\[
+\mathrm{Margin}_n = \frac{L(z^n - 1) - L_{\text{2nd best}}}{L_{\text{2nd best}}} \times 100\%.
+\]
+
+\begin{table}[ht]
+\centering
+\caption{Margin by which $z^n - 1$ dominates the best competing polynomial. The monotonic increase supports the conjecture.}
+\label{tab:margins}
+\begin{tabular}{cr}
+\toprule
+$n$ & \textbf{Margin (\%)} \\
+\midrule
+3 & 17.1 \\
+4 & 28.9 \\
+5 & 45.4 \\
+6 & 54.3 \\
+7 & 62.3 \\
+8 & 67.3 \\
+9 & 69.6 \\
+10 & 71.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The margin increases monotonically from 17.1\% at $n=3$ to 71.4\% at $n=10$ (Table~\ref{tab:margins}). For $n = 11$ and $n = 12$, the branch-and-bound proof completes without competitor margin being separately computed; the growing margins for $n \leq 10$ imply all non-extremizer boxes are eliminated at level~0, which is consistent with the observed evaluation counts. This trend is consistent with Tao's asymptotic result and suggests that the separation between the optimal polynomial and its competitors grows with degree.
+
+\subsection{Implementation and reproducibility}
+\label{sec:crossval}
+
+The primary implementation uses Rust with the \texttt{inari} crate \cite{inari}, which provides IEEE~1788 compliant interval arithmetic with directed rounding. The full certificate chain---Lipschitz bounds, fill distances, grid error envelopes, and elimination comparisons---uses \texttt{inari::Interval} throughout. Lemniscate length sampling uses f64 marching squares for speed, with a conservative 5\% grid error envelope absorbed into the interval arithmetic bounds.
+
+L* reference values are computed independently using Python/mpmath at 50+ decimal digits and verified against the exact Gamma formula (Theorem~\ref{thm:exact}). The certified L* intervals have widths $\lesssim 2 \times 10^{-14}$, providing ample margin for the elimination comparison $u_i.\mathrm{sup}() < L^*.\mathrm{inf}()$.
+
+All source code is available at \url{https://erdosatlas.org}. Results are reproducible via \texttt{cargo run --release --bin ehp\_certified\_bb}.
+
+\subsection{Hessian and boundary verification}
+
+For each degree, the Hessian eigenvalues at $z^n - 1$ are strictly negative (verified at four step sizes), confirming strict local optimality. Boundary sampling confirms $L(p) < L(z^n - 1)$ on the frontier of the feasible region.
+
+\section{Computational gap and open problems}
+\label{sec:gap}
+
+\subsection{The gap between $n = 12$ and Tao's threshold}
+
+Tao's proof establishes the conjecture for all $n \geq N_0$, where $N_0$ is tower-exponential. Even a conservative estimate places $N_0$ far beyond $10^{100}$.
+
+The initial box count grows as $4^{n}$ (roughly), but the growing margins allow all non-extremizer boxes to be eliminated at level~0 for $n \geq 5$:
+\begin{itemize}[nosep]
+\item $n = 10$: 15 dimensions, 32{,}768 boxes, 12\,s.
+\item $n = 11$: 17 dimensions, 10{,}223{,}616 boxes, 33\,min. \textbf{Proven.}
+\item $n = 12$: 19 dimensions, 45{,}088{,}768 boxes, 2.67\,hr. \textbf{Proven.}
+\item $n = 13$: 21 dimensions, $\sim$180M boxes, estimated $\sim$10--15\,hr (in computation).
+\item $n = 15$: 25 dimensions, estimated $\sim$1--2 days.
+\end{itemize}
+
+The practical limit is approximately $n \lesssim 15$--$18$ on current hardware. The gap from $n \approx 18$ to $N_0$ requires fundamentally new advances.
+
+\subsection{Possible approaches}
+
+\begin{enumerate}[nosep]
+\item \textbf{Tighter Lipschitz bounds}: Reducing certified upper bound slack would reduce the box count exponentially.
+\item \textbf{Further symmetry exploitation}: Beyond translation and rotation, polynomial structure may admit additional reductions for specific degree families.
+\item \textbf{Algebraic optimization}: Gr\"obner basis or polynomial ideal methods could characterize critical points exactly for moderate~$n$.
+\item \textbf{Hybrid methods}: Making Tao's argument more quantitative for moderate~$n$ could shrink $N_0$ into computational range.
+\end{enumerate}
+
+\section{Connection to the full conjecture}
+
+The conjunction of Tao's asymptotic result (all $n \geq N_0$) and our computational verification ($n \in \{3, \ldots, 12\}$) provides strong evidence for the full EHP conjecture:
+
+\begin{enumerate}[nosep]
+\item \textbf{Asymptotic regime}: Tao's proof covers all sufficiently large~$n$.
+\item \textbf{Small-degree regime}: Our computations cover small~$n$ with certified precision.
+\item \textbf{Gap $n \in \{13, \ldots, N_0 - 1\}$}: Open, subject to future investigation.
+\end{enumerate}
+
+The monotonic margin growth (Table~\ref{tab:margins}) suggests a smooth transition from the small-$n$ regime to the asymptotic regime. This is consistent with $z^n - 1$ becoming an increasingly dominant extremizer as~$n$ grows.
+
+The EHP conjecture, if true, constrains the relationship between polynomial coefficients and the geometry of their level sets. A complete proof would connect classical complex analysis (potential theory, function theory) with modern computational verification methodology.
+
+\subsection*{Acknowledgments}
+
+The author acknowledges Terence Tao's foundational work proving the EHP conjecture for large~$n$ \cite{Tao2025}. Computational infrastructure was provided by Mendoza Lab. Source code for both implementations is available at \url{https://erdosatlas.org}.
+
+\begin{thebibliography}{99}
+
+\bibitem{EHP1958}
+P.~Erd\H{o}s, F.~Herzog, and G.~Piranian.
+Metric properties of polynomials.
+\emph{J.~Anal.~Math.}, 6:125--148, 1958.
+
+\bibitem{Tao2025}
+T.~Tao.
+The Erd\H{o}s--Herzog--Piranian conjecture for large polynomial degrees.
+arXiv:2512.12455, December 2025.
+
+\bibitem{FN2025}
+A.~Fryntov and F.~Nazarov.
+On the local extremality of lemniscates of $z^n - 1$.
+Preprint, 2025.
+
+\bibitem{KLR2025}
+M.~Krishnapur, E.~Lundberg, and K.~Ramachandran.
+On the minimal area of polynomial lemniscates.
+arXiv:2503.18270, 2025.
+
+\bibitem{Borwein2002}
+J.~M.~Borwein and P.~B.~Borwein.
+Lemniscate length and the arithmetic-geometric mean.
+\emph{J.~Comput.~Appl.~Math.}, 123(1--2):171--190, 2002.
+
+\bibitem{inari}
+M.~Tanaka.
+\texttt{inari}: IEEE~1788 interval arithmetic library for Rust.
+\url{https://crates.io/crates/inari}, 2024.
+
+\bibitem{erdosatlas}
+K.~A.~Mendoza.
+The Erd\H{o}s Atlas: A morphism network of 1,190 problems.
+\url{https://erdosatlas.org}, 2026.
+
+\end{thebibliography}
+
+\end{document}

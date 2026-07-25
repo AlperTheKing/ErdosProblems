@@ -330,3 +330,268 @@ starting the direct search; it is not evidence that a future result is novel.
 
 - https://arxiv.org/abs/2607.18047
 - https://arxiv.org/abs/2606.30588
+
+## DIRECT ROUTE - ORDER-19 CHECKPOINT SURGERY
+
+### 1. Exact final deliverable
+
+One canonical 19-vertex adjacency list satisfying the strict second-neighborhood
+inequality at every vertex, with a complete ledger and acceptance by the frozen
+scalar-set and C++ bitset verifiers.
+
+### 2. Current frontier finite certificate
+
+The immutable raw checkpoint
+`theory_inputs/unrestricted19-best-q5-20260721T221907.json`, SHA-256
+`71E859E5682CE9E83F47B66A48244A7F27B56C6A7D772A8190FDEB63749B515A`,
+has `q=5`, strict objective 13, and nine failing vertices. The frontier is one
+explicit legal fixed-q sequence of arc reversals and missing-edge relocations
+whose literal objective is zero.
+
+### 3. Explicit logical bridge
+
+Applying such a sequence to the stored raw adjacency list gives an oriented
+graph in the unrestricted order-19 domain. Exact objective zero followed by
+acceptance by both frozen verifiers is an explicit counterexample to SSNC.
+
+### 4. Next falsifiable action
+
+Compute the exact failed-row witness deficits from the frozen adjacency, derive
+concrete coupled edge edits that repair them without breaking strict rows, and
+replay every proposed final adjacency through both verifiers. This route uses
+no additional search worker while the 64-thread production run is active.
+
+### 5. Exit condition
+
+- A two-verifier accepted adjacency closes the conjecture by refutation.
+- A proposed edit sequence that fails raw replay is rejected, not weakened.
+- If the independent round yields only an equivalent score formulation or a
+  bounded neighborhood exclusion with no explicit next edit, record
+  `DEAD: reformulation maze - no explicit adjacency bridge` and stop the route.
+
+## DIRECT ROUTE - CERTIFYING TOURNAMENT COMPLETION
+
+### 1. Exact final deliverable
+
+A complete proof of SSNC for every finite oriented graph.
+
+### 2. Current frontier lemma
+
+Prove that every oriented graph `D` has a tournament completion `T` and a feed
+vertex `f` of a median order of `T` such that (i) every `T`-out-neighbor of `f`
+is already a `D`-out-neighbor, and (ii) every new second out-neighbor of `f` in
+`T` has a two-edge witness using only arcs of `D`.
+
+### 3. Explicit logical bridge
+
+The tournament feed-vertex theorem gives
+`|N2_T+(f)| >= |N_T+(f)|`. Conditions (i) and (ii) give
+`N_T+(f)=N_D+(f)` and `N2_T+(f) subseteq N2_D+(f)`, so `f` has the second
+neighborhood property in `D`. This proves SSNC.
+
+### 4. Next falsifiable action
+
+Attempt a maximal-completion/median-order proof of the frontier lemma while an
+independent adversary searches for the smallest explicit oriented graph for
+which no completion/feed-vertex pair satisfies (i)-(ii).
+
+### 5. Exit condition
+
+- A complete proof of the frontier lemma closes SSNC.
+- One exhaustively checked graph with no qualifying pair kills this lemma.
+- If the argument merely restates the desired inequality or requires an
+  unbounded completion hierarchy, record
+  `DEAD: reformulation maze - completion lemma not established` and stop.
+
+## ROUTE STATUS - CERTIFYING TOURNAMENT COMPLETION
+
+`DEAD: directed C4 forces the compatible candidate away from every feed vertex`.
+The canonical obstruction and exhaustive four-completion proof are preserved in
+`TOURNAMENT_COMPLETION_C4_OBSTRUCTION.md`, SHA-256
+`0CF7EF40862F9CC0115DF4F5AD40D12FEF26033E5998B4EBCB42E6BFBA980FFC`.
+This kills only the registered completion lemma and does not decide SSNC.
+
+## DIRECT ROUTE - MINIMAL-COUNTEREXAMPLE DEGREE COLLAPSE
+
+### 1. Exact final deliverable
+
+A complete proof of SSNC for every finite oriented graph.
+
+### 2. Current frontier lemma
+
+Prove that every vertex-minimal counterexample to SSNC has minimum outdegree at
+most seven. The first exact deletion signature to exploit is: for every vertex
+`v`, every SNP vertex `u` of `D-v` must satisfy `u->v`, equality
+`|N2_{D-v}+(u)|=|N_{D-v}+(u)|`, and no net new second out-neighbor after `v` is
+reinserted.
+
+### 3. Explicit logical bridge
+
+The current degree-seven theorem proves SSNC for every oriented graph whose
+minimum outdegree is at most seven. The frontier lemma would place a minimal
+counterexample in that proved class, a contradiction; hence no counterexample
+exists.
+
+### 4. Next falsifiable action
+
+Prove the deletion signature directly, then double-count the forced arcs from
+all SNP vertices of every `D-v` into `v` and the forced absence of new two-step
+targets. The required output is one explicit inequality forcing
+`delta+(D)<=7`, with every equality case audited, or one exact oriented graph
+that falsifies a proposed intermediate inequality. No computational worker may
+be launched while the native 64-thread run is active.
+
+### 5. Exit condition
+
+- A proof of the frontier lemma, combined with the degree-seven theorem, closes
+  SSNC.
+- A false load-bearing inequality is discarded with its explicit graph.
+- If the round yields only minimal-counterexample restatements without an
+  inequality forcing degree at most seven, record
+  `DEAD: reformulation maze - no degree-collapse inequality` and stop.
+
+## ROUTE STATUS - MINIMAL-COUNTEREXAMPLE DEGREE COLLAPSE
+
+`DEAD: reformulation maze - no degree-collapse inequality`.
+The exact deletion signature, safe-arc characterization, equality audit, and
+high-degree family falsifying the local multiplicity shortcut are preserved in
+`MINIMAL_COUNTEREXAMPLE_DELETION_SIGNATURE.md`, SHA-256
+`854E2370308D710FC3411A074BB0BD941C0DA21FD89862F45F6D853452D98EA1`.
+An independent audit is preserved in
+`MINIMAL_COUNTEREXAMPLE_DELETION_SIGNATURE_AUDIT.md`, SHA-256
+`5F8DF4E79E50921C674F7E94C4DC4A1E4E899AA8E8C9DBF3DC48853B01AA8DDC`.
+The deletion lemma is exact partial information; it does not close SSNC.
+
+## DIRECT ROUTE - LOSS-ACCOUNTING TOURNAMENT COMPLETION
+
+### 1. Exact final deliverable
+
+A complete proof of SSNC for every finite oriented graph.
+
+### 2. Current frontier lemma
+
+For every oriented graph `D`, prove that there is a tournament completion `T`
+and a feed vertex `f` of a median order of `T` for which, with
+
+```text
+A_f = N_T+(f) setminus N_D+(f),
+L_f = N_T++(f) setminus N_D++(f),
+M_f = N_D++(f) setminus N_T++(f),
+```
+
+one has `|L_f| <= |A_f|+|M_f|`.
+
+### 3. Explicit logical bridge
+
+Completion gives `N_D+(f) subseteq N_T+(f)`, hence
+
+```text
+|N_D++(f)|-|N_D+(f)|
+ = |N_T++(f)|-|N_T+(f)| + |A_f|+|M_f|-|L_f|.
+```
+
+The tournament feed-vertex theorem makes the first term nonnegative, and the
+frontier inequality makes the correction nonnegative. Thus `f` has the SNP in
+`D`, proving SSNC.
+
+### 4. Next falsifiable action
+
+First exhaust all four tournament completions of the directed 4-cycle by hand
+and compute `A_f,L_f,M_f` for every possible median-order feed. If the lemma
+survives, attempt a maximal-completion proof that charges every created second
+target to a distinct added first target or lost original second target. Launch
+no computational worker while the native 64-thread run is active.
+
+### 5. Exit condition
+
+- A proof of the frontier lemma closes SSNC.
+- One canonical oriented graph for which every completion/feed pair violates
+  the inequality kills this route.
+- If the charging argument requires an unbounded hierarchy or merely restates
+  the desired gap, record
+  `DEAD: reformulation maze - loss-accounting injection not established`.
+
+## ROUTE STATUS - LOSS-ACCOUNTING TOURNAMENT COMPLETION
+
+`DEAD: directed C4 has |L_f|=1>|A_f|+|M_f|=0 for every completion/feed pair`.
+The complete four-completion terminal-order and loss-ledger audit is preserved
+in `LOSS_ACCOUNTING_C4_OBSTRUCTION.md`, SHA-256
+`F8DADE0798E2FAA35AC81C453B96C1A9772E2B493B090BB313CA668EAAB78FBF`.
+This kills only the registered frontier lemma; directed C4 itself satisfies
+SSNC with equality at every vertex.
+
+## DIRECT ROUTE - ORDER-19 STAR-BROKEN CHECKPOINT SURGERY
+
+### 1. Exact final deliverable
+
+One canonical 19-vertex oriented graph with strict SSNC failure at every vertex, a complete ledger, and acceptance by both frozen exhaustive verifiers.
+
+### 2. Current frontier finite certificate
+
+`theory_inputs/unrestricted19-q5-relocation-objective10.json`, SHA-256 `62241FCC69A6D03DAA32A976ADEFB949DFFAE27DBB95470C4492FE85D88389BB`, is a two-verifier-valid q=5 graph with minimum outdegree 8, literal objective 10, and failing vertices `{1,4,6,7,9,13,14,15,17,18}`. Its five missing pairs are not a star.
+
+### 3. Explicit logical bridge
+
+Any legal sequence of arc reversals and missing-pair relocations taking this raw adjacency to literal objective zero yields an unrestricted oriented graph satisfying the strict reverse inequality at all 19 vertices. Two-verifier replay then refutes SSNC directly.
+
+### 4. Next falsifiable action
+
+Independently compute exact two-step witness dependencies for the ten failing rows and give one explicit replay-ready legal edit sequence that lowers literal objective while preserving minimum outdegree 8. No search worker is launched during the live 64-thread run.
+
+### 5. Exit condition
+
+Verified objective zero closes SSNC by refutation. Any candidate failing either frozen verifier is rejected. If independent rounds give no explicit improving edit or only equivalent score reformulations, record `DEAD: reformulation maze - no explicit adjacency bridge` and stop this surgery route.
+
+## DIRECT ROUTE - ORDER-19 Q5 OBJECTIVE-9 SURGERY
+
+### 1. Exact final deliverable
+
+One canonical 19-vertex oriented graph with strict SSNC failure at every vertex, a complete ledger, and acceptance by both frozen exhaustive verifiers.
+
+### 2. Current frontier finite certificate
+
+`theory_inputs/unrestricted19-q5-twin-fill-objective9.json`, SHA-256 `32CAB5626FAC027D1BD379A3063D8ADB8C9D4B4B1CC5AB65540323F582B6B6DA`, is a two-verifier-valid q=5 graph with minimum outdegree 8, literal objective 9, and failing vertices `{1,4,6,9,13,14,15,17,18}`.
+
+### 3. Explicit logical bridge
+
+Any legal edit sequence taking this raw adjacency to literal objective zero gives an unrestricted oriented graph satisfying the strict reverse inequality at all 19 vertices. Acceptance by both frozen verifiers then refutes SSNC directly.
+
+### 4. Next falsifiable action
+
+Run independent exact witness-dependency analyses on the nine failing rows and return one explicit legal hole relocation or arc-reversal sequence that lowers literal objective while preserving q=5 and minimum outdegree 8. No additional search worker is launched.
+
+### 5. Exit condition
+
+Verified objective zero closes SSNC by refutation. A candidate failing either verifier is rejected. Exit only after all independent rounds return no explicit improving edit and the exact missing bridge is recorded; a single failed edit family is insufficient.
+
+## ROUTE STATUS - ORDER-19 Q5 OBJECTIVE-9 SURGERY
+
+`DEAD: reformulation maze - no explicit objective-lowering adjacency bridge`. Three independent rounds returned no objective-below-nine graph. The fixed-core star-incidence family has exact lower bound nine (`UNRESTRICTED19_Q5_STAR_INCIDENCE_OBSTRUCTION.md`, SHA `50591ADE2EDDA927FC4F2B823C6CB3589EA1504EAB77343D574077E39BA7E183`). One relocation, block-uniform cycle switches, vertex triangle/four-cycle switches plus one relocation, and the smallest two-witness compensation chain are also closed in the preserved scoped audits.
+
+The final missing bridge is a longer nonuniform chain that changes an additional quotient-block relation while compensating a low donor of outdegree seven without restoring the removed second target or creating an equal donor failure. Pursuing longer bounded edit families would violate the direct-proof guard. This closes only checkpoint surgery around the verified objective-nine graph; it is not UNSAT and does not affect the live unrestricted C++ search.
+
+## DIRECT ROUTE - ORDER-19 LEXICOGRAPHIC C++ REFUTATION V2
+
+### 1. Exact final deliverable
+
+One canonical 19-vertex oriented graph satisfying the strict SSNC negation at every vertex, with the complete ledger and acceptance by the frozen scalar-set and C++ bitset verifiers.
+
+### 2. Current frontier finite certificate
+
+The verified raw seed `theory_inputs/unrestricted19-q5-twin-fill-objective9.json` (SHA `32CAB5626FAC027D1BD379A3063D8ADB8C9D4B4B1CC5AB65540323F582B6B6DA`) has literal objective9. The live v1 comparator preserves best checkpoints only by smooth energy and therefore did not retain known literal improvements. `UNRESTRICTED19_LEX_V2_DESIGN.md` (SHA `3DC80CA4DDC438425BC497F42AD16427692A40ACC48898D1E95B0D02EF115B41`) gives an independently audited objective-then-smooth ranking and seed/warmup contract.
+
+### 3. Explicit logical bridge
+
+The v2 hit predicate remains exactly structural validity, minimum outdegree at least8, and literal objective zero, followed by unchanged raw replay in both frozen verifiers. Therefore any accepted hit is an explicit counterexample to SSNC. The heuristic ranking affects discovery only, not correctness.
+
+### 4. Next falsifiable action
+
+Without editing the live v1 source or launching another worker, specify a separate v2 C++ patch: strict raw-seed parser and re-evaluation, q5/objective9 seed gate, lexicographic checkpoint rank, piecewise annealing delta, no unconditional warmup drift for the seeded lane, provenance schema, and adversarial self-tests. Compile or run it only after the live v1 process exits.
+
+### 5. Exit condition
+
+A v1 hit cancels v2. Any seed/parser/rank/hit-path calibration disagreement closes v2 before production. If v1 ends NO_HIT and every independent v2 gate passes, one separately logged fixed 64-thread tranche may run; a v2 NO_HIT is heuristic failure only and closes order19. No larger order or degree follows automatically.
+
+## V2 INTEGRATION STATUS - 2026-07-22
+
+The v1 launcher cannot satisfy the registered seeded route: it creates artifacts before seed authentication, does not pass `--seed-file`, and validates only v1 metadata. The next falsifiable action therefore includes a separate v2 launcher that authenticates the fixed 471-byte seed pre-artifact and validates seeded v2 canary/config/checkpoint/summary provenance. No v2 compilation, calibration, or production launch is authorized while the live v1 process remains active.

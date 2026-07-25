@@ -1,0 +1,8 @@
+diff --git a/PROGRESS_CODEX.md b/PROGRESS_CODEX.md
+--- a/PROGRESS_CODEX.md
++++ b/PROGRESS_CODEX.md
+@@ -38517,3 +38517,4 @@
+ [2026-07-23T16:59:05+03:00] FAIL ATTACK | DID: scanned 10,122,750 frozen-union pairs, 64 threads | RESULT: exact NO_HIT; tested=expected | D: R1 DEAD
+ [2026-07-23T16:59:06+03:00] > SELECT | NEXT: audit another live open problem with a mature reduction and strictly theorem-closing finite or local gap.
+ [2026-07-23T17:01:50+03:00] > VERIFY | NEXT: independently parse frozen 4,499 JSONL and rescan 10,122,750 pairs with separate C++ verifier, 64 threads.
++[2026-07-23T17:04:32+03:00] OK VERIFY | DID: independent C++ replay, 64+1 threads | RESULT: 4,499 parsed; 10,122,750/10,122,750 NO_HIT both | D: R1 independently confirmed

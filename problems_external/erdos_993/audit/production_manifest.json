@@ -1,0 +1,20 @@
+{
+  "problem": 993,
+  "route": "R1 full frozen-union unordered pair scan",
+  "catalog_entries": 4499,
+  "expected_pairs": 10122750,
+  "source_sha256": "9D1C7AD4EC0615391179E0FE43F573659C0E2C73DF62A9356329E87BBEFC3370",
+  "engine_sha256": "53D044A3E446C59C67D2429C18C99A5F0FB14134305C4B1399B67C9FB895A2CC",
+  "frozen_union_jsonl_sha256": "8F9145476AE8E776340C383E505462D6AC49680CE55EF0EE1EDFCF97ACD4743C",
+  "native_union_tsv_sha256": "BCD86239489C6EBD2A4E5B22B2EE9C1BD28B0ADAE7F72CB6AD0A37A7A573B033",
+  "compiler_command": "g++ -O3 -std=c++20 -pthread -Wall -Wextra -Wconversion -o search_pairs.exe search_pairs.cpp",
+  "run_command": "search_pairs.exe --threads 64",
+  "preflight": {
+    "bushes_scanned": 112916,
+    "unique_non_logconcave_union": 4499,
+    "single_tree_hits": 0,
+    "forced_valley_self_tests": "PASS",
+    "native_vs_frozen_label_order_polynomial_mismatches": 0
+  },
+  "raw_hit_mapping": "Resolve by exact label and polynomial, never by engine index."
+}
