@@ -474,3 +474,38 @@ This certificate is the first object in the campaign of the required shape: the 
 and is the concrete route to rigorous ψ-ceilings for the Andrásfai family, i.e. to the `δ > N/3`
 range. The corresponding certificate for `And(3) = Wagner` is the next object to produce; it did not
 exist at the time of this entry.
+
+
+---
+
+## R3-C15 — the Vega side, gated (accepted, with one agent claim refuted)
+
+Round-6 family P3 built the Vega graphs and ran an exhaustive weighting search; its own auditor
+refuted one headline claim. I rebuilt `Υ_2` myself from the Brandt–Thomassé definition quoted
+verbatim from the paper (`Γ_i` on `{1..3i−1}` with `j ~ j+i,…,j+2i−1`; add the edge `xy` and the
+induced 6-cycle `(a,v,c,u,b,w)`; `x ~ a,b,c`, `y ~ u,v,w`; `N(a),N(u) ⊇ {1..i}`, `N(b),N(v) ⊇
+{i+1..2i}`, `N(c),N(w) ⊇ {2i+1..3i−1}`).
+
+**Verified by me, exact integers.** `Υ_2`: `n = 13` (matching `3i+7`), 28 edges, **triangle-free**,
+**maximal** triangle-free, degrees 4–5. Exhaustive over **all** integer weightings `a ≥ 0` with
+`Σa = q` for `q = 5..12`, zeros allowed: `max 25·bip(Υ_2[a])/q² = 1.0` exactly — the ceiling `1/25`
+is attained (the plateau, since `Υ_2` has odd girth 5) and **never exceeded**. `Υ_3` rebuilt and
+verified triangle-free and maximal at `n = 16`.
+
+**Accepted from the round-6 pair (report + audit).**
+
+* all 28 Vega graphs for `i = 2..8` constructed and matched byte-for-byte by the auditor;
+* no violation of `ψ ≤ 1/25` anywhere in the exhaustive search, with a strengthened equality census;
+* **the `m(b)` / `bound_k` machinery fails on the Vega side too** — an exact witness, independent of
+  the `Γ_14` Wagner falsifier that killed it on the circle side. Two independent refutations of the
+  same machinery.
+
+**Refuted (agent claim).** "The maximum over the whole Vega family is `29/841`, attained at the
+regular weight function, so the Vega side carries a uniform 13.8 % margin and is not the hard case."
+The auditor exhibits 11 exactly-verified points inside the degree polytope that exceed it, the best
+being `4898341/139240000 = 0.0351791` on `Υ_3 − {2i}`. So the Vega side sits at least at `0.0352`,
+still below `1/25` but with far less margin than claimed, and it cannot be dismissed as easy.
+
+**Status of the `δ > N/3` reduction.** Both halves — the Andrásfai ceiling and the Vega ceiling —
+remain unproved. What is now known is that they resist the *same* machinery, and that the Vega half
+is not the soft one.
