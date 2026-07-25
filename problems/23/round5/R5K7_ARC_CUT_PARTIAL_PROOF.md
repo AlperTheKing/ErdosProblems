@@ -101,3 +101,31 @@ range of Erdős #23, modulo the Vega half of the Brandt–Thomassé structure th
 
 *Every claim in §2 and §3 is a complete proof; §1 and the coverage figures in §3 are exhaustive or
 sampled computations, labelled as such.*
+
+
+## 6. Averaging alone provably cannot close the residual (measured)
+
+All four position-averages of the two families were computed on 1280 random exact measures over
+eight circle graphs:
+
+| average | violations of `≤ 1/25` |
+|---|---|
+| `1/3`-arcs, uniform position | 596 |
+| `1/3`-arcs, `μ`-weighted position | 312 |
+| half-arcs, uniform position | 51 |
+| half-arcs, `μ`-weighted position | 303 |
+| **minimum of all four** | **21** |
+
+and the worst surviving case (`Γ_14`, five atoms with weights `(6,5,3,5,6)/25`) has
+
+```
+        all four averages in 0.0498 … 0.0694 ,   but   min over 1/3-arcs = min over half-arcs = 0 .
+```
+
+So the residual cases are precisely those where the true minimum lies far below every average — the
+averaging step, not the cut family, is what fails. **Any proof of the residual must be a
+non-averaging argument**: a variance/second-moment bound on `m(b)`, or a structural dichotomy (in the
+sampled residual cases the far-graph degenerates so that some arc separates every adjacent pair,
+giving minimum exactly `0`, which no average can see).
+
+This is recorded to stop future rounds from searching for a fifth clever average.
