@@ -417,6 +417,34 @@ task is:
 Until that exists, every "max_x psi(H,x) = 1/25" statement in this project -- mine and family
 F8's -- is a LOWER-BOUND search result only.
 
+### R1-C9 — a working rigorous certifier, and exactly where it breaks
+
+`claude_psi_certify.py` implements the certificate as exact interval branch-and-bound: a region is
+a box `[lo,hi]` meeting the simplex; for **any single cut** `S`,
+`psi(x) <= q_S(x) <= sum_{uv mono under S} hi_u hi_v` on the box, so the smallest such single-cut
+box bound is a valid upper bound for `psi` on the whole region; regions bounded by the target are
+pruned, others are split at the widest coordinate. All arithmetic is `Fraction`. A closed search is
+a **proof** of `max_x psi(H,x) <= target`.
+
+Two-sided validation: with target `1/25` it closes on `C7` in 4895 nodes; with target `1/26`, which
+is strictly below the true maximum `1/25`, it correctly fails to close on `C5`.
+
+| pattern | best point found (lower bd) | gap to 1/25 | target 1/25 | nodes |
+|---|---|---|---|---|
+| C7 | 1/49 = 0.020408 | 0.019592 | **CERTIFIED** | 4,895 |
+| C9 | 0.012309 | 0.027691 | **CERTIFIED** | 9,261 |
+| Wagner `C8(1,4)` | 0.038652 | **0.001348** | inconclusive | >3,000,000 |
+
+**The finding is the threshold, not the certificates.** Plain interval branch-and-bound closes
+comfortably when the pattern sits well below `1/25` (gaps of 0.02–0.028 close in under ten thousand
+nodes) and is hopeless on the near-extremal ones (Wagner, gap 0.0013, survives three million nodes
+at only `n = 8`). Since the whole difficulty of the conjecture is precisely the near-extremal
+patterns, **this certificate shape does not scale to the cases that matter**, and the box bound is
+the reason: it evaluates `hi_u hi_v` and so ignores the simplex constraint `sum x = 1` entirely
+except as a feasibility filter. Any usable certifier must incorporate that constraint into the
+bound -- which is exactly what an SDP/Lasserre dual does. Recorded so that the next agent does not
+re-derive this engine and re-discover its ceiling.
+
 ---
 
 ## 4. Blocked-route ledger after these results
