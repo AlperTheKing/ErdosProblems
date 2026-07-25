@@ -1,0 +1,12 @@
+N=13  graphs=20797002
+  max bip = 6   (N^2/25 = 169/25 = 6.760000)   #extremisers=8
+  25*bip vs N^2 : 25*6 = 150   <=  N^2 = 169
+    extremiser: L??ED@_~?~^_Fw
+    extremiser: L??EDB_~?~^_Fw
+    extremiser: L??EFB_~FwB{Fw
+    extremiser: L??FFB_~?~^_Fw
+    extremiser: L?`DAboU`w@{hS
+    extremiser: L?`DAboUdIF_Bo
+  max (m - Dmax) = 10  at L???E?xmBKIob_  (m=22,Dmax=12,bip=1)   25*val=250 vs N^2=169
+  max (m - w)    = 10  at L?`DE`gl@YJODg  (m=26,w=16,bip=6)   25*val=250 vs N^2=169
+  max min(floor(m/2), m-w) = 10  at L?`DE`gl@YJODg  (m=26,w=16,bip=6)   val/N^2=0.059172   25*val=250 vs N^2=169

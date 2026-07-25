@@ -1,0 +1,190 @@
+# n=13 triangle_free_circulants=15 min_alpha=4 n_attaining=3
+LhEIHEPQHGaPaP n=13 S=[1, 5] m=26 alpha=4
+LUWooWE?sBWEWE n=13 S=[2, 3] m=26 alpha=4
+L?`DE`glAsDgDg n=13 S=[4, 6] m=26 alpha=4
+# n=14 triangle_free_circulants=30 min_alpha=5 n_attaining=6
+MhdHKdHHKchHHHcc_ n=14 S=[1, 4, 7] m=35 alpha=5
+MUWosXEGobPEpEWb? n=14 S=[2, 3, 7] m=35 alpha=5
+M?AEFBo}BwFoFoBw? n=14 S=[5, 6, 7] m=35 alpha=5
+MhdHGcH@KCgHGHcC_ n=14 S=[1, 4] m=28 alpha=5
+MUWooWE?oBOEoEWB? n=14 S=[2, 3] m=28 alpha=5
+M?AEBAouBWEoEoBW? n=14 S=[5, 6] m=28 alpha=5
+# n=15 triangle_free_circulants=18 min_alpha=6 n_attaining=14
+NhdLIchdISshShISqdG n=15 S=[1, 4, 6] m=45 alpha=6
+NUWosZEWpbBEbEpbKWo n=15 S=[2, 3, 7] m=45 alpha=6
+NlSggSD?gA_D_DOAs?g n=15 S=[1, 3] m=30 alpha=6
+NhdHGcH@GCoHOHGCq@G n=15 S=[1, 4] m=30 alpha=6
+NhCKIC`cIOc`C`AOocG n=15 S=[1, 6] m=30 alpha=6
+NUWooWE?oB?E_EoBK?o n=15 S=[2, 3] m=30 alpha=6
+NQGSQGacQPCaCaaPGcO n=15 S=[2, 6] m=30 alpha=6
+NQGOSJAWP`BABA``GWO n=15 S=[2, 7] m=30 alpha=6
+NCp`_oK@_EOKoKWEE@_ n=15 S=[3, 4] m=30 alpha=6
+NCO_cRCW`aBCbCPaCW_ n=15 S=[3, 7] m=30 alpha=6
+N?`DA_gdASSgSgISAd? n=15 S=[4, 6] m=30 alpha=6
+N??CEB_{BoF_F_Bo?{? n=15 S=[6, 7] m=30 alpha=6
+# n=16 triangle_free_circulants=44 min_alpha=5 n_attaining=4
+OlSggUDOhAaDAD`AgOlAD n=16 S=[1, 3, 8] m=40 alpha=5
+OhEIHEPQHGqPQPHGaQKQP n=16 S=[1, 5, 8] m=40 alpha=5
+OCO_cRCwbaFCFCbaGw`FC n=16 S=[3, 7, 8] m=40 alpha=5
+O?AADBOyBgVOVOJgAy?VO n=16 S=[5, 7, 8] m=40 alpha=5
+# n=17 triangle_free_circulants=36 min_alpha=6 n_attaining=20
+PlUihSTAgI_T_TOIsAi_Ti@S n=17 S=[1, 3, 5] m=51 alpha=6
+PhdLIchDGSohOhgSiDHOhdAc n=17 S=[1, 4, 6] m=51 alpha=6
+PhdHKdHHKchHHHcchHHHHccc n=17 S=[1, 4, 7] m=51 alpha=6
+PUWooYEorBEEEEBBOouEEWWW n=17 S=[2, 3, 8] m=51 alpha=6
+PQIQPIQqRHEQeQRHCqSeQQXG n=17 S=[2, 5, 8] m=51 alpha=6
+PQGSUHaKSpXaXaKpBKSXaPeG n=17 S=[2, 6, 7] m=51 alpha=6
+PCrb`o[B_M?[_[oM[Bb_[M@o n=17 S=[3, 4, 5] m=51 alpha=6
+P??CEB_{Fo^_^_NoB{?^_@}? n=17 S=[6, 7, 8] m=51 alpha=6
+PhdHGcH@GC_H?H_Cg@H?Hc?c n=17 S=[1, 4] m=34 alpha=6
+PhEIHCPAGG_P_POGcAG_Pa@C n=17 S=[1, 5] m=34 alpha=6
+PhCGKD@GK_h@H@C_`GGH@_cC n=17 S=[1, 7] m=34 alpha=6
+PUWooWE?oB?E?E?BO?u?EW?W n=17 S=[2, 3] m=34 alpha=6
+# n=18 triangle_free_circulants=55 min_alpha=6 n_attaining=9
+QlSggUDOlAiDIDDA`OkIDOgU`Og n=18 S=[1, 3, 8] m=54 alpha=6
+QUWosXEGobPEPEGbAGsPEpCXaGo n=18 S=[2, 3, 7] m=54 alpha=6
+QCrb`o[B_M?[?[_MWBf?[[@owB_ n=18 S=[3, 4, 5] m=54 alpha=6
+QUWooWE_qBCECEAB?_sCEoOX__o n=18 S=[2, 3, 9] m=45 alpha=6
+QCp`_oK`aECKCKAEO`eCKWOoo`_ n=18 S=[3, 4, 9] m=45 alpha=6
+QCO__QCofAMCMCFA@ocMCOwO`o_ n=18 S=[3, 8, 9] m=45 alpha=6
+QUWooWE?oB?E?E?B??s?Eo?X_?o n=18 S=[2, 3] m=36 alpha=6
+QCp`_oK@_E?K?K?EO@e?KW?oo@_ n=18 S=[3, 4] m=36 alpha=6
+QCO__QCOdAICICDA@OcICOgO`O_ n=18 S=[3, 8] m=36 alpha=6
+# n=19 triangle_free_circulants=54 min_alpha=6 n_attaining=9
+RlSgkTDGga`D`DOacGg`DaCTCGlCGg n=19 S=[1, 3, 7] m=57 alpha=6
+RhdLIchDGS_h?h_SgDL?hSAcgDKgDG n=19 S=[1, 4, 6] m=57 alpha=6
+RhEIHEPQHGqPQPHGqQIQPHHCQQKQQG n=19 S=[1, 5, 8] m=57 alpha=6
+RUWooWE_uBKEKEEB@_oKE_oZ@_r@_o n=19 S=[2, 3, 9] m=57 alpha=6
+RQIURGqEOX?q?q_XWER?qKBIWEQWEO n=19 S=[2, 5, 6] m=57 alpha=6
+RQGOSJAWP`RArAX`EWOrABKIEWQEWO n=19 S=[2, 7, 8] m=57 alpha=6
+RCrb`o[B_M?[?[?MOBe?[w@poB`oB_ n=19 S=[3, 4, 5] m=57 alpha=6
+R?`@C`GhEcLGlGUcDhClGQs_dh?dh? n=19 S=[4, 7, 9] m=57 alpha=6
+R??CAA_sFO]_]_nOJs@]_Dy?Js?Js? n=19 S=[6, 8, 9] m=57 alpha=6
+# n=20 triangle_free_circulants=105 min_alpha=6 n_attaining=9
+ShEIHEPQHGaPaPPGcQKaPQHCcQGcQKQHC n=20 S=[1, 5, 8] m=60 alpha=6
+SQIURGqEOX?q?q?XOEU?qWBGoESoEQWBG n=20 S=[2, 5, 6] m=60 alpha=6
+SCrb`o[B_M?[?[?M?Bc?[o@r_Bb_B`o@o n=20 S=[3, 4, 5] m=60 alpha=6
+S?bBD`WJ?k@W@W_kGJD@WsD`gJ@gJ?sD_ n=20 S=[4, 5, 7] m=60 alpha=6
+S?AA@AOqBGUOuOZGEqCuORX?eq?eq?RX? n=20 S=[5, 8, 9] m=60 alpha=6
+ShCKIC`CKOg`G`COpCIG`GaCPCGPCKGaC n=20 S=[1, 6, 10] m=50 alpha=6
+SUWooWE?sBGEGECB@?oGE?_Y@?u@?r?_W n=20 S=[2, 3, 10] m=50 alpha=6
+SQGOSHAGS`HAHAc`HGPHACcGHGSHGQCcG n=20 S=[2, 7, 10] m=50 alpha=6
+S??CA?_cEO[_[_MORcA[_Hq?Rc?Rc?Hq? n=20 S=[6, 9, 10] m=50 alpha=6
+# n=21 triangle_free_circulants=54 min_alpha=6 n_attaining=9
+TlSggUDOhAaDAD`AgOhADCGSGOkGOiCGU`AD n=21 S=[1, 3, 8] m=63 alpha=6
+ThdLIchDGS_h?h?S_DK?hOAe_DI_DHOAeS?h n=21 S=[1, 4, 6] m=63 alpha=6
+ThEIHCPaIGcPcPQGcaGcPaPDCaHCaGaPEGcP n=21 S=[1, 5, 9] m=63 alpha=6
+TUWooWE?sBWEWEKBB?oWE@_WB?sB?u@_X_WE n=21 S=[2, 3, 10] m=63 alpha=6
+TQIURGqEOX?q?q?X?ES?qoBH_EP_ESoBHK?q n=21 S=[2, 5, 6] m=63 alpha=6
+TQGOOIAoR@EAeAr@KoPeAEWGKoOKoSEWH@eA n=21 S=[2, 8, 9] m=63 alpha=6
+TCrb`o[B_M?[?[?M?B_?[_@r?Bf?Bb_@ow?[ n=21 S=[3, 4, 5] m=63 alpha=6
+T?`@?_G`EC[G{G]CF`?{GBoaF`AF`@Bo_O{G n=21 S=[4, 9, 10] m=63 alpha=6
+T??CAA_SDOY_Y_lOJSDY_Ti?jS?jS?Ti?DY_ n=21 S=[6, 8, 10] m=63 alpha=6
+# n=22 triangle_free_circulants=163 min_alpha=7 n_attaining=15
+UhEIHEPQHGqPQPHGqQIQPHHEQQIQQHHHCQQPaQQG n=22 S=[1, 5, 8, 11] m=77 alpha=7
+UhCKIC`cIOs`S`iOicHS`dQDIcHIcGdQCHS``IcG n=22 S=[1, 6, 9, 11] m=77 alpha=7
+UUWosXEGobPEPEGbAGsPEPCWaGoaGsPCZCPEWaGo n=22 S=[2, 3, 7, 11] m=77 alpha=7
+UCrb`o[B_MO[O[GMAB_O[@@qABeABf@@poO[MAB_ n=22 S=[3, 4, 5, 11] m=77 alpha=7
+U???C@?gE_\?|?}_NgD|?Vs?ng?ng?Vs?D|??ng? n=22 S=[7, 9, 10, 11] m=77 alpha=7
+UhEIHEPQHGaPAP@GoQIAPGHEOQIOQHGHCQAPaOQG n=22 S=[1, 5, 8] m=66 alpha=7
+UhCKIC`cIOc`C`aOgcHC`cQDGcHGcGcQCHC``GcG n=22 S=[1, 6, 9] m=66 alpha=7
+UUWosXEGob@E@E?b?Gs@EOCW_Go_GsOCZC@EW_Go n=22 S=[2, 3, 7] m=66 alpha=7
+UCrb`o[B_M?[?[?M?B_?[?@q?Be?Bf?@po?[M?B_ n=22 S=[3, 4, 5] m=66 alpha=7
+U???C@?gE_L?l?u_LgDl?Us?lg?lg?Us?Dl??lg? n=22 S=[7, 9, 10] m=66 alpha=7
+UhCGGE@OH?q@Q@H?qOIQ@HGCQOGQOGHGCAQ@_QOG n=22 S=[1, 8, 11] m=55 alpha=7
+UUWooWE?oBOEOEGBA?oOE@?WA?oA?s@?Z?OEWA?o n=22 S=[2, 3, 11] m=55 alpha=7
+# n=23 triangle_free_circulants=121 min_alpha=7 n_attaining=11
+VlSggUDOhAaDAD@A_OkADOGS_Og_OgOGUCADO_OlA@A_ n=23 S=[1, 3, 8] m=69 alpha=7
+VlSggSD_iAcDCDAAo_iCDGOSO_gO_gGOUACDOO_l@AA_ n=23 S=[1, 3, 9] m=69 alpha=7
+VhEIHEPQHGaPAP@G_QKAPOHC_QK_QIOHCcAPC_QKQ@G_ n=23 S=[1, 5, 8] m=69 alpha=7
+VQIURGqEOX?q?q?X?EO?q?BI?EU?ER?BGo?qe?EQW?X? n=23 S=[2, 5, 6] m=69 alpha=7
+VQGSUHaKOp@a@a?p?KO@a_EJ?KR?KP_EGW@ab?KQK?p? n=23 S=[2, 6, 7] m=69 alpha=7
+VQGOSHAGS`HAHAc`HGPHAccHHGPHGOccGHHA`HGQCc`? n=23 S=[2, 7, 10] m=69 alpha=7
+VCp`_oK`aECKCKAEO`aCKGOoO`_O`cGOrACKWO```AE? n=23 S=[3, 4, 9] m=69 alpha=7
+V?`@?_G`ACSGsGYCU`AsGJO_U`?U`CJO`AsGGU`?`YC? n=23 S=[4, 9, 11] m=69 alpha=7
+V?`@?_G@CCWGwG{CN@@wGF__N@?N@CF_`@wGGN@?_{C? n=23 S=[4, 10, 11] m=69 alpha=7
+V?AEBAoU@WAoAo@W?UCAoOJA_UE_UBOJ?sAoE_U?Y@W? n=23 S=[5, 6, 8] m=69 alpha=7
+V???C@?GC_X?x?{_NG@x?fc@NG@NG?fc?Hx?@NG?C{_? n=23 S=[7, 10, 11] m=69 alpha=7
+# n=24 triangle_free_circulants=178 min_alpha=7 n_attaining=10
+WlUihSTAgI_T_TOIcAg_TA@SCAgCAkA@T?_TgCAi_OIt?_T n=24 S=[1, 3, 5, 12] m=84 alpha=7
+WlSgkTDGga`D`DOacGg`DACUCGiCGhACSO`DaCGiGOasO`D n=24 S=[1, 3, 7, 12] m=84 alpha=7
+WhEIHCPaIGcPcPQGcaKcPQPCcaGcaKQPDCcPGcaGaQGpCcP n=24 S=[1, 5, 9, 12] m=84 alpha=7
+WCO_cPCG_aPCpCwaMG`pCFCQMGaMG`FCOPpCaMGaGwaCPpC n=24 S=[3, 7, 11, 12] m=84 alpha=7
+W?AA@?OaAGSOsOyGMaDsOVP?ma?maCVP@DsOGma?ayG@DsO n=24 S=[5, 9, 11, 12] m=84 alpha=7
+W???C@?gA_T?t?y_MgDt?VSAmgAmg@VS?Tt?Amg?Iy_?Tt? n=24 S=[7, 9, 11, 12] m=84 alpha=7
+WhCKIC`CKOg`G`COpCIG`GaCPCKPCIGaCaG`CPCGPCOoaG` n=24 S=[1, 6, 10] m=72 alpha=7
+WQIURGqEOX?q?q?X?EO?q?BG?ES?EU?BH_?qK?ESo?XH_?q n=24 S=[2, 5, 6] m=72 alpha=7
+WQGSUHaKOp@a@a?p?KO@a?EI?KU?KR?EGo@aE?KSW?pGo@a n=24 S=[2, 6, 7] m=72 alpha=7
+W??CA?_CCOW_W_kOZCBW_La?ZCCZCALa?bW_CZC?PkO?bW_ n=24 S=[6, 10, 11] m=72 alpha=7
+# n=25 triangle_free_circulants=189 min_alpha=8 n_attaining=40
+XlUihSTaiIcTCTAI_agCT_PT?ah?ag_PUGCTP?alCAIiGCTiGCT n=25 S=[1, 3, 5, 9] m=100 alpha=8
+XlSggUDOlAiDIDDA`OkIDOgU`Oi`OhOgSSIDA`OkIDAgSIDgSID n=25 S=[1, 3, 8, 10] m=100 alpha=8
+XhEIHEPQHGqPQPHGqQIQPHHEQQIQQHHHEQQPQQQHHHGaQQPaQQP n=25 S=[1, 5, 8, 11] m=100 alpha=8
+XUWooWE_uBKEKEEB@_sKEooX`_p`_oooWKKE@`_sEEBWKKEWKKE n=25 S=[2, 3, 9, 10] m=100 alpha=8
+XQIURGqeQXCqCqAX?eOCq_RH?eP?eS_RJGCqX?ePcAXRGCqRGCq n=25 S=[2, 5, 6, 9] m=100 alpha=8
+XQGSUHaKSpHaHaCp@KSHaOeG`KS`KUOeHcHaK`KOqCpPcHaPcHa n=25 S=[2, 6, 7, 10] m=100 alpha=8
+X?bFF`wN?{@w@w?{?N?@w?F_?NC?NE?Fb_@w{?NBo?{F_@wF_@w n=25 S=[4, 5, 6, 7] m=100 alpha=8
+X?bB@_WB?KOWoWwK]BBoWN@_]B?]B?N@aBoWo]BB@wKEBoWEBoW n=25 S=[4, 5, 11, 12] m=100 alpha=8
+X?`@C`GHCcHGhGscLHDhGUc_lHClHAUc_dhGclHAQscCdhGCdhG n=25 S=[4, 7, 10, 12] m=100 alpha=8
+X????A?OD?Y?y?|?^OFy?^gA~OA~O@^g?Vy?A~O?J|??Vy??Vy? n=25 S=[8, 10, 11, 12] m=100 alpha=8
+XlSggUDOhAaDAD@A_OgAD?GU?Oi?Oh?GSOADA?OkG@AgOADgOAD n=25 S=[1, 3, 8] m=75 alpha=8
+XlSggSD_iAcDCDAA__gCD_OT?_h?_g_OSGCD@?_kCAAgGCDgGCD n=25 S=[1, 3, 9] m=75 alpha=8
+# n=26 triangle_free_circulants=352 min_alpha=7 n_attaining=6
+YlSggUDOhAaDAD`AgOhADCGSGOkGOiCGS`ADCGOgO`Ao`ADO`ADgO`A_ n=26 S=[1, 3, 8, 13] m=91 alpha=7
+YhCKIC`cIOc`C`aOgcHC`CQEGcIGcHCQEPC`QGcHGaOaPC`APC``GaO_ n=26 S=[1, 6, 9, 13] m=91 alpha=7
+YUWooWE_qBCECEaBG_pCECOYG_qG_pCOWPCEAG_oGaBOPCEoPCEWGaB? n=26 S=[2, 3, 9, 13] m=91 alpha=7
+Y?bBD`WJ?k@W@W_kGJ@@WCD_GJ?GJCCD`@@WgGJE__kL@@WL@@WE__k? n=26 S=[4, 5, 7, 13] m=91 alpha=7
+Y?AA@?OA?GOOoOwG]AFoO^@?}A?}A?^@?FoO_}AABwGCFoOCFoOABwG? n=26 S=[5, 11, 12, 13] m=91 alpha=7
+Y???C@?GC_X?X?k_JGDX?tc@jG@jGCtc@LX?HjG?ek_@LX?@LX??ek_? n=26 S=[7, 10, 11, 13] m=91 alpha=7
+# n=27 triangle_free_circulants=177 min_alpha=8 n_attaining=18
+ZlSgkTDGgapDPDGaaGgPD`CTAGhAGg`CUGPDPAGhCGaaGPDaGPDPCGasPAGg n=27 S=[1, 3, 7, 11] m=108 alpha=8
+ZhdHGcH@KCgHgHSCd@KgHQ_ed@Id@HQ_cSgHAd@GISCoSgHOSgHGISCqAd@G n=27 S=[1, 4, 10, 12] m=108 alpha=8
+ZhEIHEPQHGaPaPPGcQKaPQHCcQGcQKQHDCaPGcQKaPGhCaPHCaPCaPGpGcQG n=27 S=[1, 5, 8, 12] m=108 alpha=8
+ZUWosZEWpbBEBE@b?WoBE?KW?Wo?Ws?KZ?BEW?Wp_@bB?BEb?BEp_@bKW?Wo n=27 S=[2, 3, 7, 8] m=108 alpha=8
+ZUWooWE?sBWEWEKBB?oWE`_ZB?rB?p`_WWWEBB?oKKB?WWE_WWEoKKBKBB?o n=27 S=[2, 3, 10, 11] m=108 alpha=8
+ZQIURGqEOX?q?q_XWER?qKBGWEOWEOKBGB?q_WEU@_XKB?qKB?qe@_XH_WEO n=27 S=[2, 5, 6, 13] m=108 alpha=8
+Z?bFF`wN?{@w@w?{?N?@w?F_?N??N??Fa?@wo?NF??{]?@w]?@wN??{Bo?N? n=27 S=[4, 5, 6, 7] m=108 alpha=8
+Z?`DA_gD?SOgOggSYDBOglA`YD@YD?lA_JOg`YDADgSSJOgSJOgIDgSA`YD? n=27 S=[4, 6, 11, 13] m=108 alpha=8
+Z????A?OD?I?i?t?\OFi?]gA|OA|OD]g@Vi?I|O?jt?@Vi?@Vi??jt??I|O? n=27 S=[8, 10, 12, 13] m=108 alpha=8
+ZlSggSD?gAoDODGAa?gOD`?TA?hA?g`?SGOD@A?gCGA_GOD_GODOCGAs@A?g n=27 S=[1, 3, 11] m=81 alpha=8
+ZhEIHCPAGG_P_POGcAK_PQ@CcAGcAGQ@CC_P?cAKAOGgC_PGC_PCAOGp?cAG n=27 S=[1, 5, 12] m=81 alpha=8
+ZUWooWE?sBGEGECB@?oGE?_Y@?q@?p?_WOGEA@?oGCB?OGE_OGEoGCBKA@?o n=27 S=[2, 3, 10] m=81 alpha=8
+# n=28 triangle_free_circulants=466 min_alpha=8 n_attaining=60
+[lSgkTDGga`D`DOacGg`DaCTCGhCGgaCSG`D`CGiCOacG`DCG`DaCOag`CGlCG`D n=28 S=[1, 3, 7, 12] m=112 alpha=8
+[lSggUDOhAaDAD`AgOlADSGSgOggOgSGUDADOgOhA`AaDADADAD`A`AgOgOlADAD n=28 S=[1, 3, 8, 13] m=112 alpha=8
+[hdLIchDGS_h?h_SgDL?hSAcgDGgDGSAcD?h?gDKA_SgD?hgD?hSA_Sd?gDKgD?h n=28 S=[1, 4, 6, 13] m=112 alpha=8
+[hdHKdHhIcdHDHAc_hGDH?Sc?hG?hK?Sd?DHg?hI_Acd?DHd?DHQ_Accg?hKd?DH n=28 S=[1, 4, 7, 9] m=112 alpha=8
+[hEIHCPaIGcPcPQGcaGcPaPDCaHCaKaPDGcPHCaGcQGpGcPPGcPGcQGaHCaKPGcP n=28 S=[1, 5, 9, 12] m=112 alpha=8
+[hCKIC`CKOg`G`cOhCLG`SaChCKhCISaCdG`ChCKQcOgdG`GdG`CQcO`ChCKGdG` n=28 S=[1, 6, 10, 13] m=112 alpha=8
+[hCGKD@GK_h@h@S_dGGh@acDDGLDGIacCgh@dDGISS_cgh@Cgh@ASS__dDGKCgh@ n=28 S=[1, 7, 10, 12] m=112 alpha=8
+[hCGGE@OH?q@Q@h?iOLQ@TGEiOIiOHTGETQ@QiOHIh?aTQ@ATQ@@Ih?_QiOKATQ@ n=28 S=[1, 8, 11, 13] m=112 alpha=8
+[UWosZEWpbBEBE@b?WoBE?KW?Wo?Wo?KY?BEo?Wr?@bE?BEE?BEb?@bWo?WrE?BE n=28 S=[2, 3, 7, 8] m=112 alpha=8
+[UWooWE?sBWEWEKBB?oWE@_YB?uB?r@_WoWEEB?oWKB?oWE?oWE_WKBWEB?r?oWE n=28 S=[2, 3, 10, 11] m=112 alpha=8
+[QIURGqeQXCqCqAX?eOCq?RG?eO?eS?RH?CqG?eS_AXX?CqX?CqK_AXRG?eQX?Cq n=28 S=[2, 5, 6, 9] m=112 alpha=8
+[QIQPIQqRHEQEQBH?qOEQ?XG?qO?qS?XJ?EQW?qP_BHR?EQR?EQH_BHQW?qQR?EQ n=28 S=[2, 5, 8, 9] m=112 alpha=8
+# n=29 triangle_free_circulants=378 min_alpha=8 n_attaining=35
+\lSgkTDGga`D`DOacGg`DACUCGiCGhACSO`DACGkGOagO`DGO`DCGOapACGiGO`Dg`ACS n=29 S=[1, 3, 7, 12] m=116 alpha=8
+\hdLIchdISchChAS_dGCh?Qc?dG?dG?Qe?ChO?dH?ASq?ChQ?Chh?ASiO?dHQ?ChdG?Qc n=29 S=[1, 4, 6, 9] m=116 alpha=8
+\hdHGcH@KCgHgHSCd@GgHA_eD@ID@LA_dOgHID@GgSC`OgH@OgH_gSCgID@H@OgHcDA_c n=29 S=[1, 4, 10, 12] m=116 alpha=8
+\hEILDPIGg`P@P_ggIH@PcDDGIHGIGcDCH@P@GIKC_ggH@PgH@PSC_gd@GIGgH@Pa_cDC n=29 S=[1, 5, 7, 13] m=116 alpha=8
+\hEIHCPaIGcPCPaGgaHCPcPDGaHGaGcPEHCPPGaHCaGaHCPaHCPPCaGcPGaGaHCPaGcPC n=29 S=[1, 5, 9, 13] m=116 alpha=8
+\hCKIC`cIOc`C`aOgcHC`cQDGcHGcGcQEHC`PGcHCaOqHC`QHC`HCaOaPGcGQHC``GcQC n=29 S=[1, 6, 9, 13] m=116 alpha=8
+\UWooWE?sBWEWEKBB?oWE@_WB?sB?u@_X_WEKB?ooKB@_WE@_WE?oKBOKB?u@_WEWE@_W n=29 S=[2, 3, 10, 11] m=116 alpha=8
+\UWooWE?sBGEGECBP?uGEW_Wp?op?sW_XEGEGp?obCB@EGE@EGE?bCBOGp?u@EGEWCW_W n=29 S=[2, 3, 10, 14] m=116 alpha=8
+\UWooWE?oBOEoEWBE?ooEB?YE?uE?rB?WooEEE?oWWB?ooE?ooE?WWBOEE?u?ooEWBB?W n=29 S=[2, 3, 11, 12] m=116 alpha=8
+\QIURGqEOX?q?q?XOEU?qWBGoEOoEOWBGE?q?oEOB?XOE?qoE?qWB?XE?oESoE?qR?WBG n=29 S=[2, 5, 6, 14] m=116 alpha=8
+\QIQPIQqRHEQEQBH?qOEQ?XG?qO?qO?XI?EQo?qR?BHE?EQe?EQR?BHCo?qSe?EQQW?XG n=29 S=[2, 5, 8, 9] m=116 alpha=8
+\QGOOIAOP@QAqAX@EOOqABGIEOUEORBGGoqAeEOQWX@CoqACoqAAWX@?eEOSCoqAORBGG n=29 S=[2, 8, 11, 12] m=116 alpha=8
+# n=30 triangle_free_circulants=647 min_alpha=8 n_attaining=22
+]lSgkTDGga`D`DOacGg`DACSCGkCGiACS_`DCCGgOOao_`DO_`DGOOaaCCGkO_`DPAACUaCCGg n=30 S=[1, 3, 7, 12] m=120 alpha=8
+]lSggUDOhAaDaDPAcOgaDAGSCOkCOiAGS_aDCCOkOPAg_aDG_aDCOPA`CCOkG_aDOaAGU`CCOg n=30 S=[1, 3, 8, 12] m=120 alpha=8
+]lSggSD_iAcDCDAAo_iCDgOTO_hO_ggOSICD`O_iDAAcICDCICDADAA_`O_kCICDOOgOU_`O_g n=30 S=[1, 3, 9, 14] m=120 alpha=8
+]hCKIC`cIOc`C`aOgcHC`CQEGcIGcHCQCPC`aGcIGaOcPC`cPC`QGaOcaGcGcPC`APCQECaGcG n=30 S=[1, 6, 9, 13] m=120 alpha=8
+]UWooWE_qBCECEaBG_pCECOYG_qG_pCOWPCEaG_qGaBCPCECPCEAGaB?aG_sCPCEoPCOX_aG_o n=30 S=[2, 3, 9, 13] m=120 alpha=8
+]UWooWE?oBOEoEWBE?ooEB?WE?sE?uB?X_oEKE?ooWB@_oE@_oE?oWB?KE?s@_oEoEB?X_KE?o n=30 S=[2, 3, 11, 12] m=120 alpha=8
+]Cp`_oK`aESKSKIEA`_SK@OoA`_A`c@Op?SKgA`a_IED?SKD?SKA_IEOgA`eD?SKWS@OoogA`_ n=30 S=[3, 4, 9, 11] m=120 alpha=8
+]CO_cRCwbaFCFCBa?w_FC?[O?w_?w_?[O?FC_?we?Ba[?FC[?FCM?BaB_?wc[?FCPo?[Ob_?w_ n=30 S=[3, 7, 8, 9] m=120 alpha=8
+]CO__OC?_AOCoCwAM?`oCF?QM?eM?fF?PpoCMM?_wwA@poC@poC?wwA?MM?c@poCOFF?O_MM?_ n=30 S=[3, 11, 12, 13] m=120 alpha=8
+]?`DE`glAsDgDgAs?l?Dg?U_?l??l??U_?Dg_?lA?AsS?Dgs?DgY?AsU_?lAs?DgJO?U_U_?l? n=30 S=[4, 6, 7, 9] m=120 alpha=8
+]??CE@_kAoT_T_IoAk?T_@U?Ak?AkC@U@?T_gAkA_IoT?T_t?T_Y_IoEgAk?t?T_BS@U?EgAk? n=30 S=[6, 7, 9, 11] m=120 alpha=8
+]??CA?_cAOC_C_aOWcBC_kQBWcBWc@kQ?ZC_bWcALaOCZC_cZC_QLaOCbWc?cZC_APkQ?CbWc? n=30 S=[6, 9, 13, 14] m=120 alpha=8

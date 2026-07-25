@@ -1,0 +1,11 @@
+N=12 graphs=1262180    (N^2/8=18.000  N^2/25=5.760)
+  F_{|S|<=1}(12) =  18   ratio=0.12500   witness K??F~z{~Fw^_
+  F_{|S|<=2}(12) =  12   ratio=0.08333   witness K??FfRc~Fw^_
+  F_{|S|<=3}(12) =   9   ratio=0.06250   witness K??FfRcvDwN_
+  F_{|S|<=4}(12) =   6   ratio=0.04167   witness K??FFB_vDwN_
+  F_{N(v) moves}(12)  =  18   ratio=0.12500   witness K??F~z{~Fw^_
+  F_{N[v] moves}(12)  =  18   ratio=0.12500   witness K??F~z{~Fw^_
+  F_{cut-star}(12)    =   8   ratio=0.05556   witness K???E?~Nvw^_
+  F_{STAR moves}(12)  =   8   ratio=0.05556   witness K??FeZor@wF_
+  F_{|S|<=4 & NB & NC & CS & STAR}(12)=   6 ratio=0.04167   witness K??FFB_vDwN_
+DONE

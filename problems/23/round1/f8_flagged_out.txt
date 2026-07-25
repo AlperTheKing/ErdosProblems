@@ -1,0 +1,149 @@
+         O?dn`RPQ?T?sgD`UAhQ_E n=16 m= 41 |M|= 17169 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OC[OaNa_FK@NBGXcSGOas n=16 m= 41 |M|= 17291 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OA__uMSMTCHDBAw_gF@aL n=16 m= 41 |M|= 17869 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O?UIhjooU_I_i_aO?FxCy n=16 m= 42 |M|= 18793 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         ODwYLB?`?SB]g_SUcF?JS n=16 m= 41 |M|= 17525 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O@w?]JSX?PCXCqALqRFGQ n=16 m= 42 |M|= 18557 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O?kOLJQHNGHY{_CB[OGap n=16 m= 42 |M|= 18563 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OEWsJEGO_JpiWBgCAMOsE n=16 m= 41 |M|= 17475 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O?poHvAkcIFDoPOTDC?cV n=16 m= 42 |M|= 18031 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OF@dEO`QgeL?Fg@JObd?e n=16 m= 41 |M|= 17927 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OIePYGoC`G?\A]CqWTD?i n=16 m= 40 |M|= 16049 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OOuS@`Bo?c`yPQ[@QCpXO n=16 m= 40 |M|= 16185 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OLAiLCQQWJCRqHUAJGdCb n=16 m= 44 |M|= 20153 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OGKI?HSDDkP]A?sOs]QAs n=16 m= 40 |M|= 16209 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         ORY?XHccwgP@AEooa[sRO n=16 m= 42 |M|= 18387 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OLhWoRASObObOp`eWW@BI n=16 m= 42 |M|= 18205 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OU_U?_oK@ULg_DB{DwQHS n=16 m= 41 |M|= 17301 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OX@CgxII`BR`dEoSHOP@J n=16 m= 42 |M|= 19139 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OHAilAWUQJY?Ib?wZ?HOY n=16 m= 42 |M|= 18801 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OO?exoOc@Oy@BLpYWHRP_ n=16 m= 41 |M|= 17521 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OFR_a@_io\SWagFHGAHAT n=16 m= 41 |M|= 17629 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OXJWs_E@PBHKGdoe@K[Cx n=16 m= 43 |M|= 19319 |W|=  330 UB=0.0400000000  ok (<=1/25)
+         Ok`IDEcM`_EoUGAi?jQRW n=16 m= 42 |M|= 18737 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         O??elP?C[xGgmHrC^?@Sg n=16 m= 41 |M|= 17895 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         Oc]GjDACYGsDaIXCaGrG` n=16 m= 42 |M|= 18471 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OgiAAyqQG{CWRHL_OBhk_ n=16 m= 43 |M|= 19891 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OpOg_SCc[TCHe?PdihBBC n=16 m= 40 |M|= 16583 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OCh[BdG_O`Cuo@WECrOdE n=16 m= 40 |M|= 16719 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         ObH_OeUeCYKPWe@THCLA@ n=16 m= 41 |M|= 17835 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O]_XIVCMEGWaKQ?k_R?PL n=16 m= 41 |M|= 17197 |W|=  290 UB=0.0400000000  ok (<=1/25)
+         Oa_[@PFMGeQGhAOdko_pB n=16 m= 41 |M|= 17475 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O]KeOO`DhCWhaEChgcOiO n=16 m= 41 |M|= 17099 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OD?AwQbxRAJCbASOt_LIG n=16 m= 41 |M|= 17927 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OYGQXfLChGb@QCQAOg{cS n=16 m= 42 |M|= 18205 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OMIc@?qgCOHyqWEcByAJQ n=16 m= 42 |M|= 17709 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OFhGiVACQOSbHYHM[??Cp n=16 m= 41 |M|= 17513 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OpaAz?\ICal??j_hAiage n=16 m= 43 |M|= 19853 |W|=  290 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OCGax?\[COihWIbS{CCEc n=16 m= 42 |M|= 18737 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OdH`?w]_KEPoU_UAKD`Am n=16 m= 42 |M|= 17639 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OqAHsaWQPoGtLCIPGlCCb n=16 m= 42 |M|= 18765 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OC_WGt``NIWOHP]cARRO@ n=16 m= 41 |M|= 17067 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OqWSBMKKgbBOaEGaPIAGN n=16 m= 41 |M|= 17259 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OICpc\@iL`X_bGQA?Q{LA n=16 m= 42 |M|= 19139 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         ODS?bELDO`WRxaOeD_kYA n=16 m= 42 |M|= 18833 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OIMSePAH`JQ@kGHpPEGAk n=16 m= 41 |M|= 17313 |W|=  290 UB=0.0400000000  ok (<=1/25)
+         OSFA@WRYH[I@oIqGEo[Eg n=16 m= 42 |M|= 18821 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OSoE@^CN`DIGTA\?OBgwO n=16 m= 41 |M|= 17147 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OUZ?UCuHcCWEESG`bhJ?S n=16 m= 42 |M|= 18499 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OS?bc[wDEWM?ad?^LAE@_ n=16 m= 40 |M|= 16455 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OaEgRCoi?iaICO_jgsqLc n=16 m= 42 |M|= 18245 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OPsMgIC?c?d\XAI[YIAbO n=16 m= 41 |M|= 17537 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         Oka_GS`PPsig_JM_jSC@i n=16 m= 42 |M|= 19169 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         Oo@{GDA`GakIaJYaRC`r? n=16 m= 41 |M|= 17569 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OYOgUMGe@dAsG[E?woM?[ n=16 m= 41 |M|= 17629 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         Oc_OtEeRRC?h_E]@iC`WD n=16 m= 41 |M|= 18253 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OaMpa@Eatb@Kk@WDGb_]E n=16 m= 44 |M|= 20801 |W|=  250 UB=0.0400000000  ok (<=1/25)
+      P?GFhG@xJ`@S?gCSP`]qCx@o n=17 m= 45 |M|= 35689 |W|=  290 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+      P`UkBDOcQkPHcO@l@U?LkGAw n=17 m= 47 |M|= 40517 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+      PAF?laO@R@LUJGaeOPRP`cE_ n=17 m= 46 |M|= 39249 |W|=  290 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+      P]OXsD@EHAe?aJHGWpeCa@PC n=17 m= 45 |M|= 36441 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+      PUQHkOGobIA@_iOxEmBJGID_ n=17 m= 47 |M|= 41253 |W|=  290 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OlgYHIBQQPAREohEGCweP n=16 m= 44 |M|= 20801 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OlAiPE@_@DghDkg_BEiqa n=16 m= 42 |M|= 18809 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         Oq`bCC?dgSLKFg_@fKGjQ n=16 m= 42 |M|= 17767 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OkLO__KOyDSSbEhQGGtF? n=16 m= 41 |M|= 17685 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         O?TFa_sa\YP_SEiO?oXAK n=16 m= 40 |M|= 16145 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OBx_GySOh?sOdAEaGLdAa n=16 m= 40 |M|= 16493 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O?ecBfoY?IaaR_@k@Tf_Q n=16 m= 41 |M|= 17535 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OPa??tSseALoCBV_@T@Id n=16 m= 40 |M|= 16557 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O@J[CoBU_H{CWqwAACYSP n=16 m= 41 |M|= 17851 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OGDE`[sl?K?oqJq@U@_Bq n=16 m= 41 |M|= 17867 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OhH?[y[OKccQ?sh?r_qBY n=16 m= 43 |M|= 19779 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OIKeEYoKsg?Fr@qCAogTO n=16 m= 42 |M|= 18625 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OGgaDBSFtc@DTPoD@hGTE n=16 m= 42 |M|= 18487 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OHQOAGmsa@RWiqHFTO?aP n=16 m= 41 |M|= 17847 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OGB\O?CkARvKSwgA_yIrA n=16 m= 43 |M|= 19853 |W|=  290 UB=0.0400000000  ok (<=1/25)
+         OIClQFCPcOdCcTiCAhhbO n=16 m= 42 |M|= 19139 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         Oa@dCGxkC@GIFbQsE@loG n=16 m= 41 |M|= 16925 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OEB_WxAiJOECCeK_OLMOM n=16 m= 40 |M|= 16853 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O?_QCNc]TKFGk_?Mw_h[A n=16 m= 41 |M|= 17219 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OEK_WCKgYWaaWXKQP_]DI n=16 m= 41 |M|= 17001 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OGJW?QYQaBUBU?gauI?MK n=16 m= 40 |M|= 16809 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O@wGEiO@j?kCx_Ar[AKkW n=16 m= 41 |M|= 17213 |W|=  290 UB=0.0400000000  ok (<=1/25)
+         OI?@A[?rksVcgWE?wsIHQ n=16 m= 41 |M|= 17597 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O?UhVb_@OQYQseDiAU?GX n=16 m= 42 |M|= 18387 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OFJACA_F|CCoq@QZHD`MD n=16 m= 43 |M|= 19319 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OCwotCCpAbCRggPPcUGrG n=16 m= 42 |M|= 18559 |W|=  250 UB=0.0400000000  ok (<=1/25)
+      PIATURGGAWrA?B@{ccdoCCsg n=17 m= 45 |M|= 38271 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+      Pq@kOcA`IAaQ_PYXOg_kUMIg n=17 m= 46 |M|= 37793 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+      PKSq_`?g_Y@mioSEwg?`tgi? n=17 m= 46 |M|= 38191 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OIO_KjAG\sC?edOER_gRI n=16 m= 40 |M|= 16483 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OMaD?_w?ILHy_UoCDHHwE n=16 m= 40 |M|= 16315 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OLCS@KeA]QGqr?pCADx[@ n=16 m= 42 |M|= 18373 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OYR@caIaeCF?LMBoEAGJX n=16 m= 42 |M|= 18485 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O]OgogbG_gWoAToIbAkQo n=16 m= 41 |M|= 17573 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O_SpR?LAR`QU`ekKGqCe? n=16 m= 41 |M|= 17659 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OaLB@@GLL@Axdwas@xAQo n=16 m= 43 |M|= 19713 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OSYC?S]\Rk?@oXB_`QbaB n=16 m= 42 |M|= 17767 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OYR?yABBKqCYGeJGQIKoK n=16 m= 42 |M|= 19095 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         Ol_YHTCCWGsQPCE@sTIoW n=16 m= 41 |M|= 17081 |W|=  290 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         O_YKR@sk?m@@WA_X_Usq@ n=16 m= 40 |M|= 15957 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         O[ocG`SGqCWGBQFFF@c@d n=16 m= 40 |M|= 16423 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OKgT?EdR_pEAUOpRGp_@f n=16 m= 42 |M|= 18607 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OWt?SDPS`Y`GHgL`Y@sHg n=16 m= 42 |M|= 19089 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OO@XpIXIEEoq]@cSGUB@I n=16 m= 42 |M|= 18777 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OKS_gbBKLEACBFi`WiaIa n=16 m= 42 |M|= 18691 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OW__[JS`AqeYV??wfAIe_ n=16 m= 42 |M|= 19091 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OY?cprK?wMGBf@GEogkw_ n=16 m= 42 |M|= 18643 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OaO??HeiTkVoDcAYvWBE? n=16 m= 42 |M|= 18679 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         Oci?Apa[a{Cw_J@SbcDE@ n=16 m= 41 |M|= 17885 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         ObcRQI@O@QoqCJYHS_Od` n=16 m= 40 |M|= 16455 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OsCraWPYKGoIAjB`H@`@B n=16 m= 41 |M|= 17809 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OrYGgoOaaFO[X[agGk@?z n=16 m= 44 |M|= 20801 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OpSHAeUIKAdDAaXAAQKIL n=16 m= 41 |M|= 17345 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OsDJRPGH?l?HC{a@hA`hB n=16 m= 41 |M|= 17019 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OqPCPQPHhkCSOVN?r_ciG n=16 m= 43 |M|= 19961 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         Og?D[qk?WdCgV?OF?QtwB n=16 m= 40 |M|= 16005 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000
+         OahbDaCW?{bUAw`@@]G_e n=16 m= 42 |M|= 18559 |W|=  250 UB=0.0400000000  ok (<=1/25)
+         OpQ[pQG@PHKUaCSQiEACo n=16 m= 40 |M|= 16261 |W|=  250 UB=0.0400000000  ok (<=1/25)
+# max over file = 0.040000000000

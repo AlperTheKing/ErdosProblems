@@ -1,0 +1,12 @@
+
+==============================================================================
+PART 3.  Best blow-up lower bounds at the tight orders (exact integer arithmetic)
+==============================================================================
+N= 41: best C5 blow-up bip =   64 (parts (8, 8, 8, 8, 9)), floor(N^2/25) =   67, gap to target = 3
+N= 44: best C5 blow-up bip =   72 (parts (8, 9, 8, 9, 10)), floor(N^2/25) =   77, gap to target = 5
+N= 46: best C5 blow-up bip =   81 (parts (9, 9, 9, 9, 10)), floor(N^2/25) =   84, gap to target = 3
+N= 49: best C5 blow-up bip =   90 (parts (9, 10, 9, 10, 11)), floor(N^2/25) =   96, gap to target = 6
+N= 51: best C5 blow-up bip =  100 (parts (10, 10, 10, 10, 11)), floor(N^2/25) =  104, gap to target = 4
+N= 54: best C5 blow-up bip =  110 (parts (10, 11, 10, 11, 12)), floor(N^2/25) =  116, gap to target = 6
+N= 56: best C5 blow-up bip =  121 (parts (11, 11, 11, 11, 12)), floor(N^2/25) =  125, gap to target = 4
+N= 59: best C5 blow-up bip =  132 (parts (11, 12, 11, 12, 13)), floor(N^2/25) =  139, gap to target = 7

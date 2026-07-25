@@ -1,0 +1,52 @@
+[
+ {
+  "label": "C5[14,15,14,15,15]  N=73",
+  "n": 73,
+  "m": 1065,
+  "triangle_free": true,
+  "triangle_witness": null,
+  "status": "OPTIMAL",
+  "maxcut": 855,
+  "dual_bound": 855,
+  "heuristic_cut": 855,
+  "bip": 210,
+  "g6": null,
+  "model": "xor",
+  "ratio": 0.03940701820228936,
+  "25bip_vs_N2": [
+   5250,
+   5329
+  ],
+  "violates": false,
+  "proved_optimal": true,
+  "bip_certified_lower": 210,
+  "seconds": 70.1,
+  "expected_bip": 210,
+  "min_adjacent_part_product": 210
+ },
+ {
+  "label": "C5[15,16,15,16,16]  N=78",
+  "n": 78,
+  "m": 1216,
+  "triangle_free": true,
+  "triangle_witness": null,
+  "status": "OPTIMAL",
+  "maxcut": 976,
+  "dual_bound": 976,
+  "heuristic_cut": 976,
+  "bip": 240,
+  "g6": null,
+  "model": "xor",
+  "ratio": 0.03944773175542406,
+  "25bip_vs_N2": [
+   6000,
+   6084
+  ],
+  "violates": false,
+  "proved_optimal": true,
+  "bip_certified_lower": 240,
+  "seconds": 161.6,
+  "expected_bip": 240,
+  "min_adjacent_part_product": 240
+ }
+]

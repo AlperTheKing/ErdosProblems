@@ -1,0 +1,6 @@
+# total graphs read: 1401008
+# alpha  maxbip  count  argmax_g6
+5 5 54 L?AADAomBwHkFo
+6 5 28 L??CE@_vFwB{Fw
+7 4 1195 L???C@?kEOHyLy
+8 4 1 L????Bo{?^`}~o

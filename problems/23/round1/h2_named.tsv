@@ -1,0 +1,601 @@
+Dhc	C5	n=5	m=5
+FhCKG	C7	n=7	m=7
+HhCGGE@	C9	n=9	m=9
+JhCGGC@?K?_	C11	n=11	m=11
+LhCGGC@?G?_@_@	C13	n=13	m=13
+GhdHKc	Andrasfai(3)_n8	n=8	m=12
+JhdHKdHHKc_	Andrasfai(4)_n11	n=11	m=22
+MhdHKdHHKchHHHcc_	Andrasfai(5)_n14	n=14	m=35
+PhdHKdHHKchHHHcchHHHHccc	Andrasfai(6)_n17	n=17	m=51
+ShdHKdHHKchHHHcchHHHHccdHHHHHKccc	Andrasfai(7)_n20	n=20	m=70
+IheA@GUAo	Petersen=K(5,2)	n=10	m=15
+I?LRCecq?	Kneser(5,2)	n=10	m=15
+OhCGKE?O@?ACAC@I?Q_AS	MobiusKantor_GP(8,3)	n=16	m=24
+IheAHCPBG	GP(5,1)	n=10	m=15
+KhEKAC`CGO_p	GP(6,1)	n=12	m=18
+KhEKA?_C_Q?c	GP(6,3)	n=12	m=15
+MhCKK@@GG_`@@@?o_	GP(7,1)	n=14	m=21
+MhCKK@?GO`@A@Q?h?	GP(7,2)	n=14	m=21
+MhCKK@?G?a@K@K?e?	GP(7,3)	n=14	m=21
+OhCGKE?OH?a@A@@?_OGB@	GP(8,1)	n=16	m=24
+OhCGKE?O@@AAAA@@?SOAa	GP(8,2)	n=16	m=24
+OhCGKE?O@?A?AG@C?P?AG	GP(8,4)	n=16	m=20
+QhCGGE@_A?c@C@A?__GC@?OC?oG	GP(9,1)	n=18	m=27
+QhCGGE@_A?CACAA@?_OCA?SG?gO	GP(9,2)	n=18	m=27
+QhCGGE@_A?C?C?AC?b?CW?P_?b?	GP(9,4)	n=18	m=27
+ShCGGC@_K?G@G@C?`?GG@?_C@?G@?G?oC	GP(10,1)	n=20	m=30
+ShCGGC@_K?G?GAC@@?OGA?_G@?O@OO?gG	GP(10,2)	n=20	m=30
+ShCGGC@_K?G?G?CA@?_GC?_O@G_@G_?cO	GP(10,3)	n=20	m=30
+ShCGGC@_K?G?G?C?@@?GG?a_@D?@D??a_	GP(10,4)	n=20	m=30
+ShCGGC@_K?G?G?C?@??GO?`?@A?@A??`?	GP(10,5)	n=20	m=25
+UhCGGC@?K?o?O@G?a?GO@@?CA?GA?G@?C?O@?B?G	GP(11,1)	n=22	m=33
+UhCGGC@?K?o?O?G@A?OOA@?GA?OA?O@?G?SA?A_O	GP(11,2)	n=22	m=33
+UhCGGC@?K?o?O?G?A?_OC@?OA?_A?_@GO?QC?AO_	GP(11,3)	n=22	m=33
+UhCGGC@?K?o?O?G?A??OG@?_A@?AH?@C_?PG?AH?	GP(11,4)	n=22	m=33
+UhCGGC@?K?o?O?G?A??O?@@?AE?AE?@B??Oo?AE?	GP(11,5)	n=22	m=33
+JhdLA_gc?N_	Grotzsch=M(C5)_n11	n=11	m=20
+VhdLA_gc?NhQhOSgDICh?QAA_GA_O@OOAOG?@{???N~_	M(M(C5))_n23	n=23	m=71
+NhCKIE_S@OA_A_`??Nw	M(C7)_n15	n=15	m=28
+RhCGGE@OL?I?I?D?@O?I??gA@???~w	M(C9)_n19	n=19	m=36
+OhdLA_gc?C_g?g?S?c??^	genMyc_C5_r3_n16	n=16	m=30
+ThdLA_gc?C_g?g?S?c??H?A_?D??D??Q???^	genMyc_C5_r4_n21	n=21	m=40
+KhdLA_hc?L_y	Chvatal_n12	n=12	m=24
+Or`HOm@OhHBBEGHCgPSAJ	Clebsch_n16	n=16	m=40
+LhEIHEPQHGaPaP	C13(1,5)_R35	n=13	m=26
+UhEIHEPQHGqPQPHGqQIQPHHEQQIQQHHHCQQPaQQG	C22(1, 5, 8, 11)	n=22	m=77
+ShdLIchdISshShISqdIShhQdQdHQdKhQc	C20(1, 4, 6, 9)	n=20	m=80
+NhCGGC@?G?_@?@??o?G	C15(1,)	n=15	m=15
+NQGOOGA?O@?A?A_@G?O	C15(2,)	n=15	m=15
+NCO__OC?_A?C_COAC?_	C15(3,)	n=15	m=15
+N?`@?_G@?COGOGGCA@?	C15(4,)	n=15	m=15
+N??CA?_cAOC_C_AO?c?	C15(6,)	n=15	m=15
+N???CB?W@_B?B?@_?W?	C15(7,)	n=15	m=15
+NlSggSD?gA_D_DOAs?g	C15(1, 3)	n=15	m=30
+NhdHGcH@GCoHOHGCq@G	C15(1, 4)	n=15	m=30
+NhCKIC`cIOc`C`AOocG	C15(1, 6)	n=15	m=30
+NUWooWE?oB?E_EoBK?o	C15(2, 3)	n=15	m=30
+NQGSQGacQPCaCaaPGcO	C15(2, 6)	n=15	m=30
+NQGOSJAWP`BABA``GWO	C15(2, 7)	n=15	m=30
+NCp`_oK@_EOKoKWEE@_	C15(3, 4)	n=15	m=30
+NCO_cRCW`aBCbCPaCW_	C15(3, 7)	n=15	m=30
+N?`DA_gdASSgSgISAd?	C15(4, 6)	n=15	m=30
+N??CEB_{BoF_F_Bo?{?	C15(6, 7)	n=15	m=30
+NhdLIchdISshShISqdG	C15(1, 4, 6)	n=15	m=45
+NUWosZEWpbBEbEpbKWo	C15(2, 3, 7)	n=15	m=45
+OhCGGC@?G?_@?@??_?K?@	C16(1,)	n=16	m=16
+OQGOOGA?O@?A?A?@O?Q?A	C16(2,)	n=16	m=16
+OCO__OC?_A?C?C_AG?`?C	C16(3,)	n=16	m=16
+O?`@?_G@?C?G_GOCC@?_G	C16(4,)	n=16	m=16
+O?AA@?OA?GOOOOGGAA?OO	C16(5,)	n=16	m=16
+O??CA?_CCOG_G_CO@C?G_	C16(6,)	n=16	m=16
+O???C@?gA_D?D?A_?g?D?	C16(7,)	n=16	m=16
+O????A?O@?A?A?@??O?A?	C16(8,)	n=16	m=8
+OlSggSD?gA_D?D_Ag?l?D	C16(1, 3)	n=16	m=32
+OhdHGcH@GC_H_HOCc@K_H	C16(1, 4)	n=16	m=32
+OhEIHCPAGGoPOPGGaAKOP	C16(1, 5)	n=16	m=32
+OhCKIC`CKOg`G`CO`CKG`	C16(1, 6)	n=16	m=32
+OhCGKD@gI_d@D@A__gKD@	C16(1, 7)	n=16	m=32
+OhCGGE@OH?a@A@@?_OKA@	C16(1, 8)	n=16	m=24
+OUWooWE?oB?E?E_BW?r?E	C16(2, 3)	n=16	m=32
+OQIQPGQAOHOQOQGHQAQOQ	C16(2, 5)	n=16	m=32
+OQGSQGaCSPGaGaCPPCQGa	C16(2, 6)	n=16	m=32
+OQGOOIAOP@AAAA@@OOQAA	C16(2, 8)	n=16	m=24
+OCp`_oK@_E?K_KoEK@`_K	C16(3, 4)	n=16	m=32
+OCQa`OSA_IOSOSgIIA`OS	C16(3, 5)	n=16	m=32
+OCO_cPCgaaDCDCaaGg`DC	C16(3, 7)	n=16	m=32
+OCO__QCO`AACAC`AGO`AC	C16(3, 8)	n=16	m=24
+O?bB@_WB?KOWoWWKEB?oW	C16(4, 5)	n=16	m=32
+O?`@C`GhAcDGdGQcCh?dG	C16(4, 7)	n=16	m=32
+O?AAD@OiAgTOTOIgAi?TO	C16(5, 7)	n=16	m=32
+O?AA@AOQ@GQOQOHGAQ?QO	C16(5, 8)	n=16	m=24
+O??CE@_kEoL_L_Eo@k?L_	C16(6, 7)	n=16	m=32
+O??CAA_SDOI_I_DO@S?I_	C16(6, 8)	n=16	m=24
+O???CB?wB_F?F?B_?w?F?	C16(7, 8)	n=16	m=24
+OlUihSTAgIoTOTgIiAlOT	C16(1, 3, 5)	n=16	m=48
+OlSgkTDgiadDDDaagglDD	C16(1, 3, 7)	n=16	m=48
+OlSggUDOhAaDAD`AgOlAD	C16(1, 3, 8)	n=16	m=40
+OhdHKdHhIcdHdHQcchKdH	C16(1, 4, 7)	n=16	m=48
+OhEILDPiIgtPTPIgaiKTP	C16(1, 5, 7)	n=16	m=48
+OhEIHEPQHGqPQPHGaQKQP	C16(1, 5, 8)	n=16	m=40
+OhCKIE`SLOi`I`DO`SKI`	C16(1, 6, 8)	n=16	m=40
+OUWooYEOpBAEAE`BWOrAE	C16(2, 3, 8)	n=16	m=40
+OQIQPIQQPHQQQQHHQQQQQ	C16(2, 5, 8)	n=16	m=40
+OCrb`o[B_MO[o[wMMB`o[	C16(3, 4, 5)	n=16	m=48
+OCQadPSiaiTSTSiiIi`TS	C16(3, 5, 7)	n=16	m=48
+OCO_cRCwbaFCFCbaGw`FC	C16(3, 7, 8)	n=16	m=40
+O?AADBOyBgVOVOJgAy?VO	C16(5, 7, 8)	n=16	m=40
+O??CEB_{FoN_N_Fo@{?N_	C16(6, 7, 8)	n=16	m=40
+OlUilTTiiitTTTiiiilTT	C16(1, 3, 5, 7)	n=16	m=64
+PhCGGC@?G?_@?@??_?G?@_?C	C17(1,)	n=17	m=17
+PQGOOGA?O@?A?A?@??S?AO?G	C17(2,)	n=17	m=17
+PCO__OC?_A?C?C?AO?a?CG?O	C17(3,)	n=17	m=17
+P?`@?_G@?C?G?G_CG@@?GC?_	C17(4,)	n=17	m=17
+P?AA@?OA?G?O_OOGCA?_OA@?	C17(5,)	n=17	m=17
+P??CA?_C?OO_O_GOAC?O_@A?	C17(6,)	n=17	m=17
+P???C@?GC_H?H?C_@G?H??c?	C17(7,)	n=17	m=17
+P????A?oB?E?E?B??o?E??W?	C17(8,)	n=17	m=17
+PlSggSD?gA_D?D?Ao?i?Dg?S	C17(1, 3)	n=17	m=34
+PhdHGcH@GC_H?H_Cg@H?Hc?c	C17(1, 4)	n=17	m=34
+PhEIHCPAGG_P_POGcAG_Pa@C	C17(1, 5)	n=17	m=34
+PhCKIC`CGOo`O`GOaCGO``AC	C17(1, 6)	n=17	m=34
+PhCGKD@GK_h@H@C_`GGH@_cC	C17(1, 7)	n=17	m=34
+PUWooWE?oB?E?E?BO?u?EW?W	C17(2, 3)	n=17	m=34
+PQIQPGQAOH?Q_QOHCAS_QQ@G	C17(2, 5)	n=17	m=34
+PQGSQGaCOPOaOaGPACSOaPAG	C17(2, 6)	n=17	m=34
+PQGOSHAGS`HAHAC`@GSHAOcG	C17(2, 7)	n=17	m=34
+PQGOOIAoR@EAEAB@?oSEAOWG	C17(2, 8)	n=17	m=34
+PCp`_oK@_E?K?K_EW@b?KK?o	C17(3, 4)	n=17	m=34
+PCQa`OSA_I?S_SOISAa_SI@O	C17(3, 5)	n=17	m=34
+PCO__QCobAECECBAOoaECGWO	C17(3, 8)	n=17	m=34
+P?bB@_WB?K?W_WoKKB@_WE@_	C17(4, 5)	n=17	m=34
+P?`DA_gD?SOgOggSID@OgDA_	C17(4, 6)	n=17	m=34
+P?`@C`GHCcHGHGccHH@HGCc_	C17(4, 7)	n=17	m=34
+P?AA@AOqBGEOeORGCq?eOAX?	C17(5, 8)	n=17	m=34
+P??CE@_KCoX_X_KoBK?X_@e?	C17(6, 7)	n=17	m=34
+P??CAA_sBOU_U_JOAs?U_@Y?	C17(6, 8)	n=17	m=34
+P???CB?wF_N?N?F_@w?N??{?	C17(7, 8)	n=17	m=34
+PlUihSTAgI_T_TOIsAi_Ti@S	C17(1, 3, 5)	n=17	m=51
+PhdLIchDGSohOhgSiDHOhdAc	C17(1, 4, 6)	n=17	m=51
+PUWooYEorBEEEEBBOouEEWWW	C17(2, 3, 8)	n=17	m=51
+PQIQPIQqRHEQeQRHCqSeQQXG	C17(2, 5, 8)	n=17	m=51
+PQGSUHaKSpXaXaKpBKSXaPeG	C17(2, 6, 7)	n=17	m=51
+PCrb`o[B_M?[_[oM[Bb_[M@o	C17(3, 4, 5)	n=17	m=51
+P??CEB_{Fo^_^_NoB{?^_@}?	C17(6, 7, 8)	n=17	m=51
+QhCGGC@?G?_@?@??_?G?@??E??G	C18(1,)	n=18	m=18
+QQGOOGA?O@?A?A?@??O?A_?H??O	C18(2,)	n=18	m=18
+QCO__OC?_A?C?C?A??c?CO?O_?_	C18(3,)	n=18	m=18
+Q?`@?_G@?C?G?G?CO@A?GG?_O@?	C18(4,)	n=18	m=18
+Q?AA@?OA?G?O?O_GGA@?OC@?GA?	C18(5,)	n=18	m=18
+Q???C@?G?_P?P?G_AG?P?@C?AG?	C18(7,)	n=18	m=18
+Q????A?OD?I?I?D?@O?I??g?@O?	C18(8,)	n=18	m=18
+Q??????_A?C?C?A??_?C??O??_?	C18(9,)	n=18	m=9
+QlSggSD?gA_D?D?A_?k?DO?U_?g	C18(1, 3)	n=18	m=36
+QhdHGcH@GC_H?H?Co@I?HG?eO@G	C18(1, 4)	n=18	m=36
+QhEIHCPAGG_P?P_GgAH?PC@EGAG	C18(1, 5)	n=18	m=36
+QhCGKD@GG_p@P@G_aGGP@@CEAGG	C18(1, 7)	n=18	m=36
+QhCGGE@OL?i@I@D?`OGI@?gE@OG	C18(1, 8)	n=18	m=36
+QhCGGC@_I?c@C@A?__GC@?OE?_G	C18(1, 9)	n=18	m=27
+QUWooWE?oB?E?E?B??s?Eo?X_?o	C18(2, 3)	n=18	m=36
+QQIQPGQAOH?Q?Q_HGAP?Qc@HGAO	C18(2, 5)	n=18	m=36
+QQGOSHAGO`PAPAG`AGOPA`CHAGO	C18(2, 7)	n=18	m=36
+QQGOOGA_Q@CACAA@?_OCA_OH?_O	C18(2, 9)	n=18	m=27
+QCp`_oK@_E?K?K?EO@e?KW?oo@_	C18(3, 4)	n=18	m=36
+QCQa`OSA_I?S?S_IGAd?SS@OgA_	C18(3, 5)	n=18	m=36
+QCO_cPCG_aPCPCGaAGcPCPCOaG_	C18(3, 7)	n=18	m=36
+QCO__QCOdAICICDA@OcICOgO`O_	C18(3, 8)	n=18	m=36
+QCO__OC_aACCCCAA?_cCCOOO___	C18(3, 9)	n=18	m=27
+Q?bB@_WB?K?W?W_KWBB?WK@_WB?	C18(4, 5)	n=18	m=36
+Q?`@?_G`ACCGCGACO`ACGGO_O`?	C18(4, 9)	n=18	m=27
+Q?AAD@OI?gPOPOggII@PODD?II?	C18(5, 7)	n=18	m=36
+Q?AA@?OaAGCOCOaGGa@COCP?Ga?	C18(5, 9)	n=18	m=27
+Q???CB?WD_Z?Z?L_BW?Z?@k?BW?	C18(7, 8)	n=18	m=36
+Q???C@?gA_T?T?I_Ag?T?@S?Ag?	C18(7, 9)	n=18	m=27
+Q????A?oF?M?M?F?@o?M??w?@o?	C18(8, 9)	n=18	m=27
+QlUihSTAgI_T?T_IgAl?TS@UgAg	C18(1, 3, 5)	n=18	m=54
+QlSgkTDGgapDPDGaaGkPDPCUaGg	C18(1, 3, 7)	n=18	m=54
+QlSggUDOlAiDIDDA`OkIDOgU`Og	C18(1, 3, 8)	n=18	m=54
+QlSggSD_iAcDCDAA__kCDOOU__g	C18(1, 3, 9)	n=18	m=45
+QhdHGcH`ICcHCHACo`ICHGOeO`G	C18(1, 4, 9)	n=18	m=45
+QhEILDPIGgpPPPggiIHPPDDEIIG	C18(1, 5, 7)	n=18	m=54
+QhEIHCPaIGcPCPaGgaHCPCPEGaG	C18(1, 5, 9)	n=18	m=45
+QhCGKD@gI_t@T@I_agGT@@SEAgG	C18(1, 7, 9)	n=18	m=45
+QUWosXEGobPEPEGbAGsPEpCXaGo	C18(2, 3, 7)	n=18	m=54
+QUWooWE_qBCECEAB?_sCEoOX__o	C18(2, 3, 9)	n=18	m=45
+QQIQPGQaQHCQCQaHGaPCQcPHGaO	C18(2, 5, 9)	n=18	m=45
+QCrb`o[B_M?[?[_MWBf?[[@owB_	C18(3, 4, 5)	n=18	m=54
+QCp`_oK`aECKCKAEO`eCKWOoo`_	C18(3, 4, 9)	n=18	m=45
+QCQadPSI_iPSPSgiIIdPSTDOiI_	C18(3, 5, 7)	n=18	m=54
+QCQa`OSaaICSCSaIGadCSSPOga_	C18(3, 5, 9)	n=18	m=45
+QCO_cPCgaaTCTCIaAgcTCPSOag_	C18(3, 7, 9)	n=18	m=45
+QCO__QCofAMCMCFA@ocMCOwO`o_	C18(3, 8, 9)	n=18	m=45
+Q?AAD@OiAgTOTOigIi@TODT?Ii?	C18(5, 7, 9)	n=18	m=45
+Q???CB?wF_^?^?N_Bw?^?@{?Bw?	C18(7, 8, 9)	n=18	m=45
+QlUilTTIgipTPTgiiIlPTTDUiIg	C18(1, 3, 5, 7)	n=18	m=72
+QlUihSTaiIcTCTaIgalCTSPUgag	C18(1, 3, 5, 9)	n=18	m=63
+QlSgkTDgiatDTDIaagkTDPSUagg	C18(1, 3, 7, 9)	n=18	m=63
+QhEILDPiIgtPTPigiiHTPDTEIiG	C18(1, 5, 7, 9)	n=18	m=63
+QCQadPSiaiTSTSiiIidTSTTOii_	C18(3, 5, 7, 9)	n=18	m=63
+RhCGGC@?G?_@?@??_?G?@??C??K??G	C19(1,)	n=19	m=19
+RQGOOGA?O@?A?A?@??O?A??I??Q??O	C19(2,)	n=19	m=19
+RCO__OC?_A?C?C?A??_?C_?P??`??_	C19(3,)	n=19	m=19
+R?`@?_G@?C?G?G?C?@C?GO?__@?_@?	C19(4,)	n=19	m=19
+R?AA@?OA?G?O?O?GOAA?OG@?OA?OA?	C19(5,)	n=19	m=19
+R??CA?_C?O?_?__OGC@?_CA?GC?GC?	C19(6,)	n=19	m=19
+R???C@?G?_@?`?O_CG?`?AC?CG?CG?	C19(7,)	n=19	m=19
+R????A?O@?Q?Q?H?AO?Q?@G?AO?AO?	C19(8,)	n=19	m=19
+R??????_E?K?K?E?@_?K??o?@_?@_?	C19(9,)	n=19	m=19
+RlSggSD?gA_D?D?A_?g?D_?T??l??g	C19(1, 3)	n=19	m=38
+RhdHGcH@GC_H?H?C_@K?HO?c_@K_@G	C19(1, 4)	n=19	m=38
+RhEIHCPAGG_P?P?GoAI?PG@COAKOAG	C19(1, 5)	n=19	m=38
+RhCKIC`CGO_`?`_OgCH?`CACGCKGCG	C19(1, 6)	n=19	m=38
+RhCGKD@GG_`@`@O_cGG`@ACCCGKCGG	C19(1, 7)	n=19	m=38
+RhCGGE@OH?q@Q@H?aOGQ@@GCAOKAOG	C19(1, 8)	n=19	m=38
+RUWooWE?oB?E?E?B??o?E_?Z??r??o	C19(2, 3)	n=19	m=38
+RQIQPGQAOH?Q?Q?HOAQ?QG@IOAQOAO	C19(2, 5)	n=19	m=38
+RQGSQGaCOP?a?a_PGCP?aCAIGCQGCO	C19(2, 6)	n=19	m=38
+RQGOSHAGO`@A`AO`CGO`AACICGQCGO	C19(2, 7)	n=19	m=38
+RQGOOIAOP@QAQAH@AOOQA@GIAOQAOO	C19(2, 8)	n=19	m=38
+RQGOOGA_U@KAKAE@@_OKA?oI@_Q@_O	C19(2, 9)	n=19	m=38
+RCp`_oK@_E?K?K?E?@c?Ko?p_@`_@_	C19(3, 4)	n=19	m=38
+RCQa`OSA_I?S?S?IOAa?Sg@POA`OA_	C19(3, 5)	n=19	m=38
+RCO_cPCG_a@C`COaCG_`CaCPCG`CG_	C19(3, 7)	n=19	m=38
+RCO__OC_eAKCKCEA@__KC_oP@_`@__	C19(3, 9)	n=19	m=38
+R?bB@_WB?K?W?W?KOBE?WW@_oB?oB?	C19(4, 5)	n=19	m=38
+R?`DA_gD?S?g?g_SGDD?gSA_gD?gD?	C19(4, 6)	n=19	m=38
+R?`@C`GH?c@G`GOcCHC`GQC_cH?cH?	C19(4, 7)	n=19	m=38
+R?`@?_G`ECKGKGEC@`CKGOo_``?``?	C19(4, 9)	n=19	m=38
+R?AEB?oE?W?o?o_WWEB?oKB?WE?WE?	C19(5, 6)	n=19	m=38
+R?AA@AOQ@GQOQOHGQQAQOHH?QQ?QQ?	C19(5, 8)	n=19	m=38
+R??CAA_S@OQ_Q_hOIS@Q_DI?IS?IS?	C19(6, 8)	n=19	m=38
+R??CA?_cEOK_K_eOHc@K_Cq?Hc?Hc?	C19(6, 9)	n=19	m=38
+R???CB?W@_R?r?X_EW?r?BK?EW?EW?	C19(7, 8)	n=19	m=38
+R???C@?gE_L?l?U_Dg?l?As?Dg?Dg?	C19(7, 9)	n=19	m=38
+R????A?oF?]?]?N?Bo?]?@w?Bo?Bo?	C19(8, 9)	n=19	m=38
+RlUihSTAgI_T?T?IoAi?Tg@TOAlOAg	C19(1, 3, 5)	n=19	m=57
+RlSgkTDGga`D`DOacGg`DaCTCGlCGg	C19(1, 3, 7)	n=19	m=57
+RhdLIchDGS_h?h_SgDL?hSAcgDKgDG	C19(1, 4, 6)	n=19	m=57
+RhdHKdHHGc`H`HOccHK`HQCccHKcHG	C19(1, 4, 7)	n=19	m=57
+RhEIHEPQHGqPQPHGqQIQPHHCQQKQQG	C19(1, 5, 8)	n=19	m=57
+RhCKIE`SHOq`Q`hOiSHQ`DICISKISG	C19(1, 6, 8)	n=19	m=57
+RUWosXEGob@E`EObCGo`EaCZCGrCGo	C19(2, 3, 7)	n=19	m=57
+RUWooWE_uBKEKEEB@_oKE_oZ@_r@_o	C19(2, 3, 9)	n=19	m=57
+RQIURGqEOX?q?q_XWER?qKBIWEQWEO	C19(2, 5, 6)	n=19	m=57
+RQIQPIQQPHQQQQHHQQQQQHHIQQQQQO	C19(2, 5, 8)	n=19	m=57
+RQGSQGacUPKaKaePHcPKaCqIHcQHcO	C19(2, 6, 9)	n=19	m=57
+RQGOSJAWP`RArAX`EWOrABKIEWQEWO	C19(2, 7, 8)	n=19	m=57
+RCrb`o[B_M?[?[?MOBe?[w@poB`oB_	C19(3, 4, 5)	n=19	m=57
+RCp`_oK`eEKKKKEE@`cKKoop`````_	C19(3, 4, 9)	n=19	m=57
+R?bFB_wF?[?w?w_[WFF?w[B_wF?wF?	C19(4, 5, 6)	n=19	m=57
+R?`@C`GhEcLGlGUcDhClGQs_dh?dh?	C19(4, 7, 9)	n=19	m=57
+R??CAA_sFO]_]_nOJs@]_Dy?Js?Js?	C19(6, 8, 9)	n=19	m=57
+R???CB?wF_^?~?^_Fw?~?B{?Fw?Fw?	C19(7, 8, 9)	n=19	m=57
+ShCGGC@?G?_@?@??_?G?@??C??G??K??C	C20(1,)	n=20	m=20
+SQGOOGA?O@?A?A?@??O?A??G??S??Q??G	C20(2,)	n=20	m=20
+SCO__OC?_A?C?C?A??_?C??Q??a??`??O	C20(3,)	n=20	m=20
+S?`@?_G@?C?G?G?C?@??G_?`?@@?@?_?_	C20(4,)	n=20	m=20
+S?AA@?OA?G?O?O?G?AC?OO@?_A?_A?O@?	C20(5,)	n=20	m=20
+S??CA?_C?O?_?_?OOCA?_GA?OC?OC?GA?	C20(6,)	n=20	m=20
+S???C@?G?_@?@?__GG@@?CC?GG?GG?CC?	C20(7,)	n=20	m=20
+S????A?O@?A?a?P?CO?a?AG?CO?CO?AG?	C20(8,)	n=20	m=20
+S??????_A?S?S?I?A_?S?@O?A_?A_?@O?	C20(9,)	n=20	m=20
+S???????C?G?G?C?@??G??_?@??@???_?	C20(10,)	n=20	m=10
+SlSggSD?gA_D?D?A_?g?D??U??i??l??S	C20(1, 3)	n=20	m=40
+ShdHGcH@GC_H?H?C_@G?H_?d?@H?@K_?c	C20(1, 4)	n=20	m=40
+ShEIHCPAGG_P?P?G_AK?PO@C_AG_AKO@C	C20(1, 5)	n=20	m=40
+ShCKIC`CGO_`?`?OoCI?`GACOCGOCKGAC	C20(1, 6)	n=20	m=40
+ShCGKD@GG_`@@@__gGH@@CCCGGGGGKCCC	C20(1, 7)	n=20	m=40
+ShCGGE@OH?a@a@P?cOGa@AGCCOGCOKAGC	C20(1, 8)	n=20	m=40
+ShCGGC@_I?s@S@I?a_GS@@OCA_GA_K@OC	C20(1, 9)	n=20	m=40
+ShCGGC@?K?g@G@C?`?GG@?_C@?G@?K?_C	C20(1, 10)	n=20	m=30
+SUWooWE?oB?E?E?B??o?E??Y??u??r??W	C20(2, 3)	n=20	m=40
+SQIQPGQAOH?Q?Q?H?AS?QO@G_AS_AQO@G	C20(2, 5)	n=20	m=40
+SQGSQGaCOP?a?a?POCQ?aGAGOCSOCQGAG	C20(2, 6)	n=20	m=40
+SQGOSHAGO`@A@A_`GGP@ACCGGGSGGQCCG	C20(2, 7)	n=20	m=40
+SQGOOIAOP@AAaAP@COOaAAGGCOSCOQAGG	C20(2, 8)	n=20	m=40
+SQGOOGA?S@GAGAC@@?OGA?_G@?S@?Q?_G	C20(2, 10)	n=20	m=30
+SCp`_oK@_E?K?K?E?@_?K_?r?@b?@`_?o	C20(3, 4)	n=20	m=40
+SCQa`OSA_I?S?S?I?Ac?SO@Q_Aa_A`O@O	C20(3, 5)	n=20	m=40
+SCO_cPCG_a@C@C_aGG`@CCCQGGaGG`CCO	C20(3, 7)	n=20	m=40
+SCO__QCO`AACaCPACO_aCAGQCOaCO`AGO	C20(3, 8)	n=20	m=40
+SCO__OC_aASCSCIAA__SC@OQA_aA_`@OO	C20(3, 9)	n=20	m=40
+SCO__OC?cAGCGCCA@?_GC?_Q@?a@?`?_O	C20(3, 10)	n=20	m=30
+S?bB@_WB?K?W?W?K?BC?Wo@`_B@_B?o@_	C20(4, 5)	n=20	m=40
+S?`DA_gD?S?g?g?SODA?ggA`OD@OD?gA_	C20(4, 6)	n=20	m=40
+S?`@C`GH?c@G@G_cGH@@GcC`GH@GH?cC_	C20(4, 7)	n=20	m=40
+S?`@?_G`ACSGSGICA`?SG`O`A`@A`?`O_	C20(4, 9)	n=20	m=40
+S?`@?_G@CCGGGGCC@@?GG__`@@@@@?___	C20(4, 10)	n=20	m=30
+S?AEB?oE?W?o?o?WOEE?oWB?oE?oE?WB?	C20(5, 6)	n=20	m=40
+S?AAD@OI?g@O@O_gGID@OSD?gI?gI?SD?	C20(5, 7)	n=20	m=40
+S?AA@AOQ@GAOaOPGCQCaOQH?cQ?cQ?QH?	C20(5, 8)	n=20	m=40
+S?AA@?OaAGSOSOIGAaCSOPP?aa?aa?PP?	C20(5, 9)	n=20	m=40
+S??CA?_cAOS_S_IOQcAS_HQ?Qc?Qc?HQ?	C20(6, 9)	n=20	m=40
+S??CA?_CCOG_G_COPCAG_Ga?PC?PC?Ga?	C20(6, 10)	n=20	m=30
+S???CB?W@_B?b?p_KW@b?EK?KW?KW?EK?	C20(7, 8)	n=20	m=40
+S???C@?gA_T?T?i_Ig@T?DS?Ig?Ig?DS?	C20(7, 9)	n=20	m=40
+S???C@?GC_H?H?c_HG@H?Cc?HG?HG?Cc?	C20(7, 10)	n=20	m=30
+S????A?oB?U?u?Z?Eo?u?BW?Eo?Eo?BW?	C20(8, 9)	n=20	m=40
+S????A?OD?I?i?T?DO?i?Ag?DO?DO?Ag?	C20(8, 10)	n=20	m=30
+S??????_E?[?[?M?B_?[?@o?B_?B_?@o?	C20(9, 10)	n=20	m=30
+SlUihSTAgI_T?T?I_Ak?TO@U_Ai_AlO@S	C20(1, 3, 5)	n=20	m=60
+SlSgkTDGga`D@D_agGh@DCCUGGiGGlCCS	C20(1, 3, 7)	n=20	m=60
+SlSggUDOhAaDaDPAcOgaDAGUCOiCOlAGS	C20(1, 3, 8)	n=20	m=60
+SlSggSD_iAsDSDIAa_gSD@OUA_iA_l@OS	C20(1, 3, 9)	n=20	m=60
+SlSggSD?kAgDGDCA`?gGD?_U@?i@?l?_S	C20(1, 3, 10)	n=20	m=50
+ShdLIchDGS_h?h?SoDI?hgAdODHODKgAc	C20(1, 4, 6)	n=20	m=60
+ShdHKdHHGc`H@H_cgHH@HcCdGHHGHKcCc	C20(1, 4, 7)	n=20	m=60
+ShdHGcH`ICsHSHICa`GSH`OdA`HA`K`Oc	C20(1, 4, 9)	n=20	m=60
+ShdHGcH@KCgHGHCC`@GGH__d@@H@@K__c	C20(1, 4, 10)	n=20	m=50
+ShEILDPIGg`P@P_ggIL@PSDCgIGgIKSDC	C20(1, 5, 7)	n=20	m=60
+ShEIHEPQHGaPaPPGcQKaPQHCcQGcQKQHC	C20(1, 5, 8)	n=20	m=60
+ShEIHCPaIGsPSPIGaaKSPPPCaaGaaKPPC	C20(1, 5, 9)	n=20	m=60
+ShCKIC`cIOs`S`IOqcIS`HQCQcGQcKHQC	C20(1, 6, 9)	n=20	m=60
+ShCKIC`CKOg`G`COpCIG`GaCPCGPCKGaC	C20(1, 6, 10)	n=20	m=50
+ShCGKD@gI_t@T@i_igHT@DSCIgGIgKDSC	C20(1, 7, 9)	n=20	m=60
+ShCGKD@GK_h@H@c_hGHH@CcCHGGHGKCcC	C20(1, 7, 10)	n=20	m=50
+ShCGGE@OL?i@i@T?dOGi@AgCDOGDOKAgC	C20(1, 8, 10)	n=20	m=50
+SUWosXEGob@E@E_bGGp@ECCYGGuGGrCCW	C20(2, 3, 7)	n=20	m=60
+SUWooYEOpBAEaEPBCOoaEAGYCOuCOrAGW	C20(2, 3, 8)	n=20	m=60
+SUWooWE?sBGEGECB@?oGE?_Y@?u@?r?_W	C20(2, 3, 10)	n=20	m=50
+SQIURGqEOX?q?q?XOEU?qWBGoESoEQWBG	C20(2, 5, 6)	n=20	m=60
+SQIQPIQQPHAQaQPHCQSaQQHGcQScQQQHG	C20(2, 5, 8)	n=20	m=60
+SQGSQGaCSPGaGaCPPCQGaGaGPCSPCQGaG	C20(2, 6, 10)	n=20	m=50
+SQGOSJAWP`BAbAp`KWPbAEKGKWSKWQEKG	C20(2, 7, 8)	n=20	m=60
+SQGOSHAGS`HAHAc`HGPHACcGHGSHGQCcG	C20(2, 7, 10)	n=20	m=50
+SCrb`o[B_M?[?[?M?Bc?[o@r_Bb_B`o@o	C20(3, 4, 5)	n=20	m=60
+SCp`_oK`aESKSKIEA`_SK`OrA`bA```Oo	C20(3, 4, 9)	n=20	m=60
+SCp`_oK@cEGKGKCE@@_GK__r@@b@@`__o	C20(3, 4, 10)	n=20	m=50
+SCQadPSI_i@S@S_iGId@SSDQgIagI`SDO	C20(3, 5, 7)	n=20	m=60
+SCQa`OSaaISSSSIIAacSSPPQaaaaa`PPO	C20(3, 5, 9)	n=20	m=60
+SCO_cRCW`aBCbCpaKW`bCEKQKWaKW`EKO	C20(3, 7, 8)	n=20	m=60
+SCO_cPCgaaTCTCiaIg`TCDSQIgaIg`DSO	C20(3, 7, 9)	n=20	m=60
+SCO__QCOdAICiCTADO_iCAgQDOaDO`AgO	C20(3, 8, 10)	n=20	m=50
+SCO__OC_eA[C[CMAB__[C@oQB_aB_`@oO	C20(3, 9, 10)	n=20	m=50
+S?bFB_wF?[?w?w?[OFE?wwB`oF@oF?wB_	C20(4, 5, 6)	n=20	m=60
+S?bBD`WJ?k@W@W_kGJD@WsD`gJ@gJ?sD_	C20(4, 5, 7)	n=20	m=60
+S?`DA_gdASSgSgISQdASghQ`Qd@Qd?hQ_	C20(4, 6, 9)	n=20	m=60
+S?`@C`GHCcHGHGccHH@HGcc`HH@HH?cc_	C20(4, 7, 10)	n=20	m=50
+S?`@?_G`EC[G[GMCB`?[G`o`B`@B`?`o_	C20(4, 9, 10)	n=20	m=50
+S?AAD@OiAgTOTOigIiDTOTT?ii?ii?TT?	C20(5, 7, 9)	n=20	m=60
+S?AA@AOqBGUOuOZGEqCuORX?eq?eq?RX?	C20(5, 8, 9)	n=20	m=60
+S??CA?_cEO[_[_MORcA[_Hq?Rc?Rc?Hq?	C20(6, 9, 10)	n=20	m=50
+S???CB?wB_V?v?z_Mw@v?F[?Mw?Mw?F[?	C20(7, 8, 9)	n=20	m=60
+S???CB?WD_J?j?t_LW@j?Ek?LW?LW?Ek?	C20(7, 8, 10)	n=20	m=50
+S???C@?gE_\?\?m_Jg@\?Ds?Jg?Jg?Ds?	C20(7, 9, 10)	n=20	m=50
+S????A?oF?]?}?^?Fo?}?Bw?Fo?Fo?Bw?	C20(8, 9, 10)	n=20	m=50
+SlUilTTIgi`T@T_igIl@TSDUgIigIlSDS	C20(1, 3, 5, 7)	n=20	m=80
+SlUihSTaiIsTSTIIaakSTPPUaaiaalPPS	C20(1, 3, 5, 9)	n=20	m=80
+SlSgkTDgiatDTDiaighTDDSUIgiIglDSS	C20(1, 3, 7, 9)	n=20	m=80
+SlSggUDOlAiDiDTAdOgiDAgUDOiDOlAgS	C20(1, 3, 8, 10)	n=20	m=70
+ShEILDPiIgtPTPigiiLTPTTCiiGiiKTTC	C20(1, 5, 7, 9)	n=20	m=80
+SUWosZEWpbBEbEpbKWpbEEKYKWuKWrEKW	C20(2, 3, 7, 8)	n=20	m=80
+SCp`_oK`eE[K[KMEB`_[K`orB`bB```oo	C20(3, 4, 9, 10)	n=20	m=70
+SCQadPSiaiTSTSiiIidTSTTQiiaii`TTO	C20(3, 5, 7, 9)	n=20	m=80
+S???CB?wF_^?~?~_Nw@~?F{?Nw?Nw?F{?	C20(7, 8, 9, 10)	n=20	m=70
+ThCGGC@?G?_@?@??_?G?@??C??G??G??E??@	C21(1,)	n=21	m=21
+TQGOOGA?O@?A?A?@??O?A??G??O??S??H??A	C21(2,)	n=21	m=21
+TCO__OC?_A?C?C?A??_?C??O??c??a??O_?C	C21(3,)	n=21	m=21
+T?`@?_G@?C?G?G?C?@??G??a?@A?@@??_O?G	C21(4,)	n=21	m=21
+T?AA@?OA?G?O?O?G?A??O_@@?A@?A?_@?G?O	C21(5,)	n=21	m=21
+T??CA?_C?O?_?_?O?CC?_OA?_C?_C?OA?C?_	C21(6,)	n=21	m=21
+T????A?O@?A?A?`?GO@A?CG?GO?GO?CG?@A?	C21(8,)	n=21	m=21
+T??????_A?C?c?Q?C_?c?AO?C_?C_?AO??c?	C21(9,)	n=21	m=21
+T???????C?W?W?K?B??W?@_?B??B??@_??W?	C21(10,)	n=21	m=21
+TlSggSD?gA_D?D?A_?g?D??S??k??i??U_?D	C21(1, 3)	n=21	m=42
+ThdHGcH@GC_H?H?C_@G?H??e?@I?@H??eO?H	C21(1, 4)	n=21	m=42
+ThEIHCPAGG_P?P?G_AG?P_@D?AH?AG_@EG?P	C21(1, 5)	n=21	m=42
+ThCKIC`CGO_`?`?O_CK?`OAC_CG_CGOAEC?`	C21(1, 6)	n=21	m=42
+ThCGGE@OH?a@A@`?gOHA@CGCGOGGOGCGE@A@	C21(1, 8)	n=21	m=42
+ThCGGC@_I?c@c@Q?c_Gc@AOCC_GC_GAOE?c@	C21(1, 9)	n=21	m=42
+TUWooWE?oB?E?E?B??o?E??W??s??u??X_?E	C21(2, 3)	n=21	m=42
+TQIQPGQAOH?Q?Q?H?AO?Q_@H?AP?AS_@HG?Q	C21(2, 5)	n=21	m=42
+TQGSQGaCOP?a?a?P?CS?aOAG_CO_CSOAHC?a	C21(2, 6)	n=21	m=42
+TQGOOIAOP@AAAA`@GOPAACGGGOOGOSCGH@AA	C21(2, 8)	n=21	m=42
+TQGOOGA_Q@CAcAQ@C_OcAAOGC_OC_SAOH?cA	C21(2, 9)	n=21	m=42
+TQGOOGA?S@WAWAK@B?OWA@_GB?OB?S@_H?WA	C21(2, 10)	n=21	m=42
+TCp`_oK@_E?K?K?E?@_?K??q?@e?@b??oo?K	C21(3, 4)	n=21	m=42
+TCQa`OSA_I?S?S?I?A_?S_@P?Ad?Aa_@Og?S	C21(3, 5)	n=21	m=42
+TCO__QCO`AACAC`AGO`ACCGOGOcGOaCGO`AC	C21(3, 8)	n=21	m=42
+TCO__OC?cAWCWCKAB?_WC@_OB?cB?a@_O_WC	C21(3, 10)	n=21	m=42
+T?bB@_WB?K?W?W?K?B??W_@b?BB?B@_@_W?W	C21(4, 5)	n=21	m=42
+T?`DA_gD?S?g?g?S?DC?gOAa_DA_D@OA_S?g	C21(4, 6)	n=21	m=42
+T?`@?_G`ACCGcGQCC`?cGAOaC`AC`@AO_OcG	C21(4, 9)	n=21	m=42
+T?`@?_G@CCWGWGKCB@?WG@_aB@AB@@@__OWG	C21(4, 10)	n=21	m=42
+T?AEB?oE?W?o?o?W?EC?ooB@_E@_E?oB?K?o	C21(5, 6)	n=21	m=42
+T?AA@?OaAGCOcOQGCa?cOaP@Ca@Ca?aP?GcO	C21(5, 9)	n=21	m=42
+T??CAA_S@OA_A_`OGSDA_SI?gS?gS?SI?DA_	C21(6, 8)	n=21	m=42
+T??CA?_CCOW_W_KOBCCW_Pa?bC?bC?Pa?CW_	C21(6, 10)	n=21	m=42
+T????A?oB?E?e?r?Ko@e?EW?Ko?Ko?EW?@e?	C21(8, 9)	n=21	m=42
+T????A?OD?Y?Y?l?JO@Y?Dg?JO?JO?Dg?@Y?	C21(8, 10)	n=21	m=42
+T??????_E?[?{?]?F_?{?Bo?F_?F_?Bo??{?	C21(9, 10)	n=21	m=42
+TlUihSTAgI_T?T?I_Ag?T_@T?Al?Ai_@Ug?T	C21(1, 3, 5)	n=21	m=63
+TlSggUDOhAaDAD`AgOhADCGSGOkGOiCGU`AD	C21(1, 3, 8)	n=21	m=63
+ThdLIchDGS_h?h?S_DK?hOAe_DI_DHOAeS?h	C21(1, 4, 6)	n=21	m=63
+ThdHGcH`ICcHcHQCc`GcHAOeC`IC`HAOeOcH	C21(1, 4, 9)	n=21	m=63
+ThEIHCPaIGcPcPQGcaGcPaPDCaHCaGaPEGcP	C21(1, 5, 9)	n=21	m=63
+ThCKIE`SHOa`A``OgSLA`SICgSGgSGSIEDA`	C21(1, 6, 8)	n=21	m=63
+TUWooYEOpBAEAE`BGOpAECGWGOsGOuCGX`AE	C21(2, 3, 8)	n=21	m=63
+TUWooWE?sBWEWEKBB?oWE@_WB?sB?u@_X_WE	C21(2, 3, 10)	n=21	m=63
+TQIURGqEOX?q?q?X?ES?qoBH_EP_ESoBHK?q	C21(2, 5, 6)	n=21	m=63
+TQIQPGQaQHCQcQQHCaOcQaPHCaPCaSaPHGcQ	C21(2, 5, 9)	n=21	m=63
+TQGSQGaCSPWaWaKPBCSWaPaGbCObCSPaHCWa	C21(2, 6, 10)	n=21	m=63
+TQGOOIAoR@EAeAr@KoPeAEWGKoOKoSEWH@eA	C21(2, 8, 9)	n=21	m=63
+TCrb`o[B_M?[?[?M?B_?[_@r?Bf?Bb_@ow?[	C21(3, 4, 5)	n=21	m=63
+TCp`_oK@cEWKWKKEB@_WK@_qB@eB@b@_ooWK	C21(3, 4, 10)	n=21	m=63
+T?bFB_wF?[?w?w?[?FC?woBb_FB_F@oB_[?w	C21(4, 5, 6)	n=21	m=63
+T?`@?_G`EC[G{G]CF`?{GBoaF`AF`@Bo_O{G	C21(4, 9, 10)	n=21	m=63
+T??CAA_SDOY_Y_lOJSDY_Ti?jS?jS?Ti?DY_	C21(6, 8, 10)	n=21	m=63
+T????A?oF?]?}?~?No@}?Fw?No?No?Fw?@}?	C21(8, 9, 10)	n=21	m=63
+UhCGGC@?G?_@?@??_?G?@??C??G??G??C??@_??G	C22(1,)	n=22	m=22
+UQGOOGA?O@?A?A?@??O?A??G??O??O??I??AO??O	C22(2,)	n=22	m=22
+UCO__OC?_A?C?C?A??_?C??O??_??c??P??CG??_	C22(3,)	n=22	m=22
+U?`@?_G@?C?G?G?C?@??G??_?@C?@A??__?GC?@?	C22(4,)	n=22	m=22
+U?AA@?OA?G?O?O?G?A??O?@A?AA?A@?@?O?OA?A?	C22(5,)	n=22	m=22
+U??CA?_C?O?_?_?O?C??__A@?C@?C?_A?G?_@?C?	C22(6,)	n=22	m=22
+U???C@?G?_@?@??_?GC@?OC?_G?_G?OC?C@??_G?	C22(7,)	n=22	m=22
+U????A?O@?A?A?@?OOAA?GG?OO?OO?GG?AA??OO?	C22(8,)	n=22	m=22
+U??????_A?C?C?a?G_@C?CO?G_?G_?CO?@C??G_?	C22(9,)	n=22	m=22
+U???????C?G?g?S?D??g?A_?D??D??A_??g??D??	C22(10,)	n=22	m=22
+U?????????O?O?G?A??O?@??A??A??@???O??A??	C22(11,)	n=22	m=11
+UlSggSD?gA_D?D?A_?g?D??S??g??k??T??Dg??g	C22(1, 3)	n=22	m=44
+UhdHGcH@GC_H?H?C_@G?H??c?@K?@I??c_?Hc?@G	C22(1, 4)	n=22	m=44
+UhEIHCPAGG_P?P?G_AG?P?@E?AI?AH?@CO?Pa?AG	C22(1, 5)	n=22	m=44
+UhCKIC`CGO_`?`?O_CG?`_AD?CH?CG_ACG?``?CG	C22(1, 6)	n=22	m=44
+UhCGKD@GG_`@@@?__GK@@OCC_GG_GGOCCC@@__GG	C22(1, 7)	n=22	m=44
+UhCGGE@OH?a@A@@?oOIA@GGCOOGOOGGGCAA@_OOG	C22(1, 8)	n=22	m=44
+UhCGGC@_I?c@C@a?g_HC@COCG_GG_GCOC@C@_G_G	C22(1, 9)	n=22	m=44
+UhCGGC@?K?g@g@S?d?Gg@A_CD?GD?GA_C?g@_D?G	C22(1, 10)	n=22	m=44
+UhCGGC@?G?o@O@G?a?GO@@?CA?GA?G@?C?O@_A?G	C22(1, 11)	n=22	m=33
+UUWooWE?oB?E?E?B??o?E??W??o??s??Z??EW??o	C22(2, 3)	n=22	m=44
+UQIQPGQAOH?Q?Q?H?AO?Q?@I?AQ?AP?@IO?QQ?AO	C22(2, 5)	n=22	m=44
+UQGSQGaCOP?a?a?P?CO?a_AH?CP?CO_AIG?aP?CO	C22(2, 6)	n=22	m=44
+UQGOSHAGO`@A@A?`?GS@AOCG_GO_GOOCIC@AO_GO	C22(2, 7)	n=22	m=44
+UQGOOIAOP@AAAA@@OOQAAGGGOOOOOOGGIAAAOOOO	C22(2, 8)	n=22	m=44
+UQGOOGA_Q@CACAa@G_PCACOGG_OG_OCOI@CAOG_O	C22(2, 9)	n=22	m=44
+UQGOOGA?O@OAOAG@A?OOA@?GA?OA?O@?I?OAOA?O	C22(2, 11)	n=22	m=33
+UCp`_oK@_E?K?K?E?@_?K??o?@c?@e??p_?KK?@_	C22(3, 4)	n=22	m=44
+UCQa`OSA_I?S?S?I?A_?S?@Q?Aa?Ad?@PO?SI?A_	C22(3, 5)	n=22	m=44
+UCO_cPCG_a@C@C?a?Gc@COCO_G__GcOCPC@CG_G_	C22(3, 7)	n=22	m=44
+UCO__QCO`AACAC@AOOaACGGOOO_OOcGGPAACGOO_	C22(3, 8)	n=22	m=44
+UCO__OC_aACCCCaAG_`CCCOOG__G_cCOP@CCGG__	C22(3, 9)	n=22	m=44
+UCO__OC?cAGCgCSAD?_gCA_OD?_D?cA_P?gCGD?_	C22(3, 10)	n=22	m=44
+UCO__OC?_AOCOCGAA?_OC@?OA?_A?c@?P?OCGA?_	C22(3, 11)	n=22	m=33
+U?bB@_WB?K?W?W?K?B??W?@a?BE?BB?@_o?WE?B?	C22(4, 5)	n=22	m=44
+U?`DA_gD?S?g?g?S?D??g_A`?DD?DA_A_g?gD?D?	C22(4, 6)	n=22	m=44
+U?`@C`GH?c@G@G?c?HC@GOC__HC_HAOC_c@GC_H?	C22(4, 7)	n=22	m=44
+U?`@?_G@CCGGgGSCD@?gGA__D@CD@AA___gGCD@?	C22(4, 10)	n=22	m=44
+U?`@?_G@?COGOGGCA@?OG@?_A@CA@A@?__OGCA@?	C22(4, 11)	n=22	m=33
+U?AEB?oE?W?o?o?W?E??o_BB?EB?E@_B?W?oB?E?	C22(5, 6)	n=22	m=44
+U?AAD@OI?g@O@O?g?IC@OODA_IA_I@OD?S@OA_I?	C22(5, 7)	n=22	m=44
+U?AA@AOQ@GAOAO@GOQAAOGHAOQAOQ@GH?QAOAOQ?	C22(5, 8)	n=22	m=44
+U?AA@?OaAGCOCOaGGa@COCPAGaAGa@CP?PCOAGa?	C22(5, 9)	n=22	m=44
+U?AA@?OA?GOOOOGGAA?OO@@AAAAAA@@@?OOOAAA?	C22(5, 11)	n=22	m=33
+U??CE@_K?o@_@_?o?KC@_oE@_K@_K?oE?K@_@_K?	C22(6, 7)	n=22	m=44
+U??CA?_cAOC_C_aOGc@C_cQ@Gc@Gc?cQ?HC_@Gc?	C22(6, 9)	n=22	m=44
+U??CA?_C?OO_O_GOAC?O_`A@AC@AC?`A?GO_@AC?	C22(6, 11)	n=22	m=33
+U???C@?gA_D?D?a_GgDD?SS?gg?gg?SS?DD??gg?	C22(7, 9)	n=22	m=44
+U???C@?GC_H?h?S_DGCh?Qc?dG?dG?Qc?Ch??dG?	C22(7, 10)	n=22	m=44
+U???C@?G?_P?P?G_AGCP?PC?aG?aG?PC?CP??aG?	C22(7, 11)	n=22	m=33
+U????A?oB?E?E?b?WoBE?KW?Wo?Wo?KW?BE??Wo?	C22(8, 9)	n=22	m=44
+U????A?OD?I?i?T?TOAi?Ig?TO?TO?Ig?Ai??TO?	C22(8, 10)	n=22	m=44
+U????A?O@?Q?Q?H?QOAQ?HG?QO?QO?HG?AQ??QO?	C22(8, 11)	n=22	m=33
+U??????_E?K?k?u?L_@k?Eo?L_?L_?Eo?@k??L_?	C22(9, 10)	n=22	m=44
+U??????_A?S?S?i?I_@S?DO?I_?I_?DO?@S??I_?	C22(9, 11)	n=22	m=33
+U???????C?W?w?[?F??w?B_?F??F??B_??w??F??	C22(10, 11)	n=22	m=33
+UlUihSTAgI_T?T?I_Ag?T?@U?Ai?Al?@TO?Ti?Ag	C22(1, 3, 5)	n=22	m=66
+UlSgkTDGga`D@D?a_Gk@DOCS_Gg_GkOCTC@Dg_Gg	C22(1, 3, 7)	n=22	m=66
+UlSggUDOhAaDAD@AoOiADGGSOOgOOkGGTAADgOOg	C22(1, 3, 8)	n=22	m=66
+UlSggSD_iAcDCDaAg_hCDCOSG_gG_kCOT@CDgG_g	C22(1, 3, 9)	n=22	m=66
+UlSggSD?kAgDgDSAd?ggDA_SD?gD?kA_T?gDgD?g	C22(1, 3, 10)	n=22	m=66
+UlSggSD?gAoDODGAa?gOD@?SA?gA?k@?T?ODgA?g	C22(1, 3, 11)	n=22	m=55
+UhdLIchDGS_h?h?S_DG?h_Ad?DL?DI_Acg?hd?DG	C22(1, 4, 6)	n=22	m=66
+UhdHKdHHGc`H@H?c_HK@HOCc_HK_HIOCcc@Hc_HG	C22(1, 4, 7)	n=22	m=66
+UhdHGcH@KCgHgHSCd@GgHA_cD@KD@IA_c_gHcD@G	C22(1, 4, 10)	n=22	m=66
+UhdHGcH@GCoHOHGCa@GOH@?cA@KA@I@?c_OHcA@G	C22(1, 4, 11)	n=22	m=55
+UhEILDPIGg`P@P?g_IK@PODE_II_IHODCS@Pa_IG	C22(1, 5, 7)	n=22	m=66
+UhEIHEPQHGaPAP@GoQIAPGHEOQIOQHGHCQAPaOQG	C22(1, 5, 8)	n=22	m=66
+UhEIHCPaIGcPCPaGgaHCPCPEGaIGaHCPCPCPaGaG	C22(1, 5, 9)	n=22	m=66
+UhEIHCPAGGoPOPGGaAGOP@@EAAIAAH@@COOPaAAG	C22(1, 5, 11)	n=22	m=55
+UhCKIC`cIOc`C`aOgcHC`cQDGcHGcGcQCHC``GcG	C22(1, 6, 9)	n=22	m=66
+UhCKIC`CGOo`O`GOaCGO``ADACHACG`ACGO``ACG	C22(1, 6, 11)	n=22	m=55
+UhCGKD@gI_d@D@a_ggLD@SSCggGggGSSCDD@_ggG	C22(1, 7, 9)	n=22	m=66
+UhCGKD@GK_h@h@S_dGKh@QcCdGGdGGQcCCh@_dGG	C22(1, 7, 10)	n=22	m=66
+UhCGKD@GG_p@P@G_aGKP@PCCaGGaGGPCCCP@_aGG	C22(1, 7, 11)	n=22	m=55
+UhCGGE@OL?i@i@T?tOIi@IgCTOGTOGIgCAi@_TOG	C22(1, 8, 10)	n=22	m=66
+UhCGGE@OH?q@Q@H?qOIQ@HGCQOGQOGHGCAQ@_QOG	C22(1, 8, 11)	n=22	m=55
+UhCGGC@_I?s@S@i?i_HS@DOCI_GI_GDOC@S@_I_G	C22(1, 9, 11)	n=22	m=55
+UUWosXEGob@E@E?b?Gs@EOCW_Go_GsOCZC@EW_Go	C22(2, 3, 7)	n=22	m=66
+UUWooYEOpBAEAE@BOOqAEGGWOOoOOsGGZAAEWOOo	C22(2, 3, 8)	n=22	m=66
+UUWooWE_qBCECEaBG_pCECOWG_oG_sCOZ@CEWG_o	C22(2, 3, 9)	n=22	m=66
+UUWooWE?oBOEOEGBA?oOE@?WA?oA?s@?Z?OEWA?o	C22(2, 3, 11)	n=22	m=55
+UQIURGqEOX?q?q?X?EO?q_BJ?ER?EP_BIW?qR?EO	C22(2, 5, 6)	n=22	m=66
+UQIQPIQQPHAQAQ@HOQQAQGHIOQQOQPGHIQAQQOQO	C22(2, 5, 8)	n=22	m=66
+UQIQPGQaQHCQCQaHGaPCQCPIGaQGaPCPIPCQQGaO	C22(2, 5, 9)	n=22	m=66
+UQIQPGQAOHOQOQGHAAOOQ@@IAAQAAP@@IOOQQAAO	C22(2, 5, 11)	n=22	m=55
+UQGSUHaKOp@a@a?p?KS@aoEH_KP_KOoEIK@aP_KO	C22(2, 6, 7)	n=22	m=66
+UQGSQGacQPCaCaaPGcPCacQHGcPGcOcQIHCaPGcO	C22(2, 6, 9)	n=22	m=66
+UQGSQGaCOPOaOaGPACOOa`AHACPACO`AIGOaPACO	C22(2, 6, 11)	n=22	m=55
+UQGOSHAGO`PAPAG`AGSPAPCGaGOaGOPCICPAOaGO	C22(2, 7, 11)	n=22	m=55
+UQGOOIAoR@EAEAb@WoREAKWGWoOWoOKWIBEAOWoO	C22(2, 8, 9)	n=22	m=66
+UQGOOIAOP@QAQAH@QOQQAHGGQOOQOOHGIAQAOQOO	C22(2, 8, 11)	n=22	m=55
+UCrb`o[B_M?[?[?M?B_?[?@q?Be?Bf?@po?[M?B_	C22(3, 4, 5)	n=22	m=66
+UCp`_oK@cEGKgKSED@_gKA_oD@cD@eA_p_gKKD@_	C22(3, 4, 10)	n=22	m=66
+UCp`_oK@_EOKOKGEA@_OK@?oA@cA@e@?p_OKKA@_	C22(3, 4, 11)	n=22	m=55
+UCQadPSI_i@S@S?i?Ic@SODQ_Ia_IdODPS@SI_I_	C22(3, 5, 7)	n=22	m=66
+UCQa`OSaaICSCSaIGa`CSCPQGaaGadCPPPCSIGa_	C22(3, 5, 9)	n=22	m=66
+UCQa`OSA_IOSOSGIAA_OS@@QAAaAAd@@POOSIAA_	C22(3, 5, 11)	n=22	m=55
+UCO_cPCgaaDCDCaaGgdDCSSOgg_ggcSSPDDCGgg_	C22(3, 7, 9)	n=22	m=66
+UCO_cPCG_aPCPCGaAGcPCPCOaG_aGcPCPCPCGaG_	C22(3, 7, 11)	n=22	m=55
+UCO__QCobAECECbAWobECKWOWo_WocKWPBECGWo_	C22(3, 8, 9)	n=22	m=66
+UCO__QCOdAICiCTATOaiCIgOTO_TOcIgPAiCGTO_	C22(3, 8, 10)	n=22	m=66
+UCO__OC_aASCSCiAI_`SCDOOI__I_cDOP@SCGI__	C22(3, 9, 11)	n=22	m=55
+UCO__OC?cAWCwC[AF?_wCB_OF?_F?cB_P?wCGF?_	C22(3, 10, 11)	n=22	m=55
+U?bFB_wF?[?w?w?[?F??w_Bb?FF?FB_B_w?wF?F?	C22(4, 5, 6)	n=22	m=66
+U?bBD`WJ?k@W@W?k?JC@WODa_JE_JBOD_s@WE_J?	C22(4, 5, 7)	n=22	m=66
+U?bB@_WB?KOWOWGKAB?OW@@aABEABB@@_oOWEAB?	C22(4, 5, 11)	n=22	m=55
+U?`DE`gL?s@g@g?s?LC@goE`_LD_LAoE_k@gD_L?	C22(4, 6, 7)	n=22	m=66
+U?`DA_gD?SOgOgGSAD?Og`A`ADDADA`A_gOgDAD?	C22(4, 6, 11)	n=22	m=55
+U?`@C`GHCcHGhGScDHChGQc_dHCdHAQc_chGCdH?	C22(4, 7, 10)	n=22	m=66
+U?`@?_G@CCWGwG[CF@?wGB__F@CF@AB___wGCF@?	C22(4, 10, 11)	n=22	m=55
+U?AEF@oM?w@o@o?w?MC@ooFB_MB_M@oF?[@oB_M?	C22(5, 6, 7)	n=22	m=66
+U?AEB?oeAWCoCoaWGe@CocRBGeBGe@cR?XCoBGe?	C22(5, 6, 9)	n=22	m=66
+U?AAD@OiAgDODOagGiDDOSTAgiAgi@ST?TDOAgi?	C22(5, 7, 9)	n=22	m=66
+U?AAD@OI?gPOPOGgAICPOPDAaIAaI@PD?SPOAaI?	C22(5, 7, 11)	n=22	m=55
+U?AA@AOQ@GQOQOHGQQAQOHHAQQAQQ@HH?QQOAQQ?	C22(5, 8, 11)	n=22	m=55
+U?AA@?OaAGSOSOiGIa@SODPAIaAIa@DP?PSOAIa?	C22(5, 9, 11)	n=22	m=55
+U??CE@_K?oP_P_GoAKCP_pE@aK@aK?pE?KP_@aK?	C22(6, 7, 11)	n=22	m=55
+U??CA?_cAOS_S_iOIc@S_dQ@Ic@Ic?dQ?HS_@Ic?	C22(6, 9, 11)	n=22	m=55
+U???C@?gE_L?l?u_LgDl?Us?lg?lg?Us?Dl??lg?	C22(7, 9, 10)	n=22	m=66
+U???C@?gA_T?T?i_IgDT?TS?ig?ig?TS?DT??ig?	C22(7, 9, 11)	n=22	m=55
+U???C@?GC_X?x?[_FGCx?Rc?fG?fG?Rc?Cx??fG?	C22(7, 10, 11)	n=22	m=55
+U????A?oF?M?m?v?\oBm?Mw?\o?\o?Mw?Bm??\o?	C22(8, 9, 10)	n=22	m=66
+U????A?oB?U?U?j?YoBU?LW?Yo?Yo?LW?BU??Yo?	C22(8, 9, 11)	n=22	m=55
+U????A?OD?Y?y?\?VOAy?Jg?VO?VO?Jg?Ay??VO?	C22(8, 10, 11)	n=22	m=55
+U??????_E?[?{?}?N_@{?Fo?N_?N_?Fo?@{??N_?	C22(9, 10, 11)	n=22	m=55
+UlUilTTIgi`T@T?i_Ik@TODU_Ii_IlODTS@Ti_Ig	C22(1, 3, 5, 7)	n=22	m=88
+UlUihSTaiIcTCTaIgahCTCPUGaiGalCPTPCTiGag	C22(1, 3, 5, 9)	n=22	m=88
+UlUihSTAgIoTOTGIaAgOT@@UAAiAAl@@TOOTiAAg	C22(1, 3, 5, 11)	n=22	m=77
+UlSgkTDgiadDDDaagglDDSSSgggggkSSTDDDgggg	C22(1, 3, 7, 9)	n=22	m=88
+UlSgkTDGgapDPDGaaGkPDPCSaGgaGkPCTCPDgaGg	C22(1, 3, 7, 11)	n=22	m=77
+UlSggUDOlAiDiDTAtOiiDIgSTOgTOkIgTAiDgTOg	C22(1, 3, 8, 10)	n=22	m=88
+UlSggSD_iAsDSDiAi_hSDDOSI_gI_kDOT@SDgI_g	C22(1, 3, 9, 11)	n=22	m=77
+UhdLIchDGSohOhGSaDGOh`AdADLADI`AcgOhdADG	C22(1, 4, 6, 11)	n=22	m=77
+UhdHKdHHKchHhHScdHKhHQccdHKdHIQccchHcdHG	C22(1, 4, 7, 10)	n=22	m=88
+UhEILDPiIgdPDPaggiLDPSTEgiIgiHSTCTDPagiG	C22(1, 5, 7, 9)	n=22	m=88
+UhEILDPIGgpPPPGgaIKPPPDEaIIaIHPDCSPPaaIG	C22(1, 5, 7, 11)	n=22	m=77
+UhEIHCPaIGsPSPiGiaHSPDPEIaIIaHDPCPSPaIaG	C22(1, 5, 9, 11)	n=22	m=77
+UhCKIC`cIOs`S`iOicHS`dQDIcHIcGdQCHS``IcG	C22(1, 6, 9, 11)	n=22	m=77
+UhCGKD@gI_t@T@i_igLT@TSCigGigGTSCDT@_igG	C22(1, 7, 9, 11)	n=22	m=77
+UUWosXEGobPEPEGbAGsPEPCWaGoaGsPCZCPEWaGo	C22(2, 3, 7, 11)	n=22	m=77
+UUWooYEorBEEEEbBWorEEKWWWooWosKWZBEEWWoo	C22(2, 3, 8, 9)	n=22	m=88
+UQIURGqeQXCqCqaXGePCqcRJGeRGePcRIXCqRGeO	C22(2, 5, 6, 9)	n=22	m=88
+UQIQPIQQPHQQQQHHQQQQQHHIQQQQQPHHIQQQQQQO	C22(2, 5, 8, 11)	n=22	m=77
+UQGSUHaKOpPaPaGpAKSPapEHaKPaKOpEIKPaPaKO	C22(2, 6, 7, 11)	n=22	m=77
+UCrb`o[B_MO[O[GMAB_O[@@qABeABf@@poO[MAB_	C22(3, 4, 5, 11)	n=22	m=77
+UCp`_oK@cEWKwK[EF@_wKB_oF@cF@eB_p_wKKF@_	C22(3, 4, 10, 11)	n=22	m=77
+UCQadPSiaiDSDSaiGidDSSTQgiagidSTPTDSIgi_	C22(3, 5, 7, 9)	n=22	m=88
+UCQadPSI_iPSPSGiAIcPSPDQaIaaIdPDPSPSIaI_	C22(3, 5, 7, 11)	n=22	m=77
+UCQa`OSaaISSSSiIIa`SSDPQIaaIadDPPPSSIIa_	C22(3, 5, 9, 11)	n=22	m=77
+UCO_cPCgaaTCTCiaIgdTCTSOig_igcTSPDTCGig_	C22(3, 7, 9, 11)	n=22	m=77
+U?bFF`wN?{@w@w?{?NC@woFb_NF_NBoF_{@wF_N?	C22(4, 5, 6, 7)	n=22	m=88
+U?AAD@OiAgTOTOigIiDTOTTAiiAii@TT?TTOAii?	C22(5, 7, 9, 11)	n=22	m=77
+U???C@?gE_\?|?}_NgD|?Vs?ng?ng?Vs?D|??ng?	C22(7, 9, 10, 11)	n=22	m=77
+U????A?oF?]?}?~?^oB}?Nw?^o?^o?Nw?B}??^o?	C22(8, 9, 10, 11)	n=22	m=77
+IQGOOIAOO	Cay(Z5xZ2,S=(0,),T=())	n=10	m=10
+IrGWOMAOW	Cay(Z5xZ2,S=(0,),T=(1,))	n=10	m=15
+IKC_GP@__	Cay(Z5xZ2,S=(1,),T=())	n=10	m=10
+IlCgGT@_g	Cay(Z5xZ2,S=(1,),T=(1,))	n=10	m=15
+I]KoWZBoo	Cay(Z5xZ2,S=(0, 1),T=())	n=10	m=20
+N@`?G_G?GC?GO@GCO@?	Cay(Z5xZ3,S=(1,),T=())	n=15	m=15
+NAI?OGO?O@?OGA_@GA?	Cay(Z5xZ3,S=(2,),T=())	n=15	m=15
+NDp_goK?gE?KoDWES@_	Cay(Z5xZ3,S=(0, 1),T=())	n=15	m=30
+NEY_oWS?oB?SgEoBKA_	Cay(Z5xZ3,S=(0, 2),T=())	n=15	m=30
+NBj?WgW?WD?WWBgDWB?	Cay(Z5xZ3,S=(1, 2),T=())	n=15	m=30
+NFz_ww[?wF?[wFwF[B_	Cay(Z5xZ3,S=(0, 1, 2),T=())	n=15	m=45
+Sl`HGsG@GC_L?G?C_@G?L_?`?@H?@G_?s	Cay(Z5xZ4,S=(0,),T=(1, 3))	n=20	m=40
+SQ`@OgG@?D?I?G?C?@O?I_?`?@@?@O_?g	Cay(Z5xZ4,S=(0,),T=(2,))	n=20	m=30
+S?EA@?@A?G?O?@?G?A??OO?C_A?_AC?@?	Cay(Z5xZ4,S=(1,),T=())	n=20	m=20
+SlEIHS@AGG_T?@?G_AG?TO?C_AG_AK?@S	Cay(Z5xZ4,S=(1,),T=(1, 3))	n=20	m=40
+SQEAPG@A?H?Q?@?G?AO?QO?C_A?_AS?@G	Cay(Z5xZ4,S=(1,),T=(2,))	n=20	m=30
+S?GSA?A?OO?_?A?@?C??_G?GO?S?CA?A?	Cay(Z5xZ4,S=(2,),T=())	n=20	m=20
+SlG[ISA?WO_d?A?@_CG?dG?GO?[?CI?AS	Cay(Z5xZ4,S=(2,),T=(1, 3))	n=20	m=40
+SQGSQGA?OP?a?A?@?CO?aG?GO?S?CQ?AG	Cay(Z5xZ4,S=(2,),T=(2,))	n=20	m=30
+S?O_c?C?_A@??C?A??_@?C?Q??a??`?C?	Cay(Z5xZ4,S=(3,),T=())	n=20	m=20
+SlOgkSC?gA`D?C?A_?g@DC?Q??i??h?CS	Cay(Z5xZ4,S=(3,),T=(1, 3))	n=20	m=40
+SQO_sGC?_B@A?C?A??o@AC?Q??a??p?CG	Cay(Z5xZ4,S=(3,),T=(2,))	n=20	m=30
+S?fB@_HB?K?W?H?K?B??Wo?d_B@_BC_@_	Cay(Z5xZ4,S=(0, 1),T=())	n=20	m=40
+SQfBPgHB?L?Y?H?K?BO?Yo?d_B@_BS_@g	Cay(Z5xZ4,S=(0, 1),T=(2,))	n=20	m=50
+S?hTA_I@OS?g?I?D?D??gg?hO@T?DA_A_	Cay(Z5xZ4,S=(0, 2),T=())	n=20	m=40
+Slh\IsI@WS_l?I?D_DG?lg?hO@\?DI_As	Cay(Z5xZ4,S=(0, 2),T=(1, 3))	n=20	m=60
+S?p`c_K@_E@G?K?E?@_@Gc?r?@b?@`_C_	Cay(Z5xZ4,S=(0, 3),T=())	n=20	m=40
+SQp`sgK@_F@I?K?E?@o@Ic?r?@b?@p_Cg	Cay(Z5xZ4,S=(0, 3),T=(2,))	n=20	m=50
+S?MUB?BAOW?o?B?H?E??oW?KoAS_EE?B?	Cay(Z5xZ4,S=(1, 2),T=())	n=20	m=40
+SQMURGBAOX?q?B?H?EO?qW?KoAS_EU?BG	Cay(Z5xZ4,S=(1, 2),T=(2,))	n=20	m=50
+S?Uad?DA_I@O?D?I?A_@OS?U_Aa_Ad?D?	Cay(Z5xZ4,S=(1, 3),T=())	n=20	m=40
+SlUilSDAgI`T?D?I_Ag@TS?U_Ai_Al?DS	Cay(Z5xZ4,S=(1, 3),T=(1, 3))	n=20	m=60
+S?Wse?E?oQ@_?E?B?C_@_K?YO?u?Cb?E?	Cay(Z5xZ4,S=(2, 3),T=())	n=20	m=40
+SQWsuGE?oR@a?E?B?Co@aK?YO?u?Cr?EG	Cay(Z5xZ4,S=(2, 3),T=(2,))	n=20	m=50
+S?nVB_JBO[?w?J?L?F??ww?loBT_FE_B_	Cay(Z5xZ4,S=(0, 1, 2),T=())	n=20	m=60
+S?vbd_LB_M@W?L?M?B_@Ws?v_Bb_Bd_D_	Cay(Z5xZ4,S=(0, 1, 3),T=())	n=20	m=60
+S?xte_M@oU@g?M?F?D_@gk?zO@v?Db_E_	Cay(Z5xZ4,S=(0, 2, 3),T=())	n=20	m=60
+S?]uf?FAoY@o?F?J?E_@o[?]oAu_Ef?F?	Cay(Z5xZ4,S=(1, 2, 3),T=())	n=20	m=60
+S?~vf_NBo]@w?N?N?F_@w{?~oBv_Ff_F_	Cay(Z5xZ4,S=(0, 1, 2, 3),T=())	n=20	m=80

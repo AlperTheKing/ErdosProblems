@@ -1,0 +1,10 @@
+VIOLATION K??E@_qi?]Ia n=12 e=18 bip=4 5bip-e=2 5bip+4e-N^2=-52
+VIOLATION K?AAD?WNBHCs n=12 e=18 bip=4 5bip-e=2 5bip+4e-N^2=-52
+VIOLATION K??EDbGIaYAe n=12 e=19 bip=4 5bip-e=1 5bip+4e-N^2=-48
+VIOLATION K?AA@agRPw@w n=12 e=19 bip=4 5bip-e=1 5bip+4e-N^2=-48
+VIOLATION K?AA@b@ZDcPW n=12 e=19 bip=4 5bip-e=1 5bip+4e-N^2=-48
+VIOLATION K?AA@bGNAY@w n=12 e=19 bip=4 5bip-e=1 5bip+4e-N^2=-48
+VIOLATION K?AAD?WXHLN_ n=12 e=19 bip=4 5bip-e=1 5bip+4e-N^2=-48
+VIOLATION K?ABA`ocdQBo n=12 e=19 bip=4 5bip-e=1 5bip+4e-N^2=-48
+VIOLATION K?ABAaIs?{TG n=12 e=19 bip=4 5bip-e=1 5bip+4e-N^2=-48
+VIOLATION K?`D@POd@wAw n=12 e=19 bip=4 5bip-e=1 5bip+4e-N^2=-48

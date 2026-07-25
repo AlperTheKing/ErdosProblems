@@ -1,0 +1,10 @@
+LP-GAP  g6=K??E@_qi?]Ia  N=12 m=18 bip=4  |E|/5=3.6000
+LP-GAP  g6=K??EDbGIaYAe  N=12 m=19 bip=4  |E|/5=3.8000
+LP-GAP  g6=K?AAD?WNBHCs  N=12 m=18 bip=4  |E|/5=3.6000
+LP-GAP  g6=K?AAD?WXHLN_  N=12 m=19 bip=4  |E|/5=3.8000
+LP-GAP  g6=K?AA@bGNAY@w  N=12 m=19 bip=4  |E|/5=3.8000
+LP-GAP  g6=K?AA@agRPw@w  N=12 m=19 bip=4  |E|/5=3.8000
+LP-GAP  g6=K?AA@b@ZDcPW  N=12 m=19 bip=4  |E|/5=3.8000
+LP-GAP  g6=K?ABA`ocdQBo  N=12 m=19 bip=4  |E|/5=3.8000
+LP-GAP  g6=K?ABAaIs?{TG  N=12 m=19 bip=4  |E|/5=3.8000
+LP-GAP  g6=K?`D@POd@wAw  N=12 m=19 bip=4  |E|/5=3.8000
