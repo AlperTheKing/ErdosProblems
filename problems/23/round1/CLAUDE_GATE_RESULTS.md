@@ -569,6 +569,45 @@ the crossing star rather than a single one.
 
 ---
 
+## 3j. R1-C12 — local switching alone CANNOT certify the bound (obstruction, exact)
+
+This gates F2's witness family and, importantly, it bounds my own lemma of section 3i.
+
+**The witness.** `W_b` = the blow-up of the path `P4` with part sizes `(b+1, b, b, b+1)`, together
+with the bipartition `A = part1 u part4`, `B = part2 u part3`. Only the edges between parts 2 and 3
+are monochromatic, so `|M| = b^2` while `N = 4b+2`. `W_b` is bipartite (`P4` is), so `bip(W_b) = 0`.
+
+**Exact table** (`claude_gate_localwitness.py`; `bip` by exhaustive maximum cut, the threshold by
+exhaustive search over all switching sets of each size):
+
+| b | N | \|E\| | \|M\| | N²/25 | 25\|M\| > N² | bip(W_b) | least \|S\| with σ(S) < 0 | as a fraction of N |
+|---|---|---|---|---|---|---|---|---|
+| 2 | 10 | 16 | 4 | 4.00 | no | 0 | 4 | 0.400 |
+| 3 | 14 | 33 | 9 | 7.84 | **yes** | 0 | 5 | 0.357 |
+| 4 | 18 | 56 | 16 | 12.96 | **yes** | 0 | 5 | 0.278 |
+| 5 | 22 | 85 | 25 | 19.36 | **yes** | 0 | 6 | 0.273 |
+| 6 | 26 | 120 | 36 | 27.04 | **yes** | — | 7 | 0.269 |
+
+**What it shows.** From `b = 3` on, this cut carries strictly more than `N^2/25` monochromatic
+edges, yet it is stable under every switching set of size below roughly `0.27 N`, and the true
+`bip` is `0`. So a cut can look locally optimal to any bounded-size switching test while sitting far
+above the conjectured bound: **local switch conditions do not force `|M| <= N^2/25`, and they do not
+even separate this cut from a maximum one until the switching set is a constant fraction of `N`.**
+
+**This bounds my own R1-C11.** The general switch-star inequality uses switching sets
+`{v} u T` with `T` inside the crossing star, so of size at most `1 + d_B(v)`. On any graph where
+that stays below the threshold, the entire family — every subset of every crossing star — is
+satisfied by a cut with `|M| > N^2/25`. Therefore **no aggregation of switch-star inequalities alone
+can certify the conjecture.** R1-C11 remains valuable as local *structure* (it forces the cut-tight
+vertices to induce a matching with both ends at `sigma = 1`), but it is **BLOCKED as a route to the
+bound**, and so is every other purely local switching family.
+
+Blocking statement, verbatim: *no family of switching inequalities whose sets have size below a
+fixed fraction of N can imply |M| <= N^2/25, because W_b satisfies all of them at a cut with
+|M| = b^2 > (4b+2)^2/25.*
+
+---
+
 ## 4. Blocked-route ledger after these results
 
 | route | status | blocking lemma / falsifier |
