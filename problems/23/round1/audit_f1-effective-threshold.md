@@ -153,7 +153,7 @@ What the blow-up argument actually yields is the window in the invariant `ρ(G) 
 `e ≥ 0.3197·binom(14,2) = 29.09`, i.e. `e ≥ 30`. The justified argument only excludes
 `e ≥ 0.3197·14²/2 = 31.34`, i.e. `e ≥ 32`. My exhaustive `N = 14` scan finds **289 maximal
 triangle-free graphs with `e ∈ {30, 31}`** (81 with `e = 30`, 208 with `e = 31`, e.g.
-`M?`DAboUdIF_Bo?N_` with `e = 31`, `bip = 6`) which Corollary 5.2 as written declares
+`` M?`DAboUdIF_Bo?N_ `` with `e = 31`, `bip = 6`) which Corollary 5.2 as written declares
 counterexample-free with no justification.
 
 Downstream: Theorem 14(ii) `δ ≤ 3N/8 = 0.375N` is superseded by the corrected (iii), which gives
@@ -239,15 +239,18 @@ disconnected ones and ones with isolated vertices), not only the connected ones 
   467 871 369 graphs = A006785(14), zero non-triangle-free, and found exactly one graph with
   `bip = 7`; `bip` distribution `0:7, 1:25, 2:79, 3:219, 4:417, 5:411, 6:115, 7:1`).
   F1.md's warning about a truncated early run is well taken — my own first `N = 15` attempt
-  truncated the same way (14 090 791 935 of 14 232 552 452 graphs); I re-ran it with per-shard
-  `geng` checksums.
+  truncated the same way (14 090 791 935 of 14 232 552 452 graphs, 4 829 maximal); I re-ran it in
+  128 shards with per-shard `geng >Z` checksums: **all 128 shards matched exactly**, total
+  `14 232 552 452 = A006785(15)`, 0 non-triangle-free, 5 036 maximal, `a(15) = 9` with a unique
+  extremal, `bip` distribution `0:7, 1:31, 2:109, 3:388, 4:971, 5:1665, 6:1558, 7:304, 8:2, 9:1`
+  — identical to `f1_maximal15_bip.txt`.
 * `N = 12` extremals `K?ABBBwerwBw` (25 edges, `χ = 3`) and `K?BD@g]Qvo^?` (25 edges, `χ = 4`),
   neither `C5`-colourable — **CONFIRMED**.
 * `N = 13` extremals: `L??FFB_~?~^_Fw` (33 edges, `= C5[3,2,3,2,3]`, `C5`-colourable),
-  `L?`DAboU`w@{hS` (28 edges), `L?`DE`gl@YJODg` (26 edges, 4-regular, `α = 4`, `= C13(1,5)`) —
+  `` L?`DAboU`w@{hS `` (28 edges), `` L?`DE`gl@YJODg `` (26 edges, 4-regular, `α = 4`, `= C13(1,5)`) —
   **CONFIRMED**.
 * `N = 11` extremals: 4 of them, including the Grötzsch graph `J?BD@g]Qvo?` (20 edges, `χ = 4`) and
-  `And(4) = C11(1,4)` `J?bFF`wN?{?` (22 edges, 4-regular) — **CONFIRMED**.
+  `And(4) = C11(1,4)` `` J?bFF`wN?{? `` (22 edges, 4-regular) — **CONFIRMED**.
 * All 5 036 graphs in `f1_maximal15_bip.txt` re-decoded, re-tested for triangle-freeness and
   maximality, and their `e` and `bip` recomputed by my own code: **0 mismatches** on all 5 036 rows.
 
@@ -257,7 +260,7 @@ disconnected ones and ones with isolated vertices), not only the connected ones 
 F1.md Theorem 12 table: "`M?AE@bH{AYN_LgBs?` (32 edges, `α = 5`, `χ = 3`)".
 Brute-force over all `3^{13}` colourings with vertex 0 fixed (`aud_chi.py`) returns
 **not 3-colourable**. Consistent with F1.md's own remark that this graph is the 13-vertex
-28-edge graph `L?`DAboU`w@{hS` with one vertex doubled — that graph is also not 3-colourable
+28-edge graph `` L?`DAboU`w@{hS `` with one vertex doubled — that graph is also not 3-colourable
 (verified), and vertex duplication preserves `χ`. (`e` and `α = 5` do reproduce; the twin-class
 profile is `[2,1,1,1,1,1,1,1,1,1,1,1,1]`, confirming the "one vertex doubled" description.)
 Note this error runs *against* F1.md's own narrative — the correct `χ = 4` strengthens its
@@ -331,7 +334,10 @@ aud_bip2.cpp     own graph6 decoder + own triangle-free test + Gray-code exact m
   N=5..12  ALL triangle-free graphs scanned  -> a = 1,1,1,2,2,4,4,5
   N=13     20 797 002 read, 392 maximal      -> a(13)=6
   N=14     467 871 369 read (=A006785(14)), 1 274 maximal, 32-way res split -> a(14)=7, unique
-  N=15     5 036 maximal (their file re-verified row-by-row) -> a(15)=9, unique = C5[3,3,3,3,3]
+  N=15     128 shards, each checksummed against geng's own ">Z n graphs generated";
+           14 232 552 452 read (=A006785(15)), 0 mismatches, 5 036 maximal
+           -> a(15)=9, unique extremal = C5[3,3,3,3,3]; their f1_maximal15_bip.txt
+              also re-verified row-by-row (5 036/5 036 exact agreement on e and bip)
 aud_bounds.py    exact Fraction re-derivation of U(N)  -> 72 settled / 128 unsettled,
                  min deficit 1 @ {41,46,48,53}, max 64 @ 196, U(41)=1089/16
 aud_phi.py       phi(N) exhaustive, N<=60 -> closed form + phi<=N^2/25 confirmed;
