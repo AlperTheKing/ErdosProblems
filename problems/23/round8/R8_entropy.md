@@ -105,14 +105,27 @@ PRGM(H,x) := min over φ: V→Z5 of ( Π_{r∈Z5} m_r(φ,x) )^{1/5}   ≥   psi(
 
 ### 2b. Uniform rotation weights are forced
 
-**Lemma R8-1b.** Suppose one uses `min_r m_r ≤ Π_r m_r^{w_r}` with a probability vector `w` and
-wants `≤ 1/25` for every weighting of every `C₅`-coloured graph. Then `w_r = 1/5` for all `r`.
+**Lemma R8-1b (the class load must have maximum entropy).** Suppose one uses
+`min_r m_r ≤ Π_r m_r^{w_r}` with a probability vector `w` and wants `≤ 1/25` for every weighting
+of every `C₅`-coloured graph. Then `w_r = 1/5` for all `r`.
 
-*Proof.* On a `C₅`-blow-up, `Π_r (X_{r-1}X_r)^{w_r} = Π_i X_i^{c_i}` with `c_i = w_i + w_{i+1}`,
-`Σc_i = 2`. Weighted AM–GM gives `Π_i X_i^{c_i} = (Π_i X_i^{c_i/2})² ≤ (Σ_i (c_i/2) X_i)²`, and
-taking `X` concentrated on the index maximising `c_i` shows the bound `1/25` forces
-`max_i c_i ≤ 2/5`, hence `c_i = 2/5` for all `i`. On `Z₅` the system `w_i + w_{i+1} = 2/5` has the
-unique solution `w ≡ 1/5`. ∎
+*Proof.* On a `C₅`-blow-up with class weights `X` on the simplex,
+`Π_r (X_{r-1}X_r)^{w_r} = Π_i X_i^{c_i}` where `c_i = w_i + w_{i+1}` is the *load* of class `i`
+and `Σ_i c_i = 2`. By Lagrange the maximum of `Π_i X_i^{c_i}` over the simplex is at
+`X_i = c_i/2`, with value
+
+```
+Π_i (c_i/2)^{c_i} = exp( 2 Σ_i d_i log d_i ) = exp( -2 H(d) ),        d := c/2 a probability vector.
+```
+
+So the requirement `≤ 1/25 = exp(-2 log 5)` is exactly `H(d) ≥ log 5`. Since `d` is a
+probability vector on the five classes, `H(d) ≤ log 5` with equality **iff `d` is uniform**.
+Hence `c_i = 2/5` for every `i`, and on `Z₅` the system `w_i + w_{i+1} = 2/5` has the unique
+solution `w ≡ 1/5`. ∎
+
+(The certificate therefore spends its entire entropy budget: the load distribution is forced to
+be the maximum-entropy one. This is the same "`1/5` of the available entropy" phenomenon that
+Q1's Theorem Q1-A recorded on the cut side, now on the class side.)
 
 So PRGM (uniform weights) is the *only* candidate in the rotation family: no reweighting repair
 exists.
@@ -138,8 +151,9 @@ invariance of the product) cross-checked against the pure-Python exhaustive
 | **`And(4)`** | 11 | 4 | **3456** | (4,6,6,6,4) | 2655.99 | **FAILS** |
 
 **Smallest exact falsifier: the Wagner graph at uniform weights.**
-`5¹⁰·162 = 1 582 031 250 > 1 073 741 824 = 8¹⁰`, i.e. `(Π m_r)^{1/5} = 162^{1/5} = 2.8518…`
-against the required `8²/25 = 2.56`. Note `min_r m_r = 2 = bip(Wagner)`, so the *rotation cuts
+`5¹⁰·162 = 1 582 031 250 > 1 073 741 824 = 8¹⁰`, i.e. `(Π m_r)^{1/5} = 162^{1/5} = 2.76632…`
+against the required `8²/25 = 2.56` (overshoot `1.0806`; Grötzsch overshoots by `1.0714`,
+`And(4)` by `1.0541`). Note `min_r m_r = 2 = bip(Wagner)`, so the *rotation cuts
 are optimal* — the entire loss is the step `min ≤ geometric mean`, which is exact only when the
 five values are equal, and on `Wagner` they cannot be (`8` vertices do not split into five equal
 `Z₅`-classes, and `Wagner ↛ C₅` forces `Z + E2 > 0`).
@@ -213,9 +227,12 @@ side of the entropy mechanism is closed from two independent directions.
 | **`N=14 extremal`** `M?AE@bH{AYN_LgBs?` | 14 | 32 | 7 | 92 | **0** | — | **DEAD** |
 | `M(C7)` | 15 | 28 | — | 28 | 57 | no | survives |
 
-Two structural observations, verified exactly on every graph in the table:
+Two structural observations, verified exactly on the graphs in the table (stated as
+observations, not theorems — `M(C7)`, which is pentagon-poor for its order, has `|R| = 57` and
+no partition, so neither statement is universal):
 
-* when `H` is not a blow-up and `R(H) ≠ ∅`, there are **exactly five** rainbow-1 cuts and their
+* on the pentagon-rich graphs with `R(H) ≠ ∅` — `C₅`, Petersen, Wagner, Grötzsch, Clebsch —
+  there are **exactly five** rainbow-1 cuts and their
   monochromatic sets **partition** `E(H)`; each class is then an odd-cycle edge transversal
   (`E∖F_j` bipartite, checked by 2-colouring), so `E(H)` splits into five transversals and every
   induced pentagon is *rainbow* — one edge in each class;

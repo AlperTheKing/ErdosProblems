@@ -4667,3 +4667,7 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T02:13:17] ✔ R8 STABILITY GATE | DID: claude_gate_r8_stability.py Theorem D over 1032 exact instances, 7 graphs, every induced C5 | RESULT: 0 violations | Δ: psi <= 1/25 proved for eta <= 1/13
 [2026-07-26T02:13:17] ✔ R8 STABILITY GATE | DID: Theorem B on 36 exact blow-up weightings incl. unbalanced and a zero part | RESULT: psi = min_i y_i y_(i+1), 0 mismatches | Δ: A23 opened LIVE
 [2026-07-26T02:13:17] ✔ K-0 SPURIOUS MAX | DID: 840 arrangements on Petersen, ascent LP + 3000 exact perturbations | RESULT: 30 give psi = 1/32 exactly, support Theta(2,3,3), 0 ascent | Δ: A24 DEAD, sweeps are evidence only
+[2026-07-26T02:19:20] ✔ R8 ENTROPY GATE | DID: claude_gate_r8_entropy.py divisibility test | RESULT: Gamma_11 has P=33 pentagons, p(e) in {5,10}, 5 does not divide 33, so no rainbow-1 set | Δ: A21b tool accepted
+[2026-07-26T02:19:20] ✔ R8 ENTROPY GATE | DID: cross-check divisibility vs brute force on all 1024 cuts of Gamma_11 | RESULT: 0 rainbow-1 cuts, matching the prediction | Δ: two independent proofs of the same kill
+[2026-07-26T02:19:20] ✘ R8 ENTROPY SCOPE | DID: run the divisibility test across the suite | RESULT: fires ONLY at And(4); Wagner P=8, Petersen 12, Grotzsch 31, And(5) 98, N=14 92 | Δ: scope narrowed vs summary
+[2026-07-26T02:19:20] ✔ PRGM DEAD | DID: exhaustive 5^7 maps on Wagner at uniform x | RESULT: min prod_r m_r = 162, 5^10*162 = 1582031250 > 1073741824 = 8^10 | Δ: A25 recorded DEAD

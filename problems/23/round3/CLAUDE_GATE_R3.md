@@ -701,3 +701,75 @@ round produced no partial result on it.** Blocking step, verbatim: Theorem D's p
 where placing an R-vertex costs `Theta(rho/5)` against a `2*rho/25` budget. K-0 additionally forces
 `eps < 7/800` in any `STAB(eps,delta)` with `delta < 3/5`. Nothing here improves the published
 `n^2/23.5`.
+
+
+---
+
+## R3-C21 — round 8 entropy/counting family: the obstruction widened to Gibbs, and a divisibility proof (GATED)
+
+Root-agent entry, 2026-07-26. Own implementation, `round5/claude_gate_r8_entropy.py`.
+
+### Accepted: Theorem R8-2 widens the obstruction I recorded in A21
+
+Every aggregator `Phi` with `min <= Phi`, `Phi(c,...,c) = c`, strictly increasing -- all power means
+AND the Gibbs / free-energy aggregator `Phi_beta(t) = -(1/beta) log E_nu[e^{-beta t}]` for every
+`beta > 0` -- applied to a FIXED cut distribution must be supported on RAINBOW-1 cuts, i.e. cuts
+leaving exactly one monochromatic edge inside every induced pentagon. The exponential-moment
+upgrade is the sharpest form entropy takes on this problem, and it buys nothing.
+
+Two independent round-8 families (transport, entropy) reached this obstruction by different routes
+and converged on the SAME Grotzsch witness, `a = (0,0,0,0,0,1,1,1,1,1,5)` i.e.
+`x = (0^5, (1/10)^5, 1/2)`, giving `1/20 > 1/25` while `psi = 0`. I had already gated that witness.
+
+### Accepted: Lemma R8-3, a counting proof of the And(4) kill
+
+Double counting the pairs `(e,K)` with `e` in a rainbow-1 set `F` and `K` an induced pentagon
+through `e`:
+
+```
+        sum_{e in F} p(e)  =  sum_K |F cap E(K)|  =  P.
+```
+
+In `Gamma_11` every edge lies in 5 or 10 induced pentagons and `P = 33`; since `5 | p(e)` for every
+edge but `5` does not divide `33`, NO rainbow-1 set exists. This replaces an exhaustive search by
+arithmetic. It cross-checks exactly against my own earlier gate: 33 induced pentagons, and 0
+rainbow-1 cuts among all 1024 by brute force.
+
+**Scope, stated precisely because the summary could be read too broadly.** The divisibility
+obstruction fires ONLY at And(4) in my suite:
+
+```
+        C5           P = 1    p(e) = {1}
+        Wagner       P = 8    p(e) = {2,4}
+        Petersen     P = 12   p(e) = {4}
+        Grotzsch     P = 31   p(e) = {7,8,9}
+        And(4)       P = 33   p(e) = {5,10}     <-- all divisible by 5, 5 does not divide 33: KILL
+        And(5)       P = 98   p(e) = {8,11,20}
+        N=14 extremal P = 92  p(e) = {6,13,14,15,16,17}
+```
+
+so the kills recorded for And(5), And(6) and `M?AE@bH{AYN_LgBs?` rest on exhaustive enumeration, not
+on this lemma. It is a sharp tool, not a general theorem.
+
+### Accepted: PRGM is dead (A25)
+
+The `x`-adapted `Z5`-rotation geometric-mean certificate chooses its cut FROM the weights, so it
+escapes the fixed-family obstruction. It still fails. At uniform weights on Wagner, over ALL `5^7`
+maps `phi: V -> Z5`, `min_phi prod_r m_r = 162`, and `5^10 * 162 = 1582031250 > 1073741824 = 8^10`.
+Valid but exactly tight on C5 (`prod = 1`, `5^10 = 5^10`), valid on Petersen (`972`, `9492187500 <
+10^10`). No reweighting repairs it: with class loads `c_i = w_i + w_{i+1}`,
+`max_X prod X_i^{c_i} = exp(-2H(c/2))`, so the bound is exactly `H(c/2) >= log 5`, which forces
+`c/2` uniform and hence `w = 1/5` uniform.
+
+### Accepted: the recurring 1/20 barrier, explained
+
+Motzkin-Straus caps the edge weight of a triangle-free graph at `1/4`; a balanced 5-fold split gives
+`(1/4)/5 = 1/20`. That single fact unifies the value A6 attains on every `C5[n]`, the value in
+round1/f3 section 5, and the Grotzsch and Clebsch star witnesses. A geometric mean escapes it only
+when some class receives weight 0, which a degree-5 star spread over all five classes prevents.
+
+### Consequence for the programme
+
+Any proof must select its cut as a function of the weights AND be exactly optimal at every
+induced-pentagon weighting simultaneously. No fixed cut family can do this, and the one `x`-adapted
+family tried (the `Z5` rotations) does not either.
