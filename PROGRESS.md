@@ -4660,3 +4660,7 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T01:15:02] ✔ ANDK CEILING | DID: claude_gate_andk_ceiling.py on Gamma_11/14/17 with mandatory C5 starts | RESULT: max_x psi = 0.0400000000 on And(4), And(5), And(6); 0 voids | Δ: plateau flat to k=6
 [2026-07-26T01:17:46] ✔ ANDK CEILING | DID: claude_gate_andk_ceiling.py on Gamma_20 = And(7), 524288 cuts | RESULT: max_x psi = 0.0400000000, 0 voids | Δ: plateau flat on And(4)..And(7)
 [2026-07-26T01:17:46] ► R8 WAVE | NEXT: 4 independent families launched (Theorem A adversarial audit, entropy/counting, transport/flow, stability), none told the favoured route
+[2026-07-26T02:03:28] ✔ R8 TRANSPORT GATE | DID: claude_gate_r8_transport.py, own implementation | RESULT: Gamma_11 has 33 induced C5s and 0 admissible cuts of 1024; scheme dead | Δ: A21 recorded DEAD
+[2026-07-26T02:03:28] ✔ R8 TRANSPORT GATE | DID: Grotzsch at x=(0^5,(1/10)^5,1/2) | RESULT: 5 admissible cuts all give nu = 1/20 exactly while psi = 0; fails by 1.25x | Δ: A21 kill confirmed twice
+[2026-07-26T02:03:28] ✘ CONJECTURE T | DID: recompute the mono-incidence fraction at uniform x | RESULT: I get 7/8 Wagner, 7/8 Petersen, 31/32 Grotzsch vs the family's 1/2, 3/5, 5/11; false under both | Δ: none
+[2026-07-26T02:03:28] ✔ BIP/E BOUND | DID: exact check on M?AE@bH{AYN_LgBs? | RESULT: bip = 7 > 32/5 = |E|/5, so bip <= |E|/5 is false | Δ: A22 recorded DEAD

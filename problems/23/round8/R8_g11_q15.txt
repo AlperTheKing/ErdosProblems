@@ -1,0 +1,7 @@
+G J?bFF`wN?{? n=11 m=22 nC5=33 q=15 bestM=9 25M=225 q2=225 nargmax=264
+  ARGMAX 0 0 3 0 0 3 3 0 0 3 3
+  ARGMAX 0 0 3 0 1 2 3 0 0 3 3
+  ARGMAX 0 0 3 0 2 1 3 0 0 3 3
+  ARGMAX 0 0 3 0 3 0 3 0 0 3 3
+  ARGMAX 0 0 3 0 3 0 3 0 1 2 3
+  ARGMAX 0 0 3 0 3 0 3 0 2 1 3
