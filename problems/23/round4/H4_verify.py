@@ -399,6 +399,10 @@ def main():
     print("=" * 78)
     fifth = Fraction(1, 5)
     for name, K in catalogue:
+        if name == 'Gamma_1':          # K_2, bipartite: psi == 0, no induced C5
+            assert psi_at(K, {v: Fraction(1, 2) for v in K}) == 0
+            print("  Gamma_1       n= 2  bipartite, psi == 0 (no induced C5)")
+            continue
         C = induced_C5(K)
         assert C is not None, name
         x = {v: (fifth if v in C else Fraction(0)) for v in K.nodes()}
@@ -408,6 +412,176 @@ def main():
         assert val == Fraction(1, 25)
     print("  => max_x psi >= 1/25 for every graph in the catalogue: the hypothesis of the")
     print("     conditional theorem is an EQUALITY statement, never a strict inequality.")
+
+    print()
+    print("=" * 78)
+    print("SECTION E  smallest N at which each base graph can occur (exact LP duality)")
+    print("=" * 78)
+    print("  If H carries a regular weight function w >= 0, sum w = W, weighted degree D,")
+    print("  then rho := D/W is the EXACT maximum of min_v a(N(v))/a(V) over a >= 0")
+    print("  (primal: a = w;  dual: y = w/W is feasible since sum_{v in N(u)} y_v = rho for all u).")
+    print("  A blow-up H[a] on N vertices with delta > N/3 has delta >= (N+1)/3 and")
+    print("  delta <= rho*N, hence N >= 1/(3*rho-1).")
+    for name, K, wt in vega_weightings() + andrasfai_weightings():
+        W = sum(wt.values())
+        degs = {sum(wt[u] for u in K[v]) for v in K.nodes()}
+        assert len(degs) == 1, name
+        D = degs.pop()
+        rho = Fraction(D, W)
+        assert min(wt.values()) > 0
+        # dual feasibility, exactly
+        for u in K.nodes():
+            assert sum(Fraction(wt[v], W) for v in K[u]) == rho
+        assert 3 * rho - 1 > 0, name
+        Nmin = 1 / (3 * rho - 1)
+        print("  %-12s rho=%-8s  N >= %s  (attained by w itself: N=%d, delta=%d, 3delta-N=%d)"
+              % (name, rho, Nmin, W, D, 3 * D - W))
+        assert Nmin == W and 3 * D - W == 1
+
+    print()
+    print("=" * 78)
+    print("SECTION F  psi lower bounds: float-guided ascent, EXACT rational verification")
+    print("=" * 78)
+    import random
+    random.seed(20260725)
+    for name, K in catalogue:
+        if name == 'Gamma_1':
+            continue
+        best_x, best_v = psi_ascent(K, restarts=40, iters=300)
+        exact = None
+        for den in (5, 10, 20, 25, 29, 35, 50):
+            xr = snap(best_x, den, K)
+            val = psi_at(K, xr)
+            if exact is None or val > exact:
+                exact = val
+        base = Fraction(1, 25)
+        print("  %-12s float ascent %.6f | best exact rational point %s = %.6f | > 1/25 ? %s"
+              % (name, best_v, exact, float(exact), exact > base))
+        assert exact <= base, ("REFUTATION CANDIDATE", name, exact)
+    print("  (lower bounds only: no claim that these are global maxima)")
+
+
+def andrasfai_weightings():
+    out = []
+    for i in range(2, 7):
+        K = gamma(i)
+        out.append(('Gamma_%d' % i, K, {v: 1 for v in K.nodes()}))
+    return out
+
+
+def vega_weightings():
+    """Brandt-Thomasse Theorem 3, verbatim weights for all four families."""
+    out = []
+    for i in range(2, 7):
+        U = upsilon(i)
+        w = {v: 3 for v in U.nodes()}
+        for v in ['x', 'y', 1, 2 * i]:
+            w[v] = 1
+        for v in ['c', 'w']:
+            w[v] = 3 * i - 3
+        for v in ['u', 'v', 'a', 'b']:
+            w[v] = 3 * i - 2
+        out.append(('Ups_%d' % i, U, w))
+
+        H = U.copy(); H.remove_node('y')
+        w = {v: 3 for v in H.nodes()}
+        for v in [1, 2 * i]:
+            w[v] = 1
+        w['x'] = 2
+        w['w'] = 3 * i - 4
+        for v in ['u', 'v', 'c']:
+            w[v] = 3 * i - 3
+        for v in ['a', 'b']:
+            w[v] = 3 * i - 2
+        out.append(('Ups_%d-y' % i, H, w))
+
+        H = U.copy(); H.remove_node(2 * i)
+        w = {v: 3 for v in H.nodes()}
+        for v in ['x', 'y']:
+            w[v] = 1
+        for v in [1, i]:
+            w[v] = 2
+        for v in ['b', 'v', 'c', 'w']:
+            w[v] = 3 * i - 3
+        for v in ['u', 'a']:
+            w[v] = 3 * i - 2
+        out.append(('Ups_%d-2i' % i, H, w))
+
+        H = U.copy(); H.remove_node('y'); H.remove_node(2 * i)
+        w = {v: 3 for v in H.nodes()}
+        for v in ['x', 1, i]:
+            w[v] = 2
+        for v in ['v', 'w']:
+            w[v] = 3 * i - 4
+        for v in ['u', 'b', 'c']:
+            w[v] = 3 * i - 3
+        w['a'] = 3 * i - 2
+        out.append(('Ups_%d-y-2i' % i, H, w))
+    return out
+
+
+def cut_matrix(K):
+    nodes = list(K.nodes())
+    idx = {v: k for k, v in enumerate(nodes)}
+    n = len(nodes)
+    E = [(idx[u], idx[v]) for u, v in K.edges()]
+    masks = np.arange(1 << (n - 1), dtype=np.int64)
+    side = lambda t: ((masks >> (t - 1)) & 1) if t > 0 else np.zeros_like(masks)
+    M = np.zeros((len(masks), len(E)), dtype=np.float64)
+    for k, (a, b) in enumerate(E):
+        M[:, k] = (side(a) == side(b))
+    return nodes, E, M
+
+
+def psi_ascent(K, restarts=40, iters=300):
+    """Float hill-climb for max_x psi.  GUIDANCE ONLY - never an acceptance path."""
+    import random
+    nodes, E, M = cut_matrix(K)
+    n = len(nodes)
+
+    def val(x):
+        p = np.array([x[a] * x[b] for (a, b) in E])
+        return float((M @ p).min())
+    best_x, best_v = None, -1.0
+    for r in range(restarts):
+        if r == 0:
+            x = np.ones(n) / n
+        else:
+            x = np.random.dirichlet(np.ones(n))
+        v = val(x)
+        step = 0.08
+        for t in range(iters):
+            i, j = random.randrange(n), random.randrange(n)
+            if i == j:
+                continue
+            d = min(step, x[i])
+            if d <= 0:
+                continue
+            y = x.copy(); y[i] -= d; y[j] += d
+            w = val(y)
+            if w > v:
+                x, v = y, w
+            if t % 50 == 49:
+                step *= 0.6
+        if v > best_v:
+            best_x, best_v = x, v
+    return {nodes[k]: best_x[k] for k in range(n)}, best_v
+
+
+def snap(xf, den, K):
+    """Round a float point to a rational point with denominator den on the simplex."""
+    nodes = list(K.nodes())
+    raw = [max(0, int(round(xf[v] * den))) for v in nodes]
+    s = sum(raw)
+    while s != den:
+        if s < den:
+            k = max(range(len(nodes)), key=lambda t: xf[nodes[t]] * den - raw[t])
+            raw[k] += 1; s += 1
+        else:
+            k = max((t for t in range(len(nodes)) if raw[t] > 0),
+                    key=lambda t: raw[t] - xf[nodes[t]] * den)
+            raw[k] -= 1; s -= 1
+    return {nodes[k]: Fraction(raw[k], den) for k in range(len(nodes))}
 
 
 if __name__ == '__main__':
