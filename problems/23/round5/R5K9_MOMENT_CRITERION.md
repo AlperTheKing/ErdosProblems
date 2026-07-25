@@ -152,3 +152,36 @@ Erdős #23 for every triangle-free graph with `δ > N/3` (modulo the Vega half).
 
 So the hierarchy is genuinely needed in both directions, and **at `C5` every term equals exactly
 `1/25`** — `g` is constant there, so all `bound_k` coincide, and `A = W − 2T = 1/5 − 4/25 = 1/25`.
+
+
+## 9. The remaining gap, localised exactly
+
+Writing `Var_μ(g) = ∫g²dμ − 4W²`, the two plain bounds fail simultaneously only when
+
+```
+        2T < W − 1/25          (half-arc bound fails)
+        4W² + Var_μ(g) < W − 1/25   (k = 0 neighbourhood bound fails)
+```
+
+Over 3600 random exact measures on nine circle graphs, **exactly 3** measures satisfy both, and they
+are tightly clustered:
+
+| `W` | `T/W` | `Var_μ(g)` | `m` |
+|---|---|---|---|
+| 0.1763 | 0.3701 | 0.010564 | 17 |
+| 0.1748 | 0.3838 | 0.010966 | 17 |
+| 0.1724 | 0.3837 | 0.005741 | 20 |
+
+so the gap sits at `W ≈ 0.172–0.177`, mean adjacent-pair distance `T/W ≈ 0.370–0.384`, and small but
+nonzero `Var_μ(g) ≈ 0.006–0.011`. In every such case a higher level `k ≥ 1` of the hierarchy closes
+the bound (the full criterion has zero violations across all 5632 exact tests).
+
+**The whole arc-cut conjecture is therefore reduced to this statement:**
+
+> For every probability measure on the circle with `W ∈ (0.12, 0.2)`, `2T < W − 1/25` and
+> `4W² + Var_μ(g) < W − 1/25`, some level `bound_k` of the `g^k`-weighted hierarchy is at most `1/25`.
+
+That is the single unproved step. It is not a reformulation of the conjecture — it is a statement
+about three explicit moments of a measure on the circle, in a region of parameter space that is
+about 0.1 % of the sampled space, with the extremal `C5` sitting exactly on its boundary at
+`W = 1/5`, `T/W = 2/5`, `Var_μ(g) = 0`.
