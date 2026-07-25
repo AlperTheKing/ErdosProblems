@@ -1,0 +1,15 @@
+Ups_2-y-2i 20
+Ups_2-y 18
+Ups_2-2i 18
+Ups_2 17
+Ups_3-y-2i 15
+Ups_3-2i 14
+Ups_3-y 14
+Ups_3 14
+Gamma_2 20
+Gamma_3 18
+Gamma_4 16
+Gamma_5 15
+Gamma_6 14
+Gamma_7 13
+Gamma_8 12

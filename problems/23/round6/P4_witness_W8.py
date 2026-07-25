@@ -17,6 +17,10 @@ from sympy import Rational, nsimplify
 
 M = 20
 W8 = [0, 3, 4, 0, 1, 0, 0, 2, 4, 4, 0, 0, 0, 0, 4, 4, 3, 1, 0, 0]
+W9 = [0, 0, 5, 5, 5, 0, 0, 0, 0, 5, 5, 2, 0, 0, 0, 3, 5, 5, 0, 0]
+W10 = [0, 5, 5, 0, 0, 0, 0, 6, 4, 5, 0, 0, 0, 0, 5, 4, 6, 0, 0, 0]
+import sys
+WITNESS = {'W8': W8, 'W9': W9, 'W10': W10}[sys.argv[1] if len(sys.argv) > 1 else 'W9']
 
 
 def cdist(i, j, m=M):
@@ -30,7 +34,7 @@ def build(weights, m=M):
 
 
 def main():
-    x = build(W8)
+    x = build(WITNESS)
     idx = list(range(M))
     # adjacency, from the definition d > 1/3, computed with sympy rationals
     E = [(i, j) for i in idx for j in idx if i < j and cdist(i, j) > Rational(1, 3)]
@@ -43,11 +47,11 @@ def main():
     for b in idx:
         S = set(j for j in idx if cdist(b, j) > Rational(1, 3))
         mval[b] = sum(x[i] * x[j] for i, j in E if (i in S) == (j in S))
-    supp = [i for i in idx if W8[i] > 0]
+    supp = [i for i in idx if WITNESS[i] > 0]
     minm = min(mval[b] for b in supp)
     var = sum(x[i] * g[i] ** 2 for i in idx) - (2 * W) ** 2
 
-    print("W8 = Gamma_20 weights", W8, " q =", sum(W8))
+    print("witness = Gamma_20 weights", WITNESS, " q =", sum(WITNESS))
     print("  support (as points of R/Z):", [Rational(i, M) for i in supp])
     print("  x on the support         :", [x[i] for i in supp])
     print()
@@ -89,7 +93,7 @@ def main():
     for msk in range(1 << (n - 1)):
         side = {supp[i]: (msk >> i) & 1 for i in range(n - 1)}
         side[supp[-1]] = 0
-        c = sum(x[i] * x[j] for i, j in E if W8[i] and W8[j] and side[i] == side[j])
+        c = sum(x[i] * x[j] for i, j in E if WITNESS[i] and WITNESS[j] and side[i] == side[j])
         if best is None or c < best:
             best = c
     print(f"\n  psi(W8) = {best} = {float(best):.9f}   <= 1/25 ? {best <= Rational(1,25)}"
