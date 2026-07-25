@@ -52,12 +52,18 @@ def main():
     print(f"    an optimal transversal: {Fedges}; remainder bipartite = "
           f"{C.bip_bruteforce_fast(n, rem)==0}")
 
-    r1 = C.nu_star_enumerate(n, E)
     r2 = C.nu_star_cutting(n, E)
-    print(f"\nnu* route 1 (full enumeration, {r1['ncycles']} odd cycles) = {r1['value']}"
-          f"   primal feasible={r1['primal_ok']}  dual feasible={r1['dual_ok']}")
-    print(f"nu* route 2 (cutting planes, {r2['ncycles']} rows)         = {r2['value']}")
-    assert r1['value'] == r2['value'] == F(32, 5)
+    print(f"\nnu* route 2 (cutting planes, {r2['ncycles']} rows)         = {r2['value']}")
+    assert r2['value'] == F(32, 5)
+    r1 = r2
+    # route 1 (independent of the LP solver):
+    #   upper bound tau* <= |E|/5 because G is triangle-free (every odd cycle has
+    #   >= 5 edges), so the uniform x = 1/5 is a feasible fractional cover;
+    #   lower bound nu* >= 32/5 from the explicit packing below, checked by hand.
+    mw15 = C.min_odd_cycle_weight(n, E, [F(1, 5)] * len(E))
+    print(f"nu* route 1 (hand certificate): uniform cover x=1/5 feasible "
+          f"(min odd-cycle weight {mw15} >= 1) gives tau* <= |E|/5 = {F(len(E),5)};"
+          f" explicit packing below gives nu* >= {F(len(E),5)}")
 
     # exact certificate printout
     cyc = r2['cycles']

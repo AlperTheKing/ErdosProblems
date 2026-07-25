@@ -41,6 +41,37 @@ static const int APOOL = 8;         // active (incremental) cut pool
 static std::vector<std::pair<int, int> > MONO[APOOL];
 static int MSTART[APOOL][34];
 
+// --- automorphism orbit pruning (optional) -----------------------------
+static int NAUT = 0;
+static int AUT[4096][32];
+static std::vector<int> ALEV[34];       // ALEV[k] = sigma with sigma({0..k})={0..k}
+
+static void build_aut_levels() {
+    for (int k = 0; k < N; k++) {
+        ALEV[k].clear();
+        for (int s = 0; s < NAUT; s++) {
+            bool ok = true, id = true;
+            for (int j = 0; j <= k; j++) {
+                if (AUT[s][j] > k) { ok = false; break; }
+                if (AUT[s][j] != j) id = false;
+            }
+            if (ok && !id) ALEV[k].push_back(s);
+        }
+    }
+}
+
+static inline bool orbit_prune(const int *a, int k) {
+    for (size_t t = 0; t < ALEV[k].size(); t++) {
+        const int *s = AUT[ALEV[k][t]];
+        for (int j = 0; j <= k; j++) {
+            int x = a[s[j]], y = a[j];
+            if (x < y) return true;
+            if (x > y) break;
+        }
+    }
+    return false;
+}
+
 static void build_mono(int p, uint32_t S) {
     MONO[p].clear();
     for (int e = 0; e < M_EDGES; e++) {
@@ -114,6 +145,7 @@ struct Ctx {
 static void dfs(Ctx &X, int k, int r, std::mutex &mtx) {
     if (k == N - 1) {
         X.a[k] = r;
+        if (NAUT && orbit_prune(X.a, k)) return;
         long long mn = -1;
         for (int p = 0; p < APOOL; p++) {
             long long q = X.FF[p] + (long long)r * X.c[p][k];
@@ -143,6 +175,7 @@ static void dfs(Ctx &X, int k, int r, std::mutex &mtx) {
     }
     for (int t = 0; t <= r; t++) {
         X.a[k] = t;
+        if (NAUT && orbit_prune(X.a, k)) continue;
         long long saveFF[APOOL];
         for (int p = 0; p < APOOL; p++) {
             saveFF[p] = X.FF[p];
@@ -213,6 +246,20 @@ int main(int argc, char **argv) {
     Q = atoi(argv[3]);
     MODE_CERT = (strcmp(argv[4], "cert") == 0);
     int nthr = (argc > 5) ? atoi(argv[5]) : 8;
+    if (argc > 6) {
+        FILE *f = fopen(argv[6], "r");
+        if (f) {
+            while (NAUT < 4096) {
+                int ok = 1;
+                for (int v = 0; v < N; v++) if (fscanf(f, "%d", &AUT[NAUT][v]) != 1) { ok = 0; break; }
+                if (!ok) break;
+                NAUT++;
+            }
+            fclose(f);
+        }
+        build_aut_levels();
+        fprintf(stderr, "loaded %d automorphisms ", NAUT);
+    }
 
     long long T0 = MODE_CERT ? ((long long)Q * Q) / 25 : 0;
     g_T = T0;
@@ -247,6 +294,7 @@ int main(int argc, char **argv) {
                 for (int v = 0; v < N; v++) X.c[p][v] = 0;
             }
             X.a[0] = t0;
+            if (NAUT && orbit_prune(X.a, 0)) continue;
             if (t0) for (int p = 0; p < APOOL; p++) {
                 uint32_t nb = ADJ[0];
                 while (nb) { int u = __builtin_ctz(nb); nb &= nb - 1;

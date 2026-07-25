@@ -294,3 +294,115 @@ so the sparse branch can never apply to it, and by the dense branch it must sati
 
 The upper constraint is now on the **average** degree, not the minimum degree, which is
 strictly stronger information than the Haggkvist end of base (6) gave.
+
+---
+
+## PROVENANCE NOTE (root agent, 2026-07-25)
+
+Sections R3-C6, R3-C7 and R3-C8 above were appended to this file by Round-3 agents, not by me;
+their "(mine)" refers to the writing agent. I have re-derived all three independently
+(`claude_gate_r3_c9c10.py`, own graph constructions, own exhaustive maximum cut, exact integers):
+
+* **R3-C6 confirmed.** `M2 = min over independent I of e(G−I)` equals `bip` on `C5[n]` (n ≤ 3) but
+  gives `3 > 64/25` on Wagner, `6 > 121/25` on `And(4)`, `10 > 196/25` on `And(5)`, `15 > 256/25` on
+  Clebsch. By hand at the earliest falsifier: `α(Wagner) = 3`, every independent 3-set is a
+  neighbourhood, so `M2 = 12 − 3·3 = 3`.
+* **R3-C7 confirmed** (trivially: `{1,2},{3,4},{5,6}` are pairwise disjoint, so `Kneser(7,2)` has a
+  triangle).
+* **R3-C8 confirmed**, including the correction of the posted sparse endpoint: the whole chain
+  `bip ≤ min_v e(G−N(v)) ≤ |E| − (1/N)Σd(v)² ≤ |E| − 4|E|²/N²` was re-verified on 11 graphs, the
+  roots of `4x² − x + 1/25` are exactly `1/20` and `1/5`, and at the posted endpoint `x = 2/25` the
+  bound is `34/625 = 0.0544 > 1/25`, with `C13, C15, C19` as explicit witnesses.
+
+I had derived the same chain independently before reading the section (it is the "neighbourhood-cut"
+bound: `ψ ≤ E[D]/2 − E[D²] ≤ m/2 − m²`, maximised at `1/16`), which is why it is accepted here
+rather than merely recorded. Labels R3-C9 and R3-C10 below are mine and do not collide.
+
+---
+
+## R3-C9 — every C5-plateau point is a first-order local maximum, in EVERY triangle-free H
+
+**Theorem.** Let `H` be triangle-free, `T = {t_0,…,t_4}` an induced `C5` of `H`, and `x⁰` the point
+carrying weight `1/5` on each `t_i` and `0` elsewhere (so `ψ(H,x⁰) = 1/25`). Then for **every**
+feasible direction `d` (`Σd = 0`, `d_u ≥ 0` off `T`) the one-sided derivative of `ψ` at `x⁰` along
+`d` is `≤ 0`.
+
+**Proof.** The cuts active at `x⁰` are exactly the extensions of the five rotation cuts
+`S_i = {t_i, t_{i+2}}` of `T`, the vertices off `T` placed arbitrarily; each has value
+`x⁰_{t_i}x⁰_{t_{i+1}} = 1/25`, while any other cut restricts to a cut of `T` with at least two
+monochromatic `C5`-edges, hence value `≥ 2/25`. For a minimum of smooth functions the one-sided
+derivative is the minimum of the derivatives over the active set, and
+`∂q_S/∂x_u(x⁰) = (1/5)·|N(u) ∩ T ∩ side_S(u)|`. Off `T` we have `d_u ≥ 0`, and the contributions of
+distinct outside vertices are independent (edges between them carry weight `0` at `x⁰`), so the
+minimising active cut places each outside vertex on its lighter side. Hence
+
+```
+   D(d) = min over i of [ (1/5)(d_{t_i} + d_{t_{i+1}}) + (1/5) Σ_{u ∉ T} d_u · sep_i(u) ],
+   sep_i(u) = min over the two sides of |N(u) ∩ T ∩ side| .
+```
+
+**Triangle-freeness enters here and only here:** `N(u)` is independent and `α(C5) = 2`, so
+`|N(u) ∩ T| ≤ 2`, giving `sep_i(u) ∈ {0,1}`, equal to `1` exactly when `N(u) ∩ T` is one of the five
+non-adjacent pairs and `S_i` separates it. Each non-adjacent pair is separated by exactly **two** of
+the five rotation cuts, and each vertex of `T` lies in exactly **two** of the five monochromatic
+edges (both verified exhaustively in `claude_gate_c5local.py`), so
+
+```
+   Σ_i bracket_i = (2/5)·( Σ_{t∈T} d_t + Σ_{u ∉ T, |N(u)∩T| = 2} d_u )  ≤  (2/5)·Σ_v d_v  =  0,
+```
+
+using `d_u ≥ 0` off `T`. Five numbers with non-positive sum have a non-positive minimum. ∎
+
+**Consequence.** No local perturbation of a `C5`-concentration beats `1/25`, in any triangle-free
+graph whatsoever. A counterexample cannot be produced by improving a plateau point: it must sit far
+from every induced-`C5` concentration, or escape along a direction where the derivative is exactly
+zero.
+
+**The flat directions, and an exact probe along them.** `D(d) = 0` forces `bracket_i = 0` for all
+`i`, i.e. `r_{i+3} + r_{i+4} = p_{t_i} + p_{t_{i+1}}`, where `p` is the distribution of removed mass
+on `T` and `r_a` the mass added to outside vertices attached to the pair `P_a`. `I + P` is invertible
+on `Z_5`, so each `p` has exactly one `r`; for uniform `p` the solution is uniform `r`, realisable
+exactly when all five pair-classes are occupied — the Mycielski configuration `C5 + {u_0..u_4}` with
+`N(u_a) ∩ T = P_a`. Along that entire flat line `ψ` was maximised **exactly** (every one of the `2^n`
+cut polynomials in the parameter `δ`, all stationary points and all pairwise crossings, sympy exact
+arithmetic):
+
+| graph | pair-vertices | distinct cut polynomials | exact max along the flat line |
+|---|---|---|---|
+| `μ(C5) − apex` (10 vtx) | 5 | 14 | **1/25, at δ = 0** |
+| Grötzsch | 5 | 14 | **1/25, at δ = 0** |
+| `And(4)` | 4 | 24 | **1/25, at δ = 0** |
+| `C11(1,3)` | 4 | 41 | **1/25, at δ = 0** |
+| Wagner, `C13(1,5)` | 2 | 13 | **1/25, at δ = 0** |
+
+plus 300 random feasible directions × 5 exact step sizes on each of eight patterns, largest value
+seen `998001/25000000 = 0.039920 < 1/25`.
+
+---
+
+## R3-C10 — the general concavity lemma (LEMMA, complete proof)
+
+**Lemma.** `ψ(H,·)` is concave along every direction `d` whose positive support `{u : d_u > 0}` and
+negative support `{u : d_u < 0}` are **each independent sets** of `H`.
+
+**Proof.** `q_S(x + td) = q_S(x) + t⟨∇q_S(x),d⟩ + t²q_S(d)` and
+`q_S(d) = Σ_{ab monochromatic} d_a d_b`. Any edge `ab` with `d_a, d_b ≠ 0` joins the positive support
+to the negative support, since each is independent, so `d_a d_b < 0`; every other term vanishes.
+Hence `q_S(d) ≤ 0` for every cut, each `q_S` is concave along `d`, and so is their minimum. ∎
+
+Corollaries:
+
+* **Transfer concavity** (R3-C3) is the case of two singleton supports; **twin balancing** follows.
+* `ψ` **is concave in the coordinates of any independent set** with the rest of `x` fixed — and since
+  `H` is triangle-free, in the coordinates of **every neighbourhood** `N(v)`.
+* Therefore block ascent over independent sets has no spurious local optima *inside* a block. That is
+  the correct architecture for a `max_x ψ` optimiser — alternate exact concave maximisations over
+  independent blocks (colour classes, or neighbourhoods) — and it replaces the naive hill-climbing
+  whose output had to be retracted in Round 2.
+* Averaging `x` over the orbit of an automorphism that moves only an independent set never decreases
+  `ψ`.
+
+Verified (`claude_gate_indep_concavity.py`): 1590 exact midpoint-concavity checks, random rational
+points and random independent-support directions over 7 patterns, 0 failures. The control direction
+tried (positive support an edge of `C5`) happened to remain concave, so the experiment confirms the
+hypothesis is *sufficient* and says nothing about necessity.
