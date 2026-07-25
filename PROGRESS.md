@@ -4652,3 +4652,9 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T00:57:55] ✔ CYCLE-COUNT BUG | DID: recount odd cycles of Gamma_11 | RESULT: 596 not 451 (33/154/264/145 by length), the 145 odd Hamiltonian cycles were missing | Δ: R3-C18 inputs corrected
 [2026-07-26T00:57:55] ✔ R3-C18 RECERT | DID: claude_gate_and4_recert.py, full cycle list, integer weights | RESULT: exact packing certificates Lambda=psi in 31 of 32 weightings | Δ: R3-C18 survives the bug
 [2026-07-26T00:57:55] ✔ PWI REFUTED | DID: claude_gate_find_n14_gap.py over 1274 MTF n=14 patterns | RESULT: unique tau=7 graph M?AE@bH{AYN_LgBs? has exact cover 32/5, gap 35/32 | Δ: A5 general form dead
+[2026-07-26T00:59:07] ✔ N15 SWEEP | DID: claude_psi_ascent_fast.py over all 5036 maximal triangle-free 15-vertex patterns | RESULT: best psi = 0.0400000000 exactly, 0 counterexamples | Δ: hunt complete to n=15
+[2026-07-26T01:12:13] ✔ LARGE-N HUNT | DID: claude_hunt_large_n.py, 200 random maximal triangle-free graphs n=16..20 | RESULT: every one returns psi = 0.0400000000 exactly, 0 counterexamples, 0 optimiser voids | Δ: none
+[2026-07-26T01:12:13] ► R8 CERT | NEXT: build an exact rational Positivstellensatz certificate for max_x psi(Gamma_11) <= 1/25 in the shape that closed Wagner (A5b needs a non-Guenin certificate)
+[2026-07-26T01:15:02] ✔ R8 HARVEST | DID: read round7/Q4.md before rebuilding | RESULT: degree-2 scheme REFUTED for And(4), exact dual ray c* <= 25445007099/1021743686 = 24.9035 < 25 | Δ: my planned round cancelled
+[2026-07-26T01:15:02] ✔ R8 HARVEST | DID: read Q4 theorem list | RESULT: Thm Q4-1, multipliers nonneg on all R^n force lambda_S = c_S L^2d, collapsing to the dead averaging certificate at EVERY degree | Δ: A2 narrowed
+[2026-07-26T01:15:02] ✔ ANDK CEILING | DID: claude_gate_andk_ceiling.py on Gamma_11/14/17 with mandatory C5 starts | RESULT: max_x psi = 0.0400000000 on And(4), And(5), And(6); 0 voids | Δ: plateau flat to k=6
