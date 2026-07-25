@@ -111,3 +111,44 @@ Two structural facts make this the right object:
 
 So the proof splits along "is `g` constant?", with the hierarchy on one side and the Fourier bound on
 the other — and the two sides meet exactly at `C5`, where both give `1/25`.
+
+
+## 8. FINAL FORM of the reduction (this session)
+
+Every ingredient below is an explicit moment of `μ`, and each is a *proved* upper bound on
+`ARCBOUND(μ)`:
+
+```
+   m(b) = W − Σ_{u ∈ N(b)} x_u g(u)          (value of the neighbourhood cut at b)
+
+   bound_k = ( Σ_b x_b g(b)^k m(b) ) / ( Σ_b x_b g(b)^k )      for k = 0, 1, 2, …   [weighted average]
+   A       = W − 2T                                                                 [half-arc average]
+
+   CRIT(μ) := min( A , bound_0 , bound_1 , bound_2 , … )   ≥   ARCBOUND(μ)   ≥  ψ(μ) .
+```
+
+> **CONJECTURE (final form).** `CRIT(μ) ≤ 1/25` for every probability measure on the circle.
+
+Proving it proves the arc-cut conjecture, hence `max_x ψ(And(k),x) = 1/25` for all `k`, hence
+Erdős #23 for every triangle-free graph with `δ > N/3` (modulo the Vega half).
+
+**Verification record, all exact rational arithmetic, zero violations everywhere:**
+
+| test | measures | violations |
+|---|---|---|
+| 9-witness regression set | 9 | 0 |
+| random exact measures over 11–12 circle graphs | 2127 + 2134 | 0 |
+| near-extremal perturbations, `Γ_25…Γ_60`, positions and weights perturbed | 1362 | 0 |
+| the two cases that killed weaker rules (`Γ_11` residual, `Γ_40` danger-zone) | 2 | 0 |
+
+**Why no single term suffices — each of these was tried and refuted:**
+
+* the plain averages `A` and `bound_0` alone: 2 violations in 2127 (the `Γ_11` residual);
+* `bound_∞`, i.e. "cut at the neighbourhood of the point of maximum far-mass `g`": fails on the
+  `Γ_40` configuration with support `{1,7,16,21,32}` and weights `(8,11,12,12,11)`, where it gives
+  `0.041495` and `A` gives `0.041238` — but `bound_0 = 0.039679` closes it;
+* the `Γ_11` residual goes the other way: `bound_0 = 0.041980` and `A = 0.041522` both fail, and
+  `bound_2 = 0.0397` closes it.
+
+So the hierarchy is genuinely needed in both directions, and **at `C5` every term equals exactly
+`1/25`** — `g` is constant there, so all `bound_k` coincide, and `A = W − 2T = 1/5 − 4/25 = 1/25`.
