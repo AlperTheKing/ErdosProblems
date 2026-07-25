@@ -57,6 +57,9 @@ WITNESSES = [
     ("W5 three-atom near-path", 12, [3, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0],
      "averaging rules: W = 2/9 > 1/5 here while the truth is 0"),
     ("W6 seven-atom", 7, [1] * 7, "ARCBOUND = 1/49, equality case of the W-square form"),
+    ("W8 far-regular Wagner", 14, [1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0],
+     "EVERY functional of {m(b)} plus A: m(b) = 3/64 for all b in the support (Var = 0) and "
+     "A = 9/224 > 1/25, while the true ARCBOUND is 1/32 - refutes the R5-K18 criterion"),
     ("W7 unequal five-atom", 20, [0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 0, 1, 3],
      "unequally spaced and unequally weighted C5"),
 ]
