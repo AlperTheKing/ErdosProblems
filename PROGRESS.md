@@ -4671,3 +4671,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T02:19:20] ✔ R8 ENTROPY GATE | DID: cross-check divisibility vs brute force on all 1024 cuts of Gamma_11 | RESULT: 0 rainbow-1 cuts, matching the prediction | Δ: two independent proofs of the same kill
 [2026-07-26T02:19:20] ✘ R8 ENTROPY SCOPE | DID: run the divisibility test across the suite | RESULT: fires ONLY at And(4); Wagner P=8, Petersen 12, Grotzsch 31, And(5) 98, N=14 92 | Δ: scope narrowed vs summary
 [2026-07-26T02:19:20] ✔ PRGM DEAD | DID: exhaustive 5^7 maps on Wagner at uniform x | RESULT: min prod_r m_r = 162, 5^10*162 = 1582031250 > 1073741824 = 8^10 | Δ: A25 recorded DEAD
+[2026-07-26T02:33:02] ✔ THEOREM A PROVED | DID: claude_gate_r8_thmA.py verifying the proof, not the conclusion | RESULT: cover y_e=(g(u)+g(v))/2gamma feasible 36/36, cost = 1/(2gamma), max 585/14896 | Δ: R3-C17 sound
+[2026-07-26T02:33:02] ✔ LEMMA 2 GATE | DID: |N(u) cap V(C)| <= (L-1)/2 over 6 triangle-free graphs, all odd cycles | RESULT: 8622 pairs, 0 violations, 2878 tight; K4 control violates 16 times | Δ: triangle-freeness is the crux
+[2026-07-26T02:33:02] ✔ THMA SCOPE | DID: twice-subdivided K5, n=25 m=30 odd girth 9 | RESULT: psi = 4/625 vs Lambda <= 2/375, ratio exactly 6/5 | Δ: Theorem A does NOT imply the conjecture

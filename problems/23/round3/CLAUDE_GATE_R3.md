@@ -773,3 +773,81 @@ when some class receives weight 0, which a degree-5 star spread over all five cl
 Any proof must select its cut as a function of the weights AND be exactly optimal at every
 induced-pentagon weighting simultaneously. No fixed cut family can do this, and the one `x`-adapted
 family tried (the `Z5` rotations) does not either.
+
+
+---
+
+## R3-C22 — MILESTONE: Theorem A is PROVED, and the proof is elementary (GATED)
+
+Root-agent entry, 2026-07-26. Round 8's adversarial audit was asked to BREAK
+`Lambda(G,x) <= 1/25`; it returned a proof instead. I gated the proof itself, not just its
+conclusion (`round5/claude_gate_r8_thmA.py`). This matters because Theorem A is consumed by R3-C17
+(the Wagner ceiling) and by the Petersen ceiling, and had never been verified by me.
+
+### Statement
+
+For every triangle-free `G` and every `x >= 0` with `sum_v x_v = 1`, the fractional odd-cycle
+covering LP with edge weights `w_uv = x_u x_v` satisfies `Lambda(G,x) <= 1/25`.
+
+### Proof, in full
+
+Write `d(v) = sum_{u in N(v)} x_u`. Restrict to `supp(x)`: edges leaving it have weight `0`, so
+`y_e = 1` there is free and covers every odd cycle meeting the complement; vertices isolated in the
+restriction lie on no cycle and are dropped. So assume `x_v > 0` and `d(v) > 0` throughout.
+
+**Lemma 1.** If `g >= 0` satisfies `sum_{v in C} g(v) >= gamma` for every odd cycle `C`, then
+`Lambda(G,x) <= (1/(2 gamma)) * sum_v g(v) x_v d(v)`.
+*Proof.* Put `y_e := (g(u)+g(v))/(2 gamma)` for `e = uv`. Every vertex of a cycle meets exactly two
+of its edges, so `sum_{e in C} y_e = (2/(2 gamma)) sum_{v in C} g(v) >= 1`: feasible. Its cost is
+`sum_{uv in E} x_u x_v (g(u)+g(v)) / (2 gamma) = (1/(2 gamma)) sum_v g(v) x_v d(v)`. QED
+
+**Lemma 2 (the only place triangle-freeness is used).** For an odd cycle `C` of length `L` in a
+triangle-free graph, `sum_{v in C} d(v) <= (L-1)/2`.
+*Proof.* `N(u)` is independent, so `N(u) cap V(C)` is an independent set of the cycle `C_L` and has
+size at most `floor(L/2) = (L-1)/2`. Double count:
+`sum_{v in C} d(v) = sum_u x_u |N(u) cap V(C)| <= ((L-1)/2) sum_u x_u = (L-1)/2`. QED
+
+**Theorem A.** Take `g = 1/d` and `gamma = min_C sum_{v in C} 1/d(v)`. By Cauchy-Schwarz,
+`sum_{v in C} 1/d(v) >= L^2 / sum_{v in C} d(v)`, and with Lemma 2 this is `>= 2L^2/(L-1) >= 25/2`
+for odd `L >= 5`, the expression being increasing in `L`. Lemma 1 then gives
+`Lambda <= (1/(2 gamma)) sum_v x_v = 1/(2 gamma) <= 1/25`. QED
+
+Sharper forms it yields for free: `Lambda <= 1/(2 gamma)` instance-wise, and
+`Lambda <= (g-1)/(4 g^2)` for odd girth `g`, so odd girth `>= 7` gives `<= 3/98`.
+
+### My gate
+
+* arithmetic chain: `2L^2/(L-1)` equals `25/2` exactly at `L = 5` and strictly increases; checked for
+  all odd `5 <= L <= 31`;
+* Lemma 2's combinatorial core over C5, C7, Wagner, Petersen, Grotzsch, Gamma_11 and every odd cycle:
+  **8622 `(u,C)` pairs, 0 violations, 2878 tight**. Control: `K4`, which has triangles, violates it
+  **16** times, so triangle-freeness is exactly and only what the lemma consumes;
+* the constructed cover end to end in exact rationals over 36 weightings: **0 infeasible, 0 cost
+  mismatches against `1/(2 gamma)`**, maximum cost `585/14896 = 0.039272 <= 1/25`;
+* the auditor's independent exhaustive search: all triangle-free graphs up to isomorphism for
+  `n <= 11` (counts matching A006785), `max_x Lambda` exactly `1/25` on every maximal non-bipartite
+  one, never above.
+
+### Two consequences that constrain every consumer
+
+1. **Theorem A is tight on a PLATEAU, not at an isolated extremum.** For every triangle-free `G`
+   containing a 5-cycle, weight `1/5` on that pentagon gives `Lambda = 1/25` exactly. So any step
+   needing `Lambda < 1/25` is unavailable, and any purported proof of Theorem A with slack anywhere
+   is wrong.
+2. **Theorem A does NOT imply the conjecture**, and the gap is exactly the odd-`K5` obstruction.
+   Witness, verified here: `K5` with every edge subdivided twice (`n = 25`, `m = 30`, triangle-free,
+   odd girth 9). Odd cycles correspond to odd cycles of `K5`, so `psi = bip(K5)/625 = 4/625` while
+   the uniform `y = 1/9` gives `Lambda <= 30/(9*625) = 2/375`: ratio exactly `6/5`. (No
+   counterexample: `4/625 = 0.0064 <= 1/25`.)
+
+Combined with Guenin, what is now proved unconditionally is: **every triangle-free `G` whose signed
+graph has no odd-`K5` minor satisfies `bip(G) <= N^2/25`** -- covering C5 and all its blow-ups, all
+planar triangle-free graphs, Wagner and Petersen.
+
+### Note
+
+The audit reports that no published bound of the form "fractional odd-cycle transversal of a
+triangle-free graph `<= n^2/c`" exists for any `c`, so Theorem A is proved here rather than cited.
+Its proof is short and elementary and is the most realistic Lean formalisation target the campaign
+has produced. NAMING: this "Theorem A" is `Lambda <= 1/25`; the round-8 stability family's
+"Theorem D" is the different statement `psi <= (1-rho)^2/25 + rho*eta`.
