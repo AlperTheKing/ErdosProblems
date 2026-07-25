@@ -1,0 +1,832 @@
+
+===== PAGE 1 =====
+Dense triangle-free graphs are four-colorable: A
+solution to the Erd˝os-Simonovits problem.
+Stephan Brandt∗
+Technische Universit¨at Ilmenau
+Fakult¨at f¨ur Mathematik und Naturwissenschaften
+Postfach 100565
+98684 Ilmenau, Germany
+sbrandt@mathematik.tu-ilmenau.de
+and
+St´ephan Thomass´e
+LIRMM-Universit´e Montpellier II
+161 rue Ada
+34392 Montpellier Cedex, France
+thomasse@lirmm.fr
+∗corresponding author
+1
+
+===== PAGE 2 =====
+Abstract
+In 1972, Erd˝os and Simonovits [9] asked whether a triangle-free graph with minimum
+degree greater than n/3, where n is the number of vertices, has chromatic number at most
+three.
+Hajnal provided examples of triangle-free graphs with arbitrarily large chromatic
+number and minimum degree greater than (1/3 −ε)n, for every ε > 0. H¨aggkvist [10] gave
+a counterexample to the Erd˝os-Simonovits problem with chromatic number four based on
+the Gr¨otzsch graph. Thomassen [15] proved that for every c > 1/3, if the minimum degree
+is at least cn, the chromatic number is bounded by some constant (depending on c). We
+completely settle the problem, describing the class of triangle-free graphs with minimum
+degree greater than n/3. All these graphs are four-colorable.
+1
+Introduction.
+For every ε > 0, Hajnal (see [9]) provided examples of triangle-free graphs with arbitrarily large
+chromatic number and minimum degree greater than (1/3 −ε)n, where n is the number of
+vertices. The construction is as follows: Fix integers k ≪m ≪l, where 2m + k divides l. Start
+with a disjoint union of a complete bipartite graph Kl,2l and a Kneser graph KG(2m + k, m).
+Partition the vertices of the part of size 2l of Kl,2l into subsets X1, . . . , X2m+k of equal size.
+Every vertex v of the Kneser graph corresponds to an m-subset Iv of {1, . . . , 2m + k} where v
+and w are adjacent if and only if Iv ∩Iw = ∅. For every such v, we add all the edges between
+v and Xi, whenever i ∈Iv. Observe that this graph is triangle-free, and its minimum degree
+can be made arbitrarily close (but strictly less) to n/3. Moreover, from the celebrated result of
+Lov´asz [12], the chromatic number of the Kneser graph, and thus of the whole graph, is at least
+k + 2. Any further attempt to ﬁnd triangle-free graphs with unbounded chromatic number and
+minimum degree greater than n/3 failed.
+It was shown by Andr´asfai [1] that triangle-free graphs with minimum degree greater than
+2n/5 are bipartite, this result being sharp because of the 5-cycle. Motivated by Hajnal’s con-
+struction, Erd˝os and Simonovits [9] conjectured that every triangle-free graph with chromatic
+number at least four has minimum degree at most (1 + o(1))n/3.
+Using a suitable weight function on the set of vertices of the Gr¨otzsch graph, H¨aggkvist [10]
+gave a counterexample to this question with minimum degree 10n/29. He proved also that every
+triangle-free graph with minimum degree greater than 3n/8 is 3-colorable. Later on, Jin [11]
+proved that 3n/8 could be replaced by 10n/29, achieving the exact value. Moreover, in 1997,
+Chen, Jin and Koh [6] proved that every triangle-free graph with minimum degree greater than
+n/3 is either homomorphic with a graph Γi, and therefore 3-colorable, or contains the Gr¨otzsch
+graph as an induced subgraph and therefore its chromatic number is at least 4. The gap to
+ﬁll-in was to describe the triangle-free graphs between minimum degree n/3 and 10n/29 with
+chromatic number at least 4.
+The ﬁniteness of the chromatic number was proven by Thomassen [15] in 2002, showing that
+for every ε > 0, if the minimum degree is at least (1/3 + ε)n, the chromatic number is bounded
+by some constant (depending on ε). Using the Regularity Lemma, ÃLuczak [14] recently proved
+that not only the chromatic number is bounded, but there exists a ﬁnite graph Gε such that
+every triangle-free graph with minimum degree at least (1/3+ε)n has a homomorphism into Gε.
+Also in 2002, Brandt [3] proved that every maximal triangle-free graph which is regular of degree
+2
+
+===== PAGE 3 =====
+> n/3 has chromatic number at most four and conjectured that the regularity requirement is
+not needed.
+We prove that this is indeed the case, i.e., every triangle-free graph with minimum degree
+δ > n/3 is 4-colorable by describing the structure of these graphs in detail.
+Let us start with some deﬁnitions and notations. We generally adopt the terminology from
+standard graph theory literature like [8] and [16].
+We say that a vertex v is joined to (or
+dominates) a set of vertices X if v is adjacent to every vertex of X. When there is no edge from
+v to X, we say that v is independent of X. A graph G is triangle-free if it does not contain a
+triangle. Moreover G is maximal triangle-free if adding any missing edge to G creates a triangle.
+Observe that a triangle-free graph is maximal triangle-free if and only if its diameter is at most
+two.
+We denote by Nv the neighborhood of a vertex v. Two vertices v, w are twins if Nv = Nw. In
+particular, twins must be non-adjacent. A weighted graph is a pair (G, ω), consisting of a graph
+G together with a weight function ω : V (G) →[0, 1] such that ω(V (G)) := P
+v∈V (G) ω(v) = 1.
+The degree of a vertex v of a weighted graph is ω(Nv), and we denote the minimum degree by
+δ(G, ω), or simply δ. When ω(Nv) is constant for every vertex v, we say that ω is regular. A
+good weighted graph is a pair (G, ω) where G is a maximal triangle-free, twin-free graph with
+chromatic number at least 4, and ω is a weight function such that δ > 1/3. A graph G is good
+if there exists a weight function ω such that (G, ω) is a good weighted graph. If this function ω
+is regular, G is a regular good graph. Note that this does not mean at all that the graph G itself
+is regular.
+A weighted graph (G, ω) with rational weights > 0 corresponds to the graph H, whose order
+n is the lowest common multiplier of the denominators of the vertex weights in (G, ω), where
+each vertex vi of G is replaced by a set Vi of ω(vi)n twins of vi. Conversely, replacing each class
+Vi of twins in a graph H of order n by a vertex of weight |Vi|/n gives a weighted graph (G, ω).
+Note that the minimum degree of H is cn if and only if the minimum degree of (G, ω) is c. A
+weighted graph can have diﬀerent optimal weight functions and vertices of weight 0. But as a
+by-product of our main result we obtain that every good weighted graph has a unique optimal
+regular weight function where all weights are non-zero and rational.
+Our goal is to characterize the class of good weighted graphs.
+We can concentrate on the case of graphs with chromatic number at least 4, since the 3-
+colorable case is solved. To see this, let us denote by Γi, for every integer i ≥1, the graph on
+vertex set {1, 2, . . . , 3i −1} where the vertex j has neighbors j + i, . . . , j + 2i −1, these values
+taken modulo 3i −1. Now translating a result of Chen, Jin and Koh [6] into the language of
+weighted graphs we have the following result.
+Theorem 1 A weighted maximal triangle-free, twin-free graph with minimum degree δ > 1/3
+is either isomorphic to a graph Γi, for some i ≥1, and therefore 3-colorable, or it contains the
+Gr¨otzsch graph as an induced subgraph and therefore its chromatic number is at least 4.
+On the other hand, Pach [13] found an interesting characterization of the graphs Γi.
+3
+
+===== PAGE 4 =====
+Theorem 2 The graphs Γi are just the triangle-free, twin-free graphs, where every maximal
+stable set is the neighborhood of a vertex.
+Let us now turn to 4-chromatic graphs. A class of good weighted graphs, the Vega graphs
+were introduced by Brandt and Pisanski [5]. The construction is as follows: For some integer
+i ≥2, start with a graph Γi on vertex set {1, . . . , 3i −1} and add an edge xy and an induced 6-
+cycle (a, v, c, u, b, w) such that x is joined to a, b, c and y is joined to u, v, w. The set of neighbors
+of a, u on the Γi graph is {1, . . . , i}. The set of neighbors of b, v on the Γi graph is {i+1, . . . , 2i}.
+The set of neighbors of c, w on the Γi graph is {2i + 1, . . . , 3i −1}. This is the sole Vega graph
+on 3i + 7 vertices. We denote it by Υi.
+There are two Vega graphs on 3i + 6 vertices, obtained from Υi by a simple vertex deletion.
+The ﬁrst one is Υi −{y}, the second Υi −{2i} (the latter sequence does not occur in [5], perhaps
+due to the fact that for i = 2 both graphs are isomorphic). Finally, the last Vega graph, on
+3i + 5 vertices, is Υi −{y, 2i}. Observe that the Vega graph Υ2 −{y, 4} is exactly the Gr¨otzsch
+graph. Moreover, every vertex in a Vega graph is a neighbor of x, a, b or c, in other words,
+Nx ∪Na ∪Nb ∪Nc is the whole vertex set, this makes the Vega graphs 4-colorable, and even
+4-chromatic since they contain the Gr¨otzsch graph.
+Let us start with the fact that Vega graphs are good (see [5]):
+Theorem 3 Every Vega graph is a regular good weighted graph with positive weight function.
+Proof. We already know that Vega graphs are 4-chromatic and it is routine to check that Vega
+graphs are twin-free and maximal triangle-free. We have moreover to exhibit a regular weight
+function with minimum degree δ > 1/3. To avoid fractions, we display integer weights. The
+normalization for the weight function is obtained by dividing these weights by the total weight.
+Υi: Assign weight 1 to the vertices x, y, 1, 2i, weight 3i −3 to c, w, weight 3i −2 to u, v, a, b
+and weight 3 to all the other vertices. The degree is 9i −6, and the total weight is 27i −19.
+Υi −{y}: Assign weight 1 to the vertices 1 and 2i, 2 to x, 3i −4 to w, 3i −3 to u, v, c, 3i −2
+to a, b and 3 to all the other vertices. The degree is 9i −7, and the total weight is 27i −22.
+Υi −{2i}: Assign weight 1 to x, y, 2 to 1, i, 3i −3 to b, v, c, w, 3i −2 to u, a and 3 to all the
+other vertices. The degree is 9i −7, and the total weight is 27i −22.
+Υi −{y, 2i}: Assign weight 2 to x, 1, i, weight 3i −4 to v, w, 3i −3 to u, b, c, 3i −2 to a and
+3 to all the other vertices. The degree is 9i −8, and the total weight is 27i −25.
+■
+The main result of this paper is that the good graphs are just the Vega graphs.
+Theorem 4 A graph is good if and only if it is a Vega graph.
+The necessity follows immediately from Theorem 3, so it is left to prove the suﬃciency.
+Combining this result with Theorem 1 gives the following characterization result:
+Corollary 4.1 The twin-free, maximal triangle-free, weighted graphs with δ > 1/3 are the 3-
+colorable graphs Γi for i ≥1 and the 4-chromatic Vega graphs.
+Concentrating on the chromatic number we immediately get the following statement, con-
+jectured by Brandt [3].
+4
+
+===== PAGE 5 =====
+Corollary 4.2 Every triangle-free graph with minimum degree > n/3 is 4-colorable.
+There are several further consequences of our result, the ﬁrst of which is a strengthening of
+the previous corollary.
+Corollary 4.3
+(1) Every maximal triangle-free graph with minimum degree > n/3 has a reg-
+ular weight function ω.
+(2) Every maximal triangle-free graph with minimum degree > n/3 has a dominating K1,t,
+t ≤3.
+(3) Every triangle-free graph with minimum degree > in/(3i −1) is homomorphic to Υi−1, for
+i ≥3.
+(4) Every maximal triangle-free, twin-free weighted graph with minimum degree δ > i/(3i −1)
+has at most 3i −4 vertices, for i ≥2.
+Statements (1) and (4) were conjectured in [3, Conjectures 3.8 and 5.1] and (3) reﬁnes the
+result of ÃLuczak [14].
+Proof.
+(1) This is immediate from Theorems 1, 3, and 4.
+(2) This follows from (1) combined with the main result of [3, Theorem 1.3].
+(3) It is easy to verify that the graphs under consideration are Γj, j < i and Vega graphs with
+at most i vertices. By deﬁnition, the Vega graph Υi−1 has order 3i + 4 and contains Γj
+and all smaller order Vega graphs.
+(4) Again, the graphs under consideration are the graphs Γj, j < i, with at most 3i−4 vertices
+and Vega graphs with at most i vertices.
+■
+Our main result can be interpreted in the way that the triangle-free graphs with minimum
+degree δ > n/3 have a simple structure. So it is not surprising that certain parameters, that are
+hard to compute for general graphs can be computed in polynomial time. This was shown by
+Brandt [2] for the independence number and we will prove it here for the chromatic number at
+the end of this paper.
+From now on, let (G, ω) be a good weighted graph with minimum weighted degree δ > 1/3.
+Among the weight functions ω we choose one which maximizes the minimum degree and if there
+is a regular weight function ω we choose this. Linear programming yields that if there is a
+regular weight function, it maximizes δ. Among the vertices of minimum weight of G let x be
+one of minimum (unweighted) degree in G.
+The proof of Theorem 4 proceeds in three steps: The ﬁrst step is already completed in
+Theorem 3 by showing that the Vega graphs form a family of good weighted graphs. The ﬁnal
+steps are the following statements.
+5
+
+===== PAGE 6 =====
+Theorem 5 If G is a good weighted graph and G −x is not a good weighted graph then G =
+Υi −{y, 2i}.
+Theorem 6 If G is a good weighted graph such that G −x is a Vega graph then G is a Vega
+graph.
+So there cannot be a minimal good weighted graph which is not a Vega graph and therefore
+the good weighted graphs are just the Vega graphs.
+The proof of Theorem 5 is performed in the next two sections while the proof of Theorem 6
+is completed in the ﬁnal section.
+2
+The structure of regular good graphs.
+Here we investigate the structure of (G, ω) when ω is regular. To simplify the notation, we
+frequently replace the weight ω(x) simply by x. As usual, ω(A) (or just A) denotes the sum of
+the weights of the elements of A. We start with some preliminary results that do not require the
+fact that the chromatic number is at least 4. Let Q3 be the graph of the 3-dimensional cube.
+Lemma 1 (Brandt [3]) Every good weighted graph does not contain an induced Q3 subgraph.
+Lemma 2 (Brandt [3]) Every stable set S of (G, ω) is such that ω(S) ≤δ.
+We sketch the proof of this result as a warm-up for the typical reasoning in this paper.
+Proof. Consider a stable set S with maximum weight. If S is dominated by a vertex, its weight
+is clearly at most δ. So assume it is not. The key-fact here is that there exists a subset T of S
+such that T
+x∈T Nx is empty, just consider T = S. Now, choose T minimum in size. We claim
+that |T| ≤3, otherwise G contains an induced cube (i.e. a K4,4 minus a perfect matching).
+Thus T has two or three elements. If T = {a, b}, since S, Na and Nb are disjoint, we have
+S + 2δ ≤1, and since δ > 1/3, we have S ≤δ. If T = {a, b, c}, we denote by S′ the set
+(Na ∩Nb) ∪(Na ∩Nc) ∪(Nb ∩Nc). Note that S′ is a stable set, in particular S′ ≤S. But if
+we sum the weights of the neighborhoods of a, b, c, we get Na + Nb + Nc −S′ + S ≤1. Thus
+S ≤1 −3δ + S′, which contradicts the fact that S′ ≤S.
+■
+In fact, the stronger result was shown that every maximal weight stable set is the neighbor-
+hood of a vertex. The following observation will be frequently used.
+Lemma 3 For every induced C6 of (G, ω) there is a vertex in G dominating three of its vertices.
+Proof. Assume not, then summing the degrees of the vertices of C6 we get
+6δ ≤
+X
+v∈C6
+d(v) ≤2,
+and hence δ ≤1
+3, a contradiction.
+■
+6
+
+===== PAGE 7 =====
+2.1
+Global structure.
+Here we reﬁne the reasoning in [3] and describe the global structure of a regular good graph in
+more detail. Recall that x is among the vertices of minimum weight in (G, ω) one of minimum
+degree in G.
+Claim 1 In the neighborhood of x, there exist three vertices a, b, c such that Na ∩Nb ∩Nc = {x}.
+Proof. First of all, {x} = T
+y∈Nx Ny, otherwise Nx would be a subset of some Nz, contradicting
+the fact that G is maximal triangle-free and twin-free. Now consider a smallest subset T of Nx
+such that x = T
+y∈T Ny. By the minimality, for each vertex v of T there is a vertex in G being
+adjacent to every vertex of T but v. Since Q3 is isomorphic to K4,4 minus a perfect matching,
+T has at most three vertices by Lemma 1. If T = {a}, we have Na = {x}, and by the fact that
+G is maximal triangle-free, x would dominate every vertex, contradicting our assumption that
+G is not 3-colorable. If T = {a, b}, denoting by Q the vertices which are not neighbors of x, a
+or b, we have 1 −Q = Na + Nb + Nx −x > 1 −x. This gives Q < x, and since x has minimum
+weight, Q is empty. But this would mean that V (G) = Na ∪Nb ∪Nx, and thus G is 3-colorable.
+■
+We denote by R the (stable) set of vertices that are neighbors of at least two vertices of
+a, b, c. Note that R contains x. Two cases can occur: there can be a vertex y in G dominating
+R or not. We will show that if y does not exist, G is just a Vega graph Υi −{y, 2i}. This is the
+ﬁrst and major step in the proof of Theorem 5. For the moment, we still assume that y may or
+may not exist.
+Claim 2 R = 4δ −1 −x.
+Proof. If we sum all the degrees of a, b, c, x, we get 4δ −R −x = 1 −Q, where Q is the set
+of vertices which are not neighbors of a, b, c, x. It gives that Q = 1 −4δ + R + x. Since R is a
+stable set, its weight is at most δ, and thus Q ≤1 −3δ + x < x. Since x has minimum weight,
+the set Q is empty, implying 4δ −R −x = 1.
+■
+Observe that R is a maximal stable set, since adding any vertex gives weight at least 4δ−1 >
+δ. Observe also that since Q is empty, every vertex of G is a neighbor of x, a, b, or c. In particular
+G is 4-colorable. This is how the ﬁrst author proved in [3] that every regular triangle-free graph
+with δ > n/3 is 4-colorable.
+Let us now partition R into x, U, V, W, where U = (Nb ∩Nc) \ {x}, V = (Na ∩Nc) \ {x} and
+W = (Na ∩Nb) \ {x}. Note that U (as well as V and W) is not empty since otherwise we would
+have Nb ∩Nc = {x}, against the proof of Claim 1. Moreover we denote by X the set Na \ R,
+also Y := Nb \ R and Z := Nc \ R.
+Claim 3 The sets Nx, R, X, Y, Z partition V (G).
+Proof. This is just a reformulation of V (G) = Nx ∪Na ∪Nb ∪Nc.
+■
+Let u ∈U such that ω(Nu ∩X) is as large as possible, similarly pick v ∈V and w ∈W such
+that ω(Nv ∩Y ) and ω(Nw ∩Z) are as large as possible.
+7
+
+===== PAGE 8 =====
+Claim 4 If p ∈Nu ∩Nx then U ⊆Np. In other words, whenever a neighbor of x is joined to
+u, it is also joined to U.
+Proof. Assume not, and pick a non-neighbour u′ ∈U of p. Since G is maximal triangle-free
+there is a vertex x′ such that p, u′ ∈Nx′. Note that such a vertex x′ is necessarily in X and is
+not joined to u. Since u has maximum weighted degree in X, there is a vertex x′′ of X such
+that x′′ ∈Nu but x′′ /∈Nu′. Now let q be a common neighbor of u′, x′′, observe that q ∈Nx.
+We have formed an induced 6-cycle upx′u′qx′′ such that no vertex of G dominates three of its
+vertices, a contradiction to Lemma 3.
+■
+Claim 5 X ⊆Nu, Y ⊆Nv and Z ⊆Nw.
+Proof.
+Assume that a vertex x′ of X is not a neighbor of u. Since R is a maximal stable
+set, there exists a vertex u′ ∈R joined to x′. Observe that u′ is necessarily in U. There exists
+a common neighbor p ∈Nx of u, x′. Since p is joined to u, it is joined to U by the previous
+claim. This is a contradiction since px′u′ is a triangle. The two other inclusions are veriﬁed
+analogously.
+■
+Claim 6 Every vertex of Nu ∩Nv ∩Nw dominates R.
+Proof.
+Observe that Nu is disjoint from R ∪Y ∪Z. Thus Nu ∩Nv ∩Nw is disjoint from
+R ∪X ∪Y ∪Z, and falls into Nx by Claim 3. By Claim 4, every vertex of Nx ∩Nu ∩Nv ∩Nw
+must be a neighbor of {x} ∪U ∪V ∪W. Finally, Nu ∩Nv ∩Nw dominates R.
+■
+When R is not dominated, this simply mean that Nu ∩Nv ∩Nw is empty.
+Otherwise
+Nu ∩Nv ∩Nw is a (unique) vertex y which dominates R. Let S be the set of vertices that are
+adjacent to at least two of u, v, w.
+Claim 7 We have S = Nx.
+Proof. Observe that S ⊆Nx. We need now two distinct proofs.
+If R is not dominated, we let Q = Nx \ S. We have R + Nu + Nv + Nw −Nx + Q ≤1. Thus
+6δ −2 −x + Q ≤0, and then Q < x. In particular, Q is empty.
+If R is dominated by some vertex y, it suﬃces to show that every vertex of Nx is adjacent to
+at least two vertices of u, v, w. Assume without loss of generality that p ∈Nx is not adjacent to
+u, v. Then p has common neighbors x′ with u and y′ with v. Note that x′ ∈X and y′ ∈Y . But
+then px′uyvy′ is an induced C6 in which no vertex of G has three neighbors, a contradiction to
+Lemma 3.
+■
+By Claim 7, when R is dominated by some vertex y, every neighbor of x has at least two
+neighbors in u, v, w. We will also need that every vertex has a neighbor in u, v, w or y which is
+a consequence of Claim 3 and 5.
+We consider the partition A, B, C of Nx \ {y} (i.e. Nx if y does not exist), where A is the
+set of vertices that are neighbors of v, w, B is the set of vertices that are neighbors of u, w and
+C is the set of vertices that are neighbors of u, v.
+8
+
+===== PAGE 9 =====
+y
+x
+a
+b
+c
+u
+v
+w
+x
+a
+b
+c
+u
+v
+w
+X
+Y
+Z
+A
+B
+A
+B
+C
+U
+V
+W
+U
+V
+W
+C
+X
+Y
+Z
+Figure 1: The global structure of regular good weighted graphs (dashed lines indicate that some
+edges may be present while bold edges indicate that all edges are present between the respective
+sets).
+Claim 8 There is no edge between B and X, V and X, C and X, W and X, A and Y , U and
+Y , C and Y , W and Y , A and Z, U and Z, B and Z, V and Z.
+Proof. Each such edge would belong to a triangle, for instance in the case of B and X any
+edge would form a triangle with u.
+■
+Claim 9 There are all edges between A and V , A and W, B and U, B and W, C and U and
+C and V .
+Proof. Assume that two elements of A and V are not joined by an edge, since G is maximal
+triangle-free, there should be a vertex dominating them. There is no room for such a vertex in
+the graph.
+■
+Observe now that the global structure of a regular good weighted graph is as depicted in
+Figure 1.
+Now the local structure of the subgraphs induced by XY Z, AXU, BY V , and CZW is left
+to be determined. We will do that for the case that R is not dominated and show that the
+local structure is such that a Vega graph arises. By the ﬁnal result, the local structure in the
+non-dominated case is very much alike. Before starting to determine the local structure we will
+establish two useful facts concerning the weights of vertices and sets.
+Claim 10 The weight of x is 6δ−2 if R is not dominated and x = y = 3δ−1 if R is dominated.
+9
+
+===== PAGE 10 =====
+Proof. If R is not dominated, summing the degrees of a, b, c, u, v, w we get 6δ = 2+x. Otherwise
+we get 6δ = 2 + x + y and R = δ and by Claim 2 we obtain x = 3δ −1 implying y = 3δ −1. ■
+Claim 11 If R is not dominated we have A = X = U + x/2, B = Y = V + x/2, and C = Z =
+W + x/2.
+Proof. Comparing the neighborhoods of u, v, w with x, we get A = X, B = Y , and C = Z.
+Comparing the neighborhoods of a and u, and b and v, we get B + C = V + W + x and
+A+C = U +W +x. Thus A+B +C +C = U +V +W +x+x+W, that is Nx +C = R+x+W.
+Since R = 4δ −1 −x, we have δ + C = 4δ −1 + W. Finally C = W + x/2. We prove similarly
+that A = U + x/2 and B = V + x/2.
+■
+It is now left to determine the internal structure of the tripartite subgraphs induced by
+XY Z, AXU, BY V , and CZW.
+2.2
+Simple tripartite graphs.
+A graph is 2K2-free if it does not contain two independent edges as an induced subgraph. We
+call a tripartite graph simple, if each pair of its partite sets induces a 2K2-free subgraph. It
+turns out that each of the indicated subgraph must be simple. We call a tripartite triangle-free
+graph maximal if any two non-adjacent vertices from diﬀerent sets have a common neighbor,
+which clearly must belong to the third set. Still the graph may not be maximal triangle-free
+since vertices from the same set can have no common neighbor.
+Lemma 4 The induced tripartite graphs on XY Z, AXU, BY V and CZW are simple and
+maximal.
+Proof. Consider the graph induced by XY Z and assume for instance that its bipartite subgraph
+induced by Y Z contains a 2K2. Since G is maximal triangle-free the graph induced by XY Z
+must be maximal tripartite triangle-free since by Claim 8, vertices from diﬀerent sets can only
+have a common neighbor in the third set.
+In particular, any common neighbor of a vertex
+in Y and a vertex in Z belongs to X. Assume now that there exist two independent edges
+y1z1 and y2z2 between Y and Z. There exists a vertex x1 ∈X dominating y1, z2 and a vertex
+x2 ∈X dominating y2, z1. Now x1y1z1x2y2z2 is an induced 6-cycle. But no vertex of G can
+dominate x1, z1, y2 nor y1, x2, z2, a contradiction to Lemma 3. All the other possible cases follow
+analogously.
+■
+Lemma 5 Every 2K2-free bipartite graph with bipartition (X, Y ) has a vertex in X dominating
+Y or an isolated vertex in Y .
+Proof. Choose a vertex x ∈X of maximum degree. If x is not dominating Y then there is a
+vertex y ∈Y which is not adjacent to x. Assume that y is not isolated. It has a neighbor x′ ∈X.
+Since the degree of x is maximum, there must be a neighbor y′ of x, which is not adjacent to x′.
+So xy′, x′y is an induced 2K2.
+■
+In a tripartite graph, a central vertex is a vertex which set of neighbors consists exactly of
+one part.
+10
+
+===== PAGE 11 =====
+Lemma 6 Every maximal simple tripartite graph XY Z has at least two central vertices.
+Proof. We just have to prove that there exists a vertex which is independent of one part which
+is not its own part, it will be then joined to the third part by maximality. Consider now all
+ordered pairs (X, Y, ), (Y, Z), (Z, X). To avoid triangles, one of them have a vertex in the ﬁrst
+set which does not dominate the second set. Thus, by Lemma 5, one of the second sets must
+have a vertex independent of the ﬁrst set. This is our ﬁrst central vertex. Observe that by
+reversing the order of the three pairs, we get a second central vertex.
+■
+A tripartite graph is twin-free if it has no twins in the same partite set.
+Lemma 7 Let XY Z be a maximal tripartite triangle-free graph. If x, x′ ∈X are not twins,
+there exists a path of length four with endvertices x, x′, and thus with inner vertices in Y and
+Z.
+Proof.
+Since the graph is twin-free, there is a edge say xy, with y ∈Y such that x′ is
+independent of y. By maximality, there exists a vertex z ∈Z which is both joined to x′ and y.
+Now, xyzx′ is our path.
+■
+The next result is the inductive key of the characterization result:
+Lemma 8 If H is a twin-free maximal simple tripartite graph and v is a central vertex of H,
+then H −v is also a twin-free maximal simple tripartite graph.
+Proof. The graph H −v is obviously simple. Since v is a central vertex, any two twins in the
+same part of H −v were twins in H. Thus H −v is twin-free. Moreover, any two non-adjacent
+vertices in diﬀerent parts of H −v that have no common neighbor had no common neighbor in
+H. Thus H −v is maximal triangle-free.
+■
+First we need to recall a useful tool observed by the ﬁrst author as a variant of Pach’s above
+mentioned result Theorem 2.
+Theorem 7 (Brandt [4]) The only graphs that are maximal triangle-free and without an in-
+duced C6 are the graphs Γi, i ≥1, with some vertices duplicated.
+We will now give a characterization of the twin-free maximal simple tripartite graphs.
+Observe that the graphs Γi with the tripartition X = {1, . . . , i}, Y = {i + 1, . . . , 2i} and
+Z = {2i + 1, . . . , 3i −1} have this property. Indeed, they are maximal triangle-free and twin-
+free. Assuming that x1y1, x2y2 is an induced 2K2 between two partite sets X, Y , there must be
+common neighbors z1 of x1 and y2 and z2 of x2 and y1. Since z1, z2 must belong to the third
+partite set Z, this gives an induced C6, contradicting Theorem 7. So they are simple as well.
+Moreover every two tripartitions are isomorphic by an isomorphism mapping partite sets onto
+partite sets.
+Fix our initial labelling of Γi and the tripartition X, Y, Z. There are two central vertices
+1 and 2i. Deleting the vertex 2i from the set Y , we get a twin-free maximal simple tripartite
+11
+
+===== PAGE 12 =====
+graph Γ′
+i (though not maximal triangle-free in the graph sense). The central vertices of this
+graph are 1 joined to Y and i joined to Z. Deleting 1, we get another twin-free maximal simple
+tripartite graph Γ′′
+i (note that this graph contains the twins i, i + 1 in diﬀerent sets). Observe
+that the graphs Γi and Γ′′
+i have an automorphism exchanging X and Y and ﬁxing Z, and Γ′
+i has
+an automorphism exchanging Y and Z and ﬁxing X.
+We now show that these are (up to isomorphisms mapping partite sets to partite sets) the
+only maximal simple tripartite graphs without twins in the same set.
+Theorem 8 A graph H is maximal simple tripartite without twins in the same set, if and only
+if it is isomorphic to a graph Γi, Γ′
+i, or Γ′′
+i , by an isomorphism mapping partite sets to partite
+sets.
+Proof. We have already seen that the graphs Γi, Γ′
+i, Γ′′
+i have this property. So it suﬃces to prove
+that every maximal simple tripartite graph without twins in the same set has an isomorphism
+to one of these graphs mapping partite sets to partite sets. We proceed by induction.
+Let H be a maximal simple tripartite graph without twins in the same set. If |H| ≤1 the
+result holds, so assume that |H| ≥2. By Lemma 6, H has a central vertex v, and by induction
+and Lemma 8, H −v is isomorphic to a graph Γi, Γ′
+i, or Γ′′
+i by an isomorphism respecting the
+partite sets.
+If H −v is isomorphic to Γi, then v was deleted from Z. Otherwise by the symmetry of X
+and Y we may assume that v was deleted from X. Now if v is joined to Y and independent of
+Z then it is a twin of 1 in X and if v is joined to Z and independent of Y , the neighborhood
+of v would be a proper subset of the neighborhood of i ∈X, contradicting the maximality
+requirement. So, by symmetry, we may assume that v ∈Z was joined to Y and independent of
+X. This gives an isomorphism of H into Γ′′
+i+1 mapping j to j + 1 in X ∪Y , j to j + 2 in Z and
+v to 3i + 2.
+By an analogous reasoning we get, when H −v is isomorphic to Γ′
+i, that v was deleted from
+Y or Z and is joined to X. By symmetry, we get that H is isomorphic to Γi. Finally, if H −v
+is isomorphic to Γ′′
+i , we get that v was deleted from X and is joined to Y or v was deleted from
+Y and is joined to X. By symmetry, we get that H is isomorphic to Γ′
+i.
+■
+In the next part we determine the structure inside the tripartite subgraphs in more detail.
+2.3
+Twins in tripartite graphs.
+Here we assume that G is a good graph such that the set R is not dominated (i.e., no vertex y
+exists) and we investigate the structure of the simple tripartite graphs induced by XY Z, AXU,
+BY V , and CZW. Note that although G is twin-free there can be twins with respect to the
+tripartite graphs.
+Lemma 9 All vertices of Y are twins in XY Z or in BY V .
+Proof. Let y, y′ ∈Y be two vertices. If they are not twins in XY Z, there is a vertex x′ ∈X
+which is joined, say, to y′ but not to y. Now x′ and y must have a common neighbor z in Z.
+Observe that z is not joined to y′. If y and y′ are not twins in BY V then, similarly, there is a
+12
+
+===== PAGE 13 =====
+path of length three yv′b′y′ where v′ ∈V and b′ ∈B. Now yv′b′y′x′z is a 6-cycle, and no vertex
+can dominate yb′x′ nor v′y′z, a contradiction by Lemma 3.
+Since G is twin-free, every pair of vertices can be twins only in one of the graphs XY Z
+or BY V . Consider the auxiliary complete graph H on the vertex set Y . Since being twins is
+an equivalence relation, it follows that the twins in XY Z and the twins in BY V both induce
+subgraphs of H consisting of vertex-disjoint cliques. Therefore one of them must contain all
+edges of H. In particular, all vertices of Y are twins in XY Z or in BY V .
+■
+Claim 12 In the subgraph induced by BY V , no vertex of B or V is independent of Y . Moreover,
+if all the vertices of Y are twins in BY V , then B and V are the singletons {b} and {v}.
+Proof. Observe that every vertex of V has a neighbor in Y , otherwise its neighborhood would
+be included in Nx. Hence, to avoid triangles, b is independent of V , and thus central. Conversely,
+no vertex from B can dominate V since R is not dominated. So, by Lemma 5, there must be a
+vertex in V which is independent of B. Since the neighborhood of this vertex would be included
+in Nv, this vertex is indeed v. Observe that b and v are the central vertices of BY V both
+dominating Y . By Lemma 4 and Theorem 8, the graph induced by BY V is isomorphic to Γ′′
+i
+(maybe containing twins), since only in Γ′′
+i the central vertices dominate the same set.
+Finally, if all vertices in Y are twins in BY V , it follows that this graph is Γ′′
+2 (up to twins),
+i.e. the path on three vertices with center vertex Y . In particular, all the vertices of B and of
+V are twins in BY V . But this means that they are also twins in G, and thus equal to b and v,
+respectively.
+■
+Analogous statements hold for the graphs AXU and CZW.
+Claim 13 All vertices of X, Y, Z are twins in AXU, BY V and CZW, respectively.
+Proof. Observe ﬁrst that there exists an edge between any two parts of the graph induced by
+XY Z. If not, say X, Z are independent, pick two vertices x′ ∈X and z′ ∈Z. Then there is no
+vertex dominating three vertices of the induced 6-cycle ax′ucz′wa, a contradiction to Lemma 3.
+In particular, for one of the parts in XY Z, say X, not all vertices are twins, otherwise we would
+get either a triangle, or two independent parts. Thus, by Claim 12, A = {a} and U = {u}.
+Assume for a contradiction that the vertices of, say, Z are not twins in CZW. Then the
+vertices of Z are twins in XY Z by Lemma 9. By Theorem 8, the graph induced by XY Z is (up
+to twins) isomorphic to some graph Γi, Γ′
+i, Γ′′
+i . Since Z is a singleton in XY Z, we have i = 2.
+Moreover, the case Γ′′
+2 is impossible since X has at least two vertices that are not twins. So
+the graph induced by XY Z is Γ′
+2 or Γ2 (up to twins). In particular X = {x1, x2}, where x1
+dominates Z, and x2 is independent of Z and therefore dominates Y .
+First assume that the vertices of Y are not twins in BY V . Since by Claim 12, no vertex
+in B or V is independent of Y there are, by Lemma 5, distinct vertices y1 ∈Y dominating
+B and y2 ∈Y dominating V . By Lemma 7, there is a path y1b1v2y2 in the subgraph BY V .
+Analogously there is a path z1c1w2z2 in CZW. Observe also that Y is completely joined to
+Z, and thus x1 is independent of Y . Let S be the set {x1, x2, y1, y2, z1, z2, b1, v2, c1, w2}. Every
+vertex of B, C, V, W has at most three neighbors in S (for instance a vertex of B has neighbors
+y1, w2 and at most one vertex of the edge y1v2). Every vertex of A, Y, Z, U has at most four
+neighbors in S (this is clear for A and U, and a vertex of Y is joined to x2, z1, z2 and at most
+13
+
+===== PAGE 14 =====
+one vertex in the edge b1v2). Finally, every vertex xi ∈X has exactly two neighbors in S. Thus,
+summing the degrees of the elements of S and using Claim 11, we get:
+10δ ≤3 + Y + Z + A + U −X −x = 3 + A + B + C + U −X −x = 3 + δ −3
+2x,
+which implies 3
+2x ≤3 −9δ < 0, a contradiction.
+So we may assume that all the vertices of Y are twins in BY V , and thus B = {b} and
+V = {v}. Recall that the graph induced by XY Z is isomorphic to Γ2 or Γ′
+2 (possibly with
+twins).
+First assume that XY Z induces Γ2.
+Then Y = {y1, y2}, where y1 dominates Z and y2
+dominates X and is independent of Z. Summing the degrees of x1 and y1 we get by Claim 11
+2δ = Z + a + u + y2 + Z + b + v + x2 = 2a + 2b + 2C −x + x2 + y2 = 2δ −x + x2 + y2
+implying x2 + y2 = x, a contradiction to x having positive minimal weight 6δ −2 (Claim 10).
+Finally, assume that XY Z induces Γ′
+2.
+Here we have Y = {y1}, dominating Z and x2.
+Again, summing the degrees of x1 and y1 we get by Claim 11
+2δ = Z + a + u + Z + b + v + x2 = 2a + 2b + 2C −x + x2 = 2δ −x + x2
+implying x2 = x. Since CZW is a Γ′′
+i for some i ≥3 (indeed, |Z| ≥2 since the elements of Z are
+not twins in CZW), there are at least two vertices in C. So the (unweighted) degree of x in G
+is at least four while the neighborhood of x2 is a, u, y1, a contradiction to the degree minimality
+assumption for x among the minimum weight vertices.
+■
+In particular, by Claim 12, U, V, W, A, B, C are the singletons {u}, {v}, {w}, {a}, {b}, {c}.
+Our graph G has then the structure depicted in Figure 2.
+2.4
+The characterization step.
+Here we complete the characterization of the regular good graphs when R is not dominated.
+Since each of the sets A, B, C, U, V, W consists of a single vertex, it is left to show that the graph
+induced by XY Z is a graph Γ′
+i.
+Proposition 1 If R is not dominated, then G is isomorphic to Υi −{y, 2i}, for some i ≥2.
+Proof. We just have to show that the graph H induced by XY Z is Γ′
+i, with its usual tripartition.
+Assume that this is not the case. Then, by Theorem 8, H must be isomorphic to Γi or Γ′′
+i .
+In the latter case, there are central vertices x1 ∈X independent of Y , and y1 ∈Y independent
+of X. Now, ax1uby1v is an induced C6 contradicting Lemma 3.
+So we may assume that H = Γi. Then G is isomorphic to Υi −{y}. By complementary
+slackness G has a unique regular weighting where all vertices have the same degree and the total
+weight is 1, which is given in Theorem 3, up to normalization. But now the vertices 1 and 2i
+have smaller weight than x, a contradiction to the choice of x.
+■
+14
+
+===== PAGE 15 =====
+x
+a
+b
+c
+u
+v
+w
+X
+Y
+Z
+Figure 2: Reﬁned structure of good regular weighted graphs if R is not dominated.
+3
+The deletion step.
+If G = Υi −{y, 2i}, then G −x is not a good weighted graph by Lemma 3 applied to the C6
+induced by a, b, c, u, v, w. Our aim here is to show that for all other good weighted graphs G,
+regular or not, the graph G −x is again good.
+Proposition 2 If G ̸= Υi −{y, 2i} is a good weighted graph then (G −x, ω′) is a good weighted
+graph for a suitable weight function ω′.
+Proof. Observe ﬁrst that G−x is twin-free. If there were twins in G−x, one of them would have
+in G its neighborhood included in the second. This is impossible since G is maximal triangle-free
+and twin-free. Observe also that if G −x has a weight function with δ > 1/3 and is maximal
+triangle-free, it cannot have chromatic number less than 4. Otherwise, by Theorem 1, G −x is
+exactly a Γi graph, and thus x, by Theorem 2, would be joined to a maximal stable set of this
+Γi graph, and therefore would be a twin of some other vertex.
+By the two previous observations it is left to show that G −x is maximal triangle-free and
+has a weight function with δ > 1/3. The arguments diﬀer depending on whether the graph has
+a regular weight function or not.
+Let (G, ω) be regular. In particular, since G ̸= Υi −{y, 2i}, the set R is dominated. Observe
+that G −x is maximal triangle-free, since by Claim 7 every pair of vertices of Nx has a common
+neighbor in {u, v, w}.
+By Claim 10, x has weight 3δ −1. We just have to ﬁnd a weight function for G−x. Delete x
+and add 3δ −1 to the weights of u, v, w, y. The key observation here is that the weight of every
+neighborhood increases by 3δ −1 since every neighbor of x has at least two neighbors in u, v, w,
+and every vertex has a neighbor in u, v, w, y. At the same time, the total weight increases by
+9δ −3, so this new weight function ω′ still achieves δ′ > 1/3, when renormalized.
+15
+
+===== PAGE 16 =====
+Let (G, ω) be not regular. Here we use the duality theorem of linear programming. If ω
+achieves the maximum minimum degree δ, there exists a dual weight function ωd with the same
+total weight 1, such that ωd(Nv) ≤δ for every vertex v of G. By complementary slackness, we
+also know that if a vertex v has weight nonzero for ω, it satisﬁes ωd(Nv) = δ. In particular, it
+is necessary that ω has a vertex x which has weight zero since if not, ωd would be regular with
+degree δ, and we would consider this weight function instead of ω.
+So the restriction of ω to G −x has minimum degree δ > 1
+3, and we just have to show that
+G −x is maximal triangle-free. If this is not the case, there are two nonadjacent vertices z, z′
+of G −x such that the unique vertex of G joined to both is exactly x. The sum of the degrees
+of x, z, z′ is 3δ. Meanwhile, the only vertex which is counted twice is x, which has weight zero.
+This would give 1 ≥3δ, a contradiction.
+■
+From this point, we know that every good graph contains a Υi −{y, 2i}. In particular, we
+reproved that every good graph contains a Gr¨otzsch graph.
+4
+The induction step.
+Our ﬁnal goal is now to prove Theorem 6, saying that if a good weighted graph (G, ω) has a
+vertex t such that G −t is a Vega graph, then G is also a Vega graph.
+Now, let G be a graph having a vertex t such that G −t is a Vega graph. So G consists of
+7 or 8 vertices x, a, b, c, u, v, w and possibly y and a graph Γi or Γi −{2i}, such that the vertex
+sets X = N(a)∩N(u), Y = N(b)∩N(v), Z = N(c)∩N(z) form a proper 3-coloring of Γi. Note
+that the possibly deleted vertex 2i has the property that its set of neighbors in Γi is precisely
+one of the sets X, Y, Z. In order to use the symmetries of the situation we will only use this
+property of 2i, and will not prescribe to which set it is joined. Now we are prepared to prove
+Theorem 6.
+Proof.
+We consider the 6-cycle C induced by {a, b, c, u, v, w} and T = N(t) ∩V (C). We will
+show that in any case:
+(1) t is a twin of some vertex of G −t, contradicting that G is twin-free,
+(2) t belongs to a C6 in which no vertex in G has more than 2 neighbors, a contradiction to
+Lemma 3,
+(3) t is the missing vertex 2i or y of G −t, and hence G is a Vega graph, or
+(4) there is an independent set containing vertices from all three sets X, Y, Z, which contradicts
+Pach’s characterization (Theorem 2). This is due to the fact that X, Y, Z is (or can be
+extended to) a proper 3-coloring of Γi, but there is no vertex in Γi that dominates vertices
+from three diﬀerent color classes.
+If T = {a, b, c} then t is a twin of x. Analogously, if T = {u, v, w} then t is either a twin of
+y or t is the missing vertex y.
+Otherwise, |T| ≤2. First assume T = ∅. Then, since t can be adjacent to at most one vertex
+of {x, y}, it must be adjacent to at least one vertex of each of the sets X, Y, Z since it must
+16
+
+===== PAGE 17 =====
+have distance 2 to each vertex of C. As indicated above, this contradicts Pach’s characterization
+Theorem 2.
+Now assume that T has exactly two neighbors in one partite set of the bipartition of C.
+W.l.o.g., t is adjacent to u, v (or a, b, resp.). But then it must be adjacent to each vertex in Z
+and to x (y, resp., if y is present) and hence t is a twin of c (w, resp.). So t has at most one
+neighbor in each of the partite sets.
+If t has a neighbor in both partite sets, w.l.o.g., T = {a, u}, then t cannot be adjacent to x
+nor to y. Moreover, t must be adjacent to a maximal independent set S of Y ∪Z, which contains
+vertices from both Y and Z, since t has distance 2 to both b and c. Since no independent set
+can contain vertices from all three sets X, Y, Z, the set S is maximal independent in the graph
+induced by X ∪Y ∪Z as well.
+By Pach’s characterization there must be a vertex x′ ∈X
+dominating S, unless S is the neighborhood of the deleted vertex 2i. In the ﬁrst case, t is a twin
+of x′, in the latter case, t is the missing vertex 2i, and hence G is a Vega graph.
+Finally, we have to treat the case where T consists of a single vertex, which we may assume
+to be a or u. If T = {a} then t must be adjacent to a maximal independent set S of Y ∪Z,
+containing vertices y′ ∈Y and z′ ∈Z, and to y, if y is present in G−t. But now t, y′, b, x, c, z′ is
+a C6 in which no vertex of G has more than two neighbors. If T = {u} then t must be adjacent
+to a maximal independent set S of Y ∪Z, containing vertices y′ ∈Y and z′ ∈Z, and to x. Since
+Γi and Γi −2i are both twin-free, one of the vertices y′, z′, say z′, has a non-neighbor x′ ∈X.
+Since G is maximal triangle-free, x′ and z′ have a common neighbor y′′, which must belong to
+Y . So t, z′, y′′, x′, a, x is a C6 in which no vertex of G has more than two neighbors.
+■
+5
+Computing the chromatic number.
+Here we show that the chromatic number and even a minimal coloring of a triangle-free graph
+with δ > n/3 can be computed in polynomial time. This question was asked by Brandt [2], who
+proved that a maximum independent set of a triangle-free graph with minimum degree δ > n/3
+can be computed in polynomial time, and, in fact, some tools can be reused here.
+Observe ﬁrst that Theorem 1 combined with our main Theorem 4 immediately gives a trivial
+O(n11) algorithm that decides the chromatic number of the triangle-free graph with minimum
+degree > n/3. First test whether the graph is bipartite and, if not, test every 11 vertex subset
+whether it it induces a Gr¨otzsch graph. If yes, the chromatic number is 4 and if none of the sets
+induces a Gr¨otzsch graph the chromatic number is 3. Next we sketch an algorithm that actually
+ﬁnds a minimal coloring in much faster running time.
+The ﬁrst useful observation from [2] is that a triangle-free graph G = (V, E) of order n with
+minimum degree δ > n/3 has a unique maximal triangle-free supergraph G′ = (V, E′) (in the
+labeled sense), which can be computed in time needed to multiply two n × n-matrices with
+0, 1-entries [2]. The currently best upper bound for the running time M(n) due to Coppersmith
+and Winograd [7] is O(n2.3677), while the best lower bound seems to be Ω(n2).
+Next we identify twins in G′. For this purpose we order the vertices by the characteristic
+vector of their neighborhoods. This can be performed in time O(n2 log n), using an O(n log n)
+sorting algorithm, since comparing two n-bit vectors takes time O(n).
+Find a vertex x of
+minimum degree in the resulting twin-free graph G′′ and check whether G′′ is regular. If d(x) = 1
+17
+
+===== PAGE 18 =====
+then G′′ = K2 is 2-chromatic. If d(x) ≥2 and G is regular then the graph is 3-chromatic, in
+fact, G = Γi for an i ≥2. A proper 3-colouring can be found in the following way. Take any
+neighbor p of x, choose a neighbor p′ of x which has the smallest number of common neighbors
+with p, and choose another neighbor p′′ that has the smallest number of common neighbors
+with p′. Now the neighborhoods N(x), N(p′), N(p′′) cover V (G′′). If G is not regular then it
+must be a Vega graph and d(x) is 3 or 4. If d(x) = 3 then {x} ∪N(x) is a set of 4 vertices
+whose neighborhoods cover V (G′′) since G′′ is maximal triangle-free. If d(x) = 4 then one of the
+3-element subsets S of N(x) has the property that the neighborhoods of {x} ∪S cover V (G′′).
+So we easily get a proper 3-coloring of G′′ in the regular case and a proper 4-coloring in the
+non-regular case. All this can be performed in time O(n2).
+Finally, coloring deleted twins of G′ with the color of its remaining twin in the graph in
+reverse order of deletion we get a proper coloring of G′ with the same number of colors. This
+coloring is also a proper coloring of its spanning subgraph G.
+So the total running time is
+O(M(n) + n2 log n).
+Concerning the independence number it has been shown that computing the independence
+number in the class of triangle-free graphs with δ > ( 1
+4 −ε)n is NP-hard for every ε > 0 [2]. A
+corresponding hardness statement for the chromatic number of triangle-free graphs with linear
+degree δ > cn seems not to be known for any c > 0.
+6
+The very end.
+Let us sum-up the results in the following way. Assume that c belongs to [0, 1/2] and denote
+by χc the supremum of the chromatic number of a triangle-free graph with minimum degree at
+least cn. We have:
+• For c ∈]0, 1/3[, Hajnal proved χc = +∞
+• For c ∈]1/3, 10/29[, the bound is χc = 4
+• For c ∈]10/29, 2/5], Jin proved χc = 3
+• For c ∈]2/5, 1/2], Andr´asfai, Erd˝os and S´os proved χc = 2
+So the following question remains open.
+Problem 1 What is the maximum chromatic number of a triangle-free graph with minimum
+degree equal to n/3?
+It can be any answer between 4 and +∞. Looking at the question from the other side we
+can ask the following question:
+Problem 2 Find for every t ≥5 the smallest function st(n) such that every triangle-free t-
+chromatic graph has minimum degree δ ≤1
+3n −st(n).
+We know that 0 ≤st(n) = o(n) for t ≥5 but ﬁnding tight upper and lower bounds may be
+diﬃcult.
+18
+
+===== PAGE 19 =====
+References
+[1] B. Andr´asfai, Graphentheoretische Extremalprobleme, Acta Math. Acad. Sci. Hungar. 15
+(1964), 413–438.
+[2] S. Brandt, Computing the independence number of dense triangle-free graphs, in: Graph
+theoretic concepts in computer science (Proc. 23rd Int. Workshop WG ’97, Berlin, R.
+M¨ohring ed.), Springer, 1997, pp. 100–108.
+[3] S. Brandt, A 4-colour problem for dense triangle-free graphs, Discrete Math., 251 (2002),
+33–46.
+[4] S. Brandt, On the structure of dense triangle-free graphs, Combin. Probab. Comput., 8
+(1999), 237–245.
+[5] S. Brandt, T. Pisanski, Another inﬁnite sequence of dense triangle-free graphs, Electron. J.
+Combin., 5 (1998).
+[6] C.C. Chen, G. Jin, K.M. Koh, Triangle-free graphs with large degree, Combin. Probab.
+Comput., 6 (1997), 381–396.
+[7] D. Coppersmith, S. Winograd, Matrix multiplication via arithmetic progressions, J. Sym-
+bolic comput., 9 (1990), 251–280.
+[8] R. Diestel, Graph Theory, Springer, New York, 1997.
+[9] P. Erd˝os, M. Simonovits, On a valence problem in extremal graph theory, Discrete Math.,
+5 (1973), 323–334.
+[10] R. H¨aggkvist, Odd cycles of speciﬁed length in nonbipartite graphs, Graph theory (Cam-
+bridge, 1981), 89–99.
+[11] G. Jin, Triangle-free four-chromatic graphs, Discrete Math., 145 (1995), 151–170
+[12] L. Lov´asz, Kneser’s conjecture, chromatic number, and homotopy, J. Combin. Theory Ser.
+A, 25 (1978), 319–324.
+[13] J. Pach, Graphs whose every independent set has a common neighbour, Discrete Math. 37
+(1981), 217–228.
+[14] T. ÃLuczak, On the structure of triangle-free graphs of large minimum degree, preprint.
+[15] C. Thomassen, On the chromatic number of triangle-free graphs of large minimum degree,
+Combinatorica, 22 (2002), 591–596.
+[16] D. B. West, Introduction to Graph Theory, Prentice Hall, 1996.
+19

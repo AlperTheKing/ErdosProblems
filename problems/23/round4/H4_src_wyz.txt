@@ -1,0 +1,522 @@
+
+===== PAGE 1 =====
+Triangle-free Graphs with Large Minimum Common Degree
+Jian Wang∗
+Weihua Yang†
+Fan Zhao‡
+Abstract
+Let G be a graph. For x ∈V (G), let N(x) = {y ∈V (G): xy ∈E(G)}. The
+minimum common degree of G, denoted by δ2(G), is defined as the minimum of |N(x)∩
+N(y)| over all non-edges xy of G. In 1982, H¨aggkvist showed that every triangle-free
+graph with minimum degree greater than ⌊3n
+8 ⌋is homomorphic to a cycle of length 5.
+In this paper, we prove that every triangle-free graph with minimum common degree
+greater than ⌊n
+8 ⌋is homomorphic to a cycle of length 5, which implies H¨aggkvist’s
+result. The balanced blow-up of the M¨obius ladder graph shows that it is best possible.
+Keywords: triangle-free; minimum common degree; the blow-up of C5.
+1
+Introduction
+Let H be a fixed graph. We say that a graph G is H-free if it does not contain H as a
+subgraph. The Tur´an number ex(n, H) is defined as the maximum number of edges in an
+H-free graph on n vertices. Let Tr(n) be a complete r-partite graph with partite classes
+of sizes ⌊n
+r ⌋or ⌈n
+r ⌉.
+In 1907, Mantel determined ex(n, K3), which is the starting point of the extremal
+graph theory.
+Theorem 1.1 ([5]).
+ex(n, K3) =
+n2
+4
+
+.
+Moreover, T2(n) is the unique triangle-free graph attaining the maximum number of edges.
+In 1943, Tur´an [7] proved that ex(n, Kr+1) = e(Tr(n)). Since then the study of Tur´an
+number became a central topic in extremal graph theory. We refer to [6, 3] for surveys on
+Tur´an problems for graphs and hypergraphs.
+Let δ(G) denote the minimum degree of G. In 1974, Andr´asfai, Erd¨os and S´os [1]
+proved the following result.
+Theorem 1.2 ([1]). If G is a triangle-free graph on n vertices with δ(G) > 2n
+5 , then G is
+bipartite.
+∗Department of Mathematics, Taiyuan University of Technology, Taiyuan 030024, P. R. China.
+E-
+mail:wangjian01@tyut.edu.cn.
+†Department of Mathematics, Taiyuan University of Technology, Taiyuan 030024, P. R. China.
+E-
+mail:yangweihua@tyut.edu.cn. Research supported by NSFC No. 12371356.
+‡Department of Mathematics, Taiyuan University of Technology, Taiyuan 030024, P. R. China.
+E-
+mail:zhaofan19990804@163.com.
+1
+arXiv:2408.05547v1  [math.CO]  10 Aug 2024
+
+===== PAGE 2 =====
+Note that Theorem 1.2 implies Mantel’s theorem. Indeed, if G is bipartite then e(G) ≤
+⌊n2
+4 ⌋follows. Otherwise there is a vertex with degree at most 2n
+5 in G and then Mantel’s
+theorem follows from an induction argument on n.
+Let F be a graph on k vertices. An F-blow-up is a graph obtained from F by replacing
+each vertex with an independent set and replacing each edge by a complete bipartite
+graph. We say an F-blow-up on n vertices is balanced if each vertex of F is replaced by
+an independent set of size ⌊n/k⌋or ⌈n/k⌉. A balanced C5-blow-up on n vertices shows
+that Theorem 1.2 is sharp (as shown in Figure 1 (a)).
+(a)
+(b)
+Figure 1. (a) A balanced C5-blow-up (b) A balanced HM-blow-up
+Let G, H be graphs. We say that G is homomorphic to H if there is a map σ from
+V (G) to V (H) such that σ(u)σ(v) ∈E(H) for every uv ∈E(G). Note that if G is a
+subgraph of an H-blow-up then G is homomorphic to H.
+In 1982, H¨aggkvist [2] extended the Andr´asfai-Erd˝os-S´os Theorem to the following
+form.
+Theorem 1.3 ([2]). If G is a triangle-free graph on n vertices with δ(G) > ⌊3n
+8 ⌋, then G
+is homomorphic to C5.
+Define the M¨obius ladder HM to be the graph obtained from a cycle of length 8 by
+adding 4 chords joining vertices of distance 4 on the cycle. A balanced HM-blow-up on n
+vertices shows that Theorem 1.3 is sharp (as shown in Figure 1 (b)).
+The minimum common degree of G, denoted by δ2(G), is defined as the minimum
+of |N(x) ∩N(y)| over all non-edges xy of G. We say that G is maximal triangle-free if
+G is triangle-free and any addition of an extra edge to G creates a triangle. Recently,
+Liu, Shangguan, Skokan and Xu [4] proved that every maximal triangle-free graph with
+δ2(G) ≥εn is a blow-up of some triangle-free graph with at most 2O( 3
+ε log 1
+ε ) vertices.
+Motivated by H¨aggkvist’s result and Liu, Shangguan, Skokan and Xu’s result, we
+consider triangle-free graphs with large minimum common degree. Our main result is the
+following.
+Theorem 1.4. Let G be a triangle-free graph on n vertices. Then (i) and (ii) hold.
+(i) If δ2(G) > ⌊n
+5 ⌋and n ≥5, then G is bipartite.
+(ii) If δ2(G) > ⌊n
+8 ⌋and n ≥8, then G is homomorphic to C5.
+We need the following lemma proved in [4]. For self-containedness, we include a proof
+of it.
+Lemma 1.5 ([4]). If G is a maximal triangle-free graph on n vertices with δ(G) > (1
+3+α)n,
+then δ2(G) > 3αn.
+2
+
+===== PAGE 3 =====
+Proof. Let G be a maximal triangle-free graph on n vertices with δ(G) > (1
+3 + α)n.
+Take x, y ∈V (G) arbitrarily such that xy /∈E(G). Note that |N(x)| > (1
+3 + α)n and
+|N(y)| > (1
+3 + α)n. We claim that N(x) ∩N(y) ̸= ∅. Indeed, otherwise G + xy is also
+triangle-free, contradicting the maximality of G.
+Let w ∈N(x) ∩N(y). Since G is triangle-free, w has no neighbor in N(x) ∪N(y).
+Thus,
+n = |V (G)| ≥|N(x) ∪N(y)| + |N(w)|
+= |N(x)| + |N(y)| −|N(x) ∩N(y)| + |N(w)|
+> 3 ·
+1
+3 + α
+
+n −|N(x) ∩N(y)|.
+It follows that |N(x) ∩N(y)| > 3αn.
+□
+Applying Lemma 1.5 with α = 1
+15 and 1
+24, we see that δ(G) > 2n/5 implies δ2(G) > n/5
+and δ(G) > 3n/8 implies δ2(G) > n/8. Thus, Theorem 1.2 follows from Theorem 1.4 (i)
+and Theorem 1.3 follows from Theorem 1.4 (ii).
+Let G1 be a C4-blow-up with vertices of C4 being replaced by independent sets of sizes
+n/8, 3n/8, n/8 and 3n/8 consecutively. Let G2 be a C5-blow-up with vertices of C5 being
+replaced by independent sets of sizes n/7, 2n/7, n/7, n/7 and 2n/7 consecutively. It is
+easy to check that δ2(G1) = n/4 > n/5 and δ2(G2) = n/7 > n/8 but δ(G1) = n/4 < 2n/5
+and δ(G2) = 2n/7 < 3n/8 (as shown in Figure 2). Thus the condition δ2(G) > 3αn is
+strictly stronger than δ(G) > (1
+3 + α)n.
+G1
+G2
+Figure 2. The graphs G1 and G2.
+For C5-free graphs, we prove the following result.
+Theorem 1.6. If G is a C5-free graph on n vertices (n ≥5) with δ2(G) ≥3, then G is
+bipartite.
+2
+Some useful lemmas
+In this section, we prove some lemmas that are needed in the proofs.
+Lemma 2.1. If G is a graph on n vertices with δ2(G) ≥1, then either G is bipartite or
+the shortest odd cycle of G has length 3 or 5.
+Proof. Suppose that G is non-bipartite. Let C = v1v2 . . . vℓv1 be a shortest odd cycle of
+G. Note that C is an induced cycle. If ℓ≥7, then N(v1)∩N(v4) ̸= ∅. It follows that there
+is some v ∈N(v1) ∩N(v4). Since C is chord-free, v ∈V (G) \ V (C). Then vv1v2v3v4v is a
+C5, contradicting the minimality of ℓ. Thus the lemma is proven.
+□
+3
+
+===== PAGE 4 =====
+Corollary 2.2. If G is a {C3, C5}-free graph on n vertices with δ2(G) ≥1, then G is
+bipartite.
+We need the following simple but useful lemma.
+Lemma 2.3. Suppose that G is a triangle-free graph on n vertices and x1x2, y1y2 /∈E(G).
+Let X = N(x1) ∩N(x2), Y = N(y1) ∩N(y2). If xiyj ∈E(G) for some i ∈{1, 2}, and
+j ∈{1, 2}, then X, Y are disjoint.
+Proof. Without loss of generality, assume x1y1 ∈E(G). If there is some w ∈X ∩Y , then
+x1w, wy1 ∈E(G). It follows that wx1y1w is a triangle, a contradiction.
+□
+Corollary 2.4. Suppose that G is a triangle-free graph that contains a C5, v1v2 . . . v5v1.
+Let Di = N(vi−1) ∩N(vi+1), i = 1, 2, . . . , 5. Then D1, D2, . . . , D5 are pairwise disjoint.
+Proof. Since vi−1vi ∈E(G), by Lemma 2.3 we infer that Di−1 ∩Di ̸= ∅and Di−2 ∩Di+1 ̸=
+∅. Thus D1, D2, . . . , D5 are pairwise disjoint.
+Lemma 2.5. If G is a triangle-free graph that contains HM as a subgraph, then δ2(G) ≤
+⌊n
+8 ⌋.
+Proof. Assume that a cycle v1v2v3v4v5v6v7v8v1 with chords v1v5, v2v6, v3v7 and v4v8 is
+a copy of HM in G.
+Since G is triangle-free, vivi+2 /∈E(G) for i = 1, 2, . . . , 8.
+Let
+Si = N(vi) ∩N(vi+2) with subscripts modulo 8. Since vi−1vi ∈E(G), by Lemma 2.3
+we infer that Si−1 ∩Si ̸= ∅and Si−3 ∩Si ̸= ∅. Since vivi+4 ∈E(G), by Lemma 2.3 we
+infer that Si ∩Si+2 ̸= ∅and Si ∩Si+4 ̸= ∅. Thus S1, S2, . . . , S8 are pairwise disjoint. If
+δ2(G) > ⌊n
+8 ⌋then |Si| > ⌊n
+8 ⌋for all i = 1, 2, . . . , 8. It follows that
+n = |V (G)| =
+X
+1≤i≤8
+|Si| ≥8
+jn
+8
+k
++ 1
+
+> n,
+a contradiction. Thus δ2(G) ≤⌊n
+8 ⌋.
+□
+3
+Proof of Theorems 1.4 and 1.6
+In this section, we prove Theorems 1.4 and 1.6.
+Proof of Theorem 1.4 (i). Let G be a triangle-free graph on n vertices with δ2(G) >
+⌊n
+5 ⌋. By Lemma 2.1, either G is bipartite or G contains a C5. In the former case, there
+is nothing to prove. Thus we assume that G contains a C5 and let C = v1v2v3v4v5v1
+be such a C5. Let Di = N(vi−1) ∩N(vi+1) with subscripts modulo 5, i = 1, 2, . . . , 5.
+Since vi−1vi+1 /∈E(G) and δ2(G) > ⌊n
+5 ⌋, we have |Di| ≥⌊n
+5 ⌋+ 1. By Corollary 2.4,
+D1, D2, . . . , D5 are pairwise disjoint. It follows that
+n = |V (G)| =
+X
+1≤i≤5
+|Di| ≥5
+jn
+5
+k
++ 1
+
+> n,
+a contradiction. Thus G is bipartite.
+□
+Remark. If G is a triangle-free graph on n vertices and δ2(G) = n
+5 ( n is divisible by 5),
+then
+n = |V (G)| =
+X
+1≤i≤5
+|Di| ≥5 × n
+5 = n.
+It follows that |Di| = n
+5 , i = 1, 2, . . . , 5. That is, (D1, D2, . . . , D5) forms a balanced C5-
+blow-up.
+4
+
+===== PAGE 5 =====
+For D ⊂V (G), we use G[D] to denote the subgraph of G induced by D.
+Proof of Theorem 1.4 (ii). Let G be a triangle-free graph on n vertices with δ2(G) >
+⌊n
+8 ⌋. We may assume that G is not bipartite. Then by Lemma 2.1, G contains a C5. Let
+C = v1v2v3v4v5v1 be such a C5. Note that C is an induced cycle since G is triangle-free,
+i.e., vi−1vi+1 /∈E(G). Let Di = N(vi−1)∩N(vi+1) with subscripts modulo 5, i = 1, 2, 3, 4, 5
+and let D = ∪1≤i≤5Di. By Corollary 2.4, D1, D2, . . . , D5 are pairwise disjoint.
+Claim 3.1. G[D] is homomorphic to C5.
+Proof. Since δ2(G) > ⌊n
+8 ⌋, |Di| > ⌊n
+8 ⌋. Since G is triangle-free, each Di is an independent
+set. We claim that each edge in E(G[D]) is between Di and Di+1. Indeed, otherwise by
+symmetry assume that there is some xy ∈E(G[D]) with x ∈D1 and y ∈D3. Then xv2yx
+is a triangle, a contradiction. Thus G[D] is homomorphic to C5.
+□
+Clearly |D| = P
+1≤i≤5 |Di| > 5⌊n
+8 ⌋. Let W = V (G) \ D. If W = ∅then we are done.
+Thus we assume W ̸= ∅.
+Claim 3.2. For each x ∈W, x has neighbors in at least two Di’s.
+Proof. If x has neighbors in at most one Di, then by symmetry assume that x has no
+neighbor in D2 ∪D3 ∪D4 ∪D5. As vi ∈Di, we have xvi /∈E(G). Let Wi = N(x) ∩N(vi),
+i = 2, 3, 4, 5. Then δ2(G) > ⌊n
+8 ⌋implies |Wi| > ⌊n
+8 ⌋.
+We claim that Di∩Wj = ∅for all i ∈{2, 3, 4, 5} and j ∈{2, 3, 4}. Indeed, if Di∩Wj ̸= ∅
+for some i ∈{2, 3, 4, 5} and j ∈{2, 3, 4}, then N(x)∩Di ̸= ∅, contradicting our assumption
+that x has no neighbor in D2 ∪D3 ∪D4 ∪D5. Thus Di ∩Wj = ∅for all i ∈{2, 3, 4, 5} and
+j ∈{2, 3, 4}.
+Since v2v3 ∈E(G), by Lemma 2.3 we have W2 ∩W3 = ∅. Since v3v4 ∈E(G), by
+Lemma 2.3 we have W3 ∩W4 = ∅. If z ∈W2 ∩W4 then z ∈D3, then x has neighbor z in
+D3, contradicting our assumption that x has no neighbor in D2 ∪D3 ∪D4 ∪D5. Thus we
+also have W2 ∩W4 = ∅. Thus D2, D3, D4, D5, W2, W3, W4 are pairwise disjoint.
+Figure 3. G in Claim 3.2
+Let us take w3 ∈W3 and w4 ∈W4. Then w3w4 /∈E(G) since w3, w4 ∈N(x) and
+G is triangle-free. Let X = N(w3) ∩N(w4). Then |X| > ⌊n
+8 ⌋. We want to show that
+X, D2, D3, D4, D5, W2, W3, W4 are pairwise disjoint. Since w3v3 ∈E(G), by Lemma 2.3
+we know X ∩D2 = ∅= X ∩D4. By w4v4 ∈E(G) and Lemma 2.3, X ∩D3 = ∅= X ∩D5.
+Similarly, using xw3 ∈E(G), X ∩Wj = ∅follows from Lemma 2.3 for j = 2, 3, 4. Thus,
+X, D2, D3, D4, D5, W2, W3, W4 are pairwise disjoint (as shown in Figure 3). Then
+n = |V (G)| ≥8 ·
+jn
+8
+k
++ 1
+
+> n,
+a contradiction. Therefore x has neighbors in at least two Di’s.
+□
+5
+
+===== PAGE 6 =====
+Claim 3.3. For each x ∈W, x has no neighbor in two consecutive D′
+is.
+Proof. Suppose for contradiction that x has neighbors in D1 and D2. Clearly xv1, xv2 /∈
+E(G) since G is triangle-free. Let x1 ∈N(x) ∩D1 and x2 ∈N(x) ∩D2.
+If there exists x4 ∈N(x)∩D4, then the graph with the vertex set {v1, v2, v3, x4, v5, x, x1, x2}
+and the edge set
+{v1v2, v2v3, v3x4, x4v5, v5v1, xx1, xx2, xx4, x1v5, x1v2, x2v1, x2v3}
+is a copy of HM in G. By Lemma 2.5 we obtain δ2(G) ≤⌊n
+8 ⌋, a contradiction. Thus we
+may assume that N(x) ∩D4 = ∅.
+Let Wi = N(x) ∩N(vi), i = 3, 5. Since x1 ∈N(x) ∩D1 and x2 ∈N(x) ∩D2, we
+have x1v5, x2v3 ∈E(G). It follows that x1 ∈W5 and x2 ∈W3. By δ2(G) > ⌊n
+8 ⌋we have
+|Wi| > ⌊n
+8 ⌋, i = 3, 5. Since v3v4 ∈E(G), by Lemma 2.3 we know W3 ∩D3 = ∅= W3 ∩D5.
+Since v4v5 ∈E(G) by Lemma 2.3 we have W5 ∩D3 = ∅= W5 ∩D5. Since N(x) ∩D4 = ∅
+and W3 ∪W5 ⊂N(x), we also have W3 ∩D4 = ∅= W5 ∩D4. Thus W3 ∪W5 is disjoint
+to D3 ∪D4 ∪D5. If z ∈W3 ∩W5 then z ∈D4, contradicting N(x) ∩D4 = ∅. Thus
+W3, W5, D3, D4, D5 are pairwise disjoint.
+Figure 4. G in Claim 3.3
+Since x1, x2 ∈N(x), we have x1x2 /∈E(G). Let X = N(x1) ∩N(x2). Then |X| > ⌊n
+8 ⌋.
+Using x1v2 ∈E(G), by Lemma 2.3 we have X ∩D3 = ∅. Using x2v3 ∈E(G), by Lemma
+2.3 we have X ∩D4 = ∅.
+Using x2v1 ∈E(G), by Lemma 2.3 we have X ∩D5 = ∅.
+Similarly, X ∩W3 = ∅= X ∩W5 since xx1 ∈E(G). Thus X, W3, W5, D3, D4, D5 are
+pairwise disjoint.
+Note that x2v5, x1v3 /∈E(G). We can define Q1 = N(x2) ∩N(v5) and Q2 = N(x1) ∩
+N(v3) with |Q1| > ⌊n
+8 ⌋, |Q2| > ⌊n
+8 ⌋. By Lemma 2.3, using v4v5 ∈E(G) we have Q1 ∩D3 =
+∅= Q1 ∩D5, using x2v3 ∈E(G) we have Q1 ∩D4 = ∅, using xx2 ∈E(G) we have
+Q1 ∩W3 = ∅= Q1 ∩W5, using x1v5 we have Q1 ∩X = ∅. Similarly, Q2 ∩D3 = ∅= Q2 ∩D5
+follows from v3v4 ∈E(G), Q2 ∩D4 = ∅follows from x1v5 ∈E(G), Q2 ∩W3 = ∅= Q2 ∩W5
+follows from xx1 ∈E(G) and Q2 ∩X = ∅= Q2 ∩Q1 follows from x2v3 ∈E(G). Thus,
+X, Q1, Q2, W3, W5, D3, D4, D5 are pairwise disjoint (as shown in Figure 4). Then
+n = |V (G)| ≥8 ·
+jn
+8
+k
++ 1
+
+> n,
+a contradiction. Therefore x has no neighbor in two consecutive D′
+is.
+□
+For i = 1, 2, 3, 4, 5, define
+Wi = {x ∈W : N(x) ∩Di−1 ̸= ∅, N(x) ∩Di+1 ̸= ∅, N(x) ∩(D \ (Di−1 ∪Di+1)) = ∅} .
+6
+
+===== PAGE 7 =====
+By Claims 3.2 and 3.3, (W1, W2, . . . , W5) is a partition of W.
+Claim 3.4. Wi is an independent set in G for each i = 1, 2, 3, 4, 5.
+Proof. Suppose for contradiction that xy is an edge in W1. Let x2 ∈N(x) ∩D2, x5 ∈
+N(x) ∩D5, y2 ∈N(y) ∩D2 and y5 ∈N(y) ∩D5. Since G is triangle-free, x2, x5, y2, y5 are
+distinct from each other.
+Figure 5. G in Claim 3.4
+Since x, y ∈W1, by the definition of W1 there is no edge between v3, v4 and x, y. Let
+X2 = N(x) ∩N(v3), X5 = N(x) ∩N(v4), Y2 = N(y) ∩N(v3) and Y5 = N(y) ∩N(v4).
+Clearly x2 ∈X2, y2 ∈Y2, x5 ∈X5 and y5 ∈Y5. By δ2(G) > ⌊n
+8 ⌋, we have |X2| > ⌊n
+8 ⌋,
+|X5| > ⌊n
+8 ⌋, |Y2| > ⌊n
+8 ⌋and |Y5| > ⌊n
+8 ⌋.
+Since x, y ∈W1, by the definition of W1 we infer that
+Xi ∩(D1 ∪D3 ∪D4) = ∅= Yj ∩(D1 ∪D3 ∪D4), i = 2, 5, j = 2, 5.
+Thus (X2 ∪X5 ∪Y2 ∪Y5) ∩(D1 ∪D3 ∪D4) = ∅.
+Applying Lemma 2.3 with v3v4, we know X2 ∩X5 = ∅= Y2 ∩Y5. Applying Lemma
+2.3 with xy, Xi ∩Yj = ∅for i = 2, 5 and j = 2, 5. Thus, D1, D3, D4, X2, X5, Y2, Y5 are
+pairwise disjoint.
+Since G is triangle-free, at most one of xv2 and yv2 is an edge in E(G). Without
+loss of generality, assume xv2 /∈E(G). Then let X = N(x) ∩N(v2). Since x ∈W1, x
+have no neighbor in D1, D3, D4. It follows that X ∩Di = ∅, i = 1, 3, 4. If there exists
+z ∈X ∩X5, then z ∈N(v2) ∩N(v4). It follows that z ∈D3, contradicting X ∩D3 = ∅.
+Thus X ∩X5 = ∅. Applying Lemma 2.3 with v2v3, we know X ∩X2 = ∅. Applying Lemma
+2.3 with xy, X ∩Y2 = ∅= X ∩Y5. Thus, X, D1, D3, D4, X2, X5, Y2, Y5 are pairwise disjoint
+(as shown in Figure 5). Then
+n = |V (G)| ≥8 ·
+jn
+8
+k
++ 1
+
+> n,
+a contradiction.
+□
+Claim 3.5. There is no edge between Wi and Wi+2 for i = 1, 2, 3, 4, 5.
+Proof. Suppose for contradiction that xy is an edge with x ∈W1 and y ∈W3. Let
+x2 ∈N(x) ∩D2, x5 ∈N(x) ∩D5, y2 ∈N(y) ∩D2, y4 ∈N(y) ∩D4. Since x ∈W1,
+v3x, v4x /∈E(G). Let X2 = N(x) ∩N(v3) and X5 = N(x) ∩N(v4). Clearly x2 ∈X2 and
+x5 ∈X5. Since y ∈W3, v1y, v5y /∈E(G). Let Y2 = N(y) ∩N(v1) and Y4 = N(y) ∩N(v5).
+Clearly y2 ∈Y2 and y4 ∈Y4.
+7
+
+===== PAGE 8 =====
+Since x ∈W1 and y ∈W3, by the definitions of W1 and W3 we infer that
+Xi ∩(D1 ∪D3) = ∅= Yj ∩(D1 ∪D3), i = 2, 5, j = 2, 4.
+Thus (X2 ∪X5 ∪Y2 ∪Y4) ∩(D1 ∪D3) = ∅.
+Applying Lemma 2.3 with v3v4 and v1v5, we know X2 ∩X5 = ∅= Y2 ∩Y4. Applying
+Lemma 2.3 with xy, Xi ∩Yj = ∅for i = 2, 5 and j = 2, 4. Thus X2, X5, Y2, Y4, D1, D3 are
+pairwise disjoint.
+Since x, y ∈W, at most one of xv2 and xv5 is an edge of G and at most one of yv2
+and yv4 is an edge of G. We distinguish four cases.
+Case 1.
+xv2, yv2 /∈E(G).
+Figure 6. G in Case 1 of Claim 3.5
+Let X = N(x) ∩N(v2) and Y = N(y) ∩N(v2). Since x ∈W1, X ∩D1 = ∅= X ∩D3.
+Since y ∈W3, Y ∩D1 = ∅= Y ∩D3.
+Since xy ∈E(G), X ∩Y = ∅, X ∩Yj = ∅
+for j = 2, 4 and Xi ∩Y = ∅for i = 2, 5. Thus X ∩(Y ∪Y2 ∪Y4 ∪D1 ∪D3) = ∅and
+Y ∩(X ∪X2 ∪X5 ∪D1 ∪D3) = ∅.
+Since v2v3 ∈E(G), X ∩X2 = ∅. If there exists u ∈X ∩X5 then u ∈D3, contradicting
+the fact that N(x) ∩D3 = ∅. Thus X ∩X5 = ∅. Since v1v2 ∈E(G), Y ∩Y2 = ∅. If there
+exists u ∈Y ∩Y4 then u ∈D1, contradicting the fact that N(y)∩D1 = ∅. Thus Y ∩Y4 = ∅.
+Therefore, X, Y, X2, X5, Y2, Y4, D1, D3 are pairwise disjoint (as shown in Figure 6). Then
+n = |V (G)| ≥8 ·
+jn
+8
+k
++ 1
+
+> n,
+a contradiction.
+Case 2.
+xv5, yv2 /∈E(G).
+Figure 7. G in Case 2 of Claim 3.5
+Let X = N(x) ∩N(v5) and Y = N(y) ∩N(v2). Since x ∈W1, X ∩D1 = ∅= X ∩D3.
+Since y ∈W3, Y ∩D1 = ∅= Y ∩D3.
+Since xy ∈E(G), X ∩Y = ∅, X ∩Yj = ∅
+8
+
+===== PAGE 9 =====
+for j = 2, 4 and Xi ∩Y = ∅for i = 2, 5. Thus X ∩(Y ∪Y2 ∪Y4 ∪D1 ∪D3) = ∅and
+Y ∩(X ∪X2 ∪X5 ∪D1 ∪D3) = ∅.
+Since v4v5 ∈E(G), X ∩X5 = ∅. If there exists u ∈X ∩X2 then u ∈D4, contradicting
+the fact that N(x) ∩D4 = ∅. Thus X ∩X2 = ∅. Since v1v2 ∈E(G), Y ∩Y2 = ∅. If there
+exists u ∈Y ∩Y4 then u ∈D1, contradicting the fact that N(y)∩D1 = ∅. Thus Y ∩Y4 = ∅.
+Therefore, X, Y, X2, X5, Y2, Y4, D1, D3 are pairwise disjoint (as shown in Figure 7). Then
+n = |V (G)| ≥8 ·
+jn
+8
+k
++ 1
+
+> n,
+a contradiction.
+Case 3.
+xv2, yv4 /∈E(G).
+Figure 8. G in Case 3 of Claim 3.5
+Let X = N(x) ∩N(v2) and Y = N(y) ∩N(v4). Since x ∈W1, X ∩D1 = ∅= X ∩D3.
+Since y ∈W3, Y ∩D1 = ∅= Y ∩D3.
+Since xy ∈E(G), X ∩Y = ∅, X ∩Yj = ∅
+for j = 2, 4 and Xi ∩Y = ∅for i = 2, 5. Thus X ∩(Y ∪Y2 ∪Y4 ∪D1 ∪D3) = ∅and
+Y ∩(X ∪X2 ∪X5 ∪D1 ∪D3) = ∅.
+Since v2v3 ∈E(G), X ∩X2 = ∅. If there exists u ∈X ∩X5 then u ∈D3, contradicting
+the fact that N(x) ∩D3 = ∅. Thus X ∩X5 = ∅. Since v4v5 ∈E(G), Y ∩Y4 = ∅. If there
+exists u ∈Y ∩Y2 then u ∈D5, contradicting the fact that N(y)∩D5 = ∅. Thus Y ∩Y2 = ∅.
+Therefore, X, Y, X2, X5, Y2, Y4, D1, D3 are pairwise disjoint (as shown in Figure 8). Then
+n = |V (G)| ≥8 ·
+jn
+8
+k
++ 1
+
+> n,
+a contradiction.
+Case 4.
+xv5, yv4 /∈E(G).
+Figure 9. G in Case 4 of Claim 3.5
+9
+
+===== PAGE 10 =====
+Let X = N(x) ∩N(v5) and Y = N(y) ∩N(v4). Since x ∈W1, X ∩D1 = ∅= X ∩D3.
+Since y ∈W3, Y ∩D1 = ∅= Y ∩D3.
+Since xy ∈E(G), X ∩Y = ∅, X ∩Yj = ∅
+for j = 2, 4 and Xi ∩Y = ∅for i = 2, 5. Thus X ∩(Y ∪Y2 ∪Y4 ∪D1 ∪D3) = ∅and
+Y ∩(X ∪X2 ∪X5 ∪D1 ∪D3) = ∅.
+Since v4v5 ∈E(G), X ∩X5 = ∅. If there exists u ∈X ∩X2 then u ∈D4, contradicting
+the fact that N(x) ∩D4 = ∅. Thus X ∩X2 = ∅. Since v4v5 ∈E(G), Y ∩Y4 = ∅. If there
+exists u ∈Y ∩Y2 then u ∈D5, contradicting the fact that N(y)∩D5 = ∅. Thus Y ∩Y2 = ∅.
+Therefore, X, Y, X2, X5, Y2, Y4, D1, D3 are pairwise disjoint (as shown in Figure 9). Then
+n = |V (G)| ≥8 ·
+jn
+8
+k
++ 1
+
+> n,
+a contradiction.
+□
+Thus G is a blow-up of C5 with blocks D1 ∪W1, D2 ∪W2, . . . , D5 ∪W5.
+□
+Remark. Note that we find 8 pairwise disjoint blocks of sizes at least δ2(G) in several
+cases in the proof of Theorem 1.4 (ii). However, only in Claim 3.3 the 8 blocks cover all
+the vertices of G. Thus if G is a triangle-free graph on n vertices and δ2(G) = n
+8 (n is
+divisible by 8), then G is a balanced M¨obius ladder-blow-up.
+Proof of Theorem 1.6. Let G be a C5-free graph on n vertices with δ2(G) ≥3. By
+Lemma 2.1, either G is bipartite or contains a triangle. In the former case, there is nothing
+to prove. Thus we may assume that G contains a triangle v1v2v3v1.
+For any vertex x ∈V (G)\{v1, v2, v3}, we claim |N(x)∩{v1, v2, v3}| ≥2. Otherwise, by
+symmetry assume that xv1, xv2 /∈E(G). Then δ2(G) ≥3 implies |N(x) ∩N(v1)| ≥3 and
+|N(x) ∩N(v2)| ≥3. It follows that there exist distinct vertices y, z ∈V (G) \ {v1, v2, v3, x}
+such that y ∈N(x) ∩N(v1) and z ∈N(x) ∩N(v2).
+Then xyv1v2zx forms a C5, a
+contradiction. Thus |N(x) ∩{v1, v2, v3}| ≥2 for all x ∈V (G) \ {v1, v2, v3}.
+Now we distinguish two cases.
+Case 1.
+There exists x ∈V (G) \ {v1, v2, v3} such that |N(x) ∩{v1, v2, v3}| = 2.
+Without loss of generality, assume xv1, xv2 ∈E(G). Then δ2(G) ≥3 implies |N(x) ∩
+N(v3)| ≥3. Note that v1, v2 are in N(x) ∩N(v3). Since |N(x) ∩N(v3)| ≥3, there exists
+u ∈V (G) \ {v1, v2, v3, x} such that u ∈N(x) ∩N(v3). Therefore v1v2v3uxv1 is a C5, a
+contradiction.
+Case 2. |N(x) ∩{v1, v2, v3}| = 3 for all x ∈V (G) \ {v1, v2, v3}. Since n ≥5, there
+exists two vertices x, y ∈V (G) \ {v1, v2, v3} such that x, y are both connected to v1, v2, v3.
+Therefore v1xv2yv3v1 is a C5, a contradiction.
+Thus we conclude that G is bipartite.
+□
+Remark. If G is a C5-free graph on 3 vertices and δ2(G) ≥3, then G is a triangle. If G
+is a C5-free graph on 4 vertices and δ2(G) ≥3, then G is a K4.
+References
+[1] B. Andr´asfai, P. Erd˝os, V. T. S´os, On the connection between chromatic number,
+maximal clique and minimal degree of a graph, Discrete Math. 8 (1974) 205–218.
+[2] R. H¨aggkvist, Odd cycles of specified length in non-bipartite graphs, in: Graph Theory,
+Cambridge, 1981, in: North-Holland Math. Stud., vol. 62, North Holland, Amsterdam-
+New York, 1982, pp. 89–99.
+10
+
+===== PAGE 11 =====
+[3] P. Keevash, Hypergraph Tur´an problems, Surv. Combin. 392 (2011) 83–140.
+[4] H. Liu, C. Shangguan, J. Skokan, and Z. Xu, Beyond chromatic threshold via the
+(p, q)-theorem, and a sharp blow-up phenomenon, https://arxiv.org/pdf/2403.17910,
+2024.
+[5] W. Mantel, Problem 28, In Wiskundige Opgaven 10 (1907), 60–61.
+[6] A. Sidorenko, What we know and what we do not know about Tur´an numbers, Graphs
+Combin. 11 (1995) 179–199.
+[7] P. Tur´an, Eine Extremalaufgabe aus der Graphentheorie, Mat. Fiz. Lapok 48(1941),
+436–452.
+11
