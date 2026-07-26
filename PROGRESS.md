@@ -4728,3 +4728,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T06:57:24] ✔ SEPARATION RULE | DID: compare halves by grid | RESULT: halves coincide when 5 does not divide q and separate when it does, matching the 5|q equality condition | Δ: structure confirmed
 [2026-07-26T07:00:14] ✘ CORRECTION R3-C39 | DID: recheck the pentagon-free branch against A28 | RESULT: Lambda <= 3/98 does NOT give psi <= 1/25 since sup psi/Lambda is unbounded; branch NOT closed | Δ: reduction has 2 open pieces
 [2026-07-26T07:00:14] ✔ GAP TEST | DID: claude_gap_defect_test.py on non-colourable supports of 5 graphs | RESULT: 480 exact instances, 0 violations of psi - Lambda <= D*/50 | Δ: target survives, still unproved
+[2026-07-26T07:02:59] ✘ W/g_odd ROUTE | DID: claude_oddgirth_route.py | RESULT: bip <= |E|/g_odd VIOLATED at odd girth 9 by twice-subdivided K5 (bip 4 > 10/3), and at g=5 by the N=14 graph | Δ: piece (i) route dead
+[2026-07-26T07:02:59] ✔ MECHANISM | DID: identify why | RESULT: odd subdivision preserves bip while tripling |E| and girth, so |E|/g_odd falls below bip at ANY girth; same phenomenon as A28 | Δ: girth cannot help

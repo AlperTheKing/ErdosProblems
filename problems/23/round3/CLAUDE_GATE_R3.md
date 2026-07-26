@@ -1952,3 +1952,47 @@ triangle-free graphs it never exceeds the defect.
 Only the refinement itself: `Lambda(G,x) <= max((2 - D*)/50, 3/98)` for every triangle-free `G` and
 every `x`, proved from Theorem A plus the defect identity, and gated at 400 exact instances. That is
 a theorem. Everything built on top of it is a reduction to open statements.
+
+
+---
+
+## R3-C42 — the `W/g_odd` route cannot close the pentagon-free piece
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_oddgirth_route.py`.
+
+R3-C41 left two open pieces, the softer being **(i) every pentagon-free triangle-free `G` has
+`max_x psi <= 1/25`**. The natural attack is
+
+```
+        psi(G,x)  <=  W(x) / g_odd(G),        W = sum over edges of x_u x_v,
+```
+
+which would SUFFICE: Motzkin-Straus caps `W <= 1/4` on triangle-free graphs, so odd girth `>= 7`
+would give `psi <= 1/28 = 0.0357 < 1/25`. It is attractive because it is tight exactly where it
+should be -- at uniform `x` on `C_g`, `W = 1/g` and `psi = 1/g^2 = W/g` -- and it agrees with my
+proved R3-C29 lemma at `k = 2`, which gives `W/5` on `C5`. Its fractional form is trivial (`y = 1/g`
+on every edge covers every odd cycle), so the entire content is integrality.
+
+**It is false, and false at HIGH odd girth, which is what kills it for piece (i):**
+
+```
+        graph                  n   |E|   odd girth   bip   |E|/g     verdict
+        C5, C7, C9             .     .     5, 7, 9     1      1      holds, tight
+        Petersen              10    15           5     3      3      holds, tight
+        N=14 extremal         14    32           5     7   32/5      VIOLATED   (registry A5's witness)
+        twice-subdivided K5   25    30           9     4   10/3      VIOLATED
+        twice-subdivided K4   16    18           9     2      2      holds
+```
+
+The `g = 5` failure was already known as A5's witness. The new information is the `g = 9` failure:
+raising the odd girth does NOT restore the bound, so no amount of girth buys integrality here. Both
+violations leave the CONJECTURE untouched -- `psi` at uniform is `1/28 = 0.0357` and
+`4/625 = 0.0064`, comfortably under `1/25`.
+
+**Mechanism.** This is the same subdivision phenomenon registry A28 used to kill gap quantification:
+an odd subdivision preserves `bip` while multiplying both `|E|` and the odd girth, and it multiplies
+them at different rates (`|E|` by 3, girth by 3, but `bip` not at all), so `|E|/g_odd` can be pushed
+below `bip` at any girth. Recorded so the route is not retried at higher girth in the belief that
+`g -> infinity` helps.
+
+Piece (i) therefore needs a mechanism that is not a global edge-density-over-girth average.
