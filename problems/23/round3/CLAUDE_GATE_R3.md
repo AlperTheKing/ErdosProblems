@@ -1899,3 +1899,56 @@ Taken together with R3-C38 this makes the reduction uniform in `k` in measuremen
 statement: ONE epsilon, on Wagner-containing supports, for the whole Andrasfai family. It remains a
 measurement on restricted grids, not a proof -- but the value no longer looks like an artefact of one
 graph.
+
+
+---
+
+## R3-C41 — CORRECTION to R3-C39, and the gap inequality survives adversarial testing
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_gap_defect_test.py`.
+
+### CORRECTION, recorded with equal prominence to the claim it fixes
+
+R3-C39 stated: *"Graphs with NO induced C5 are handled by the other branch: `Lambda <= 3/98 < 1/25`."*
+**That is FALSE and I withdraw it.** Registry A28 established that `sup psi/Lambda` over triangle-free
+graphs equals the general weighted MinUnCut LP gap and is **UNBOUNDED**, so a bound on `Lambda` gives
+nothing whatever about `psi`. Pentagon-free triangle-free graphs are NOT closed by that branch.
+
+The corrected reduction therefore has TWO open pieces, not one:
+
+```
+        Erdos #23  <==  (i)  every PENTAGON-FREE triangle-free G has max_x psi <= 1/25      [OPEN]
+                   AND  (ii) psi(G,x) - Lambda(G,x) <= D*(x)/50 for every non-C5-colourable
+                             support of a pentagon-CONTAINING triangle-free G               [OPEN]
+```
+
+Piece (i) looks the softer of the two -- odd girth `>= 7` forces `Lambda <= 3/98`, and the census
+evidence is that such graphs top out at `1/49`, far under `1/25` -- but it is open and I am not
+allowed to wave at it. Under GOAL clause (e) this whole thing is a reduction to unproved statements
+and does NOT count as progress toward the target; it is recorded as structure, not as an advance.
+
+### The gap inequality itself survives
+
+Tested exactly wherever both sides are computable, restricted to non-`C5`-colourable supports, on the
+graphs with the largest gaps available:
+
+```
+        Wagner          49 instances    0 violations
+        Petersen       111              0
+        Grotzsch        94              0
+        Gamma_11        94              0
+        N=14 extremal  132              0
+        ----------------------------------------
+        total          480 instances    0 violations of  psi - Lambda <= D*/50
+```
+
+So (GAP) is not obviously false, and it is the sole remaining content of the reduction on
+pentagon-containing graphs. It is also a genuine constraint rather than an identity: `psi - Lambda`
+is known to be nonzero and, by A28, unbounded in general -- what (GAP) asserts is that on
+triangle-free graphs it never exceeds the defect.
+
+### What stands unconditionally from this line of work
+
+Only the refinement itself: `Lambda(G,x) <= max((2 - D*)/50, 3/98)` for every triangle-free `G` and
+every `x`, proved from Theorem A plus the defect identity, and gated at 400 exact instances. That is
+a theorem. Everything built on top of it is a reduction to open statements.

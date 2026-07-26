@@ -4726,3 +4726,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T05:41:44] ✔ REDUCTION | DID: combine with Theorem B | RESULT: conjecture follows from psi - Lambda <= D*/50 on non-C5-colourable supports | Δ: sharpest formulation of the remainder
 [2026-07-26T06:57:24] ✔ SLACK AT K=5 | DID: claude_slack_k5.py on Gamma_14, 1.1M and 5.2M weightings | RESULT: Wagner-containing max 0.750000 and 0.694444, IDENTICAL to Gamma_11 at the same grids | Δ: R3-C38 caveat closed
 [2026-07-26T06:57:24] ✔ SEPARATION RULE | DID: compare halves by grid | RESULT: halves coincide when 5 does not divide q and separate when it does, matching the 5|q equality condition | Δ: structure confirmed
+[2026-07-26T07:00:14] ✘ CORRECTION R3-C39 | DID: recheck the pentagon-free branch against A28 | RESULT: Lambda <= 3/98 does NOT give psi <= 1/25 since sup psi/Lambda is unbounded; branch NOT closed | Δ: reduction has 2 open pieces
+[2026-07-26T07:00:14] ✔ GAP TEST | DID: claude_gap_defect_test.py on non-colourable supports of 5 graphs | RESULT: 480 exact instances, 0 violations of psi - Lambda <= D*/50 | Δ: target survives, still unproved
