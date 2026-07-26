@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib.util
+import json
 import math
 import pickle
 import re
@@ -21,7 +22,7 @@ from collections import Counter, defaultdict
 from fractions import Fraction
 from pathlib import Path
 from types import SimpleNamespace
-from typing import Iterable
+from typing import Iterable, Sequence
 
 import numpy as np
 import sympy as sy
@@ -35,6 +36,12 @@ NUMERIC_EXPORT = HERE / "CODEX_R10_g11_d22_numeric.pkl"
 EQUALITY_COLLECTOR_SOURCE = HERE / "CODEX_R10_c5_FACE_EQUALITY.cpp"
 EQUALITY_COLLECTOR_EXE = HERE / "CODEX_R10_c5_FACE_EQUALITY.exe"
 EQUALITY_COLLECTOR_LOG = HERE / "CODEX_R10_c5_FACE_EQUALITY_q5_q50.log"
+BLOWUP_FACE_SOURCE = HERE / "CODEX_R10_BLOWUP_FACE.py"
+BLOWUP_FACE_DATA = HERE / "CODEX_R10_BLOWUP_FACE_data.npz"
+BLOWUP_FACE_SUMMARY = HERE / "CODEX_R10_BLOWUP_FACE_summary.json"
+FULL_FACE_SOURCE = HERE / "CODEX_R10_c5_FACE_EQUALITY.py"
+FULL_FACE_DATA = HERE / "CODEX_R10_c5_FACE_EQUALITY_data.npz"
+FULL_FACE_SUMMARY = HERE / "CODEX_R10_c5_FACE_EQUALITY_summary.json"
 N = 11
 D = 4
 DT = 6
@@ -137,6 +144,40 @@ def independent_complete_c5_classes(
     if len(quotient_edges) != 5 or set(degrees.values()) != {2}:
         return None
     return classes
+
+
+def independent_cut_identically_tight(
+    classes: Sequence[Sequence[int]],
+    side: frozenset[int],
+    edges: Sequence[tuple[int, int]],
+) -> bool:
+    """Exact zero-polynomial test for q_S-1 on a balanced blow-up plateau."""
+    edge_set = set(edges)
+    quotient_edges = [
+        (left, right)
+        for left in range(5)
+        for right in range(left + 1, 5)
+        if tuple(sorted((classes[left][0], classes[right][0]))) in edge_set
+    ]
+    assert len(quotient_edges) == 5
+    fixed: dict[int, int] = {}
+    split = []
+    for class_index, part in enumerate(classes):
+        inside = sum(vertex in side for vertex in part)
+        if inside == 0:
+            fixed[class_index] = 0
+        elif inside == len(part):
+            fixed[class_index] = 1
+        else:
+            split.append(class_index)
+    # q_S-1 is multi-affine in the split-class side masses, so it is the zero
+    # polynomial iff it vanishes at every Boolean corner.
+    for assignment in __import__("itertools").product((0, 1), repeat=len(split)):
+        bits = dict(fixed)
+        bits.update(zip(split, assignment))
+        if sum(bits[left] == bits[right] for left, right in quotient_edges) != 1:
+            return False
+    return True
 
 
 def canonical_side(side: Iterable[int]) -> frozenset[int]:
@@ -255,6 +296,138 @@ def exhaustive_primitive_equality_orbits(
     return result
 
 
+def multiply_sparse_polynomials(
+    left: dict[tuple[int, ...], int], right: dict[tuple[int, ...], int]
+) -> dict[tuple[int, ...], int]:
+    output: Counter[tuple[int, ...]] = Counter()
+    for left_exp, left_value in left.items():
+        for right_exp, right_value in right.items():
+            output[tuple(a + b for a, b in zip(left_exp, right_exp))] += (
+                left_value * right_value
+            )
+    return {exponent: value for exponent, value in output.items() if value}
+
+
+def independent_plateau_coefficient_rows(
+    basis: Sequence[Exponent],
+    parity_mask: Exponent,
+    classes: Sequence[Sequence[int]],
+) -> set[tuple[int, ...]]:
+    """Exact coefficient rows after eliminating one variable per C5 class."""
+    vertices = frozenset(vertex for part in classes for vertex in part)
+    if any(power and vertex not in vertices for vertex, power in enumerate(parity_mask)):
+        return set()
+    pivots = {
+        max(part): tuple(vertex for vertex in part if vertex != max(part))
+        for part in classes
+    }
+    free_vertices = tuple(
+        vertex for part in classes for vertex in part if vertex != max(part)
+    )
+    free_index = {vertex: index for index, vertex in enumerate(free_vertices)}
+    zero = (0,) * len(free_vertices)
+    coefficient_rows: dict[tuple[int, ...], list[int]] = {}
+
+    for column, beta in enumerate(basis):
+        gamma = tuple(
+            (beta[vertex] - parity_mask[vertex]) // 2 for vertex in range(N)
+        )
+        assert all(value >= 0 for value in gamma)
+        if any(power and vertex not in vertices for vertex, power in enumerate(gamma)):
+            continue
+        polynomial: dict[tuple[int, ...], int] = {zero: 1}
+        for vertex, power in enumerate(gamma):
+            if not power:
+                continue
+            if vertex in free_index:
+                shifted = {}
+                for exponent, value in polynomial.items():
+                    image = list(exponent)
+                    image[free_index[vertex]] += power
+                    shifted[tuple(image)] = value
+                polynomial = shifted
+                continue
+            affine: dict[tuple[int, ...], int] = {zero: 1}
+            for free_vertex in pivots[vertex]:
+                exponent = [0] * len(free_vertices)
+                exponent[free_index[free_vertex]] = 1
+                affine[tuple(exponent)] = -1
+            for _ in range(power):
+                polynomial = multiply_sparse_polynomials(polynomial, affine)
+        for exponent, value in polynomial.items():
+            coefficient_rows.setdefault(exponent, [0] * len(basis))[column] = value
+    return {
+        tuple(row) for row in coefficient_rows.values() if any(value for value in row)
+    }
+
+
+def sparse_independent_row_indices(
+    rows: Sequence[dict[int, int]], prime: int
+) -> list[int]:
+    """Select an exact row basis over F_prime using sparse forward elimination."""
+    pivots: dict[int, dict[int, int]] = {}
+    selected: list[int] = []
+    for row_index, source in enumerate(rows):
+        row = {
+            int(column): int(value) % prime
+            for column, value in source.items()
+            if int(value) % prime
+        }
+        while row:
+            pivot = min(row)
+            if pivot not in pivots:
+                inverse = pow(row[pivot], prime - 2, prime)
+                pivots[pivot] = {
+                    column: value * inverse % prime
+                    for column, value in row.items()
+                    if value * inverse % prime
+                }
+                selected.append(row_index)
+                break
+            factor = row[pivot]
+            for column, value in pivots[pivot].items():
+                reduced = (row.get(column, 0) - factor * value) % prime
+                if reduced:
+                    row[column] = reduced
+                else:
+                    row.pop(column, None)
+    return selected
+
+
+def unpack_archive_csr(
+    archive: dict[str, np.ndarray], name: str
+) -> tuple[tuple[int, int], list[dict[int, int]], int]:
+    data = np.asarray(archive[f"{name}_data"], dtype=np.int64)
+    indices = np.asarray(archive[f"{name}_indices"], dtype=np.int64)
+    indptr = np.asarray(archive[f"{name}_indptr"], dtype=np.int64)
+    shape = tuple(int(value) for value in archive[f"{name}_shape"])
+    assert len(shape) == 2 and len(indptr) == shape[0] + 1
+    assert indptr[0] == 0 and indptr[-1] == len(data) == len(indices)
+    rows: list[dict[int, int]] = []
+    for row_index in range(shape[0]):
+        start, stop = map(int, indptr[row_index : row_index + 2])
+        columns = [int(value) for value in indices[start:stop]]
+        values = [int(value) for value in data[start:stop]]
+        assert columns == sorted(columns) and len(columns) == len(set(columns))
+        assert all(0 <= column < shape[1] for column in columns)
+        assert all(value for value in values)
+        rows.append(dict(zip(columns, values)))
+    return (shape[0], shape[1]), rows, len(data)
+
+
+def assert_archive_csr_equals(
+    archive: dict[str, np.ndarray], name: str, expected
+) -> None:
+    matrix = expected.tocsr().astype(np.int64)
+    matrix.sum_duplicates()
+    matrix.sort_indices()
+    shape = tuple(int(value) for value in archive[f"{name}_shape"])
+    assert shape == matrix.shape
+    assert np.array_equal(archive[f"{name}_data"], matrix.data)
+    assert np.array_equal(archive[f"{name}_indices"], matrix.indices)
+    assert np.array_equal(archive[f"{name}_indptr"], matrix.indptr)
+
+
 def import_constructor():
     spec = importlib.util.spec_from_file_location("r10_d22_constructor_audited", CONSTRUCTOR)
     assert spec is not None and spec.loader is not None
@@ -305,6 +478,53 @@ def main() -> None:
 
     cuts = interval_cuts(edges)
     assert len(cuts) == 56
+
+    independent_blowups: dict[frozenset[int], tuple[tuple[int, ...], ...]] = {}
+    for support_mask in range(1 << N):
+        support_vertices = frozenset(
+            vertex for vertex in range(N) if (support_mask >> vertex) & 1
+        )
+        classes = independent_complete_c5_classes(support_vertices, edges)
+        if classes is not None:
+            independent_blowups[support_vertices] = classes
+    blowup_support_sizes = Counter(map(len, independent_blowups))
+    assert blowup_support_sizes == Counter({5: 33, 6: 66, 7: 33})
+
+    # A class-respecting arc with exactly one monochromatic quotient edge is
+    # identically tight for every balanced weighting on that plateau.
+    class_respecting_tight_counts = []
+    for support_vertices, classes in independent_blowups.items():
+        quotient_edges = [
+            (left, right)
+            for left in range(5)
+            for right in range(left + 1, 5)
+            if tuple(sorted((classes[left][0], classes[right][0]))) in edge_set
+        ]
+        assert len(quotient_edges) == 5
+        tight_count = 0
+        for cut_mask, _mono_edges in cuts:
+            side = frozenset(
+                vertex
+                for vertex in range(1, N)
+                if (cut_mask >> (vertex - 1)) & 1
+            )
+            class_bits = []
+            for part in classes:
+                inside = set(part) & side
+                if inside and len(inside) != len(part):
+                    break
+                class_bits.append(bool(inside))
+            else:
+                monochromatic = sum(
+                    class_bits[left] == class_bits[right]
+                    for left, right in quotient_edges
+                )
+                tight_count += monochromatic == 1
+        assert tight_count > 0
+        class_respecting_tight_counts.append(tight_count)
+    assert Counter(class_respecting_tight_counts) == Counter(
+        {16: 11, 17: 33, 20: 33, 21: 22, 24: 11, 25: 22}
+    )
 
     # ---- Independent finite audit of the generalized equality collector ------
     collector_source_hash_before = sha256(EQUALITY_COLLECTOR_SOURCE)
@@ -365,6 +585,7 @@ def main() -> None:
     assert [row[0] for row in q_done] == list(range(5, 51, 5))
     logged_orbits: set[tuple[int, ...]] = set()
     logged_counts: Counter[int] = Counter()
+    equality_ray_support_sizes: Counter[int] = Counter()
     for match in re.finditer(r"^EQ q=(\d+) x=\[([0-9,]+)\]$", collector_log, re.M):
         reported_q = int(match.group(1))
         vector = tuple(int(value) for value in match.group(2).split(","))
@@ -377,10 +598,19 @@ def main() -> None:
             for _, mono_edges in cuts
         )
         assert 25 * minimum == reported_q * reported_q
+        support_vertices = frozenset(i for i, value in enumerate(vector) if value)
+        classes = independent_blowups.get(support_vertices)
+        assert classes is not None
+        class_masses = tuple(
+            sum(vector[vertex] for vertex in part) for part in classes
+        )
+        assert len(set(class_masses)) == 1 and class_masses[0] * 5 == reported_q
+        equality_ray_support_sizes[len(support_vertices)] += 1
         assert vector not in logged_orbits
         logged_orbits.add(vector)
         logged_counts[reported_q] += 1
     assert len(logged_orbits) == 439
+    assert equality_ray_support_sizes == Counter({5: 3, 6: 94, 7: 342})
     cumulative = 0
     for q, target, at_q, reported_cumulative in q_done:
         assert target == q * q // 25 and at_q == logged_counts[q]
@@ -663,6 +893,249 @@ def main() -> None:
             assert actual == expected
     assert module_parity_orbit_keys == set(independent_entry_keys)
     assert sum(independent_entry_counts.values()) == 8647
+
+    # ---- Stable generalized face archive: maps, F1, ordering, and H -----------
+    full_face_source_hash_before = sha256(FULL_FACE_SOURCE)
+    full_face_data_hash_before = sha256(FULL_FACE_DATA)
+    full_face_summary_hash_before = sha256(FULL_FACE_SUMMARY)
+    with np.load(FULL_FACE_DATA, allow_pickle=False) as loaded_archive:
+        full_archive = {name: loaded_archive[name].copy() for name in loaded_archive.files}
+    full_summary = json.loads(FULL_FACE_SUMMARY.read_text(encoding="utf-8"))
+    assert int(full_archive["format_version"][0]) == 1
+    assert int(full_archive["q_max"][0]) == 50
+    archive_points = {
+        tuple(int(value) for value in row)
+        for row in full_archive["equality_representatives"]
+    }
+    assert archive_points == logged_orbits and len(archive_points) == 439
+    assert full_summary["collector_equals_symbolic_plateau"] is True
+    assert full_summary["balanced_c5_colourability_pass"] == 439
+
+    # Recompute F1 directly from the exact rays and independently rebuilt arcs.
+    independent_forced_oids: set[int] = set()
+    model_monomial_supports = [
+        frozenset(vertex for vertex, power in enumerate(beta) if power)
+        for beta in model.multiplier_monomials
+    ]
+    for point in archive_points:
+        point_support = frozenset(i for i, value in enumerate(point) if value)
+        point_products = tuple(point[u] * point[v] for u, v in edges)
+        point_target = sum(point) ** 2 // 25
+        for cut_i, (_cut_mask, mono_edges) in enumerate(cuts):
+            cut_value = sum(point_products[edge_i] for edge_i in mono_edges)
+            if cut_value == point_target:
+                continue
+            assert cut_value > point_target
+            independent_forced_oids.update(
+                int(model.multiplier_orbit_ids[cut_i, mon_i])
+                for mon_i, monomial_support in enumerate(model_monomial_supports)
+                if monomial_support <= point_support
+            )
+    archived_forced = set(int(value) for value in full_archive["forced_multiplier_orbits"])
+    archived_live = set(int(value) for value in full_archive["live_multiplier_orbits"])
+    assert independent_forced_oids == archived_forced
+    assert len(archived_forced) == 2085 and len(archived_live) == 526
+    assert archived_forced.isdisjoint(archived_live)
+    assert archived_forced | archived_live == set(range(2611))
+    live_order = np.asarray(sorted(archived_live), dtype=np.int32)
+    assert np.array_equal(full_archive["live_multiplier_orbits"], live_order)
+
+    # The exported live coefficient maps and both right-hand sides are exact
+    # slices of the independently audited base model.
+    assert_archive_csr_equals(
+        full_archive,
+        "normalization_live",
+        model.multiplier_normalization[:, live_order],
+    )
+    assert_archive_csr_equals(
+        full_archive,
+        "target_nu_live",
+        model.multiplier_target[:, live_order],
+    )
+    expected_target_gram = __import__("scipy.sparse", fromlist=["hstack"]).hstack(
+        [orbit.coefficient_map for orbit in model.gram_orbits], format="csr"
+    )
+    assert_archive_csr_equals(full_archive, "target_gram", expected_target_gram)
+    expected_normalization_rhs = np.asarray(
+        [25 * multinomial(model.multiplier_monomials[index]) for index in module_d_reps],
+        dtype=np.int64,
+    )
+    expected_target_rhs = np.asarray(
+        [multinomial(model.target_monomials[index]) for index in model.target_representatives],
+        dtype=np.int64,
+    )
+    assert np.array_equal(full_archive["normalization_rhs"], expected_normalization_rhs)
+    assert np.array_equal(full_archive["target_rhs"], expected_target_rhs)
+
+    expected_gram_offsets = []
+    expected_gram_qdims = []
+    expected_gram_masks = []
+    gram_offset = 0
+    for orbit in model.gram_orbits:
+        expected_gram_offsets.append(gram_offset)
+        qdim = int(orbit.variable.size)
+        expected_gram_qdims.append(qdim)
+        expected_gram_masks.append(orbit.parity_rep)
+        gram_offset += qdim
+    assert gram_offset == 8647
+    assert np.array_equal(
+        full_archive["gram_offsets"], np.asarray(expected_gram_offsets, dtype=np.int32)
+    )
+    assert np.array_equal(
+        full_archive["gram_qdims"], np.asarray(expected_gram_qdims, dtype=np.int32)
+    )
+    assert np.array_equal(
+        full_archive["gram_rep_masks"], np.asarray(expected_gram_masks, dtype=np.int8)
+    )
+
+    blowup_source_hash_before = sha256(BLOWUP_FACE_SOURCE)
+    blowup_data_hash_before = sha256(BLOWUP_FACE_DATA)
+    blowup_summary_hash_before = sha256(BLOWUP_FACE_SUMMARY)
+    with np.load(BLOWUP_FACE_DATA, allow_pickle=False) as loaded_blowup:
+        blowup_archive = {name: loaded_blowup[name].copy() for name in loaded_blowup.files}
+    blowup_summary = json.loads(BLOWUP_FACE_SUMMARY.read_text(encoding="utf-8"))
+    for key, expected in (
+        ("complete_c5_blowup_supports", 132),
+        ("blowup_plateau_forced_multiplier_orbits", 2085),
+        ("evaluation_span_dimensions_total", 402),
+        ("blowup_gram_face_rank", 6129),
+        ("blowup_gram_face_nnz", 71973),
+        ("blowup_gram_face_dimension", 2518),
+    ):
+        assert blowup_summary[key] == expected
+    assert np.array_equal(blowup_archive["forced_multiplier_orbits"], full_archive["forced_multiplier_orbits"])
+    assert np.array_equal(blowup_archive["live_multiplier_orbits"], full_archive["live_multiplier_orbits"])
+    assert np.array_equal(blowup_archive["gram_offsets"], full_archive["gram_offsets"])
+    assert np.array_equal(blowup_archive["gram_qdims"], full_archive["gram_qdims"])
+    assert np.array_equal(blowup_archive["gram_rep_masks"], full_archive["gram_rep_masks"])
+
+    full_h_shape, full_h_rows, full_h_nnz = unpack_archive_csr(full_archive, "gram_face")
+    symbolic_h_shape, symbolic_h_rows, symbolic_h_nnz = unpack_archive_csr(
+        blowup_archive, "gram_face"
+    )
+    assert full_h_shape == symbolic_h_shape == (6129, 8647)
+    assert full_h_nnz == 157515 and symbolic_h_nnz == 71973
+    constraint_ranks = [int(value) for value in full_archive["gram_constraint_ranks"]]
+    kernel_dims = [int(value) for value in full_archive["gram_kernel_dims"]]
+    face_dimensions = [int(value) for value in full_archive["gram_face_dimensions"]]
+    assert sum(constraint_ranks) == 6129 and sum(kernel_dims) == 402
+    assert sum(face_dimensions) == 2518
+    assert all(
+        rank + dimension == qdim
+        for rank, dimension, qdim in zip(
+            constraint_ranks, face_dimensions, expected_gram_qdims
+        )
+    )
+
+    stored_symbolic_kernels: dict[int, list[tuple[int, ...]]] = defaultdict(list)
+    for encoded in blowup_archive["kernel_rows_json"]:
+        block_index, row = json.loads(str(encoded))
+        stored_symbolic_kernels[int(block_index)].append(tuple(int(value) for value in row))
+
+    # Independently expand the continuous balanced-blow-up plateaus in every
+    # representative parity block, then compare their exact Qv=0 rowspace with
+    # both the symbolic sparse H and the final finite-grid H.
+    parity_members_by_rep = {min(members): members for members in parity_orbits}
+    independent_prime = 1_000_003
+    h_row_offset = 0
+    candidate_row_counts = []
+    for block_index, orbit in enumerate(model.gram_orbits):
+        rep_mask = orbit.parity_rep
+        basis = list(parity_blocks[rep_mask])
+        assert tuple(orbit.basis) == tuple(basis)
+        candidates: set[tuple[int, ...]] = set()
+        for member in parity_members_by_rep[rep_mask]:
+            element = next(
+                group_element
+                for group_element in GROUP
+                if image_exponent(rep_mask, group_element) == member
+            )
+            acted_basis = [image_exponent(beta, element) for beta in basis]
+            for classes in independent_blowups.values():
+                candidates.update(
+                    independent_plateau_coefficient_rows(
+                        acted_basis, member, classes
+                    )
+                )
+        candidate_row_counts.append(len(candidates))
+        stored_kernels = stored_symbolic_kernels.get(block_index, [])
+        assert set(stored_kernels) <= candidates
+        candidate_sparse = [
+            {column: value for column, value in enumerate(row) if value}
+            for row in sorted(candidates)
+        ]
+        stored_sparse = [
+            {column: value for column, value in enumerate(row) if value}
+            for row in stored_kernels
+        ]
+        candidate_rank = len(
+            sparse_independent_row_indices(candidate_sparse, independent_prime)
+        )
+        stored_rank = len(
+            sparse_independent_row_indices(stored_sparse, independent_prime)
+        )
+        union_rank = len(
+            sparse_independent_row_indices(
+                stored_sparse + candidate_sparse, independent_prime
+            )
+        )
+        assert candidate_rank == stored_rank == union_rank == kernel_dims[block_index]
+
+        # Rebuild every invariant Qv=0 equation from the symbolic kernel rows.
+        symbolic_equation_keys: set[tuple[tuple[int, int], ...]] = set()
+        for vector in stored_kernels:
+            nonzero = [(index, value) for index, value in enumerate(vector) if value]
+            for matrix_row in range(len(basis)):
+                coefficients: Counter[int] = Counter()
+                for matrix_column, value in nonzero:
+                    coefficients[
+                        expected_gram_offsets[block_index]
+                        + int(orbit.entry_ids[matrix_row, matrix_column])
+                    ] += value
+                key = tuple(sorted((column, value) for column, value in coefficients.items() if value))
+                if key:
+                    symbolic_equation_keys.add(key)
+
+        block_rank = constraint_ranks[block_index]
+        full_block_rows = full_h_rows[h_row_offset : h_row_offset + block_rank]
+        symbolic_block_rows = symbolic_h_rows[h_row_offset : h_row_offset + block_rank]
+        block_start = expected_gram_offsets[block_index]
+        block_stop = block_start + expected_gram_qdims[block_index]
+        assert all(
+            all(block_start <= column < block_stop for column in row)
+            for row in full_block_rows + symbolic_block_rows
+        )
+        assert {
+            tuple(sorted(row.items())) for row in symbolic_block_rows
+        } <= symbolic_equation_keys
+
+        # A nonzero modular minor proves exact Q-rank.  Equality of the combined
+        # modular rank checks that the denser final H and the independently
+        # generated symbolic H impose the same blockwise rowspace.
+        full_rank_mod = len(
+            sparse_independent_row_indices(full_block_rows, independent_prime)
+        )
+        symbolic_rank_mod = len(
+            sparse_independent_row_indices(symbolic_block_rows, independent_prime)
+        )
+        combined_rank_mod = len(
+            sparse_independent_row_indices(
+                symbolic_block_rows + full_block_rows, independent_prime
+            )
+        )
+        assert full_rank_mod == symbolic_rank_mod == combined_rank_mod == block_rank
+        h_row_offset += block_rank
+    assert h_row_offset == 6129
+    assert candidate_row_counts == [
+        int(block["candidate_rows"]) for block in blowup_summary["per_block"]
+    ]
+    assert kernel_dims == [
+        int(block["evaluation_span_dimension"])
+        for block in blowup_summary["per_block"]
+    ]
+    assert constraint_ranks == [
+        int(block["gram_constraint_rank"]) for block in blowup_summary["per_block"]
+    ]
 
     # ---- Exercise the constructor's actual numerical expansion permutation ----
     rng = np.random.default_rng(23022)
@@ -1312,6 +1785,12 @@ def main() -> None:
         "nonC5_witness_tight_arcs=19 PASS"
     )
     print("equality_collector_q5_q50_emitted_rays=439 all_rays_exact=PASS")
+    print(
+        f"complete_C5_blowup_supports={len(independent_blowups)} "
+        f"support_sizes={dict(sorted(blowup_support_sizes.items()))} "
+        f"all_439_rays_balanced_blowups=PASS ray_support_sizes="
+        f"{dict(sorted(equality_ray_support_sizes.items()))}"
+    )
     print("EQUALITY_COLLECTOR_AUDIT_ONLY: no SDP solve launched")
     print(f"face_exporter_sha256={exporter_hash_before}")
     print(

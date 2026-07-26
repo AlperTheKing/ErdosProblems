@@ -769,6 +769,7 @@ def build() -> tuple[dict[str, object], dict[str, np.ndarray]]:
     nonidentically_tight_pairs = 0
     for partition in partitions:
         vertices = set(sum(partition, ()))
+        partition_tight_count = 0
         supported_monomials = [
             index
             for index, exponent in enumerate(multiplier_monomials)
@@ -778,6 +779,7 @@ def build() -> tuple[dict[str, object], dict[str, np.ndarray]]:
             tight = cut_is_identically_tight(partition, cut_side(mask))
             if tight:
                 identically_tight_pairs += 1
+                partition_tight_count += 1
                 continue
             nonidentically_tight_pairs += 1
             target = forced_c5 if len(vertices) == 5 else forced_blowup
@@ -789,6 +791,7 @@ def build() -> tuple[dict[str, object], dict[str, np.ndarray]]:
                 int(multiplier_pair_ids[cut_index, monomial_index])
                 for monomial_index in supported_monomials
             )
+        assert partition_tight_count >= 1
     # Recompute the size-five baseline separately because forced_blowup already
     # includes every plateau.
     forced_c5 = set()
@@ -871,14 +874,31 @@ def build() -> tuple[dict[str, object], dict[str, np.ndarray]]:
         assert original_dimension == qdim
         constraint_rank = qdim - face_dimension
         equations = gram_kernel_equations(entry_ids, original_rows)
-        exact_modular_rank = modular_rank(equations, qdim, PRIME)
-        assert exact_modular_rank == constraint_rank
+        selected_equations = independent_rows_mod_prime(
+            equations, qdim, PRIME
+        )
+        assert len(selected_equations) == constraint_rank
+        for equation_index in selected_equations:
+            gram_face_rows.append(
+                {
+                    gram_offset + column: value
+                    for column, value in equations[equation_index].items()
+                    if value
+                }
+            )
 
         total_kernel_dimension += len(original_rows)
         total_face_dimension += face_dimension
         total_constraint_rank += constraint_rank
         for row in original_rows:
             kernel_rows_flat.append((parity_orbit_id, row))
+        gram_offsets.append(gram_offset)
+        gram_qdims.append(qdim)
+        gram_rep_masks.append(representative)
+        gram_entry_reps_flat.extend(
+            (parity_orbit_id, i, j) for i, j in entry_reps
+        )
+        gram_offset += qdim
         per_block.append(
             {
                 "parity_orbit": parity_orbit_id,
@@ -895,6 +915,9 @@ def build() -> tuple[dict[str, object], dict[str, np.ndarray]]:
         )
 
     assert total_gram_scalars == 8647
+    assert gram_offset == total_gram_scalars
+    gram_face = csr_from_dict_rows(gram_face_rows, total_gram_scalars)
+    assert gram_face.shape == (total_constraint_rank, total_gram_scalars)
 
     summary: dict[str, object] = {
         "graph": "Gamma_11=And(4)",
@@ -938,6 +961,7 @@ def build() -> tuple[dict[str, object], dict[str, np.ndarray]]:
         "gram_orbit_scalars": total_gram_scalars,
         "evaluation_span_dimensions_total": total_kernel_dimension,
         "blowup_gram_face_rank": total_constraint_rank,
+        "blowup_gram_face_nnz": int(gram_face.nnz),
         "blowup_gram_face_dimension": total_face_dimension,
         "c5_only_gram_face_rank": 1471,
         "incremental_gram_face_rank": total_constraint_rank - 1471,
@@ -947,9 +971,24 @@ def build() -> tuple[dict[str, object], dict[str, np.ndarray]]:
             "not a classification of the full ARCBOUND equality set."
         ),
     }
+    forced_ids = np.asarray(sorted(forced_blowup), dtype=np.int32)
+    live_ids = np.asarray(
+        sorted(set(range(len(multiplier_pair_reps))) - forced_blowup),
+        dtype=np.int32,
+    )
     payload = {
-        "forced_c5": np.asarray(sorted(forced_c5), dtype=np.int32),
-        "forced_blowup": np.asarray(sorted(forced_blowup), dtype=np.int32),
+        "forced_c5_multiplier_orbits": np.asarray(
+            sorted(forced_c5), dtype=np.int32
+        ),
+        "forced_multiplier_orbits": forced_ids,
+        "live_multiplier_orbits": live_ids,
+        "cut_masks": np.asarray([mask for mask, _mono in cuts], dtype=np.int32),
+        "multiplier_monomials": np.asarray(
+            multiplier_monomials, dtype=np.int8
+        ),
+        "multiplier_pair_representatives": np.asarray(
+            multiplier_pair_reps, dtype=np.int32
+        ),
         "partitions_json": np.asarray(
             [json.dumps(partition) for partition in partitions]
         ),
@@ -962,7 +1001,14 @@ def build() -> tuple[dict[str, object], dict[str, np.ndarray]]:
                 for block_index, row in kernel_rows_flat
             ]
         ),
+        "gram_offsets": np.asarray(gram_offsets, dtype=np.int32),
+        "gram_qdims": np.asarray(gram_qdims, dtype=np.int32),
+        "gram_rep_masks": np.asarray(gram_rep_masks, dtype=np.int8),
+        "gram_entry_representatives": np.asarray(
+            gram_entry_reps_flat, dtype=np.int32
+        ),
     }
+    pack_csr(payload, "gram_face", gram_face)
     return summary, payload
 
 
@@ -1032,6 +1078,7 @@ def write_report(path: Path, summary: dict[str, object]) -> None:
         f"C5-only Gram-face rank = {summary['c5_only_gram_face_rank']}",
         f"all blow-up Gram-face rank = {summary['blowup_gram_face_rank']}",
         f"increment = {summary['incremental_gram_face_rank']}",
+        f"independent integer H nonzeros = {summary['blowup_gram_face_nnz']}",
         f"remaining invariant Gram dimension = {summary['blowup_gram_face_dimension']}",
         "```",
         "",
@@ -1047,6 +1094,30 @@ def write_report(path: Path, summary: dict[str, object]) -> None:
         "```",
     ]
     path.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+
+
+def validate_output_paths(summary: Path, data: Path, report: Path) -> None:
+    outputs = [summary.resolve(), data.resolve(), report.resolve()]
+    if len(set(outputs)) != len(outputs):
+        raise ValueError("summary, data, and report paths must be distinct")
+    allowed_existing = {
+        (HERE / "CODEX_R10_BLOWUP_FACE_summary.json").resolve(),
+        (HERE / "CODEX_R10_BLOWUP_FACE_data.npz").resolve(),
+        (HERE / "CODEX_R10_BLOWUP_FACE_REPORT.md").resolve(),
+    }
+    for path in outputs:
+        if path.exists() and path not in allowed_existing:
+            raise ValueError(f"refusing to overwrite protected artifact: {path}")
+    if any(not path.is_relative_to(HERE) for path in outputs):
+        raise ValueError("all outputs must remain under problems/23/round10")
+    if any(not path.parent.is_dir() for path in outputs):
+        raise ValueError("every output parent directory must already exist")
+    expected_suffixes = (".json", ".npz", ".md")
+    for path, suffix in zip(outputs, expected_suffixes):
+        if path.suffix.lower() != suffix:
+            raise ValueError(f"expected {suffix} output, got {path}")
+        if path.exists() and not path.is_file():
+            raise ValueError(f"output path is not a regular file: {path}")
 
 
 def main() -> None:
@@ -1067,6 +1138,7 @@ def main() -> None:
         default=HERE / "CODEX_R10_BLOWUP_FACE_REPORT.md",
     )
     args = parser.parse_args()
+    validate_output_paths(args.summary, args.data, args.report)
     summary, payload = build()
     args.summary.write_text(
         json.dumps(summary, indent=2, sort_keys=True) + "\n",

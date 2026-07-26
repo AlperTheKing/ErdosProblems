@@ -4721,3 +4721,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T05:16:41] ✔ NON-SHARP HALF | DID: claude_noncol_orbits.py per-orbit maxima | RESULT: 0.781, 0.740, 0.765, 0.765, 0.826=100/121 of target; global 0.694-0.781 at q=8..15 | Δ: ~17 percent slack
 [2026-07-26T05:20:00] ✔ UNIVERSAL OBSTRUCTION | DID: claude_obstruction_id.py + ladder | RESULT: minimal non-C5-colourable induced subgraph of And(3),(4),(5) is ALWAYS Wagner: 1, 11, 63 copies, all 8vtx/12edge/3-regular | Δ: uniform in k
 [2026-07-26T05:20:00] ✘ LADDER GUESS | DID: test whether And(k)'s obstruction is And(k-1) | RESULT: FALSE at k=5, minimal size stays 8 not 11 | Δ: replaced by the stronger uniform statement
+[2026-07-26T05:41:44] ✔ DEFECT BOUND | DID: claude_defect_strict.py, refine Theorem A by keeping the defect | RESULT: Lambda <= max((2-D*)/50, 3/98), 0 violations in 400 exact instances | Δ: strictness recovered
+[2026-07-26T05:41:44] ✔ STRICT ON NON-COLOURABLE | DID: check D* on all 45 non-colourable supports | RESULT: D* > 0 everywhere, so Lambda < 1/25 strictly with explicit gap D*/50 | Δ: explicit epsilon obtained
+[2026-07-26T05:41:44] ✔ REDUCTION | DID: combine with Theorem B | RESULT: conjecture follows from psi - Lambda <= D*/50 on non-C5-colourable supports | Δ: sharpest formulation of the remainder

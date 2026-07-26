@@ -1797,3 +1797,70 @@ an induced Wagner", where R3-C37 measured roughly `17%` slack at `k = 4`.
 That the slack persists uniformly in `k`. R3-C37's margin was measured only at `k = 4`, on restricted
 grids, and is a lower bound. Establishing an explicit `epsilon`, uniform in `k`, on Wagner-containing
 supports is the open work -- but it is now ONE question rather than an infinite family of them.
+
+
+---
+
+## R3-C39 — THE SHARPEST REDUCTION YET: the conjecture reduces to a defect-bounded integrality gap
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_defect_strict.py`. General, not `Gamma_11`-specific.
+
+### A proved refinement of Theorem A
+
+Theorem A (R3-C22) proves `Lambda <= 1/(2 gamma)` with `gamma = min` over odd cycles `C` of
+`sum_{v in C} 1/d(v)`, and then discards information by bounding `gamma >= 25/2`. Recovering it:
+
+* for a 5-cycle, Cauchy-Schwarz and Lemma 2 give `sum_{v in C} 1/d(v) >= 25 / sum_{v in C} d(v)`, and
+  by definition of my defect `D(C) = sum_u x_u (2 - |N(u) cap V(C)|)` we have
+  `sum_{v in C} d(v) = 2 - D(C)` on the simplex, so the sum is `>= 25/(2 - D(C))`;
+* for an odd cycle of length `L >= 7`, `sum 1/d >= 2L^2/(L-1) >= 49/3`.
+
+Since `25/(2-D)` increases with `D`, the minimum over 5-cycles sits at the SMALLEST defect
+`D* := min_C D(C)`, so `gamma >= min(25/(2-D*), 49/3)` and
+
+```
+        Lambda(G,x)  <=  max( (2 - D*)/50 ,  3/98 )        for every triangle-free G, every x.
+```
+
+Gated: **0 violations over 400 exact instances** on `Gamma_11`.
+
+### The strictness, which is the point
+
+R3-C24 proved `D(C) = 0` implies `supp(x)` is `C5`-colourable. Contrapositive: on a
+NON-`C5`-colourable support -- equivalently, by R3-C38, a WAGNER-CONTAINING support -- every pentagon
+has `D(C) > 0`, hence `D* > 0` and
+
+```
+        Lambda(G,x)  <  1/25   STRICTLY,  with an explicit gap of D*/50.
+```
+
+Verified: all 45 non-colourable supports of `Gamma_11` have `D* > 0` at the uniform weighting; the
+smallest seen on a random Wagner-containing instance was `D* = 1/45`, giving the bound
+`89/2250 = 0.039556 < 0.04`.
+
+### The reduction
+
+Combining with Theorem B (`C5`-colourable supports give `psi <= (sum x)^2/25`, PROVED):
+
+```
+        for every triangle-free G and every x, EITHER supp(x) is C5-colourable and psi <= 1/25
+        is already proved, OR  Lambda < 1/25 - D*/50  with D* > 0 explicit.
+```
+
+So **the entire conjecture follows from a single inequality about the INTEGRALITY GAP**:
+
+> **for every triangle-free `G` and every `x` with non-`C5`-colourable support,
+> `psi(G,x) - Lambda(G,x) <= D*(x)/50`.**
+
+That is the sharpest statement of the remaining difficulty the campaign has produced. It is not a
+reformulation of the conjecture in disguise: the left side is a gap that is KNOWN to be nonzero (the
+whole odd-`K5` story, `psi/Lambda = 6/5` on twice-subdivided `K5`) and the right side is an explicit
+quantity computable from `x` alone. What must be shown is that the gap cannot exceed the defect.
+
+### Where it connects to everything else
+
+* On `Gamma_11` the gap is `0` at 10000 top-`psi` weightings with exact packing certificates (A5b),
+  so the inequality holds there with room to spare -- unproved, but measured.
+* Graphs with NO induced `C5` are handled by the other branch: `Lambda <= 3/98 < 1/25`.
+* The equality cases sit entirely on the `C5`-colourable side (R3-C32, R3-C35), which is exactly why
+  the non-colourable side can carry a strict gap at all.

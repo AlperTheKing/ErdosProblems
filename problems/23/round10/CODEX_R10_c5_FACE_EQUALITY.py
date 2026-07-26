@@ -301,6 +301,69 @@ class ExactRowSpan:
         return len(self.selected)
 
 
+def compose_group(left: tuple[int, int], right: tuple[int, int]) -> tuple[int, int]:
+    return (
+        left[0] * right[0],
+        (left[0] * right[1] + left[1]) % 11,
+    )
+
+
+def invariant_face_dimension_fast(core, orbit, span: ExactRowSpan) -> tuple[int, int]:
+    """Exact character formula using pivot-coordinate traces in an RREF basis."""
+    rref = [row[:] for row in span.echelon]
+    for later in range(len(rref) - 1, -1, -1):
+        pivot = span.pivots[later]
+        for earlier in range(later):
+            factor = rref[earlier][pivot]
+            if factor:
+                rref[earlier] = [
+                    value - factor * base_value
+                    for value, base_value in zip(rref[earlier], rref[later])
+                ]
+    for row_index, pivot in enumerate(span.pivots):
+        assert rref[row_index][pivot] == 1
+        assert all(
+            rref[other][pivot] == 0
+            for other in range(len(rref))
+            if other != row_index
+        )
+
+    basis_index = {exponent: index for index, exponent in enumerate(orbit.basis)}
+    ambient_character: dict[tuple[int, int], int] = {}
+    complement_character: dict[tuple[int, int], int] = {}
+    for element in orbit.stabilizer:
+        permutation = [
+            basis_index[core.exponent_image(exponent, element)]
+            for exponent in orbit.basis
+        ]
+        inverse = [0] * len(permutation)
+        for source, target in enumerate(permutation):
+            inverse[target] = source
+        ambient_trace = sum(
+            source == target for source, target in enumerate(permutation)
+        )
+        kernel_trace = sum(
+            rref[row_index][inverse[pivot]]
+            for row_index, pivot in enumerate(span.pivots)
+        )
+        assert kernel_trace.denominator == 1
+        ambient_character[element] = ambient_trace
+        complement_character[element] = ambient_trace - int(kernel_trace)
+
+    denominator = 2 * len(orbit.stabilizer)
+    original_numerator = sum(
+        ambient_character[element] ** 2
+        + ambient_character[compose_group(element, element)]
+        for element in orbit.stabilizer
+    )
+    face_numerator = sum(
+        complement_character[element] ** 2
+        + complement_character[compose_group(element, element)]
+        for element in orbit.stabilizer
+    )
+    assert original_numerator % denominator == 0
+    assert face_numerator % denominator == 0
+    return original_numerator // denominator, face_numerator // denominator
 def weighted_kernel_row(
     basis: list[tuple[int, ...]],
     parity_rep: tuple[int, ...],
@@ -434,10 +497,8 @@ def build_general_face(log_path: Path):
         block_constraint_ranks = []
         block_face_dimensions = []
         for orbit, span in zip(model.gram_orbits, kernel_spans):
-            original_dimension, face_dimension, _characters = (
-                core.invariant_symmetric_dimension(
-                    orbit.basis, span.selected, orbit.stabilizer
-                )
+            original_dimension, face_dimension = invariant_face_dimension_fast(
+                core, orbit, span
             )
             assert original_dimension == int(orbit.variable.size)
             block_face_dimensions.append(face_dimension)
@@ -464,12 +525,10 @@ def build_general_face(log_path: Path):
     q_offset = 0
     raw_equation_count = 0
     unique_equation_count = 0
-    for orbit, kernel_rows in zip(model.gram_orbits, final_kernel_rows):
+    for orbit_index, (orbit, kernel_rows) in enumerate(zip(model.gram_orbits, final_kernel_rows)):
         qdim = int(orbit.variable.size)
-        original_dimension, face_dimension, _characters = (
-            core.invariant_symmetric_dimension(
-                orbit.basis, kernel_rows, orbit.stabilizer
-            )
+        original_dimension, face_dimension = invariant_face_dimension_fast(
+            core, orbit, kernel_spans[orbit_index]
         )
         assert original_dimension == qdim
         rank = qdim - face_dimension
