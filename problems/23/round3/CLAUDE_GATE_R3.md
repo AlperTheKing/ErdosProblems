@@ -2303,3 +2303,57 @@ part, not a last step. Piece (ii) remains untouched.
 #23 is STOPPED, not abandoned: the ledger, registry and artifacts are complete and replayable, and
 Codex's Round 10 arc route is gated sound with its frontier lemma unfalsified at `q <= 50`. Nothing
 here is a proof or a disproof of the conjecture, and it is recorded as such.
+
+
+---
+
+## R3-C49 — RETRACTION: my "17% slack" was an artefact of small grids. Codex refuted it; I confirm.
+
+Root-agent entry, 2026-07-26. Gate `round5/claude_gate_cx_slack_refutation.py`.
+
+R3-C37 claimed the non-`C5`-colourable half of the `Gamma_11` split carries roughly `17%` slack
+(`max 25*psi/q^2 = 0.826`), R3-C46 claimed `10.7%` headroom under the degree restriction, and R3-C47
+reported the same. **The claim is FALSE and I withdraw it.**
+
+Codex's family (TICK-CX-192): on the minimal non-colourable support `S = {0,1,2,4,5,6,8,9}` with
+induced `C5` `C = {0,1,4,5,8}`, put weight `M` on `C` and `1` on `S - C = {2,6,9}`. Re-derived
+exactly over all 1024 cuts:
+
+```
+        M        sum a      bip = M^2+1        25*bip/(sum a)^2
+        1            8            2            25/32      = 0.78125
+        2           13            5           125/169     = 0.73964     <- my scans stopped near here
+        3           18           10           125/162     = 0.77160
+        5           28           26           325/392     = 0.82908
+       10           53          101          2525/2809    = 0.89890
+       50          253         2501         62525/64009   = 0.97682
+      200         1003        40001         58825/59177   = 0.99405
+     1000         5003      1000001      25000025/25030009 = 0.99880  ->  1
+```
+
+`bip = M^2 + 1` holds exactly at every `M` tested, `sum a = 5M+3`, and the ratio converges to `1`.
+**The non-colourable half is as sharp as the colourable half.** My exhaustive scans ran `q <= 15`,
+i.e. `M <= 3`, which is precisely where this curve DIPS to its minimum `0.7396` -- I sampled the
+bottom of the curve and reported it as a ceiling.
+
+### The pattern, which is the real lesson
+
+This is the SECOND time Codex has caught me claiming non-sharpness from small-grid maxima. The first
+was A27 (R3-C25), where the unsettled maximum rose with grid refinement. Same failure mode, same
+correction. **A maximum measured on a bounded grid is a lower bound, never a ceiling** -- I have now
+written that twice and violated it twice.
+
+### Consequences, stated fully
+
+* R3-C37's split remains VALID as a split -- `C5`-colourable supports really are settled by
+  Theorem B, and Wagner really is the universal obstruction (R3-C38). Only the SLACK claim dies.
+* R3-C46 and R3-C47 are contaminated by the same error: both measured at `n <= 11` and both reported
+  headroom. The degree restriction `delta > (4N-2)/25` does exclude Codex's family only for small
+  `M` -- at `M = 1000` the support has `delta` well above the threshold -- so the restricted route
+  is NOT rescued by it either. Treat the `10.7%` figure as withdrawn.
+* R3-C43/C44's pentagon-free measurements were also taken at `n <= 11` and must be regarded as
+  suspect for the same reason, pending a large-`N` family check of the kind Codex just did here.
+
+What survives untouched: Theorem A and its defect refinement, the `ARCBOUND` sharpening, Wagner as
+universal obstruction, and every mechanism-level kill. Those are proofs and witnesses, not measured
+maxima.

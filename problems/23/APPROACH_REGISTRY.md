@@ -91,3 +91,11 @@ falsifier). That satisfies the rule with margin; A14 is tracked but is external 
 * transport / flow formulations of `bip` as a minimum-cost object rather than a transversal;
 * stability: quantitative "close to `C5[n]` or strictly below `1/25`" statements, which is what
   every flag-algebra exactness proof in the literature needs.
+
+## R10 face-cascade stop addendum (2026-07-26)
+
+The independently certified rank-22 block-0 face permits one relative-interior replay of the same fixed `c=25`, degree-4, 56-cut cone. If that replay only demands a third facial reduction and supplies no immediate exact primal identity or separating dual, stop this branch and log:
+
+`DEAD: reformulation maze — repeated face cascade without exact closure`
+
+Then preserve the artifacts and switch to another Erdős problem.

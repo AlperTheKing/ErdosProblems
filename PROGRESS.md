@@ -4747,3 +4747,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T09:27:50] ✔ EASY-FIRST SCAN | DID: rank 622 open Erdos problems, then re-rank 290 formalized ones by Lean statement FORM not tags | RESULT: asymptotic leaders 562/566/567 rejected; 686 selected | Δ: new target
 [2026-07-26T09:27:50] ✔ 686 FIRST RESULT | DID: claude_erdos686_search.py exact search k<=12, n<=4000 | RESULT: every N in 2..40 representable EXCEPT 4 and 25; 9, 16, 36 ARE, so it is not squares | Δ: target sharpened
 [2026-07-26T09:27:50] ✔ 686 k=2 CLOSED | DID: solve 4(n+1)(n+2)=(m+1)(m+2) by hand | RESULT: X^2-4Y^2=-3 forces X=Y=1, no admissible solution; any representation of 4 needs k>=3 | Δ: case eliminated
+[2026-07-26T09:29:38] ✘ RETRACTION R3-C37/46/47 | DID: gate Codex's family, weight M on C5 + 1 on rest of minimal support | RESULT: bip = M^2+1 exactly, ratio -> 1 (0.99880 at M=1000); my 17% slack is FALSE | Δ: claim withdrawn
+[2026-07-26T09:29:38] ✘ PATTERN | DID: compare to A27 | RESULT: second time I claimed non-sharpness from small-grid maxima; my scans hit M<=3, the DIP of the curve | Δ: bounded-grid max is a lower bound, never a ceiling
