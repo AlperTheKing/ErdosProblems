@@ -89,9 +89,9 @@ def solve(mask: int, degree: int):
     index = {exponent: i for i, exponent in enumerate(basis)}
     target2 = np.zeros(len(MONOMIALS))
     for k, (i, j) in enumerate(MONOMIALS):
-        target2[k] = 1 if i == j else 2
+        target2[k] = (1 if i == j else 2) / 25
     target = as_vector(lift_quadratic(target2, degree), index, len(basis))
-    cut_columns = [25 * as_vector(lift_quadratic(cut, degree), index, len(basis)) for cut in selected]
+    cut_columns = [as_vector(lift_quadratic(cut, degree), index, len(basis)) for cut in selected]
     product_columns = []
     for alpha in combinations_with_replacement(range(len(generators)), degree):
         polynomial = {tuple([0] * N): 1.0}
@@ -103,7 +103,7 @@ def solve(mask: int, degree: int):
     beq = np.r_[target, 1.0]
     result = linprog(
         np.zeros(aeq.shape[1]), A_eq=aeq, b_eq=beq, bounds=(0, None), method="highs",
-        options={"dual_feasibility_tolerance": 1e-9, "primal_feasibility_tolerance": 1e-9},
+        options={"dual_feasibility_tolerance": 1e-9, "primal_feasibility_tolerance": 1e-9, "time_limit": 60},
     )
     print(f"mask=0x{mask:03x} degree={degree} rows={len(basis)} cols={aeq.shape[1]} "
           f"success={result.success} status={result.message}")

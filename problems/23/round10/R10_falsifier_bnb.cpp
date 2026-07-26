@@ -21,13 +21,21 @@
 //
 // At a partial assignment, for each arc form f we use the exact upper bound
 //
-//   f <= current + r * max_j c_j + floor(r^2/4),
+//   f <= current + U(H,c,r),
 //
 // where r is the unassigned mass and c_j is the already-assigned
-// monochromatic-neighbour mass seen by unassigned vertex j.  The final term is
-// valid because the unassigned monochromatic graph is a subgraph of the
-// triangle-free Gamma_11; the weighted Mantel/Motzkin--Straus bound is r^2/4.
-// If this upper bound is below T for one arc, the entire subtree is impossible.
+// monochromatic-neighbour mass seen by unassigned vertex j.  Here U is computed
+// exactly.  For
+//
+//       F(y) = sum_j c_j y_j + sum_{uv in E(H)} y_u y_v,  sum y_j=r,
+//
+// the usual Motzkin--Straus compression remains valid with the linear term:
+// if u,v are nonadjacent, F is affine while y_u+y_v is fixed, so all their
+// mass may be moved to one endpoint without decreasing F.  Thus a maximizer is
+// supported on a clique.  H is triangle-free, so only single vertices and
+// edges need be checked.  The edge maximization is a one-variable integer
+// concave quadratic.  If current+U is below T for one arc, the subtree is
+// impossible.
 //
 // Build:
 //   clang++ -O3 -march=native -std=c++17 R10_falsifier_bnb.cpp -o R10_falsifier_bnb.exe
@@ -160,16 +168,43 @@ struct State {
         }
     }
 
+    static long long floor_div2(long long z) {
+        return z >= 0 ? z / 2 : -((-z + 1) / 2);
+    }
+
+    long long exact_future_upper(int a, int depth, int rem) {
+        const auto& A = *shared->arcs;
+        if (rem == 0) return 0;
+        long long best = 0;
+        for (int d = depth; d < N; ++d) {
+            const int v = order[d];
+            best = std::max(best, static_cast<long long>(rem) * cross[a][v]);
+        }
+        for (int du = depth; du < N; ++du) {
+            const int u = order[du];
+            for (int dv = du + 1; dv < N; ++dv) {
+                const int v = order[dv];
+                if (!A.mono[a][u][v]) continue;
+                const long long b = static_cast<long long>(rem) + cross[a][u] - cross[a][v];
+                const long long center = floor_div2(b);
+                const long long candidates[4] = {0, rem, center, center + 1};
+                for (long long mass_u : candidates) {
+                    mass_u = std::max(0LL, std::min(static_cast<long long>(rem), mass_u));
+                    const long long mass_v = rem - mass_u;
+                    const long long value = cross[a][u] * mass_u
+                                          + cross[a][v] * mass_v
+                                          + mass_u * mass_v;
+                    best = std::max(best, value);
+                }
+            }
+        }
+        return best;
+    }
+
     bool upper_bound_prunes(int depth, int rem) {
         const auto& A = *shared->arcs;
-        const long long triangle_free = (static_cast<long long>(rem) * rem) / 4;
         for (int a = 0; a < A.count; ++a) {
-            long long max_cross = 0;
-            for (int d = depth; d < N; ++d) {
-                max_cross = std::max(max_cross, cross[a][order[d]]);
-            }
-            const long long ub = current[a] + static_cast<long long>(rem) * max_cross
-                               + triangle_free;
+            const long long ub = current[a] + exact_future_upper(a, depth, rem);
             if (ub < shared->target) return true;
         }
         return false;

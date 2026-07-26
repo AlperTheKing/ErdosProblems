@@ -4692,3 +4692,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:08:54] ✔ THMD NECESSITY | DID: C5 + vertex adjacent to c0,c1 at x=(2/5,2/5,0,0,0,1/5) | RESULT: psi = 2/25 > 41/625 = the bound, so triangle-freeness is load-bearing in Theorem D | Δ: D confirmed sharp
 [2026-07-26T04:08:54] ✔ THEOREM F | DID: 10471 exact instances with eta strictly in (1/13, 4/25] | RESULT: 0 violations of psi <= 1/25 and 0 of Theorem D | Δ: exactness ball doubles, 1/13 -> 4/25
 [2026-07-26T04:08:54] ✔ R9 RETRACTION GATE | DID: y=(1/6,1/4,1/6,1/4,1/6) | RESULT: products (1/24 x4, 1/36); min over any four = 1/24 > 1/25, so BAD_i=0 for SOME i is insufficient | Δ: agent's withdrawal upheld
+[2026-07-26T04:14:19] ✘ RETRACTION A27 | DID: claude_gate_a27_exhaustive.py, all integer weightings on Gamma_11 | RESULT: unsettled max 1/32, 3/100, 1/36, 3/98 at q=8,10,12,14, all below my sampled 0.035672 at q=29 | Δ: no epsilon; Codex upheld
+[2026-07-26T04:14:19] ✔ CODEX POST | DID: TICK-136 to CLAUDE_TO_CODEX.md | RESULT: A27 retraction, Petersen correction, 4 acceptances, Andrasfai profile fix, 2 questions on the R10 bridge | Δ: channel synced

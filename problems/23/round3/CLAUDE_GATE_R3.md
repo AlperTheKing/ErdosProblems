@@ -1021,3 +1021,70 @@ was wrong: its cycle walk rejected at the first step, where `prev` is `None` and
 candidates. Replaced by the direct criterion (5 vertices spanning exactly 5 edges, all degrees 2,
 which on 5 vertices forces a single pentagon); the count is **33**, matching R3-C21. Recorded because
 a silent 0 here would have falsely voided the plateau argument on the campaign's wall graph.
+
+
+---
+
+## R3-C25 — round 9 odd-K5 family, and a RETRACTION of my own residual-margin suggestion (GATED)
+
+Root-agent entry, 2026-07-26. Own gates: `round5/claude_gate_r9_petersen.py`,
+`round5/claude_gate_r9_thmD.py`, `round5/claude_gate_a27_exhaustive.py`.
+
+### RETRACTION 1 (already committed, restated here for the record): Petersen is NOT odd-K5-minor-free
+
+R3-C22's consequence sentence listed Petersen among the graphs covered by Theorem A + Guenin. FALSE.
+Switching at the inner 5-set makes the five spokes even and leaves all ten outer/inner edges odd;
+contracting the spokes, the branch sets `{a_i,b_i}` are joined for all ten pairs of K5, all odd.
+Explicit gap weight (w = 1 on outer/inner, 5 on spokes): `tau_w = 4` over all 512 cuts against a
+feasible cover of cost `10/3`, gap exactly `6/5`; every odd cycle uses an EVEN number of spokes so
+all 32 carry at least 3 non-spoke edges. The Petersen ceiling STILL HOLDS via the round-7 exact SOS
+certificate, which never used Guenin. Round 7's own auditor had flagged this and I propagated the
+error regardless.
+
+### RETRACTION 2 (mine, and Codex called it): the residual margin has no epsilon
+
+In R3-C24 I measured that weightings the proved toolkit cannot settle appeared to top out near
+`30/841 = 0.035672`, about 11% below `1/25`, and suggested this would make the residual target
+NON-SHARP -- which would have been a change of character, since sharpness is what has killed every
+mechanism here. I flagged it as a measurement, not a theorem. Codex then reported that the unsettled
+maximum RISES with grid refinement. **I checked it against my own work and Codex is right.**
+Exhaustive over ALL integer weightings on `Gamma_11` with zeros allowed:
+
+```
+        q =  8   43758 weightings   max psi unsettled = 1/32  = 0.031250
+        q = 10  184756 weightings                     = 3/100 = 0.030000
+        q = 12  646646 weightings                     = 1/36  = 0.027778
+        q = 14 1961256 weightings                     = 3/98  = 0.030612
+```
+
+all BELOW my sampled `q = 29` value of `0.035672`. Since sampling only lower-bounds the maximum at
+its grid, the sequence is rising with refinement and nothing bounds it away from `1/25`. **The
+residual target is still SHARP and my suggestion is withdrawn.** A27 survives as a decomposition of
+the problem, not as a change of its character.
+
+### ACCEPTED from the same round
+
+* **THEOREM F.** `psi <= 1/25` whenever `eta <= 4/25`, doubling Theorem D's `1/13`. Gated on 10471
+  exact instances with `eta` strictly inside the new band `(1/13, 4/25]`: 0 violations of `psi <=
+  1/25` and 0 of Theorem D's inequality.
+* **Theorem D's triangle-freeness is load-bearing.** C5 plus a vertex adjacent to two ADJACENT
+  pentagon vertices, `x = (2/5,2/5,0,0,0,1/5)`: `psi = 2/25` against the bound `41/625`.
+* **The round-9 family's own withdrawal is upheld.** "BAD_i = 0 for SOME i" fails at
+  `y = (1/6,1/4,1/6,1/4,1/6)`, whose cyclic products are `(1/24,1/24,1/24,1/24,1/36)`: the minimum
+  over any FOUR is `1/24 > 1/25`. The correct unconditional criterion is BAD_i = 0 for ALL i, i.e. a
+  homomorphism to C5, which is classical.
+* **THEOREM R9-1.** A triangle-free graph with an odd-K5 minor has `N >= 10`, and **Petersen is the
+  unique one on `N <= 10`** (censuses: 1897 nine-vertex graphs, 0 hits; 12172 ten-vertex, exactly 1).
+  So `psi = Lambda <= 1/25` for every triangle-free `G` on `N <= 10` except Petersen.
+* **A28, gap quantification is DEAD.** An odd subdivision preserves `bip` and `Lambda`, and the twice
+  subdivision realises ANY weighted MinUnCut instance exactly, so `sup psi/Lambda` over triangle-free
+  graphs EQUALS the general LP gap: triangle-freeness contributes nothing and no constant `c` with
+  `psi <= c*Lambda` exists. New exact records at odd girth 5: Higman-Sims `35/22`, Gewirtz `3/2`,
+  Hoffman-Singleton `10/7`.
+* **A29.** Restricting to the odd-K5 class is NOT a restriction (adjoin a zero-weight Petersen); the
+  honest form is full-support `x`.
+
+### Correction issued to Codex
+
+Its Andrasfai profile `C(k-2,2)` should be `C(k-1,2)`: the exhaustive counts are 1, 3, 6, 10 for
+`k = 3..6`, which `C(k-1,2)` reproduces and `C(k-2,2)` does not (it gives 0, 1, 3, 6).
