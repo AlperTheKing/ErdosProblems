@@ -1380,3 +1380,43 @@ no refinement that still averages over rotations can recover the gap.
 merely the length -- averaging over rotations is now exhausted in both its fixed (R3-C29) and
 weight-reading-in-length (here) forms. That is the same conclusion the campaign reached globally in
 R3-C21 ("a proof must read the weights"), now localised to the one open lemma.
+
+
+---
+
+## R3-C31 — the 11 length-k interval cuts do NOT suffice; the full arc family is needed
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_kinterval_suffices.py`.
+
+R3-C30 showed any proof of the frontier lemma must select the ROTATION from `x`. The natural
+follow-up is whether the ROTATIONS ALONE suffice at the single length `k` -- i.e. whether the
+`m` cuts of the R3-C29 family already give the bound, which would shrink Codex's target from 56 arc
+cuts to eleven, each with the clean description "weight of the edges inside a 7-interval".
+
+Define `KBOUND(x) = min over the m rotations of e(B_i)`, `B_i` the complementary `(2k-1)`-interval.
+Always `ARCBOUND <= KBOUND`. Exhaustive over all integer weightings, zeros allowed:
+
+```
+        And(3) = Gamma_8   q =  8   6435 weightings     1 violation of KBOUND <= q^2/25
+        And(4) = Gamma_11  q =  8   43758                11 violations
+                           q = 12   646646               11
+                           q = 14   1961256             165
+```
+
+The Wagner violation is at the UNIFORM weighting `a = (1,1,1,1,1,1,1,1)`: `KBOUND = 3` against
+`q^2/25 = 2.56`, while the true `psi = 2` is comfortably under. On `Gamma_11`,
+`a = (2,1,1,1,1,1,1,1,1,1,1)` at `q = 12` gives `KBOUND = 6 > 5.76` with true `psi = 4`.
+
+**So the length-`k` family is genuinely insufficient and the other arc lengths are load-bearing.** In
+every violation the true `psi` remains far below target, so this is a deficiency of the restricted
+family, not a threat to the conjecture. Recorded so that neither of us re-aims the `D_22` degree-4
+Positivstellensatz at a reduced cut family: **the 56 cuts are needed.**
+
+### Where the arc route now stands, precisely
+
+* `ARCBOUND <= (k-1)W/(3k-1)` proved and tight at C5 (R3-C29), but averaging-limited (A6);
+* length selection does not rescue it, and all the loss is in rotation averaging (R3-C30);
+* rotations at a single length do not suffice either (here);
+* so the frontier lemma needs a rule that selects BOTH the length and the rotation from `x`, over
+  the full 56-cut family. That is exactly the object Codex's degree-4 Positivstellensatz encodes,
+  which is now the better-motivated of the two live routes.

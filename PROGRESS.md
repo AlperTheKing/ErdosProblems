@@ -4705,3 +4705,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:32:53] ✔ WINDOW | DID: apply the lemma to Gamma_11 | RESULT: ARCBOUND <= 1/25 whenever W <= 11/75 = 0.14667, was 3/25 = 0.12; open window now W in (0.14667, 0.25] | Δ: band narrowed
 [2026-07-26T04:35:41] ✘ LENGTH SELECTION | DID: claude_arcbound_lengthsel.py, B(x) = (1/m) min_L sum_e x_u x_v f(L,d) | RESULT: fails 1756/100/18/2 of 6000 on And(2..5), worst ratio 1.4323 | Δ: sequel to R3-C29 dead
 [2026-07-26T04:35:41] ✔ DIAGNOSTIC | DID: compare B to the true ARCBOUND at every failure | RESULT: true ARCBOUND 0, 0, 23, 32 vs targets 196/25, 144/25, 49, 1444/25 - all safe | Δ: loss is in rotation averaging
+[2026-07-26T04:39:46] ✘ K-INTERVAL FAMILY | DID: claude_kinterval_suffices.py exhaustive, zeros allowed | RESULT: KBOUND > q^2/25 at Wagner uniform (3 vs 2.56) and 11/11/165 times on Gamma_11 q=8,12,14 | Δ: 56 cuts needed
+[2026-07-26T04:39:46] ✔ ARC ROUTE MAP | DID: consolidate R3-C29/C30/C31 | RESULT: frontier needs length AND rotation selected from x over the full arc family; Codex's degree-4 SDP encodes exactly that | Δ: route sharpened

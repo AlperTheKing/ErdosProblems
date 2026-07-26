@@ -13,6 +13,7 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import math
+import pickle
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -23,6 +24,7 @@ import numpy as np
 
 HERE = Path(__file__).resolve().parent
 CONSTRUCTOR = HERE / "CODEX_R10_g11_d22_sdp.py"
+NUMERIC_EXPORT = HERE / "CODEX_R10_g11_d22_numeric.pkl"
 N = 11
 D = 4
 DT = 6
@@ -520,6 +522,217 @@ def main() -> None:
         )
         assert expanded_gram_coefficients[alpha] == reduced_value
 
+    # ---- Independent audit of the exported numerical warm start -------------
+    numeric_hash_before = sha256(NUMERIC_EXPORT)
+    with NUMERIC_EXPORT.open("rb") as handle:
+        certificate = pickle.load(handle)
+    assert certificate["NUMERICAL_ONLY"] is True
+    assert certificate["n"] == N and certificate["d"] == 2
+    assert certificate["c"] == 25
+    assert certificate["E"] == edges and certificate["cuts"] == cuts
+
+    numeric_nu = certificate["nu"]
+    numeric_normalization = np.zeros(len(mons_d))
+    for beta_i, beta in enumerate(mons_d):
+        numeric_normalization[beta_i] = sum(
+            float(numeric_nu.get((cut_i, beta), 0.0))
+            for cut_i in range(len(cuts))
+        )
+    numeric_normalization_rhs = np.asarray(
+        [25 * multinomial(beta) for beta in mons_d], dtype=float
+    )
+    numeric_normalization_residual = float(
+        np.max(np.abs(numeric_normalization - numeric_normalization_rhs))
+    )
+
+    numeric_target = np.asarray([multinomial(alpha) for alpha in mons_t], dtype=float)
+    for (cut_i, beta), value in numeric_nu.items():
+        for edge_i in cuts[cut_i][1]:
+            u, v = edges[edge_i]
+            alpha = list(beta)
+            alpha[u] += 1
+            alpha[v] += 1
+            numeric_target[index_t[tuple(alpha)]] -= float(value)
+
+    q_by_mask: dict[Exponent, tuple[list[Exponent], np.ndarray]] = {}
+    numeric_gram = np.zeros(len(mons_t))
+    minimum_eigenvalue = float("inf")
+    maximum_eigenvalue = 0.0
+    maximum_symmetry_error = 0.0
+    negative_eigenvalue_blocks = 0
+    for raw_basis, raw_matrix in certificate["Q"]:
+        basis = [tuple(beta) for beta in raw_basis]
+        matrix = np.asarray(raw_matrix, dtype=float)
+        assert matrix.shape == (len(basis), len(basis))
+        block_mask = tuple(power & 1 for power in basis[0])
+        assert block_mask not in q_by_mask
+        q_by_mask[block_mask] = (basis, matrix)
+        symmetry_error = float(np.max(np.abs(matrix - matrix.T)))
+        maximum_symmetry_error = max(maximum_symmetry_error, symmetry_error)
+        symmetric = (matrix + matrix.T) / 2
+        eigenvalues = (
+            np.asarray([symmetric[0, 0]])
+            if len(basis) == 1
+            else np.linalg.eigvalsh(symmetric)
+        )
+        minimum_eigenvalue = min(minimum_eigenvalue, float(eigenvalues[0]))
+        maximum_eigenvalue = max(maximum_eigenvalue, float(eigenvalues[-1]))
+        if eigenvalues[0] < -1e-8:
+            negative_eigenvalue_blocks += 1
+        for i, left in enumerate(basis):
+            for j, right in enumerate(basis):
+                alpha = tuple((a + b) // 2 for a, b in zip(left, right))
+                numeric_gram[index_t[alpha]] += matrix[i, j]
+    assert set(q_by_mask) == set(parity_masks)
+    numeric_identity_residual = float(np.max(np.abs(numeric_target - numeric_gram)))
+
+    # Verify that the expanded data are exact D_22 copies, independently of
+    # whether the floating iterate satisfies the cone constraints closely.
+    maximum_nu_copy_error = 0.0
+    for cut_i in range(len(cuts)):
+        for beta_i, beta in enumerate(mons_d):
+            source = float(numeric_nu.get((cut_i, beta), 0.0))
+            for element in GROUP:
+                image_cut = cut_image(cut_i, element)
+                image_beta = image_exponent(beta, element)
+                target_value = float(numeric_nu.get((image_cut, image_beta), 0.0))
+                maximum_nu_copy_error = max(
+                    maximum_nu_copy_error, abs(source - target_value)
+                )
+
+    maximum_q_copy_error = 0.0
+    for source_mask, (source_basis, source_matrix) in q_by_mask.items():
+        for element in GROUP:
+            target_mask = image_exponent(source_mask, element)
+            target_basis, target_matrix = q_by_mask[target_mask]
+            target_position = {beta: i for i, beta in enumerate(target_basis)}
+            p = [target_position[image_exponent(beta, element)] for beta in source_basis]
+            maximum_q_copy_error = max(
+                maximum_q_copy_error,
+                float(np.max(np.abs(target_matrix[np.ix_(p, p)] - source_matrix))),
+            )
+    assert maximum_nu_copy_error == 0.0
+    assert maximum_q_copy_error == 0.0
+
+    # ---- Equality face forced by all induced C5 concentrations ---------------
+    induced_c5s = []
+    for vertices in __import__("itertools").combinations(range(N), 5):
+        vertex_set = frozenset(vertices)
+        cycle_edges = [
+            edge_i
+            for edge_i, (u, v) in enumerate(edges)
+            if u in vertex_set and v in vertex_set
+        ]
+        cycle_degrees = Counter(
+            vertex for edge_i in cycle_edges for vertex in edges[edge_i]
+        )
+        if len(cycle_edges) == 5 and set(cycle_degrees.values()) == {2}:
+            induced_c5s.append((vertex_set, cycle_edges))
+    assert len(induced_c5s) == 33
+
+    c5_orbit_representatives = {
+        min(
+            tuple(sorted(image_set(vertices, element))) for element in GROUP
+        )
+        for vertices, _cycle_edges in induced_c5s
+    }
+    assert len(c5_orbit_representatives) == 3
+
+    forced_coefficient_occurrences = 0
+    forced_coefficient_keys = set()
+    maximum_forced_coefficient = 0.0
+    maximum_c5_normalization_error = 0.0
+    maximum_c5_surplus = 0.0
+    maximum_c5_target_abs = 0.0
+    maximum_c5_gram_match_error = 0.0
+    maximum_kernel_residual = 0.0
+    maximum_block_energy_abs = 0.0
+    nonzero_kernel_vectors = 0
+
+    for vertices, cycle_edges in induced_c5s:
+        supported_d = [
+            beta
+            for beta in mons_d
+            if all(power == 0 for vertex, power in enumerate(beta) if vertex not in vertices)
+        ]
+        assert len(supported_d) == 70
+        cut_cycle_counts = [
+            sum(edge_i in mono for edge_i in cycle_edges)
+            for _cut_mask, mono in cuts
+        ]
+        assert set(cut_cycle_counts) <= {1, 3, 5} and min(cut_cycle_counts) == 1
+        nu_on_c5 = []
+        for cut_i, count in enumerate(cut_cycle_counts):
+            value = sum(
+                float(numeric_nu.get((cut_i, beta), 0.0)) for beta in supported_d
+            )
+            nu_on_c5.append(value)
+            if count > 1:
+                for beta in supported_d:
+                    key = (cut_i, beta)
+                    forced_coefficient_occurrences += 1
+                    forced_coefficient_keys.add(key)
+                    maximum_forced_coefficient = max(
+                        maximum_forced_coefficient,
+                        abs(float(numeric_nu.get(key, 0.0))),
+                    )
+
+        normalization_value = sum(nu_on_c5)
+        surplus = sum(
+            value * (count - 1)
+            for value, count in zip(nu_on_c5, cut_cycle_counts)
+        )
+        target_value = 5**6 - sum(
+            value * count for value, count in zip(nu_on_c5, cut_cycle_counts)
+        )
+        maximum_c5_normalization_error = max(
+            maximum_c5_normalization_error, abs(normalization_value - 25 * 5**4)
+        )
+        maximum_c5_surplus = max(maximum_c5_surplus, abs(surplus))
+        maximum_c5_target_abs = max(maximum_c5_target_abs, abs(target_value))
+
+        gram_value = 0.0
+        block_count = 0
+        for basis, matrix in q_by_mask.values():
+            vector = np.asarray(
+                [
+                    1.0
+                    if all(
+                        power == 0
+                        for vertex, power in enumerate(beta)
+                        if vertex not in vertices
+                    )
+                    else 0.0
+                    for beta in basis
+                ]
+            )
+            if not np.any(vector):
+                continue
+            block_count += 1
+            nonzero_kernel_vectors += 1
+            image = matrix @ vector
+            energy = float(vector @ image)
+            gram_value += energy
+            maximum_kernel_residual = max(
+                maximum_kernel_residual, float(np.max(np.abs(image)))
+            )
+            maximum_block_energy_abs = max(maximum_block_energy_abs, abs(energy))
+        assert block_count == 16
+        maximum_c5_gram_match_error = max(
+            maximum_c5_gram_match_error, abs(target_value - gram_value)
+        )
+
+    assert nonzero_kernel_vectors == 33 * 16
+    assert abs(
+        numeric_normalization_residual
+        - certificate["diagnostics"]["normalization_max_abs_residual"]
+    ) < 1e-10
+    assert abs(
+        numeric_identity_residual
+        - certificate["diagnostics"]["target_max_abs_residual"]
+    ) < 1e-10
+    assert numeric_hash_before == sha256(NUMERIC_EXPORT)
+
     hash_after = sha256(CONSTRUCTOR)
     assert hash_before == hash_after, "constructor changed during the audit"
 
@@ -547,6 +760,36 @@ def main() -> None:
     print("representative_equations=LOSSLESS_FOR_D22_INVARIANT_DATA")
     print("stabilizer_tying=EXACT_PARAMETERIZATION")
     print("numeric_expansion_permutation=EXACT_MATCH_AND_TRANSPORTER_INDEPENDENT")
+    print(f"numeric_export_sha256={numeric_hash_before}")
+    print(
+        f"numeric_full_normalization_residual={numeric_normalization_residual:.12e} "
+        f"numeric_full_identity_residual={numeric_identity_residual:.12e}"
+    )
+    print(
+        f"numeric_min_eigenvalue={minimum_eigenvalue:.12e} "
+        f"numeric_max_eigenvalue={maximum_eigenvalue:.12e} "
+        f"negative_eigenvalue_blocks_lt_minus_1e-8={negative_eigenvalue_blocks} "
+        f"maximum_symmetry_error={maximum_symmetry_error:.12e}"
+    )
+    print(
+        f"numeric_nu_D22_copy_error={maximum_nu_copy_error:.12e} "
+        f"numeric_Q_D22_copy_error={maximum_q_copy_error:.12e}"
+    )
+    print(
+        f"induced_C5s=33 C5_orbits=3 forced_coefficient_occurrences="
+        f"{forced_coefficient_occurrences} forced_unique_coefficients="
+        f"{len(forced_coefficient_keys)} max_forced_coefficient="
+        f"{maximum_forced_coefficient:.12e}"
+    )
+    print(
+        f"C5_max_normalization_error={maximum_c5_normalization_error:.12e} "
+        f"C5_max_surplus={maximum_c5_surplus:.12e} "
+        f"C5_max_target_abs={maximum_c5_target_abs:.12e} "
+        f"C5_max_gram_match_error={maximum_c5_gram_match_error:.12e} "
+        f"C5_max_kernel_residual={maximum_kernel_residual:.12e} "
+        f"C5_max_block_energy_abs={maximum_block_energy_abs:.12e}"
+    )
+    print("NUMERICAL_EXPORT_AUDIT_ONLY: exact rational reconstruction still required")
     print("AUDIT_PASS")
 
 
