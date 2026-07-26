@@ -4752,3 +4752,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T09:32:49] ✔ 686 DEEP SEARCH | DID: claude_erdos686_deep.py, n solved exactly per (k,d) | RESULT: no representation of 4 or 25 for k<=120, d<=400, n<=2e6; controls 2,3,9,16,36 re-found | Δ: region certified clear
 [2026-07-26T09:32:49] ✔ 686 REFORMULATION | DID: cancel k! to get N = C(m+k,k)/C(n+k,k), then apply Kummer | RESULT: 4 representable iff carries_2 differ by exactly 2 and carries_p agree at every odd p | Δ: exact carry criterion
 [2026-07-26T09:32:49] ✘ 686 REASSESSMENT | DID: judge the target against my own selection criterion | RESULT: answer for 4 is probably NO, so the finite-witness closure does not apply | Δ: target is an impossibility proof
+[2026-07-26T09:47:05] ✔ TARGET DECISION | DID: compare shortlist shapes after 686 downgrade | RESULT: picked Erdos 306 - constructive existence, three-prime sibling already SOLVED, no asymptotics, divergent reciprocal sum | Δ: target set
+[2026-07-26T09:47:05] ✘ 306 PROBES | DID: greedy and naive DFS | RESULT: greedy hits 1/6, 1/3, 1/15 only; DFS over dens<6000, <=10 terms did not terminate | Δ: method inadequate, not evidence
