@@ -1627,3 +1627,51 @@ Its face uses the 33 pentagon indicators. The correct generator set is the compl
 subsets of `Gamma_11` with their balanced subspaces. The extra orbits are real: at `q = 10` alone
 there are 9 orbits where its construction sees 3, and the size-6 and size-7 supports force MORE
 zeros (37 of 56 cuts) than the pentagons do, so they tighten the face rather than merely enlarge it.
+
+
+---
+
+## R3-C36 — independent convergence on the non-C5 face witness; Codex's face build aborts on memory
+
+Root-agent entry, 2026-07-26.
+
+### Convergence, which is the strongest signal available here
+
+Codex's `CODEX_R10_NONC5_FACE_WITNESS.md` reports the equality point
+
+```
+        a = (2,1,1,0,2,0,1,1,2,0,0),  sum = 10,  min_S q_S(a) = 4 = 10^2/25,  19 tight arc cuts
+        arc-value histogram {4:19, 6:1, 8:10, 12:14, 16:6, 20:6}
+```
+
+This is **the same witness I found independently in R3-C32** and flagged to Codex in TICK-140 before
+its file existed. I re-derived the histogram from my own construction and it matches **exactly**, all
+56 cuts accounted for. Two independent derivations, same object, same conclusion: the face built from
+the 33 induced-C5 indicators alone (1147 forced multiplier orbits, 1471 independent Gram rows) is
+NECESSARY BUT INCOMPLETE. Its stated requirement -- "must remain build-only until the full exact
+small-denominator equality set is enumerated" -- is exactly what R3-C35 delivered and TICK-141
+posted.
+
+### The face build then aborted, on memory, not mathematics
+
+```
+        python CODEX_R10_g11_d22_face_export.py --solve --solver CLARABEL --tol 1e-8 --max-iter 500
+        private memory 147,749,982,208 -> 155,982,712,832 bytes   within seconds, still climbing
+        working set     68,891,795,456 ->  88,686,813,184 bytes
+        process killed to protect the ~192 GB ceiling; Clarabel never reported a start
+```
+
+Codex's own diagnosis: whole-matrix SymPy exact RREF / determinant / inverse for the rational face
+PROJECTORS, "suspected allocation site, not a confirmed solver failure". That is almost certainly
+right, and it is an engineering fault, not a mathematical one -- the face system is small
+(8640 face linear variables, 1471 independent Gram-face rows). Dense rational fill-in in SymPy is
+the only plausible way to reach 150 GB on an object that size.
+
+**The fix does not require the projector at all.** The face is a set of LINEAR EQUATIONS
+`gram_face * q = 0` and `nu[forced] = 0`. Conic solvers take linear equality constraints natively, so
+the equations can be appended to the model instead of being used to build a projector and
+reparameterise. If a kernel basis is genuinely wanted, it should come from sparse modular elimination
+with rational reconstruction -- the same technique Codex already used successfully for the exact row
+basis at prime 2000003 -- never from SymPy RREF on the whole matrix.
+
+Route status unchanged: **BLOCKED**, no exact certificate, no degree escalation.

@@ -4715,3 +4715,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:51:02] ✘ FACE INCOMPLETE | DID: test the R3-C32 blow-up witness against the ARC certificate | RESULT: ARCBOUND = 4 = target exactly, 19 of 56 cuts tight, 37 forced to zero | Δ: 1_C-only face insufficient
 [2026-07-26T05:06:21] ✔ EQUALITY SET | DID: claude_equality_set.py exhaustive at q=5,10,15 (5|q forced) | RESULT: |EQ| = 33, 121, 264 in 3, 9, 16 D_22 orbits; supports size 5-7, all C5-colourable | Δ: face generator found
 [2026-07-26T05:06:21] ✔ HALF-CHARACTERISATION | DID: claude_equality_characterisation.py both directions | RESULT: EQ subset balanced blow-ups with 0 exceptions; converse FALSE at (1,1,1,1,1,0..), ARCBOUND=0 | Δ: completeness required
+[2026-07-26T05:08:11] ✔ CONVERGENCE | DID: re-derive Codex's non-C5 witness histogram | RESULT: {4:19, 6:1, 8:10, 12:14, 16:6, 20:6}, 56 cuts, EXACT MATCH; same point as my R3-C32 | Δ: witness gated
+[2026-07-26T05:08:11] ✘ FACE BUILD ABORT | DID: read Codex's abort note | RESULT: 147->156 GB private memory in seconds from whole-matrix SymPy RREF; killed at the 192 GB ceiling | Δ: engineering, not mathematics
