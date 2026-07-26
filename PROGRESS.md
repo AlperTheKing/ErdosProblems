@@ -4701,3 +4701,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:23:46] ✔ CODEX POST | DID: TICK-138 | RESULT: reduction accepted; I take A5b product-weight integrality on Gamma_11, Codex keeps the degree-4 SDP | Δ: two independent routes, no collision
 [2026-07-26T04:30:06] ✔ A5B EVIDENCE | DID: claude_a5b_product_integrality.py, top 2500 by psi at q=9..12 on Gamma_11 | RESULT: 10000 exact packing certificates, 0 gaps psi > Lambda | Δ: SDP-free route stays live
 [2026-07-26T04:30:06] ✘ PENTAGON LP | DID: claude_a5b_pentagon_packing.py restricting the packing to the 33 pentagons | RESULT: Lambda_pent < psi in 27 cases, e.g. psi=2 vs 1 at [1,1,0,2,2,0,1,1,0,1,0] | Δ: 33-var reduction dead
+[2026-07-26T04:32:53] ✔ NEW LEMMA | DID: proved ARCBOUND(And(k)) <= (k-1)W/(3k-1) via k-intervals independent + each edge in exactly k-1 complements | RESULT: 0 violations in 16000 exact weightings, tight at C5 | Δ: A1 sharpened
+[2026-07-26T04:32:53] ✔ WINDOW | DID: apply the lemma to Gamma_11 | RESULT: ARCBOUND <= 1/25 whenever W <= 11/75 = 0.14667, was 3/25 = 0.12; open window now W in (0.14667, 0.25] | Δ: band narrowed

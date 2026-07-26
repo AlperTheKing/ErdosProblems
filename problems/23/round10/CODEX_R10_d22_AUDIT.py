@@ -13,9 +13,7 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import math
-import pickle
 import sys
-import tempfile
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Iterable
@@ -446,43 +444,61 @@ def main() -> None:
     assert sum(independent_entry_counts.values()) == 8647
 
     # ---- Exercise the constructor's actual numerical expansion permutation ----
-    model.multiplier_variable.value = np.zeros(model.multiplier_variable.size)
+    rng = np.random.default_rng(23022)
+    model.multiplier_variable.value = rng.integers(
+        -1000, 1001, size=model.multiplier_variable.size
+    ).astype(float)
     expected_rep_matrices: dict[Exponent, np.ndarray] = {}
+    gram_value_by_global_key = {}
     for gram_orbit in model.gram_orbits:
-        gram_orbit.variable.value = np.arange(
-            1, int(gram_orbit.variable.size) + 1, dtype=float
-        )
+        gram_orbit.variable.value = rng.integers(
+            -1000, 1001, size=int(gram_orbit.variable.size)
+        ).astype(float)
         expected_rep_matrices[gram_orbit.parity_rep] = np.asarray(
             gram_orbit.matrix.value, dtype=float
         )
-
-    with tempfile.TemporaryDirectory(prefix="r10_d22_audit_") as temp_dir:
-        payload_path = Path(temp_dir) / "expanded.pkl"
-        constructor.expand_numeric(model, payload_path, {"audit": 1.0})
-        with payload_path.open("rb") as handle:
-            payload = pickle.load(handle)
-    assert payload["NUMERICAL_ONLY"] is True
-    assert len(payload["Q"]) == len(parity_blocks)
+        independent_basis_pos = {
+            beta: index
+            for index, beta in enumerate(parity_blocks[gram_orbit.parity_rep])
+        }
+        for i, left in enumerate(gram_orbit.basis):
+            for j, right in enumerate(gram_orbit.basis):
+                key = independent_entry_keys[gram_orbit.parity_rep][
+                    (independent_basis_pos[left], independent_basis_pos[right])
+                ]
+                value = float(
+                    gram_orbit.variable.value[int(gram_orbit.entry_ids[i, j])]
+                )
+                global_key = (gram_orbit.parity_rep, key)
+                assert gram_value_by_global_key.setdefault(global_key, value) == value
 
     orbit_by_member = {
         member: gram_orbit
         for gram_orbit in model.gram_orbits
         for member in gram_orbit.parity_members
     }
-    for block, matrix_list in payload["Q"]:
+    expanded_gram_coefficients = Counter()
+    for block in constructor.parity_blocks(N, DT):
         member = tuple(power & 1 for power in block[0])
         gram_orbit = orbit_by_member[member]
         rep_matrix = expected_rep_matrices[gram_orbit.parity_rep]
         element = gram_orbit.image_elements[member]
-        p = [
+        independent_p = [
             block.index(image_exponent(beta, element))
             for beta in gram_orbit.basis
         ]
+        constructor_p = constructor.image_permutation(
+            gram_orbit.basis, block, element
+        ).tolist()
+        assert constructor_p == independent_p
+        p = independent_p
         assert sorted(p) == list(range(len(block)))
-        expected = np.empty_like(rep_matrix)
-        expected[np.ix_(p, p)] = rep_matrix
-        actual = np.asarray(matrix_list, dtype=float)
-        assert np.array_equal(actual, expected)
+        actual = np.empty_like(rep_matrix)
+        actual[np.ix_(p, p)] = rep_matrix
+        for i, left in enumerate(block):
+            for j, right in enumerate(block):
+                alpha = tuple((a + b) // 2 for a, b in zip(left, right))
+                expanded_gram_coefficients[alpha] += actual[i, j]
 
         # Any other transporter differs by a representative stabilizer.  The
         # tied representative matrix must therefore produce the same block.
@@ -496,6 +512,13 @@ def main() -> None:
             alternative_matrix = np.empty_like(rep_matrix)
             alternative_matrix[np.ix_(q, q)] = rep_matrix
             assert np.array_equal(alternative_matrix, actual)
+
+    for alpha in mons_t:
+        reduced_value = sum(
+            coefficient * gram_value_by_global_key[key]
+            for key, coefficient in gram_rows[alpha].items()
+        )
+        assert expanded_gram_coefficients[alpha] == reduced_value
 
     hash_after = sha256(CONSTRUCTOR)
     assert hash_before == hash_after, "constructor changed during the audit"

@@ -1272,3 +1272,61 @@ A5b remains LIVE and SDP-free in principle, with 10000 exact certificates and no
 "psi = Lambda for every product weight on Gamma_11" is UNPROVED and is not implied by anything in the
 ledger. Codex keeps the degree-4 Positivstellensatz on the arc form; this is the independent second
 route to the same target.
+
+
+---
+
+## R3-C29 — a PROVED sharpening of A1: `ARCBOUND(And(k)) <= (k-1)W/(3k-1)`, tight at C5
+
+Root-agent entry, 2026-07-26. Mine, proved and verified (`round5/claude_arcbound_sharpened.py`).
+The registry records `ARCBOUND <= W/3` for the circle graphs. That is not optimal at any finite `k`.
+
+### Statement
+
+For `And(k) = Gamma_m`, `m = 3k-1`, adjacency `circdist >= k`, and every `x >= 0`:
+
+```
+        ARCBOUND(x)  <=  (k-1)/(3k-1) * W,        W = sum over edges of x_u x_v.
+```
+
+`(k-1)/(3k-1) < 1/3` for every finite `k` and increases to `1/3`, so this strictly improves the
+recorded bound at every `k`, recovering it only in the limit. It is TIGHT at `C5` (`k = 2`).
+
+### Proof
+
+**(1) Intervals of length `k` are independent.** Two vertices inside such an interval are at circular
+distance at most `k-1`, below the adjacency threshold `k`. So for the interval cut
+`A_i = {i,...,i+k-1}` no monochromatic edge lies inside `A_i`, and every monochromatic edge lies
+inside the complementary interval `B_i` of length `m-k = 2k-1`. Hence `ARCBOUND <= min_i e(B_i)`,
+where `e(B)` is the weight of edges with both ends in `B`.
+
+**(2) Every edge lies in EXACTLY `k-1` of the `m` intervals `B_i`, whatever its length.** An edge has
+`k <= d <= 2k-1`. A `(2k-1)`-interval contains both ends iff it contains one of the two arcs joining
+them. The short arc has `d+1` vertices and fits in `(2k-1)-(d+1)+1 = 2k-1-d` positions; the long arc
+has `m-d+1 = 3k-d` vertices and fits in `(2k-1)-(3k-d)+1 = d-k` positions. Both counts are
+nonnegative exactly on `k <= d <= 2k-1`, and they sum to `(2k-1-d)+(d-k) = k-1`, with **no dependence
+on `d`**.
+
+Therefore `sum_i e(B_i) = (k-1)W`, and the minimum is at most the average:
+`ARCBOUND <= (k-1)W/m = (k-1)W/(3k-1)`. QED
+
+### Verification
+
+Both combinatorial steps checked exactly for `k = 2..8`: every `k`-interval independent, and the
+per-edge incidence count collapsing to the single value `k-1` in each case. The inequality itself:
+16000 exact rational weightings across `And(2..5)`, **0 violations**; observed maxima of
+`ARCBOUND/W` are `1/5, 115/536, 216/901, 13/50` against bounds `1/5, 1/4, 3/11, 2/7`. On `C5` the
+bound is attained: `W = 1/5`, `ARCBOUND = 1/25 = (1/5)W`.
+
+### What it does and does not buy — stated plainly
+
+It is an AVERAGING bound over the `m` rotations, and registry A6 records that fixed averaging cannot
+reach `1/25`. Consistent with that, at a `C5`-concentration inside `Gamma_11` it gives
+`3W/11 = 3/55 = 0.054545` against the truth `1/25 = 0.04`. **So it cannot close Codex's frontier
+lemma**, and I am not proposing it as one.
+
+What it does is shrink the open window. `ARCBOUND <= 1/25` now follows whenever
+`W <= (3k-1)/(25(k-1))`, i.e. for `Gamma_11` whenever `W <= 11/75 = 0.146667`, against the previous
+`W <= 3/25 = 0.12`. With Motzkin-Straus capping `W <= 1/4`, the open window for `Gamma_11` narrows
+from `W in (0.12, 0.25]` to `W in (0.14667, 0.25]`. The improvement is largest at SMALL `k`, which is
+exactly where the hard cases sit.
