@@ -4688,3 +4688,7 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T03:53:00+03:00] ✔ R10-RESIDUAL P2 | DID: exhaustive exact max of bip(H[a])/q^2 over every integer weighting q<=24 | RESULT: interior max 5/147=0.034014 at q=21 | Δ: sampling gap closed
 [2026-07-26T03:54:00+03:00] ✘ R10-RESIDUAL VERDICT | DID: compared exhaustive maxima to the R9 sample | RESULT: 30/841=0.035672 at q=29 beats every q<=24 max | Δ: room-to-spare premise unsupported
 [2026-07-26T03:55:00+03:00] ✘ R10 SELF-CORRECTION | DID: rechecked my pentagon counter after it reported 0 | RESULT: walk rejected at step 1 where prev is None; true count 33 | Δ: none
+[2026-07-26T04:08:54] ✘ RETRACTION | DID: claude_gate_r9_petersen.py after round 9 flagged it | RESULT: Petersen HAS an odd-K5 minor, tau_w=4 > 10/3 = tau*_w, gap 6/5 | Δ: my R3-C22 + GOAL base (7) corrected
+[2026-07-26T04:08:54] ✔ THMD NECESSITY | DID: C5 + vertex adjacent to c0,c1 at x=(2/5,2/5,0,0,0,1/5) | RESULT: psi = 2/25 > 41/625 = the bound, so triangle-freeness is load-bearing in Theorem D | Δ: D confirmed sharp
+[2026-07-26T04:08:54] ✔ THEOREM F | DID: 10471 exact instances with eta strictly in (1/13, 4/25] | RESULT: 0 violations of psi <= 1/25 and 0 of Theorem D | Δ: exactness ball doubles, 1/13 -> 4/25
+[2026-07-26T04:08:54] ✔ R9 RETRACTION GATE | DID: y=(1/6,1/4,1/6,1/4,1/6) | RESULT: products (1/24 x4, 1/36); min over any four = 1/24 > 1/25, so BAD_i=0 for SOME i is insufficient | Δ: agent's withdrawal upheld

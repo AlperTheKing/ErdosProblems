@@ -34,7 +34,7 @@ def c5_per_edge(g):
         cnt[(u, v)] = c
     return cnt
 
-def certify(name, g, ls_iters=200, seed=11):
+def certify(name, g, ls_iters=40, seed=11):
     par = S.srg_params(g)
     lmin = S.lambda_min_exact(par) if par else None
     m, n = g.m, g.n
@@ -47,8 +47,13 @@ def certify(name, g, ls_iters=200, seed=11):
     lam = F(m, 5) if (uniform and og == 5 and p > 0) else None
     lb = F(m, 2) + F(n * lmin, 4) if lmin is not None else None
     lb_int = -((-lb.numerator) // lb.denominator) if lb is not None else None
-    cut, side = maxcut_local(g, iters=ls_iters, seed=seed)
-    assert cut == cut_value(g, side)
+    cut = 0
+    for sd in range(1, 9):                       # several restarts; the CUT is the certificate
+        c, side = maxcut_local(g, iters=ls_iters, seed=sd)
+        assert c == cut_value(g, side)           # re-counted exactly
+        cut = max(cut, c)
+        if lb_int is not None and m - cut <= lb_int:
+            break
     ub = m - cut
     exact_bip = lb_int if (lb_int is not None and lb_int == ub) else None
     print(f"{name:18s} n={n:4d} m={m:5d} oddgirth={og} 5-cycles/edge "

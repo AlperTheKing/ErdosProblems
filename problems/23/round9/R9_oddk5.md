@@ -28,10 +28,12 @@ Reproduce: `python R9_oddk5_selftest.py` (26/26 PASS, reproduces `bip(K5)=4`, `�
 
 2. **Minimum order of the open class (new theorem, §3).** A triangle-free graph carrying an
    odd-K5 minor has **at least 10 vertices and at least 15 edges**, and **the Petersen graph
-   is the unique triangle-free graph on at most 10 vertices carrying one**. Hand proof + two
-   exhaustive computations (all `4^10` branch configurations on 10 vertices → 192 labelled
-   witnesses, a single isomorphism class `= SRG(10,3,0,1)`; all 1897 triangle-free 9-vertex
-   graphs → zero hits). Consequently **`ψ = Λ ≤ 1/25` for every weight on every triangle-free
+   is the unique triangle-free graph on at most 10 vertices carrying one**. Hand proof, plus
+   three independent exhaustive computations: all `4^10` branch configurations on 10 vertices
+   → 192 labelled witnesses in a single isomorphism class `= SRG(10,3,0,1)`; all **1897**
+   triangle-free 9-vertex graphs → zero hits; all **12172** triangle-free 10-vertex graphs →
+   exactly one hit, `ICOf@pSb?` = Petersen. Consequently **`ψ = Λ ≤ 1/25` for every weight on
+   every triangle-free
    graph with `N ≤ 10` except Petersen**, and the genuinely open part of the conjecture starts
    at `N = 10`, not at `N = 11` (`And(4) = Γ_11`) as the ledger had it.
 
@@ -231,9 +233,12 @@ triangle. **So it is Petersen.** ∎
 > therefore finished for `N ≤ 10` with a one-line answer: the only object in the class is
 > Petersen.
 
-**Independent redundancy.** All **1897** triangle-free graphs on 9 vertices (the complete
-census, each re-verified triangle-free by my own decoder) were run through the decider:
-**zero** odd-K5 minors, in agreement with the hand proof.
+**Independent redundancy — complete censuses, no case analysis used.**
+All **1897** triangle-free graphs on 9 vertices: **zero** odd-K5 minors.
+All **12172** triangle-free graphs on 10 vertices: **exactly one** hit, graph6 `ICOf@pSb?`,
+`m = 15`, `srg` parameters `(10,3,0,1)` — the Petersen graph (`R9_oddk5_census10.log`).
+Both censuses were re-verified triangle-free by my own decoder before being decided. This
+reproduces the theorem end to end without using any part of the hand proof.
 
 ---
 
@@ -475,11 +480,18 @@ counterexample must have is not blocked, and follows from two accepted results. 
 `e = Σ_{uv∈E} x_u x_v` (weighted edge density; `e ≤ 1/4` on triangle-free graphs by
 Motzkin–Straus).
 
-> **Proposition (density window + forced gap).** Accepted base gives `ψ ≤ e − 4e²`, and
+> **Proposition (density window + forced gap).** `ψ ≤ e − 4e²`, and
 > `4e² − e + 1/25 = 4(e − 1/20)(e − 1/5)`. Hence
 > **`ψ > 1/25` forces `e ∈ (1/20, 1/5)`.** On that window `Λ ≤ e/5 < 1/25`, so a
 > counterexample must have odd-cycle integrality gap
 > `ψ/Λ > (1/25)/(e/5) = 1/(5e) ∈ (1, 4)`.
+
+*Proof of `ψ ≤ e − 4e²` (self-contained; this is the accepted Theorem-A machinery, restated so
+the section stands alone).* For each `v` use the cut `(N(v), V∖N(v))`. Triangle-freeness makes
+`N(v)` independent, so every edge meeting `N(v)` crosses, and the monochromatic weight is
+`e − Σ_{u∈N(v)} x_u d(u)` with `d(u) = Σ_{w∼u} x_w`. Averaging these upper bounds with
+weights `x_v` gives `ψ ≤ e − Σ_u x_u d(u)²`, and Cauchy–Schwarz with `Σ_u x_u d(u) = 2e`,
+`Σ_u x_u = 1` gives `Σ_u x_u d(u)² ≥ 4e²`. ∎ (Checked exactly on all six witnesses below.)
 
 So a counterexample is squeezed from both sides: it cannot be sparse (`e ≤ 1/20` is
 excluded outright), and the sparser it is inside the window the more odd-K5 structure it
@@ -555,6 +567,8 @@ R9_oddk5_sums.py       1-sums, bowtie sweep, 2-sum falsifier, class equivalence
 R9_oddk5_profile.py    corrected C5 profile + 1-sum continuous optimisation
 R9_oddk5_extra.py      M22 pinning, odd-K5 status of C5 blow-ups
 R9_oddk5_dichotomy.py  density window and the gap a counterexample must have
+R9_oddk5_named.py      Andrasfai / Mycielskian / Kneser exact table + odd-K5 decision
+R9_oddk5_census10.py   all 12172 triangle-free 10-vertex graphs (redundancy for Thm R9-1)
 R9_oddk5_audit.py      adversarial re-check of every load-bearing claim (ALL PASS)
 logs: R9_oddk5_minorder.log R9_oddk5_sums.log R9_oddk5_extra.log R9_oddk5_audit.log
       R9_oddk5_dichotomy.log

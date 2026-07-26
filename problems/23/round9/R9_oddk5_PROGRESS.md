@@ -17,3 +17,5 @@ so the lines are recorded here and were also printed to the caller.)
 2026-07-26T04:35 ✘ R9-PROFILE | DID: exact grid test of my own C5 profile formula | RESULT: f(1/12) = 1/40 > 11/576, formula RETRACTED; corrected f is irrational at rational u | Δ: none
 2026-07-26T04:45 ✔ R9-DICHOTOMY | DID: combined accepted psi <= e-4e^2 with Lambda <= e/5 | RESULT: a counterexample needs e in (1/20,1/5) and gap > 1/(5e) in (1,4); every witness here falls short | Δ: hunt directed to dense configurations
 2026-07-26T04:55 ✔ R9-AUDIT | DID: R9_oddk5_audit.py, independent re-derivation of every load-bearing number | RESULT: ALL PASS (A1-A5) | Δ: none
+2026-07-26T05:05 ✔ R9-CENSUS10 | DID: all 12172 triangle-free 10-vertex graphs through the odd-K5 decider | RESULT: exactly 1 hit, graph6 ICOf@pSb? = SRG(10,3,0,1) = Petersen | Δ: Thm R9-1 uniqueness confirmed without the hand proof
+2026-07-26T05:10 ✘ R9-LIBFIX | DID: verify_Lambda rejected a certificate on And(5) | RESULT: separation oracle returns odd closed WALKS; rows now stored as edge SETS and validity (non-bipartite row) asserted; 26/26 selftest, no accepted value changed | Δ: none

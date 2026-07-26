@@ -1,6 +1,16 @@
 """TASK 2 (step 5) -- WHICH graphs does Theorem E settle unconditionally, and what is
 the exact residual region?
 
+!!! RETRACTED CRITERION -- READ THIS FIRST !!!
+`e_covered` below implements the criterion "BAD_i = 0 for SOME i", which I first believed
+implied psi <= 1/25 for every x.  IT DOES NOT (see R9_thmD.md section 5.2): BAD_{i0}=0 only
+gives psi <= y_{i0} y_{i0+1}, and the AM-GM bound 1/25 is available only at the MINIMISING i.
+Witness: y = (1/6,1/4,1/6,1/4,1/6) has min over any four cuts = 1/24 > 1/25.
+The census printed by this file is therefore NOT a list of settled graphs.  The file is kept
+only because `blowups_from_C5`, `admissible` and `hom_exists` are the search primitives reused
+by R9_thmD_maxbound.py and R9_thmD_thmE2.py.  The CORRECT unconditional criterion is
+BAD_i = 0 for ALL i, i.e. a homomorphism H -> C5.
+
 A triangle-free H is "E-COVERED" if it has a complete induced C5-blow-up B, an
 assignment m(.) of the outside vertices W to classes (legal by E1), and a cut i,
 with BAD_i = 0.  Then  psi(H,x) <= 1/25  for EVERY x -- the conjecture is proved
