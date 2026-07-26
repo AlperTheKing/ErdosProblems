@@ -1700,6 +1700,12 @@ def main() -> None:
             assert float(synthetic_payload["nu"].get((cut_i, beta), 0.0)) == expected
     assert exporter_hash_before == sha256(FACE_EXPORTER)
 
+    assert full_face_source_hash_before == sha256(FULL_FACE_SOURCE)
+    assert full_face_data_hash_before == sha256(FULL_FACE_DATA)
+    assert full_face_summary_hash_before == sha256(FULL_FACE_SUMMARY)
+    assert blowup_source_hash_before == sha256(BLOWUP_FACE_SOURCE)
+    assert blowup_data_hash_before == sha256(BLOWUP_FACE_DATA)
+    assert blowup_summary_hash_before == sha256(BLOWUP_FACE_SUMMARY)
     hash_after = sha256(CONSTRUCTOR)
     assert hash_before == hash_after, "constructor changed during the audit"
 
@@ -1790,6 +1796,24 @@ def main() -> None:
         f"support_sizes={dict(sorted(blowup_support_sizes.items()))} "
         f"all_439_rays_balanced_blowups=PASS ray_support_sizes="
         f"{dict(sorted(equality_ray_support_sizes.items()))}"
+    )
+    print(
+        f"full_face_source_sha256={full_face_source_hash_before} "
+        f"full_face_data_sha256={full_face_data_hash_before} "
+        f"full_face_summary_sha256={full_face_summary_hash_before}"
+    )
+    print(
+        "full_face_maps=EXACT_MATCH F1=2085 live=526 "
+        "normalization=56x526 target_nu=392x526 target_gram=392x8647"
+    )
+    print(
+        f"full_face_H={full_h_shape[0]}x{full_h_shape[1]} nnz={full_h_nnz} "
+        f"rank_mod_{independent_prime}=6129"
+    )
+    print(
+        f"symbolic_blowup_H={symbolic_h_shape[0]}x{symbolic_h_shape[1]} "
+        f"nnz={symbolic_h_nnz} same_blockwise_rowspace=PASS "
+        "symbolic_kernel_rank=402"
     )
     print("EQUALITY_COLLECTOR_AUDIT_ONLY: no SDP solve launched")
     print(f"face_exporter_sha256={exporter_hash_before}")

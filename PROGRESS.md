@@ -4724,3 +4724,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T05:41:44] ✔ DEFECT BOUND | DID: claude_defect_strict.py, refine Theorem A by keeping the defect | RESULT: Lambda <= max((2-D*)/50, 3/98), 0 violations in 400 exact instances | Δ: strictness recovered
 [2026-07-26T05:41:44] ✔ STRICT ON NON-COLOURABLE | DID: check D* on all 45 non-colourable supports | RESULT: D* > 0 everywhere, so Lambda < 1/25 strictly with explicit gap D*/50 | Δ: explicit epsilon obtained
 [2026-07-26T05:41:44] ✔ REDUCTION | DID: combine with Theorem B | RESULT: conjecture follows from psi - Lambda <= D*/50 on non-C5-colourable supports | Δ: sharpest formulation of the remainder
+[2026-07-26T06:57:24] ✔ SLACK AT K=5 | DID: claude_slack_k5.py on Gamma_14, 1.1M and 5.2M weightings | RESULT: Wagner-containing max 0.750000 and 0.694444, IDENTICAL to Gamma_11 at the same grids | Δ: R3-C38 caveat closed
+[2026-07-26T06:57:24] ✔ SEPARATION RULE | DID: compare halves by grid | RESULT: halves coincide when 5 does not divide q and separate when it does, matching the 5|q equality condition | Δ: structure confirmed

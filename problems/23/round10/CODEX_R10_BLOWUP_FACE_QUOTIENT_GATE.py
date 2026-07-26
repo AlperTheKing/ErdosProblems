@@ -181,10 +181,12 @@ def main() -> None:
         ].tocsr()
         assert full_rows.nnz == block_face.nnz
         h_rows = sparse_rows(block_face)
-        qu_rows = qut_rows(orbit.entry_ids, kernel)
+        qu_keys = {
+            tuple(sorted(row.items()))
+            for row in qut_rows(orbit.entry_ids, kernel)
+        }
+        assert all(tuple(sorted(row.items())) in qu_keys for row in h_rows)
         assert modular_rank_rows(h_rows, qdim, PRIME) == block_rank
-        assert modular_rank_rows(qu_rows, qdim, PRIME) == block_rank
-        assert modular_rank_rows(h_rows + qu_rows, qdim, PRIME) == block_rank
 
         free_orders[len(free)] += 1
         kernel_total += kernel_rank

@@ -50,6 +50,9 @@ HERE = Path(__file__).resolve().parent
 BASE_PATH = HERE / "CODEX_R10_g11_d22_sdp.py"
 EQUALITY_DATA_PATH = HERE / "CODEX_R10_c5_FACE_EQUALITY_data.npz"
 BLOWUP_DATA_PATH = HERE / "CODEX_R10_BLOWUP_FACE_data.npz"
+ROW_REDUCTION_DATA_PATH = (
+    HERE / "CODEX_R10_c5_FACE_ROW_REDUCTION_data.npz"
+)
 DEFAULT_OUTPUT = HERE / "CODEX_R10_g11_d22_plateau_numeric.npz"
 
 EXPECTED_BASE_SHA256 = (
@@ -60,6 +63,9 @@ EXPECTED_EQUALITY_DATA_SHA256 = (
 )
 EXPECTED_BLOWUP_DATA_SHA256 = (
     "3B120381926290147890ABC7BA2A50B85532F93F751B961A79F81653F6AC3730"
+)
+EXPECTED_ROW_REDUCTION_DATA_SHA256 = (
+    "F5B8BA8B0D2460E8A8ACDB3841464E4984FCEB4B0E45A7926B4D3B4203AC205C"
 )
 PRIME = 2_000_003
 
@@ -205,8 +211,10 @@ class PlateauModel:
     base: object
     equality_archive: object
     blowup_archive: object
+    row_reduction_archive: object
     forced: np.ndarray
     live: np.ndarray
+    nu_live: cp.Variable
     gram_vector: cp.Expression
     gram_face: sp.csr_matrix
     kernel_rows: list[list[tuple[int, ...]]]
@@ -220,11 +228,13 @@ def build_model() -> PlateauModel:
         "base": sha256(BASE_PATH),
         "equality": sha256(EQUALITY_DATA_PATH),
         "blowup": sha256(BLOWUP_DATA_PATH),
+        "row_reduction": sha256(ROW_REDUCTION_DATA_PATH),
     }
     expected_hashes = {
         "base": EXPECTED_BASE_SHA256,
         "equality": EXPECTED_EQUALITY_DATA_SHA256,
         "blowup": EXPECTED_BLOWUP_DATA_SHA256,
+        "row_reduction": EXPECTED_ROW_REDUCTION_DATA_SHA256,
     }
     if hashes != expected_hashes:
         raise AssertionError(f"pinned SHA-256 mismatch: {hashes}")
@@ -233,6 +243,7 @@ def build_model() -> PlateauModel:
     base = builder.build_model()
     equality = np.load(EQUALITY_DATA_PATH, allow_pickle=False)
     blowup = np.load(BLOWUP_DATA_PATH, allow_pickle=False)
+    row_reduction = np.load(ROW_REDUCTION_DATA_PATH, allow_pickle=False)
 
     if int(equality["format_version"][0]) != 1:
         raise AssertionError("unsupported equality-face data version")
@@ -240,6 +251,21 @@ def build_model() -> PlateauModel:
         raise AssertionError("equality-face artifact is not the q<=50 artifact")
     if equality["equality_representatives"].shape != (439, 11):
         raise AssertionError("unexpected equality representative table")
+    if int(row_reduction["format_version"][0]) != 1:
+        raise AssertionError("unsupported row-reduction data version")
+    pinned_sources = {
+        "base": str(row_reduction["base_sha256"][0]),
+        "equality": str(row_reduction["equality_data_sha256"][0]),
+        "blowup": str(row_reduction["blowup_data_sha256"][0]),
+    }
+    if pinned_sources != {
+        "base": EXPECTED_BASE_SHA256,
+        "equality": EXPECTED_EQUALITY_DATA_SHA256,
+        "blowup": EXPECTED_BLOWUP_DATA_SHA256,
+    }:
+        raise AssertionError(
+            f"row-reduction source hash mismatch: {pinned_sources}"
+        )
 
     forced = equality["forced_multiplier_orbits"].astype(np.int32)
     live = equality["live_multiplier_orbits"].astype(np.int32)
@@ -251,6 +277,12 @@ def build_model() -> PlateauModel:
         raise AssertionError("finite and symbolic F1 live sets differ")
     if sorted(map(int, np.concatenate((forced, live)))) != list(range(2611)):
         raise AssertionError("forced/live multiplier IDs do not partition 0..2610")
+    if not np.array_equal(
+        forced, row_reduction["forced_multiplier_orbits"]
+    ):
+        raise AssertionError("row reduction has the wrong forced orbit set")
+    if not np.array_equal(live, row_reduction["live_multiplier_orbits"]):
+        raise AssertionError("row reduction has the wrong live orbit set")
 
     cut_masks = np.asarray(
         [mask for mask, _monochromatic in base.cuts], dtype=np.int32
@@ -312,6 +344,47 @@ def build_model() -> PlateauModel:
     if not sparse_equal(target_gram, base_target_gram):
         raise AssertionError("Gram target map differs from base constructor")
 
+    keep_global = row_reduction["keep_global_rows"].astype(np.int32)
+    drop_global = row_reduction["drop_global_rows"].astype(np.int32)
+    if len(keep_global) != 388 or len(drop_global) != 60:
+        raise AssertionError("unexpected exact row-selector dimensions")
+    if keep_global[:56].tolist() != list(range(56)):
+        raise AssertionError("exact selector dropped a normalization row")
+    if sorted(map(int, np.concatenate((keep_global, drop_global)))) != list(
+        range(448)
+    ):
+        raise AssertionError("keep/drop row IDs do not partition 0..447")
+    if row_reduction["rank_h_by_prime"].tolist() != [6129, 6129]:
+        raise AssertionError("row-reduction H ranks are wrong")
+    if row_reduction["rank_augmented_by_prime"].tolist() != [6517, 6517]:
+        raise AssertionError("row-reduction augmented ranks are wrong")
+    if row_reduction["affine_rank_mod_h_by_prime"].tolist() != [388, 388]:
+        raise AssertionError("row-reduction affine ranks are wrong")
+
+    full_affine_nu = sp.vstack(
+        [normalization_live, target_nu_live], format="csr"
+    )
+    full_affine_gram = sp.vstack(
+        [sp.csr_matrix((56, 8647), dtype=np.int64), target_gram],
+        format="csr",
+    )
+    full_affine_rhs = np.concatenate(
+        [equality["normalization_rhs"], equality["target_rhs"]]
+    )
+    affine_nu = csr_from_archive(row_reduction, "affine_nu")
+    affine_gram = csr_from_archive(row_reduction, "affine_gram")
+    affine_rhs = row_reduction["affine_rhs"]
+    if not sparse_equal(affine_nu, full_affine_nu[keep_global, :]):
+        raise AssertionError("reduced live-multiplier map is not the selector")
+    if not sparse_equal(affine_gram, full_affine_gram[keep_global, :]):
+        raise AssertionError("reduced Gram map is not the selector")
+    if not np.array_equal(affine_rhs, full_affine_rhs[keep_global]):
+        raise AssertionError("reduced affine RHS is not the selector")
+    if affine_nu.shape != (388, 526) or affine_nu.nnz != 2936:
+        raise AssertionError("unexpected reduced live-multiplier map")
+    if affine_gram.shape != (388, 8647) or affine_gram.nnz != 7652:
+        raise AssertionError("unexpected reduced Gram map")
+
     gram_face = csr_from_archive(blowup, "gram_face").astype(np.float64)
     if gram_face.shape != (6129, 8647) or gram_face.nnz != 71973:
         raise AssertionError(
@@ -346,17 +419,17 @@ def build_model() -> PlateauModel:
     gram_vector = cp.hstack([orbit.variable for orbit in base.gram_orbits])
     if gram_vector.shape != (8647,):
         raise AssertionError("concatenated Gram vector has the wrong shape")
+    nu_live = cp.Variable(526, name="live_multiplier_orbits")
     margin = cp.Variable(name="relative_margin")
 
-    # The base constraint order is normalization, 52 PSD cones, target.
-    if len(base.problem.constraints) != 54:
-        raise AssertionError("unexpected base constraint count")
+    # Instantiate only the exact plateau-face coordinates. The 2,085 forced
+    # multiplier coordinates and the 60 dependent affine rows are absent.
     constraints: list[cp.Constraint] = [
-        base.problem.constraints[0],
-        base.problem.constraints[-1],
-        base.multiplier_variable[forced] == 0,
         gram_face @ gram_vector == 0,
-        base.multiplier_variable[live] >= margin,
+        affine_nu.astype(np.float64) @ nu_live
+        + affine_gram.astype(np.float64) @ gram_vector
+        == affine_rhs.astype(np.float64),
+        nu_live >= margin,
         margin >= 0,
     ]
     for orbit, free in zip(base.gram_orbits, free_coordinates):
@@ -374,7 +447,7 @@ def build_model() -> PlateauModel:
 
     print(
         "PLATEAU_FACE_BUILD graph=Gamma_11 c=25 d=2 cuts=56 "
-        "nu_orbits=2611 gram_orbits=52"
+        "nu_live=526 forced_nu_removed=2085 gram_orbits=52"
     )
     print(
         f"PLATEAU_FACE_F1 forced={len(forced)} live={len(live)} "
@@ -390,7 +463,12 @@ def build_model() -> PlateauModel:
     )
     print(
         f"PLATEAU_FACE_HASHES base={hashes['base']} "
-        f"equality={hashes['equality']} blowup={hashes['blowup']}"
+        f"equality={hashes['equality']} blowup={hashes['blowup']} "
+        f"row_reduction={hashes['row_reduction']}"
+    )
+    print(
+        "PLATEAU_FACE_AFFINE retained=388 normalization=56 "
+        "target=332 omitted_target=60"
     )
     print("PLATEAU_FACE_ORDER_AUDIT=passed")
     return PlateauModel(
@@ -398,8 +476,10 @@ def build_model() -> PlateauModel:
         base=base,
         equality_archive=equality,
         blowup_archive=blowup,
+        row_reduction_archive=row_reduction,
         forced=forced,
         live=live,
+        nu_live=nu_live,
         gram_vector=gram_vector,
         gram_face=gram_face,
         kernel_rows=kernel_rows,
@@ -410,35 +490,46 @@ def build_model() -> PlateauModel:
 
 
 def diagnostics(model: PlateauModel) -> dict[str, float]:
-    nu = np.asarray(model.base.multiplier_variable.value, dtype=float)
+    nu_live = np.asarray(model.nu_live.value, dtype=float).reshape(-1)
     q = np.concatenate(
         [
             np.asarray(orbit.variable.value, dtype=float)
             for orbit in model.base.gram_orbits
         ]
     )
-    if not np.all(np.isfinite(nu)) or not np.all(np.isfinite(q)):
+    if not np.all(np.isfinite(nu_live)) or not np.all(np.isfinite(q)):
         raise RuntimeError("solver returned non-finite variables")
 
+    nu = np.zeros(2611, dtype=float)
+    nu[model.live] = nu_live
     equality = model.equality_archive
     normalization_live = csr_from_archive(equality, "normalization_live")
     target_nu_live = csr_from_archive(equality, "target_nu_live")
     target_gram = csr_from_archive(equality, "target_gram")
     normalization_residual = np.max(
         np.abs(
-            normalization_live @ nu[model.live]
+            normalization_live @ nu_live
             - equality["normalization_rhs"]
         )
     )
     target_residual = np.max(
         np.abs(
-            target_nu_live @ nu[model.live]
+            target_nu_live @ nu_live
             + target_gram @ q
             - equality["target_rhs"]
         )
     )
+    row_reduction = model.row_reduction_archive
+    affine_nu = csr_from_archive(row_reduction, "affine_nu")
+    affine_gram = csr_from_archive(row_reduction, "affine_gram")
+    affine_residual = np.max(
+        np.abs(
+            affine_nu @ nu_live
+            + affine_gram @ q
+            - row_reduction["affine_rhs"]
+        )
+    )
     face_residual = np.max(np.abs(model.gram_face @ q))
-    forced_residual = np.max(np.abs(nu[model.forced]))
 
     minimum_quotient_eigenvalue = float("inf")
     minimum_full_eigenvalue = float("inf")
@@ -466,16 +557,16 @@ def diagnostics(model: PlateauModel) -> dict[str, float]:
             )
     return {
         "relative_margin": float(model.margin.value),
+        "reduced_affine_max_abs_residual": float(affine_residual),
         "normalization_max_abs_residual": float(normalization_residual),
-        "target_max_abs_residual": float(target_residual),
+        "full_target_max_abs_residual": float(target_residual),
         "gram_face_max_abs_residual": float(face_residual),
-        "forced_multiplier_max_abs": float(forced_residual),
-        "minimum_live_multiplier": float(np.min(nu[model.live])),
+        "forced_multiplier_max_abs": float(np.max(np.abs(nu[model.forced]))),
+        "minimum_live_multiplier": float(np.min(nu_live)),
         "minimum_quotient_gram_eigenvalue": minimum_quotient_eigenvalue,
         "minimum_full_gram_eigenvalue": minimum_full_eigenvalue,
         "maximum_kernel_residual": maximum_kernel_residual,
     }
-
 
 def save_numeric(
     model: PlateauModel, output_path: Path, result: dict[str, float]
@@ -488,7 +579,9 @@ def save_numeric(
     if output_path.parent.resolve() != HERE.resolve():
         raise ValueError("numeric output must be a new file in round10")
 
-    nu = np.asarray(model.base.multiplier_variable.value, dtype=np.float64)
+    nu_live = np.asarray(model.nu_live.value, dtype=np.float64).reshape(-1)
+    nu = np.zeros(2611, dtype=np.float64)
+    nu[model.live] = nu_live
     q = np.concatenate(
         [
             np.asarray(orbit.variable.value, dtype=np.float64)
@@ -503,7 +596,11 @@ def save_numeric(
         base_sha256=np.asarray([EXPECTED_BASE_SHA256]),
         equality_data_sha256=np.asarray([EXPECTED_EQUALITY_DATA_SHA256]),
         blowup_data_sha256=np.asarray([EXPECTED_BLOWUP_DATA_SHA256]),
+        row_reduction_data_sha256=np.asarray(
+            [EXPECTED_ROW_REDUCTION_DATA_SHA256]
+        ),
         multiplier_orbit_values=nu,
+        live_multiplier_orbit_values=nu_live,
         gram_orbit_values=q,
         forced_multiplier_orbits=model.forced,
         live_multiplier_orbits=model.live,

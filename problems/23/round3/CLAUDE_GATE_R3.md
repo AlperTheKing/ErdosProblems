@@ -1864,3 +1864,38 @@ quantity computable from `x` alone. What must be shown is that the gap cannot ex
 * Graphs with NO induced `C5` are handled by the other branch: `Lambda <= 3/98 < 1/25`.
 * The equality cases sit entirely on the `C5`-colourable side (R3-C32, R3-C35), which is exactly why
   the non-colourable side can carry a strict gap at all.
+
+
+---
+
+## R3-C40 — the slack DOES persist at k = 5, with identical values
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_slack_k5.py`. This closes the caveat I attached
+to R3-C38 ("NOT claimed: that the slack persists uniformly in k").
+
+```
+                             colourable half        WAGNER-containing half
+        And(4) = Gamma_11   q = 10   1.000000              0.750000
+                            q = 12   0.694444              0.694444
+                            q = 15   1.000000              0.777778
+        And(5) = Gamma_14   q = 10   1.000000              0.750000
+                            q = 12   0.694444              0.694444
+```
+
+(`Gamma_14`: 1065 non-colourable supports of 16383; the `q = 10` scan covers 1144066 weightings and
+`q = 12` covers 5200300.)
+
+**The two levels agree exactly** at both shared grids. Two things follow.
+
+* The separation appears precisely at grids DIVISIBLE BY 5 -- where equality points can exist at all,
+  since `25 | q^2` forces `5 | q` (R3-C35). At `q = 12` no equality point exists and both halves
+  coincide; at `q = 10, 15` the colourable half hits exactly `1` while the Wagner-containing half
+  stays at `0.75, 0.778`.
+* The Wagner-containing maximum is the SAME at `k = 4` and `k = 5`, i.e. it appears to be governed by
+  the Wagner substructure rather than by the ambient graph. That is exactly what R3-C38 predicts:
+  the obstruction is `And(3)` at every level, so the quantity it controls should not move with `k`.
+
+Taken together with R3-C38 this makes the reduction uniform in `k` in measurement as well as in
+statement: ONE epsilon, on Wagner-containing supports, for the whole Andrasfai family. It remains a
+measurement on restricted grids, not a proof -- but the value no longer looks like an artefact of one
+graph.

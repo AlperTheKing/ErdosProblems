@@ -2,9 +2,9 @@
 
 ## Scope and verdict
 
-This audit concerns only
-`CODEX_R10_g11_d22_sdp.py` and its numerical export.  It does not solve a
-second SDP.
+This audit covers `CODEX_R10_g11_d22_sdp.py`, its numerical export, the exact
+q<=50 equality collector, the finite and symbolic generalized-face archives,
+and the build-only plateau-face solver. It launches no SDP.
 
 The D22 reduction and the numerical expansion map pass an independent integer
 reconstruction.  In particular, one equation per monomial orbit and one
@@ -12,8 +12,9 @@ stabilizer-invariant PSD block per parity-block orbit are lossless.
 
 The Clarabel export is internally D22-consistent, but it is not a certificate:
 it has coefficient residuals, 144 expanded Gram blocks with an eigenvalue below
-`-1e-8`, and it misses the exact face forced by the 33 induced C5
-concentrations.  It must not be rounded entrywise.
+`-1e-8`, and it misses the exact equality face. It must not be rounded
+entrywise. The generalized face itself passes every build-only check described
+below, but no exact rational SOS certificate has yet been produced.
 
 ## Exact structural reconstruction
 

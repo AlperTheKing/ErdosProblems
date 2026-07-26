@@ -1,0 +1,61 @@
+{
+  "construction": {
+    "H_times_gram_directions": "exact zero",
+    "dense_projector": false,
+    "gram_direction_formula": "primitive_integer(Reynolds_stabilizer(B E_ab B^T))",
+    "quotient_formula": "Q=B R B^T",
+    "tested_candidates": 2546,
+    "zero_reynolds_candidates": 4
+  },
+  "finite_success_condition": "For a numerical point sufficiently close to a strict relative-interior feasible point, exact centering followed by denominator refinement makes the repair tend to zero; openness of nu>0 and quotient Q>0 gives finite acceptance.",
+  "future_algorithm": [
+    "Read a positive numerical point and extract 526 live nu values.",
+    "For each representative Gram block take Q[C,C], rationally round it, lift with exact B, and Reynolds-average over the stabilizer.",
+    "Form the exact residual r=b-A_nu*nu-A_gram*q.",
+    "Solve the stored 388x388 integer repair system M*delta=r exactly; do not form a dense projector.",
+    "Apply 322 corrections directly to selected nu coordinates and 66 corrections through the stored Gram directions.",
+    "Require exact nonnegative nu, Hq=0, all 448 original equations, exact quotient PSD, exact expanded Q4_verify, and an independent replay.",
+    "If a cone check fails, increase the rounding denominator. If the exact-binary repaired center itself lacks cone margin, reject the numerical point and request a more accurate positive iterate."
+  ],
+  "gram_directions": {
+    "nnz": 37446,
+    "shape": [
+      8647,
+      66
+    ]
+  },
+  "repair_coordinates": {
+    "direction_block_histogram": {
+      "0": 64,
+      "1": 1,
+      "5": 1
+    },
+    "invariant_quotient_directions": 66,
+    "live_multiplier_coordinates": 322,
+    "total": 388
+  },
+  "repair_matrix": {
+    "exact_rank": 388,
+    "nnz": 14316,
+    "rank_by_prime": [
+      388,
+      388,
+      388
+    ],
+    "rank_primes": [
+      1000003,
+      2000003,
+      998244353
+    ],
+    "shape": [
+      388,
+      388
+    ]
+  },
+  "scope": "Static exact repair-map construction only. No SDP run, no dense projector, no certificate, and no theorem claim.",
+  "source_sha256": {
+    "blowup": "3B120381926290147890ABC7BA2A50B85532F93F751B961A79F81653F6AC3730",
+    "row_data": "F5B8BA8B0D2460E8A8ACDB3841464E4984FCEB4B0E45A7926B4D3B4203AC205C",
+    "row_source": "4B281944B064A143CE035250D7226088662299ED8CDF5998A0263AEDCA76142A"
+  }
+}
