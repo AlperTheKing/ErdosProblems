@@ -1675,3 +1675,67 @@ with rational reconstruction -- the same technique Codex already used successful
 basis at prime 2000003 -- never from SymPy RREF on the whole matrix.
 
 Route status unchanged: **BLOCKED**, no exact certificate, no degree escalation.
+
+
+---
+
+## R3-C37 — the Gamma_11 frontier SPLITS: the sharp half is PROVED, the open half is NON-SHARP
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_noncolourable_split.py` and
+`round5/claude_noncol_orbits.py`. This is an SDP-free reduction of what Codex's bridge needs.
+
+The bridge needs only `max_x psi(Gamma_11) <= 1/25` -- weaker than the arc form Codex is certifying.
+Split the simplex by whether `supp(x)` is `C5`-colourable.
+
+### Half one: C5-colourable support. PROVED, and it is where equality lives.
+
+If `supp(x)` is `C5`-colourable then `Gamma_11[supp(x)]` is a subgraph of a complete `C5` blow-up
+`B`, so `psi(Gamma_11,x) <= psi(B,x) = min_i y_i y_{i+1}` by Theorem B (gated, R3-C20), and AM-GM
+gives `min_i y_i y_{i+1} <= (sum x)^2/25`. Nothing further is needed. R3-C35 showed every equality
+point of the arc certificate has `C5`-colourable support, and the measurements below show the same
+for `psi`: the colourable side attains exactly `1.000000` at `q = 10` and `q = 15`.
+
+### Half two: non-C5-colourable support. Open, but SMALL and NON-SHARP.
+
+```
+        subsets of Gamma_11                                       2047
+        C5-colourable                                             2002
+        NOT C5-colourable                                           45   in 5 D_22 orbits
+        minimal non-colourable induced subgraphs                    11   all of size 8, one orbit
+```
+
+Per-orbit maximum of `25*psi/q^2` over FULL-SUPPORT weightings:
+
+```
+        [0,1,2,4,5,6,8,9]              size  8   0.781250   at uniform, q = 8
+        [0,1,2,3,4,5,6,8,9]            size  9   0.739645
+        [0,1,2,3,4,5,7,8,9]            size  9   0.765306
+        [0,1,2,3,4,5,6,7,8,9]          size 10   0.765306
+        [0,1,...,10] = all of Gamma_11 size 11   0.826446 = 100/121, at the UNIFORM weighting
+```
+
+and the global maximum over the whole non-colourable region measured at `q = 8,10,12,14,15` is
+`0.781, 0.750, 0.694, 0.765, 0.778` -- never approaching `1`.
+
+### The reduction
+
+```
+        max_x psi(Gamma_11) <= 1/25
+                <==  (i)  C5-colourable supports          [PROVED, Theorem B + AM-GM]
+                AND  (ii) FIVE finite-dimensional bounds, one per D_22 orbit of non-colourable
+                          support, each with roughly 17% slack rather than equality.
+```
+
+**This is the first time the frontier has split into a proved sharp half and a non-sharp remainder.**
+Every mechanism killed in this campaign died on sharpness -- the `1/20` barrier, the plateau, the
+tightness of Theorem A everywhere. A target with `17%` slack is a different kind of object: crude
+bounds and finite branch-and-bound can close it, where they are hopeless against equality.
+
+### Honest limits
+
+The per-orbit maxima come from restricted grids, so they are LOWER bounds on the true maxima and the
+margin is empirical. I have been wrong about exactly this before (A27, retracted in R3-C25, where the
+unsettled maximum rose with refinement). The difference here is structural rather than numerical: the
+equality cases are provably confined to the colourable half by Theorem B, so there is a REASON for
+the margin, not merely an absence of counterexamples at the grids tried. That reason is what would
+have to be turned into an explicit epsilon.

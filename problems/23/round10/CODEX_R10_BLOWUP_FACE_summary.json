@@ -1,0 +1,1072 @@
+{
+  "D22_orbit_size_distribution": {
+    "11": 8,
+    "22": 2
+  },
+  "D22_x_AutC5_orbits": 10,
+  "blowup_gram_face_dimension": 2518,
+  "blowup_gram_face_rank": 6129,
+  "blowup_plateau_forced_multiplier_orbits": 2085,
+  "c5_only_forced_multiplier_orbits": 1147,
+  "c5_only_gram_face_rank": 1471,
+  "class_maps_before_AutC5_quotient": 1320,
+  "complete_c5_blowup_supports": 132,
+  "cuts": 56,
+  "edges": 22,
+  "evaluation_span_dimensions_total": 402,
+  "gram_orbit_scalars": 8647,
+  "graph": "Gamma_11=And(4)",
+  "group_order": 22,
+  "incremental_forced_multiplier_orbits": 938,
+  "incremental_gram_face_rank": 4658,
+  "multiplier_orbits": 2611,
+  "orbit_representatives": [
+    {
+      "D22_orbit_size": 11,
+      "class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ],
+        [
+          1
+        ],
+        [
+          5
+        ]
+      ],
+      "support": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "D22_orbit_size": 22,
+      "class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ],
+        [
+          1
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "support": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "D22_orbit_size": 11,
+      "class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ],
+        [
+          1
+        ],
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "support": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "D22_orbit_size": 11,
+      "class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ],
+        [
+          1
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "support": [
+        0,
+        1,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "D22_orbit_size": 11,
+      "class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ],
+        [
+          1
+        ],
+        [
+          6
+        ]
+      ],
+      "support": [
+        0,
+        1,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "D22_orbit_size": 22,
+      "class_sizes": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          6
+        ]
+      ],
+      "support": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "D22_orbit_size": 11,
+      "class_sizes": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "support": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "D22_orbit_size": 11,
+      "class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8
+        ],
+        [
+          2
+        ],
+        [
+          6
+        ]
+      ],
+      "support": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "D22_orbit_size": 11,
+      "class_sizes": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          2
+        ],
+        [
+          6
+        ]
+      ],
+      "support": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "D22_orbit_size": 11,
+      "class_sizes": [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "classes": [
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          2
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "support": [
+        0,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "parity_block_orbits": 52,
+  "per_block": [
+    {
+      "candidate_rows": 286,
+      "degree_in_x": 3,
+      "evaluation_span_dimension": 132,
+      "gram_constraint_rank": 1364,
+      "gram_face_dimension": 582,
+      "gram_scalars": 1946,
+      "order": 286,
+      "parity_orbit": 0,
+      "parity_weight": 0,
+      "stabilizer_order": 22
+    },
+    {
+      "candidate_rows": 121,
+      "degree_in_x": 2,
+      "evaluation_span_dimension": 34,
+      "gram_constraint_rank": 858,
+      "gram_face_dimension": 273,
+      "gram_scalars": 1131,
+      "order": 66,
+      "parity_orbit": 1,
+      "parity_weight": 2,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 118,
+      "degree_in_x": 2,
+      "evaluation_span_dimension": 31,
+      "gram_constraint_rank": 805,
+      "gram_face_dimension": 326,
+      "gram_scalars": 1131,
+      "order": 66,
+      "parity_orbit": 2,
+      "parity_weight": 2,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 95,
+      "degree_in_x": 2,
+      "evaluation_span_dimension": 26,
+      "gram_constraint_rank": 710,
+      "gram_face_dimension": 421,
+      "gram_scalars": 1131,
+      "order": 66,
+      "parity_orbit": 3,
+      "parity_weight": 2,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 19,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 6,
+      "gram_constraint_rank": 27,
+      "gram_face_dimension": 9,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 4,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 135,
+      "degree_in_x": 2,
+      "evaluation_span_dimension": 34,
+      "gram_constraint_rank": 858,
+      "gram_face_dimension": 273,
+      "gram_scalars": 1131,
+      "order": 66,
+      "parity_orbit": 5,
+      "parity_weight": 2,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 17,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 5,
+      "gram_constraint_rank": 45,
+      "gram_face_dimension": 21,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 6,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 9,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 3,
+      "gram_constraint_rank": 16,
+      "gram_face_dimension": 20,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 7,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 122,
+      "degree_in_x": 2,
+      "evaluation_span_dimension": 33,
+      "gram_constraint_rank": 840,
+      "gram_face_dimension": 291,
+      "gram_scalars": 1131,
+      "order": 66,
+      "parity_orbit": 8,
+      "parity_weight": 2,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 17,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 5,
+      "gram_constraint_rank": 45,
+      "gram_face_dimension": 21,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 9,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 16,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 5,
+      "gram_constraint_rank": 45,
+      "gram_face_dimension": 21,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 10,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 11,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 4,
+      "gram_constraint_rank": 20,
+      "gram_face_dimension": 16,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 11,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 18,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 5,
+      "gram_constraint_rank": 24,
+      "gram_face_dimension": 12,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 12,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 13,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 26,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 7,
+      "gram_constraint_rank": 56,
+      "gram_face_dimension": 10,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 14,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 13,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 4,
+      "gram_constraint_rank": 38,
+      "gram_face_dimension": 28,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 15,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 9,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 3,
+      "gram_constraint_rank": 30,
+      "gram_face_dimension": 36,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 16,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 18,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 5,
+      "gram_constraint_rank": 45,
+      "gram_face_dimension": 21,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 17,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 21,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 6,
+      "gram_constraint_rank": 27,
+      "gram_face_dimension": 9,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 18,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 19,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 24,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 7,
+      "gram_constraint_rank": 30,
+      "gram_face_dimension": 6,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 20,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 21,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 22,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 26,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 7,
+      "gram_constraint_rank": 56,
+      "gram_face_dimension": 10,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 23,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 18,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 5,
+      "gram_constraint_rank": 45,
+      "gram_face_dimension": 21,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 24,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 23,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 6,
+      "gram_constraint_rank": 51,
+      "gram_face_dimension": 15,
+      "gram_scalars": 66,
+      "order": 11,
+      "parity_orbit": 25,
+      "parity_weight": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 28,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 7,
+      "gram_constraint_rank": 30,
+      "gram_face_dimension": 6,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 26,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 27,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 24,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 7,
+      "gram_constraint_rank": 30,
+      "gram_face_dimension": 6,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 28,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 16,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 5,
+      "gram_constraint_rank": 24,
+      "gram_face_dimension": 12,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 29,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 30,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 31,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 32,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 33,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 34,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 35,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 36,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 37,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 1,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 36,
+      "gram_scalars": 36,
+      "order": 11,
+      "parity_orbit": 38,
+      "parity_weight": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 39,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 40,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 41,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 42,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 43,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 44,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 45,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 46,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 47,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 48,
+      "parity_weight": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 49,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 0,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 0,
+      "gram_constraint_rank": 0,
+      "gram_face_dimension": 1,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 50,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "candidate_rows": 1,
+      "degree_in_x": 0,
+      "evaluation_span_dimension": 1,
+      "gram_constraint_rank": 1,
+      "gram_face_dimension": 0,
+      "gram_scalars": 1,
+      "order": 1,
+      "parity_orbit": 51,
+      "parity_weight": 6,
+      "stabilizer_order": 2
+    }
+  ],
+  "plateau_cut_pairs_identically_tight": 2871,
+  "plateau_cut_pairs_nontight_polynomial": 4521,
+  "q10_witness": {
+    "class_sums": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "classes": [
+      [
+        0
+      ],
+      [
+        4
+      ],
+      [
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "included": true,
+    "support": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      7,
+      8
+    ],
+    "weights": [
+      2,
+      1,
+      1,
+      0,
+      2,
+      0,
+      1,
+      1,
+      2,
+      0,
+      0
+    ]
+  },
+  "scope": "All complete nonempty C5-blow-up plateaus in Gamma_11; not a classification of the full ARCBOUND equality set.",
+  "support_size_distribution": {
+    "5": 33,
+    "6": 66,
+    "7": 33
+  },
+  "vertices": 11
+}

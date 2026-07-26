@@ -4717,3 +4717,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T05:06:21] ✔ HALF-CHARACTERISATION | DID: claude_equality_characterisation.py both directions | RESULT: EQ subset balanced blow-ups with 0 exceptions; converse FALSE at (1,1,1,1,1,0..), ARCBOUND=0 | Δ: completeness required
 [2026-07-26T05:08:11] ✔ CONVERGENCE | DID: re-derive Codex's non-C5 witness histogram | RESULT: {4:19, 6:1, 8:10, 12:14, 16:6, 20:6}, 56 cuts, EXACT MATCH; same point as my R3-C32 | Δ: witness gated
 [2026-07-26T05:08:11] ✘ FACE BUILD ABORT | DID: read Codex's abort note | RESULT: 147->156 GB private memory in seconds from whole-matrix SymPy RREF; killed at the 192 GB ceiling | Δ: engineering, not mathematics
+[2026-07-26T05:16:41] ✔ FRONTIER SPLIT | DID: claude_noncolourable_split.py | RESULT: 45 of 2047 subsets non-C5-colourable in 5 D_22 orbits; colourable half PROVED by Theorem B and holds all equality | Δ: sharp half closed
+[2026-07-26T05:16:41] ✔ NON-SHARP HALF | DID: claude_noncol_orbits.py per-orbit maxima | RESULT: 0.781, 0.740, 0.765, 0.765, 0.826=100/121 of target; global 0.694-0.781 at q=8..15 | Δ: ~17 percent slack

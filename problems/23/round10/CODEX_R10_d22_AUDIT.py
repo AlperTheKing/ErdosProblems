@@ -14,6 +14,8 @@ import hashlib
 import importlib.util
 import math
 import pickle
+import re
+import subprocess
 import sys
 from collections import Counter, defaultdict
 from fractions import Fraction
@@ -30,6 +32,9 @@ CONSTRUCTOR = HERE / "CODEX_R10_g11_d22_sdp.py"
 FACE_CONSTRUCTOR = HERE / "CODEX_R10_g11_d22_face.py"
 FACE_EXPORTER = HERE / "CODEX_R10_g11_d22_face_export.py"
 NUMERIC_EXPORT = HERE / "CODEX_R10_g11_d22_numeric.pkl"
+EQUALITY_COLLECTOR_SOURCE = HERE / "CODEX_R10_c5_FACE_EQUALITY.cpp"
+EQUALITY_COLLECTOR_EXE = HERE / "CODEX_R10_c5_FACE_EQUALITY.exe"
+EQUALITY_COLLECTOR_LOG = HERE / "CODEX_R10_c5_FACE_EQUALITY_q5_q50.log"
 N = 11
 D = 4
 DT = 6
@@ -83,6 +88,18 @@ def image_exponent(alpha: Exponent, element: GroupElement) -> Exponent:
 def image_set(side: frozenset[int], element: GroupElement) -> frozenset[int]:
     p = PERMUTATIONS[element]
     return frozenset(p[vertex] for vertex in side)
+
+
+def image_vector(vector: tuple[int, ...], element: GroupElement) -> tuple[int, ...]:
+    out = [0] * N
+    p = PERMUTATIONS[element]
+    for old, value in enumerate(vector):
+        out[p[old]] = value
+    return tuple(out)
+
+
+def canonical_vector(vector: tuple[int, ...]) -> tuple[int, ...]:
+    return min(image_vector(vector, element) for element in GROUP)
 
 
 def canonical_side(side: Iterable[int]) -> frozenset[int]:
@@ -179,6 +196,28 @@ def full_row_rank_mod_prime(rows: list[list[int]], prime: int = 1_000_003) -> in
     return pivot_row
 
 
+def exhaustive_primitive_equality_orbits(
+    q: int,
+    edges: list[tuple[int, int]],
+    cuts: list[tuple[int, frozenset[int]]],
+) -> set[tuple[int, ...]]:
+    """Raw-composition equality rays, independent of the C5 support reduction."""
+    assert q % 5 == 0
+    target = q * q // 25
+    result: set[tuple[int, ...]] = set()
+    for vector in weak_compositions(q, N):
+        if math.gcd(*vector) != 1:
+            continue
+        edge_products = tuple(vector[u] * vector[v] for u, v in edges)
+        minimum = min(
+            sum(edge_products[edge_index] for edge_index in mono_edges)
+            for _, mono_edges in cuts
+        )
+        if minimum == target:
+            result.add(canonical_vector(vector))
+    return result
+
+
 def import_constructor():
     spec = importlib.util.spec_from_file_location("r10_d22_constructor_audited", CONSTRUCTOR)
     assert spec is not None and spec.loader is not None
@@ -229,6 +268,94 @@ def main() -> None:
 
     cuts = interval_cuts(edges)
     assert len(cuts) == 56
+
+    # ---- Independent finite audit of the generalized equality collector ------
+    collector_source_hash_before = sha256(EQUALITY_COLLECTOR_SOURCE)
+    collector_exe_hash_before = sha256(EQUALITY_COLLECTOR_EXE)
+    exhaustive_orbits_by_q = {
+        q: exhaustive_primitive_equality_orbits(q, edges, cuts) for q in (5, 10)
+    }
+    assert {q: len(orbits) for q, orbits in exhaustive_orbits_by_q.items()} == {
+        5: 3,
+        10: 6,
+    }
+    witness = (2, 1, 1, 0, 2, 0, 1, 1, 2, 0, 0)
+    witness_products = tuple(witness[u] * witness[v] for u, v in edges)
+    witness_values = tuple(
+        sum(witness_products[edge_index] for edge_index in mono_edges)
+        for _, mono_edges in cuts
+    )
+    assert sum(witness) == 10 and min(witness_values) == 4
+    assert sum(value == 4 for value in witness_values) == 19
+    assert canonical_vector(witness) in exhaustive_orbits_by_q[10]
+
+    collector_run = subprocess.run(
+        [str(EQUALITY_COLLECTOR_EXE), "5", "10", "1"],
+        cwd=HERE,
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    assert collector_run.returncode == 0, collector_run.stderr
+    assert "STRICT_VIOLATION_ENCOUNTERED" not in collector_run.stdout
+    collector_orbits_by_q: dict[int, set[tuple[int, ...]]] = defaultdict(set)
+    for match in re.finditer(r"^EQ q=(\d+) x=\[([0-9,]+)\]$", collector_run.stdout, re.M):
+        q = int(match.group(1))
+        vector = tuple(int(value) for value in match.group(2).split(","))
+        assert len(vector) == N and sum(vector) == q and math.gcd(*vector) == 1
+        assert vector == canonical_vector(vector)
+        collector_orbits_by_q[q].add(vector)
+    assert dict(collector_orbits_by_q) == exhaustive_orbits_by_q
+    assert collector_source_hash_before == sha256(EQUALITY_COLLECTOR_SOURCE)
+    assert collector_exe_hash_before == sha256(EQUALITY_COLLECTOR_EXE)
+
+    collector_log_hash_before = sha256(EQUALITY_COLLECTOR_LOG)
+    collector_log = EQUALITY_COLLECTOR_LOG.read_text(encoding="ascii")
+    assert "STRICT_VIOLATION_ENCOUNTERED" not in collector_log
+    assert collector_log.endswith(
+        "END_PRIMITIVE_EQUALITY_ORBITS\n"
+        "EXACT_FINITE_COLLECTION_ONLY: no all-real theorem claim\n"
+    )
+    q_done = [
+        tuple(map(int, match.groups()))
+        for match in re.finditer(
+            r"^Q_DONE q=(\d+) target=(\d+) primitive_orbits_at_q=(\d+) "
+            r"cumulative_orbits=(\d+) ",
+            collector_log,
+            re.M,
+        )
+    ]
+    assert [row[0] for row in q_done] == list(range(5, 51, 5))
+    logged_orbits: set[tuple[int, ...]] = set()
+    logged_counts: Counter[int] = Counter()
+    for match in re.finditer(r"^EQ q=(\d+) x=\[([0-9,]+)\]$", collector_log, re.M):
+        reported_q = int(match.group(1))
+        vector = tuple(int(value) for value in match.group(2).split(","))
+        assert len(vector) == N and sum(vector) == reported_q
+        assert reported_q % 5 == 0 and 5 <= reported_q <= 50
+        assert math.gcd(*vector) == 1 and vector == canonical_vector(vector)
+        products = tuple(vector[u] * vector[v] for u, v in edges)
+        minimum = min(
+            sum(products[edge_index] for edge_index in mono_edges)
+            for _, mono_edges in cuts
+        )
+        assert 25 * minimum == reported_q * reported_q
+        assert vector not in logged_orbits
+        logged_orbits.add(vector)
+        logged_counts[reported_q] += 1
+    assert len(logged_orbits) == 439
+    cumulative = 0
+    for q, target, at_q, reported_cumulative in q_done:
+        assert target == q * q // 25 and at_q == logged_counts[q]
+        cumulative += at_q
+        assert reported_cumulative == cumulative
+    assert cumulative == len(logged_orbits)
+    for q in (5, 10):
+        assert {vector for vector in logged_orbits if sum(vector) == q} == (
+            exhaustive_orbits_by_q[q]
+        )
+    assert collector_log_hash_before == sha256(EQUALITY_COLLECTOR_LOG)
+
     cut_sides = {
         cut_mask: frozenset(
             vertex
@@ -1137,6 +1264,18 @@ def main() -> None:
         f"face_margin_blocks={face_margin_blocks} exact_projectors=PASS"
     )
     print("FACE_BUILD_AUDIT_ONLY: no solve launched")
+    print(
+        f"equality_collector_source_sha256={collector_source_hash_before} "
+        f"equality_collector_exe_sha256={collector_exe_hash_before} "
+        f"equality_collector_log_sha256={collector_log_hash_before}"
+    )
+    print(
+        "equality_collector_raw_composition_crosscheck="
+        f"q5:{len(exhaustive_orbits_by_q[5])},q10:{len(exhaustive_orbits_by_q[10])} "
+        "nonC5_witness_tight_arcs=19 PASS"
+    )
+    print("equality_collector_q5_q50_emitted_rays=439 all_rays_exact=PASS")
+    print("EQUALITY_COLLECTOR_AUDIT_ONLY: no SDP solve launched")
     print(f"face_exporter_sha256={exporter_hash_before}")
     print(
         f"face_export_path_guards={guard_rejections}/{len(guard_cases)} "
