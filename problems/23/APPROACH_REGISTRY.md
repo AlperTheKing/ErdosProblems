@@ -5,7 +5,39 @@ root agent. Status values: LIVE / BLOCKED / DEAD. A route is BLOCKED when it ter
 of strength ≥ the conjecture, or when an exact falsifier kills its mechanism; the blocking statement
 is quoted verbatim.
 
-Last updated 2026-07-26 (Rounds 3–6 of the CDC-template restart).
+Last updated 2026-07-26 (Round 10 direct-route gate and Round 9 audit).
+
+## DIRECT ROUTE — R10 / A1+A3 (`delta(G) > 5N/14`)
+
+1. **Exact final deliverable.** Prove the unconditional theorem
+   `bip(G) <= N^2/25` for every triangle-free graph `G` with
+   `delta(G) > 5N/14`. This is one explicit band-shrinking theorem, not the
+   full Erdős #23 conjecture.
+2. **Current frontier lemma / finite certificate.** Prove
+   `ARCBOUND_Gamma_11(x) <= (sum x)^2/25` for every nonnegative weighting of
+   `Gamma_11 = And(4)`. Every arc is a cut, so this implies
+   `max_x psi(Gamma_11,x) <= 1/25`.
+3. **Logical bridge.** Theorem R3 in `round3/G7.md`, at `t=5`, reduces the
+   stated minimum-degree theorem to `Gamma_1,...,Gamma_4`. `Gamma_1` is
+   bipartite, `Gamma_2=C5` is elementary, and `Gamma_3=And(3)` is already
+   certified exactly by `round7/Q4_cert_g8_d1.pkl` and independently replayed
+   in `round7/audit_Q4.md`. Thus the frontier lemma is the only missing item
+   in this finite list; no Vega statement is needed.
+4. **Next falsifiable action.** Implement the `D_22`-invariant degree-4
+   multiplier Positivstellensatz at `c=25` using all 56 cyclic-interval cuts,
+   then rationally reconstruct either a primal identity or an exact separating
+   dual. Floating feasibility or infeasibility is steering evidence only.
+5. **Exit condition.** SUCCESS only when a second exact-arithmetic gate
+   rebuilds `Gamma_11`, the arc cuts, the polynomial identity, nonnegative
+   multipliers, and every PSD block. Exit this arc-certificate route if either
+   an exact rational weighting has `ARCBOUND_Gamma_11(x)>(sum x)^2/25`, or an
+   exact dual separates `c=25` from the chosen degree-4 cone. Numerical failure
+   is BLOCKED, not DEAD; do not escalate through an unbounded degree hierarchy.
+
+The valid master inequality in Round 9 Theorem E does not supply this frontier:
+its subsequent `min`-distribution step is false. Under the Andrásfai circle
+isomorphism, the corrected standard E cuts reproduce A1's existing arc family,
+so they are evidence for this route rather than a distinct approach.
 
 | # | family (mechanism) | status | decisive fact |
 |---|---|---|---|
@@ -39,6 +71,7 @@ Last updated 2026-07-26 (Rounds 3–6 of the CDC-template restart).
 | A24 | **Critical-point classification of `ψ` on the simplex** | **DEAD as stated** | `ψ` has **spurious local maxima** that are not `C5`-concentrations: on Petersen, 30 of the 840 arrangements of `(1/8×6, 1/4, 0×3)` give `ψ = 1/32` exactly, support inducing `Θ(2,3,3)` (7 vertices, 8 edges, degrees `[2,2,2,2,2,3,3]`, its two `C5`s sharing the length-2 path), with 88 active cuts, first-order ascent LP optimum `t* = 0` and 0 improvements in 3000 exact rational perturbations. So "the only local maxima are `C5`-concentrations" is false, and **every multistart-optimiser sweep in this campaign is evidence, never proof** |
 
 | A26 | **Discharging / amortised induction with a GLOBAL potential** (the one form of discharging never tried; the purely local forms are A8, A9, A19) | **DEAD — structurally, not by witness** | the potential is **not a free parameter**. For any sound reduction system (`bip(G) ≤ bip(G′) + c` per move) with shortest-path value `U(G) = min_moves [c + U(G′)]`, a potential `Φ ≥ 0` obeying the amortised step exists **iff `U ≤ f`**, and the largest one is `Φ* = f − U`. Two corollaries kill the family: **(1) circularity** — `U ≥ bip` always (soundness telescopes), and the exact-cost and edge-deletion instantiations give `U = bip` identically, so the mechanism restates the conjecture; terminal lemma verbatim: *"min over deletion orderings of `Σ_i (bip(G_i) − bip(G_{i+1})) ≤ N²/25`"*. **(2) strength ceiling** (gated by me) — for the only non-circular local cost `⌊d/2⌋`, counting forces `U ≥ (|E|−N)/2`, which on `K_{m,m}` is `N²/8 − N/2` while `bip = 0`, so the mechanism **cannot prove `bip ≤ cN²` for any `c < 1/8`** — behind even the published `1/23.5`. Verified: `Φ* < 0` on the whole extremal family (`C5[2] ≤ −1`, `C5[10] ≤ −125`); pentagon charging dies on `C7` (`bip = 1`, **zero** induced pentagons) |
+| A27 | **Non-sharp residual target**: settle everything near the extremal value with the proved toolkit (Theorem B / `D(C)=0` / Theorem D), leaving only `ψ <= 1/25 − ε` OFF the settled region — a statement with room to spare rather than the sharp one | **LIVE, but its advertised advantage is REFUTED** | the appeal was that sharpness has killed every mechanism here (the `1/20` barrier, the plateau, the tightness of Theorem A), so a residual target with a fixed margin would change character. Two exact facts from R3-C25 on the wall graph `Gamma_11 = And(4)`: **(1)** exactly **45** of its 2048 induced subgraphs are not `C5`-colourable, the smallest of size **8**, so every weighting supported on `<= 7` vertices is settled and the residual is confined to those 45 supports — but `Gamma_11` is **not** vertex-critical, so the residual does not collapse to the interior. **(2)** exhaustive exact maximisation over **every** integer weighting (not a sample) gives interior max `5/147 = 0.034014` at `q = 21` and `6/169 = 0.035503` over all supports at `q <= 13`. The sampling objection of A24 is thereby removed. **What kills the advantage**: the R9 sampled point at `q = 29` reaches `30/841 = 0.035672`, above **every** exhaustive maximum at `q <= 24`, so the residual maximum still **rises as the grid refines** and nothing bounds the unsettled supremum away from `1/25`. Reopen only with an `ε` that is *proved*, never one that is measured |
 
 ## Diversity check (LOOP rule 5: at least three incompatible routes alive)
 

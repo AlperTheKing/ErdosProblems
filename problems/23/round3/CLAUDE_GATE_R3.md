@@ -964,3 +964,60 @@ barrier, the plateau, the tightness of Theorem A everywhere).
 But this is a MEASUREMENT, not a theorem, and I record its limits explicitly: the sampling is
 heuristic, `psi` is known to have spurious local maxima (R3-C20 K-0) so no sampling certifies a
 maximum, and an `11%` margin is modest. It is a direction with a number attached, not a result.
+
+---
+
+## R3-C25 — the residual margin, with the sampling removed: the "room to spare" premise is NOT supported
+
+Answers the open `► RESIDUAL` item of round 9 ("decide whether the 11 % margin off the settled
+region is real, since sampling cannot certify a maximum where spurious local maxima exist").
+Gate: `round9/claude_gate_r10_residual.py` (the log `round9/R10_residual.log` is local-only per the
+repo's `*.log` rule; re-running the script regenerates every number below). `Gamma_11 = And(4)`
+rebuilt independently as the circulant on `Z_11` with `3*dist > 11`, cross-checked against the
+`{i = 1 mod 3}` construction; 22 edges, `alpha = 4`, 33 induced pentagons, not `C5`-colourable.
+
+**Part 1 — where the residual can live (exhaustive, all `2^11` induced subgraphs).**
+Exactly **45** of the 2048 induced subgraphs of `Gamma_11` are not `C5`-colourable, and the
+**smallest has 8 vertices** (11 of size 8, 23 of size 9, 10 of size 10, and the whole graph).
+Since "support is `C5`-colourable" is one of the settled conditions and `ψ(H,x) = ψ(H[supp x], x)`
+by R3-C2, **every weighting of `Gamma_11` supported on at most 7 vertices is settled**, and the
+residual is confined to those 45 supports.
+
+This **refutes** the natural expectation that motivated the test: `Gamma_11` is *not* vertex-critical
+for `C5`-colourability, so the residual does not collapse onto the interior, and the boundary faces
+of dimension 7..9 stay in play.
+
+**Part 2 — the maximum, exhaustively rather than sampled.** By the blow-up identity `ψ` at the
+rational point `a/q` is exactly `bip(H[a])/q^2`. Enumerating **every** integer weight vector, not a
+sample (1 144 066 interior vectors at `q = 24` alone):
+
+| region | denominators | vectors | exact max | vs `1/25` |
+|---|---|---|---|---|
+| interior, all `a_i >= 1` | `q = 11..24` | 2 475 970 | **`5/147` = 0.034014** at `q = 21`, `a = [1,2,2,1,3,1,3,1,3,1,3]` | 15.0 % below |
+| any support, `a_i >= 0` | `q <= 13` | 2 143 428 | **`6/169` = 0.035503** at `q = 13` | 11.2 % below |
+
+So A24's spurious local maxima cannot be the explanation for the margin: they cannot hide inside an
+exhaustive grid, and the grid confirms the sampled order of magnitude.
+
+**But the margin is not a target with room to spare, and the numbers say so.** The R9 sampled point
+at `q = 29` reaches `30/841 = 0.035672`, which is **above every exhaustive maximum found here at
+`q <= 24`**, interior or not. The residual maximum therefore still **rises as the grid is refined**;
+the sequence over `q` is not monotone and shows no sign of settling below a definite ceiling. The
+header of `round5/claude_residual_margin.py` proposed reading the margin as a reduction to
+`ψ <= 1/25 − ε` off the settled region, "a statement WITH ROOM TO SPARE rather than the sharp one".
+**That reading is unsupported**: nothing computed here bounds the unsettled supremum away from
+`1/25`, and the refinement trend is against it. Recorded as a caution, not as a kill — the route is
+not falsified, its advertised advantage is.
+
+**What is certified:** the Part 1 support classification (exhaustive, exact) and the Part 2 maxima at
+every denominator `q <= 24` (exhaustive, exact integer arithmetic). **What is not:** any bound on
+`ψ` over the interior, since `ψ` is continuous but not concave and finitely many denominators
+constrain nothing between grid points. Removing the *discretisation* gap still needs the interior
+KKT system of R3-C2.
+
+**Self-correction.** The first version of this gate's pentagon counter reported **0** induced
+pentagons in `Gamma_11`, contradicting the 33 recorded in R3-C21. The graph was right and my counter
+was wrong: its cycle walk rejected at the first step, where `prev` is `None` and both neighbours are
+candidates. Replaced by the direct criterion (5 vertices spanning exactly 5 edges, all degrees 2,
+which on 5 vertices forces a single pentagon); the count is **33**, matching R3-C21. Recorded because
+a silent 0 here would have falsely voided the plateau argument on the campaign's wall graph.

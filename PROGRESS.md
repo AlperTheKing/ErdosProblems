@@ -4683,3 +4683,8 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T03:31:35] ► RESIDUAL | NEXT: decide whether the 11 percent margin off the settled region is real, since sampling cannot certify a maximum where spurious local maxima exist
 [2026-07-26T03:35:14] ✔ CODEX REJOIN | DID: read both mailboxes, last write 2026-07-13 (pre-restart) | RESULT: no #23 delta to reconcile; Codex mailbox marker recorded at byte 2760087 | Δ: channel reopened
 [2026-07-26T03:35:14] ✔ CODEX BRIEF | DID: posted TICK-135 to CLAUDE_TO_CODEX.md, full #23 state + division | RESULT: CX-A Lean of Theorem A, CX-B exhaustive residual margin; file now 1454790 bytes | Δ: Codex tasked
+[2026-07-26T03:36:35+03:00] ► R10-RESIDUAL | NEXT: replace sampling on Gamma_11 with exact enumeration - C5-colourability of all 2^11 induced subgraphs, then all full-support rational points
+[2026-07-26T03:52:00+03:00] ✔ R10-RESIDUAL P1 | DID: hom-to-C5 on all 2^11 induced subgraphs of Gamma_11 | RESULT: 45 fail, smallest size 8 | Δ: supports <=7 settled, not vertex-critical
+[2026-07-26T03:53:00+03:00] ✔ R10-RESIDUAL P2 | DID: exhaustive exact max of bip(H[a])/q^2 over every integer weighting q<=24 | RESULT: interior max 5/147=0.034014 at q=21 | Δ: sampling gap closed
+[2026-07-26T03:54:00+03:00] ✘ R10-RESIDUAL VERDICT | DID: compared exhaustive maxima to the R9 sample | RESULT: 30/841=0.035672 at q=29 beats every q<=24 max | Δ: room-to-spare premise unsupported
+[2026-07-26T03:55:00+03:00] ✘ R10 SELF-CORRECTION | DID: rechecked my pentagon counter after it reported 0 | RESULT: walk rejected at step 1 where prev is None; true count 33 | Δ: none
