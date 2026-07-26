@@ -4734,3 +4734,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T07:06:35] ✔ PLATEAU FAMILY | DID: read the value structurally | RESULT: 1/25 = 1/5^2 for C5-containing, 1/49 = 1/7^2 for pentagon-free with C7; plateau indexed by odd girth | Δ: 49 percent slack in piece (i)
 [2026-07-26T07:13:01] ✔ RATIO ROUTE | DID: claude_ratio_route.py over 934 pentagon-free non-bipartite graphs n<=11 | RESULT: max psi/W = 0.14285714 = exactly 1/7, 0 exceed 4/25, headroom 10.7% | Δ: piece (i) has a non-sharp target
 [2026-07-26T07:13:01] ✔ CORRECT FORM | DID: distinguish from the dead W/g_odd route | RESULT: uniform W/7 holds where W/9 failed (subdivided K5, 2/15 vs 1/9); C5 exceeds 4/25 as required | Δ: route separated from R3-C42
+[2026-07-26T07:15:31] ✘ R3-C44 DEAD | DID: claude_ratio_route_kill.py, twice-subdivided K_n at odd girth 9 | RESULT: psi/W = 13/81 = 0.16049 > 4/25 at n=28, limit 1/6 | Δ: my own route killed by my own test
+[2026-07-26T07:15:31] ✘ c*W FAMILY DEAD | DID: derive the family bound | RESULT: any psi <= c*W at odd girth >=7 needs c >= 1/6, giving 1/24 = 0.041667 > 1/25 | Δ: whole family cannot close piece (i)

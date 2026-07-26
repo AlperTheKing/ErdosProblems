@@ -2094,3 +2094,60 @@ A5's witness). So "`psi <= W/g` for the minimum odd girth `g` of the class" is N
 it fails at `g = 5` and is merely unrefuted at `g = 7` on `n <= 11`. Whether an odd-girth-7 analogue
 of the `N = 14` witness exists at larger `n` is untested, and it is exactly what would kill this
 route. That is the next thing to look for, not a reason to assume the route works.
+
+
+---
+
+## R3-C45 — R3-C44 is DEAD, and so is the entire `psi <= c*W` family (my own route, killed by my own test)
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_ratio_route_kill.py`. R3-C44 named the test that
+would kill it -- "an odd-girth-7 analogue of the `N = 14` witness at larger `n`" -- and it exists.
+
+### The witness family
+
+Twice-subdivided `K_n` is triangle-free of odd girth 9, and an odd subdivision PRESERVES `bip`
+(round-9 Lemma S). For even `n`:
+
+```
+        bip = C(n,2) - n^2/4 = n(n-2)/4,      |E| = 3 C(n,2),
+        psi/W at uniform = bip/|E| = (n-2) / (6(n-1))  ->  1/6 = 0.1666...
+```
+
+```
+        n     psi/W        > 4/25 ?
+        7     1/7   = 0.142857    no
+        12    5/33  = 0.151515    no
+        26    4/25  = 0.160000    no   (exactly on the boundary)
+        28    13/81 = 0.160494    YES
+        100   49/297= 0.164983    YES
+        1000  499/2997 = 0.166500 YES
+```
+
+So `psi <= (4/25) W` is FALSE at odd girth 9, first at `n = 28`: `K_28` twice subdivided has
+`N = 784`, `|E| = 1134`, `bip = 182`, `psi/W = 13/81 > 4/25`.
+
+### The family-level kill, which is the real content
+
+Any bound `psi <= c*W` valid at odd girth `>= 7` needs `c >= 1/6`. Combined with the Motzkin-Straus
+cap `W <= 1/4`, the BEST such bound gives
+
+```
+        psi <= (1/6)(1/4) = 1/24 = 0.0416666...  >  1/25 = 0.04.
+```
+
+**So no bound of the form `psi <= c*W` can close piece (i), whatever the constant.** R3-C44 is dead,
+and so is every variant of it.
+
+### The conjecture is untouched
+
+`psi` at uniform on twice-subdivided `K_28` is `13/43904 = 0.000296`, four orders under `1/25`. These
+witnesses defeat the METHOD, never the statement -- as with every subdivision witness in this
+campaign.
+
+### The general lesson, now stated three times over
+
+Subdivision has now killed: gap quantification (A28), the `W/g_odd` route (R3-C42), and the whole
+`c*W` family (here). The mechanism is always the same -- an odd subdivision preserves `bip` while
+inflating `|E|` and `N`, so ANY bound comparing `bip` to a global edge-density functional is defeated
+by subdividing a dense graph. **Piece (i) cannot be closed by any inequality relating `psi` to `W`
+alone.** It has to see more of the structure than total edge weight.
