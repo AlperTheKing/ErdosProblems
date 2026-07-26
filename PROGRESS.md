@@ -4678,3 +4678,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T03:06:01] ✔ R9 DISCHARGE GATE | DID: Phi* = f - U on the extremal family | RESULT: negative throughout, C5[2] <= -1, C5[10] <= -125, so no nonnegative potential exists | Δ: family closed structurally
 [2026-07-26T03:06:01] ✔ R9 DISCHARGE GATE | DID: pentagon charging on C7 | RESULT: bip = 1 with 0 induced pentagons, charge has nowhere to go | Δ: sub-scheme dead
 [2026-07-26T03:06:01] ✘ MS-DEFICIT LINE | DID: check psi + (4/5)W <= 1/5 and its complement psi <= W/5 | RESULT: margin exactly 0 on every C5[n]; complement FALSE at N=14, 1/28 > 8/245 | Δ: none
+[2026-07-26T03:31:35] ✔ DEFECT PROP | DID: claude_coverage_map.py over 3094 instances | RESULT: rho <= D <= 2rho with 0 violations; all 666 cases with D=0 have C5-colourable support | Δ: ThmA equality = ThmD hypothesis
+[2026-07-26T03:31:35] ✔ COVERAGE MAP | DID: claude_residual_margin.py, 840 adversarial instances per graph | RESULT: settled reach psi 0.0397, unsettled max 30/841 = 0.035672 on Gamma_11 | Δ: residual target is non-sharp
+[2026-07-26T03:31:35] ► RESIDUAL | NEXT: decide whether the 11 percent margin off the settled region is real, since sampling cannot certify a maximum where spurious local maxima exist

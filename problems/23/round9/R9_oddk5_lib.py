@@ -281,9 +281,14 @@ def Lambda(g, w=None, verbose=False):
     edges = g.E
     eidx = {e: i for i, e in enumerate(edges)}
     cycles = []
-    # seed with one minimum odd cycle under unit weights
+    # seed with one minimum odd cycle under unit weights.
+    # NOTE: the oracle returns a minimum odd closed WALK, which may repeat an edge.  Rows are
+    # therefore stored as sets of distinct edges.  That row is still a VALID inequality: an
+    # odd closed walk decomposes into cycles, at least one of odd length, whose edges are a
+    # subset of the walk's edge set, so y(set(W)) >= y(C) >= 1.  Using the multiset would
+    # double count an edge in the packing and is what the verifier caught on And(5).
     v0, c0 = min_odd_cycle(g, {e: F(1) for e in edges})
-    cycles.append(tuple(sorted(c0)))
+    cycles.append(tuple(sorted(set(c0))))
     while True:
         # dual LP: variables z_C, constraints per edge
         A = [[F(1) if edges[i] in set(C) else F(0) for C in cycles] for i in range(len(edges))]
@@ -297,7 +302,7 @@ def Lambda(g, w=None, verbose=False):
         if mv >= 1:
             return dict(value=val, y=y, z={cycles[k]: z[k] for k in range(len(cycles)) if z[k] != 0},
                         cycles=cycles)
-        t = tuple(sorted(mc))
+        t = tuple(sorted(set(mc)))
         if t in set(cycles):
             raise RuntimeError("separation returned a repeated cycle")
         cycles.append(t)
@@ -320,7 +325,10 @@ def verify_Lambda(g, res, w=None):
     load = {e: F(0) for e in g.E}
     for C, zc in res['z'].items():
         assert zc >= 0
-        for e in C:
+        # validity of the row: its edge set must contain an odd cycle, i.e. (V,C) must be
+        # non-bipartite.  Then y(C) >= 1 is implied by the odd-cycle constraints.
+        assert not G(g.n, list(C)).is_bipartite(), f"row {C} carries no odd cycle"
+        for e in set(C):          # rows are sets of distinct edges (see Lambda())
             load[e] += zc
     for e in g.E:
         assert load[e] <= F(w[e]), f"packing overloads {e}"

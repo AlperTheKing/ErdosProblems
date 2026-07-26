@@ -900,3 +900,67 @@ adds nothing in the open band.
 **If anyone reopens this**, the blocking step is: a cost function beating greedy insertion must bound
 *"the edges from the deleted set to the monochromatic side of an optimal cut of `G - S`"* without
 computing that cut -- which is exactly the circular instantiation.
+
+
+---
+
+## R3-C24 — the two proved theorems meet: a defect proposition, and a coverage map (GATED)
+
+Root-agent entry, 2026-07-26. My own work, `round5/claude_coverage_map.py` and
+`round5/claude_residual_margin.py`.
+
+### PROPOSITION (mine, proved). The equality case of Theorem A IS the hypothesis of Theorem D.
+
+For an induced 5-cycle `C` and a weighting `x`, define the DEFECT
+`D(C) = sum_u x_u (2 - |N(u) cap V(C)|)`, nonnegative because Lemma 2's core gives
+`|N(u) cap V(C)| <= (5-1)/2 = 2`. Then
+
+* **(i)** `rho(C) <= D(C) <= 2 rho(C)`, where `rho(C)` is the weight on non-twin vertices off `C`;
+* **(ii)** `D(C) = 0` implies `supp(x)` is `C5`-COLOURABLE, hence `psi(H,x) <= 1/25` unconditionally.
+
+*Proof of (ii).* `D(C) = 0` forces `|N(u) cap C| = 2` for every `u` in `supp(x)`. Triangle-freeness
+forbids those two neighbours from being adjacent, so they are at distance 2 on `C` and `u` is a full
+twin of some class `i`. Two twins of one class are non-adjacent (else a triangle through `c_{i+1}`),
+and twins of classes `i` and `i+2` are non-adjacent (likewise). So every edge of the support joins
+consecutive classes and `class(.)` is a homomorphism onto `C5`. QED
+
+Gated: over 3094 `(graph, x, induced C5)` instances, **0 violations of (i)**, and of the **666**
+instances with `D = 0`, **0** had a non-`C5`-colourable support.
+
+This is the equality analysis of Theorem A (Cauchy-Schwarz tight, so all `d(v)` agree on `C`; Lemma 2
+tight, so every positively weighted vertex has exactly two neighbours on `C`) delivering exactly the
+`rho = 0` hypothesis of Theorem D. The two theorems, proved independently by different families,
+meet at `D = 0`.
+
+### COVERAGE MAP — measured, not guessed
+
+Call an instance SETTLED if one of the three proved facts applies: the support is `C5`-colourable, or
+`D(C) = 0` for some induced `C5`, or Theorem D's `25*eta(C) + rho(C) <= 2`. Sampling the DANGEROUS
+region deliberately (perturbing `C5`-concentrations at seven scales, 840 instances per graph, exact
+rationals):
+
+```
+        graph            max psi SETTLED     max psi UNSETTLED
+        Petersen              0.03973          203/6050  = 0.03355
+        Grotzsch              0.03947          545/15876 = 0.03433
+        Wagner                0.03973          406/13225 = 0.03070
+        Gamma_11              0.03960          30/841    = 0.03567   <- worst anywhere
+        Gamma_14              0.03973          55/1587   = 0.03466
+        N=14 extremal         0.03947          6/175     = 0.03429
+        C5[2], C5[3,1,2,2,1]  0.03973          none unsettled
+```
+
+The settled region carries the near-extremal instances (up to `0.0397`, approaching `1/25`); the
+unsettled region tops out at `30/841 = 0.035672`, a margin of `0.004328`, i.e. `89.18%` of the
+target. **The toolkit covers the sharp region and leaves the slack region unproved** -- the reverse
+of the usual situation.
+
+### What this is, and what it is NOT
+
+If the margin is real, then off the settled region the conjecture reduces to a NON-SHARP bound, which
+is a different kind of statement from the sharp one that has killed every mechanism here (the `1/20`
+barrier, the plateau, the tightness of Theorem A everywhere).
+
+But this is a MEASUREMENT, not a theorem, and I record its limits explicitly: the sampling is
+heuristic, `psi` is known to have spurious local maxima (R3-C20 K-0) so no sampling certifies a
+maximum, and an `11%` margin is modest. It is a direction with a number attached, not a result.

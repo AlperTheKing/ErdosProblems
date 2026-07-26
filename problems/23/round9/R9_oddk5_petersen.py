@@ -64,19 +64,19 @@ for M in (4, 5, 6, 10):
           f"{'  <-- INTEGRALITY GAP' if tau > r['value'] else ''}")
 
 # ---- 3. the same gap as a PRODUCT weight on a triangle-free graph (Lemma SIM) ----
-# twice-subdivide Petersen and give the middle vertex of each spoke path weight 5.
+# Lemma SIM (proved in R9_oddk5.md, verified exactly on 12 weighted instances in
+# R9_oddk5_sim.py) turns the non-product weight above into a PRODUCT weight on the twice
+# subdivision H of Petersen: N(H) = 10 + 2*15 = 40, triangle-free, odd girth 15.
+# psi(H,x) = bip_c(Petersen) and Lambda(H,x) = Lambda_c(Petersen) with c = w / (max w).
 import R9_oddk5_sim as SIM
-c = {}
 sp = {tuple(sorted(s)) for s in spokes}
-for e in pet.E:
-    c[e] = F(1, 5) if e in sp else F(1, 25)      # scaled into (0,1]; ratio 5 : 1 preserved
+c = {e: (F(1) if e in sp else F(1, 5)) for e in pet.E}
 H, x = SIM.build_sim(pet, c)
-print(f"\nsimulation graph: n={H.n} m={H.m} triangle-free={H.triangle_free()} "
-      f"odd girth={odd_girth(H)}")
-ps = psi(H, x)
-lam = LambdaX(H, x)
-verify_Lambda(H, lam, prodw(H, x))
-print(f"  psi(H,x) = {ps}   Lambda(H,x) = {lam['value']}   ratio = {ps/lam['value']}")
-s = sum(x)
-print(f"  normalised: sum x = {s},  psi = {ps/s**2}, Lambda = {lam['value']/s**2}, "
-      f"1/25 = {F(1,25)}  (psi below 1/25: {ps/s**2 < F(1,25)})")
+tot = sum(x)
+tau = bip(pet, c)
+r = Lambda(pet, c); verify_Lambda(pet, r, c)
+print("")
+print(f"SIM graph H: n={H.n} m={H.m} triangle-free={H.triangle_free()} odd girth={odd_girth(H)}")
+print(f"  psi(H,x) = {tau} , Lambda(H,x) = {r['value']} , ratio = {F(tau)/r['value']}")
+print(f"  normalised by (sum x)^2 = {tot**2}: psi = {F(tau)/tot**2} = {float(F(tau)/tot**2):.6f}"
+      f"  (1/25 = 0.04)")
