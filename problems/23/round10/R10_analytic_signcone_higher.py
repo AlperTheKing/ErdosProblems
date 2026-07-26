@@ -102,7 +102,7 @@ def solve(mask: int, degree: int):
     aeq = np.vstack((matrix, np.r_[np.ones(N), np.zeros(len(product_columns))]))
     beq = np.r_[target, 1.0]
     result = linprog(
-        np.zeros(aeq.shape[1]), A_eq=aeq, b_eq=beq, bounds=(0, None), method="highs",
+        np.zeros(aeq.shape[1]), A_eq=aeq, b_eq=beq, bounds=(0, None), method="highs-ipm",
         options={"dual_feasibility_tolerance": 1e-9, "primal_feasibility_tolerance": 1e-9, "time_limit": 60},
     )
     print(f"mask=0x{mask:03x} degree={degree} rows={len(basis)} cols={aeq.shape[1]} "

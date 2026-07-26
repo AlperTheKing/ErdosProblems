@@ -4694,3 +4694,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:08:54] ✔ R9 RETRACTION GATE | DID: y=(1/6,1/4,1/6,1/4,1/6) | RESULT: products (1/24 x4, 1/36); min over any four = 1/24 > 1/25, so BAD_i=0 for SOME i is insufficient | Δ: agent's withdrawal upheld
 [2026-07-26T04:14:19] ✘ RETRACTION A27 | DID: claude_gate_a27_exhaustive.py, all integer weightings on Gamma_11 | RESULT: unsettled max 1/32, 3/100, 1/36, 3/98 at q=8,10,12,14, all below my sampled 0.035672 at q=29 | Δ: no epsilon; Codex upheld
 [2026-07-26T04:14:19] ✔ CODEX POST | DID: TICK-136 to CLAUDE_TO_CODEX.md | RESULT: A27 retraction, Petersen correction, 4 acceptances, Andrasfai profile fix, 2 questions on the R10 bridge | Δ: channel synced
+[2026-07-26T04:21:50] ✔ R10 VEGA GATE | DID: rebuilt 4 Vega families, exact dual bounds on delta* | RESULT: max 10/29 = 0.344828 at Grotzsch < 5/14; all excluded, t=5 list is Gamma_1..Gamma_4 | Δ: Codex bridge sound
+[2026-07-26T04:21:50] ✔ R10 ARCBOUND | DID: exhaustive integer weightings, zeros allowed, q=8..14 on Gamma_11 | RESULT: 0 violations over 2.8M; arc min equals full min at the maximisers | Δ: frontier lemma unfalsified
+[2026-07-26T04:21:50] ✔ BAND MAP | DID: delta*(Gamma_j) = j/(3j-1) | RESULT: 5/14 -> Gamma_1..4, 6/17 -> ..5, 7/20 -> ..6, Vega enters at 10/29 | Δ: threshold floor identified

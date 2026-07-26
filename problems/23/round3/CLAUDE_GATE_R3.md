@@ -1088,3 +1088,77 @@ the problem, not as a change of its character.
 
 Its Andrasfai profile `C(k-2,2)` should be `C(k-1,2)`: the exhaustive counts are 1, 3, 6, 10 for
 `k = 3..6`, which `C(k-1,2)` reproduces and `C(k-2,2)` does not (it gives 0, 1, 3, 6).
+
+
+---
+
+## R3-C26 — Codex's R10 direct route: bridge GATED SOUND, frontier lemma survives falsification
+
+Root-agent entry, 2026-07-26. Gates `round5/claude_gate_r10_vega.py` and
+`round5/claude_gate_r10_arcbound.py`. I asked Codex two questions before gating and then answered
+both myself rather than idle.
+
+### Q1: is the Vega branch really discharged at delta > 5N/14? YES, certified exactly.
+
+Brandt-Thomasse Corollary 4.1 says the twin-free maximal triangle-free weighted graphs with
+`delta > 1/3` are the `Gamma_i` AND the 4-chromatic VEGA graphs, so the Vega branch cannot simply be
+omitted. Weighted minimum degree is `delta*(G) = max_omega min_v omega(N(v))`; by LP duality any
+probability vector `p` gives `delta*(G) <= max_u p(N(u))`, so one rational `p` certifies exclusion
+exactly. Rebuilding the four Vega families from the verbatim Brandt-Thomasse construction:
+
+```
+        Upsilon_2        13 vtx   delta* = 12/35     = 0.342857
+        Upsilon_2 - y    12 vtx            11/32     = 0.343750
+        Upsilon_2 - {4}  12 vtx            11/32     = 0.343750
+        Upsilon_2-{y,4}  11 vtx            10/29     = 0.344828   <- the binding one (Grotzsch)
+        Upsilon_3 ...    16 vtx            21/62     = 0.338710
+        Upsilon_4 ...    19 vtx          2336/6929   = 0.337134
+```
+
+all `< 5/14 = 0.357143`, and `delta_reg(Upsilon_i) = (9i-6)/(27i-19)` decreases to `1/3`, so no Vega
+graph anywhere meets `delta > 5/14`. **The t = 5 list is `Gamma_1..Gamma_4` only, exactly as Codex
+stated.**
+
+### Q2: does the bridge route through "Guenin covers Petersen"? NO.
+
+The list is `Gamma_1` (bipartite), `Gamma_2 = C5`, `Gamma_3 = And(3) = Wagner` (exact SOS certificate
+`round7/Q4_cert_g8_d1.pkl`) and `Gamma_4 = And(4) = Gamma_11` (the frontier lemma). Petersen never
+appears, so my Petersen retraction does NOT damage this route.
+
+### The frontier lemma survives my falsification attempt
+
+`ARCBOUND_{Gamma_11}(x) <= (sum x)^2/25` over the 56 cyclic-interval cuts, exhaustive over ALL
+integer weightings with ZEROS ALLOWED:
+
+```
+        q =  8    43758 weightings   max 25*ARCBOUND/q^2 = 50/64  = 0.781250   0 violations
+        q = 10   184756 weightings                       100/100 = 1.000000   0 violations
+        q = 12   646646 weightings                       100/144 = 0.694444   0 violations
+        q = 14  1961256 weightings                       150/196 = 0.765306   0 violations
+```
+
+with the mandatory sanity check tight: a `C5`-concentration gives `25*psi = 25 = q^2` exactly. At
+every grid `max 25*ARCBOUND/q^2` EQUALS `max 25*psi/q^2`, i.e. the arc family attains the full
+minimum at the maximising weightings. This is a finite check and can only ever falsify, so it is
+evidence for the lemma, never a proof of it.
+
+### A BAND MAP I derived while checking, useful for choosing the threshold
+
+`delta*(Gamma_j) = j/(3j-1)`, so at threshold `c` the Andrasfai list is `{Gamma_j : j/(3j-1) > c}`:
+
+```
+        c = 5/14  = 0.35714  ->  Gamma_1..Gamma_4   (j < 5)    Vega excluded
+        c = 6/17  = 0.35294  ->  Gamma_1..Gamma_5   (j < 6)    Vega excluded
+        c = 7/20  = 0.35000  ->  Gamma_1..Gamma_6   (j < 7)    Vega excluded
+        c = 10/29 = 0.34483  ->  Gamma_1..Gamma_9   (j < 10)   VEGA ENTERS (Grotzsch)
+```
+
+So each step down the threshold buys a smaller band at the cost of exactly one more Andrasfai
+certificate, and `10/29` is the hard floor: below it the Vega side must be handled. `5/14` is the
+cheapest choice that needs only `Gamma_1..Gamma_4`, which is why Codex picked it.
+
+### Status
+
+The R10 bridge is GATED SOUND. Its single open item is the frontier lemma, unfalsified at these
+grids. Under GOAL clause (c) an unconditional theorem on an explicit minimum-degree range DOES count,
+so this route would shrink base (6)'s band from `delta <= 0.375N` to `delta <= 0.3571N`.

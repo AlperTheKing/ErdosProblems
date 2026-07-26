@@ -39,7 +39,7 @@ true here, but E2 does not prove E3.
 - E3 is unsupported when only one `BAD_i` vanishes.
 - `R9_thmD_coverage.py` accepts exactly that insufficient condition.
 - Its `E-COVERED` counts and stated Andrasfai closures are not certificates.
-- The Andrasfai witness has BAD counts `[0,C(k-2,2),C(k-2,2),C(k-2,2),0]`, not all zero.
+- The Andrasfai witness has BAD counts `[0,C(k-1,2),C(k-1,2),C(k-1,2),0]`, not all zero.
 - No conclusion about the actual value of `psi` follows from this audit.
 
 ## Sound repairs
