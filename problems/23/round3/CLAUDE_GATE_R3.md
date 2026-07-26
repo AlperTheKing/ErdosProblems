@@ -2151,3 +2151,60 @@ Subdivision has now killed: gap quantification (A28), the `W/g_odd` route (R3-C4
 inflating `|E|` and `N`, so ANY bound comparing `bip` to a global edge-density functional is defeated
 by subdividing a dense graph. **Piece (i) cannot be closed by any inequality relating `psi` to `W`
 alone.** It has to see more of the structure than total edge weight.
+
+
+---
+
+## R3-C46 — the `c*W` route REVIVES for piece (i) once base (6)'s degree restriction is applied
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_piece_i_mindegree.py` and
+`round5/claude_ratio_restricted.py`.
+
+R3-C45 killed `psi <= c*W` at odd girth `>= 7` with twice-subdivided `K_n`, forcing `c >= 1/6` and a
+useless `1/24 > 1/25`. **But every one of those witnesses has `delta = 2`**, and accepted base (6)
+already confines a minimal counterexample to `delta > (4N-2)/25`:
+
+```
+        twice-subdivided K_n:   n =  5   N =   25   delta = 2   threshold   3.92   EXCLUDED
+                                n = 12   N =  144   delta = 2   threshold  22.96   EXCLUDED
+                                n = 28   N =  784   delta = 2   threshold 125.36   EXCLUDED
+                                n = 100  N = 10000  delta = 2   threshold 1599.92  EXCLUDED
+```
+
+Every twice-subdivided graph falls outside the minimal-counterexample range as soon as `N > 13`, so
+none of them was ever relevant to piece (i). `C7` itself survives (`delta = 2 > 26/25 = 1.04`).
+
+### Measured on the surviving range
+
+```
+        pentagon-free, non-bipartite, n <= 11                      934
+        of those with delta > (4n-2)/25                            324
+        max over x of psi/W on that range          0.14285714 = EXACTLY 1/7
+        graphs exceeding 4/25                                       0
+        headroom                                                 10.7%
+        max psi on that range                      0.02040816 = EXACTLY 1/49
+```
+
+So under base (6) -- which costs NOTHING, it is accepted -- the route is:
+
+```
+        psi <= (4/25) W   on pentagon-free graphs with delta > (4N-2)/25,
+        W <= 1/4          (Motzkin-Straus, triangle-free)
+        ==>  psi <= 1/25  ==>  piece (i) closed.
+```
+
+### The honest limitation, which is severe
+
+At `n <= 11` the threshold `(4n-2)/25` is at most `1.76`, so the restriction only demands
+`delta >= 2` and excludes almost nothing. **The corpus therefore does NOT exercise the restriction**;
+it shows only that no small pentagon-free graph breaks `4/25`, which R3-C43 already showed. The
+restriction's real content is at large `N`, exactly where I have no exhaustive data.
+
+What would settle it: whether pentagon-free graphs with `delta > 0.16 N` at LARGE `N` all satisfy
+`psi/W <= 4/25`. `C7` blow-ups do -- `C7[m]` has `delta = 2N/7 = 0.2857N` and `psi/W = 1/7` exactly
+at every size -- and they are the natural extremal family. This is the level-7 analogue of the
+Andrasfai / Brandt-Thomasse structure that governs level 5, and the same structure theorem, if it
+exists at odd girth 7, would decide it.
+
+Status: the route is UNREFUTED rather than revived-and-verified. R3-C45's kill is correctly scoped to
+the unrestricted statement and stands as such.

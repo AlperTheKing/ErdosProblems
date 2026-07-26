@@ -4737,3 +4737,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T07:15:31] ✘ R3-C44 DEAD | DID: claude_ratio_route_kill.py, twice-subdivided K_n at odd girth 9 | RESULT: psi/W = 13/81 = 0.16049 > 4/25 at n=28, limit 1/6 | Δ: my own route killed by my own test
 [2026-07-26T07:15:31] ✘ c*W FAMILY DEAD | DID: derive the family bound | RESULT: any psi <= c*W at odd girth >=7 needs c >= 1/6, giving 1/24 = 0.041667 > 1/25 | Δ: whole family cannot close piece (i)
 [2026-07-26T07:17:13] ✔ MEMORY | DID: wrote erdos23-theorem-a-and-subdivision-lesson.md + MEMORY.md pointer | RESULT: Theorem A proof, defect refinement, Wagner obstruction, subdivision lesson recorded | Δ: session consolidated
+[2026-07-26T07:22:05] ✔ BASE (6) EXCLUDES | DID: check subdivision witnesses against delta > (4N-2)/25 | RESULT: all have delta = 2, excluded for N > 13; C7 survives at 2 > 1.04 | Δ: R3-C45 kill scoped to unrestricted form
+[2026-07-26T07:22:05] ✔ RESTRICTED RATIO | DID: claude_ratio_restricted.py over 324 surviving graphs | RESULT: max psi/W = 1/7 exactly, 0 exceed 4/25, headroom 10.7% | Δ: route unrefuted under base (6)
+[2026-07-26T07:22:05] ✘ LIMITATION | DID: check what the restriction actually excludes at n<=11 | RESULT: threshold <= 1.76 so it only demands delta >= 2; corpus does NOT exercise it | Δ: large-N untested
