@@ -4674,3 +4674,7 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T02:33:02] ✔ THEOREM A PROVED | DID: claude_gate_r8_thmA.py verifying the proof, not the conclusion | RESULT: cover y_e=(g(u)+g(v))/2gamma feasible 36/36, cost = 1/(2gamma), max 585/14896 | Δ: R3-C17 sound
 [2026-07-26T02:33:02] ✔ LEMMA 2 GATE | DID: |N(u) cap V(C)| <= (L-1)/2 over 6 triangle-free graphs, all odd cycles | RESULT: 8622 pairs, 0 violations, 2878 tight; K4 control violates 16 times | Δ: triangle-freeness is the crux
 [2026-07-26T02:33:02] ✔ THMA SCOPE | DID: twice-subdivided K5, n=25 m=30 odd girth 9 | RESULT: psi = 4/625 vs Lambda <= 2/375, ratio exactly 6/5 | Δ: Theorem A does NOT imply the conjecture
+[2026-07-26T03:06:01] ✔ R9 DISCHARGE GATE | DID: claude_gate_r9_discharge.py strength ceiling on K_{m,m} | RESULT: U >= (|E|-N)/2 = N^2/8 - N/2 while bip = 0, so the method caps at c >= 1/8 | Δ: A26 DEAD
+[2026-07-26T03:06:01] ✔ R9 DISCHARGE GATE | DID: Phi* = f - U on the extremal family | RESULT: negative throughout, C5[2] <= -1, C5[10] <= -125, so no nonnegative potential exists | Δ: family closed structurally
+[2026-07-26T03:06:01] ✔ R9 DISCHARGE GATE | DID: pentagon charging on C7 | RESULT: bip = 1 with 0 induced pentagons, charge has nowhere to go | Δ: sub-scheme dead
+[2026-07-26T03:06:01] ✘ MS-DEFICIT LINE | DID: check psi + (4/5)W <= 1/5 and its complement psi <= W/5 | RESULT: margin exactly 0 on every C5[n]; complement FALSE at N=14, 1/28 > 8/245 | Δ: none

@@ -851,3 +851,52 @@ triangle-free graph `<= n^2/c`" exists for any `c`, so Theorem A is proved here 
 Its proof is short and elementary and is the most realistic Lean formalisation target the campaign
 has produced. NAMING: this "Theorem A" is `Lambda <= 1/25`; the round-8 stability family's
 "Theorem D" is the different statement `psi <= (1-rho)^2/25 + rho*eta`.
+
+
+---
+
+## R3-C23 — round 9: discharging with a global potential is DEAD, structurally (GATED)
+
+Root-agent entry, 2026-07-26. Own re-verification, `round5/claude_gate_r9_discharge.py`.
+
+This was the last form of discharging never tried here (the purely local forms are A8, A9, A19).
+It dies not to a witness but to a structure theorem: **the global potential is not a free parameter.**
+
+For any sound reduction system -- every move `G -> G'` satisfying `bip(G) <= bip(G') + c` -- define
+the shortest-path value `U(G) = min over moves [c + U(G')]`, with `U = 0` on bipartite graphs. Then a
+potential `Phi >= 0` obeying the amortised step `Phi(G) - Phi(G') <= (f(G) - f(G')) - c` exists **iff
+`U <= f`**, and the pointwise-largest one is `Phi* = f - U`. So "choose a clever global potential" is
+not a degree of freedom; the potential is determined by the move family.
+
+**Corollary 1, circularity.** `U >= bip` always: `U(G) = min[c + U(G')] >= min[c + bip(G')] >=
+bip(G)` by soundness. So demanding `U <= f` is at least as strong as `bip <= f`, and the exact-cost
+and edge-deletion instantiations have `U = bip` identically. Terminal lemma, verbatim:
+*"min over deletion orderings of `sum_i (bip(G_i) - bip(G_{i+1})) <= N^2/25`"*, which telescopes to
+the conjecture.
+
+**Corollary 2, strength ceiling (the decisive one, gated by me).** For the only non-circular local
+cost `floor(d/2)`, the counting identity `sum_i d_{G_i}(v_i) = |E|` forces `U(G) >= (|E| - N)/2`. On
+`K_{m,m}` that equals `N^2/8 - N/2` while `bip = 0`:
+
+```
+        m =  4:  U >= 4     vs  N^2/25 = 64/25       c >= 0.0625
+        m = 12:  U >= 60    vs  N^2/25 = 576/25      c >= 0.1042
+        m = 50:  U >= 1200  vs  N^2/25 = 400         c >= 0.1200   -> floor 1/8 = 0.125
+```
+
+so the mechanism **cannot prove `bip <= c N^2` for any `c < 1/8`**, which is behind even the
+published `1/23.5`, let alone the target `1/25`.
+
+**Confirmed witnesses.** `Phi*` is negative on the whole extremal family: `C5[2] <= -1`,
+`C5[3] <= -6`, `C5[4] <= -14`, `C5[10] <= -125`. (The family reported `-2` for `C5[2]`; my counting
+bound gives `U >= 5` hence `Phi* <= -1`. Negative either way, verdict unchanged.) Pentagon charging
+dies on `C7`, which has `bip = 1` and **zero** induced pentagons, so the charge has nowhere to go.
+
+**Secondary, gated.** The Motzkin-Straus-deficit line `psi + (4/5)W <= 1/5` has margin exactly `0` on
+every `C5[n]` -- but its complementary piece `psi <= W/5` is FALSE at the `N = 14` extremal graph
+`M?AE@bH{AYN_LgBs?`: `psi = 1/28 > 8/245 = W/5`, equivalently `bip = 7 > 32/5 = |E|/5`. So the pair
+adds nothing in the open band.
+
+**If anyone reopens this**, the blocking step is: a cost function beating greedy insertion must bound
+*"the edges from the deleted set to the monochromatic side of an optimal cut of `G - S`"* without
+computing that cut -- which is exactly the circular instantiation.
