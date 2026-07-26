@@ -4711,3 +4711,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:46:03] ✔ EQUALITY WITNESS | DID: claude_thmF_witness.py | RESULT: a=(2,1,1,0,2,0,1,1,2,0,0), support size 7, psi = 1/25 exactly, heaviest pentagon 0.8 < 0.84, support C5-colourable | Δ: balls must centre on blow-ups
 [2026-07-26T04:48:33] ✔ R10 FACE GATE | DID: claude_gate_r10_d22face.py | RESULT: arc min 1, tight 24..25, block 286, exact rank of the 33 evaluation vectors = 33, all MATCH Codex | Δ: face argument accepted
 [2026-07-26T04:48:33] ✔ R10 VERDICT | DID: assess the degree-4 solve | RESULT: optimal_inaccurate, iterate off a codim-33 face, no exact certificate; BLOCKED not DEAD per the exit rule | Δ: impose face before solving
+[2026-07-26T04:51:02] ✔ FACE COUNTS | DID: claude_gate_r10_face2.py | RESULT: k-distribution {1:814, 3:737, 5:297} MATCH Codex; 1034 pairs with k>1 cross-checks my earlier count | Δ: derivation accepted
+[2026-07-26T04:51:02] ✘ FACE INCOMPLETE | DID: test the R3-C32 blow-up witness against the ARC certificate | RESULT: ARCBOUND = 4 = target exactly, 19 of 56 cuts tight, 37 forced to zero | Δ: 1_C-only face insufficient

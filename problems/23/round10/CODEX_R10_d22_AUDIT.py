@@ -20,10 +20,12 @@ from pathlib import Path
 from typing import Iterable
 
 import numpy as np
+import sympy as sy
 
 
 HERE = Path(__file__).resolve().parent
 CONSTRUCTOR = HERE / "CODEX_R10_g11_d22_sdp.py"
+FACE_CONSTRUCTOR = HERE / "CODEX_R10_g11_d22_face.py"
 NUMERIC_EXPORT = HERE / "CODEX_R10_g11_d22_numeric.pkl"
 N = 11
 D = 4
@@ -144,6 +146,8 @@ def sparse_row(matrix, row: int) -> dict[int, int]:
 
 def full_row_rank_mod_prime(rows: list[list[int]], prime: int = 1_000_003) -> int:
     """Exact modular row rank; full modular row rank certifies full Q-rank."""
+    if not rows:
+        return 0
     work = [[value % prime for value in row] for row in rows]
     number_rows = len(work)
     number_columns = len(work[0])
@@ -174,6 +178,15 @@ def full_row_rank_mod_prime(rows: list[list[int]], prime: int = 1_000_003) -> in
 
 def import_constructor():
     spec = importlib.util.spec_from_file_location("r10_d22_constructor_audited", CONSTRUCTOR)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def import_face_constructor():
+    spec = importlib.util.spec_from_file_location("r10_d22_face_audited", FACE_CONSTRUCTOR)
     assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = module
@@ -822,6 +835,79 @@ def main() -> None:
     ) < 1e-10
     assert numeric_hash_before == sha256(NUMERIC_EXPORT)
 
+    # ---- Independent build-only audit of the exact-face scaffold ------------
+    face_hash_before = sha256(FACE_CONSTRUCTOR)
+    face_constructor = import_face_constructor()
+    face = face_constructor.build_face_model()
+    assert face.margin.value is None
+    assert all(variable.value is None for variable in face.problem.variables())
+    assert face.problem.is_dcp()
+    assert face.base.edges == edges and face.base.cuts == cuts
+    assert np.array_equal(face.base.multiplier_orbit_ids, model.multiplier_orbit_ids)
+    assert {
+        tuple(cycle) for cycle in face.cycles
+    } == {
+        tuple(sorted(vertices)) for vertices, _cycle_edges in induced_c5s
+    }
+
+    expected_forced_oids = sorted(
+        pair_key_to_module_oid[key] for key in forced_multiplier_orbit_keys
+    )
+    assert face.forced_zero_multiplier_orbits == expected_forced_oids
+    assert len(expected_forced_oids) == 1147
+
+    expected_rows_by_rep: dict[Exponent, list[list[int]]] = defaultdict(list)
+    for rep_mask, row in representative_kernel_vectors:
+        expected_rows_by_rep[rep_mask].append(list(row))
+
+    face_rank_total = 0
+    face_complement_total = 0
+    face_rank_by_order = Counter()
+    face_kernel_blocks = 0
+    face_margin_blocks = 0
+    for face_orbit, face_data in zip(face.base.gram_orbits, face.orbit_data):
+        rep_mask = face_orbit.parity_rep
+        expected_rows = expected_rows_by_rep[rep_mask]
+        expected_rank = full_row_rank_mod_prime(expected_rows)
+        assert len(face_data.kernel) == expected_rank
+        face_rank_total += expected_rank
+        face_rank_by_order[len(face_orbit.basis)] += expected_rank
+        complement_order = len(face_orbit.basis) - expected_rank
+        face_complement_total += complement_order
+        face_kernel_blocks += int(expected_rank > 0)
+        face_margin_blocks += int(len(face_orbit.basis) > 1 and complement_order > 0)
+
+        rational = lambda value: sy.Rational(value.numerator, value.denominator)
+        projector = sy.Matrix(
+            [[rational(value) for value in row] for row in face_data.projector]
+        )
+        order = len(face_orbit.basis)
+        assert projector == projector.T
+        if expected_rank:
+            kernel = sy.Matrix(
+                [[rational(value) for value in row] for row in face_data.kernel]
+            )
+            gram = kernel * kernel.T
+            gram_inverse = gram.inv()
+            assert gram * gram_inverse == sy.eye(expected_rank)
+            formula = sy.eye(order) - kernel.T * gram_inverse * kernel
+            assert projector == formula
+            assert kernel * projector == sy.zeros(expected_rank, order)
+            for expected_row in expected_rows:
+                assert sy.Matrix([expected_row]) * projector == sy.zeros(1, order)
+        else:
+            assert projector == sy.eye(order)
+        assert sy.trace(projector) == complement_order
+
+    assert face_rank_total == 74
+    assert face_rank_by_order == Counter({286: 33, 66: 30, 11: 11})
+    assert face_complement_total == 788
+    assert face_margin_blocks == 26
+    assert len(face.problem.constraints) == (
+        len(face.base.problem.constraints) + 1 + face_kernel_blocks + face_margin_blocks
+    )
+    assert face_hash_before == sha256(FACE_CONSTRUCTOR)
+
     hash_after = sha256(CONSTRUCTOR)
     assert hash_before == hash_after, "constructor changed during the audit"
 
@@ -886,6 +972,16 @@ def main() -> None:
         f"C5_all_blocks_max_entry_Qv={maximum_kernel_residual:.12e} "
         f"C5_max_block_energy_abs={maximum_block_energy_abs:.12e}"
     )
+    print(f"face_constructor_sha256={face_hash_before}")
+    print(
+        f"face_F1_exact_match={len(expected_forced_oids)}/2611 "
+        f"face_F2_rank_total={face_rank_total} "
+        f"face_rank_by_order={dict(face_rank_by_order)} "
+        f"face_complement_total={face_complement_total} "
+        f"face_kernel_blocks={face_kernel_blocks} "
+        f"face_margin_blocks={face_margin_blocks} exact_projectors=PASS"
+    )
+    print("FACE_BUILD_AUDIT_ONLY: no solve launched")
     print("NUMERICAL_EXPORT_AUDIT_ONLY: exact rational reconstruction still required")
     print("AUDIT_PASS")
 

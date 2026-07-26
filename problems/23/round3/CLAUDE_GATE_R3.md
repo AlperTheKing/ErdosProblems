@@ -1520,3 +1520,56 @@ least 33 in the 286-block and zeroes over half the `(cut, pentagon)` incidences.
 
 **No escalation up the degree hierarchy** is warranted; the registered rule forbids it, and the
 diagnosis here is that the solve was aimed off the face, not that degree 4 is too low.
+
+
+---
+
+## R3-C34 — Codex's induced-C5 face is INCOMPLETE: the arc certificate is tight at blow-up points too
+
+Root-agent entry, 2026-07-26. Gate `round5/claude_gate_r10_face2.py`.
+
+### Accepted: Codex's face derivation and its counts
+
+The derivation is correct and I verified the algebra by hand. With degree-4 multipliers and target
+degree 6, normalization gives `sum_S nu_S = 25 L^4`, so at `x = 1_C` (`L = 5`),
+`sum_S nu_S(1_C) = 25 * 5^4 = 5^6` and
+
+```
+        T(1_C) = 5^6 - sum_S nu_S(1_C) k_S(C) = - sum_S nu_S(1_C) (k_S(C) - 1).
+```
+
+Odd-cycle parity puts `k_S(C)` in `{1,3,5}`, so every term is `>= 0` while `T(1_C) >= 0` by the SOS
+condition. Hence `T(1_C) = 0` term by term, `k_S(C) > 1` forces `nu_S(1_C) = 0`, and coefficientwise
+nonnegativity then kills every multiplier coefficient supported inside `C`.
+
+Its counts reproduce exactly under my own construction:
+
+```
+        k_S(C) distribution over all 56 x 33 = 1848 pairs:  {1: 814, 3: 737, 5: 297}   MATCH
+        pairs with k > 1: 737 + 297 = 1034, matching my independent earlier count       MATCH
+        parity law (every k odd)                                                        holds
+        286-block kernel dimension 33 (from R3-C33, exact rational rank)                MATCH
+```
+
+### NOT ACCEPTED as complete: the face omits the blow-up equality points
+
+Codex builds the face from the 33 pentagon INDICATORS `1_C` only. But the equality set of the arc
+certificate on `Gamma_11` is strictly larger. The R3-C32 witness
+
+```
+        a = (2,1,1,0,2,0,1,1,2,0,0),  support {0,1,2,4,6,7,8} of size 7,  sum a = 10
+```
+
+has `psi = 4` AND **`ARCBOUND = 4`**, against the target `(sum a)^2/25 = 4`. So the arc certificate is
+TIGHT there as well, `T(a) = 0`, and that point imposes its own face conditions: **19 of the 56 arc
+cuts are tight at `a`, so the other 37 have `nu_S(a) = 0` forced**, exactly as at a pentagon
+indicator. The point is neither a pentagon indicator nor even 0/1.
+
+**Consequence.** Imposing only the `1_C` face and re-solving can still fail, because the certificate
+must additionally vanish at these blow-up points. The correct face is cut out by the FULL equality
+set `{x : 25 * ARCBOUND(x) = (sum x)^2}`, not by the 33 indicators. This is the same geometric fact
+recorded in R3-C32 -- the extremal set of `Gamma_11` contains `C5`-blow-up weightings on larger
+supports -- now shown to bind on the certificate side as well.
+
+Status of the route is unchanged at **BLOCKED**, but the diagnosis is sharper: the previous solve was
+aimed off the face, and the face Codex has just constructed is itself incomplete.
