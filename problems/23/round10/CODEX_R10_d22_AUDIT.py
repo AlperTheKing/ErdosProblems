@@ -16,7 +16,9 @@ import math
 import pickle
 import sys
 from collections import Counter, defaultdict
+from fractions import Fraction
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Iterable
 
 import numpy as np
@@ -26,6 +28,7 @@ import sympy as sy
 HERE = Path(__file__).resolve().parent
 CONSTRUCTOR = HERE / "CODEX_R10_g11_d22_sdp.py"
 FACE_CONSTRUCTOR = HERE / "CODEX_R10_g11_d22_face.py"
+FACE_EXPORTER = HERE / "CODEX_R10_g11_d22_face_export.py"
 NUMERIC_EXPORT = HERE / "CODEX_R10_g11_d22_numeric.pkl"
 N = 11
 D = 4
@@ -187,6 +190,15 @@ def import_constructor():
 
 def import_face_constructor():
     spec = importlib.util.spec_from_file_location("r10_d22_face_audited", FACE_CONSTRUCTOR)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def import_face_exporter():
+    spec = importlib.util.spec_from_file_location("r10_d22_face_export_audited", FACE_EXPORTER)
     assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = module
@@ -908,6 +920,149 @@ def main() -> None:
     )
     assert face_hash_before == sha256(FACE_CONSTRUCTOR)
 
+    # ---- No-solve synthetic audit of face exporter formulas -----------------
+    exporter_hash_before = sha256(FACE_EXPORTER)
+    exporter = import_face_exporter()
+    exporter.validate_output_paths(exporter.DEFAULT_OUTPUT, exporter.DEFAULT_REPORT)
+    guard_cases = [
+        (exporter.RAW_NUMERIC_PATH, exporter.DEFAULT_REPORT),
+        (exporter.DEFAULT_OUTPUT, exporter.RAW_NUMERIC_PATH),
+        (exporter.FACE_PATH, exporter.DEFAULT_REPORT),
+        (exporter.DEFAULT_OUTPUT, exporter.FACE_PATH),
+        (FACE_EXPORTER, exporter.DEFAULT_REPORT),
+        (exporter.DEFAULT_OUTPUT, FACE_EXPORTER),
+        (exporter.DEFAULT_OUTPUT, exporter.DEFAULT_OUTPUT),
+    ]
+    guard_rejections = 0
+    for output_path, report_path in guard_cases:
+        try:
+            exporter.validate_output_paths(output_path, report_path)
+        except SystemExit:
+            guard_rejections += 1
+        else:
+            raise AssertionError(f"unsafe exporter paths accepted: {output_path}, {report_path}")
+    assert guard_rejections == len(guard_cases)
+
+    synthetic_rng = np.random.default_rng(23023)
+    synthetic_nu = synthetic_rng.integers(
+        0, 1001, size=face.base.multiplier_variable.size
+    ).astype(float)
+    face.base.multiplier_variable.value = synthetic_nu
+    for orbit in face.base.gram_orbits:
+        orbit.variable.value = synthetic_rng.integers(
+            -1000, 1001, size=int(orbit.variable.size)
+        ).astype(float)
+    face.margin.value = 0.125
+    face.problem._status = "synthetic-no-solve"
+    face.problem._solver_stats = SimpleNamespace(
+        solver_name="NO_SOLVER",
+        num_iters=0,
+        setup_time=0.0,
+        solve_time=0.0,
+    )
+
+    synthetic_normalization_rhs = np.asarray(
+        [
+            25 * multinomial(face.base.multiplier_monomials[index])
+            for index in module_d_reps
+        ],
+        dtype=float,
+    )
+    independent_normalization_residual = float(
+        np.max(
+            np.abs(
+                face.base.multiplier_normalization @ synthetic_nu
+                - synthetic_normalization_rhs
+            )
+        )
+    )
+    synthetic_target_value = face.base.multiplier_target @ synthetic_nu
+    for orbit in face.base.gram_orbits:
+        synthetic_target_value = (
+            synthetic_target_value
+            + orbit.coefficient_map @ np.asarray(orbit.variable.value, dtype=float)
+        )
+    synthetic_target_rhs = np.asarray(
+        [
+            multinomial(face.base.target_monomials[index])
+            for index in face.base.target_representatives
+        ],
+        dtype=float,
+    )
+    independent_target_residual = float(
+        np.max(np.abs(synthetic_target_value - synthetic_target_rhs))
+    )
+
+    synthetic_diagnostics = exporter.post_solve_diagnostics(face)
+    assert synthetic_diagnostics["status"] == "synthetic-no-solve"
+    assert synthetic_diagnostics["solver_name"] == "NO_SOLVER"
+    assert synthetic_diagnostics["normalization_max_abs_residual"] == (
+        independent_normalization_residual
+    )
+    assert synthetic_diagnostics["target_max_abs_residual"] == (
+        independent_target_residual
+    )
+    assert synthetic_diagnostics["normalization_max_abs_residual"] == float(
+        np.max(np.abs(face.base.problem.constraints[0].violation()))
+    )
+    assert synthetic_diagnostics["target_max_abs_residual"] == float(
+        np.max(np.abs(face.base.problem.constraints[-1].violation()))
+    )
+    assert np.array_equal(
+        synthetic_diagnostics["reduced_multiplier_values"], synthetic_nu
+    )
+
+    synthetic_payload = exporter.expand_payload(
+        face_constructor, face, synthetic_diagnostics
+    )
+    assert synthetic_payload["NUMERICAL_ONLY"] is True
+    assert synthetic_payload["c"] == Fraction(25, 1)
+    assert synthetic_payload["E"] == edges and synthetic_payload["cuts"] == cuts
+    assert synthetic_payload["face"]["cycles"] == face.cycles
+    assert synthetic_payload["face"]["forced_zero_multiplier_orbits"] == (
+        face.forced_zero_multiplier_orbits
+    )
+    for stored, orbit, data in zip(
+        synthetic_payload["face"]["gram_orbits"],
+        face.base.gram_orbits,
+        face.orbit_data,
+    ):
+        assert stored["parity_rep"] == orbit.parity_rep
+        assert stored["parity_members"] == orbit.parity_members
+        assert stored["kernel"] == data.kernel and stored["projector"] == data.projector
+        assert all(isinstance(value, Fraction) for row in stored["kernel"] for value in row)
+        assert all(isinstance(value, Fraction) for row in stored["projector"] for value in row)
+
+    payload_q_by_mask = {
+        tuple(power & 1 for power in block[0]): (block, np.asarray(matrix, dtype=float))
+        for block, matrix in synthetic_payload["Q"]
+    }
+    assert set(payload_q_by_mask) == set(parity_masks)
+    face_orbit_by_member = {
+        member: orbit
+        for orbit in face.base.gram_orbits
+        for member in orbit.parity_members
+    }
+    for member_mask, (block, expanded_matrix) in payload_q_by_mask.items():
+        orbit = face_orbit_by_member[member_mask]
+        representative_matrix = np.asarray(orbit.matrix.value, dtype=float)
+        element = orbit.image_elements[member_mask]
+        target_position = {beta: i for i, beta in enumerate(block)}
+        p = [
+            target_position[image_exponent(beta, element)] for beta in orbit.basis
+        ]
+        independent_expansion = np.empty_like(representative_matrix)
+        independent_expansion[np.ix_(p, p)] = representative_matrix
+        assert np.array_equal(expanded_matrix, independent_expansion)
+
+    for cut_i in range(len(cuts)):
+        for monomial_i, beta in enumerate(face.base.multiplier_monomials):
+            expected = float(
+                synthetic_nu[face.base.multiplier_orbit_ids[cut_i, monomial_i]]
+            )
+            assert float(synthetic_payload["nu"].get((cut_i, beta), 0.0)) == expected
+    assert exporter_hash_before == sha256(FACE_EXPORTER)
+
     hash_after = sha256(CONSTRUCTOR)
     assert hash_before == hash_after, "constructor changed during the audit"
 
@@ -982,6 +1137,13 @@ def main() -> None:
         f"face_margin_blocks={face_margin_blocks} exact_projectors=PASS"
     )
     print("FACE_BUILD_AUDIT_ONLY: no solve launched")
+    print(f"face_exporter_sha256={exporter_hash_before}")
+    print(
+        f"face_export_path_guards={guard_rejections}/{len(guard_cases)} "
+        f"original_equality_indices=PASS synthetic_residuals=PASS "
+        f"expanded_gram_permutation=PASS exact_face_metadata=PASS"
+    )
+    print("FACE_EXPORT_SYNTHETIC_AUDIT_ONLY: no solver or file write")
     print("NUMERICAL_EXPORT_AUDIT_ONLY: exact rational reconstruction still required")
     print("AUDIT_PASS")
 

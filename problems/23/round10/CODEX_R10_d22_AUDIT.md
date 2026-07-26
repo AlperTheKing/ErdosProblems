@@ -144,6 +144,44 @@ columns.  The `1.237e-2` figure is the largest entry after extending the check
 from the central block to all 528 nonzero block/vector pairs.  All three use
 the unscaled indicator `y=1_U`.
 
+## Build-only audit of the exact-face scaffold
+
+`CODEX_R10_g11_d22_face.py` was audited without launching a solve.  Its F1
+list agrees exactly with the independently reconstructed 1147 multiplier
+orbits.  Its transported F2 spans have the following exact ranks:
+
+```text
+block order 286: 33
+five block representatives of order 66: total 30
+twenty block representatives of order 11: total 11
+scalar representatives: 0
+total: 74
+```
+
+The complement-order total is 788.  Thirteen representative blocks receive
+nontrivial kernel equations, and 26 non-scalar blocks receive the common-margin
+PSD constraint.
+
+For every one of the 52 representative blocks, the audit checks in exact
+rational arithmetic that the stored projector is
+
+```text
+P = I - K^T (K K^T)^(-1) K,
+```
+
+is symmetric, annihilates the exact RREF kernel basis and every independently
+transported C5 vector, and has trace `order-rank`.  Thus `P^2=P` follows
+exactly from `(K K^T)^(-1)(K K^T)=I`; this is not a floating eigenvalue test.
+
+The scaffold adds no hidden constraint: its constraint count is exactly the
+base model plus one F1 vector equality, 13 F2 matrix equalities, and 26 margin
+PSD inequalities.  F1 and F2 are necessary for every exact `c=25`
+certificate.  The margin device is feasibility-lossless because any
+face-feasible base point extends with `margin=0`; the base model already
+requires every representative Gram block to be PSD.
+
+Therefore one solve of this fixed face model is safe to launch as a numerical
+
 ## Exact status and next admissible step
 
 No exact rational primal certificate and no exact separating dual has been

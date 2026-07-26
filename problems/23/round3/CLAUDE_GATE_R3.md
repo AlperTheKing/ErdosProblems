@@ -1573,3 +1573,57 @@ supports -- now shown to bind on the certificate side as well.
 
 Status of the route is unchanged at **BLOCKED**, but the diagnosis is sharper: the previous solve was
 aimed off the face, and the face Codex has just constructed is itself incomplete.
+
+
+---
+
+## R3-C35 — the equality set of the Gamma_11 arc certificate, enumerated and half-characterised
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_equality_set.py` and
+`round5/claude_equality_characterisation.py`. This supplies the face data R3-C34 showed Codex is
+missing.
+
+### Arithmetic reduction
+
+`25 * ARCBOUND(a) = (sum a)^2` needs `25 | q^2`, hence **`5 | q`**. Every other grid can be skipped.
+
+### The equality set, exhaustively
+
+```
+        q =  5      3003 weightings   |EQ| =  33   3 D_22 orbits   supports all size 5
+        q = 10    184756              |EQ| = 121   9 orbits        supports size 5, 6, 7
+        q = 15   3268760              |EQ| = 264  16 orbits        supports size 5, 6, 7
+```
+
+Every one of the 3 + 9 + 16 orbit representatives has **C5-colourable support**, and the number of
+TIGHT arc cuts ranges over `19, 20, 22, 24, 25` of 56 -- so the sharpest points force `nu_S = 0` for
+**37** of the 56 cuts, far more than the 31-or-32 forced at a pentagon indicator. The orbit count
+GROWS with `q`, so `EQ` is infinite.
+
+### One inclusion, clean
+
+```
+        every equality point IS a balanced C5-blow-up weighting:  0 exceptions at q = 5, 10, 15
+```
+
+i.e. `supp(a)` is `C5`-colourable and some colouring makes all five class sums equal `q/5`.
+
+### The converse is FALSE, with an explicit witness
+
+At `q = 5`, `a = (1,1,1,1,1,0,0,0,0,0,0)` is a balanced blow-up under a valid colouring, yet
+`ARCBOUND = 0`, not `q^2/25 = 1`. The reason: five consecutive vertices of `Gamma_11` span almost no
+edges (adjacency needs circular distance `>= 4`), so the support is a very sparse subgraph of a
+complete blow-up. Theorem B's identity `psi = min_i y_i y_{i+1}` holds for the COMPLETE blow-up;
+a subgraph of one sits strictly below. Counts of balanced-but-not-tight: 154, 1034, 3333.
+
+**Refined characterisation:** equality requires `supp(a)` to induce a **COMPLETE** `C5` blow-up in
+`Gamma_11` AND the weighting to be balanced across its classes. That is still a FINITE description --
+finitely many complete-blow-up subsets, each contributing the linear subspace "class sums equal" --
+which is exactly what a complete face needs.
+
+### What this hands Codex
+
+Its face uses the 33 pentagon indicators. The correct generator set is the complete-`C5`-blow-up
+subsets of `Gamma_11` with their balanced subspaces. The extra orbits are real: at `q = 10` alone
+there are 9 orbits where its construction sees 3, and the size-6 and size-7 supports force MORE
+zeros (37 of 56 cuts) than the pentagons do, so they tighten the face rather than merely enlarge it.

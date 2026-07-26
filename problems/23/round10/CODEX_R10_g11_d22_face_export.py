@@ -29,6 +29,12 @@ FACE_PATH = HERE / "CODEX_R10_g11_d22_face.py"
 RAW_NUMERIC_PATH = HERE / "CODEX_R10_g11_d22_numeric.pkl"
 DEFAULT_OUTPUT = HERE / "CODEX_R10_g11_d22_face_numeric.pkl"
 DEFAULT_REPORT = HERE / "CODEX_R10_D22_FACE_RUN.md"
+PROTECTED_PATHS = {
+    RAW_NUMERIC_PATH.resolve(),
+    (HERE / "CODEX_R10_g11_d22_sdp.py").resolve(),
+    FACE_PATH.resolve(),
+    Path(__file__).resolve(),
+}
 
 
 def load_face_module():
@@ -276,15 +282,24 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def validate_output_paths(output_path: Path, report_path: Path) -> None:
+    output = output_path.resolve()
+    report = report_path.resolve()
+    if output == report:
+        raise SystemExit("output pickle and report must be different paths")
+    for candidate, label in ((output, "output"), (report, "report")):
+        if candidate in PROTECTED_PATHS:
+            raise SystemExit(f"refusing to use protected path as {label}: {candidate}")
+
+
 def main() -> None:
     args = parse_args()
+    validate_output_paths(args.output, args.report)
     face_module = load_face_module()
     face = face_module.build_face_model()
     if not args.solve:
         print("FACE_EXPORT_BUILD_ONLY: no solver launched and no file written")
         return
-    if args.output.resolve() == RAW_NUMERIC_PATH.resolve():
-        raise SystemExit("refusing to overwrite the raw numerical pickle")
     for path in (args.output, args.report):
         if path.exists() and not args.overwrite:
             raise SystemExit(f"refusing to overwrite {path}; pass --overwrite explicitly")

@@ -4713,3 +4713,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:48:33] ✔ R10 VERDICT | DID: assess the degree-4 solve | RESULT: optimal_inaccurate, iterate off a codim-33 face, no exact certificate; BLOCKED not DEAD per the exit rule | Δ: impose face before solving
 [2026-07-26T04:51:02] ✔ FACE COUNTS | DID: claude_gate_r10_face2.py | RESULT: k-distribution {1:814, 3:737, 5:297} MATCH Codex; 1034 pairs with k>1 cross-checks my earlier count | Δ: derivation accepted
 [2026-07-26T04:51:02] ✘ FACE INCOMPLETE | DID: test the R3-C32 blow-up witness against the ARC certificate | RESULT: ARCBOUND = 4 = target exactly, 19 of 56 cuts tight, 37 forced to zero | Δ: 1_C-only face insufficient
+[2026-07-26T05:06:21] ✔ EQUALITY SET | DID: claude_equality_set.py exhaustive at q=5,10,15 (5|q forced) | RESULT: |EQ| = 33, 121, 264 in 3, 9, 16 D_22 orbits; supports size 5-7, all C5-colourable | Δ: face generator found
+[2026-07-26T05:06:21] ✔ HALF-CHARACTERISATION | DID: claude_equality_characterisation.py both directions | RESULT: EQ subset balanced blow-ups with 0 exceptions; converse FALSE at (1,1,1,1,1,0..), ARCBOUND=0 | Δ: completeness required
