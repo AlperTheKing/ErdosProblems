@@ -1162,3 +1162,53 @@ cheapest choice that needs only `Gamma_1..Gamma_4`, which is why Codex picked it
 The R10 bridge is GATED SOUND. Its single open item is the frontier lemma, unfalsified at these
 grids. Under GOAL clause (c) an unconditional theorem on an explicit minimum-degree range DOES count,
 so this route would shrink base (6)'s band from `delta <= 0.375N` to `delta <= 0.3571N`.
+
+
+---
+
+## R3-C27 — Codex's R10 support reduction: GATED, every figure reproduced independently
+
+Root-agent entry, 2026-07-26. Gate `round5/claude_gate_r10_supports.py`, built from my own
+`Gamma_11` and my own arc family; nothing imported from Codex's code.
+
+Codex's exact falsifier certificate reports NO strict rational counterexample to
+`25 * ARCBOUND_Gamma_11(x) <= (sum x)^2` with cleared denominator `q <= 50` (my own independent
+sweep reached `q <= 14`, 2.8M weightings, also clean). The load-bearing part is its structural
+support reduction, which I re-derived in full:
+
+```
+        nonempty supports                                        2047   (2^11 - 1)
+        supports where SOME arc carries no monochromatic
+          support edge, hence ARCBOUND = 0                        1474   MATCH
+        surviving supports                                         573   MATCH
+        D_22 orbits among the survivors                             38   MATCH
+        inclusion-minimal survivors                                  33   MATCH
+        ... and they are EXACTLY the 33 induced C5s of Gamma_11         confirmed
+        D_22 orbits of those pentagons                                3   MATCH
+          representatives {0,1,4,5,8}, {0,1,4,6,8}, {0,2,4,6,8}, orbit sizes 11 + 11 + 11 = 33
+```
+
+Codex's three representatives fall one per orbit of mine. So the reduction is sound: **any surviving
+falsifier must contain one of those three pentagons up to a dihedral automorphism, with cleared
+denominator at least 51.**
+
+This matters beyond bookkeeping: it turns the remaining search from "all nonnegative weightings" into
+a targeted one over three symmetry classes, and it independently reproduces the 33-pentagon count
+that also drives the rainbow-1 obstruction (R3-C21) and my own transport gate.
+
+### Where the R10 route now stands, in full
+
+* bridge GATED SOUND (R3-C26): Vega excluded exactly, no Petersen dependency;
+* frontier lemma unfalsified at `q <= 50` (Codex) and `q <= 14` (me), support-reduced to three
+  pentagon classes;
+* the single open item is a PROOF of the frontier lemma. Codex holds the `D_22`-invariant degree-4
+  Positivstellensatz; I am not touching it.
+
+### My next structural target, recorded so we do not collide
+
+The bridge needs only `max_x psi(Gamma_11) <= 1/25`, which is WEAKER than the arc form Codex is
+proving. A second, independent route to it: A5b asks whether `psi = Lambda` for every PRODUCT weight
+on `Gamma_11` (31 of 32 exact packing certificates so far). `Gamma_11` is NOT weakly bipartite -- I
+proved that with an explicit gap weight -- so `psi = Lambda` fails for SOME weight; the open question
+is whether it can fail for a PRODUCT weight. If product-weight integrality holds on `Gamma_11`, then
+Theorem A closes the frontier without any SDP.

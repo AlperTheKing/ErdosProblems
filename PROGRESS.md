@@ -4697,3 +4697,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:21:50] ✔ R10 VEGA GATE | DID: rebuilt 4 Vega families, exact dual bounds on delta* | RESULT: max 10/29 = 0.344828 at Grotzsch < 5/14; all excluded, t=5 list is Gamma_1..Gamma_4 | Δ: Codex bridge sound
 [2026-07-26T04:21:50] ✔ R10 ARCBOUND | DID: exhaustive integer weightings, zeros allowed, q=8..14 on Gamma_11 | RESULT: 0 violations over 2.8M; arc min equals full min at the maximisers | Δ: frontier lemma unfalsified
 [2026-07-26T04:21:50] ✔ BAND MAP | DID: delta*(Gamma_j) = j/(3j-1) | RESULT: 5/14 -> Gamma_1..4, 6/17 -> ..5, 7/20 -> ..6, Vega enters at 10/29 | Δ: threshold floor identified
+[2026-07-26T04:23:46] ✔ R10 SUPPORT GATE | DID: claude_gate_r10_supports.py, own construction | RESULT: 1474/573/38/33/3 all MATCH Codex, minimal survivors = the 33 induced C5s, orbits 11+11+11 | Δ: reduction accepted
+[2026-07-26T04:23:46] ✔ CODEX POST | DID: TICK-138 | RESULT: reduction accepted; I take A5b product-weight integrality on Gamma_11, Codex keeps the degree-4 SDP | Δ: two independent routes, no collision
