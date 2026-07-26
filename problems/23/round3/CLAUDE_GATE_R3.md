@@ -1212,3 +1212,63 @@ on `Gamma_11` (31 of 32 exact packing certificates so far). `Gamma_11` is NOT we
 proved that with an explicit gap weight -- so `psi = Lambda` fails for SOME weight; the open question
 is whether it can fail for a PRODUCT weight. If product-weight integrality holds on `Gamma_11`, then
 Theorem A closes the frontier without any SDP.
+
+
+---
+
+## R3-C28 — A5b on Gamma_11: product-weight integrality holds where it matters; pentagons alone do NOT
+
+Root-agent entry, 2026-07-26. My own work, `round5/claude_a5b_product_integrality.py` and
+`round5/claude_a5b_pentagon_packing.py`. This is my SDP-free route to Codex's R10 frontier lemma:
+if `psi = Lambda` for every product weight on `Gamma_11`, then Theorem A closes it outright.
+
+### Evidence FOR product-weight integrality (not a proof)
+
+Exhaustive over all integer weightings with zeros allowed, taking the top 2500 by `psi` at each grid
+-- deliberately the weightings that threaten the ceiling, since a gap at small `psi` cannot:
+
+```
+        q =  9    92378 weightings   gaps psi > Lambda: 0   exact packing certificates: 2500
+        q = 10   184756 weightings                      0                               2500
+        q = 11   352716 weightings                      0                               2500
+        q = 12   646646 weightings                      0                               2500
+```
+
+**10000 exact rational packing certificates, zero gaps.** Each certificate is a feasible packing of
+value exactly `psi`, which proves `Lambda = psi` outright since `packing <= Lambda <= psi`.
+
+This matters because `Gamma_11` is NOT weakly bipartite -- I proved that with an explicit finite gap
+weight (`tau_w = 4 > 10/3`). So integrality genuinely FAILS on this graph for some weight. But that
+witness needs six edges at weight zero, and a product weight can only zero an edge by zeroing a
+VERTEX, which zeroes every edge there. Product weights are a thin subfamily that appears to avoid
+every bad face.
+
+### NEGATIVE, and it kills a tempting simplification
+
+I then asked whether the optimal packing can always be taken on the 33 induced pentagons alone, which
+would reduce the frontier lemma to a finite 33-variable, 22-constraint bilinear problem -- no SDP, no
+cut family. (The rainbow-1 obstruction of R3-C21 would NOT apply, since that is about aggregating
+CUT values and this is the dual side.) **It cannot.** With `Lambda_pent` the packing LP restricted to
+pentagons:
+
+```
+        q =  9   Lambda_pent < psi in  4 of 1500 top-psi weightings
+        q = 10                          8
+        q = 11                         10
+        q = 12                          5
+```
+
+e.g. `a = [1,1,0,2,2,0,1,1,0,1,0]` at `q = 9` has `psi = 2` but `Lambda_pent = 1`. So the length
+7, 9 and 11 odd cycles are genuinely required and the 33-variable reduction is dead.
+
+**One refinement worth recording:** every shortfall occurs at `25*psi/q^2` between `0.5` and `0.69`,
+never near `1`. So pentagons appear to suffice exactly at the near-extremal weightings and fail only
+well below the ceiling. That is the opposite of the usual failure pattern and may still be usable,
+but I am not adopting it as a target on this evidence.
+
+### Status of the route
+
+A5b remains LIVE and SDP-free in principle, with 10000 exact certificates and no counterexample, but
+"psi = Lambda for every product weight on Gamma_11" is UNPROVED and is not implied by anything in the
+ledger. Codex keeps the degree-4 Positivstellensatz on the arc form; this is the independent second
+route to the same target.
