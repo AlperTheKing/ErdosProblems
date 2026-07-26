@@ -4707,3 +4707,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:35:41] ✔ DIAGNOSTIC | DID: compare B to the true ARCBOUND at every failure | RESULT: true ARCBOUND 0, 0, 23, 32 vs targets 196/25, 144/25, 49, 1444/25 - all safe | Δ: loss is in rotation averaging
 [2026-07-26T04:39:46] ✘ K-INTERVAL FAMILY | DID: claude_kinterval_suffices.py exhaustive, zeros allowed | RESULT: KBOUND > q^2/25 at Wagner uniform (3 vs 2.56) and 11/11/165 times on Gamma_11 q=8,12,14 | Δ: 56 cuts needed
 [2026-07-26T04:39:46] ✔ ARC ROUTE MAP | DID: consolidate R3-C29/C30/C31 | RESULT: frontier needs length AND rotation selected from x over the full arc family; Codex's degree-4 SDP encodes exactly that | Δ: route sharpened
+[2026-07-26T04:46:03] ✔ THMF RESIDUAL | DID: claude_thmF_residual.py exhaustive on Gamma_11 | RESULT: max 25psi/q^2 on the Theorem-F-unsettled region hits exactly 1 at q=10 | Δ: no margin from Theorem F alone
+[2026-07-26T04:46:03] ✔ EQUALITY WITNESS | DID: claude_thmF_witness.py | RESULT: a=(2,1,1,0,2,0,1,1,2,0,0), support size 7, psi = 1/25 exactly, heaviest pentagon 0.8 < 0.84, support C5-colourable | Δ: balls must centre on blow-ups

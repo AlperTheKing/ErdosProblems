@@ -1420,3 +1420,57 @@ Positivstellensatz at a reduced cut family: **the 56 cuts are needed.**
 * so the frontier lemma needs a rule that selects BOTH the length and the rotation from `x`, over
   the full 56-cut family. That is exactly the object Codex's degree-4 Positivstellensatz encodes,
   which is now the better-motivated of the two live routes.
+
+
+---
+
+## R3-C32 — Theorem F's pentagon-centred ball misses equality cases; they sit at C5-BLOW-UPS
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_thmF_residual.py` and
+`round5/claude_thmF_witness.py`.
+
+I asked whether the region Theorem F leaves open on `Gamma_11` carries a MARGIN, since that is what a
+branch-and-bound closure of `max_x psi(Gamma_11) <= 1/25` would need: Theorem F settles everything
+within `eta(C) <= 4/25` of a pentagon, including every `C5`-concentration, so if the rest were
+bounded away from `1/25` the remainder could be closed by crude interval bounds.
+
+It is not. Exhaustive over all integer weightings, zeros allowed, restricted to
+`x(C) < 21/25` for EVERY one of the 33 induced pentagons:
+
+```
+        q =  8   17116 unsettled   max 25*psi/q^2 = 25/32 = 0.781250
+        q = 10  112706             max            = 1      = 1.000000   <- the ceiling, exactly
+        q = 12  487861                              25/36 = 0.694444
+        q = 14 1193907                              75/98 = 0.765306
+```
+
+**An explicit equality case Theorem F cannot see** (22 of them at `q = 10`, one orbit
+representative):
+
+```
+        a = (2,1,1,0,2,0,1,1,2,0,0)   support {0,1,2,4,6,7,8}, size 7
+        psi = 1/25 EXACTLY;  the heaviest pentagon carries only 8/10 = 0.8 < 21/25
+```
+
+so Theorem F's hypothesis fails at every induced pentagon simultaneously while `psi` sits exactly on
+the ceiling.
+
+### The honest reading, stated carefully
+
+The support of that witness is **`C5`-COLOURABLE**, so the FULL toolkit does settle it, via Theorem B
+/ the accepted base. My test applied Theorem F alone. **So this witness does NOT by itself kill a
+branch-and-bound closure** -- that question needs the full toolkit and was already answered
+negatively in R3-C25, where Codex showed the unsettled maximum rises with grid refinement and I
+confirmed it against my own exhaustive data.
+
+What it DOES establish is structural and sharper: the equality set of the conjecture on `Gamma_11` is
+strictly larger than the 33 `C5`-concentrations, and the extra extremal weightings are `C5`-BLOW-UP
+weightings on larger supports (here 7 vertices). **An exactness ball centred on pentagons therefore
+cannot cover the extremal set, however large its radius is made.** Theorems D and F would have to be
+re-centred on blow-up weightings, which is exactly the extension the round-9 family attempted and
+reported blocked, with the obstruction named: a distance-0 bad edge costs in 5 cuts and a distance-2
+one in 3, while the compensating credit is charged in only 2, and at a balanced blow-up point the
+AM-GM slack is exactly 0.
+
+So the blow-up recentering is not an optional improvement of Theorem D/F -- it is forced by the
+geometry of the equality set, and its obstruction is already recorded.

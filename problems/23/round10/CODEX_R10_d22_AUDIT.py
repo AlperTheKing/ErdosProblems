@@ -142,6 +142,36 @@ def sparse_row(matrix, row: int) -> dict[int, int]:
     }
 
 
+def full_row_rank_mod_prime(rows: list[list[int]], prime: int = 1_000_003) -> int:
+    """Exact modular row rank; full modular row rank certifies full Q-rank."""
+    work = [[value % prime for value in row] for row in rows]
+    number_rows = len(work)
+    number_columns = len(work[0])
+    pivot_row = 0
+    for column in range(number_columns):
+        pivot = next(
+            (row for row in range(pivot_row, number_rows) if work[row][column]),
+            None,
+        )
+        if pivot is None:
+            continue
+        work[pivot_row], work[pivot] = work[pivot], work[pivot_row]
+        inverse = pow(work[pivot_row][column], prime - 2, prime)
+        work[pivot_row] = [(value * inverse) % prime for value in work[pivot_row]]
+        for row in range(number_rows):
+            if row == pivot_row or not work[row][column]:
+                continue
+            factor = work[row][column]
+            work[row] = [
+                (a - factor * b) % prime
+                for a, b in zip(work[row], work[pivot_row])
+            ]
+        pivot_row += 1
+        if pivot_row == number_rows:
+            break
+    return pivot_row
+
+
 def import_constructor():
     spec = importlib.util.spec_from_file_location("r10_d22_constructor_audited", CONSTRUCTOR)
     assert spec is not None and spec.loader is not None
@@ -638,8 +668,34 @@ def main() -> None:
     }
     assert len(c5_orbit_representatives) == 3
 
+    zero_mask = (0,) * N
+    central_basis, central_matrix = q_by_mask[zero_mask]
+    central_evaluation_rows = [
+        [
+            int(
+                all(
+                    power == 0
+                    for vertex, power in enumerate(beta)
+                    if vertex not in vertices
+                )
+            )
+            for beta in central_basis
+        ]
+        for vertices, _cycle_edges in induced_c5s
+    ]
+    central_exact_rank = full_row_rank_mod_prime(central_evaluation_rows)
+    assert central_exact_rank == 33
+    central_kernel_product = central_matrix @ np.asarray(
+        central_evaluation_rows, dtype=float
+    ).T
+    central_max_abs_qk = float(np.max(np.abs(central_kernel_product)))
+    central_matrix_infinity_norm_qk = float(
+        np.linalg.norm(central_kernel_product, ord=np.inf)
+    )
+
     forced_coefficient_occurrences = 0
     forced_coefficient_keys = set()
+    forced_multiplier_orbit_keys = set()
     maximum_forced_coefficient = 0.0
     maximum_c5_normalization_error = 0.0
     maximum_c5_surplus = 0.0
@@ -648,6 +704,8 @@ def main() -> None:
     maximum_kernel_residual = 0.0
     maximum_block_energy_abs = 0.0
     nonzero_kernel_vectors = 0
+    representative_kernel_vectors = set()
+    stabilizer_kernel_vector_orbits = set()
 
     for vertices, cycle_edges in induced_c5s:
         supported_d = [
@@ -672,6 +730,9 @@ def main() -> None:
                     key = (cut_i, beta)
                     forced_coefficient_occurrences += 1
                     forced_coefficient_keys.add(key)
+                    forced_multiplier_orbit_keys.add(
+                        pair_canonical[(cut_i, index_d[beta])]
+                    )
                     maximum_forced_coefficient = max(
                         maximum_forced_coefficient,
                         abs(float(numeric_nu.get(key, 0.0))),
@@ -693,7 +754,7 @@ def main() -> None:
 
         gram_value = 0.0
         block_count = 0
-        for basis, matrix in q_by_mask.values():
+        for member_mask, (basis, matrix) in q_by_mask.items():
             vector = np.asarray(
                 [
                     1.0
@@ -710,6 +771,33 @@ def main() -> None:
                 continue
             block_count += 1
             nonzero_kernel_vectors += 1
+            gram_orbit = orbit_by_member[member_mask]
+            element = gram_orbit.image_elements[member_mask]
+            member_position = {beta: i for i, beta in enumerate(basis)}
+            p = [
+                member_position[image_exponent(beta, element)]
+                for beta in gram_orbit.basis
+            ]
+            representative_vector = tuple(int(vector[index]) for index in p)
+            representative_kernel_vectors.add(
+                (gram_orbit.parity_rep, representative_vector)
+            )
+            representative_position = {
+                beta: i for i, beta in enumerate(gram_orbit.basis)
+            }
+            stabilizer_images = []
+            for stabilizer_element in gram_orbit.stabilizer:
+                stabilizer_permutation = [
+                    representative_position[image_exponent(beta, stabilizer_element)]
+                    for beta in gram_orbit.basis
+                ]
+                transformed = [0] * len(representative_vector)
+                for source_i, target_i in enumerate(stabilizer_permutation):
+                    transformed[target_i] = representative_vector[source_i]
+                stabilizer_images.append(tuple(transformed))
+            stabilizer_kernel_vector_orbits.add(
+                (gram_orbit.parity_rep, min(stabilizer_images))
+            )
             image = matrix @ vector
             energy = float(vector @ image)
             gram_value += energy
@@ -723,6 +811,7 @@ def main() -> None:
         )
 
     assert nonzero_kernel_vectors == 33 * 16
+    assert len(forced_multiplier_orbit_keys) == 1147
     assert abs(
         numeric_normalization_residual
         - certificate["diagnostics"]["normalization_max_abs_residual"]
@@ -779,14 +868,22 @@ def main() -> None:
         f"induced_C5s=33 C5_orbits=3 forced_coefficient_occurrences="
         f"{forced_coefficient_occurrences} forced_unique_coefficients="
         f"{len(forced_coefficient_keys)} max_forced_coefficient="
-        f"{maximum_forced_coefficient:.12e}"
+        f"{maximum_forced_coefficient:.12e} forced_multiplier_orbits="
+        f"{len(forced_multiplier_orbit_keys)}/2611"
+    )
+    print(
+        f"central_kernel_exact_rank={central_exact_rank} "
+        f"central_max_abs_QK={central_max_abs_qk:.12e} "
+        f"central_matrix_inf_norm_QK={central_matrix_infinity_norm_qk:.12e} "
+        f"all_block_representative_kernel_vectors={len(representative_kernel_vectors)} "
+        f"mod_stabilizer={len(stabilizer_kernel_vector_orbits)}"
     )
     print(
         f"C5_max_normalization_error={maximum_c5_normalization_error:.12e} "
         f"C5_max_surplus={maximum_c5_surplus:.12e} "
         f"C5_max_target_abs={maximum_c5_target_abs:.12e} "
         f"C5_max_gram_match_error={maximum_c5_gram_match_error:.12e} "
-        f"C5_max_kernel_residual={maximum_kernel_residual:.12e} "
+        f"C5_all_blocks_max_entry_Qv={maximum_kernel_residual:.12e} "
         f"C5_max_block_energy_abs={maximum_block_energy_abs:.12e}"
     )
     print("NUMERICAL_EXPORT_AUDIT_ONLY: exact rational reconstruction still required")
