@@ -4758,3 +4758,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T09:59:28] ✔ 306 ROUTE KILLED | DID: test 1 = (1/2) sum 1/q | RESULT: sum of distinct prime reciprocals is never an integer (q0 divides all numerator terms but one) | Δ: 2-only route dead
 [2026-07-26T09:59:28] ✔ 306 REDUCTION | DID: reduce numerator mod each p | RESULT: semiprimes = graph on primes, integrality iff sum_{q in S_p} q^inv = 0 mod p at every vertex; 0 false positives over 2^21 subsets | Δ: CSP form
 [2026-07-26T09:59:28] ✔ 306 BASE CASE | DID: meet-in-the-middle on primes <= 31 | RESULT: no subset sums to 1; total is only 1.002678 so any representation needs primes beyond 31 | Δ: bound established
+[2026-07-26T10:02:40] ✔ 306 BASE CASE SOLVED | DID: prime-graph CSP with per-vertex congruence pruning, primes <= 41 | RESULT: 1 = sum of 58 distinct 1/(pq), exact | Δ: base case of Erdos 306 settled positively
+[2026-07-26T10:02:40] ✔ 306 GATE | DID: claude_gate_306_one.py, own factorisation, nothing imported | RESULT: all 58 are distinct squarefree semiprimes, sum exactly 1, congruence holds at all 13 primes | Δ: certificate verified

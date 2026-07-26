@@ -77,3 +77,44 @@ The congruence system is local and highly constrained, which is what makes this 
 than hopeless: it is a constraint-satisfaction problem on a graph, not an unstructured subset-sum.
 A concrete handle: for the largest prime `P`, two edges `(P,x)` and `(P,y)` satisfy the condition
 whenever `P | x + y` — e.g. `P = 31` with `x = 2, y = 29`, giving `1/62 + 1/58`.
+
+---
+
+## 6. BASE CASE SETTLED: 1 IS representable
+
+`tools/claude_erdos306_csp.py` searched the prime-graph CSP directly -- processing primes in
+increasing order, fixing each vertex's neighbourhood, and checking its congruence immediately, which
+prunes by a factor of about `p` per vertex. Primes `<= 31` and `<= 37` gave nothing within the node
+cap; primes `<= 41` produced a solution.
+
+```
+        1 = sum of 58 distinct 1/(pq),  primes used {2,3,5,7,11,13,17,19,23,29,31,37,41}
+
+        6   10   14   15   21   22   26   33   34   35   38   39   46   51   55   57
+       58   62   65   69   77   85   91   93   95  111  115  119  133  143  145  155
+      161  187  203  209  217  221  247  253  259  299  341  403  437  451  481  533
+      551  589  629  713  779  851  899  943 1147 1517
+```
+
+**Independently gated** (`problems/306/claude_gate_306_one.py`, own factorisation, nothing imported
+from the search):
+
+* every denominator is a product of exactly two DISTINCT primes — yes, all 58;
+* all distinct — 58 unique of 58;
+* all `> 1` and strictly increasing when sorted — yes;
+* **sum of reciprocals `= 1` exactly** as a rational — yes.
+
+The predicted local congruence holds at every one of the 13 primes (`sum of inverse neighbours == 0
+mod p`), with degrees `10,10,10,11,10,11,7,10,10,5,10,7,5`. That confirms the reduction of section 3
+is correct and not merely convenient.
+
+### What this does and does not settle
+
+It settles the **base case** `a/b = 1`, which was the first thing that had to be true: had `1` been
+unrepresentable the answer to 306 would have been no outright. It also shows the CSP formulation is
+an effective search method rather than a restatement — it found in seconds what greedy, naive DFS and
+meet-in-the-middle all failed to find.
+
+It does **not** prove 306, which asks for every `a/b` with `b` squarefree. The next targets are the
+integers `2, 3, ...` and then rationals with nontrivial squarefree denominators, where the congruence
+at each `p | b` changes (the right-hand side is no longer `0 mod p`).
