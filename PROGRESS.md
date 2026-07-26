@@ -4730,3 +4730,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T07:00:14] ✔ GAP TEST | DID: claude_gap_defect_test.py on non-colourable supports of 5 graphs | RESULT: 480 exact instances, 0 violations of psi - Lambda <= D*/50 | Δ: target survives, still unproved
 [2026-07-26T07:02:59] ✘ W/g_odd ROUTE | DID: claude_oddgirth_route.py | RESULT: bip <= |E|/g_odd VIOLATED at odd girth 9 by twice-subdivided K5 (bip 4 > 10/3), and at g=5 by the N=14 graph | Δ: piece (i) route dead
 [2026-07-26T07:02:59] ✔ MECHANISM | DID: identify why | RESULT: odd subdivision preserves bip while tripling |E| and girth, so |E|/g_odd falls below bip at ANY girth; same phenomenon as A28 | Δ: girth cannot help
+[2026-07-26T07:06:35] ✔ PENTAGON-FREE SWEEP | DID: claude_pentagonfree_sweep.py over 90842 triangle-free graphs n<=11 | RESULT: 934 pentagon-free non-bipartite, max psi = 0.02040816 = exactly 1/49, 0 voids | Δ: piece (i) non-sharp
+[2026-07-26T07:06:35] ✔ PLATEAU FAMILY | DID: read the value structurally | RESULT: 1/25 = 1/5^2 for C5-containing, 1/49 = 1/7^2 for pentagon-free with C7; plateau indexed by odd girth | Δ: 49 percent slack in piece (i)

@@ -1996,3 +1996,48 @@ below `bip` at any girth. Recorded so the route is not retried at higher girth i
 `g -> infinity` helps.
 
 Piece (i) therefore needs a mechanism that is not a global edge-density-over-girth average.
+
+
+---
+
+## R3-C43 — piece (i) verified exhaustively to n = 11: pentagon-free tops out at exactly 1/49
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_pentagonfree_sweep.py`.
+
+Piece (i) of the R3-C41 reduction asks whether every PENTAGON-FREE triangle-free `G` has
+`max_x psi <= 1/25`. The `W/g_odd` attack died (R3-C42), so I swept the region directly. It is also a
+region NO previous hunt in this campaign covered: every sweep targeted MAXIMAL triangle-free
+patterns, and those essentially always contain an induced `C5` -- which by the plateau already sit at
+exactly `1/25`. Pentagon-free graphs are the complement and had never been looked at.
+
+```
+        triangle-free graphs scanned (n <= 11)                90842
+        pentagon-free AND non-bipartite                          934
+        max_x psi over that entire region              0.02040816 = EXACTLY 1/49
+        attained on                                    graph6  J??ED@OI@H?
+        optimiser voids (below the C7 floor)                       0
+        slack to the 1/25 target                               49.0%
+```
+
+Two things follow.
+
+**Piece (i) holds with enormous slack, exhaustively, up to `n = 11`.** Not merely `<= 1/25` but
+`= 1/49`, less than half the target. That makes it a genuinely NON-SHARP statement -- unlike every
+mechanism this campaign has lost to, all of which died on exact tightness.
+
+**A clean structural reading: the plateau is a family indexed by odd girth.** `C5`-containing graphs
+sit at `1/25 = 1/5^2`; pentagon-free graphs containing a `C7` sit at `1/49 = 1/7^2`. The same
+monotonicity argument that proves `max_x psi >= 1/25` for `C5`-containing graphs proves
+`max_x psi >= 1/49` here, and the sweep says the upper bound matches. So the conjecture's constant is
+the `g = 5` member of a `1/g^2` family, and piece (i) is the assertion that the `g = 7` member does
+not exceed the `g = 5` one -- which has a factor `25/49` of room.
+
+**Also a clean counterexample sweep.** 934 graphs in an unexplored region, nothing above `1/25`,
+nothing even above `1/49`.
+
+### Status
+
+Piece (i) remains OPEN as a theorem -- this is a finite verification, and by GOAL clause (d) finite
+computation can only ever disprove. What it establishes is that piece (i) is not sharp, so it is the
+kind of statement a crude argument could reach, and that no counterexample lives in the pentagon-free
+region below `n = 12`.
