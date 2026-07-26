@@ -653,6 +653,72 @@ def modular_rank(rows: Sequence[dict[int, int]], columns: int, prime: int) -> in
     return len(pivots)
 
 
+def independent_rows_mod_prime(
+    rows: Sequence[dict[int, int]], columns: int, prime: int
+) -> list[int]:
+    """Select original integer rows independent over F_p."""
+    pivots: dict[int, dict[int, int]] = {}
+    selected: list[int] = []
+    for row_index, source in enumerate(rows):
+        row = {
+            column: value % prime
+            for column, value in source.items()
+            if value % prime
+        }
+        while row:
+            pivot = min(row)
+            if pivot not in pivots:
+                inverse = pow(row[pivot], prime - 2, prime)
+                pivots[pivot] = {
+                    column: value * inverse % prime
+                    for column, value in row.items()
+                    if value * inverse % prime
+                }
+                selected.append(row_index)
+                break
+            factor = row[pivot]
+            for column, value in pivots[pivot].items():
+                new_value = (row.get(column, 0) - factor * value) % prime
+                if new_value:
+                    row[column] = new_value
+                else:
+                    row.pop(column, None)
+    assert all(0 <= pivot < columns for pivot in pivots)
+    return selected
+
+
+def csr_from_dict_rows(
+    rows: Sequence[dict[int, int]], columns: int
+) -> sp.csr_matrix:
+    row_indices: list[int] = []
+    column_indices: list[int] = []
+    values: list[int] = []
+    for row_index, row in enumerate(rows):
+        for column, value in sorted(row.items()):
+            if value:
+                row_indices.append(row_index)
+                column_indices.append(column)
+                values.append(value)
+    return sp.csr_matrix(
+        (
+            np.asarray(values, dtype=np.int64),
+            (row_indices, column_indices),
+        ),
+        shape=(len(rows), columns),
+        dtype=np.int64,
+    )
+
+
+def pack_csr(
+    payload: dict[str, np.ndarray], name: str, matrix: sp.csr_matrix
+) -> None:
+    matrix = matrix.tocsr().astype(np.int64)
+    payload[f"{name}_data"] = matrix.data
+    payload[f"{name}_indices"] = matrix.indices.astype(np.int32)
+    payload[f"{name}_indptr"] = matrix.indptr.astype(np.int64)
+    payload[f"{name}_shape"] = np.asarray(matrix.shape, dtype=np.int64)
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -755,6 +821,12 @@ def build() -> tuple[dict[str, object], dict[str, np.ndarray]]:
     total_kernel_dimension = 0
     per_block = []
     kernel_rows_flat: list[tuple[int, tuple[int, ...]]] = []
+    gram_offsets: list[int] = []
+    gram_qdims: list[int] = []
+    gram_rep_masks: list[Exponent] = []
+    gram_entry_reps_flat: list[tuple[int, int, int]] = []
+    gram_face_rows: list[dict[int, int]] = []
+    gram_offset = 0
 
     for parity_orbit_id, representative_index in enumerate(parity_reps):
         representative = parity_masks[representative_index]

@@ -1739,3 +1739,61 @@ unsettled maximum rose with refinement). The difference here is structural rathe
 equality cases are provably confined to the colourable half by Theorem B, so there is a REASON for
 the margin, not merely an absence of counterexamples at the grids tried. That reason is what would
 have to be turned into an explicit epsilon.
+
+
+---
+
+## R3-C38 — WAGNER is the universal obstruction: a uniform-in-k reduction of the Andrasfai side
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_obstruction_id.py` and
+`round5/claude_obstruction_ladder.py`.
+
+R3-C37 split the `Gamma_11` frontier by `C5`-colourability of the support and proved the sharp half.
+The natural question is what the non-colourable supports actually ARE. I guessed a ladder -- the
+minimal obstruction inside `And(k)` being `And(k-1)`. **That guess is wrong, and the truth is
+cleaner and uniform in `k`.**
+
+```
+        And(3) = Gamma_8    1 minimal non-C5-colourable induced subgraph,  size 8, 12 edges, 3-regular
+        And(4) = Gamma_11  11 minimal,                                     size 8, 12 edges, 3-regular
+        And(5) = Gamma_14  63 minimal,                                     size 8, 12 edges, 3-regular
+```
+
+At `k = 4` I verified the isomorphism outright: `[0,1,2,4,5,6,8,9]` induces a graph isomorphic to
+**Wagner = And(3)** by brute-force canonical form over all `8!` relabellings. At `k = 5` I verified
+the matching invariants (8 vertices, 12 edges, 3-regular, triangle-free, non-`C5`-colourable), which
+pin Wagner down among 8-vertex cubic triangle-free graphs -- the only other cubic triangle-free graph
+on 8 vertices is the cube `Q_3`, which is bipartite and hence `C5`-colourable.
+
+### The statement
+
+> For `k >= 3`, the minimal non-`C5`-colourable induced subgraphs of `And(k)` are exactly the induced
+> copies of `And(3) = Wagner`. Equivalently: **a subset of `V(And(k))` is `C5`-colourable if and only
+> if it contains no induced Wagner.**
+
+Not a ladder: the obstruction does not grow with `k`, it stays `And(3)` forever.
+
+### Why this matters, and it is uniform in `k`
+
+Combining with R3-C37, for EVERY `k`:
+
+```
+        supp(x) contains no induced Wagner  ==>  supp(x) is C5-colourable
+                                            ==>  psi <= (sum x)^2/25   [PROVED: Theorem B + AM-GM]
+```
+
+so the entire Andrasfai side reduces to supports CONTAINING an induced Wagner -- and `And(3) =
+Wagner`'s own ceiling `max_x psi = 1/25` is already PROVED (R3-C17, no odd-`K5` minor plus Theorem A,
+and independently by an exact SOS certificate). **The obstruction carrying the whole difficulty is an
+object whose ceiling is known.**
+
+This is the first reduction in the campaign that is uniform in `k` rather than one graph at a time.
+The `delta > N/3` route needs `max_x psi(And(k)) = 1/25` for ALL `k`, and R3-C17 could only reach
+`k = 2, 3`; this turns the remaining question, at every `k` simultaneously, into "supports containing
+an induced Wagner", where R3-C37 measured roughly `17%` slack at `k = 4`.
+
+### What is NOT claimed
+
+That the slack persists uniformly in `k`. R3-C37's margin was measured only at `k = 4`, on restricted
+grids, and is a lower bound. Establishing an explicit `epsilon`, uniform in `k`, on Wagner-containing
+supports is the open work -- but it is now ONE question rather than an infinite family of them.

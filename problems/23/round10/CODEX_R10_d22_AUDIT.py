@@ -102,6 +102,43 @@ def canonical_vector(vector: tuple[int, ...]) -> tuple[int, ...]:
     return min(image_vector(vector, element) for element in GROUP)
 
 
+def independent_complete_c5_classes(
+    support_vertices: Iterable[int], edges: Sequence[tuple[int, int]]
+) -> tuple[tuple[int, ...], ...] | None:
+    """Recognize a complete nonempty C5 blow-up by restricted twin classes."""
+    vertices = frozenset(support_vertices)
+    if len(vertices) < 5:
+        return None
+    edge_set = set(edges)
+    twin_groups: dict[frozenset[int], list[int]] = defaultdict(list)
+    for vertex in sorted(vertices):
+        neighbours = frozenset(
+            other
+            for other in vertices
+            if tuple(sorted((vertex, other))) in edge_set
+        )
+        twin_groups[neighbours].append(vertex)
+    if len(twin_groups) != 5:
+        return None
+    classes = tuple(sorted(tuple(group) for group in twin_groups.values()))
+    quotient_edges = []
+    for left in range(5):
+        for right in range(left + 1, 5):
+            bits = {
+                tuple(sorted((u, v))) in edge_set
+                for u in classes[left]
+                for v in classes[right]
+            }
+            if len(bits) != 1:
+                return None
+            if bits.pop():
+                quotient_edges.append((left, right))
+    degrees = Counter(index for edge in quotient_edges for index in edge)
+    if len(quotient_edges) != 5 or set(degrees.values()) != {2}:
+        return None
+    return classes
+
+
 def canonical_side(side: Iterable[int]) -> frozenset[int]:
     side = frozenset(side)
     return frozenset(range(N)) - side if 0 in side else side

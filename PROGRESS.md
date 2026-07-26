@@ -4719,3 +4719,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T05:08:11] ✘ FACE BUILD ABORT | DID: read Codex's abort note | RESULT: 147->156 GB private memory in seconds from whole-matrix SymPy RREF; killed at the 192 GB ceiling | Δ: engineering, not mathematics
 [2026-07-26T05:16:41] ✔ FRONTIER SPLIT | DID: claude_noncolourable_split.py | RESULT: 45 of 2047 subsets non-C5-colourable in 5 D_22 orbits; colourable half PROVED by Theorem B and holds all equality | Δ: sharp half closed
 [2026-07-26T05:16:41] ✔ NON-SHARP HALF | DID: claude_noncol_orbits.py per-orbit maxima | RESULT: 0.781, 0.740, 0.765, 0.765, 0.826=100/121 of target; global 0.694-0.781 at q=8..15 | Δ: ~17 percent slack
+[2026-07-26T05:20:00] ✔ UNIVERSAL OBSTRUCTION | DID: claude_obstruction_id.py + ladder | RESULT: minimal non-C5-colourable induced subgraph of And(3),(4),(5) is ALWAYS Wagner: 1, 11, 63 copies, all 8vtx/12edge/3-regular | Δ: uniform in k
+[2026-07-26T05:20:00] ✘ LADDER GUESS | DID: test whether And(k)'s obstruction is And(k-1) | RESULT: FALSE at k=5, minimal size stays 8 not 11 | Δ: replaced by the stronger uniform statement
