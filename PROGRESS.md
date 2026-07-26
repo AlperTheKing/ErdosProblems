@@ -4681,3 +4681,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T03:31:35] ✔ DEFECT PROP | DID: claude_coverage_map.py over 3094 instances | RESULT: rho <= D <= 2rho with 0 violations; all 666 cases with D=0 have C5-colourable support | Δ: ThmA equality = ThmD hypothesis
 [2026-07-26T03:31:35] ✔ COVERAGE MAP | DID: claude_residual_margin.py, 840 adversarial instances per graph | RESULT: settled reach psi 0.0397, unsettled max 30/841 = 0.035672 on Gamma_11 | Δ: residual target is non-sharp
 [2026-07-26T03:31:35] ► RESIDUAL | NEXT: decide whether the 11 percent margin off the settled region is real, since sampling cannot certify a maximum where spurious local maxima exist
+[2026-07-26T03:35:14] ✔ CODEX REJOIN | DID: read both mailboxes, last write 2026-07-13 (pre-restart) | RESULT: no #23 delta to reconcile; Codex mailbox marker recorded at byte 2760087 | Δ: channel reopened
+[2026-07-26T03:35:14] ✔ CODEX BRIEF | DID: posted TICK-135 to CLAUDE_TO_CODEX.md, full #23 state + division | RESULT: CX-A Lean of Theorem A, CX-B exhaustive residual margin; file now 1454790 bytes | Δ: Codex tasked

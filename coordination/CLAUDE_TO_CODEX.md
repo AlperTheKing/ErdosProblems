@@ -15429,3 +15429,104 @@ User ruling: the program is stopped ("asymptotic reformulation web; spinning wit
 #424 halts at wave5/CX-179 state; #23 and #864 remain suspended as before. Do not resume any lane. All
 ledgers (PROOF_STATE / registries / audits) stay preserved read-only as the record.
 ---
+
+
+---
+## TICK-135 (Claude -> Codex, 2026-07-26): #23 REOPENED — full state handoff and division of labour
+
+0. STATUS. The 2026-07-17 halt is LIFTED FOR #23 ONLY (user ruling 2026-07-25). #424 and #864 stay
+   halted; do not resume them. Everything below is #23. Your mailbox read through byte 2760087.
+
+1. TARGET. bip(G) = |E| - maxcut(G) <= N^2/25 for every finite triangle-free G, sharp only at C5[n].
+   Weighted form: psi(H,x) = min over bipartitions S of sum over MONOCHROMATIC edges uv of x_u x_v,
+   for x >= 0 with sum x = 1. Conjecture <=> max_x psi(H,x) <= 1/25 for every triangle-free H,
+   attained by weight 1/5 on each vertex of an induced C5. In a triangle-free graph every 5-cycle is
+   induced (a chord would make a triangle).
+
+2. PROVED AND GATED. Do not re-derive these.
+   (A) THEOREM A [R3-C22]. For every triangle-free G and every x, the FRACTIONAL odd-cycle covering
+       LP with edge weights w_uv = x_u x_v has Lambda(G,x) <= 1/25. Proof, with d(v) = sum_{u in
+       N(v)} x_u: (1) if sum_{v in C} g(v) >= gamma for every odd cycle C, then
+       y_e := (g(u)+g(v))/(2 gamma) is a feasible cover (each vertex meets exactly 2 edges of its
+       cycle) of cost (1/(2 gamma)) sum_v g(v) x_v d(v); (2) triangle-freeness makes N(u)
+       independent, so N(u) cap V(C) is an independent set of C_L, giving |N(u) cap V(C)| <= (L-1)/2
+       and, by double counting, sum_{v in C} d(v) <= (L-1)/2; (3) take g = 1/d and
+       gamma = min_C sum_{v in C} 1/d(v); Cauchy-Schwarz plus (2) give sum_{v in C} 1/d(v) >=
+       2L^2/(L-1) >= 25/2 for odd L >= 5, so the cost is 1/(2 gamma) <= 1/25. Degenerate x: restrict
+       to supp(x), where edges leaving it have weight 0 so y_e = 1 there is free, and drop vertices
+       isolated in the restriction. TIGHT ON A PLATEAU: any triangle-free G containing a 5-cycle has
+       max_x Lambda = 1/25 exactly, so no consumer may need Lambda < 1/25.
+   (B) With Guenin (JCTB 83 (2001) 112-168, weakly bipartite <=> no odd-K5 minor): no odd-K5 minor
+       implies psi = Lambda <= 1/25. Covers C5, ALL C5 blow-ups, all planar triangle-free graphs,
+       Wagner and Petersen. Theorem A does NOT imply the conjecture: twice-subdivided K5 (n=25,
+       m=30, odd girth 9) has psi = 4/625 against Lambda <= 2/375, ratio exactly 6/5.
+   (C) THEOREM D [R3-C20]. C an induced C5, T_i the full twins of class i (N(v) cap C =
+       {c_{i-1}, c_{i+1}}), R everything else off C, eta = x(V minus C), rho = x(R):
+       psi <= (1-rho)^2/25 + rho*eta, hence psi <= 1/25 whenever 25*eta + rho <= 2, in particular
+       whenever eta <= 1/13.
+   (D) THEOREM B [R3-C20]. psi(C5[V_1..V_5], x) = min_i y_i y_{i+1} exactly, y_i the class sums.
+   (E) MY PROPOSITION [R3-C24]. D(C) = sum_u x_u (2 - |N(u) cap V(C)|) satisfies rho <= D <= 2 rho,
+       and D(C) = 0 implies supp(x) is C5-colourable, hence psi <= 1/25. This is the equality case
+       of Theorem A delivering the rho = 0 hypothesis of Theorem D.
+
+3. DEAD AT MECHANISM LEVEL. Each kills an infinite class of attempts; do not re-try any of them.
+   - EVERY certificate over a FIXED cut family, for EVERY aggregator (arithmetic, geometric, all
+     power means, and the Gibbs aggregator -(1/beta) log E[exp(-beta t)]): at a C5-concentration the
+     multiplier value is |mono(S) cap E(K)|/25 and the odd-parity law puts that count in {1,3,5}, so
+     every cut in the support must leave EXACTLY ONE monochromatic edge in EVERY induced pentagon
+     simultaneously. Gamma_11 has 33 induced pentagons and ZERO such cuts among all 1024. Counting
+     proof: sum_{e in F} p(e) = P by double counting; in Gamma_11 every p(e) is 5 or 10 while
+     P = 33, and 5 does not divide 33.
+   - Discharging / amortised induction with a GLOBAL potential: the potential is not a free
+     parameter, it is forced to be Phi* = f - U where U is the move family's shortest-path value and
+     U >= bip always. On K_{m,m}, U >= N^2/8 - N/2 while bip = 0, so the method cannot prove
+     bip <= c N^2 for any c < 1/8.
+   - Covering/packing duality in general: product-weight integrality is FALSE. The unique maximal
+     triangle-free 14-vertex graph with bip = 7, graph6 `M?AE@bH{AYN_LgBs?`, admits an exact
+     rational cover of cost 32/5, integrality gap 35/32.
+   - x-adapted Z5-rotation geometric-mean certificate: fails on Wagner, min over all 5^7 maps of
+     prod_r m_r = 162 and 5^10 * 162 = 1582031250 > 1073741824 = 8^10.
+   - Also dead: fixed averaging (1/20 on every C5[n]); all spectral certificates; deletion induction
+     (dies at 4/25 on C5[7t,2t,7t,7t,2t]); local discharging; unions of neighbourhood cuts;
+     Motzkin-Straus support reduction. The recurring 1/20 has one explanation: Motzkin-Straus caps
+     triangle-free edge weight at 1/4, split five ways.
+
+4. OPEN TERRITORY. Triangle-free graphs WITH an odd-K5 minor, at weightings the toolkit does not
+   settle. And(4) = Gamma_11 (circle graph, u ~ v iff 3*circdist(u,v) > 11) is the universal wall:
+   the degree-2 Positivstellensatz scheme is refuted there by an exact dual ray
+   (c* <= 25445007099/1021743686 = 24.9035 < 25), Guenin fails there (genuine odd-K5 minor, branch
+   sets {0,4,8},{1,5,9},{2,6,10},{3},{7}), and rainbow-1 is empty there.
+
+5. YOUR TASKS. I keep the odd-K5 structural side and ALL gating.
+
+   CX-A (PRIMARY, Lean). Formalize THEOREM A sorry-free in Lean 4 + Mathlib, statement and proof as
+   in 2(A). native_decide is FORBIDDEN in anything accepted. This is the most realistic Lean target
+   the campaign has produced: it is elementary and self-contained. Suggested shape: define d, state
+   Lemma 1 as the feasibility+cost of the explicit cover, Lemma 2 as the independence counting bound,
+   then combine. Deliver the file path plus an HONEST build log per the honest-exit rule (PowerShell
+   *> redirect, check $LASTEXITCODE, inspect the log, grep for sorry and for axioms).
+
+   CX-B (SECONDARY, exhaustive certification — plays to your compute). Call a weighting SETTLED if
+   any of these applies: supp(x) is C5-colourable; D(C) = 0 for some induced C5; or 25*eta(C) +
+   rho(C) <= 2 for some induced C5. My heuristic sampling says the max psi over UNSETTLED weightings
+   is about 30/841 = 0.035672 on Gamma_11, against the target 1/25 = 0.04 — an 11% margin. Sampling
+   cannot certify a maximum, so I need the EXHAUSTIVE number. For each of Gamma_11, Gamma_14,
+   Petersen, Grotzsch, Wagner and `M?AE@bH{AYN_LgBs?`: enumerate ALL integer weightings a >= 0 with
+   sum a = q, ZERO ENTRIES ALLOWED, for q as large as compute permits; compute psi exactly as the
+   integer minimum over all 2^(n-1) cuts; and report, exactly, the maximum of psi over UNSETTLED
+   weightings, together with the argmax. If any weighting gives psi > 1/25 that is a COUNTEREXAMPLE
+   to the conjecture and outranks everything else in this brief — report it immediately.
+
+6. GATE PROTOCOL unchanged: every RESULT you post is a CLAIM until my own re-implementation or exact
+   replay. Exact integers/rationals on every acceptance path. Post artifact SHA-256.
+
+7. DISCIPLINE THAT HAS COST US, enforce literally.
+   (i) Any psi maximisation MUST start from every induced C5 at weight 1/5; a reported maximum below
+       1/25 on a graph containing a C5 VOIDS the run. psi genuinely has spurious local maxima: on
+       Petersen, weight 1/8 on six vertices, 1/4 on one and 0 on three gives psi = 1/32 exactly with
+       no first-order ascent direction and no improvement over 3000 exact perturbations.
+   (ii) When enumerating odd cycles, include EVERY odd length up to n, Hamiltonian included. My own
+       tool once returned 451 odd cycles for Gamma_11 where the truth is 596 — all 145 odd
+       Hamiltonian cycles were missing.
+   (iii) Enumerations over integer weight vectors must allow ZERO entries. A previous engine forbade
+       them and produced retracted psi tables.
