@@ -4754,3 +4754,7 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T09:32:49] ✘ 686 REASSESSMENT | DID: judge the target against my own selection criterion | RESULT: answer for 4 is probably NO, so the finite-witness closure does not apply | Δ: target is an impossibility proof
 [2026-07-26T09:47:05] ✔ TARGET DECISION | DID: compare shortlist shapes after 686 downgrade | RESULT: picked Erdos 306 - constructive existence, three-prime sibling already SOLVED, no asymptotics, divergent reciprocal sum | Δ: target set
 [2026-07-26T09:47:05] ✘ 306 PROBES | DID: greedy and naive DFS | RESULT: greedy hits 1/6, 1/3, 1/15 only; DFS over dens<6000, <=10 terms did not terminate | Δ: method inadequate, not evidence
+[2026-07-26T09:59:28] ✔ 306 NECESSITY | DID: lcm of squarefree is squarefree | RESULT: b squarefree is exactly the necessary condition, so 306 asks if the trivial obstruction is the only one | Δ: shape confirmed
+[2026-07-26T09:59:28] ✔ 306 ROUTE KILLED | DID: test 1 = (1/2) sum 1/q | RESULT: sum of distinct prime reciprocals is never an integer (q0 divides all numerator terms but one) | Δ: 2-only route dead
+[2026-07-26T09:59:28] ✔ 306 REDUCTION | DID: reduce numerator mod each p | RESULT: semiprimes = graph on primes, integrality iff sum_{q in S_p} q^inv = 0 mod p at every vertex; 0 false positives over 2^21 subsets | Δ: CSP form
+[2026-07-26T09:59:28] ✔ 306 BASE CASE | DID: meet-in-the-middle on primes <= 31 | RESULT: no subset sums to 1; total is only 1.002678 so any representation needs primes beyond 31 | Δ: bound established
