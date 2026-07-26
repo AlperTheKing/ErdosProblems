@@ -4736,3 +4736,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T07:13:01] ✔ CORRECT FORM | DID: distinguish from the dead W/g_odd route | RESULT: uniform W/7 holds where W/9 failed (subdivided K5, 2/15 vs 1/9); C5 exceeds 4/25 as required | Δ: route separated from R3-C42
 [2026-07-26T07:15:31] ✘ R3-C44 DEAD | DID: claude_ratio_route_kill.py, twice-subdivided K_n at odd girth 9 | RESULT: psi/W = 13/81 = 0.16049 > 4/25 at n=28, limit 1/6 | Δ: my own route killed by my own test
 [2026-07-26T07:15:31] ✘ c*W FAMILY DEAD | DID: derive the family bound | RESULT: any psi <= c*W at odd girth >=7 needs c >= 1/6, giving 1/24 = 0.041667 > 1/25 | Δ: whole family cannot close piece (i)
+[2026-07-26T07:17:13] ✔ MEMORY | DID: wrote erdos23-theorem-a-and-subdivision-lesson.md + MEMORY.md pointer | RESULT: Theorem A proof, defect refinement, Wagner obstruction, subdivision lesson recorded | Δ: session consolidated

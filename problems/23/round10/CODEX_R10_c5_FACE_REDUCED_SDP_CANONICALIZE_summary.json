@@ -1,0 +1,143 @@
+{
+  "affine_transform": {
+    "condition_2": 13329.167019762514,
+    "largest_singular_value": 27.922190246767958,
+    "nnz": 629539,
+    "numerical_rank": 388,
+    "shape": [
+      388,
+      3044
+    ],
+    "smallest_singular_value": 0.0020948188439209345
+  },
+  "canonical_form": {
+    "A_csc_bytes": 137215984,
+    "A_data_bytes": 68595808,
+    "A_nnz": 8574476,
+    "A_shape": [
+      16369,
+      3045
+    ],
+    "PSD_cones": [
+      154,
+      32,
+      35,
+      40,
+      5,
+      32,
+      6,
+      8,
+      33,
+      6,
+      6,
+      7,
+      6,
+      4,
+      7,
+      8,
+      6,
+      5,
+      4,
+      4,
+      6,
+      5,
+      4,
+      4,
+      6,
+      11
+    ],
+    "SOC_cones": [],
+    "b_length": 16369,
+    "c_length": 3045,
+    "exponential_cones": 0,
+    "nonnegative_cone": 543,
+    "power_cones": [],
+    "zero_cone": 388
+  },
+  "exactness_boundary": "G and canonical data are numerical steering only; exact reconstruction must use the sealed exact-Z archive",
+  "input_sha256": {
+    "base": "AB2F222EAE5052FD3DCD64311D05419E4150759C1DB4BD33E5AE30D313CDFEEE",
+    "blowup": "3B120381926290147890ABC7BA2A50B85532F93F751B961A79F81653F6AC3730",
+    "equality": "08DC9A3A4A8B5931B67B128CB7FD393EA126BA233CDC208A3675CB650C4FDA0F",
+    "exact_kernel": "EA9BE7AEC38FCF14470FEC1D36210FB25C4AAEFF9CE7A49C1B171CE42C02E34C",
+    "numerical_kernel": "CBD479AF7071FC95ABF02AB2193738C75359E39672F1421E0C7D1B2FCFB199D3",
+    "row_reduction": "F5B8BA8B0D2460E8A8ACDB3841464E4984FCEB4B0E45A7926B4D3B4203AC205C"
+  },
+  "memory_bytes": {
+    "resource_cap": 206158430208,
+    "rss_end": 790036480,
+    "rss_peak_delta": 1119457280,
+    "rss_peak_sampled": 1245442048,
+    "rss_start": 125984768,
+    "under_resource_cap": true
+  },
+  "model": {
+    "H_equalities_removed": 6129,
+    "PSD_orders": [
+      154,
+      32,
+      35,
+      40,
+      5,
+      32,
+      6,
+      8,
+      33,
+      6,
+      6,
+      7,
+      6,
+      4,
+      7,
+      8,
+      6,
+      5,
+      4,
+      4,
+      6,
+      5,
+      4,
+      4,
+      6,
+      11
+    ],
+    "PSD_quotient_cones": 26,
+    "forced_multiplier_variables_removed": 2085,
+    "gram_face_variables": 2518,
+    "live_multiplier_variables": 526,
+    "margin_variables": 1,
+    "quotient_order_histogram": {
+      "0": 10,
+      "1": 16,
+      "11": 1,
+      "154": 1,
+      "32": 2,
+      "33": 1,
+      "35": 1,
+      "4": 5,
+      "40": 1,
+      "5": 3,
+      "6": 7,
+      "7": 2,
+      "8": 2
+    },
+    "retained_affine_equalities": 388,
+    "scalar_quotient_inequalities": 16,
+    "variables": 3045
+  },
+  "scope": "CVXPY canonicalization only; no SDP solve",
+  "software": {
+    "cvxpy": "1.9.1",
+    "numpy": "2.2.6",
+    "scipy": "1.14.0",
+    "solver_target": "CLARABEL"
+  },
+  "solver_called": false,
+  "status": "PASS",
+  "timing_seconds": {
+    "affine_transform": 0.01134230000025127,
+    "canonicalization": 5.797886900007143,
+    "cvxpy_model_build": 0.05114019999746233,
+    "total": 6.814087100006873
+  }
+}
