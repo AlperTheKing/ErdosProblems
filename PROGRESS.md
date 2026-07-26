@@ -4732,3 +4732,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T07:02:59] ✔ MECHANISM | DID: identify why | RESULT: odd subdivision preserves bip while tripling |E| and girth, so |E|/g_odd falls below bip at ANY girth; same phenomenon as A28 | Δ: girth cannot help
 [2026-07-26T07:06:35] ✔ PENTAGON-FREE SWEEP | DID: claude_pentagonfree_sweep.py over 90842 triangle-free graphs n<=11 | RESULT: 934 pentagon-free non-bipartite, max psi = 0.02040816 = exactly 1/49, 0 voids | Δ: piece (i) non-sharp
 [2026-07-26T07:06:35] ✔ PLATEAU FAMILY | DID: read the value structurally | RESULT: 1/25 = 1/5^2 for C5-containing, 1/49 = 1/7^2 for pentagon-free with C7; plateau indexed by odd girth | Δ: 49 percent slack in piece (i)
+[2026-07-26T07:13:01] ✔ RATIO ROUTE | DID: claude_ratio_route.py over 934 pentagon-free non-bipartite graphs n<=11 | RESULT: max psi/W = 0.14285714 = exactly 1/7, 0 exceed 4/25, headroom 10.7% | Δ: piece (i) has a non-sharp target
+[2026-07-26T07:13:01] ✔ CORRECT FORM | DID: distinguish from the dead W/g_odd route | RESULT: uniform W/7 holds where W/9 failed (subdivided K5, 2/15 vs 1/9); C5 exceeds 4/25 as required | Δ: route separated from R3-C42

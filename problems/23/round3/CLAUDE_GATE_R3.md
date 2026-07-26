@@ -2041,3 +2041,56 @@ Piece (i) remains OPEN as a theorem -- this is a finite verification, and by GOA
 computation can only ever disprove. What it establishes is that piece (i) is not sharp, so it is the
 kind of statement a crude argument could reach, and that no counterexample lives in the pentagon-free
 region below `n = 12`.
+
+
+---
+
+## R3-C44 — piece (i) gets a NON-SHARP target: `psi <= (4/25) W` at odd girth `>= 7`
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_ratio_route.py`.
+
+Since Motzkin-Straus caps `W = sum_{uv in E} x_u x_v` at `1/4` on triangle-free graphs, piece (i)
+follows from
+
+```
+        psi(G,x)  <=  (4/25) * W(x)     for triangle-free G of odd girth >= 7,
+```
+
+because then `psi <= (4/25)(1/4) = 1/25` exactly. `4/25 = 0.16`.
+
+### Measured, over the whole pentagon-free region on `n <= 11`
+
+```
+        pentagon-free non-bipartite graphs scanned          934
+        max over x of psi(x)/W(x)                    0.14285714 = EXACTLY 1/7
+        attained on                                  graph6  J??CAA_[A{?
+        graphs exceeding 4/25                                 0
+        headroom to the target                            10.7%
+```
+
+### Why this is not the dead `W/g_odd` route
+
+R3-C42 killed `psi <= W/g_odd`, which demands `W/9 = 0.111 W` at odd girth 9 and fails on
+twice-subdivided `K5` (`psi/W = 2/15 = 0.1333`). The correct uniform form is `W/7`, NOT `W/g_odd`:
+
+```
+        C7 uniform                psi/W = 1/7   = 0.142857    <- the maximum, tight
+        twice-subdivided K5       psi/W = 2/15  = 0.133333    <- satisfies W/7, violates W/9
+        C5 uniform                psi/W = 1/5   = 0.200000    <- must exceed 4/25, and does
+```
+
+The `C5` value exceeding `4/25` is a required consistency check: if the bound held at odd girth 5 it
+would prove the entire conjecture, so it had better fail there, and it does.
+
+### Status and the honest caveat
+
+The measured maximum is exactly `1/7`, so the SHARP form `psi <= W/7` would be tight at `C7` -- and
+sharp targets are what this campaign keeps losing to. But piece (i) needs only the SLACK form
+`psi <= (4/25)W`, with `10.7%` headroom, which is a different kind of object.
+
+**Caveat, stated because the analogous statement one level down is FALSE.** At odd girth `>= 5` the
+corresponding bound `psi <= W/5` fails, on the `N = 14` extremal graph (`bip = 7 > 32/5`, registry
+A5's witness). So "`psi <= W/g` for the minimum odd girth `g` of the class" is NOT a general truth --
+it fails at `g = 5` and is merely unrefuted at `g = 7` on `n <= 11`. Whether an odd-girth-7 analogue
+of the `N = 14` witness exists at larger `n` is untested, and it is exactly what would kill this
+route. That is the next thing to look for, not a reason to assume the route works.
