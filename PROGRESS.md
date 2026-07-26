@@ -4749,3 +4749,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T09:27:50] ✔ 686 k=2 CLOSED | DID: solve 4(n+1)(n+2)=(m+1)(m+2) by hand | RESULT: X^2-4Y^2=-3 forces X=Y=1, no admissible solution; any representation of 4 needs k>=3 | Δ: case eliminated
 [2026-07-26T09:29:38] ✘ RETRACTION R3-C37/46/47 | DID: gate Codex's family, weight M on C5 + 1 on rest of minimal support | RESULT: bip = M^2+1 exactly, ratio -> 1 (0.99880 at M=1000); my 17% slack is FALSE | Δ: claim withdrawn
 [2026-07-26T09:29:38] ✘ PATTERN | DID: compare to A27 | RESULT: second time I claimed non-sharpness from small-grid maxima; my scans hit M<=3, the DIP of the curve | Δ: bounded-grid max is a lower bound, never a ceiling
+[2026-07-26T09:32:49] ✔ 686 DEEP SEARCH | DID: claude_erdos686_deep.py, n solved exactly per (k,d) | RESULT: no representation of 4 or 25 for k<=120, d<=400, n<=2e6; controls 2,3,9,16,36 re-found | Δ: region certified clear
+[2026-07-26T09:32:49] ✔ 686 REFORMULATION | DID: cancel k! to get N = C(m+k,k)/C(n+k,k), then apply Kummer | RESULT: 4 representable iff carries_2 differ by exactly 2 and carries_p agree at every odd p | Δ: exact carry criterion
+[2026-07-26T09:32:49] ✘ 686 REASSESSMENT | DID: judge the target against my own selection criterion | RESULT: answer for 4 is probably NO, so the finite-witness closure does not apply | Δ: target is an impossibility proof
