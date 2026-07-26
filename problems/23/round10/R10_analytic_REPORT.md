@@ -16,6 +16,23 @@ word `exact` is explicit.  In particular, the 1111 base certificates and 1089
 refined certificates have not been reconstructed over the rationals and are
 not a proof of the corresponding cases.
 
+## Viability and an exact sharpness witness
+
+The 22-cut length-4/5 inequality itself remains viable: this work found no
+counterexample.  With `sum x_i=1`, 75 deterministic SLSQP starts reported a
+largest local value `0.040000000000`; this is steering evidence, not a global
+upper bound.
+
+There is an exact equality witness:
+
+    x_i = 1/5 for i in {0,1,4,5,8}, and x_i=0 otherwise.
+
+The support edges are `(0,4),(0,5),(1,5),(1,8),(4,8)`.  Exact enumeration of
+all 22 length-4/5 arc cuts gives values in `{1/25,3/25}` and minimum `1/25`.
+Thus the max-min is at least `1/25`, so the proposed upper bound is sharp if
+true.  The numerical search found no value above `1/25`, but it does not prove
+that none exists.
+
 ## Exact local identities
 
 Write `A_i=q_{i,4}`, `B_i=q_{i,5}`, with indices modulo 11, and put

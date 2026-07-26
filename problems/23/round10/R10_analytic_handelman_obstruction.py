@@ -46,6 +46,14 @@ def main():
             sign[(i + offset) % N] += 1
         sign[i] -= 1
         assert lhs == product(unit, sign)
+    # Exact equality witness for the 22-cut inequality.
+    witness = [Fraction(1, 5) if i in {0, 1, 4, 5, 8} else Fraction(0) for i in range(N)]
+    witness_values = [sum(witness[u] * witness[v] for u, v in EDGES
+                          if (((u - start) % N < length) == ((v - start) % N < length)))
+                      for length in (4, 5) for start in range(N)]
+    assert min(witness_values) == Fraction(1, 25)
+    assert set(witness_values) == {Fraction(1, 25), Fraction(3, 25)}
+
 
     # Cone generators for C_0={x>=0, x_0>=x_i}.
     generators = []
@@ -71,6 +79,7 @@ def main():
 
     print("EXACT FARKAS GATE PASSED")
     print("pair identities: 11/11")
+    print("exact witness min over 22 cuts:", min(witness_values))
     print("cut slacks ell(q_A)-3:", cut_slacks)
     print("minimum generator-product slack:", min(product_slacks))
     print("separator on target plus normalization:", separator_target)

@@ -4703,3 +4703,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:30:06] ✘ PENTAGON LP | DID: claude_a5b_pentagon_packing.py restricting the packing to the 33 pentagons | RESULT: Lambda_pent < psi in 27 cases, e.g. psi=2 vs 1 at [1,1,0,2,2,0,1,1,0,1,0] | Δ: 33-var reduction dead
 [2026-07-26T04:32:53] ✔ NEW LEMMA | DID: proved ARCBOUND(And(k)) <= (k-1)W/(3k-1) via k-intervals independent + each edge in exactly k-1 complements | RESULT: 0 violations in 16000 exact weightings, tight at C5 | Δ: A1 sharpened
 [2026-07-26T04:32:53] ✔ WINDOW | DID: apply the lemma to Gamma_11 | RESULT: ARCBOUND <= 1/25 whenever W <= 11/75 = 0.14667, was 3/25 = 0.12; open window now W in (0.14667, 0.25] | Δ: band narrowed
+[2026-07-26T04:35:41] ✘ LENGTH SELECTION | DID: claude_arcbound_lengthsel.py, B(x) = (1/m) min_L sum_e x_u x_v f(L,d) | RESULT: fails 1756/100/18/2 of 6000 on And(2..5), worst ratio 1.4323 | Δ: sequel to R3-C29 dead
+[2026-07-26T04:35:41] ✔ DIAGNOSTIC | DID: compare B to the true ARCBOUND at every failure | RESULT: true ARCBOUND 0, 0, 23, 32 vs targets 196/25, 144/25, 49, 1444/25 - all safe | Δ: loss is in rotation averaging

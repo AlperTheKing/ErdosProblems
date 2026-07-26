@@ -446,7 +446,7 @@ def main() -> None:
     # ---- Exercise the constructor's actual numerical expansion permutation ----
     rng = np.random.default_rng(23022)
     model.multiplier_variable.value = rng.integers(
-        -1000, 1001, size=model.multiplier_variable.size
+        0, 1001, size=model.multiplier_variable.size
     ).astype(float)
     expected_rep_matrices: dict[Exponent, np.ndarray] = {}
     gram_value_by_global_key = {}

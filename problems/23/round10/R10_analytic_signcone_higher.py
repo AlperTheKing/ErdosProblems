@@ -1,4 +1,4 @@
-"""Higher-degree Handelman diagnostics on the 14 unresolved sign-cone orbits.
+"""Higher-degree Handelman diagnostics on the 16 unresolved rotation orbits.
 
 For degree d, search for
 
@@ -22,8 +22,9 @@ from R10_analytic_probe import N
 from R10_analytic_signcones import A_CUTS, B_CUTS, SIGN_FORMS
 
 
-REPRESENTATIVES = (0x1BF, 0x1DF, 0x1EF, 0x1FF, 0x2BF, 0x2DF, 0x2EF,
-                   0x2FF, 0x377, 0x37F, 0x3BF, 0x3DF, 0x3FF, 0x7FF)
+# Rotation preserves the paired length-4/length-5 cuts; reflection is not used.
+REPRESENTATIVES = (0x1BF, 0x1DF, 0x1EF, 0x1F7, 0x1FF, 0x2BF, 0x2DF, 0x2EF,
+                   0x2F7, 0x2FF, 0x377, 0x37F, 0x3BF, 0x3DF, 0x3FF, 0x7FF)
 
 
 def multiply(left: dict[tuple[int, ...], float], linear: np.ndarray):

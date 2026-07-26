@@ -1330,3 +1330,53 @@ What it does is shrink the open window. `ARCBOUND <= 1/25` now follows whenever
 `W <= 3/25 = 0.12`. With Motzkin-Straus capping `W <= 1/4`, the open window for `Gamma_11` narrows
 from `W in (0.12, 0.25]` to `W in (0.14667, 0.25]`. The improvement is largest at SMALL `k`, which is
 exactly where the hard cases sit.
+
+
+---
+
+## R3-C30 — the natural sequel to R3-C29 is DEAD: length selection does not rescue rotation averaging
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_arcbound_lengthsel.py`.
+
+R3-C29's bound averages the interval cut over the `m` rotations at the fixed length `L = k`, which
+makes it a fixed averaging certificate, and A6 says those cannot reach `1/25`. The obvious repair is
+to keep the rotation average but CHOOSE THE LENGTH FROM `x`, which is a weight-reading rule and so
+escapes A6. Summing over the `m` rotations of a length-`L` interval,
+
+```
+        sum_i q_{S_i}(x) = sum_e x_u x_v f(L, d_e),
+        f(L,d) = cnt_L(d) + cnt_{m-L}(d),   cnt_A(d) = max(0, A-d) + max(0, A-m+d),
+```
+
+since an edge is monochromatic for the cut iff both ends lie in the interval or both in its
+complement. The profiles are worth recording:
+
+```
+        Gamma_8 :  L = 4 gives f = [2, 0] on distances [3,4]   -- the only non-constant length
+        Gamma_11:  L = 5, 6 give f = [3, 1] on distances [4,5] -- the only non-constant lengths
+        every other L gives a CONSTANT profile, i.e. an R3-C29-type family
+```
+
+So at `L = 4` on Wagner the antipodal (distance-4) edges are never monochromatic, and at `L = 5, 6` on
+`Gamma_11` the distance-5 edges are penalised at one third the rate of distance-4 edges.
+
+**Verdict: the resulting bound `B(x) = (1/m) min_L sum_e x_u x_v f(L,d_e)` FAILS.** Exact rational
+weightings, 6000 per graph:
+
+```
+        And(2)  B(x) > (sum x)^2/25 in 1756 of 6000   worst ratio 1.2500
+        And(3)                          100            worst ratio 1.4323
+        And(4)                           18            worst ratio 1.1466
+        And(5)                            2            worst ratio 1.0462
+```
+
+**The diagnostic is the useful part.** In EVERY failing case the true `ARCBOUND` is still far under
+target -- `0` against `196/25`, `0` against `144/25`, `23` against `49`, `32` against `1444/25`. So
+the bound is not detecting a real obstruction; it is simply lossy. The loss sits entirely in the
+ROTATION average, not in the length choice: the minimum over rotations is far below their mean, and
+no refinement that still averages over rotations can recover the gap.
+
+**Consequence for the route.** Any proof of the frontier lemma must select the ROTATION from `x`, not
+merely the length -- averaging over rotations is now exhausted in both its fixed (R3-C29) and
+weight-reading-in-length (here) forms. That is the same conclusion the campaign reached globally in
+R3-C21 ("a proof must read the weights"), now localised to the one open lemma.
