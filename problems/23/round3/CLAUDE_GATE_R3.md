@@ -2208,3 +2208,50 @@ exists at odd girth 7, would decide it.
 
 Status: the route is UNREFUTED rather than revived-and-verified. R3-C45's kill is correctly scoped to
 the unrestricted statement and stands as such.
+
+
+---
+
+## R3-C47 — the level-7 plateau: odd-girth-7 circular cliques all sit at exactly `1/49` and `psi/W = 1/7`
+
+Root-agent entry, 2026-07-26. Mine, `round5/claude_oddgirth7_circulants.py`. This tests R3-C46's
+restricted route on the family where it actually lives, rather than on the `n <= 11` corpus that did
+not exercise the degree restriction at all.
+
+The circular cliques `K_{p/q}` (vertices `Z_p`, `i ~ j` iff `circdist >= q`) split by odd girth:
+`And(k) = K_{(3k-1)/k}` is the odd-girth-5 family, and `p/q in [7/3, 5/2)` is the odd-girth-7 family.
+The latter are pentagon-free AND dense enough to sit inside the minimal-counterexample range, so they
+are precisely where the restricted route lives or dies.
+
+```
+        p/q     N   |E|  odd girth  delta  delta/N  in range   max psi/W    max psi
+        7/3     7     7          7      2   0.2857     yes    1/7 = 0.142857   1/49 = 0.020408
+        12/5   12    18          7      3   0.2500     yes    1/7              1/49
+        17/7   17    34          7      4   0.2353     yes    1/7              1/49
+        19/8   19    38          7      4   0.2105     yes    1/7              1/49
+```
+
+**Every member gives exactly `psi/W = 1/7` and `max_x psi = 1/49`**, at `delta/N` between `0.21` and
+`0.29` -- comfortably inside the `> 0.16` range, so this DOES exercise the restriction.
+
+### The structural picture, now visible at two levels
+
+```
+        level 5:  And(k) = K_{(3k-1)/k},  p/q in [5/2, 3)   ->  max psi = 1/25 = 1/5^2,  psi/W = 1/5
+        level 7:  K_{p/q},                p/q in [7/3, 5/2) ->  max psi = 1/49 = 1/7^2,  psi/W = 1/7
+```
+
+The conjecture is the level-5 statement. The level-7 family behaves identically one step down, which
+is exactly what the `1/g^2` plateau reading of R3-C43 predicted.
+
+### What this does and does not settle
+
+`1/7 = 0.1429 < 4/25 = 0.16`, so the R3-C46 restricted route SURVIVES on the natural extremal family
+at every size tested, with `10.7%` headroom, and now on graphs that genuinely satisfy
+`delta > (4N-2)/25` rather than satisfying it vacuously.
+
+It remains UNPROVED. These are four graphs, not a theorem, and by GOAL clause (d) finite computation
+can only ever disprove. What would close piece (i) is the level-7 analogue of the Brandt-Thomasse
+classification: that every pentagon-free graph with `delta > 0.16 N` maps into this family (or a
+`C7` blow-up), at which point `psi/W = 1/7 < 4/25` and Motzkin-Straus finishes it. That analogue is
+the missing lemma, and it is stated here verbatim rather than assumed.

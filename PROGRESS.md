@@ -4740,3 +4740,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T07:22:05] ✔ BASE (6) EXCLUDES | DID: check subdivision witnesses against delta > (4N-2)/25 | RESULT: all have delta = 2, excluded for N > 13; C7 survives at 2 > 1.04 | Δ: R3-C45 kill scoped to unrestricted form
 [2026-07-26T07:22:05] ✔ RESTRICTED RATIO | DID: claude_ratio_restricted.py over 324 surviving graphs | RESULT: max psi/W = 1/7 exactly, 0 exceed 4/25, headroom 10.7% | Δ: route unrefuted under base (6)
 [2026-07-26T07:22:05] ✘ LIMITATION | DID: check what the restriction actually excludes at n<=11 | RESULT: threshold <= 1.76 so it only demands delta >= 2; corpus does NOT exercise it | Δ: large-N untested
+[2026-07-26T07:34:33] ✔ LEVEL-7 PLATEAU | DID: claude_oddgirth7_circulants.py on K_{p/q}, p/q in [7/3,5/2) | RESULT: 7/3, 12/5, 17/7, 19/8 all give psi/W = 1/7 and max psi = 1/49 exactly | Δ: restricted route survives on the right family
+[2026-07-26T07:34:33] ✔ RANGE EXERCISED | DID: check delta/N on those | RESULT: 0.2857, 0.2500, 0.2353, 0.2105, all above the 0.16 threshold | Δ: unlike the n<=11 corpus, this tests the restriction
