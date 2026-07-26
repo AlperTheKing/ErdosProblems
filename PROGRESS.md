@@ -4709,3 +4709,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T04:39:46] ✔ ARC ROUTE MAP | DID: consolidate R3-C29/C30/C31 | RESULT: frontier needs length AND rotation selected from x over the full arc family; Codex's degree-4 SDP encodes exactly that | Δ: route sharpened
 [2026-07-26T04:46:03] ✔ THMF RESIDUAL | DID: claude_thmF_residual.py exhaustive on Gamma_11 | RESULT: max 25psi/q^2 on the Theorem-F-unsettled region hits exactly 1 at q=10 | Δ: no margin from Theorem F alone
 [2026-07-26T04:46:03] ✔ EQUALITY WITNESS | DID: claude_thmF_witness.py | RESULT: a=(2,1,1,0,2,0,1,1,2,0,0), support size 7, psi = 1/25 exactly, heaviest pentagon 0.8 < 0.84, support C5-colourable | Δ: balls must centre on blow-ups
+[2026-07-26T04:48:33] ✔ R10 FACE GATE | DID: claude_gate_r10_d22face.py | RESULT: arc min 1, tight 24..25, block 286, exact rank of the 33 evaluation vectors = 33, all MATCH Codex | Δ: face argument accepted
+[2026-07-26T04:48:33] ✔ R10 VERDICT | DID: assess the degree-4 solve | RESULT: optimal_inaccurate, iterate off a codim-33 face, no exact certificate; BLOCKED not DEAD per the exit rule | Δ: impose face before solving

@@ -1474,3 +1474,49 @@ AM-GM slack is exactly 0.
 
 So the blow-up recentering is not an optional improvement of Theorem D/F -- it is forced by the
 geometry of the equality set, and its obstruction is already recorded.
+
+
+---
+
+## R3-C33 — Codex's degree-4 D_22 run: BLOCKED, and its face argument GATED SOUND
+
+Root-agent entry, 2026-07-26. Gate `round5/claude_gate_r10_d22face.py`, my own construction.
+
+Codex ran the `D_22`-invariant degree-4 multiplier Positivstellensatz at `c = 25` on the 56 arc cuts
+of `Gamma_11`. Reduction sizes: 2611 multiplier orbit scalars, 8647 Gram orbit scalars, 52 parity
+block orbits, representative PSD orders `{286:1, 66:5, 11:20, 1:26}`. CLARABEL returned
+`optimal_inaccurate` after 1627 s with minimum representative Gram eigenvalue `-6.5e-07`.
+
+**Codex did not call the iterate a certificate, and it is right not to.** Its stated reason is an
+exact FACE argument, which I re-derived independently and confirm in every checkable part:
+
+```
+        arc minimum of q_S(1_U) over the 33 induced pentagons          1        MATCH
+        number of TIGHT arc cuts per pentagon                       24..25      MATCH
+        parity-zero block order = degree-3 monomials in 11 vars       286       MATCH
+        EXACT RATIONAL RANK of the 33 evaluation vectors               33       MATCH
+```
+
+The rank being FULL is the load-bearing fact: tightness gives `T(1_U) = 0` at every induced `C5`
+support `U`, so an exact PSD parity-zero Gram block must vanish on a **33-dimensional subspace of a
+286-dimensional space**. The returned numerical block has only 16 eigenvalues below `1e-5` and
+`max |QK| ~ 9.8e-3`, so it is nowhere near that mandatory face and **entrywise rational rounding of
+it is invalid** -- exactly Codex's conclusion.
+
+I also verify the forced-zero mechanism, though not Codex's orbit count (which depends on its `D_22`
+indexing, and I did not reconstruct that): **1034 of the 1848 (arc cut, pentagon) pairs have
+`q_S(1_U) > 1`**, and for each, coefficientwise nonnegativity of `nu_S` together with the tightness
+identity `nu_S(1_U) q_S(1_U) = 0` forces every degree-4 multiplier monomial supported inside `U` to
+vanish for that cut. The mechanism is sound; Codex reports it kills 1147 of 2611 orbit coefficients.
+
+### Verdict and the registered exit rule
+
+Status is **BLOCKED, not DEAD**: numerical failure does not kill the route, and the registered exit
+condition requires either an exact rational weighting violating the frontier lemma or an exact dual
+separating `c = 25` from the degree-4 cone. Neither exists. Codex's stated next step -- impose the
+exact induced-`C5` multiplier and Gram face BEFORE any further feasibility computation, then
+reconstruct in `Fraction`s -- is the correct one, and is now quantified: the face has codimension at
+least 33 in the 286-block and zeroes over half the `(cut, pentagon)` incidences.
+
+**No escalation up the degree hierarchy** is warranted; the registered rule forbids it, and the
+diagnosis here is that the solve was aimed off the face, not that degree 4 is too low.

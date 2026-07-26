@@ -1,0 +1,82 @@
+{
+  "cut_c5_k_distribution": {
+    "1": 814,
+    "3": 737,
+    "5": 297
+  },
+  "cuts": 56,
+  "edges": 22,
+  "face_dimension_by_psd_order": {
+    "1": 26,
+    "11": 938,
+    "286": 1526,
+    "66": 4686
+  },
+  "forced_multiplier_full_entries": 24563,
+  "forced_multiplier_orbits": 1147,
+  "gram_face_orbit_dimensions": 7176,
+  "gram_kernel_candidate_vectors": 74,
+  "gram_kernel_independent_equations": 1471,
+  "gram_kernel_independent_vectors": 74,
+  "gram_kernel_raw_equations": 11539,
+  "gram_kernel_unique_equations": 1530,
+  "gram_orbit_scalars": 8647,
+  "graph": "Gamma_11=And(4)",
+  "group_order": 22,
+  "induced_c5_orbit_sizes": [
+    11,
+    11,
+    11
+  ],
+  "induced_c5_representatives": [
+    [
+      0,
+      1,
+      4,
+      5,
+      8
+    ],
+    [
+      0,
+      1,
+      4,
+      6,
+      8
+    ],
+    [
+      0,
+      2,
+      4,
+      6,
+      8
+    ]
+  ],
+  "induced_c5s": 33,
+  "kernel_dimension_by_psd_order": {
+    "1": 0,
+    "11": 11,
+    "286": 33,
+    "66": 30
+  },
+  "live_multiplier_orbits": 1464,
+  "multiplier_degree": 4,
+  "multiplier_full_entries": 56056,
+  "multiplier_monomials": 1001,
+  "multiplier_orbits": 2611,
+  "normalization_equations": 56,
+  "parity_block_orbits": 52,
+  "parity_blocks_full": 848,
+  "prime_exact_row_basis": 2000003,
+  "psd_order_counts": {
+    "1": 26,
+    "11": 20,
+    "66": 5,
+    "286": 1
+  },
+  "remaining_certificate_equations": 448,
+  "target_degree": 6,
+  "target_monomials": 8008,
+  "target_orbit_equations": 392,
+  "total_face_linear_variables": 8640,
+  "vertices": 11
+}
