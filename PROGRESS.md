@@ -4744,3 +4744,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-26T07:34:33] ✔ RANGE EXERCISED | DID: check delta/N on those | RESULT: 0.2857, 0.2500, 0.2353, 0.2105, all above the 0.16 threshold | Δ: unlike the n<=11 corpus, this tests the restriction
 [2026-07-26T09:00:36] ✔ LETZTER-SNYDER | DID: literature check on the level-7 homomorphism threshold | RESULT: {C3,C5}-free with delta > n/5 is hom to C_{5k-3}+chords 1 mod 5; closes piece (i) above n/5 | Δ: band narrowed to 0.16-0.20 N
 [2026-07-26T09:00:36] ✘ STOP #23 | DID: assess against the user's anti-maze directive | RESULT: R3-C39..C47 is a reduction chain, residual band is where LS prove the threshold SHARP; stopping | Δ: target closed, not solved
+[2026-07-26T09:27:50] ✔ EASY-FIRST SCAN | DID: rank 622 open Erdos problems, then re-rank 290 formalized ones by Lean statement FORM not tags | RESULT: asymptotic leaders 562/566/567 rejected; 686 selected | Δ: new target
+[2026-07-26T09:27:50] ✔ 686 FIRST RESULT | DID: claude_erdos686_search.py exact search k<=12, n<=4000 | RESULT: every N in 2..40 representable EXCEPT 4 and 25; 9, 16, 36 ARE, so it is not squares | Δ: target sharpened
+[2026-07-26T09:27:50] ✔ 686 k=2 CLOSED | DID: solve 4(n+1)(n+2)=(m+1)(m+2) by hand | RESULT: X^2-4Y^2=-3 forces X=Y=1, no admissible solution; any representation of 4 needs k>=3 | Δ: case eliminated
