@@ -1,0 +1,121 @@
+{
+  "candidate_sha256": "A3FF1281C24A5E1C8CBC5B5FE90552959A85AABB8F0C1F93BC5C6340D499CF85",
+  "claim_boundary": "Exact zero bound and conditional necessary face only; not a separator and not a primal-feasibility/exposing-face claim.",
+  "classification": "zero_bound_with_necessary_face",
+  "construction": {
+    "ambient_kernel_denominator": 24,
+    "canonical_pencil_denominator": 25344,
+    "entry_multiplicity_lcm": 44
+  },
+  "exact_dual_objective": "0",
+  "exposing_face_claim": false,
+  "fixed_scope": {
+    "c": 25,
+    "cuts": 56,
+    "degree": 4,
+    "symmetry": "D22"
+  },
+  "necessary_face_statement": "For every feasible primal, t=0 and the order-154 block-0 quotient has range contained in this dual's exact 132-dimensional kernel.",
+  "numerical_steering": {
+    "candidate_ray_projection_relative_residual": 0.12316912799047318,
+    "input_dual_npz_sha256": "6DFD3A35C8B93144D45479BEE1E00BB72F82797BBF6CC6CA59A7D56E573C1982"
+  },
+  "primal_feasibility_established": false,
+  "rank_drop_slice": {
+    "common_kernel_dimension": 132,
+    "generators": [
+      [
+        0,
+        6,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        12,
+        -4,
+        -2,
+        -3,
+        0,
+        4,
+        -8
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        -4,
+        -1,
+        -3,
+        0,
+        2,
+        -4
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        -5,
+        -1,
+        -3,
+        0,
+        2,
+        -4
+      ]
+    ],
+    "ranks_mod_primes": [
+      22,
+      22,
+      22
+    ],
+    "support_coordinates": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      8,
+      10,
+      11,
+      13,
+      18,
+      21,
+      23,
+      26,
+      34,
+      48,
+      51,
+      59,
+      60,
+      64,
+      81,
+      82,
+      85
+    ]
+  },
+  "rational_member": {
+    "full_exact_rank": 22,
+    "margin_dual": "1",
+    "minimum_full_LDL_pivot": "904/2673",
+    "minimum_reduced_LDL_pivot": "904/2673",
+    "scale_from_unscaled_member": "44/19553847",
+    "slice_coefficients": [
+      "-4",
+      "-1",
+      "-1",
+      "3"
+    ],
+    "trace": "2"
+  },
+  "separator": false
+}

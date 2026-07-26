@@ -2255,3 +2255,51 @@ can only ever disprove. What would close piece (i) is the level-7 analogue of th
 classification: that every pentagon-free graph with `delta > 0.16 N` maps into this family (or a
 `C7` blow-up), at which point `psi/W = 1/7 < 4/25` and Motzkin-Straus finishes it. That analogue is
 the missing lemma, and it is stated here verbatim rather than assumed.
+
+
+---
+
+## R3-C48 — STOP on #23, by user directive: the reduction chain is the failure mode, not a frontier
+
+Root-agent entry, 2026-07-26. User instruction: *"never fall into asymptotic reformulation maze. if
+it is the situation don't continue and stop and switch to another erdos."*
+
+**Assessment: it is the situation.** R3-C39 through R3-C47 are a reduction chain -- conjecture into
+pieces (i) and (ii), then sub-bounds proposed and killed in successive ticks (R3-C44 proposed,
+R3-C45 killed, R3-C46 revived under a restriction, R3-C47 tested it). Each step was honestly labelled,
+but labelling a reduction is not the same as converging, and GOAL clause (e) already says a reduction
+to unproved statements does not count.
+
+The literature result found at the end sharpens the verdict rather than softening it. Letzter and
+Snyder, "The homomorphism threshold of {C3,C5}-free graphs" (J. Graph Theory 2019, arXiv:1610.04932):
+every `{C3,C5}`-free graph with `delta > n/5` is homomorphic to `C_{5k-3}` plus all chords of length
+`1 mod 5`. With accepted base (2) that CLOSES piece (i) above `n/5`. But they also prove the
+threshold `1/5` is **sharp**, so the residual band
+
+```
+        (4N-2)/25 < delta <= N/5,     i.e.   0.16 N < delta <= 0.20 N
+```
+
+is exactly where the class contains graphs with no bounded homomorphic image. That band is the hard
+part, not a last step. Piece (ii) remains untouched.
+
+### What is DURABLE from this campaign, independent of the stop
+
+* **THEOREM A**, proved and gated: `Lambda(G,x) <= 1/25` for every triangle-free `G` and every `x`.
+  Elementary, three steps, and the audit found no published bound of this form. With Guenin it proves
+  the conjecture for every odd-`K5`-minor-free triangle-free graph.
+* **Defect refinement**, proved: `Lambda <= max((2-D*)/50, 3/98)`, strict off `C5`-colourable supports.
+* **`ARCBOUND(And(k)) <= (k-1)W/(3k-1)`**, proved, tight at `C5`, sharpening the recorded `W/3`.
+* **Wagner is the universal obstruction**: the minimal non-`C5`-colourable induced subgraph of every
+  `And(k)` is `And(3)`, uniform in `k`.
+* **Mechanism-level closures**, each ruling out an infinite class: fixed cut families for every
+  aggregator including Gibbs; amortised potentials; covering/packing duality; gap quantification;
+  rotation averaging in all forms; every `c*W` bound.
+* **Retractions made and recorded**: Petersen's classification, the residual-margin idea, R3-C39's
+  pentagon-free claim.
+
+### Status
+
+#23 is STOPPED, not abandoned: the ledger, registry and artifacts are complete and replayable, and
+Codex's Round 10 arc route is gated sound with its frontier lemma unfalsified at `q <= 50`. Nothing
+here is a proof or a disproof of the conjecture, and it is recorded as such.
