@@ -1,6 +1,6 @@
 # Erdős #944 verification status
 
-Updated: 2026-06-11 Europe/Istanbul.
+Updated: 2026-07-22.
 
 ## Target
 
@@ -9,12 +9,27 @@ graph with no critical edge, or a proof none exists.
 
 Current publishable-secondary candidate is narrower:
 
-1. verified exhaustive lower bound for the Skottova-Steiner 2025 Problem 5.2
-   subproblem: no 6-regular `(4,1)` graph on `n <= 14`;
+1. certified lower bound for the Skottova-Steiner 2025 Problem 5.2
+   subproblem: no 6-regular `(4,1)` graph on `n <= 17`;
 2. structural rigidity lemmas for any hypothetical 6-regular target, including
    no nontrivial 6-edge-cut shore of size at most 14 in the 6-regular case.
 
 This is not yet a full resolution of #944.
+
+## Order 16 and 17 certificate package
+
+The eleven feasible rooted colour partitions at orders 16 and 17 have now
+been excluded by exact SAT certificates. Each mathematical case is bound to
+an exact CNF hash, independently reconstructed from the stated necessary
+conditions, and has both a verified DRAT proof and a verified LRAT proof.
+
+- Proof note: `problems/944/ORDER_16_17_CERTIFIED_EXCLUSION.md`
+- Reproducible package:
+  https://github.com/infinityscroll/dirac-944-orders-16-17
+- Release `v1.0.0`: 36 CNF/DRAT/LRAT files, all hash-checked after clean
+  extraction
+- Result: every 6-regular `(4,1)`-graph has order at least 18, using the
+  separate `n <= 15` classification in arXiv:2606.18462
 
 ## Verified Artifacts
 
